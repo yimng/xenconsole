@@ -43,7 +43,7 @@
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\log4net.dll</HintPath>
+      <HintPath>..\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -198,7 +198,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties StartDate="20090814" AssemblyFileVersion="1" AssemblyVersion="1" Reset="1" />
+      <UserProperties Reset="1" AssemblyVersion="1" AssemblyFileVersion="1" StartDate="20090814" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
