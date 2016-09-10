@@ -46,56 +46,37 @@ using System.Linq;
 
 namespace XenAdmin.TabPages
 {
-    public partial class HomePage : DoubleBufferedPanel
-    {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Drawing;
+    using System.Data;
+    using System.Linq;
+    using System.Text;
+    using System.Windows.Forms;
+    using System.Reflection;
 
-        private const string XCNS = "XenCenter://";
-        bool initializing = true;
+    using log4net;
 
-        public HomePage()
-        {
-            InitializeComponent();
+	public partial class HomePage : UserControl
+	{
+		private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-            try
-            {
-                var location = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), InvisibleMessages.HOMEPAGE_FILENAME);
-                webBrowser.Navigate(location);
-            }
-            catch (Exception ex)
-            {
-                log.Error(string.Format("Failed to load the HomePage. Url = {0}", Location), ex);
-            }
+		public HomePage()
+		{
+			InitializeComponent();
+		}
 
-            initializing = false;
-        }
-
-        private void webBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-            if (initializing)
-                return;
-
-            e.Cancel = true;
-
-            string url = e.Url.OriginalString;
-
-            // this is not abstracted away as long as we have only a very limited number of functionalities:
-            if (url != null && url.StartsWith(XCNS, StringComparison.InvariantCultureIgnoreCase))
-            {
-                if (url.Contains("HelpContents"))
-                {
-                    XenAdmin.Help.HelpManager.Launch(null);
-                }
-                else if (url.Contains("AddServer"))
-                {
-                    new AddHostCommand(Program.MainWindow, this).Execute();
-                }
-            }
-            else
-            {
-                Program.OpenURL(url);
-            }
-        }
-
-    }
+		private void LinkLabelHomePage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			try
+			{
+				System.Diagnostics.Process.Start(this.LinkLabelHomePage.Text);
+			}
+			catch (Exception exception)
+			{
+				_log.Debug(string.Format("Exception while opening url {0}:", this.LinkLabelHomePage.Text), exception);
+			}
+		}
+	}
 }
