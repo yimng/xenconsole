@@ -462,6 +462,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HalsignLib\HalsignLib.csproj">
+      <Project>{e2530aec-7034-4276-9c62-442895ea242c}</Project>
+      <Name>HalsignLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XenAdmin\XenAdmin.csproj">
       <Project>{70BDA4BC-F062-4302-8ACD-A15D8BF31D65}</Project>
       <Name>XenAdmin</Name>

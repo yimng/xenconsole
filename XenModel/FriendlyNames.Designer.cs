@@ -5424,6 +5424,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Local ISO storage.
+        /// </summary>
+        public static string SR_name_description_local_iso_storage {
+            get {
+                return ResourceManager.GetString("SR.name_description-local-iso-storage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local ISO storage on {0}.
+        /// </summary>
+        public static string SR_name_description_local_iso_storage_host {
+            get {
+                return ResourceManager.GetString("SR.name_description-local-iso-storage-host", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Local storage.
         /// </summary>
         public static string SR_name_description_local_storage {

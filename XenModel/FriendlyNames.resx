@@ -1967,4 +1967,10 @@
   <data name="Label-host.system_status-xspvscache" xml:space="preserve">
     <value>PVS-Accelerator Status</value>
   </data>
+  <data name="SR.name_description-local-iso-storage" xml:space="preserve">
+    <value>Local ISO storage</value>
+  </data>
+  <data name="SR.name_description-local-iso-storage-host" xml:space="preserve">
+    <value>Local ISO storage on {0}</value>
+  </data>
 </root>

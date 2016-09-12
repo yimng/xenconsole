@@ -17,8 +17,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "splash", "splash\splash.vcx
 		{70BDA4BC-F062-4302-8ACD-A15D8BF31D65} = {70BDA4BC-F062-4302-8ACD-A15D8BF31D65}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenAdminTests", "XenAdminTests\XenAdminTests.csproj", "{21B9482C-D255-40D5-ABA7-C8F00F99547C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenCenterLib", "XenCenterLib\XenCenterLib.csproj", "{9861DFA1-B41F-432D-A43F-226257DEBBB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenCenterVNC", "XenCenterVNC\XenCenterVNC.csproj", "{BD345C89-E8F4-4767-9BE0-1F0EAB7FA927}"
@@ -34,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenServerHealthCheck", "XenServerHealthCheck\XenServerHealthCheck.csproj", "{DEB3208D-1153-407C-8C99-0D8899BE25A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalsignLib", "HalsignLib\HalsignLib.csproj", "{E2530AEC-7034-4276-9C62-442895EA242C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XenAdminTests", "XenAdminTests\XenAdminTests.csproj", "{21B9482C-D255-40D5-ABA7-C8F00F99547C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,16 +89,6 @@ Global
 		{AFB19C9D-DD63-478B-A4A3-8452CBD0B9AB}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{AFB19C9D-DD63-478B-A4A3-8452CBD0B9AB}.Release|Win32.ActiveCfg = Release|Win32
 		{AFB19C9D-DD63-478B-A4A3-8452CBD0B9AB}.Release|Win32.Build.0 = Release|Win32
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{9861DFA1-B41F-432D-A43F-226257DEBBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9861DFA1-B41F-432D-A43F-226257DEBBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9861DFA1-B41F-432D-A43F-226257DEBBB9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -181,6 +171,18 @@ Global
 		{E2530AEC-7034-4276-9C62-442895EA242C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E2530AEC-7034-4276-9C62-442895EA242C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{E2530AEC-7034-4276-9C62-442895EA242C}.Release|Win32.Build.0 = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Debug|Win32.Build.0 = Debug|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Win32.ActiveCfg = Release|Any CPU
+		{21B9482C-D255-40D5-ABA7-C8F00F99547C}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
