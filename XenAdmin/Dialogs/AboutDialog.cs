@@ -32,10 +32,10 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using XenAdmin.Core;
-using System.Linq;
 
 
 namespace XenAdmin.Dialogs
@@ -53,15 +53,8 @@ namespace XenAdmin.Dialogs
                                    : Program.Version.Revision.ToString();
 
             VersionLabel.Text = string.Format(Messages.VERSION_NUMBER, Branding.PRODUCT_VERSION_TEXT,
-                Branding.XENCENTER_VERSION, buildText, IntPtr.Size * 8);
-            label2.Text = string.Format(Messages.COPYRIGHT, Branding.COMPANY_NAME_LEGAL);
-            label2.Visible = !HiddenFeatures.CopyrightHidden;
-
-            showAgainCheckBox.Checked = Properties.Settings.Default.ShowAboutDialog;
-            var showLicenseNag = HiddenFeatures.LicenseNagVisible;
-            LicenseDetailsTextBox.Text = showLicenseNag ? GetLicenseDetails() : "";
-            licenseDetailsLabel.Visible = LicenseDetailsTextBox.Visible = showLicenseNag;
-            showAgainCheckBox.Visible = showLicenseNag;
+                string.IsNullOrEmpty(Getbuildinfo()) ? Branding.BUILD_NUMBER : Getbuildinfo());
+            label2.Text = string.Format(Messages.COPYRIGHT, Branding.COPYRIGHT_YEARS, Branding.COMPANY_NAME_LEGAL);
         }
 
         private void OkButton_Click(object sender, EventArgs e)
@@ -84,29 +77,16 @@ namespace XenAdmin.Dialogs
             }
         }
 
-        private string GetLicenseDetails()
+        private string Getbuildinfo()
         {
-            List<string> companies = new List<string>();
-            foreach (var xenConnection in ConnectionsManager.XenConnectionsCopy.Where(c => c.IsConnected))
+            string path = string.Concat(Application.StartupPath, @"\BuildInfo");
+            if (File.Exists(path))
             {
-                foreach (var host in xenConnection.Cache.Hosts.Where(h => h.license_params != null && h.license_params.ContainsKey("company")))
-                {
-                    if (!string.IsNullOrEmpty(host.license_params["company"]) && !companies.Contains(host.license_params["company"]))
-                    {
-                        companies.Add(host.license_params["company"]);
-                    }
-                }
+                string[] lines = File.ReadAllLines(path, Encoding.UTF8);
+                return lines.Length > 0 ? lines[0].Trim() : null;
             }
-            return string.Join("\r\n", companies);
-        }
 
-        private void showAgainCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Properties.Settings.Default.ShowAboutDialog != showAgainCheckBox.Checked)
-            {
-                Properties.Settings.Default.ShowAboutDialog = showAgainCheckBox.Checked;
-                Settings.TrySaveSettings();
-            }
+            return null;
         }
     }
 }

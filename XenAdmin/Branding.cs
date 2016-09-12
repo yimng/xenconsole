@@ -39,17 +39,19 @@ namespace XenAdmin
 {
     static public class Branding
     {
-        public const string PRODUCT_VERSION_TEXT = "[BRANDING_PRODUCT_VERSION_TEXT]";
-        public const string XENCENTER_VERSION = "[BRANDING_PRODUCT_VERSION]";
-        public const string COMPANY_NAME_LEGAL = "[BRANDING_COMPANY_NAME_LEGAL]";
-        public const string BRAND_CONSOLE = "[XenCenter]";
-        public const string PRODUCT_BRAND = "[XenServer product]";
-        public const string COMPANY_NAME_SHORT = "[Citrix]";
-        public const string SEARCH = "[xensearch]";
+        public const string PRODUCT_VERSION_TEXT = "6.0";
+        public const string XENCENTER_VERSION = "6.0.0";
+        public const string COMPANY_NAME_LEGAL = "Halsign Corporation";
+        public const string BRAND_CONSOLE = "vGate";
+        public const string PRODUCT_BRAND = "vGate";
+        public const string COMPANY_NAME_SHORT = "Halsign";
+        public const string SEARCH = "[vGatesearch]";
         public const string UPDATE = "[xsupdate]";
         public const string UPDATEISO = "[iso]";
         public const string BACKUP = "[xbk]";
         public const string CHECK_FOR_UPDATES_URL = "[BRANDING_XENSERVER_UPDATE_URL]";
+        public const string BUILD_NUMBER = "20160601";
+        public const string COPYRIGHT_YEARS = "2016";
 
         public static string Search
         {

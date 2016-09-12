@@ -29,18 +29,29 @@ namespace XenAdmin.Dialogs
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutDialog));
-            this.OkButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LicenseDetailsTextBox = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.licenseDetailsLabel = new System.Windows.Forms.Label();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.showAgainCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.VersionLabel = new System.Windows.Forms.Label();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelCopyright = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::XenAdmin.Properties.Resources.about_box_graphic_423x79;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // VersionLabel
+            // 
+            resources.ApplyResources(this.VersionLabel, "VersionLabel");
+            this.VersionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.VersionLabel.Name = "VersionLabel";
             // 
             // OkButton
             // 
@@ -51,28 +62,6 @@ namespace XenAdmin.Dialogs
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.Controls.Add(this.LicenseDetailsTextBox, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.OkButton, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.licenseDetailsLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.VersionLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.showAgainCheckBox, 0, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // LicenseDetailsTextBox
-            // 
-            this.LicenseDetailsTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.tableLayoutPanel1.SetColumnSpan(this.LicenseDetailsTextBox, 2);
-            this.LicenseDetailsTextBox.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.LicenseDetailsTextBox, "LicenseDetailsTextBox");
-            this.LicenseDetailsTextBox.Name = "LicenseDetailsTextBox";
-            this.LicenseDetailsTextBox.ReadOnly = true;
-            // 
             // linkLabel1
             // 
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
@@ -80,40 +69,26 @@ namespace XenAdmin.Dialogs
             this.linkLabel1.TabStop = true;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.VersionLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.OkButton, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelCopyright, 0, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
             this.label2.Name = "label2";
             // 
-            // licenseDetailsLabel
+            // labelCopyright
             // 
-            resources.ApplyResources(this.licenseDetailsLabel, "licenseDetailsLabel");
-            this.licenseDetailsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.SetColumnSpan(this.licenseDetailsLabel, 2);
-            this.licenseDetailsLabel.Name = "licenseDetailsLabel";
-            // 
-            // VersionLabel
-            // 
-            resources.ApplyResources(this.VersionLabel, "VersionLabel");
-            this.VersionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.SetColumnSpan(this.VersionLabel, 2);
-            this.VersionLabel.Name = "VersionLabel";
-            // 
-            // showAgainCheckBox
-            // 
-            resources.ApplyResources(this.showAgainCheckBox, "showAgainCheckBox");
-            this.showAgainCheckBox.Name = "showAgainCheckBox";
-            this.showAgainCheckBox.UseVisualStyleBackColor = true;
-            this.showAgainCheckBox.CheckedChanged += new System.EventHandler(this.showAgainCheckBox_CheckedChanged);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::XenAdmin.Properties.Resources.about_box_graphic_423x79;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.labelCopyright, "labelCopyright");
+            this.labelCopyright.Name = "labelCopyright";
             // 
             // AboutDialog
             // 
@@ -126,9 +101,9 @@ namespace XenAdmin.Dialogs
             this.Controls.Add(this.pictureBox1);
             this.HelpButton = false;
             this.Name = "AboutDialog";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,14 +111,12 @@ namespace XenAdmin.Dialogs
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Button OkButton;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label licenseDetailsLabel;
-        private System.Windows.Forms.TextBox LicenseDetailsTextBox;
-        private System.Windows.Forms.CheckBox showAgainCheckBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCopyright;
     }
 }
