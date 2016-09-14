@@ -2058,11 +2058,44 @@ Archive destination: {0}</value>
   <data name="BACKINGUP_HOST_WITH_DATA" xml:space="preserve">
     <value>Backing up server '{0}', {1} received... </value>
   </data>
+  <data name="BACKUP_CHECKED_MESSAGE" xml:space="preserve">
+    <value>Please select VM to backup.</value>
+  </data>
+  <data name="BACKUP_CHECK_ERROR_MESSAGE" xml:space="preserve">
+    <value>{0} does not configure or disables configuration, please set backup inforamtion first.</value>
+  </data>
+  <data name="BACKUP_CIRCLE" xml:space="preserve">
+    <value>Full Backup Circle</value>
+  </data>
+  <data name="BACKUP_DAILY" xml:space="preserve">
+    <value>Backup Daily</value>
+  </data>
+  <data name="BACKUP_ERROR_1503" xml:space="preserve">
+    <value>User {0} does not exist</value>
+  </data>
+  <data name="BACKUP_ERROR_1504" xml:space="preserve">
+    <value>password is not correct</value>
+  </data>
   <data name="BACKUP_HOST" xml:space="preserve">
     <value>Back Up Server...</value>
   </data>
+  <data name="BACKUP_IMMEDIATELY" xml:space="preserve">
+    <value>Backup Now</value>
+  </data>
   <data name="BACKUP_NAME" xml:space="preserve">
     <value>Backup name</value>
+  </data>
+  <data name="BACKUP_ONCE" xml:space="preserve">
+    <value>Full Backup Once</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_DAYS" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_HOURS" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_WEEKS" xml:space="preserve">
+    <value>Weeks</value>
   </data>
   <data name="BACKUP_SELECT_HOST" xml:space="preserve">
     <value>Select the server to restore from the list below. If the server you want is not listed here, you can add it by clicking Add New Server.</value>
@@ -2072,6 +2105,18 @@ Archive destination: {0}</value>
   </data>
   <data name="BACKUP_SELECT_HOST_TITLE" xml:space="preserve">
     <value>Restore from Backup</value>
+  </data>
+  <data name="BACKUP_UNEXPECTED_CONNECTING" xml:space="preserve">
+    <value>Unexpected exception when connecting to  Halsign MC.</value>
+  </data>
+  <data name="BACKUP_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BACKUP_VM_TITLE" xml:space="preserve">
+    <value>Backup VM - "{0}"</value>
+  </data>
+  <data name="BACKUP_WEEKLY" xml:space="preserve">
+    <value>Backup Weekly</value>
   </data>
   <data name="BAD_RESTORE_DETECTED" xml:space="preserve">
     <value>The server you are connecting to has been restored from a backup of '{0}', a server you are already connected to. 
@@ -2203,6 +2248,87 @@ Deleting this bond will disrupt traffic through the secondary interface on the b
   </data>
   <data name="BROKEN_TOOLS_PROMPT" xml:space="preserve">
     <value>Your Tools ISO is on a broken SR, [XenCenter] will attempt to fix it before proceeding. Do you wish to continue?</value>
+  </data>
+  <data name="BR_ACTION_FAILED" xml:space="preserve">
+    <value>Job deploy failed</value>
+  </data>
+  <data name="BR_ACTION_SUCCESS" xml:space="preserve">
+    <value>Job deploy success</value>
+  </data>
+  <data name="BR_CALL_AGENT_EXCEPTION" xml:space="preserve">
+    <value>Exception occur when call agent:</value>
+  </data>
+  <data name="BR_CALL_AGENT_FROM_MASTER" xml:space="preserve">
+    <value>Master could not connect to the storage of the VM</value>
+  </data>
+  <data name="BR_CALL_STORAGE_EXCEPTION" xml:space="preserve">
+    <value>Exception occur when call Halsign MC Service</value>
+  </data>
+  <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_CONFIG_STATUS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_DISABLED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_ENABLED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_JOB_CANCEL" xml:space="preserve">
+    <value>Cancel job</value>
+  </data>
+  <data name="BR_JOB_NAME_CHECK" xml:space="preserve">
+    <value>The job name can only contain numbers, letters, underscores, spaces and dash.</value>
+  </data>
+  <data name="BR_MENU" xml:space="preserve">
+    <value>Backu&amp;p and Restore...</value>
+  </data>
+  <data name="BR_MENU_BACKUP" xml:space="preserve">
+    <value>&amp;Backup</value>
+  </data>
+  <data name="BR_MENU_REPLICATION" xml:space="preserve">
+    <value>Re&amp;plication</value>
+  </data>
+  <data name="BR_MENU_RESTORE" xml:space="preserve">
+    <value>&amp;Restore</value>
+  </data>
+  <data name="BR_NO_POOL_EXCEPTION" xml:space="preserve">
+    <value>No pool exist</value>
+  </data>
+  <data name="BR_PAGE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_PARSE_HISTORY" xml:space="preserve">
+    <value>Exception happened when parse history list.</value>
+  </data>
+  <data name="BR_STATUS_CANCELED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_FAILED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_INACTIVE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_INQUEUE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_PENDING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_RUNNING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_SUCCESS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STORAGE_IP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STORAGE_USERNAME" xml:space="preserve">
+    <value />
   </data>
   <data name="BUGTOOL_FILE_PREFIX" xml:space="preserve">
     <value>status-report-</value>
@@ -2585,6 +2711,9 @@ Do you want to assign it to the schedule '{2}' instead?</value>
   <data name="CHOOSE_VMS_VMSS_RUBRIC" xml:space="preserve">
     <value>Select a checkbox to add a VM to the snapshot schedule; clear its checkbox to remove it from the schedule.</value>
   </data>
+  <data name="CHOSE_VMS" xml:space="preserve">
+    <value>CHOSE_VMS</value>
+  </data>
   <data name="CLEAR_SEARCH" xml:space="preserve">
     <value>Clear Search</value>
   </data>
@@ -2600,6 +2729,21 @@ Do you want to assign it to the schedule '{2}' instead?</value>
   <data name="COLLAPSE_CHILDREN" xml:space="preserve">
     <value>&amp;Collapse Children</value>
   </data>
+  <data name="COMMANDS_EDIT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_NEW_SR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_NEW_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_REBOOT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_START" xml:space="preserve">
+    <value />
+  </data>
   <data name="COMMON_CRITERIA_TEXT" xml:space="preserve">
     <value>for use with Common Criteria versions of [XenServer] only</value>
   </data>
@@ -2609,11 +2753,17 @@ Do you want to assign it to the schedule '{2}' instead?</value>
   <data name="COMPLETED_WITH_ERRORS" xml:space="preserve">
     <value>Completed, with some errors encountered. See the application log files for more information.</value>
   </data>
+  <data name="COMPLETE_PAGE" xml:space="preserve">
+    <value>Complete</value>
+  </data>
   <data name="COMPRESSING_FILES" xml:space="preserve">
     <value>Compressing appliance files...</value>
   </data>
   <data name="CONFIGURE_HA_ELLIPSIS" xml:space="preserve">
     <value>&amp;Configure HA...</value>
+  </data>
+  <data name="CONFIGURE_TITLE" xml:space="preserve">
+    <value>Information of backup configure</value>
   </data>
   <data name="CONFIGURING_WLB" xml:space="preserve">
     <value>Configuring Workload Balancing </value>
@@ -2631,6 +2781,9 @@ Do you want to assign it to the schedule '{2}' instead?</value>
     <value>Changing the Control Domain memory will cause the server to be rebooted.
 
 Do you want to continue?</value>
+  </data>
+  <data name="CONFIRM_CANCEL_BR_JOB" xml:space="preserve">
+    <value />
   </data>
   <data name="CONFIRM_CHANGE_MEMORY_MAX_PLURAL" xml:space="preserve">
     <value>Changing the maximum memory of these VMs will cause them to be rebooted.
@@ -2664,6 +2817,12 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE" xml:space="preserve">
     <value>Are you sure you want to delete the selected {0}?</value>
+  </data>
+  <data name="CONFIRM_DELETE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIRM_DELETE_BR_JOB" xml:space="preserve">
+    <value />
   </data>
   <data name="CONFIRM_DELETE_ITEMS" xml:space="preserve">
     <value>You want to delete these {0} selected items.</value>
@@ -4021,6 +4180,9 @@ This will also delete its subfolders.</value>
   <data name="DISABLED_VMSS" xml:space="preserve">
     <value>Snapshot schedule '{0}' disabled.</value>
   </data>
+  <data name="DISABLE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
   <data name="DISABLE_HA" xml:space="preserve">
     <value>Disable HA</value>
   </data>
@@ -4321,6 +4483,9 @@ Eject the CD and try again.</value>
   </data>
   <data name="DR_HA_CHECK_DESCRIPTION" xml:space="preserve">
     <value>HA on pool {0}</value>
+  </data>
+  <data name="DR_WITH_HOT_PLUG" xml:space="preserve">
+    <value>The VM {0} has removable physical storage attached, please re-select.</value>
   </data>
   <data name="DR_WIZARD_AMP" xml:space="preserve">
     <value>&amp;Disaster Recovery Wizard...</value>
@@ -4802,6 +4967,9 @@ Would you like to eject these ISOs before continuing?</value>
   <data name="ENABLED_VMSS" xml:space="preserve">
     <value>Snapshot schedule '{0}' enabled.</value>
   </data>
+  <data name="ENABLE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
   <data name="ENABLE_HA_ELLIPSIS" xml:space="preserve">
     <value>&amp;Enable HA...</value>
   </data>
@@ -5074,6 +5242,90 @@ Would you like to eject these ISOs before continuing?</value>
   </data>
   <data name="ERRO_IMPORTING_SERVER_LIST" xml:space="preserve">
     <value>Error importing server list. Check that the xml format in the file is correct.</value>
+  </data>
+  <data name="ERR_AGT_NEW_JOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_CHANGE_DIR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_MAKE_DIR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_MAKE_FILE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_REPLICATION_VM_RUN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_RSYNC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_UNKNOWN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_CHKZFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_INFO" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_ZFS_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_DEL_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_DISK_CONFLICT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_NETWORK" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_POOLS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_SR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VBDS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VDI" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VIFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VM_BY_UUID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VM_REC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_LOGIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VBD" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VDI" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VIF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_REMOTE_LOGIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_UPDATE_OTH_CFG" xml:space="preserve">
+    <value />
   </data>
   <data name="EULA" xml:space="preserve">
     <value>EULA</value>
@@ -5514,6 +5766,9 @@ Would you like to eject these ISOs before continuing?</value>
   <data name="FREE_MEMORY" xml:space="preserve">
     <value>Free memory</value>
   </data>
+  <data name="FRIDAY" xml:space="preserve">
+    <value />
+  </data>
   <data name="FRIDAY_LONG" xml:space="preserve">
     <value>Friday</value>
   </data>
@@ -5522,6 +5777,24 @@ Would you like to eject these ISOs before continuing?</value>
   </data>
   <data name="FULLY_APPLIED" xml:space="preserve">
     <value>Fully applied</value>
+  </data>
+  <data name="FULL_BACKUP_CIRCLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_DAILY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_NOW" xml:space="preserve">
+    <value>Full Backup Now</value>
+  </data>
+  <data name="FULL_BACKUP_ONCE" xml:space="preserve">
+    <value>Full Backup Once</value>
+  </data>
+  <data name="FULL_BACKUP_RECURS_EVERY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_WEEKLY" xml:space="preserve">
+    <value />
   </data>
   <data name="GALLERYSEARCHBAR_MATCHES" xml:space="preserve">
     <value>{0} matches</value>
@@ -5627,6 +5900,12 @@ Would you like to eject these ISOs before continuing?</value>
   </data>
   <data name="GETPASSWORD" xml:space="preserve">
     <value>Get Password</value>
+  </data>
+  <data name="GET_BR_HISTORY" xml:space="preserve">
+    <value>Get the history of backup&amp;restore</value>
+  </data>
+  <data name="GET_RESTORE_LIST" xml:space="preserve">
+    <value>Get the inforamtion for restoring</value>
   </data>
   <data name="GPU" xml:space="preserve">
     <value>GPU</value>
@@ -6855,6 +7134,30 @@ Size: {3}</value>
   <data name="IS_STANDALONE" xml:space="preserve">
     <value>Is standalone</value>
   </data>
+  <data name="JOB_STATUS_CANCELING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_CHK_ZFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_DELETE_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_GEN_METADATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_TRANS_DATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_TRANS_METADATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_VERIFY_DATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_ZFS_SNAP" xml:space="preserve">
+    <value />
+  </data>
   <data name="JOINING_AD" xml:space="preserve">
     <value>Please enter a user name and password with sufficient privileges to add servers to domain '{0}'.</value>
   </data>
@@ -7091,6 +7394,9 @@ Standard features only</value>
   </data>
   <data name="LIVE_PATCHING_FAILED_ONE_HOST" xml:space="preserve">
     <value>Live patching failed for server ‘{0}’. To apply the patch, please put the server into maintenance mode and reboot it.</value>
+  </data>
+  <data name="LOADAVG_UNIT" xml:space="preserve">
+    <value>Load</value>
   </data>
   <data name="LOADING" xml:space="preserve">
     <value>Loading '{0}'...</value>
@@ -7827,6 +8133,9 @@ To learn more about the [XenServer] Live VDI Migration feature or to start a [Xe
   </data>
   <data name="MIXED_POWER_ON_MODE" xml:space="preserve">
     <value>Mixed</value>
+  </data>
+  <data name="MONDAY" xml:space="preserve">
+    <value />
   </data>
   <data name="MONDAY_LONG" xml:space="preserve">
     <value>Monday</value>
@@ -8783,6 +9092,9 @@ It is strongly recommended that you Cancel and apply the latest version of the p
   <data name="NEW_SCHEDULE" xml:space="preserve">
     <value>&amp;New schedule...</value>
   </data>
+  <data name="NEW_REPLICATION" xml:space="preserve">
+    <value>new repliaction</value>
+  </data>
   <data name="NEW_SEARCH" xml:space="preserve">
     <value>New Search</value>
   </data>
@@ -9106,6 +9418,9 @@ However, there is not enough space to perform the repartitioning, so the current
   </data>
   <data name="OPTIMIZED" xml:space="preserve">
     <value>Optimized</value>
+  </data>
+  <data name="OPTION_PAGE" xml:space="preserve">
+    <value>Backup Options</value>
   </data>
   <data name="OUT_OF_DATE" xml:space="preserve">
     <value>Out of date</value>
@@ -9896,6 +10211,15 @@ Press OK to continue the wizard and return to the server and follow the instruct
   <data name="PVS_TAB_TITLE" xml:space="preserve">
     <value>PVS-Accelerator</value>
   </data>
+  <data name="PUBLISH_VDI_CHECK" xml:space="preserve">
+    <value>Only the virtual machine which contains one virtual disk can be published, please back and check vm settings.</value>
+  </data>
+  <data name="PUBLISH_VM_CHECK" xml:space="preserve">
+    <value>Only one virtual machine is allowed to publish.</value>
+  </data>
+  <data name="PUBLISH_VM_TITLE" xml:space="preserve">
+    <value>Publish VM - "{0}"</value>
+  </data>
   <data name="PV_DRIVERS_NOT_INSTALLED" xml:space="preserve">
     <value>[XenServer product] Tools not installed</value>
   </data>
@@ -10044,6 +10368,9 @@ You must reconnect to {1} using an account with Pool Administrator permissions b
   <data name="RBAC_WARNING_VM_WIZARD_AFFINITY" xml:space="preserve">
     <value>A {0} user cannot alter the Home Server setting. Your choice of storage may be limited by the Home Server defined in the Template you select</value>
   </data>
+  <data name="RBAC_WARNING_VM_WIZARD_BACKUP" xml:space="preserve">
+    <value>A {0} user cannot Backup VMs.Log in as a different user with sufficient privileges and try again.</value>
+  </data>
   <data name="RBAC_WARNING_VM_WIZARD_BLOCK" xml:space="preserve">
     <value>A {0} user cannot create VMs. Log in as a different user with sufficient privileges and try again.</value>
   </data>
@@ -10052,6 +10379,12 @@ You must reconnect to {1} using an account with Pool Administrator permissions b
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_MEM" xml:space="preserve">
     <value>A {0} user cannot alter memory values and will be restricted to the settings on the template.</value>
+  </data>
+  <data name="RBAC_WARNING_VM_WIZARD_REPLICATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RBAC_WARNING_VM_WIZARD_RESTORE" xml:space="preserve">
+    <value />
   </data>
   <data name="READY_UPGRADE" xml:space="preserve">
     <value>Ready to Upgrade</value>
@@ -10264,11 +10597,53 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
   <data name="REPEATED_KEY" xml:space="preserve">
     <value>Repeated key</value>
   </data>
+  <data name="REPLICATED_VM_RUNNING_INFO" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_CHECKED_MESSAGE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_CIRCLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_COMPLETE_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_DAILY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_IMMEDIATELY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_JOB_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_JOB_SETTINGS_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_NETWORK_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_ONCE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_SYNCH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_VM_TITLE" xml:space="preserve">
+    <value>Replicate VM - {0}</value>
+  </data>
+  <data name="REPLICATION_WEEKLY" xml:space="preserve">
+    <value />
+  </data>
   <data name="REQUIRED_HOTFIX_ISNOT_INSTALLED" xml:space="preserve">
     <value>{0}: The required hotfix is not installed</value>
   </data>
   <data name="RESOLVED_AS" xml:space="preserve">
     <value>Resolved as {0}</value>
+  </data>
+  <data name="RESTORE_COMPLETE_TITLE" xml:space="preserve">
+    <value />
   </data>
   <data name="RESTORE_DISMISSED_UPDATES" xml:space="preserve">
     <value>Restore dismissed updates</value>
@@ -10278,6 +10653,48 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
   </data>
   <data name="RESTORE_HOST" xml:space="preserve">
     <value>Restore From Backup...</value>
+  </data>
+  <data name="RESTORE_JOB_SCHEDULE_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SCHEDULE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SETTINGS_TITLE" xml:space="preserve">
+    <value>Enter job name, define VM naming convention, and select destination of the restore.</value>
+  </data>
+  <data name="RESTORE_LIST" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_NOW" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_ONCE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_ROOT_PROMPT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SELECT_VM_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SELECT_VM_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SET_STORAGE" xml:space="preserve">
+    <value>Set Storage</value>
+  </data>
+  <data name="RESTORE_VM_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_VM_SETTINGS_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_VM_TITLE" xml:space="preserve">
+    <value>Restore VM - {0}</value>
   </data>
   <data name="RESTORING" xml:space="preserve">
     <value>Restoring...</value>
@@ -10431,6 +10848,9 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
   <data name="RUN_REPORT" xml:space="preserve">
     <value>&amp;Run Report</value>
   </data>
+  <data name="SATURDAY" xml:space="preserve">
+    <value />
+  </data>
   <data name="SATURDAY_LONG" xml:space="preserve">
     <value>Saturday</value>
   </data>
@@ -10487,6 +10907,18 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
   </data>
   <data name="SCAN_IN_PROGRESS_TOOLTIP" xml:space="preserve">
     <value>This SR already has a scan in progress</value>
+  </data>
+  <data name="SCHEDULED_SNAPSHOTS_DEFINED_FOR_POOL" xml:space="preserve">
+    <value>VM protection policies defined in pool '{0}' ({1} out of {2} VMs currently protected):</value>
+  </data>
+  <data name="SCHEDULED_SNAPSHOTS_DEFINED_FOR_SERVER" xml:space="preserve">
+    <value>VM protection policies defined in server '{0}' ({1} out of {2} VMs currently protected):</value>
+  </data>
+  <data name="SCHEDULE_JOB" xml:space="preserve">
+    <value>Schedule job</value>
+  </data>
+  <data name="SCHEDULE_REPLICATION" xml:space="preserve">
+    <value />
   </data>
   <data name="SEARCHBOX_TOOLTIP" xml:space="preserve">
     <value>Find resources in the Resources Pane</value>
@@ -10559,6 +10991,9 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
   </data>
   <data name="SELECT_VMS_TO_SUSPEND_DLOG_TITLE" xml:space="preserve">
     <value>Select VMs to Suspend - server '{0}'</value>
+  </data>
+  <data name="SELECT_VM_REPLICATE" xml:space="preserve">
+    <value>Select VM to replicate</value>
   </data>
   <data name="SERVER" xml:space="preserve">
     <value>Server</value>
@@ -10679,6 +11114,9 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
   </data>
   <data name="SET_STORAGELINK_CREDS_TO_POOL_ACTION_TITLE" xml:space="preserve">
     <value>Set StorageLink Credentials to '{0}'</value>
+  </data>
+  <data name="SET_SYNCHRONIZATION" xml:space="preserve">
+    <value>Set Synchronization</value>
   </data>
   <data name="SEVERITY" xml:space="preserve">
     <value>Severity</value>
@@ -11212,6 +11650,15 @@ The upper limit: SR size / {2}</value>
   <data name="SUCCEEDED" xml:space="preserve">
     <value>succeeded</value>
   </data>
+  <data name="SUMMARY_COMMANDS_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SUMMARY_PAGE" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="SUNDAY" xml:space="preserve">
+    <value />
+  </data>
   <data name="SUNDAY_LONG" xml:space="preserve">
     <value>Sunday</value>
   </data>
@@ -11273,6 +11720,9 @@ Refer to the "[XenServer product] Administrator's Guide" for instructions on how
   </data>
   <data name="SWITCH_ROLE_DESC" xml:space="preserve">
     <value>Switch to an account with the required role and try again.</value>
+  </data>
+  <data name="SYNCHRONIZATION_CHECKED_MESSAGE" xml:space="preserve">
+    <value />
   </data>
   <data name="SYNCING_DATABASE" xml:space="preserve">
     <value>Performing pool database sync</value>
@@ -11366,6 +11816,9 @@ Refer to the "[XenServer product] Administrator's Guide" for instructions on how
   </data>
   <data name="THIS_WEEK" xml:space="preserve">
     <value>is this week</value>
+  </data>
+  <data name="THURSDAY" xml:space="preserve">
+    <value />
   </data>
   <data name="THURSDAY_LONG" xml:space="preserve">
     <value>Thursday</value>
@@ -11501,6 +11954,9 @@ Refer to the "[XenServer product] Administrator's Guide" for instructions on how
   </data>
   <data name="TRUSTED" xml:space="preserve">
     <value>trusted</value>
+  </data>
+  <data name="TUESDAY" xml:space="preserve">
+    <value />
   </data>
   <data name="TUESDAY_LONG" xml:space="preserve">
     <value>Tuesday</value>
@@ -12205,6 +12661,9 @@ To learn more about the [XenServer] Dynamic Workload Balancing feature or to sta
   <data name="VAL_KILRATE" xml:space="preserve">
     <value>kBps</value>
   </data>
+  <data name="VAL_LOAD_NUM_FORMAT" xml:space="preserve">
+    <value>0.000</value>
+  </data>
   <data name="VAL_MB" xml:space="preserve">
     <value>{0} MB</value>
   </data>
@@ -12802,6 +13261,12 @@ To learn more about the [XenServer] Dynamic Workload Balancing feature or to sta
   <data name="VOLUMES" xml:space="preserve">
     <value>Volumes</value>
   </data>
+  <data name="VTOP_PUBLISH" xml:space="preserve">
+    <value>Pub&amp;lish...</value>
+  </data>
+  <data name="V_CONSOLE" xml:space="preserve">
+    <value />
+  </data>
   <data name="WAITING" xml:space="preserve">
     <value>Waiting</value>
   </data>
@@ -12840,6 +13305,9 @@ To learn more about the [XenServer] Dynamic Workload Balancing feature or to sta
   </data>
   <data name="WEB_PAGE" xml:space="preserve">
     <value>Web Page</value>
+  </data>
+  <data name="WEDNESDAY" xml:space="preserve">
+    <value />
   </data>
   <data name="WEDNESDAY_LONG" xml:space="preserve">
     <value>Wednesday</value>

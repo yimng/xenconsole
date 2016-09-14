@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NowRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NowRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="NowRadioButton.Text" xml:space="preserve">
+    <value>即时</value>
+  </data>
+  <data name="OnceRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OnceRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="OnceRadioButton.Text" xml:space="preserve">
+    <value>一次</value>
+  </data>
+  <data name="DailyRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DailyRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 120</value>
+  </data>
+  <data name="DailyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="DailyRadioButton.Text" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="WeeklyRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WeeklyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="WeeklyRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 156</value>
+  </data>
+  <data name="WeeklyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="WeeklyRadioButton.Text" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="StartDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 86</value>
+  </data>
+  <data name="StartDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="StartDateLabel.Text" xml:space="preserve">
+    <value>开始日期:</value>
+  </data>
+  <data name="StartDateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="StartTimeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StartTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 120</value>
+  </data>
+  <data name="StartTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="StartTimeLabel.Text" xml:space="preserve">
+    <value>开始时间:</value>
+  </data>
+  <data name="RecurLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RecurLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 156</value>
+  </data>
+  <data name="RecurLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="RecurLabel.Text" xml:space="preserve">
+    <value>循环间隔:</value>
+  </data>
+  <data name="RecurLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="StartDatePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 79</value>
+  </data>
+  <data name="StartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 114</value>
+  </data>
+  <data name="RecurTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 151</value>
+  </data>
+  <data name="SundayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SundayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 194</value>
+  </data>
+  <data name="SundayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="SundayCheckBox.Text" xml:space="preserve">
+    <value>周日</value>
+  </data>
+  <data name="MondayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MondayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 194</value>
+  </data>
+  <data name="MondayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="MondayCheckBox.Text" xml:space="preserve">
+    <value>周一</value>
+  </data>
+  <data name="TuesdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TuesdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 194</value>
+  </data>
+  <data name="TuesdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="TuesdayCheckBox.Text" xml:space="preserve">
+    <value>周二</value>
+  </data>
+  <data name="WednesdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WednesdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 194</value>
+  </data>
+  <data name="WednesdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="WednesdayCheckBox.Text" xml:space="preserve">
+    <value>周三</value>
+  </data>
+  <data name="ThursdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ThursdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 234</value>
+  </data>
+  <data name="ThursdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="ThursdayCheckBox.Text" xml:space="preserve">
+    <value>周四</value>
+  </data>
+  <data name="FridayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FridayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 234</value>
+  </data>
+  <data name="FridayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="FridayCheckBox.Text" xml:space="preserve">
+    <value>周五</value>
+  </data>
+  <data name="SaturdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SaturdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 234</value>
+  </data>
+  <data name="SaturdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="SaturdayCheckBox.Text" xml:space="preserve">
+    <value>周六</value>
+  </data>
+  <data name="ServerTimeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ServerTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 51</value>
+  </data>
+  <data name="ServerTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 12</value>
+  </data>
+  <data name="ServerTimeLabel.Text" xml:space="preserve">
+    <value>服务器时间:</value>
+  </data>
+  <data name="ServerTimeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="ServerDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 51</value>
+  </data>
+  <data name="ServerDateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="CircleRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 194</value>
+  </data>
+  <data name="CircleRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="CircleRadioButton.Text" xml:space="preserve">
+    <value>循环</value>
+  </data>
+  <data name="RecursLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RecursLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RecursLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 156</value>
+  </data>
+  <data name="RecursLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="RecursLabel.Text" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="countlabel.Text" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="expectFullCountlabel.Text" xml:space="preserve">
+    <value>全新备份间隔</value>
+  </data>
+  <data name="groupBoxOptions.Text" xml:space="preserve">
+    <value>备份选项</value>
+  </data>
+  <data name="radioButtonFull.Text" xml:space="preserve">
+    <value>全新备份</value>
+  </data>
+  <data name="radioButtonIncrement.Text" xml:space="preserve">
+    <value>增量备份</value>
+  </data>
+  <data name="expectFullCheckBox.Text" xml:space="preserve">
+    <value>全新备份间隔</value>
+  </data>
+</root>

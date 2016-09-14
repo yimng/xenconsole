@@ -208,6 +208,46 @@ namespace XenAPI
             Pool.add_to_gui_config(session, opaque_ref, n, secret_uuid);
         }
 
+        public static Host getLowestLicenseHost(Pool pool)
+        {
+            if (pool == null)
+            {
+                return null;
+            }
+            List<Host> hostList = new List<Host>(3);
+            for (int i = 0; i < 3; i++)
+            {
+                hostList.Add(null);
+            }
+            foreach (Host host in pool.Connection.Cache.Hosts)
+            {
+                //standard
+                if (host.edition.ToLowerInvariant().EndsWith("express"))
+                {
+                    hostList[0] = host;
+                    break;
+                }
+                //enterprise
+                if (host.edition.ToLowerInvariant().EndsWith("enterprise"))
+                {
+                    hostList[1] = host;
+                }
+                //enterprise plus
+                if (host.edition.ToLowerInvariant().EndsWith("advanced"))
+                {
+                    hostList[2] = host;
+                }
+            }
+            foreach (Host host in hostList)
+            {
+                if (host != null)
+                {
+                    return host;
+                }
+            }
+            return null;
+        }
+
         private string XCPluginSecretName(string plugin_name, IXenObject obj)
         {
             return string.Format("XC_PLUGIN_SECRET_{0}_{1}_{2}", obj.Connection.Username, plugin_name, Helpers.GetUuid(obj));

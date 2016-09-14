@@ -64,7 +64,7 @@ namespace XenAdmin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.navigationPane = new XenAdmin.Controls.MainWindowControls.NavigationPane();
-            this.TheTabControl = new HalsignLib.HalsignControl.CustomTabControl.FlatTabControl();
+            this.TheTabControl = new System.Windows.Forms.TabControl();
             this.TabPageHome = new System.Windows.Forms.TabPage();
             this.TabPageGeneral = new System.Windows.Forms.TabPage();
             this.TabPageBallooning = new System.Windows.Forms.TabPage();

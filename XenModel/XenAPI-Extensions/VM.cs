@@ -50,7 +50,7 @@ namespace XenAPI
     {
         ListView, TreeView, None
     }
-    public partial class VM : IComparable<VM>
+    public partial class VM : IComparable<VM>, IEquatable<VM>
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         // The following variables are only used when the corresponding variable is missing from
@@ -2103,6 +2103,11 @@ namespace XenAPI
             {
                 return Connection.Cache.PVS_proxies.FirstOrDefault(p => p.VM != null && p.VM.Equals(this)); // null if none
             }
+        }
+
+        public bool Equals(VM other)
+        {
+            return base.Equals(other);
         }
     }
 

@@ -54,7 +54,7 @@ namespace XenAPI
             iscsi,
             ebs, rawhba,
             smb, lvmofcoe,
-            nutanix, nutanixiso, 
+            nutanix, nutanixiso, lvmobond,
             tmpfs
         }
 
@@ -1073,6 +1073,12 @@ namespace XenAPI
             {
                 return (long)Math.Round(virtual_allocation / (double)physical_size * 100.0);
             }
+        }
+
+        public bool IsRemovableStorage()
+        {
+            return (this.SMConfigType == "block" && this.other_config.ContainsValue("Removable storage") &&
+                    this.other_config.ContainsValue("local-hotplug-disk"));
         }
 
         #region IEquatable<SR> Members

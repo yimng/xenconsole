@@ -13627,4 +13627,463 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="GENERAL_PANEL_UPDATE_KEY" xml:space="preserve">
     <value>{0} on {1}</value>
   </data>
+  <data name="BACKUP_ERROR_1503" xml:space="preserve">
+    <value>用户{0}不存在</value>
+  </data>
+  <data name="BACKUP_ERROR_1504" xml:space="preserve">
+    <value>密码不正确</value>
+  </data>
+  <data name="BACKUP_UNEXPECTED_CONNECTING" xml:space="preserve">
+    <value>连接Halsign MC，出现异常</value>
+  </data>
+  <data name="BACKUP_VM_TITLE" xml:space="preserve">
+    <value>备份虚拟机 - "{0}"</value>
+  </data>
+  <data name="BR_ACTION_FAILED" xml:space="preserve">
+    <value>任务部署失败</value>
+  </data>
+  <data name="BR_ACTION_SUCCESS" xml:space="preserve">
+    <value>任务部署成功</value>
+  </data>
+  <data name="BR_CALL_AGENT_EXCEPTION" xml:space="preserve">
+    <value>访问服务器代理服务发生错误：</value>
+  </data>
+  <data name="BR_CALL_AGENT_FROM_MASTER" xml:space="preserve">
+    <value>主节点连接不到虚拟机磁盘</value>
+  </data>
+  <data name="BR_CALL_STORAGE_EXCEPTION" xml:space="preserve">
+    <value>访问 Halsign MC 服务时发生错误</value>
+  </data>
+  <data name="BR_JOB_CANCEL" xml:space="preserve">
+    <value>取消任务</value>
+  </data>
+  <data name="BR_NO_POOL_EXCEPTION" xml:space="preserve">
+    <value>没有资源池存在</value>
+  </data>
+  <data name="BR_PARSE_HISTORY" xml:space="preserve">
+    <value>无法获取历史信息！</value>
+  </data>
+  <data name="CONFIGURE_TITLE" xml:space="preserve">
+    <value>配置备份信息</value>
+  </data>
+  <data name="GET_BR_HISTORY" xml:space="preserve">
+    <value>获取备份恢复历史信息</value>
+  </data>
+  <data name="GET_RESTORE_LIST" xml:space="preserve">
+    <value>获取恢复列表</value>
+  </data>
+  <data name="REPLICATION_VM_TITLE" xml:space="preserve">
+    <value>复制虚拟机 - {0}</value>
+  </data>
+  <data name="RESTORE_VM_TITLE" xml:space="preserve">
+    <value>恢复虚拟机 - {0}</value>
+  </data>
+  <data name="VTOP_PUBLISH" xml:space="preserve">
+    <value>发布(&amp;L)...</value>
+  </data>
+  <data name="BR_MENU" xml:space="preserve">
+    <value>备份恢复(&amp;P)...</value>
+  </data>
+  <data name="BR_MENU_BACKUP" xml:space="preserve">
+    <value>备份(&amp;B)</value>
+  </data>
+  <data name="BR_MENU_REPLICATION" xml:space="preserve">
+    <value>复制(&amp;P)</value>
+  </data>
+  <data name="BR_MENU_RESTORE" xml:space="preserve">
+    <value>恢复(&amp;R)</value>
+  </data>
+  <data name="LOADAVG_UNIT" xml:space="preserve">
+    <value>负载</value>
+  </data>
+  <data name="VAL_LOAD_NUM_FORMAT" xml:space="preserve">
+    <value>0.000</value>
+  </data>
+  <data name="BACKUP_CHECKED_MESSAGE" xml:space="preserve">
+    <value>请选择需要备份的虚拟机</value>
+  </data>
+  <data name="PUBLISH_VM_TITLE" xml:space="preserve">
+    <value>发布虚拟机 - "{0}"</value>
+  </data>
+  <data name="BACKUP_CHECK_ERROR_MESSAGE" xml:space="preserve">
+    <value>{0}未进行备份配置或配置已禁用，请先进行配置。</value>
+  </data>
+  <data name="BACKUP_CIRCLE" xml:space="preserve">
+    <value>备份 小时</value>
+  </data>
+  <data name="BACKUP_DAILY" xml:space="preserve">
+    <value>备份 天</value>
+  </data>
+  <data name="BACKUP_IMMEDIATELY" xml:space="preserve">
+    <value>备份 立即</value>
+  </data>
+  <data name="BACKUP_ONCE" xml:space="preserve">
+    <value>全新备份 一次</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_DAYS" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_HOURS" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="BACKUP_RECUR_TEXT_WEEKS" xml:space="preserve">
+    <value>周</value>
+  </data>
+  <data name="BACKUP_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BACKUP_WEEKLY" xml:space="preserve">
+    <value>备份 周</value>
+  </data>
+  <data name="BR_JOB_NAME_CHECK" xml:space="preserve">
+    <value>任务名称只能包含数字、字母、空格、下划线和横线。</value>
+  </data>
+  <data name="CHOSE_VMS" xml:space="preserve">
+    <value>选择虚拟机</value>
+  </data>
+  <data name="COMPLETE_PAGE" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="DR_WITH_HOT_PLUG" xml:space="preserve">
+    <value>检测到虚拟机 {0} 连接了可移动物理存储，请重新选择。</value>
+  </data>
+  <data name="FRIDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_NOW" xml:space="preserve">
+    <value>全新备份 立即</value>
+  </data>
+  <data name="FULL_BACKUP_ONCE" xml:space="preserve">
+    <value>全新备份 一次</value>
+  </data>
+  <data name="FULL_BACKUP_RECURS_EVERY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MONDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NEW_REPLICATION" xml:space="preserve">
+    <value>全新复制</value>
+  </data>
+  <data name="OPTION_PAGE" xml:space="preserve">
+    <value>任务选项</value>
+  </data>
+  <data name="PUBLISH_VDI_CHECK" xml:space="preserve">
+    <value>当且仅当虚拟机包含一块虚拟磁盘的时候才允许发布，请返回并检查虚拟机设置。</value>
+  </data>
+  <data name="PUBLISH_VM_CHECK" xml:space="preserve">
+    <value>当前只支持单个虚拟机的发布操作。</value>
+  </data>
+  <data name="RBAC_WARNING_VM_WIZARD_BACKUP" xml:space="preserve">
+    <value>{0} 用户无法备份虚拟机。请以具有足够权限的其他用户身份登录，然后重试。</value>
+  </data>
+  <data name="RBAC_WARNING_VM_WIZARD_REPLICATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RBAC_WARNING_VM_WIZARD_RESTORE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATED_VM_RUNNING_INFO" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_CHECKED_MESSAGE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_COMPLETE_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_JOB_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_JOB_SETTINGS_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_NETWORK_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_COMPLETE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SCHEDULE_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SCHEDULE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_JOB_SETTINGS_TITLE" xml:space="preserve">
+    <value>输入任务名称、 定义虚拟机命名，并选择目标位置。</value>
+  </data>
+  <data name="RESTORE_LIST" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_ROOT_PROMPT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SELECT_VM_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SELECT_VM_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_SET_STORAGE" xml:space="preserve">
+    <value>选择存储库（Halsign MC）</value>
+  </data>
+  <data name="RESTORE_VM_SETTINGS_TEXT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_VM_SETTINGS_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SATURDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SCHEDULE_JOB" xml:space="preserve">
+    <value>任务计划</value>
+  </data>
+  <data name="SCHEDULE_REPLICATION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SELECT_VM_REPLICATE" xml:space="preserve">
+    <value>选择要复制的虚拟机</value>
+  </data>
+  <data name="SET_SYNCHRONIZATION" xml:space="preserve">
+    <value>设置同步计划</value>
+  </data>
+  <data name="SUMMARY_PAGE" xml:space="preserve">
+    <value>任务概要</value>
+  </data>
+  <data name="SUNDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SYNCHRONIZATION_CHECKED_MESSAGE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="THURSDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TUESDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WEDNESDAY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_CONFIG_STATUS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_DISABLED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_ENABLED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_PAGE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_CANCELED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_FAILED" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_INACTIVE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_INQUEUE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_PENDING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_RUNNING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STATUS_SUCCESS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STORAGE_IP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BR_STORAGE_USERNAME" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIRM_DELETE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DISABLE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ENABLE_BACKUP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_CHKZFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_INFO" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_SR_ZFS_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VM_BY_UUID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_LOGIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_CIRCLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_DAILY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FULL_BACKUP_WEEKLY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_CANCELING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_CHK_ZFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_DELETE_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_GEN_METADATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_TRANS_DATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_TRANS_METADATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_VERIFY_DATA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="JOB_STATUS_ZFS_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_CIRCLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_DAILY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_IMMEDIATELY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_ONCE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_SYNCH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REPLICATION_WEEKLY" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_NOW" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RESTORE_ONCE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_EDIT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_NEW_SR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_NEW_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_REBOOT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COMMANDS_START" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIRM_CANCEL_BR_JOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIRM_DELETE_BR_JOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_AGT_NEW_JOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_CHANGE_DIR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_MAKE_DIR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_MAKE_FILE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_REPLICATION_VM_RUN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_RSYNC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_OTH_UNKNOWN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_DEL_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_DISK_CONFLICT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_NETWORK" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_POOLS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_SR" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VBDS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VDI" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VIFS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_GET_VM_REC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_SNAP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VBD" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VDI" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VIF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_NEW_VM" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_REMOTE_LOGIN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_XEN_UPDATE_OTH_CFG" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SUMMARY_COMMANDS_TITLE" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -543,6 +543,7 @@ namespace XenAdmin.Commands
                 items.AddIfEnabled(new RebootHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new ShutDownHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new RestartToolstackCommand(mainWindow, selection));
+                items.AddIfEnabled(new BRToolStripMenuItem(mainWindow, selection));
                 items.AddSeparator();
                                 
                 items.AddIfEnabled(new RemoveHostCrashDumpsCommand(mainWindow, selection));
@@ -604,6 +605,7 @@ namespace XenAdmin.Commands
 
                 items.AddIfEnabled(new DisconnectHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new HostReconnectAsCommand(mainWindow, selection));
+                items.AddIfEnabled(new BRToolStripMenuItem(mainWindow, selection));
                 items.AddPluginItems(PluginContextMenu.server, selection);
                 items.AddSeparator();
 
@@ -898,6 +900,7 @@ namespace XenAdmin.Commands
                 items.AddSeparator();
 
                 items.AddIfEnabled(new DeleteVMCommand(mainWindow, selection));
+                items.AddIfEnabled(new BRToolStripMenuItem(mainWindow, selection));
 
                 items.AddPluginItems(PluginContextMenu.vm, selection);
                 items.AddSeparator();

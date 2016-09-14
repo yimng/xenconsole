@@ -91,6 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\BRActions\BackupAction.cs" />
+    <Compile Include="Actions\BRActions\BackupConfigurationAction.cs" />
     <Compile Include="Actions\GUIActions\ExportResourceReportAction.cs" />
     <Compile Include="Actions\GUIActions\DeleteAllAlertsAction.cs" />
     <Compile Include="Actions\GUIActions\ExternalPluginAction.cs" />
@@ -108,6 +110,12 @@
     <Compile Include="Alerts\Types\MessageAlert.cs" />
     <Compile Include="Alerts\Types\XenServerPatchAlert.cs" />
     <Compile Include="Alerts\Types\XenServerVersionAlert.cs" />
+    <Compile Include="Commands\BRBackupCommand.cs" />
+    <Compile Include="Commands\BRReplicationCommand.cs" />
+    <Compile Include="Commands\BRRestoreCommand.cs" />
+    <Compile Include="Commands\BRToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Commands\CallHomeCommand.cs" />
     <Compile Include="Commands\ChangeControlDomainMemoryCommand.cs" />
     <Compile Include="Commands\CrossPoolCopyVMCommand.cs" />
@@ -166,6 +174,9 @@
     </Compile>
     <Compile Include="Controls\FolderChangeDialogTreeView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HalsignControls\BackupJobs.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\ListViewEx.cs">
       <SubType>Component</SubType>
@@ -268,6 +279,13 @@
     <Compile Include="Dialogs\ControlDomainMemoryDialog.Designer.cs">
       <DependentUpon>ControlDomainMemoryDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\BackupConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BackupViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BackupViewDialog.Designer.cs" />
     <Compile Include="Dialogs\HealthCheck\HealthCheckOverviewLauncher.cs" />
     <Compile Include="Dialogs\ExportVMDialog.cs">
     </Compile>
@@ -301,6 +319,10 @@
     <Compile Include="Dialogs\OptionsPages\SaveAndRestoreOptionsPage.Designer.cs">
       <DependentUpon>SaveAndRestoreOptionsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\ReplicationViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ReplicationViewDialog.Designer.cs" />
     <Compile Include="Dialogs\ResolvingSubjectsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,12 +414,16 @@
     </Compile>
     <Compile Include="Plugins\Features\ParentMenuItemFeature.cs" />
     <Compile Include="SettingsUpdate.cs" />
+    <Compile Include="TabPages\BackupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TabPages\BaseTabPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TabPages\BaseTabPage.Designer.cs">
       <DependentUpon>BaseTabPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TabPages\DataGridViewProgressColumn.cs" />
     <Compile Include="TabPages\DockerDetailsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -666,6 +692,24 @@
     <Compile Include="SettingsPanels\HostMultipathPage.Designer.cs">
       <DependentUpon>HostMultipathPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizards\BackupWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\BackupWizard_Pages\BackupCompletePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\BackupWizard_Pages\BackupOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\BackupWizard_Pages\BackupSchedulePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\BackupWizard_Pages\BackupSummaryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Wizards\BallooningWizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -726,66 +770,6 @@
     </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.Designer.cs">
       <DependentUpon>LVMoFCoE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_CloudConfigParameters.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_CloudConfigParameters.Designer.cs">
-      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\NewVMWizard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\NewVMWizard.Designer.cs">
-      <DependentUpon>NewVMWizard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Template.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Template.Designer.cs">
-      <DependentUpon>Page_Template.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Name.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Name.Designer.cs">
-      <DependentUpon>Page_Name.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_InstallationMedia.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_InstallationMedia.Designer.cs">
-      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_HomeServer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_HomeServer.Designer.cs">
-      <DependentUpon>Page_HomeServer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_CpuMem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_CpuMem.Designer.cs">
-      <DependentUpon>Page_CpuMem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Storage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Storage.Designer.cs">
-      <DependentUpon>Page_Storage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Networking.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Networking.Designer.cs">
-      <DependentUpon>Page_Networking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Finish.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_Finish.Designer.cs">
-      <DependentUpon>Page_Finish.cs</DependentUpon>
     </Compile>
     <Compile Include="TabPages\PhysicalStoragePage.cs">
       <SubType>UserControl</SubType>
@@ -923,6 +907,75 @@
     <Compile Include="Wizards\PatchingWizard\PatchingWizard_AutomatedUpdatesPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Wizards\NewVMWizard\LunPerVdiNewVMMappingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\NewVMWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\NewVMWizard.Designer.cs">
+      <DependentUpon>NewVMWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CloudConfigParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CloudConfigParameters.Designer.cs">
+      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CopyBiosStrings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CopyBiosStrings.Designer.cs">
+      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CpuMem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_CpuMem.Designer.cs">
+      <DependentUpon>Page_CpuMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Finish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Finish.Designer.cs">
+      <DependentUpon>Page_Finish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_HomeServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_HomeServer.Designer.cs">
+      <DependentUpon>Page_HomeServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_InstallationMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_InstallationMedia.Designer.cs">
+      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Name.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Name.Designer.cs">
+      <DependentUpon>Page_Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Networking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Networking.Designer.cs">
+      <DependentUpon>Page_Networking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Storage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Storage.Designer.cs">
+      <DependentUpon>Page_Storage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Template.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewVMWizard\Page_Template.Designer.cs">
+      <DependentUpon>Page_Template.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\PatchingWizard\PatchingWizard_AutomatedUpdatesPage.designer.cs">
       <DependentUpon>PatchingWizard_AutomatedUpdatesPage.cs</DependentUpon>
     </Compile>
@@ -946,6 +999,50 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Wizards\PatchingWizard\UpgradeProgressDescriptor.cs" />
+    <Compile Include="Wizards\ReplicationWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicatedVmState.cs" />
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_Complete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_JobSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_SelectVM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_SetStorage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\Page_VMSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RestoreWizard_Pages\RestoreDataModel.cs" />
     <Compile Include="XenSearch\TreeNodeGroupAcceptor.cs">
     </Compile>
     <Compile Include="Dialogs\FolderChangeDialog.cs">
@@ -1498,6 +1595,14 @@
     <EmbeddedResource Include="Controls\PvsCacheStorageRow.zh-CN.resx">
       <DependentUpon>PvsCacheStorageRow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Commands\BackupWizard.resx" />
+    <EmbeddedResource Include="Commands\Controls\CommandImageLinkLabelEx.resx" />
+    <EmbeddedResource Include="Controls\HalsignControls\BackupJobs.resx">
+      <DependentUpon>BackupJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HalsignControls\BackupJobs.zh-CN.resx">
+      <DependentUpon>BackupJobs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ThinProvisioningParametersControl.ja.resx">
       <DependentUpon>ThinProvisioningParametersControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -1517,6 +1622,10 @@
     <EmbeddedResource Include="Dialogs\EnablePvsReadCachingDialog.zh-CN.resx">
       <DependentUpon>EnablePvsReadCachingDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx" />
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\BackupViewDialog.resx" />
+    <EmbeddedResource Include="Dialogs\BackupViewDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\CommandErrorDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CommandErrorDialog.cs</DependentUpon>
@@ -1736,6 +1845,8 @@
       <SubType>Designer</SubType>
       <DependentUpon>ReconnectAsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.resx" />
+    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\VMDialogs\MoveVMDialog.resx">
       <DependentUpon>MoveVMDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1962,6 +2073,8 @@
       <DependentUpon>AdPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\BackupPage.resx" />
+    <EmbeddedResource Include="TabPages\BackupPage.zh-CN.resx" />
     <EmbeddedResource Include="TabPages\BallooningPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BallooningPage.cs</DependentUpon>
@@ -2019,6 +2132,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>PhysicalStoragePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\BallooningWizard.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BallooningWizard.cs</DependentUpon>
@@ -2080,56 +2204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.zh-CN.resx">
       <DependentUpon>LVMoFCoE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.ja.resx">
-      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.resx">
-      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.zh-CN.resx">
-      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>NewVMWizard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_Template.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_Name.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_HomeServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_CpuMem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_Storage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_Networking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Page_Finish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\HAWizard_Pages\ChooseSR.resx">
       <SubType>Designer</SubType>
@@ -2202,6 +2276,105 @@
     <EmbeddedResource Include="TabPages\HAPage.resx">
       <DependentUpon>HAPage.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.ja.resx">
+      <DependentUpon>NewVMWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.resx">
+      <DependentUpon>NewVMWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.zh-CN.resx">
+      <DependentUpon>NewVMWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.ja.resx">
+      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.resx">
+      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CloudConfigParameters.zh-CN.resx">
+      <DependentUpon>Page_CloudConfigParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.ja.resx">
+      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.resx">
+      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.zh-CN.resx">
+      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.ja.resx">
+      <DependentUpon>Page_CpuMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.resx">
+      <DependentUpon>Page_CpuMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.zh-CN.resx">
+      <DependentUpon>Page_CpuMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.ja.resx">
+      <DependentUpon>Page_Finish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.resx">
+      <DependentUpon>Page_Finish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.zh-CN.resx">
+      <DependentUpon>Page_Finish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.ja.resx">
+      <DependentUpon>Page_HomeServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.resx">
+      <DependentUpon>Page_HomeServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.zh-CN.resx">
+      <DependentUpon>Page_HomeServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.ja.resx">
+      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.resx">
+      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.zh-CN.resx">
+      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.ja.resx">
+      <DependentUpon>Page_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.resx">
+      <DependentUpon>Page_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.zh-CN.resx">
+      <DependentUpon>Page_Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.ja.resx">
+      <DependentUpon>Page_Networking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.resx">
+      <DependentUpon>Page_Networking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.zh-CN.resx">
+      <DependentUpon>Page_Networking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.ja.resx">
+      <DependentUpon>Page_Storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.resx">
+      <DependentUpon>Page_Storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.zh-CN.resx">
+      <DependentUpon>Page_Storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.ja.resx">
+      <DependentUpon>Page_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.resx">
+      <DependentUpon>Page_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.zh-CN.resx">
+      <DependentUpon>Page_Template.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\PatchingWizard\PatchingWizard.resx">
       <SubType>Designer</SubType>
@@ -2531,6 +2704,32 @@
     <EmbeddedResource Include="Wizards\PatchingWizard\PatchingWizard_UploadPage.zh-CN.resx">
       <DependentUpon>PatchingWizard_UploadPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\WizardProgress.resx">
       <DependentUpon>WizardProgress.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -3775,9 +3974,6 @@
     <Compile Include="Wizards\NewVMApplianceWizard\NewVMApplianceWizard.designer.cs">
       <DependentUpon>NewVMApplianceWizard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wizards\NewVMWizard\LunPerVdiNewVMMappingPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Wizards\ImportWizard\ImportWizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -4040,12 +4236,6 @@
       <DependentUpon>RBACWarningPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ConnectionWrapperWithMoreStuff.cs" />
-    <Compile Include="Wizards\NewVMWizard\Page_CopyBiosStrings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Wizards\NewVMWizard\Page_CopyBiosStrings.Designer.cs">
-      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
-    </Compile>
     <Compile Include="Wizards\PatchingWizard\PatchingWizard_FirstPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -6553,63 +6743,6 @@
     <EmbeddedResource Include="Wizards\NewVMApplianceWizard\NewVMApplianceWizard.zh-CN.resx">
       <DependentUpon>NewVMApplianceWizard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.ja.resx">
-      <DependentUpon>NewVMWizard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\NewVMWizard.zh-CN.resx">
-      <DependentUpon>NewVMWizard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.ja.resx">
-      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CopyBiosStrings.zh-CN.resx">
-      <DependentUpon>Page_CopyBiosStrings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.ja.resx">
-      <DependentUpon>Page_CpuMem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_CpuMem.zh-CN.resx">
-      <DependentUpon>Page_CpuMem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.ja.resx">
-      <DependentUpon>Page_Finish.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Finish.zh-CN.resx">
-      <DependentUpon>Page_Finish.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.ja.resx">
-      <DependentUpon>Page_HomeServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_HomeServer.zh-CN.resx">
-      <DependentUpon>Page_HomeServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.ja.resx">
-      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_InstallationMedia.zh-CN.resx">
-      <DependentUpon>Page_InstallationMedia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.ja.resx">
-      <DependentUpon>Page_Name.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Name.zh-CN.resx">
-      <DependentUpon>Page_Name.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.ja.resx">
-      <DependentUpon>Page_Networking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Networking.zh-CN.resx">
-      <DependentUpon>Page_Networking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.ja.resx">
-      <DependentUpon>Page_Storage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Storage.zh-CN.resx">
-      <DependentUpon>Page_Storage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.ja.resx">
-      <DependentUpon>Page_Template.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\ExportWizard\ExportAppliancePage.ja.resx">
       <DependentUpon>ExportAppliancePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -6705,9 +6838,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\GenericPages\TvmIpPage.resx">
       <DependentUpon>TvmIpPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewVMWizard\Page_Template.zh-CN.resx">
-      <DependentUpon>Page_Template.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\PatchingWizard\PatchingWizard.ja.resx">
       <DependentUpon>PatchingWizard.cs</DependentUpon>

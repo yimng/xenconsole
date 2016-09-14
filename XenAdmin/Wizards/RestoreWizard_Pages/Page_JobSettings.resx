@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_RestoreOptions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label_RestoreOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Label_RestoreOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 31</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_RestoreOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_RestoreOptions.Text" xml:space="preserve">
+    <value>Options apply to all VMs included in the job. You can edit options for individual VMs at the Summary step of the wizard.</value>
+  </data>
+  <data name="&gt;&gt;Label_RestoreOptions.Name" xml:space="preserve">
+    <value>Label_RestoreOptions</value>
+  </data>
+  <data name="&gt;&gt;Label_RestoreOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_RestoreOptions.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Label_RestoreOptions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_JobName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_JobName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 49</value>
+  </data>
+  <data name="Label_JobName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 12</value>
+  </data>
+  <data name="Label_JobName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label_JobName.Text" xml:space="preserve">
+    <value>Job Name:</value>
+  </data>
+  <data name="&gt;&gt;Label_JobName.Name" xml:space="preserve">
+    <value>Label_JobName</value>
+  </data>
+  <data name="&gt;&gt;Label_JobName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_JobName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_JobName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextBox_JobName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 40</value>
+  </data>
+  <data name="TextBox_JobName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 21</value>
+  </data>
+  <data name="TextBox_JobName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TextBox_JobName.Text" xml:space="preserve">
+    <value>Restore job</value>
+  </data>
+  <data name="&gt;&gt;TextBox_JobName.Name" xml:space="preserve">
+    <value>TextBox_JobName</value>
+  </data>
+  <data name="&gt;&gt;TextBox_JobName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_JobName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_JobName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckBox_VMName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckBox_VMName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 83</value>
+  </data>
+  <data name="CheckBox_VMName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 16</value>
+  </data>
+  <data name="CheckBox_VMName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CheckBox_VMName.Text" xml:space="preserve">
+    <value>Append to VM name:</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_VMName.Name" xml:space="preserve">
+    <value>CheckBox_VMName</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_VMName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_VMName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_VMName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextBox_VMName.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextBox_VMName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 80</value>
+  </data>
+  <data name="TextBox_VMName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 21</value>
+  </data>
+  <data name="TextBox_VMName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TextBox_VMName.Text" xml:space="preserve">
+    <value>_restored</value>
+  </data>
+  <data name="&gt;&gt;TextBox_VMName.Name" xml:space="preserve">
+    <value>TextBox_VMName</value>
+  </data>
+  <data name="&gt;&gt;TextBox_VMName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_VMName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_VMName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label_DefaultStorage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_DefaultStorage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 178</value>
+  </data>
+  <data name="Label_DefaultStorage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 12</value>
+  </data>
+  <data name="Label_DefaultStorage.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label_DefaultStorage.Text" xml:space="preserve">
+    <value>Default VM Storage:</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultStorage.Name" xml:space="preserve">
+    <value>Label_DefaultStorage</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultStorage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultStorage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultStorage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="_Server.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_Server.HeaderText" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <metadata name="_NetworkAddress.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_NetworkAddress.HeaderText" xml:space="preserve">
+    <value>Network Address</value>
+  </data>
+  <data name="_NetworkAddress.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <metadata name="_VMStorage.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_VMStorage.HeaderText" xml:space="preserve">
+    <value>VM Storage</value>
+  </data>
+  <data name="_VMStorage.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <metadata name="_FreeSpace.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="_FreeSpace.HeaderText" xml:space="preserve">
+    <value>Free Space</value>
+  </data>
+  <data name="_FreeSpace.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="DataGridView_DefaultStorage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 124</value>
+  </data>
+  <data name="DataGridView_DefaultStorage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 126</value>
+  </data>
+  <data name="DataGridView_DefaultStorage.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;DataGridView_DefaultStorage.Name" xml:space="preserve">
+    <value>DataGridView_DefaultStorage</value>
+  </data>
+  <data name="&gt;&gt;DataGridView_DefaultStorage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DataGridView_DefaultStorage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DataGridView_DefaultStorage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckBox_NewMACAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckBox_NewMACAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 39</value>
+  </data>
+  <data name="CheckBox_NewMACAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 16</value>
+  </data>
+  <data name="CheckBox_NewMACAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="CheckBox_NewMACAddress.Text" xml:space="preserve">
+    <value>Auto-generate new MAC address</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_NewMACAddress.Name" xml:space="preserve">
+    <value>CheckBox_NewMACAddress</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_NewMACAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_NewMACAddress.Parent" xml:space="preserve">
+    <value>GroupBox_NetworkSettings</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_NewMACAddress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBox_Network.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 60</value>
+  </data>
+  <data name="ComboBox_Network.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 20</value>
+  </data>
+  <data name="ComboBox_Network.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Network.Name" xml:space="preserve">
+    <value>ComboBox_Network</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Network.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Network.Parent" xml:space="preserve">
+    <value>GroupBox_NetworkSettings</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Network.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label_DefaultNetwork.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_DefaultNetwork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 63</value>
+  </data>
+  <data name="Label_DefaultNetwork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 12</value>
+  </data>
+  <data name="Label_DefaultNetwork.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label_DefaultNetwork.Text" xml:space="preserve">
+    <value>Default Network:</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultNetwork.Name" xml:space="preserve">
+    <value>Label_DefaultNetwork</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultNetwork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultNetwork.Parent" xml:space="preserve">
+    <value>GroupBox_NetworkSettings</value>
+  </data>
+  <data name="&gt;&gt;Label_DefaultNetwork.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckBox_BackupSettings.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckBox_BackupSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 16</value>
+  </data>
+  <data name="CheckBox_BackupSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 16</value>
+  </data>
+  <data name="CheckBox_BackupSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_BackupSettings.Text" xml:space="preserve">
+    <value>Use network settings from backup (if available)</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_BackupSettings.Name" xml:space="preserve">
+    <value>CheckBox_BackupSettings</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_BackupSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_BackupSettings.Parent" xml:space="preserve">
+    <value>GroupBox_NetworkSettings</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_BackupSettings.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GroupBox_NetworkSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 267</value>
+  </data>
+  <data name="GroupBox_NetworkSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>546, 92</value>
+  </data>
+  <data name="GroupBox_NetworkSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="GroupBox_NetworkSettings.Text" xml:space="preserve">
+    <value>Network Settings</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_NetworkSettings.Name" xml:space="preserve">
+    <value>GroupBox_NetworkSettings</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_NetworkSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_NetworkSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_NetworkSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 31</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 374</value>
+  </data>
+  <data name="&gt;&gt;_Server.Name" xml:space="preserve">
+    <value>_Server</value>
+  </data>
+  <data name="&gt;&gt;_Server.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_NetworkAddress.Name" xml:space="preserve">
+    <value>_NetworkAddress</value>
+  </data>
+  <data name="&gt;&gt;_NetworkAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_VMStorage.Name" xml:space="preserve">
+    <value>_VMStorage</value>
+  </data>
+  <data name="&gt;&gt;_VMStorage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_FreeSpace.Name" xml:space="preserve">
+    <value>_FreeSpace</value>
+  </data>
+  <data name="&gt;&gt;_FreeSpace.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Page_JobSettings</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=5.2.0.22158, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

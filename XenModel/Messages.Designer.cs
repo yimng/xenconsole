@@ -1159,7 +1159,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get Health Check analysis result from [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Get Health Check analysis result from Halsign Insight Services.
         /// </summary>
         public static string ACTION_GET_HEALTH_CHECK_RESULT {
             get {
@@ -1267,7 +1267,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Authentication with Halsign Insight Services.
         /// </summary>
         public static string ACTION_HEALTHCHECK_AUTHENTICATION {
             get {
@@ -1276,7 +1276,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authenticating with [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Authenticating with Halsign Insight Services.
         /// </summary>
         public static string ACTION_HEALTHCHECK_AUTHENTICATION_PROGRESS {
             get {
@@ -2644,7 +2644,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upload server status report to [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Upload server status report to Halsign Insight Services.
         /// </summary>
         public static string ACTION_UPLOAD_SERVER_STATUS_REPORT {
             get {
@@ -2662,7 +2662,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uploading report to [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Uploading report to Halsign Insight Services.
         /// </summary>
         public static string ACTION_UPLOAD_SERVER_STATUS_REPORT_PROGRESS {
             get {
@@ -4842,7 +4842,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is now available. Download the new version from the [Citrix] website..
+        ///   Looks up a localized string similar to {0} is now available. Download the new version from the Halsign website..
         /// </summary>
         public static string ALERT_NEW_VERSION_DETAILS {
             get {
@@ -5644,6 +5644,60 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} does not configure or disables configuration, please set backup inforamtion first..
+        /// </summary>
+        public static string BACKUP_CHECK_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("BACKUP_CHECK_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select VM to backup..
+        /// </summary>
+        public static string BACKUP_CHECKED_MESSAGE {
+            get {
+                return ResourceManager.GetString("BACKUP_CHECKED_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Backup Circle.
+        /// </summary>
+        public static string BACKUP_CIRCLE {
+            get {
+                return ResourceManager.GetString("BACKUP_CIRCLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup Daily.
+        /// </summary>
+        public static string BACKUP_DAILY {
+            get {
+                return ResourceManager.GetString("BACKUP_DAILY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User {0} does not exist.
+        /// </summary>
+        public static string BACKUP_ERROR_1503 {
+            get {
+                return ResourceManager.GetString("BACKUP_ERROR_1503", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to password is not correct.
+        /// </summary>
+        public static string BACKUP_ERROR_1504 {
+            get {
+                return ResourceManager.GetString("BACKUP_ERROR_1504", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back Up Server....
         /// </summary>
         public static string BACKUP_HOST {
@@ -5653,11 +5707,56 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backup Now.
+        /// </summary>
+        public static string BACKUP_IMMEDIATELY {
+            get {
+                return ResourceManager.GetString("BACKUP_IMMEDIATELY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Backup name.
         /// </summary>
         public static string BACKUP_NAME {
             get {
                 return ResourceManager.GetString("BACKUP_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Backup Once.
+        /// </summary>
+        public static string BACKUP_ONCE {
+            get {
+                return ResourceManager.GetString("BACKUP_ONCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Days.
+        /// </summary>
+        public static string BACKUP_RECUR_TEXT_DAYS {
+            get {
+                return ResourceManager.GetString("BACKUP_RECUR_TEXT_DAYS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hours.
+        /// </summary>
+        public static string BACKUP_RECUR_TEXT_HOURS {
+            get {
+                return ResourceManager.GetString("BACKUP_RECUR_TEXT_HOURS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weeks.
+        /// </summary>
+        public static string BACKUP_RECUR_TEXT_WEEKS {
+            get {
+                return ResourceManager.GetString("BACKUP_RECUR_TEXT_WEEKS", resourceCulture);
             }
         }
         
@@ -5685,6 +5784,42 @@ namespace XenAdmin {
         public static string BACKUP_SELECT_HOST_TITLE {
             get {
                 return ResourceManager.GetString("BACKUP_SELECT_HOST_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected exception when connecting to  Halsign MC..
+        /// </summary>
+        public static string BACKUP_UNEXPECTED_CONNECTING {
+            get {
+                return ResourceManager.GetString("BACKUP_UNEXPECTED_CONNECTING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BACKUP_VM {
+            get {
+                return ResourceManager.GetString("BACKUP_VM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup VM - &quot;{0}&quot;.
+        /// </summary>
+        public static string BACKUP_VM_TITLE {
+            get {
+                return ResourceManager.GetString("BACKUP_VM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup Weekly.
+        /// </summary>
+        public static string BACKUP_WEEKLY {
+            get {
+                return ResourceManager.GetString("BACKUP_WEEKLY", resourceCulture);
             }
         }
         
@@ -5996,6 +6131,249 @@ namespace XenAdmin {
         public static string BOOTORDER {
             get {
                 return ResourceManager.GetString("BOOTORDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Job deploy failed.
+        /// </summary>
+        public static string BR_ACTION_FAILED {
+            get {
+                return ResourceManager.GetString("BR_ACTION_FAILED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Job deploy success.
+        /// </summary>
+        public static string BR_ACTION_SUCCESS {
+            get {
+                return ResourceManager.GetString("BR_ACTION_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occur when call agent:.
+        /// </summary>
+        public static string BR_CALL_AGENT_EXCEPTION {
+            get {
+                return ResourceManager.GetString("BR_CALL_AGENT_EXCEPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Master could not connect to the storage of the VM.
+        /// </summary>
+        public static string BR_CALL_AGENT_FROM_MASTER {
+            get {
+                return ResourceManager.GetString("BR_CALL_AGENT_FROM_MASTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception occur when call Halsign MC Service.
+        /// </summary>
+        public static string BR_CALL_STORAGE_EXCEPTION {
+            get {
+                return ResourceManager.GetString("BR_CALL_STORAGE_EXCEPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_CONFIG_STATUS {
+            get {
+                return ResourceManager.GetString("BR_CONFIG_STATUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_CONFIGURATION_TITLE {
+            get {
+                return ResourceManager.GetString("BR_CONFIGURATION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_DISABLED {
+            get {
+                return ResourceManager.GetString("BR_DISABLED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_ENABLED {
+            get {
+                return ResourceManager.GetString("BR_ENABLED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel job.
+        /// </summary>
+        public static string BR_JOB_CANCEL {
+            get {
+                return ResourceManager.GetString("BR_JOB_CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The job name can only contain numbers, letters, underscores, spaces and dash..
+        /// </summary>
+        public static string BR_JOB_NAME_CHECK {
+            get {
+                return ResourceManager.GetString("BR_JOB_NAME_CHECK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backu&amp;p and Restore....
+        /// </summary>
+        public static string BR_MENU {
+            get {
+                return ResourceManager.GetString("BR_MENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Backup.
+        /// </summary>
+        public static string BR_MENU_BACKUP {
+            get {
+                return ResourceManager.GetString("BR_MENU_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re&amp;plication.
+        /// </summary>
+        public static string BR_MENU_REPLICATION {
+            get {
+                return ResourceManager.GetString("BR_MENU_REPLICATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Restore.
+        /// </summary>
+        public static string BR_MENU_RESTORE {
+            get {
+                return ResourceManager.GetString("BR_MENU_RESTORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No pool exist.
+        /// </summary>
+        public static string BR_NO_POOL_EXCEPTION {
+            get {
+                return ResourceManager.GetString("BR_NO_POOL_EXCEPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_PAGE_TITLE {
+            get {
+                return ResourceManager.GetString("BR_PAGE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception happened when parse history list..
+        /// </summary>
+        public static string BR_PARSE_HISTORY {
+            get {
+                return ResourceManager.GetString("BR_PARSE_HISTORY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_CANCELED {
+            get {
+                return ResourceManager.GetString("BR_STATUS_CANCELED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_FAILED {
+            get {
+                return ResourceManager.GetString("BR_STATUS_FAILED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_INACTIVE {
+            get {
+                return ResourceManager.GetString("BR_STATUS_INACTIVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_INQUEUE {
+            get {
+                return ResourceManager.GetString("BR_STATUS_INQUEUE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_PENDING {
+            get {
+                return ResourceManager.GetString("BR_STATUS_PENDING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_RUNNING {
+            get {
+                return ResourceManager.GetString("BR_STATUS_RUNNING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STATUS_SUCCESS {
+            get {
+                return ResourceManager.GetString("BR_STATUS_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STORAGE_IP {
+            get {
+                return ResourceManager.GetString("BR_STORAGE_IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string BR_STORAGE_USERNAME {
+            get {
+                return ResourceManager.GetString("BR_STORAGE_USERNAME", resourceCulture);
             }
         }
         
@@ -7121,6 +7499,13 @@ namespace XenAdmin {
         public static string CHOOSE_VMS_VMSS_RUBRIC {
             get {
                 return ResourceManager.GetString("CHOOSE_VMS_VMSS_RUBRIC", resourceCulture);
+	    }
+	}
+        ///   Looks up a localized string similar to CHOSE_VMS.
+        /// </summary>
+        public static string CHOSE_VMS {
+            get {
+                return ResourceManager.GetString("CHOSE_VMS", resourceCulture);
             }
         }
         
@@ -7170,11 +7555,65 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string COMMANDS_EDIT {
+            get {
+                return ResourceManager.GetString("COMMANDS_EDIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string COMMANDS_NEW_SR {
+            get {
+                return ResourceManager.GetString("COMMANDS_NEW_SR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string COMMANDS_NEW_VM {
+            get {
+                return ResourceManager.GetString("COMMANDS_NEW_VM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string COMMANDS_REBOOT {
+            get {
+                return ResourceManager.GetString("COMMANDS_REBOOT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string COMMANDS_START {
+            get {
+                return ResourceManager.GetString("COMMANDS_START", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to for use with Common Criteria versions of [vGate] only.
         /// </summary>
         public static string COMMON_CRITERIA_TEXT {
             get {
                 return ResourceManager.GetString("COMMON_CRITERIA_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete.
+        /// </summary>
+        public static string COMPLETE_PAGE {
+            get {
+                return ResourceManager.GetString("COMPLETE_PAGE", resourceCulture);
             }
         }
         
@@ -7215,6 +7654,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Information of backup configure.
+        /// </summary>
+        public static string CONFIGURE_TITLE {
+            get {
+                return ResourceManager.GetString("CONFIGURE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Configuring Workload Balancing .
         /// </summary>
         public static string CONFIGURING_WLB {
@@ -7240,6 +7688,14 @@ namespace XenAdmin {
         public static string CONFIRM_CHANGE_CONTROL_DOMAIN_MEMORY {
             get {
                 return ResourceManager.GetString("CONFIRM_CHANGE_CONTROL_DOMAIN_MEMORY", resourceCulture);
+	    }
+	}
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CONFIRM_CANCEL_BR_JOB {
+            get {
+                return ResourceManager.GetString("CONFIRM_CANCEL_BR_JOB", resourceCulture);
             }
         }
         
@@ -7315,6 +7771,24 @@ namespace XenAdmin {
         public static string CONFIRM_DELETE {
             get {
                 return ResourceManager.GetString("CONFIRM_DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CONFIRM_DELETE_BACKUP {
+            get {
+                return ResourceManager.GetString("CONFIRM_DELETE_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string CONFIRM_DELETE_BR_JOB {
+            get {
+                return ResourceManager.GetString("CONFIRM_DELETE_BR_JOB", resourceCulture);
             }
         }
         
@@ -8368,9 +8842,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connection to server {0} restricted - a connection to a [Citrix] [vGate product] Express Edition server ({1}) already exists.
+        ///   Looks up a localized string similar to Connection to server {0} restricted - a connection to a Halsign [vGate product] Express Edition server ({1}) already exists.
         ///
-        ///You can only connect to a single [Citrix] [vGate product] Express Edition server at a time. To find out how to upgrade your license, follow the link below..
+        ///You can only connect to a single Halsign [vGate product] Express Edition server at a time. To find out how to upgrade your license, follow the link below..
         /// </summary>
         public static string CONNECTION_RESTRICTED_MESSAGE_LONG {
             get {
@@ -11229,6 +11703,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string DISABLE_BACKUP {
+            get {
+                return ResourceManager.GetString("DISABLE_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disable HA.
         /// </summary>
         public static string DISABLE_HA {
@@ -12057,7 +12540,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is now available. Download the latest at the [Citrix] website..
+        ///   Looks up a localized string similar to {0} is now available. Download the latest at the Halsign website..
         /// </summary>
         public static string DOWNLOAD_LATEST_XS_BODY {
             get {
@@ -12125,6 +12608,15 @@ namespace XenAdmin {
         public static string DR_HA_CHECK_DESCRIPTION {
             get {
                 return ResourceManager.GetString("DR_HA_CHECK_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The VM {0} has removable physical storage attached, please re-select..
+        /// </summary>
+        public static string DR_WITH_HOT_PLUG {
+            get {
+                return ResourceManager.GetString("DR_WITH_HOT_PLUG", resourceCulture);
             }
         }
         
@@ -13555,6 +14047,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ENABLE_BACKUP {
+            get {
+                return ResourceManager.GetString("ENABLE_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Enable HA....
         /// </summary>
         public static string ENABLE_HA_ELLIPSIS {
@@ -13794,6 +14295,258 @@ namespace XenAdmin {
         public static string EQUALLOGICS_MEMBERS {
             get {
                 return ResourceManager.GetString("EQUALLOGICS_MEMBERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_AGT_NEW_JOB {
+            get {
+                return ResourceManager.GetString("ERR_AGT_NEW_JOB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_CHANGE_DIR {
+            get {
+                return ResourceManager.GetString("ERR_OTH_CHANGE_DIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_MAKE_DIR {
+            get {
+                return ResourceManager.GetString("ERR_OTH_MAKE_DIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_MAKE_FILE {
+            get {
+                return ResourceManager.GetString("ERR_OTH_MAKE_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_REPLICATION_VM_RUN {
+            get {
+                return ResourceManager.GetString("ERR_OTH_REPLICATION_VM_RUN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_RSYNC {
+            get {
+                return ResourceManager.GetString("ERR_OTH_RSYNC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_OTH_UNKNOWN {
+            get {
+                return ResourceManager.GetString("ERR_OTH_UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_SR_CHKZFS {
+            get {
+                return ResourceManager.GetString("ERR_SR_CHKZFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_SR_INFO {
+            get {
+                return ResourceManager.GetString("ERR_SR_INFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_SR_ZFS_SNAP {
+            get {
+                return ResourceManager.GetString("ERR_SR_ZFS_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_DEL_SNAP {
+            get {
+                return ResourceManager.GetString("ERR_XEN_DEL_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_DISK_CONFLICT {
+            get {
+                return ResourceManager.GetString("ERR_XEN_DISK_CONFLICT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_NETWORK {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_NETWORK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_POOLS {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_POOLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_SR {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_SR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_VBDS {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_VBDS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_VDI {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_VDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_VIFS {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_VIFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_VM_BY_UUID {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_VM_BY_UUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_GET_VM_REC {
+            get {
+                return ResourceManager.GetString("ERR_XEN_GET_VM_REC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_LOGIN {
+            get {
+                return ResourceManager.GetString("ERR_XEN_LOGIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_NEW_SNAP {
+            get {
+                return ResourceManager.GetString("ERR_XEN_NEW_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_NEW_VBD {
+            get {
+                return ResourceManager.GetString("ERR_XEN_NEW_VBD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_NEW_VDI {
+            get {
+                return ResourceManager.GetString("ERR_XEN_NEW_VDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_NEW_VIF {
+            get {
+                return ResourceManager.GetString("ERR_XEN_NEW_VIF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_NEW_VM {
+            get {
+                return ResourceManager.GetString("ERR_XEN_NEW_VM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_REMOTE_LOGIN {
+            get {
+                return ResourceManager.GetString("ERR_XEN_REMOTE_LOGIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_XEN_UPDATE_OTH_CFG {
+            get {
+                return ResourceManager.GetString("ERR_XEN_UPDATE_OTH_CFG", resourceCulture);
             }
         }
         
@@ -15716,6 +16469,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string FRIDAY {
+            get {
+                return ResourceManager.GetString("FRIDAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Friday.
         /// </summary>
         public static string FRIDAY_LONG {
@@ -15730,6 +16492,60 @@ namespace XenAdmin {
         public static string FRIDAY_SHORT {
             get {
                 return ResourceManager.GetString("FRIDAY_SHORT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string FULL_BACKUP_CIRCLE {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_CIRCLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string FULL_BACKUP_DAILY {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_DAILY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Backup Now.
+        /// </summary>
+        public static string FULL_BACKUP_NOW {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_NOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Backup Once.
+        /// </summary>
+        public static string FULL_BACKUP_ONCE {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_ONCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string FULL_BACKUP_RECURS_EVERY {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_RECURS_EVERY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string FULL_BACKUP_WEEKLY {
+            get {
+                return ResourceManager.GetString("FULL_BACKUP_WEEKLY", resourceCulture);
             }
         }
         
@@ -16045,6 +16861,24 @@ namespace XenAdmin {
         public static string GENERAL_UNKNOWN {
             get {
                 return ResourceManager.GetString("GENERAL_UNKNOWN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the history of backup&amp;restore.
+        /// </summary>
+        public static string GET_BR_HISTORY {
+            get {
+                return ResourceManager.GetString("GET_BR_HISTORY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get the inforamtion for restoring.
+        /// </summary>
+        public static string GET_RESTORE_LIST {
+            get {
+                return ResourceManager.GetString("GET_RESTORE_LIST", resourceCulture);
             }
         }
         
@@ -17190,7 +18024,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services failed. See the application log files for more information..
+        ///   Looks up a localized string similar to Authentication with Halsign Insight Services failed. See the application log files for more information..
         /// </summary>
         public static string HEALTH_CHECK_AUTHENTICATION_FAILED {
             get {
@@ -17226,7 +18060,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services is required in order to enable this feature. [HalsignConsole] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again..
+        ///   Looks up a localized string similar to Authentication with Halsign Insight Services is required in order to enable this feature. [HalsignConsole] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again..
         /// </summary>
         public static string HEALTHCHECK_AUTHENTICATION_RUBRIC_EXISTING_TOKEN {
             get {
@@ -19654,7 +20488,79 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please enter a user name and password with sufficient privileges to add servers to domain &apos;{0}&apos;..
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_CANCELING {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_CANCELING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_CHK_ZFS {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_CHK_ZFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_DELETE_SNAP {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_DELETE_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_GEN_METADATA {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_GEN_METADATA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_TRANS_DATA {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_TRANS_DATA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_TRANS_METADATA {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_TRANS_METADATA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_VERIFY_DATA {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_VERIFY_DATA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string JOB_STATUS_ZFS_SNAP {
+            get {
+                return ResourceManager.GetString("JOB_STATUS_ZFS_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a username and password with sufficient privileges to add servers to domain &apos;{0}&apos;..
         /// </summary>
         public static string JOINING_AD {
             get {
@@ -20348,6 +21254,15 @@ namespace XenAdmin {
         public static string LIVE_PATCHING_FAILED_ONE_HOST {
             get {
                 return ResourceManager.GetString("LIVE_PATCHING_FAILED_ONE_HOST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        public static string LOADAVG_UNIT {
+            get {
+                return ResourceManager.GetString("LOADAVG_UNIT", resourceCulture);
             }
         }
         
@@ -22489,6 +23404,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string MONDAY {
+            get {
+                return ResourceManager.GetString("MONDAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monday.
         /// </summary>
         public static string MONDAY_LONG {
@@ -23422,6 +24346,15 @@ namespace XenAdmin {
         public static string NEW_SCHEDULE {
             get {
                 return ResourceManager.GetString("NEW_SCHEDULE", resourceCulture);
+	    }
+	}
+        
+	/// <summary>
+        ///   Looks up a localized string similar to new repliaction.
+        /// </summary>
+        public static string NEW_REPLICATION {
+            get {
+                return ResourceManager.GetString("NEW_REPLICATION", resourceCulture);
             }
         }
         
@@ -25242,7 +26175,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix].
+        ///   Looks up a localized string similar to Halsign.
         /// </summary>
         public static string NEWVMWIZARD_TEMPLATEPAGE_CITRIX {
             get {
@@ -26146,6 +27079,15 @@ namespace XenAdmin {
         public static string OPTIMIZED {
             get {
                 return ResourceManager.GetString("OPTIMIZED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup Options.
+        /// </summary>
+        public static string OPTION_PAGE {
+            get {
+                return ResourceManager.GetString("OPTION_PAGE", resourceCulture);
             }
         }
         
@@ -27339,7 +28281,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [vGate product] Per-&amp;Socket ({0} required).
+        ///   Looks up a localized string similar to Halsign [vGate product] Per-&amp;Socket ({0} required).
         /// </summary>
         public static string PERSOCKET_LICENSES_X_REQUIRED {
             get {
@@ -28352,6 +29294,33 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Only the virtual machine which contains one virtual disk can be published, please back and check vm settings..
+        /// </summary>
+        public static string PUBLISH_VDI_CHECK {
+            get {
+                return ResourceManager.GetString("PUBLISH_VDI_CHECK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only one virtual machine is allowed to publish..
+        /// </summary>
+        public static string PUBLISH_VM_CHECK {
+            get {
+                return ResourceManager.GetString("PUBLISH_VM_CHECK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publish VM - &quot;{0}&quot;.
+        /// </summary>
+        public static string PUBLISH_VM_TITLE {
+            get {
+                return ResourceManager.GetString("PUBLISH_VM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [vGate product] Tools not installed.
         /// </summary>
         public static string PV_DRIVERS_NOT_INSTALLED {
@@ -28851,6 +29820,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A {0} user cannot Backup VMs.Log in as a different user with sufficient privileges and try again..
+        /// </summary>
+        public static string RBAC_WARNING_VM_WIZARD_BACKUP {
+            get {
+                return ResourceManager.GetString("RBAC_WARNING_VM_WIZARD_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A {0} user cannot create VMs. Log in as a different user with sufficient privileges and try again..
         /// </summary>
         public static string RBAC_WARNING_VM_WIZARD_BLOCK {
@@ -28874,6 +29852,24 @@ namespace XenAdmin {
         public static string RBAC_WARNING_VM_WIZARD_MEM {
             get {
                 return ResourceManager.GetString("RBAC_WARNING_VM_WIZARD_MEM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RBAC_WARNING_VM_WIZARD_REPLICATION {
+            get {
+                return ResourceManager.GetString("RBAC_WARNING_VM_WIZARD_REPLICATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RBAC_WARNING_VM_WIZARD_RESTORE {
+            get {
+                return ResourceManager.GetString("RBAC_WARNING_VM_WIZARD_RESTORE", resourceCulture);
             }
         }
         
@@ -29515,6 +30511,123 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATED_VM_RUNNING_INFO {
+            get {
+                return ResourceManager.GetString("REPLICATED_VM_RUNNING_INFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_CHECKED_MESSAGE {
+            get {
+                return ResourceManager.GetString("REPLICATION_CHECKED_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_CIRCLE {
+            get {
+                return ResourceManager.GetString("REPLICATION_CIRCLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_COMPLETE_TEXT {
+            get {
+                return ResourceManager.GetString("REPLICATION_COMPLETE_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_DAILY {
+            get {
+                return ResourceManager.GetString("REPLICATION_DAILY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_IMMEDIATELY {
+            get {
+                return ResourceManager.GetString("REPLICATION_IMMEDIATELY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_JOB_SETTINGS_TEXT {
+            get {
+                return ResourceManager.GetString("REPLICATION_JOB_SETTINGS_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_JOB_SETTINGS_TITLE {
+            get {
+                return ResourceManager.GetString("REPLICATION_JOB_SETTINGS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_NETWORK_TEXT {
+            get {
+                return ResourceManager.GetString("REPLICATION_NETWORK_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_ONCE {
+            get {
+                return ResourceManager.GetString("REPLICATION_ONCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_SYNCH {
+            get {
+                return ResourceManager.GetString("REPLICATION_SYNCH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replicate VM - {0}.
+        /// </summary>
+        public static string REPLICATION_VM_TITLE {
+            get {
+                return ResourceManager.GetString("REPLICATION_VM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string REPLICATION_WEEKLY {
+            get {
+                return ResourceManager.GetString("REPLICATION_WEEKLY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0}: The required hotfix is not installed.
         /// </summary>
         public static string REQUIRED_HOTFIX_ISNOT_INSTALLED {
@@ -29529,6 +30642,15 @@ namespace XenAdmin {
         public static string RESOLVED_AS {
             get {
                 return ResourceManager.GetString("RESOLVED_AS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_COMPLETE_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_COMPLETE_TITLE", resourceCulture);
             }
         }
         
@@ -29556,6 +30678,132 @@ namespace XenAdmin {
         public static string RESTORE_HOST {
             get {
                 return ResourceManager.GetString("RESTORE_HOST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_JOB_SCHEDULE_TEXT {
+            get {
+                return ResourceManager.GetString("RESTORE_JOB_SCHEDULE_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_JOB_SCHEDULE_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_JOB_SCHEDULE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_JOB_SETTINGS_TEXT {
+            get {
+                return ResourceManager.GetString("RESTORE_JOB_SETTINGS_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter job name, define VM naming convention, and select destination of the restore..
+        /// </summary>
+        public static string RESTORE_JOB_SETTINGS_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_JOB_SETTINGS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_LIST {
+            get {
+                return ResourceManager.GetString("RESTORE_LIST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_NOW {
+            get {
+                return ResourceManager.GetString("RESTORE_NOW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_ONCE {
+            get {
+                return ResourceManager.GetString("RESTORE_ONCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_ROOT_PROMPT {
+            get {
+                return ResourceManager.GetString("RESTORE_ROOT_PROMPT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_SELECT_VM_TEXT {
+            get {
+                return ResourceManager.GetString("RESTORE_SELECT_VM_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_SELECT_VM_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_SELECT_VM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set Storage.
+        /// </summary>
+        public static string RESTORE_SET_STORAGE {
+            get {
+                return ResourceManager.GetString("RESTORE_SET_STORAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_VM_SETTINGS_TEXT {
+            get {
+                return ResourceManager.GetString("RESTORE_VM_SETTINGS_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string RESTORE_VM_SETTINGS_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_VM_SETTINGS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore VM - {0}.
+        /// </summary>
+        public static string RESTORE_VM_TITLE {
+            get {
+                return ResourceManager.GetString("RESTORE_VM_TITLE", resourceCulture);
             }
         }
         
@@ -29991,6 +31239,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SATURDAY {
+            get {
+                return ResourceManager.GetString("SATURDAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saturday.
         /// </summary>
         public static string SATURDAY_LONG {
@@ -30158,6 +31415,42 @@ namespace XenAdmin {
         public static string SCANNING_VMS {
             get {
                 return ResourceManager.GetString("SCANNING_VMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Schedule job.
+        /// </summary>
+        public static string SCHEDULE_JOB {
+            get {
+                return ResourceManager.GetString("SCHEDULE_JOB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SCHEDULE_REPLICATION {
+            get {
+                return ResourceManager.GetString("SCHEDULE_REPLICATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VM protection policies defined in pool &apos;{0}&apos; ({1} out of {2} VMs currently protected):.
+        /// </summary>
+        public static string SCHEDULED_SNAPSHOTS_DEFINED_FOR_POOL {
+            get {
+                return ResourceManager.GetString("SCHEDULED_SNAPSHOTS_DEFINED_FOR_POOL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VM protection policies defined in server &apos;{0}&apos; ({1} out of {2} VMs currently protected):.
+        /// </summary>
+        public static string SCHEDULED_SNAPSHOTS_DEFINED_FOR_SERVER {
+            get {
+                return ResourceManager.GetString("SCHEDULED_SNAPSHOTS_DEFINED_FOR_SERVER", resourceCulture);
             }
         }
         
@@ -30347,6 +31640,15 @@ namespace XenAdmin {
         public static string SELECT_TARGET_LUN {
             get {
                 return ResourceManager.GetString("SELECT_TARGET_LUN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select VM to replicate.
+        /// </summary>
+        public static string SELECT_VM_REPLICATE {
+            get {
+                return ResourceManager.GetString("SELECT_VM_REPLICATE", resourceCulture);
             }
         }
         
@@ -30689,6 +31991,15 @@ namespace XenAdmin {
         public static string SET_STORAGELINK_CREDS_TO_POOL_ACTION_TITLE {
             get {
                 return ResourceManager.GetString("SET_STORAGELINK_CREDS_TO_POOL_ACTION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set Synchronization.
+        /// </summary>
+        public static string SET_SYNCHRONIZATION {
+            get {
+                return ResourceManager.GetString("SET_SYNCHRONIZATION", resourceCulture);
             }
         }
         
@@ -32326,6 +33637,33 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SUMMARY_COMMANDS_TITLE {
+            get {
+                return ResourceManager.GetString("SUMMARY_COMMANDS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string SUMMARY_PAGE {
+            get {
+                return ResourceManager.GetString("SUMMARY_PAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SUNDAY {
+            get {
+                return ResourceManager.GetString("SUNDAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sunday.
         /// </summary>
         public static string SUNDAY_LONG {
@@ -32504,6 +33842,15 @@ namespace XenAdmin {
         public static string SWITCH_ROLE_DESC {
             get {
                 return ResourceManager.GetString("SWITCH_ROLE_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SYNCHRONIZATION_CHECKED_MESSAGE {
+            get {
+                return ResourceManager.GetString("SYNCHRONIZATION_CHECKED_MESSAGE", resourceCulture);
             }
         }
         
@@ -32783,6 +34130,15 @@ namespace XenAdmin {
         public static string THIS_WEEK {
             get {
                 return ResourceManager.GetString("THIS_WEEK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string THURSDAY {
+            get {
+                return ResourceManager.GetString("THURSDAY", resourceCulture);
             }
         }
         
@@ -33188,6 +34544,15 @@ namespace XenAdmin {
         public static string TRUSTED {
             get {
                 return ResourceManager.GetString("TRUSTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string TUESDAY {
+            get {
+                return ResourceManager.GetString("TUESDAY", resourceCulture);
             }
         }
         
@@ -35098,6 +36463,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string V_CONSOLE {
+            get {
+                return ResourceManager.GetString("V_CONSOLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} B.
         /// </summary>
         public static string VAL_B {
@@ -35202,6 +36576,15 @@ namespace XenAdmin {
         public static string VAL_KILRATE {
             get {
                 return ResourceManager.GetString("VAL_KILRATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.000.
+        /// </summary>
+        public static string VAL_LOAD_NUM_FORMAT {
+            get {
+                return ResourceManager.GetString("VAL_LOAD_NUM_FORMAT", resourceCulture);
             }
         }
         
@@ -37006,6 +38389,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pub&amp;lish....
+        /// </summary>
+        public static string VTOP_PUBLISH {
+            get {
+                return ResourceManager.GetString("VTOP_PUBLISH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Waiting.
         /// </summary>
         public static string WAITING {
@@ -37119,6 +38511,15 @@ namespace XenAdmin {
         public static string WEB_PAGE {
             get {
                 return ResourceManager.GetString("WEB_PAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string WEDNESDAY {
+            get {
+                return ResourceManager.GetString("WEDNESDAY", resourceCulture);
             }
         }
         

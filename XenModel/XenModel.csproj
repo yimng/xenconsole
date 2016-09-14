@@ -51,7 +51,10 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
@@ -164,12 +167,18 @@
     </Compile>
     <Compile Include="HealthCheckSettings.cs" />
     <Compile Include="InvokeHelper.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Mappings\LiveMigrateOptionsVmMapping.cs" />
     <Compile Include="Mappings\VmMapping.cs" />
     <Compile Include="Messages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.zh-CN.resx</DependentUpon>
     </Compile>
     <Compile Include="Network\Cache.cs" />
     <Compile Include="Network\ConnectTask.cs" />
@@ -560,6 +569,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Messages.zh-CN.resx">
       <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.zh-CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="XenAPI\FriendlyErrorNames.ja.resx" />
     <EmbeddedResource Include="XenAPI\FriendlyErrorNames.resx">
