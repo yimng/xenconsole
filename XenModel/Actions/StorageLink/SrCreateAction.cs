@@ -52,6 +52,7 @@ namespace XenAdmin.Actions
         private readonly bool _srIsShared;
         private readonly Dictionary<string, string> _dconf;
         private readonly Dictionary<string, string> _smconf;
+        public const String allocation = "allocation";
 
         /// <summary>
         /// RBAC dependencies needed to create SR.

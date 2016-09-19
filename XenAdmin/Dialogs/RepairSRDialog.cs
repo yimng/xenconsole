@@ -47,7 +47,8 @@ using XenAdmin.Actions;
 using XenAdmin.Network;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-
+using XenAdmin.Wizards.NewSRWizard_Pages;
+using XenAdmin.Wizards.NewSRWizard_Pages.Frontends;
 
 namespace XenAdmin.Dialogs
 {
@@ -305,6 +306,44 @@ namespace XenAdmin.Dialogs
 
                     FinalizeProgressControls(sender);
                 });
+            if (_srList.Count == 1 && _srList[0].GetSRType(true) == SR.SRTypes.lvmobond)
+            {
+                Program.Invoke(this, delegate ()
+                {
+
+                    if (!sender.Succeeded)
+                    {
+                        SrRepairAction act = sender as SrRepairAction;
+                        XenAPI.Failure f = act.failure;
+                        if (f.ErrorDescription[0] == "SR_BACKEND_FAILURE_1")
+                        {
+                            String s = f.ErrorDescription[2];
+                            int start = s.IndexOf(":");
+                            String scsiid = s.Substring(start + 2, s.Length - start - 2);
+                            DialogResult confirmResult = MessageBox.Show(string.Format(Messages.REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING, scsiid),
+                                         "Confirm !",
+                                         MessageBoxButtons.YesNo);
+                            if (confirmResult == DialogResult.Yes)
+                            {
+
+                                _repairAction = new SrRepairLUNAction(_srList[0].Connection, _srList[0], scsiid);
+                                _repairAction.RunAsync();
+                            }
+                            else
+                            {
+                                //AsyncAction removeAction = new SrRepairLUNAction(_srList[0].Connection, _srList[0], scsiid);
+                                //removeAction.RunExternal(null);
+                                List<FibreChannelDevice> devices;
+                                var success = LVMoBond.FiberChannelScan(this, _srList[0].Connection, out devices);
+                                Program.MainWindow.ShowPerConnectionWizard(_srList[0].Connection, new AddLUNDialog(_srList[0], devices));
+                            }
+                            this.Close();
+                        }
+
+                    }
+                });
+            }
+
         }
 
         private class RepairTreeNode : TreeNode

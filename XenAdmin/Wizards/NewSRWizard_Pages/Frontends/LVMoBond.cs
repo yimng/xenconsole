@@ -302,7 +302,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             try
             {
-                FibreChannelProbeParsing.ProcessXML(action.Result, devices);
+                devices = FibreChannelProbeParsing.ProcessXML(action.Result);
 
                 if (devices.Count == 0)
                 {

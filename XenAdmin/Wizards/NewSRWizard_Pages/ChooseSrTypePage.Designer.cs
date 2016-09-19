@@ -142,8 +142,8 @@
             // 
             // SRBlurb
             // 
-            this.SRBlurb.AutoEllipsis = true;
             resources.ApplyResources(this.SRBlurb, "SRBlurb");
+            this.SRBlurb.AutoEllipsis = true;
             this.SRBlurb.Name = "SRBlurb";
             // 
             // deprecationBanner

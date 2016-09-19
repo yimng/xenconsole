@@ -45,6 +45,10 @@ namespace XenAdmin.Actions
         private readonly Dictionary<String, String> dconf;
         public const String DEVICE = "device";
         public const String SCSIid = "SCSIid";
+        public const String DEVICE1 = "device1";
+        public const String SCSIid1 = "SCSIid1";
+        public const String DEVICE2 = "device2";
+        public const String SCSIid2 = "SCSIid2";
         public const String PATH = "path";
 
         private readonly Dictionary<String, String> smconf;
@@ -75,6 +79,12 @@ namespace XenAdmin.Actions
                         dconf[DEVICE] : dconf[SCSIid];
                     Description = string.Format(Messages.ACTION_SR_SCANNING,
                         XenAPI.SR.getFriendlyTypeName(srType), device);
+                    break;
+                case XenAPI.SR.SRTypes.lvmobond:
+                    String device2 = dconf.ContainsKey(DEVICE1) && dconf.ContainsKey(DEVICE2) ?
+                        dconf[DEVICE1] + ":" + dconf[DEVICE2] : dconf[SCSIid1] + ":" + dconf[SCSIid2];
+                    Description = string.Format(Messages.ACTION_SR_SCANNING,
+                        XenAPI.SR.getFriendlyTypeName(srType), device2);
                     break;
                 default:
                     Description = string.Format(Messages.ACTION_SR_SCANNING,

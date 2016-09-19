@@ -279,6 +279,12 @@
     <Compile Include="Dialogs\ControlDomainMemoryDialog.Designer.cs">
       <DependentUpon>ControlDomainMemoryDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\AddLUNDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddLUNDialog.designer.cs">
+      <DependentUpon>AddLUNDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\BackupConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +365,10 @@
     <Compile Include="Dialogs\UpsellDialog.designer.cs">
       <DependentUpon>UpsellDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -765,6 +775,14 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\CSLG.Designer.cs">
       <DependentUpon>CSLG.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.Designer.cs" />
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1622,6 +1640,12 @@
     <EmbeddedResource Include="Dialogs\EnablePvsReadCachingDialog.zh-CN.resx">
       <DependentUpon>EnablePvsReadCachingDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddLUNDialog.resx">
+      <DependentUpon>AddLUNDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddLUNDialog.zh-CN.resx">
+      <DependentUpon>AddLUNDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx" />
     <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\BackupViewDialog.resx" />
@@ -1915,6 +1939,8 @@
       <SubType>Designer</SubType>
       <DependentUpon>SelectVMsToSuspendDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\Wlb\WlbEditScheduledTask.resx">
       <SubType>Designer</SubType>
       <DependentUpon>WlbEditScheduledTask.cs</DependentUpon>
@@ -2196,6 +2222,9 @@
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\CIFSFrontend.zh-CN.resx">
       <DependentUpon>CIFSFrontend.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.resx" />
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.ja.resx">
       <DependentUpon>LVMoFCoE.cs</DependentUpon>
     </EmbeddedResource>

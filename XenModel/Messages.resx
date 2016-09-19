@@ -825,6 +825,15 @@
   <data name="ACTION_SR_FORGETTING" xml:space="preserve">
     <value>Forgetting SR '{0}' on '{1}'...</value>
   </data>
+  <data name="ACTION_SR_LUN_ADDING" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ACTION_SR_LUN_REMOVE_SUCCESSFUL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ACTION_SR_LUN_REMOVING" xml:space="preserve">
+    <value />
+  </data>
   <data name="ACTION_SR_REPAIRING" xml:space="preserve">
     <value>Repairing SR {0}</value>
   </data>
@@ -7425,6 +7434,9 @@ Standard features only</value>
   <data name="LOG_DESTINATION" xml:space="preserve">
     <value>Log Destination</value>
   </data>
+  <data name="LUNBOND_BLURB_ENHANCEDSR" xml:space="preserve">
+    <value />
+  </data>
   <data name="LUNPERVDIPICKER_IMPORT_VDI_COLUMN_TITLE" xml:space="preserve">
     <value>VM - VDI (Virtual Disks)</value>
   </data>
@@ -7436,6 +7448,12 @@ Standard features only</value>
   </data>
   <data name="LUNPERVDI_PAGE_TITLE" xml:space="preserve">
     <value>Map virtual disks (VDIs) to individual LUNs on the target SR</value>
+  </data>
+  <data name="LUN_SIZE_DIFF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LVMOBOND_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
+    <value />
   </data>
   <data name="LVMOHBA_WARNING_DIALOG_HEADER_FOUND_EXISTING_SR" xml:space="preserve">
     <value>An existing SR was found on the selected LUN</value>
@@ -8452,6 +8470,9 @@ You should only proceed if you have verified that these settings are correct.</v
   <data name="NEWSR_ACTION" xml:space="preserve">
     <value>NFS SR [{0}]</value>
   </data>
+  <data name="NEWSR_BOND_DEFAULT_NAME" xml:space="preserve">
+    <value />
+  </data>
   <data name="NEWSR_CIFS_ACTION" xml:space="preserve">
     <value>SMB SR [{0}]</value>
   </data>
@@ -8559,6 +8580,12 @@ Do you wish to format the disk?</value>
   </data>
   <data name="NEWSR_LUN_IN_USE_ON_SERVER" xml:space="preserve">
     <value>This LUN is already in use as SR {0} on server {1}.</value>
+  </data>
+  <data name="NEWSR_LVMOBOND_BLURB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NEWSR_LVMOBOND_DESCRIPTION" xml:space="preserve">
+    <value />
   </data>
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
     <value>[XenServer] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
@@ -10582,6 +10609,9 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
   <data name="REPAIR_SR_DIALOG_CONNECTION_MISSING" xml:space="preserve">
     <value>Connection Missing</value>
   </data>
+  <data name="REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING" xml:space="preserve">
+    <value />
+  </data>
   <data name="REPAIR_SR_DIALOG_TITLE_MULTIPLE" xml:space="preserve">
     <value>Repair Storage Repositories</value>
   </data>
@@ -10973,6 +11003,9 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
   </data>
   <data name="SELECT_DEFAULT_SR" xml:space="preserve">
     <value>Select Default SR</value>
+  </data>
+  <data name="SELECT_LUN_WARNING" xml:space="preserve">
+    <value />
   </data>
   <data name="SELECT_NETWORK_TOOLTIP" xml:space="preserve">
     <value>There are no networks available for this network interface</value>
@@ -14100,5 +14133,8 @@ You will need to navigate to the Console on each of the selected VMs to complete
   </data>
   <data name="YOU_ARE_HERE" xml:space="preserve">
     <value>You are here</value>
+  </data>
+  <data name="NEWSR_LVMOBOND_TYPE_NAME" xml:space="preserve">
+    <value>Lun Bond</value>
   </data>
 </root>

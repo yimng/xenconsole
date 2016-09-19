@@ -64,12 +64,13 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
             radioButtonCslg.Tag = new SrWizardType_Cslg();
             radioButtonCifs.Tag = new SrWizardType_Cifs();
             radioButtonFcoe.Tag = new SrWizardType_Fcoe();
+            radioButtonlunbond.Tag = new SrWizardType_lvmobond();
 
             _radioButtons = new[]
             {
                 radioButtonNfs, radioButtonIscsi, radioButtonFibreChannel,
                 radioButtonCslg, radioButtonCifs, radioButtonFcoe,
-                radioButtonNfsIso, radioButtonCifsIso
+                radioButtonNfsIso, radioButtonCifsIso, radioButtonlunbond
             };
         }
 
@@ -257,7 +258,14 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     selectedStoreTypeLabel.Text = string.Empty;
                     SRBlurb.Visible = false;
                     upsellPage1.Visible = true;
-                    upsellPage1.SetAllTexts(Messages.UPSELL_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
+                    if (frontend is SrWizardType_lvmobond)
+                    {
+                        upsellPage1.SetAllTexts(Messages.LUNBOND_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
+                    }
+                    else
+                    {
+                        upsellPage1.SetAllTexts(Messages.UPSELL_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
+                    }
                     m_allowNext = false;
                 }
                 else

@@ -62,6 +62,8 @@ namespace XenAdmin.Wizards
         private readonly LVMoHBA xenTabPageLvmoHba;
         private readonly LVMoFCoE xenTabPageLvmoFcoe;
         private readonly LVMoHBASummary xenTabPageLvmoHbaSummary;
+        private readonly LVMoBondSummary xenTabPageLvmoBondSummary;
+        private readonly LVMoBond xenTabPageLvmoBond;
         private readonly CslgSettings xenTabPageCslgSettings;
         private readonly CslgLocation xenTabPageCslgLocation;
         private readonly FilerDetails xenTabPageFilerDetails;
@@ -110,6 +112,8 @@ namespace XenAdmin.Wizards
             xenTabPageLvmoHba = new LVMoHBA();
             xenTabPageLvmoFcoe = new LVMoFCoE();
             xenTabPageLvmoHbaSummary = new LVMoHBASummary();
+            xenTabPageLvmoBondSummary = new LVMoBondSummary();
+            xenTabPageLvmoBond = new LVMoBond();
             xenTabPageCslgSettings = new CslgSettings();
             xenTabPageCslgLocation = new CslgLocation();
             xenTabPageFilerDetails = new FilerDetails();
@@ -197,6 +201,14 @@ namespace XenAdmin.Wizards
             return success;
         }
 
+        private bool SetFCDevicesOnLVMoBondPage()
+        {
+            List<FibreChannelDevice> devices;
+            var success = LVMoBond.FiberChannelScan(this, xenConnection, out devices);
+            xenTabPageLvmoBond.FCDevices = devices;
+            return success;
+        }
+
         private bool CanShowLVMoHBASummaryPage(List<LvmOhbaSrDescriptor> SrDescriptors)
         {
             string description = m_srWizardType.Description;
@@ -226,6 +238,32 @@ namespace XenAdmin.Wizards
             return closeWizard;
         }
 
+        private bool CanShowLVMoBondSummaryPage()
+        {
+            string description = m_srWizardType.Description;
+            string name = m_srWizardType.SrName;
+
+            List<string> names = xenConnection.Cache.SRs.Select(sr => sr.Name).ToList();
+
+            m_srWizardType.SrDescriptors.Clear();
+            foreach (var lvmObondSrDescriptor in xenTabPageLvmoBond.SrDescriptors)
+            {
+                lvmObondSrDescriptor.Name = name;
+                if (!string.IsNullOrEmpty(description))
+                    lvmObondSrDescriptor.Description = description;
+
+                m_srWizardType.SrDescriptors.Add(lvmObondSrDescriptor);
+                names.Add(name);
+                name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_HBA_DEFAULT_NAME, names);
+            }
+
+            xenTabPageLvmoBondSummary.SuccessfullyCreatedSRs.Clear();
+            xenTabPageLvmoBondSummary.FailedToCreateSRs.Clear();
+
+            bool closeWizard;
+            RunFinalAction(out closeWizard);
+            return closeWizard;
+        }
         protected override bool RunNextPagePrecheck(XenTabPage senderPage)
         {
             // if reattaching and RBAC warning page is visible, then we run the prechecks when leaving the RBAC warning page
@@ -245,6 +283,10 @@ namespace XenAdmin.Wizards
                 {
                     return SetFCDevicesOnLVMoHBAPage(xenTabPageLvmoHba);
                 }
+                if (m_srWizardType is SrWizardType_lvmobond)
+                {
+                    return SetFCDevicesOnLVMoBondPage();
+                }
                 if (m_srWizardType is SrWizardType_Cslg || m_srWizardType is SrWizardType_NetApp || m_srWizardType is SrWizardType_EqualLogic)
                 {
                     xenTabPageCslg.SrWizardType = m_srWizardType;
@@ -263,6 +305,10 @@ namespace XenAdmin.Wizards
                 {
                     return CanShowLVMoHBASummaryPage(xenTabPageLvmoHba.SrDescriptors);
                 }
+            }
+            if (senderPage == xenTabPageLvmoBond)
+            {
+                return CanShowLVMoBondSummaryPage();
             }
             return base.RunNextPagePrecheck(senderPage);
         }
@@ -287,6 +333,11 @@ namespace XenAdmin.Wizards
                 {
                     AddPage(xenTabPageLvmoHba);
                     AddPage(xenTabPageLvmoHbaSummary);
+                }
+                else if (m_srWizardType is SrWizardType_lvmobond)
+                {
+                    AddPage(xenTabPageLvmoBond);
+                    AddPage(xenTabPageLvmoBondSummary);
                 }
                 else if (m_srWizardType is SrWizardType_Fcoe)
                 {
@@ -339,6 +390,8 @@ namespace XenAdmin.Wizards
                     xenTabPageLvmoIscsi.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_LvmoHba)
                     xenTabPageLvmoHba.SrWizardType = m_srWizardType;
+                else if (m_srWizardType is SrWizardType_lvmobond)
+                    xenTabPageLvmoBond.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_Cslg || m_srWizardType is SrWizardType_NetApp || m_srWizardType is SrWizardType_EqualLogic)
                     xenTabPageCslg.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_CifsIso)
@@ -449,7 +502,7 @@ namespace XenAdmin.Wizards
 
         protected override void FinishWizard()
         {
-            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe)
+            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond)
             {
                 base.FinishWizard();
                 return;
@@ -547,7 +600,7 @@ namespace XenAdmin.Wizards
                 dialog.ShowDialog(this);
             }
 
-            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe)
+            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond)
             {
                 foreach (var asyncAction in actionList)
                 {
@@ -600,9 +653,19 @@ namespace XenAdmin.Wizards
                 return;
 
             if (action.Succeeded)
-                xenTabPageLvmoHbaSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
+            {
+                if (srDescriptor is LvmOhbaSrDescriptor)
+                    xenTabPageLvmoHbaSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
+                if (srDescriptor is LvmObondSrDescriptor)
+                    xenTabPageLvmoBondSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
+            }
             else
-                xenTabPageLvmoHbaSummary.FailedToCreateSRs.Add(srDescriptor);
+            {
+                if (srDescriptor is LvmOhbaSrDescriptor)
+                    xenTabPageLvmoHbaSummary.FailedToCreateSRs.Add(srDescriptor);
+                if (srDescriptor is LvmObondSrDescriptor)
+                    xenTabPageLvmoBondSummary.FailedToCreateSRs.Add(srDescriptor);
+            }
         }
 
         private List<AsyncAction> GetActions(Host master, bool disasterRecoveryTask)

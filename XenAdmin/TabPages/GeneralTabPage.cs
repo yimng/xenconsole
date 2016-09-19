@@ -884,7 +884,7 @@ namespace XenAdmin.TabPages
             }
             else
             {
-                Dictionary<PBD, String> pathStatus = sr.GetMultiPathStatusLunPerSR();
+                Dictionary<PBD, Dictionary<String, String>> pathStatus = sr.GetMultiPathStatusLunPerSR();
 
                 foreach (Host host in xenObject.Connection.Cache.Hosts)
                 {
@@ -898,13 +898,16 @@ namespace XenAdmin.TabPages
                         continue;
                     }
 
-                    String status = pathStatus[pbd];
+                    foreach (String k in pathStatus[pbd].Keys)
+                    {
+                        String status = pathStatus[pbd][k];
 
-                    int current;
-                    int max;
-                    PBD.ParsePathCounts(status, out current, out max); //Guaranteed to work if PBD is in pathStatus
+                        int current;
+                        int max;
+                        PBD.ParsePathCounts(status, out current, out max); //Guaranteed to work if PBD is in pathStatus
 
-                    AddMultipathLine(s, host.Name, current, max, pbd.ISCSISessions);
+                        AddMultipathLine(s, host.Name, current, max, pbd.ISCSISessions);
+                    }
                 }
             }
         }
@@ -1292,8 +1295,13 @@ namespace XenAdmin.TabPages
                     */
                 }
 
-                if (sr.GetScsiID() != null)
-                    s.AddEntry(FriendlyName("SR.scsiid"), sr.GetScsiID() ?? Messages.UNKNOWN);
+                if (sr.GetScsiID() != null && sr.GetScsiID().Count > 0)
+                {
+                    foreach (String scsiid in sr.GetScsiID())
+                    {
+                        s.AddEntry(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN);
+                    }
+                }
 
                 // if in folder-view or if looking at SR on storagelink then display
                 // location here

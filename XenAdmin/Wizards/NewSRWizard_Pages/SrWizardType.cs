@@ -96,6 +96,29 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         }
     }
 
+    public class LvmObondSrDescriptor : SrDescriptor
+    {
+        public LvmObondSrDescriptor(List<FibreChannelDevice> device, IXenConnection connection)
+        {
+            Host master = Helpers.GetMaster(connection);
+            Device = device;
+
+            if (master != null)
+            {
+                DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
+                DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
+            }
+            else
+            {
+                DeviceConfig[SrProbeAction.DEVICE1] = device[0].Path;
+                DeviceConfig[SrProbeAction.DEVICE2] = device[1].Path;
+            }
+
+            Description = string.Format(Messages.NEWSR_LVMOBOND_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
+        }
+
+        public List<FibreChannelDevice> Device { get; private set; }
+    }
     public abstract class SrWizardType
     {
         protected SrWizardType()
@@ -405,6 +428,23 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public override void ResetSrName(IXenConnection connection)
         {
             SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_FCOE_DEFAULT_NAME, connection);
+        }
+    }
+
+    public class SrWizardType_lvmobond : SrWizardType
+    {
+        public override bool IsEnhancedSR { get { return true; } }
+        public override string FrontendBlurb { get { return Messages.NEWSR_LVMOBOND_BLURB; } }
+        public override string FrontendTypeName { get { return Messages.NEWSR_LVMOBOND_TYPE_NAME; } }
+        public override SR.SRTypes Type { get { return SR.SRTypes.lvmobond; } }
+        public override string ContentType { get { return ""; } }
+        public override bool ShowIntroducePrompt { get { return false; } }
+        public override bool ShowReattachWarning { get { return true; } }
+        public override bool AllowToCreateNewSr { get; set; }
+
+        public override void ResetSrName(IXenConnection connection)
+        {
+            SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_BOND_DEFAULT_NAME, connection);
         }
     }
 }

@@ -44,7 +44,7 @@ namespace XenAdmin.Actions
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly List<Host> _hostList = new List<Host>();
-        private Failure failure;
+        public Failure failure { get; set; }
         private string failureDescription;
 
         /// <summary>

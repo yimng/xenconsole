@@ -261,6 +261,7 @@ namespace XenAPI
                     || type == SRTypes.equal
                     || type == SRTypes.netapp
                     || type == SRTypes.lvmohba
+                    || type == SRTypes.lvmobond
                     || type == SRTypes.cslg
                     || type == SRTypes.smb
                     || type == SRTypes.lvmofcoe;
@@ -440,6 +441,10 @@ namespace XenAPI
             }
         }
 
+        public bool IsLUNBroken()
+        {
+            return Get(sm_config, "LUN0-status").StartsWith("faulty") || Get(sm_config, "LUN1-status").StartsWith("faulty");
+        }
         /// <summary>
         /// The SR is broken when it has the wrong number of PBDs, or (optionally) not all the PBDs are attached.
         /// </summary>
@@ -531,7 +536,14 @@ namespace XenAPI
             {
                 xml = node.InnerText;
                 doc = new XmlDocument();
-                doc.LoadXml(xml);
+                try
+                {
+                    doc.LoadXml(xml);
+                }
+                catch (Exception e)
+                {
+                    return results;
+                }
                 break;
             }
 
@@ -612,14 +624,24 @@ namespace XenAPI
             return supportedVersionsResult;
         }
 
-        public String GetScsiID()
+        public List<String> GetScsiID()
         {
+            List<String> list = new List<string>();
             foreach (PBD pbd in Connection.ResolveAll(PBDs))
             {
+                if (GetSRType(true) == SRTypes.lvmobond)
+                {
+                    if (pbd.device_config.ContainsKey("SCSIid1") && pbd.device_config.ContainsKey("SCSIid2"))
+                    {
+                        list.Add(pbd.device_config["SCSIid1"]);
+                        list.Add(pbd.device_config["SCSIid2"]);
+                        return list;
+                    }
+                }
                 if (!pbd.device_config.ContainsKey("SCSIid"))
                     continue;
-
-                return pbd.device_config["SCSIid"];
+                list.Add(pbd.device_config["SCSIid"]);
+                return list;
             }
 
             if (!sm_config.ContainsKey("devserial"))
@@ -632,8 +654,8 @@ namespace XenAPI
 
             // CA-22352: SCSI IDs on the general panel for a NetApp SR have a trailing comma
             SCSIid = SCSIid.TrimEnd(new char[] { ',' });
-
-            return SCSIid;
+            list.Add(SCSIid);
+            return list;
         }
 
         /// <summary>
@@ -727,10 +749,10 @@ namespace XenAPI
             return result;
         }
 
-        public Dictionary<PBD, String> GetMultiPathStatusLunPerSR()
+        public Dictionary<PBD, Dictionary<String, String>> GetMultiPathStatusLunPerSR()
         {
-            Dictionary<PBD, String> result =
-                new Dictionary<PBD, String>();
+            Dictionary<PBD, Dictionary<String, String>> result =
+                new Dictionary<PBD, Dictionary<String, String>>();
 
 
             if (Connection == null)
@@ -742,22 +764,22 @@ namespace XenAPI
                     continue;
 
                 String status = String.Empty;
-
+                if (!result.ContainsKey(pbd))
+                {
+                    result[pbd] = new Dictionary<string, string>();
+                }
                 foreach (KeyValuePair<String, String> kvp in pbd.other_config)
                 {
                     if (!kvp.Key.StartsWith(MPATH))
                         continue;
 
                     status = kvp.Value;
-                    break;
+                    int current;
+                    int max;
+                    if (!PBD.ParsePathCounts(status, out current, out max))
+                        continue;
+                    result[pbd][kvp.Key] = kvp.Value;
                 }
-
-                int current;
-                int max;
-                if (!PBD.ParsePathCounts(status, out current, out max))
-                    continue;
-
-                result[pbd] = status;
             }
 
             return result;
@@ -782,12 +804,13 @@ namespace XenAPI
                 }
                 else
                 {
-                    Dictionary<PBD, String> multipathStatus =
+                    Dictionary<PBD, Dictionary<String, String>> multipathStatus =
                         GetMultiPathStatusLunPerSR();
 
                     foreach (PBD pbd in multipathStatus.Keys)
-                        if (pbd.MultipathActive && !CheckMultipathString(multipathStatus[pbd]))
-                            return false;
+                        foreach (String k in multipathStatus[pbd].Keys)
+                            if (pbd.MultipathActive && !CheckMultipathString(multipathStatus[pbd][k]))
+                                return false;
                 }
 
                 return true;
@@ -948,7 +971,7 @@ namespace XenAPI
                 {
                     return Icons.StorageDisabled;
                 }
-                else if (IsDetached || IsBroken() || !MultipathAOK)
+                else if (IsDetached || IsBroken() || !MultipathAOK || isRaidResyc())
                 {
                     return Icons.StorageBroken;
                 }
@@ -961,6 +984,26 @@ namespace XenAPI
                     return Icons.Storage;
                 }
             }
+        }
+
+        private bool isRaidResyc()
+        {
+            if (GetSRType(true) == SRTypes.lvmobond)
+            {
+                foreach (PBD pbd in Connection.ResolveAll(PBDs))
+                {
+                    if (pbd.device_config.ContainsKey("SCSIid1") && pbd.device_config["SCSIid1"] == "" && pbd.device_config.ContainsKey("SCSIid2") && pbd.device_config["SCSIid2"] != "" ||
+                        pbd.device_config.ContainsKey("SCSIid1") && pbd.device_config["SCSIid1"] != "" && pbd.device_config.ContainsKey("SCSIid2") && pbd.device_config["SCSIid2"] == "")
+                    {
+                        return false;
+                    }
+                }
+                if (Get(sm_config, "state") != "clean" && Get(sm_config, "state") != "active")
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         /// <summary>

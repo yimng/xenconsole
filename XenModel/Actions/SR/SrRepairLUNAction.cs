@@ -96,7 +96,7 @@ namespace XenAdmin.Actions
 
             int delta = 100 / (Connection.Cache.HostCount * 2);
             List<Host> _listHost = new List<Host>(Connection.Cache.Hosts);
-            Util.masterFirst(_listHost);
+            masterFirst(_listHost);
             foreach (Host host in _listHost)
             {
                 // Create the PBD
@@ -122,6 +122,25 @@ namespace XenAdmin.Actions
             this.Description = Messages.ACTION_SR_REPAIR_CANCELLED;
 
             base.CancelRelatedTask();
+        }
+
+        private void masterFirst(List<Host> l)
+        {
+            Host master = null;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i].IsMaster())
+                {
+                    master = l[i];
+                    l.RemoveAt(i);
+                    break;
+                }
+            }
+            if (master != null)
+            {
+                l.Add(master);
+                l.Reverse();
+            }
         }
     }
 }
