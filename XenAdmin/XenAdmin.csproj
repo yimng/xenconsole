@@ -2771,6 +2771,9 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Halsign.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="HomePage.zh-CN.mht">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

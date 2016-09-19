@@ -245,31 +245,25 @@ namespace XenAdmin.Wizards
             const ProgressBarStyle progressBarStyle = ProgressBarStyle.Marquee;
             ActionProgressDialog dialog = new ActionProgressDialog(action, progressBarStyle);
             dialog.ShowCancel = true;
-            DialogResult result = dialog.ShowDialog(this);
-            if (result != DialogResult.OK)
+            dialog.ShowDialog(this);
+            
+            try
             {
-                action.Cancel();
-                Program.MainWindow.BringToFront();
-            }
-            else
-            {
-                try
-                {
-                    if (!(action.Succeeded || ((action.Exception == null) || (action.Exception.Message.Equals("")))))
-                    {
-                        Program.MainWindow.BringToFront();
-                    }
-                    else
-                    {
-                        restoreList = action.RestoreList;
-                        isActionSucceed = true;
-                    }
-                }
-                catch
+                if (!(action.Succeeded || ((action.Exception == null) || (action.Exception.Message.Equals("")))))
                 {
                     Program.MainWindow.BringToFront();
                 }
+                else
+                {
+                    restoreList = action.RestoreList;
+                    isActionSucceed = true;
+                }
             }
+            catch
+            {
+                Program.MainWindow.BringToFront();
+            }
+            
 
             return isActionSucceed;
         }

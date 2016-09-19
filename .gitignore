@@ -41,5 +41,5 @@ XenOvfApi/External Tools/*
 _ReSharper.*/
 *.opensdf
 *.sdf
-XenAdmin.VC.db
-XenAdmin.VC.VC.opendb
+*.VC.db
+*.VC.VC.opendb
