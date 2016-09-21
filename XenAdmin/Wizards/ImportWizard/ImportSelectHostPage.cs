@@ -160,6 +160,11 @@ namespace XenAdmin.Wizards.ImportWizard
             return filters;
         }
 
+        protected override bool IsShowEncryption
+        {
+            get { return false; }
+        }
+
         private bool CheckRightGpuExists()
         {
             foreach (var vgpuSetting in vgpuSettings)

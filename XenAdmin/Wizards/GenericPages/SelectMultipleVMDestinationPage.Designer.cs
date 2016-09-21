@@ -33,6 +33,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectMultipleVMDestinationPage));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.m_EncryptionChkbox = new System.Windows.Forms.CheckBox();
             this.m_labelIntro = new XenAdmin.Controls.Common.AutoHeightLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,12 +55,19 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.m_EncryptionChkbox, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.m_labelIntro, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.m_dataGridView, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanelWarning, 0, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // m_EncryptionChkbox
+            // 
+            resources.ApplyResources(this.m_EncryptionChkbox, "m_EncryptionChkbox");
+            this.m_EncryptionChkbox.Name = "m_EncryptionChkbox";
+            this.m_EncryptionChkbox.UseVisualStyleBackColor = true;
             // 
             // m_labelIntro
             // 
@@ -174,5 +182,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWarning;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelWarning;
+        private System.Windows.Forms.CheckBox m_EncryptionChkbox;
     }
 }

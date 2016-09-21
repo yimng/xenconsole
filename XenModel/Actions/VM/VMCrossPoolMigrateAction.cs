@@ -41,6 +41,7 @@ namespace XenAdmin.Actions.VMActions
         private readonly VmMapping mapping;
         private readonly XenAPI.Network transferNetwork;
         private readonly bool copy;
+        private readonly bool migrateEncrypt;
 
         /// <summary>
         /// Cross pool migration action. Can also be used to copy a VM across pools, by setting the "copy" parameter to true
@@ -50,7 +51,7 @@ namespace XenAdmin.Actions.VMActions
         /// <param name="transferNetwork">the network used for the VM migration</param>
         /// <param name="mapping">the storage and networking mappings</param>
         /// <param name="copy">weather this should be a cross-pool copy (true) or migrate (false) operation</param>
-        public VMCrossPoolMigrateAction(VM vm, Host destinationHost, XenAPI.Network transferNetwork, VmMapping mapping, bool copy)
+        public VMCrossPoolMigrateAction(VM vm, Host destinationHost, XenAPI.Network transferNetwork, VmMapping mapping, bool copy, bool migrateEncrypt)
             : base(vm.Connection, GetTitle(vm, destinationHost, copy))
         {
             Session = vm.Connection.Session;
@@ -61,6 +62,12 @@ namespace XenAdmin.Actions.VMActions
             this.mapping = mapping;
             this.transferNetwork = transferNetwork;
             this.copy = copy;
+            this.migrateEncrypt = migrateEncrypt;
+        }
+
+        public VMCrossPoolMigrateAction(VM vm, Host destinationHost, XenAPI.Network transferNetwork, VmMapping mapping)
+            : this(vm, destinationHost, transferNetwork, mapping, false, false)
+        {
         }
 
         public static RbacMethodList StaticRBACDependencies
@@ -100,6 +107,12 @@ namespace XenAdmin.Actions.VMActions
                                                                            transferNetwork.opaque_ref, new Dictionary<string, string>());
                 PercentComplete = 5;
                 LiveMigrateOptionsVmMapping options = new LiveMigrateOptionsVmMapping(mapping, VM);
+                //options.Options.Add("encrypt", migrateEncrypt+"");
+                if (migrateEncrypt)
+                {
+                    sendData["xenops"] = sendData["xenops"].Replace("http:", "https:");
+                }
+                //options.Options["encrypt"] = migrateEncrypt + "";
                 var _options = new Dictionary<string, string>(options.Options);
                 if (copy)
                     _options.Add("copy", "true");

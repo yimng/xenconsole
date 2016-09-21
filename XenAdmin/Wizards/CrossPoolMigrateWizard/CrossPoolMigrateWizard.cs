@@ -248,7 +248,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
                 {
                     var isCopy = wizardMode == WizardMode.Copy;
                     var migrateAction = 
-                        new VMCrossPoolMigrateAction(vm, target, SelectedTransferNetwork, pair.Value, isCopy);
+                        new VMCrossPoolMigrateAction(vm, target, SelectedTransferNetwork, pair.Value, isCopy, m_pageDestination.IsMigrateEncryption());
 
                     if (_resumeAfterMigrate)
                     {

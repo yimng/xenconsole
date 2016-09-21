@@ -81,6 +81,7 @@ namespace XenAdmin.Wizards.GenericPages
 		{
 			InitializeComponent();
             InitializeText();
+            InitializeCheckbox();
             Host_CollectionChangedWithInvoke = Program.ProgramInvokeHandler(CollectionChanged);
 			ConnectionsManager.XenConnections.CollectionChanged += CollectionChanged;
             ShowWarning(null);
@@ -109,7 +110,12 @@ namespace XenAdmin.Wizards.GenericPages
 	        m_colTarget.HeaderText = TargetColumnHeaderText;
 	    }
 
-	    private IXenObject _chosenItem;
+        private void InitializeCheckbox()
+        {
+            m_EncryptionChkbox.Visible = IsShowEncryption;
+        }   
+
+        private IXenObject _chosenItem;
 	    public IXenObject ChosenItem
 	    {
 	        get { return _chosenItem; }
@@ -151,6 +157,11 @@ namespace XenAdmin.Wizards.GenericPages
         /// Text above the table containing a list of VMs and concomitant home server
         /// </summary>
         protected abstract string TargetServerSelectionIntroText { get; }
+
+        /// <summary>
+        /// Whether show Encryption checkbox
+        /// </summary>
+        protected abstract bool IsShowEncryption { get; }
 
         protected virtual void OnChosenItemChanged()
         {}
@@ -319,6 +330,11 @@ namespace XenAdmin.Wizards.GenericPages
         protected bool DestinationHasBeenSelected()
         {
             return m_comboBoxConnection.SelectedItem != null;
+        }
+
+        public bool IsMigrateEncryption()
+        {
+            return m_EncryptionChkbox.Checked;
         }
 
         private bool MatchingWithXenRefObject(IEnableableXenObjectComboBoxItem item, object xenRef)

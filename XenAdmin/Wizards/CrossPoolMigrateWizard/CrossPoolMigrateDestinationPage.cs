@@ -71,6 +71,11 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
             return DestinationHasBeenSelected() && base.EnableNext();
         }
 
+        protected override bool IsShowEncryption
+        {
+            get { return true; }
+        }
+
         protected override bool ImplementsIsDirty()
         {
             return true;
