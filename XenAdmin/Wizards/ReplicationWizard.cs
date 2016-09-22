@@ -66,7 +66,8 @@ namespace XenAdmin.Wizards
         private BackupRestoreConfig.Job jobs;
         public static RbacMethodList StaticRBACDependencies = new RbacMethodList(
             // provision VM
-            "vm.set_other_config"
+            "vm.set_other_config",
+            "host.call_plugin"
         );
         internal ReplicationWizard(IXenObject XenObject)
         {

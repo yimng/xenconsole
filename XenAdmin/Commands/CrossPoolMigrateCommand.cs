@@ -102,9 +102,16 @@ namespace XenAdmin.Commands
 
         protected override bool CanExecute(VM vm)
         {
-            return CanExecute(vm, preSelectedHost);
+            return isVMBackup(vm) && // This is a temp sovlution
+                CanExecute(vm, preSelectedHost);
         }
 
+        private bool isVMBackup(VM vm)
+        {
+            return vm.other_config.ContainsKey("halsign_br_ready")
+                                   ? false : vm.other_config["halsign_br_ready"].Equals("true");
+            
+        }
         public static bool CanExecute(VM vm, Host preselectedHost)
         {
             bool failureFound = false;

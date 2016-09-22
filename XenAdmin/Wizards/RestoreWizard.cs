@@ -93,7 +93,8 @@ namespace XenAdmin.Wizards
         private string _Message;
         public static RbacMethodList StaticRBACDependencies = new RbacMethodList(
             // provision VM
-            "vm.set_other_config"
+            "vm.set_other_config",
+            "host.call_plugin"
         );
         public RestoreWizard(IXenObject xenModelObject)
         {
