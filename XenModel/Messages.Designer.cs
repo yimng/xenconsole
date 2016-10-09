@@ -27212,6 +27212,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is a same iso name in server, are you sure to upload the local iso, this will overide the remote one!.
+        /// </summary>
+        public static string OVERRIDE_VDI_CHECK {
+            get {
+                return ResourceManager.GetString("OVERRIDE_VDI_CHECK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CPU Usage.
         /// </summary>
         public static string OVERVIEW_CPU_USAGE {
@@ -36133,6 +36142,51 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload {0}.
+        /// </summary>
+        public static string UPLOAD_ISO_ACTION_DESC {
+            get {
+                return ResourceManager.GetString("UPLOAD_ISO_ACTION_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading {0} ({1} of {2}).
+        /// </summary>
+        public static string UPLOAD_ISO_ACTION_DETAIL_DESC {
+            get {
+                return ResourceManager.GetString("UPLOAD_ISO_ACTION_DETAIL_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading.
+        /// </summary>
+        public static string UPLOAD_ISO_ACTION_TITLE {
+            get {
+                return ResourceManager.GetString("UPLOAD_ISO_ACTION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to upload iso failed.
+        /// </summary>
+        public static string UPLOAD_ISO_FAILED {
+            get {
+                return ResourceManager.GetString("UPLOAD_ISO_FAILED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is not enough space left to upload ISO.
+        /// </summary>
+        public static string UPLOAD_ISO_SR_SPACE_NOT_ENOUGH {
+            get {
+                return ResourceManager.GetString("UPLOAD_ISO_SR_SPACE_NOT_ENOUGH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Already uploaded.
         /// </summary>
         public static string UPLOAD_PATCH_ALREADY_UPLOADED {
@@ -36201,6 +36255,15 @@ namespace XenAdmin {
         public static string UPLOADING_PATCH_TO {
             get {
                 return ResourceManager.GetString("UPLOADING_PATCH_TO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to upload iso | *.iso;*.ISO.
+        /// </summary>
+        public static string UPLOADISO_FILTER {
+            get {
+                return ResourceManager.GetString("UPLOADISO_FILTER", resourceCulture);
             }
         }
         

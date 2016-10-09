@@ -9461,6 +9461,9 @@ However, there is not enough space to perform the repartitioning, so the current
   <data name="OVERCOMMIT_LABEL" xml:space="preserve">
     <value>Overcommit:</value>
   </data>
+  <data name="OVERRIDE_VDI_CHECK" xml:space="preserve">
+    <value>There is a same iso name in server, are you sure to upload the local iso, this will overide the remote one!</value>
+  </data>
   <data name="OVERVIEW_CPU_USAGE" xml:space="preserve">
     <value>CPU Usage</value>
   </data>
@@ -12500,6 +12503,24 @@ Note that if RBAC is enabled, only updates which you have privileges to dismiss 
   </data>
   <data name="UPLOADING_PATCH_TO" xml:space="preserve">
     <value>Uploading to server '{0}'...</value>
+  </data>
+  <data name="UPLOADISO_FILTER" xml:space="preserve">
+    <value>upload iso | *.iso;*.ISO</value>
+  </data>
+  <data name="UPLOAD_ISO_ACTION_DESC" xml:space="preserve">
+    <value>Upload {0}</value>
+  </data>
+  <data name="UPLOAD_ISO_ACTION_DETAIL_DESC" xml:space="preserve">
+    <value>Uploading {0} ({1} of {2})</value>
+  </data>
+  <data name="UPLOAD_ISO_ACTION_TITLE" xml:space="preserve">
+    <value>Uploading</value>
+  </data>
+  <data name="UPLOAD_ISO_FAILED" xml:space="preserve">
+    <value>upload iso failed</value>
+  </data>
+  <data name="UPLOAD_ISO_SR_SPACE_NOT_ENOUGH" xml:space="preserve">
+    <value>There is not enough space left to upload ISO</value>
   </data>
   <data name="UPLOAD_PATCH_ALREADY_UPLOADED" xml:space="preserve">
     <value>Already uploaded</value>

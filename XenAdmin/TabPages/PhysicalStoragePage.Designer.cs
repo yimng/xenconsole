@@ -54,6 +54,7 @@ namespace XenAdmin.TabPages
             this.trimButton = new XenAdmin.Commands.CommandButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonProperties = new System.Windows.Forms.Button();
+            this.uploadiso = new System.Windows.Forms.Button();
             this.pageContainerPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -62,18 +63,19 @@ namespace XenAdmin.TabPages
             // 
             // pageContainerPanel
             // 
+            resources.ApplyResources(this.pageContainerPanel, "pageContainerPanel");
             this.pageContainerPanel.Controls.Add(this.panel1);
             this.pageContainerPanel.Controls.Add(this.labelNetworkheadings);
-            resources.ApplyResources(this.pageContainerPanel, "pageContainerPanel");
             // 
             // contextMenuStrip
             // 
-            this.contextMenuStrip.Name = "contextMenuStrip";
             resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // listViewSrs
             // 
+            resources.ApplyResources(this.listViewSrs, "listViewSrs");
             this.listViewSrs.AllowColumnReorder = true;
             this.listViewSrs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -84,7 +86,6 @@ namespace XenAdmin.TabPages
             this.columnHeader6,
             this.columnHeader7});
             this.listViewSrs.ContextMenuStrip = this.contextMenuStrip;
-            resources.ApplyResources(this.listViewSrs, "listViewSrs");
             this.listViewSrs.FullRowSelect = true;
             this.listViewSrs.HideSelection = false;
             this.listViewSrs.Name = "listViewSrs";
@@ -140,30 +141,31 @@ namespace XenAdmin.TabPages
             // 
             // flowLayoutPanel1
             // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.newSRButton);
             this.flowLayoutPanel1.Controls.Add(this.trimButtonContainer);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.buttonProperties);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Controls.Add(this.uploadiso);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // newSRButton
             // 
-            this.newSRButton.Command = new XenAdmin.Commands.NewSRCommand();
             resources.ApplyResources(this.newSRButton, "newSRButton");
+            this.newSRButton.Command = new XenAdmin.Commands.NewSRCommand();
             this.newSRButton.Name = "newSRButton";
             this.newSRButton.UseVisualStyleBackColor = true;
             // 
             // trimButtonContainer
             // 
-            this.trimButtonContainer.Controls.Add(this.trimButton);
             resources.ApplyResources(this.trimButtonContainer, "trimButtonContainer");
+            this.trimButtonContainer.Controls.Add(this.trimButton);
             this.trimButtonContainer.Name = "trimButtonContainer";
             // 
             // trimButton
             // 
-            this.trimButton.Command = new XenAdmin.Commands.TrimSRCommand();
             resources.ApplyResources(this.trimButton, "trimButton");
+            this.trimButton.Command = new XenAdmin.Commands.TrimSRCommand();
             this.trimButton.Name = "trimButton";
             this.trimButton.UseVisualStyleBackColor = true;
             // 
@@ -179,6 +181,13 @@ namespace XenAdmin.TabPages
             this.buttonProperties.Name = "buttonProperties";
             this.buttonProperties.UseVisualStyleBackColor = true;
             this.buttonProperties.Click += new System.EventHandler(this.buttonProperties_Click);
+            // 
+            // uploadiso
+            // 
+            resources.ApplyResources(this.uploadiso, "uploadiso");
+            this.uploadiso.Name = "uploadiso";
+            this.uploadiso.UseVisualStyleBackColor = true;
+            this.uploadiso.Click += new System.EventHandler(this.uploadiso_Click);
             // 
             // PhysicalStoragePage
             // 
@@ -218,5 +227,6 @@ namespace XenAdmin.TabPages
         private XenAdmin.Commands.CommandButton trimButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Controls.ToolTipContainer trimButtonContainer;
+        private System.Windows.Forms.Button uploadiso;
     }
 }

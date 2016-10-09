@@ -499,7 +499,7 @@
     <value>dataGridViewVms</value>
   </data>
   <data name="&gt;&gt;dataGridViewVms.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.DataGridViewEx.DataGridViewEx, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.DataGridViewEx.DataGridViewEx, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dataGridViewVms.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -616,6 +616,6 @@
     <value>EvacuateHostDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.DialogWithProgress, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.DialogWithProgress, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

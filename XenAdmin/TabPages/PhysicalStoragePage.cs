@@ -41,7 +41,8 @@ using XenAdmin.Network;
 using XenAPI;
 using XenAdmin.Commands;
 using XenAdmin.Dialogs;
-
+using XenAdmin.Actions;
+using System.IO;
 
 namespace XenAdmin.TabPages
 {
@@ -396,6 +397,9 @@ namespace XenAdmin.TabPages
         private void RefreshButtons()
         {
             buttonProperties.Enabled = listViewSrs.SelectedItems.Count == 1;
+            uploadiso.Enabled = listViewSrs.SelectedItems.Count == 1
+                && ((SR)listViewSrs.SelectedItems[0].Tag).GetSRType(true) == SR.SRTypes.iso
+                && !((SR)listViewSrs.SelectedItems[0].Tag).shared;
         }
 
         private void RefreshTrimButton()
@@ -412,6 +416,71 @@ namespace XenAdmin.TabPages
             {
                 trimButtonContainer.Visible = false;
                 trimButton.SelectionBroadcaster = null;
+            }            
+        }
+
+        private void uploadiso_Click(object sender, EventArgs e)
+        {
+            if (listViewSrs.SelectedItems.Count != 1)
+                return;
+
+            SR sr = (SR)listViewSrs.SelectedItems[0].Tag;
+            PBD pbd = sr.Connection.Resolve(sr.PBDs[0]);
+            long disksizeleft = sr.physical_size - sr.physical_utilisation;
+            String path = pbd.device_config["location"];
+            String oldDir = "";
+            try
+            {
+                oldDir = Directory.GetCurrentDirectory();
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Multiselect = false;
+                dlg.ShowReadOnly = false;
+                dlg.Filter = Messages.UPLOADISO_FILTER;
+                dlg.FilterIndex = 0;
+                dlg.CheckFileExists = true;
+                dlg.ShowHelp = false;
+                dlg.Title = Messages.PATCHINGWIZARD_SELECTPATCHPAGE_CHOOSE;
+
+                if (dlg.ShowDialog(this) == DialogResult.OK && dlg.CheckFileExists)
+                {
+                    long filesize = (new FileInfo(dlg.FileName)).Length;
+                    if (filesize > disksizeleft)
+                    {
+                        MessageBox.Show(Messages.UPLOAD_ISO_SR_SPACE_NOT_ENOUGH, Messages.WARNING);
+                        return;
+                    }
+                    string filename = Path.GetFileName(dlg.FileName);
+                    List<VDI> vdis = sr.Connection.ResolveAll(sr.VDIs);
+                    foreach (VDI vdi in vdis)
+                    {
+                        string vdilocation = vdi.location;
+                        if (vdilocation == filename)
+                        {
+                            DialogResult confirmResult = MessageBox.Show(Messages.OVERRIDE_VDI_CHECK, Messages.MESSAGEBOX_CONFIRM,
+                                         MessageBoxButtons.YesNo);
+                            if (confirmResult == DialogResult.Yes)
+                            {
+                                VDI.destroy(vdi.Connection.Session, vdi.opaque_ref);
+                                break;
+                            }
+                            else
+                            {
+                                return;
+                            }
+                        }
+                    }
+                    var action = new UploadISOAction(host, dlg.FileName, path);
+                    ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Continuous, false) { ShowCancel = true };
+                    dialog.ShowDialog(this);
+                    if (dialog.action.Succeeded)
+                    {
+                        SR.scan(sr.Connection.Session, sr.opaque_ref);
+                    }
+                }
+            }
+            finally
+            {
+                Directory.SetCurrentDirectory(oldDir);
             }
         }
     }
