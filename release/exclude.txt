@@ -1,0 +1,4 @@
+.svn
+gkbuild.bat
+gkclean.bat
+exclude.txt
