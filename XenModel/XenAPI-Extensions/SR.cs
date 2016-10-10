@@ -540,7 +540,7 @@ namespace XenAPI
                 {
                     doc.LoadXml(xml);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return results;
                 }
