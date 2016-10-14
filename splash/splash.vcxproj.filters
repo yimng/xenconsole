@@ -33,8 +33,8 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuildStep Include="util.h">
+    <CustomBuild Include="util.h">
       <Filter>Header Files</Filter>
-    </CustomBuildStep>
+    </CustomBuild>
   </ItemGroup>
 </Project>

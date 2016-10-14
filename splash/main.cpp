@@ -74,12 +74,12 @@ const int SplashLockMaxWait = 60000;
 const int SplashLockSleepInterval = 250;    
 
 // Size of the splash bitmap
-const int ImageSizeX = 415;
-const int ImageSizeY = 217;
+const int ImageSizeX = 450;
+const int ImageSizeY = 250;
 
-const TCHAR SplashClassName[] = TEXT("XenCenterSplash0001");
-const TCHAR PipeStub[] = TEXT("\\\\.\\pipe\\XenCenter-");
-const TCHAR SplashPipeStub[] = TEXT("\\\\.\\pipe\\XenCenterSplash-");
+const TCHAR SplashClassName[] = TEXT("ConsoleSplash0001");
+const TCHAR PipeStub[] = TEXT("\\\\.\\pipe\\Console-");
+const TCHAR SplashPipeStub[] = TEXT("\\\\.\\pipe\\ConsoleSplash-");
 // The path to the main C# XenCenter exe, relative to the location of the splash exe.
 const TCHAR XenCenterPath[] = TEXT("ConsoleMain.exe");
 const size_t PathLen = 17;
@@ -88,8 +88,8 @@ const size_t PathLen = 17;
 const TCHAR ProductVersion[] = TEXT("0.0");
 const TCHAR ProductBuild[] = TEXT("0000");
 #else
-const TCHAR ProductVersion[] = TEXT("[BRANDING_PRODUCT_VERSION]");
-const TCHAR ProductBuild[] = TEXT("@BUILD_NUMBER@");
+const TCHAR ProductVersion[] = TEXT("5.2.0");
+const TCHAR ProductBuild[] = TEXT("1128");
 #endif
 
 // The in-memory Device Context

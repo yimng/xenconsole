@@ -62,8 +62,8 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\[XenCenter].exe"
-				LinkIncremental="2"
+				OutputFile="$(OutDir)\vConsole.exe"
+				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				RandomizedBaseAddress="1"
@@ -76,6 +76,7 @@
 			<Tool
 				Name="VCManifestTool"
 				AdditionalManifestFiles="$(InputDir)\splash.manifest"
+				UseFAT32Workaround="true"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -123,7 +124,7 @@
 				UsePrecompiledHeader="0"
 				WarningLevel="4"
 				WarnAsError="true"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="3"
 				DisableSpecificWarnings="4995"
 			/>
@@ -138,7 +139,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\[XenCenter].exe"
+				OutputFile="$(OutDir)\vConsole.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
@@ -170,6 +171,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine=""
 			/>
 		</Configuration>
 	</Configurations>
