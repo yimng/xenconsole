@@ -2840,6 +2840,9 @@
     <Compile Include="Commands\DestroyHostCommand.cs" />
     <Compile Include="Commands\MigrateVirtualDiskCommand.cs" />
     <Compile Include="Commands\UpdateVIFCommand.cs" />
+    <Content Include="halsign_host_upgrade.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Help\Halsign Console.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
