@@ -42,7 +42,7 @@ copy /y .\XenAdmin\bin\Release\*.py ..\..\release\vconsole\build-60000-new\relea
 copy /y .\XenAdmin\bin\Release\BuildInfo ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\ConsoleMain.exe.config ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\HalsignConsole.exe ..\..\release\vconsole\build-60000-new\release
-copy /y .\release\ConsoleMain.exe ..\..\release\vconsole\build-60000-new\release
+copy /y .\XenAdmin\bin\Release\ConsoleMain.exe ..\..\release\vconsole\build-60000-new\release
 
 cd ..\..\release\vconsole\build-60000-new\release
 call gkbuild.bat
