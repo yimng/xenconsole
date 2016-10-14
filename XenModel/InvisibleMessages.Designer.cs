@@ -88,7 +88,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://updates.xensource.com/[XenServer]/{0}/XenCenter.
+        ///   Looks up a localized string similar to http://updates.xensource.com/vGate/{0}/XenCenter.
         /// </summary>
         public static string CHECK_FOR_UPDATES_URL {
             get {
@@ -187,7 +187,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter].log.
+        ///   Looks up a localized string similar to HalsignConsole.log.
         /// </summary>
         public static string LOG_FILENAME {
             get {
