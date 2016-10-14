@@ -102,7 +102,7 @@ namespace XenAdmin.Commands
 
         protected override bool CanExecute(VM vm)
         {
-            return isVMBackup(vm) && // This is a temp sovlution
+            return //isVMBackup(vm) && // This is a temp sovlution
                 CanExecute(vm, preSelectedHost);
         }
 
