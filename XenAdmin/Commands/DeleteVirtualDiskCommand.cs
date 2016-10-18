@@ -344,6 +344,8 @@ namespace XenAdmin.Commands
 
                     return true;
                 }
+                if (vdi.VDIType == VDI.FriendlyType.ISO && !sr.shared) // This is an iso storage sr and is has been eject from DVD
+                    return true;
                 return false;
             }
             return true;
