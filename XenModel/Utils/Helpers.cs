@@ -2166,5 +2166,14 @@ namespace XenAdmin.Core
 
             return System.Net.WebUtility.UrlEncode(str);
         }
+
+        public static bool after_5_2_1(IXenConnection conn)
+        {
+            if (conn != null)
+            {
+                return Helpers.productVersionCompare(Helpers.HostProductVersion(conn.Cache.Hosts[0]), "5.2.1") > 0;
+            }
+            return true;
+        }
     }
 }

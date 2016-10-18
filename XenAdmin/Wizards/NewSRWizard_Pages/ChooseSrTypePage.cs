@@ -105,6 +105,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
             radioButtonFcoe.Visible = Helpers.DundeeOrGreater(Connection);
 
+            radioButtonlunbond.Visible = Helpers.after_5_2_1(Connection);
+
             foreach (var radioButton in _radioButtons)
             {
                 var frontend = (SrWizardType)radioButton.Tag;
