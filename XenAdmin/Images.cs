@@ -318,6 +318,12 @@ namespace XenAdmin
         {
             bool disabled = vm.IsHidden;
 
+            // Can't op the vm when the vm is back or replication
+            if (vm.other_config.ContainsKey("halsign_br_ready") && "false".Equals(vm.other_config["halsign_br_ready"]))
+            {
+                return Icons.VmStarting;
+            }
+
             if (vm.is_a_snapshot)
             {
                 if (vm.is_snapshot_from_vmpp || vm.is_vmss_snapshot)
