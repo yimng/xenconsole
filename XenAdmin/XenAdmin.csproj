@@ -7033,7 +7033,7 @@
       <Name>HalsignLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\XenCenterLib\XenCenterLib.csproj">
-      <Project>{9861DFA1-B41F-432D-A43F-226257DEBBB9}</Project>
+      <Project>{9861dfa1-b41f-432d-a43f-226257debbb9}</Project>
       <Name>XenCenterLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\XenCenterVNC\XenCenterVNC.csproj">
