@@ -17,8 +17,8 @@ SET BUILD_TARGET="release"
 
 cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && devenv /clean debug XenAdmin.sln"
 cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && devenv /clean Release XenAdmin.sln"
-echo clean finish! /p:Configuration=Release /p:OutputPath=bin\Release /p:VisualStudioVersion=10.0
-cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && MSBuild.exe XenAdmin.sln /t:Rebuild /p:Configuration=Release /p:OutputPath=bin\Release /p:Platform="Mixed Platforms" /p:VisualStudioVersion=10.0"
+echo clean finish! /p:Configuration=Release /p:OutputPath=bin\Release /p:VisualStudioVersion=13.0
+cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && MSBuild.exe XenAdmin.sln /t:Rebuild /p:Configuration=Release /p:OutputPath=bin\Release /p:Platform="Mixed Platforms" /p:VisualStudioVersion=13.0"
 echo build successful
 echo.
 
@@ -28,7 +28,7 @@ set buildinfo=%t:~0,4%%t:~4,2%%t:~6,2%
 echo %buildinfo% > .\XenAdmin\bin\Release\BuildInfo
 
 echo obfuscate code
-dotNET_Reactor.Console.exe -file ".\XenAdmin\bin\Release\ConsoleMain.exe" -embed 1 -satellite_assemblies ".\XenAdmin\bin\Release\CommandLib.dll/.\XenAdmin\bin\Release\ConsoleLib.dll/.\XenAdmin\bin\Release\CookComputing.XmlRpcV2.dll/.\XenAdmin\bin\Release\DiffieHellman.dll/.\XenAdmin\bin\Release\DiscUtils.dll/.\XenAdmin\bin\Release\HalsignLib.dll/.\XenAdmin\bin\Release\ICSharpCode.SharpZipLib.dll/.\XenAdmin\bin\Release\Ionic.Zip.dll/.\XenAdmin\bin\Release\log4net.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.Common.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.WinForms.dll/.\XenAdmin\bin\Release\MSTSCLib.dll/.\XenAdmin\bin\Release\Tamir.SharpSSH.dll/.\XenAdmin\bin\Release\XenCenterVNC.dll/.\XenAdmin\bin\Release\XenModel.dll/.\XenAdmin\bin\Release\XenOvf.dll/.\XenAdmin\bin\Release\XenOvfTransport.dll/" -necrobit 1 -obfuscation 1 -stringencryption 1 -targetfile ".\release"
+::dotNET_Reactor.Console.exe -file ".\XenAdmin\bin\Release\ConsoleMain.exe" -embed 1 -satellite_assemblies ".\XenAdmin\bin\Release\CommandLib.dll/.\XenAdmin\bin\Release\ConsoleLib.dll/.\XenAdmin\bin\Release\CookComputing.XmlRpcV2.dll/.\XenAdmin\bin\Release\DiffieHellman.dll/.\XenAdmin\bin\Release\DiscUtils.dll/.\XenAdmin\bin\Release\HalsignLib.dll/.\XenAdmin\bin\Release\ICSharpCode.SharpZipLib.dll/.\XenAdmin\bin\Release\Ionic.Zip.dll/.\XenAdmin\bin\Release\log4net.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.Common.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll/.\XenAdmin\bin\Release\Microsoft.ReportViewer.WinForms.dll/.\XenAdmin\bin\Release\MSTSCLib.dll/.\XenAdmin\bin\Release\Tamir.SharpSSH.dll/.\XenAdmin\bin\Release\XenCenterVNC.dll/.\XenAdmin\bin\Release\XenModel.dll/.\XenAdmin\bin\Release\XenOvf.dll/.\XenAdmin\bin\Release\XenOvfTransport.dll/" -necrobit 1 -obfuscation 1 -stringencryption 1 -targetfile ".\release"
 
 cmd /C %WORK_DRV% && CD %WORK_DIR% 
 
@@ -42,8 +42,8 @@ copy /y .\XenAdmin\bin\Release\*.py ..\..\release\vconsole\build-60000-new\relea
 copy /y .\XenAdmin\bin\Release\BuildInfo ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\ConsoleMain.exe.config ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\HalsignConsole.exe ..\..\release\vconsole\build-60000-new\release
-copy /y .\Release\ConsoleMain.exe ..\..\release\vconsole\build-60000\release
-
+copy /y .\XenAdmin\bin\Release\ConsoleMain.exe ..\..\release\vconsole\build-60000-new\release
+copy /y .\XenAdmin\bin\Release\*.dll ..\..\release\vconsole\build-60000-new\release
 
 cd ..\..\release\vconsole\build-60000-new\release
 call gkbuild.bat
