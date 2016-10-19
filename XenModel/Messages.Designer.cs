@@ -10772,7 +10772,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MMM d, yyyy h:mm tt.
+        ///   Looks up a localized string similar to MMM d, yyyy HH:mm.
         /// </summary>
         public static string DATEFORMAT_DMY_HM {
             get {

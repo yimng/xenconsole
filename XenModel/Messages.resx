@@ -3835,7 +3835,7 @@ For optimal performance and reliability during VM migration, ensure that the net
     <value>MMM d, yyyy</value>
   </data>
   <data name="DATEFORMAT_DMY_HM" xml:space="preserve">
-    <value>MMM d, yyyy h:mm tt</value>
+    <value>MMM d, yyyy HH:mm</value>
   </data>
   <data name="DATEFORMAT_DMY_HMS" xml:space="preserve">
     <value>MMM d, yyyy h:mm:ss tt</value>
