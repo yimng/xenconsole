@@ -175,7 +175,7 @@ namespace XenAdmin.Dialogs
             {
                 usedNames.Add(v.Name);
             }
-            return Helpers.MakeUniqueName(Messages.DEFAULT_VDI_NAME, usedNames);
+            return Helpers.MakeUniqueName(this.TheVM != null ? this.TheVM.name_label : Messages.DEFAULT_VDI_NAME, usedNames);
         }
 
         void SrListBox_ItemSelectionNull()
