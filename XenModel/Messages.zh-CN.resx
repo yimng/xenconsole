@@ -7881,7 +7881,7 @@ SCSI ID: {2}
     <value>非活动</value>
   </data>
   <data name="MULTIPATH_STATUS" xml:space="preserve">
-    <value>{1} 个路径中有 {0} 个处于活动状态</value>
+    <value>{0}:   {2} 个路径中有 {1} 个处于活动状态</value>
   </data>
   <data name="MULTIPATH_STATUS_ISCSI_SESSIONS" xml:space="preserve">
     <value> ({0} iSCSI 会话)</value>

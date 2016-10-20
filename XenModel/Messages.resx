@@ -8207,7 +8207,7 @@ To learn more about the [XenServer] Live VDI Migration feature or to start a [Xe
     <value>Not active</value>
   </data>
   <data name="MULTIPATH_STATUS" xml:space="preserve">
-    <value>{0} of {1} paths active</value>
+    <value>{0}:   {1} of {2} paths active</value>
   </data>
   <data name="MULTIPATH_STATUS_ISCSI_SESSIONS" xml:space="preserve">
     <value> ({0} iSCSI sessions)</value>

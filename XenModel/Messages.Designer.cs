@@ -23632,7 +23632,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} of {1} paths active.
+        ///   Looks up a localized string similar to {0}:   {1} of {2} paths active.
         /// </summary>
         public static string MULTIPATH_STATUS {
             get {
