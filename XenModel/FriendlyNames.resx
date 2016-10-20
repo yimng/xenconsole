@@ -1973,4 +1973,7 @@
   <data name="SR.name_description-local-iso-storage-host" xml:space="preserve">
     <value>Local ISO storage on {0}</value>
   </data>
+  <data name="Message.name-unknown" xml:space="preserve">
+    <value>Test Email</value>
+  </data>
 </root>

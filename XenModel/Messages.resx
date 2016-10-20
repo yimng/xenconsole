@@ -1161,6 +1161,24 @@
   <data name="ACTION_VM_REBOOTING_TITLE" xml:space="preserve">
     <value>Rebooting VM '{0}' on '{1}'</value>
   </data>
+  <data name="ACTION_VM_RESETED_POWER_STATE" xml:space="preserve">
+    <value>vm power state reseted</value>
+  </data>
+  <data name="ACTION_VM_RESETED_VDI" xml:space="preserve">
+    <value>vdi reseted</value>
+  </data>
+  <data name="ACTION_VM_RESETING_POWER_STATE" xml:space="preserve">
+    <value>reseting vm power state</value>
+  </data>
+  <data name="ACTION_VM_RESETING_VDI" xml:space="preserve">
+    <value>reseting vdi</value>
+  </data>
+  <data name="ACTION_VM_RESET_POWER_STATE_CANCEL" xml:space="preserve">
+    <value>cancel reset vm power state</value>
+  </data>
+  <data name="ACTION_VM_RESET_TITLE" xml:space="preserve">
+    <value>reseting vm {0}</value>
+  </data>
   <data name="ACTION_VM_RESUMED" xml:space="preserve">
     <value>Resumed</value>
   </data>
@@ -7731,6 +7749,12 @@ This will permanently delete and reinitialize all local storage on the servers. 
   <data name="MAINWINDOW_REPAIR_SR_CONTEXT_MENU" xml:space="preserve">
     <value>Re&amp;pair...</value>
   </data>
+  <data name="MAINWINDOW_RESET_POWER_STATE_VM" xml:space="preserve">
+    <value>reset power state of vm</value>
+  </data>
+  <data name="MAINWINDOW_RESET_VDI_VM" xml:space="preserve">
+    <value>Reset VM VDI</value>
+  </data>
   <data name="MAINWINDOW_RESTART" xml:space="preserve">
     <value>Re&amp;start</value>
   </data>
@@ -10679,6 +10703,18 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
   </data>
   <data name="REQUIRED_HOTFIX_ISNOT_INSTALLED" xml:space="preserve">
     <value>{0}: The required hotfix is not installed</value>
+  </data>
+  <data name="RESET_VDI_DIALOG_TEXT" xml:space="preserve">
+    <value>Are you sure you want to reset VM '{0}' VDI? This cannot be undone.</value>
+  </data>
+  <data name="RESET_VM_POWER_STATUS" xml:space="preserve">
+    <value>Reset VM power status</value>
+  </data>
+  <data name="RESET_VM_POWER_STATUS_DIALOG_TEXT" xml:space="preserve">
+    <value>Are you sure to reset vm {0} power status?</value>
+  </data>
+  <data name="RESET_VM_VDI" xml:space="preserve">
+    <value>Reset VM VDI</value>
   </data>
   <data name="RESOLVED_AS" xml:space="preserve">
     <value>Resolved as {0}</value>

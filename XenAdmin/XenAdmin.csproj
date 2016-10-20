@@ -135,6 +135,8 @@
     <Compile Include="Commands\CrossPoolMigrateToHomeCommand.cs" />
     <Compile Include="Commands\TrimSRCommand.cs" />
     <Compile Include="Commands\ExportResourceReportCommand.cs" />
+    <Compile Include="Commands\VMResetPowerStateCommand.cs" />
+    <Compile Include="Commands\VMResetVDICommand.cs" />
     <Compile Include="Controls\AffinityPicker.cs">
       <SubType>UserControl</SubType>
     </Compile>

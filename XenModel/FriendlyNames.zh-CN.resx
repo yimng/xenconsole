@@ -1967,4 +1967,7 @@
   <data name="SR.name_description-local-iso-storage-host" xml:space="preserve">
     <value>{0} 上的本地ISO存储</value>
   </data>
+  <data name="Message.name-unknown" xml:space="preserve">
+    <value>测试邮件</value>
+  </data>
 </root>

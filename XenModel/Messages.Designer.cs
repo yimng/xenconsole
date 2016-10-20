@@ -3148,6 +3148,60 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cancel reset vm power state.
+        /// </summary>
+        public static string ACTION_VM_RESET_POWER_STATE_CANCEL {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESET_POWER_STATE_CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reseting vm {0}.
+        /// </summary>
+        public static string ACTION_VM_RESET_TITLE {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESET_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vm power state reseted.
+        /// </summary>
+        public static string ACTION_VM_RESETED_POWER_STATE {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESETED_POWER_STATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vdi reseted.
+        /// </summary>
+        public static string ACTION_VM_RESETED_VDI {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESETED_VDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reseting vm power state.
+        /// </summary>
+        public static string ACTION_VM_RESETING_POWER_STATE {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESETING_POWER_STATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reseting vdi.
+        /// </summary>
+        public static string ACTION_VM_RESETING_VDI {
+            get {
+                return ResourceManager.GetString("ACTION_VM_RESETING_VDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resumed.
         /// </summary>
         public static string ACTION_VM_RESUMED {
@@ -22239,6 +22293,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to reset power state of vm.
+        /// </summary>
+        public static string MAINWINDOW_RESET_POWER_STATE_VM {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_RESET_POWER_STATE_VM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset VM VDI.
+        /// </summary>
+        public static string MAINWINDOW_RESET_VDI_VM {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_RESET_VDI_VM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Re&amp;start.
         /// </summary>
         public static string MAINWINDOW_RESTART {
@@ -30744,6 +30816,42 @@ namespace XenAdmin {
         public static string REQUIRED_HOTFIX_ISNOT_INSTALLED {
             get {
                 return ResourceManager.GetString("REQUIRED_HOTFIX_ISNOT_INSTALLED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to reset VM &apos;{0}&apos; VDI? This cannot be undone..
+        /// </summary>
+        public static string RESET_VDI_DIALOG_TEXT {
+            get {
+                return ResourceManager.GetString("RESET_VDI_DIALOG_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset VM power status.
+        /// </summary>
+        public static string RESET_VM_POWER_STATUS {
+            get {
+                return ResourceManager.GetString("RESET_VM_POWER_STATUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to reset vm {0} power status?.
+        /// </summary>
+        public static string RESET_VM_POWER_STATUS_DIALOG_TEXT {
+            get {
+                return ResourceManager.GetString("RESET_VM_POWER_STATUS_DIALOG_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset VM VDI.
+        /// </summary>
+        public static string RESET_VM_VDI {
+            get {
+                return ResourceManager.GetString("RESET_VM_VDI", resourceCulture);
             }
         }
         

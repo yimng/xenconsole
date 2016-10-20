@@ -14142,4 +14142,43 @@ SCSI ID: {6}
   <data name="UPLOAD_ISO_SR_SPACE_NOT_ENOUGH" xml:space="preserve">
     <value>没有足够的空间上传ISO</value>
   </data>
+  <data name="NEWVMWIZARD_TEMPLATEPAGE_NEOKYLIN" xml:space="preserve">
+    <value>麒麟</value>
+  </data>
+  <data name="ACTION_VM_RESETED_POWER_STATE" xml:space="preserve">
+    <value>虚拟机电源重置完成</value>
+  </data>
+  <data name="ACTION_VM_RESETED_VDI" xml:space="preserve">
+    <value>虚拟机VDI已经重置</value>
+  </data>
+  <data name="ACTION_VM_RESETING_POWER_STATE" xml:space="preserve">
+    <value>正在重置虚拟机电源</value>
+  </data>
+  <data name="ACTION_VM_RESETING_VDI" xml:space="preserve">
+    <value>正在重置虚拟机VDI</value>
+  </data>
+  <data name="ACTION_VM_RESET_POWER_STATE_CANCEL" xml:space="preserve">
+    <value>取消重置虚拟机电源</value>
+  </data>
+  <data name="ACTION_VM_RESET_TITLE" xml:space="preserve">
+    <value>正在重置虚拟机{0}</value>
+  </data>
+  <data name="MAINWINDOW_RESET_POWER_STATE_VM" xml:space="preserve">
+    <value>重置虚拟机电源状态</value>
+  </data>
+  <data name="MAINWINDOW_RESET_VDI_VM" xml:space="preserve">
+    <value>重置虚拟机VDI</value>
+  </data>
+  <data name="RESET_VDI_DIALOG_TEXT" xml:space="preserve">
+    <value>你确定要重置虚拟机{0}的VDI吗，这步操作有可能损坏磁盘</value>
+  </data>
+  <data name="RESET_VM_POWER_STATUS" xml:space="preserve">
+    <value>重置虚拟机电源</value>
+  </data>
+  <data name="RESET_VM_POWER_STATUS_DIALOG_TEXT" xml:space="preserve">
+    <value>你确定要重置虚拟机{0}的电源状态吗？</value>
+  </data>
+  <data name="RESET_VM_VDI" xml:space="preserve">
+    <value>重置虚拟机磁盘</value>
+  </data>
 </root>

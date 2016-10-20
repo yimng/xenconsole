@@ -151,11 +151,13 @@
     <Compile Include="Actions\VM\ExportVmAction.cs" />
     <Compile Include="Actions\VM\GpuAssignAction.cs" />
     <Compile Include="Actions\VM\ImportVmAction.cs" />
+    <Compile Include="Actions\VM\ResetVirtualDiskAction.cs" />
     <Compile Include="Actions\VM\ResumeAndStartVMsAction.cs" />
     <Compile Include="Actions\VM\SetVMStartupOptionsAction.cs" />
     <Compile Include="Actions\DR\StartVMsAndAppliancesAction.cs" />
     <Compile Include="Actions\DR\ShutdownAndDestroyVMsAction.cs" />
     <Compile Include="Actions\VM\VMCrossPoolMigrateAction.cs" />
+    <Compile Include="Actions\VM\VMResetPowerStateAction.cs" />
     <Compile Include="Actions\VM\VMSnapshotCreateAction.cs" />
     <Compile Include="Actions\VM\VMStartAction.cs" />
     <Compile Include="Actions\ZipStatusReportAction.cs" />

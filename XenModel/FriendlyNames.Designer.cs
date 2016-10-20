@@ -4887,6 +4887,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Test Email.
+        /// </summary>
+        public static string Message_name_unknown {
+            get {
+                return ResourceManager.GetString("Message.name-unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unknown error occurred when reclaiming freed space.
         /// </summary>
         public static string Message_name_UnknownTrimException {
