@@ -59,6 +59,9 @@ namespace XenAdmin.SettingsPanels
         private string _OrigEmailAddressTextBox;
         private string _OrigSmtpServerAddrTextBox;
         private string _OrigSmtpServerPortTextBox;
+        private bool _OrigVerifyCheckBox;
+        private string _OrigEmailUserTextBox;
+        private string _OrigEmailPasswordTextBox;
 
         private readonly ToolTip InvalidParamToolTip;
 
@@ -74,6 +77,7 @@ namespace XenAdmin.SettingsPanels
             InvalidParamToolTip.ToolTipTitle = Messages.INVALID_PARAMETER;
 
             EmailNotificationCheckBox_CheckedChanged(null, null);
+            verifycheckbox_CheckedChanged(null, null);
         }
 
         public String SubText
@@ -99,7 +103,7 @@ namespace XenAdmin.SettingsPanels
         private static readonly Regex emailRegex = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);
         public static bool IsValidEmail(string s)
         {
-            return emailRegex.IsMatch(s);
+            return s.Split(',').All((email) => emailRegex.IsMatch(email));
         }
 
         private bool IsValidSmtpAddress()
@@ -118,6 +122,9 @@ namespace XenAdmin.SettingsPanels
             _OrigEmailAddressTextBox = EmailAddressTextBox.Text;
             _OrigSmtpServerAddrTextBox = SmtpServerAddrTextBox.Text;
             _OrigSmtpServerPortTextBox = SmtpServerPortTextBox.Text;
+            _OrigVerifyCheckBox = VerifyCheckBox.Checked;
+            _OrigEmailUserTextBox = UserNameTextBox.Text;
+            _OrigEmailPasswordTextBox = PasswordTextBox.Text;
         }
         public void Repopulate()
         {
@@ -132,6 +139,8 @@ namespace XenAdmin.SettingsPanels
                     EmailAddressTextBox.Text = _PerfmonOptions.MailDestination;
                     SmtpServerAddrTextBox.Text = PerfmonOptionsDefinition.GetSmtpServerAddress(_PerfmonOptions.MailHub);
                     SmtpServerPortTextBox.Text = PerfmonOptionsDefinition.GetSmtpPort(_PerfmonOptions.MailHub);
+                    UserNameTextBox.Text = _PerfmonOptions.MailUsername;
+                    PasswordTextBox.Text = _PerfmonOptions.MailPassword;
                 }
 
             }
@@ -145,7 +154,10 @@ namespace XenAdmin.SettingsPanels
                 return ((_OrigEmailNotificationCheckBox != EmailNotificationCheckBox.Checked) ||
                         (_OrigEmailAddressTextBox != EmailAddressTextBox.Text) ||
                         (_OrigSmtpServerAddrTextBox != SmtpServerAddrTextBox.Text) ||
-                        (_OrigSmtpServerPortTextBox != SmtpServerPortTextBox.Text));
+                        (_OrigSmtpServerPortTextBox != SmtpServerPortTextBox.Text) ||
+                        (_OrigVerifyCheckBox != VerifyCheckBox.Checked) ||
+                        (_OrigEmailUserTextBox != UserNameTextBox.Text) ||
+                        (_OrigEmailPasswordTextBox != PasswordTextBox.Text));
             }
         }
 
@@ -163,6 +175,13 @@ namespace XenAdmin.SettingsPanels
             {
                 HelpersGUI.ShowBalloonMessage(SmtpServerPortTextBox, Messages.INVALID_PARAMETER, InvalidParamToolTip);
             }
+            else if (VerifyCheckBox.Checked)
+            {
+                if (!IsValidEmail(UserNameTextBox.Text))
+                {
+                    HelpersGUI.ShowBalloonMessage(UserNameTextBox, Messages.INVALID_PARAMETER, InvalidParamToolTip);
+                }
+            }
         }
 
         public bool ValidToSave
@@ -171,7 +190,10 @@ namespace XenAdmin.SettingsPanels
             {
                 if (EmailNotificationCheckBox.Checked)
                 {
-                    return IsValidEmail(EmailAddressTextBox.Text) && Util.IsValidPort(SmtpServerPortTextBox.Text) && IsValidSmtpAddress();
+                    return IsValidEmail(EmailAddressTextBox.Text) &&
+                        Util.IsValidPort(SmtpServerPortTextBox.Text) &&
+                        IsValidSmtpAddress() &&
+                        (VerifyCheckBox.Checked ? IsValidEmail(UserNameTextBox.Text) : true);
                 }
                 else
                 {
@@ -191,7 +213,14 @@ namespace XenAdmin.SettingsPanels
             if (EmailNotificationCheckBox.Checked)
             {
                 string smtpMailHub = SmtpServerAddrTextBox.Text + ":" + SmtpServerPortTextBox.Text;
-                perfmonOptions = new PerfmonOptionsDefinition(smtpMailHub, EmailAddressTextBox.Text);
+                if (VerifyCheckBox.Checked)
+                {
+                    perfmonOptions = new PerfmonOptionsDefinition(smtpMailHub, EmailAddressTextBox.Text, UserNameTextBox.Text, PasswordTextBox.Text);
+                }
+                else
+                {
+                    perfmonOptions = new PerfmonOptionsDefinition(smtpMailHub, EmailAddressTextBox.Text, "", "");
+                }
             }
 
             return new PerfmonOptionsDefinitionAction(_XenModelObject.Connection, perfmonOptions, true);
@@ -202,6 +231,37 @@ namespace XenAdmin.SettingsPanels
             EmailAddressTextBox.Enabled = EmailNotificationCheckBox.Checked;
             SmtpServerAddrTextBox.Enabled = EmailNotificationCheckBox.Checked;
             SmtpServerPortTextBox.Enabled = EmailNotificationCheckBox.Checked;
+            VerifyCheckBox.Enabled = EmailNotificationCheckBox.Checked;
+            if (EmailNotificationCheckBox.Checked && VerifyCheckBox.Checked)
+            {
+                VerifyCheckBox.Enabled = true;
+                UserNameTextBox.Enabled = true;
+                PasswordTextBox.Enabled = true;
+            }
+            else if (!EmailNotificationCheckBox.Checked)
+            {
+                VerifyCheckBox.Enabled = false;
+                UserNameTextBox.Enabled = false;
+                PasswordTextBox.Enabled = false;
+            }
+        }
+
+        private void verifycheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            UserNameTextBox.Enabled = VerifyCheckBox.Checked;
+            PasswordTextBox.Enabled = VerifyCheckBox.Checked;
+        }
+
+        private void verifybutton_click(object sender, EventArgs e)
+        {
+            AsyncAction saveaction = SaveSettings();
+            saveaction.Completed += action_Completed;
+            saveaction.RunAsync();
+        }
+
+        private void action_Completed(ActionBase sender)
+        {
+            XenAPI.Message.create(_XenModelObject.Connection.Session, "TEST_MAIL", 3, cls.Pool, Helpers.GetPoolOfOne(_XenModelObject.Connection).uuid, "This email is send by system when you test the email configure");
         }
     }
 }

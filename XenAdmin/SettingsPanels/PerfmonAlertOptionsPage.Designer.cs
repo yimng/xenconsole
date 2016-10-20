@@ -37,10 +37,18 @@ namespace XenAdmin.SettingsPanels
             this.EmailAddressTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new XenAdmin.Controls.DecentGroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CheckButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new XenAdmin.Controls.DecentGroupBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.MailUserlabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.VerifyCheckBox = new System.Windows.Forms.CheckBox();
             this.SendEmailNoteLabel = new System.Windows.Forms.Label();
             this.EmailNotificationCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // EmailAddressLabel
@@ -88,10 +96,57 @@ namespace XenAdmin.SettingsPanels
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.CheckButton, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.VerifyCheckBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.SendEmailNoteLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.EmailNotificationCheckBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // CheckButton
+            // 
+            resources.ApplyResources(this.CheckButton, "CheckButton");
+            this.CheckButton.Name = "CheckButton";
+            this.CheckButton.UseVisualStyleBackColor = true;
+            this.CheckButton.Click += new System.EventHandler(this.verifybutton_click);
+            // 
+            // groupBox2
+            // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.UserNameTextBox);
+            this.groupBox2.Controls.Add(this.MailUserlabel);
+            this.groupBox2.Controls.Add(this.PasswordTextBox);
+            this.groupBox2.Controls.Add(this.PasswordLabel);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // UserNameTextBox
+            // 
+            resources.ApplyResources(this.UserNameTextBox, "UserNameTextBox");
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            // 
+            // MailUserlabel
+            // 
+            resources.ApplyResources(this.MailUserlabel, "MailUserlabel");
+            this.MailUserlabel.Name = "MailUserlabel";
+            // 
+            // PasswordTextBox
+            // 
+            resources.ApplyResources(this.PasswordTextBox, "PasswordTextBox");
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            // 
+            // PasswordLabel
+            // 
+            resources.ApplyResources(this.PasswordLabel, "PasswordLabel");
+            this.PasswordLabel.Name = "PasswordLabel";
+            // 
+            // VerifyCheckBox
+            // 
+            resources.ApplyResources(this.VerifyCheckBox, "VerifyCheckBox");
+            this.VerifyCheckBox.Name = "VerifyCheckBox";
+            this.VerifyCheckBox.UseVisualStyleBackColor = false;
+            this.VerifyCheckBox.CheckedChanged += new System.EventHandler(this.verifycheckbox_CheckedChanged);
             // 
             // SendEmailNoteLabel
             // 
@@ -115,6 +170,8 @@ namespace XenAdmin.SettingsPanels
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -131,5 +188,12 @@ namespace XenAdmin.SettingsPanels
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label SendEmailNoteLabel;
         private System.Windows.Forms.CheckBox EmailNotificationCheckBox;
+        private System.Windows.Forms.Button CheckButton;
+        private Controls.DecentGroupBox groupBox2;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.Label MailUserlabel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.CheckBox VerifyCheckBox;
     }
 }

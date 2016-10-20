@@ -46,15 +46,21 @@ namespace XenAdmin.Alerts
     {
         public const String MAIL_DESTINATION_KEY_NAME = "mail-destination";
         public const String SMTP_MAILHUB_KEY_NAME = "ssmtp-mailhub";
+        public const String MAIL_USERNAME = "mail-username";
+        public const String MAIL_PASSWORD = "mail-password";
 
         private static readonly char[] mailHubDelim = new char[] { ':' };
         private readonly String mailHub;
         private readonly String mailDestination;
+        private readonly String mailusername;
+        private readonly String mailpassword;
 
-        public PerfmonOptionsDefinition(String mailHub, String mailDestination)
+        public PerfmonOptionsDefinition(String mailHub, String mailDestination, String mailusername, String mailpassword)
         {
             this.mailHub = mailHub;
             this.mailDestination = mailDestination;
+            this.mailusername = mailusername;
+            this.mailpassword = mailpassword;
         }
 
         public String MailHub
@@ -73,6 +79,21 @@ namespace XenAdmin.Alerts
             }
         }
 
+        public String MailUsername
+        {
+            get
+            {
+                return mailusername;
+            }
+        }
+
+        public String MailPassword
+        {
+            get
+            {
+                return mailpassword;
+            }
+        }
         public static String GetSmtpServerAddress(string mailHub)
         {
             try
@@ -117,11 +138,13 @@ namespace XenAdmin.Alerts
 
             string mailDestination = GetMailDestination(connection);
             string mailHub = GetSmtpMailHub(connection);
+            string mailusername = GetMailUsername(connection);
+            string mailpassword = GetMailPassword(connection);
 
             if (mailDestination == null || mailDestination == null)
                 return null;
 
-            return new PerfmonOptionsDefinition(mailHub, mailDestination);
+            return new PerfmonOptionsDefinition(mailHub, mailDestination, mailusername, mailpassword);
         }
 
         public static string GetMailDestination(IXenConnection connection)
@@ -170,6 +193,60 @@ namespace XenAdmin.Alerts
                 return null;
 
             return mailHub;
+        }
+
+        public static string GetMailUsername(IXenConnection connection)
+        {
+            Pool pool = Helpers.GetPoolOfOne(connection);
+            if (pool == null)
+                return null;
+
+            Dictionary<String, String> other_config = Helpers.GetOtherConfig(pool);
+            if (other_config == null)
+                return null;
+
+            if (!other_config.ContainsKey(MAIL_USERNAME))
+                return null;
+
+            String mailusername = other_config[MAIL_USERNAME];
+            if (mailusername == null)
+                return null;
+
+            mailusername.Trim();
+            if (String.IsNullOrEmpty(mailusername))
+                return null;
+
+            return mailusername;
+        }
+
+        public static string GetMailPassword(IXenConnection connection)
+        {
+            Pool pool = Helpers.GetPoolOfOne(connection);
+            if (pool == null)
+                return null;
+
+            Dictionary<String, String> other_config = Helpers.GetOtherConfig(pool);
+            if (other_config == null)
+                return null;
+
+            if (!other_config.ContainsKey(MAIL_PASSWORD))
+                return null;
+
+            String mailpassword = other_config[MAIL_PASSWORD];
+            if (mailpassword == null)
+                return null;
+
+            mailpassword.Trim();
+            if (String.IsNullOrEmpty(mailpassword))
+                return null;
+
+            return Base64Decode(mailpassword);
+        }
+
+        public static string Base64Decode(string encodedString)
+        {
+            byte[] data = Convert.FromBase64String(encodedString);
+            return Encoding.UTF8.GetString(data);
         }
     }
 }

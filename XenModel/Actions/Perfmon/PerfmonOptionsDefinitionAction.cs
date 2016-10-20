@@ -62,12 +62,30 @@ namespace XenAdmin.Actions
             {
                 Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_DESTINATION_KEY_NAME);
                 Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.SMTP_MAILHUB_KEY_NAME);
+                Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_USERNAME);
+                Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_PASSWORD);
             }
             else
             {
                 Helpers.SetOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_DESTINATION_KEY_NAME, perfmonOptions.MailDestination);
                 Helpers.SetOtherConfig(Session, pool, PerfmonOptionsDefinition.SMTP_MAILHUB_KEY_NAME, perfmonOptions.MailHub);
+                if (perfmonOptions.MailUsername != "")
+                {
+                    Helpers.SetOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_USERNAME, perfmonOptions.MailUsername);
+                    Helpers.SetOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_PASSWORD, Base64Encode(perfmonOptions.MailPassword));
+                }
+                else
+                {
+                    Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_USERNAME);
+                    Helpers.RemoveFromOtherConfig(Session, pool, PerfmonOptionsDefinition.MAIL_PASSWORD);
+                }
             }
+        }
+
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
         }
     }
 }
