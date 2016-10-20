@@ -103,7 +103,9 @@ namespace XenAdmin.Actions
             pbdTemplate.device_config = _dconf;
             pbdTemplate.SR = new XenRef<SR>(Result);
             int delta = 90 / Connection.Cache.HostCount / 2;
-            foreach (Host host in Connection.Cache.Hosts)
+            List<Host> _listHost = new List<Host>(Connection.Cache.Hosts);
+            Util.masterFirst(_listHost);
+            foreach (Host host in _listHost)
             {
                 // Create the PBD
                 log.DebugFormat("Creating PBD for host {0}", host.Name);

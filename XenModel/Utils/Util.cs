@@ -33,7 +33,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
-
+using XenAPI;
 
 namespace XenAdmin
 {
@@ -500,6 +500,25 @@ namespace XenAdmin
             }
 
             return null;
+        }
+
+        public static void masterFirst(List<Host> l)
+        {
+            Host master = null;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i].IsMaster())
+                {
+                    master = l[i];
+                    l.RemoveAt(i);
+                    break;
+                }
+            }
+            if (master != null)
+            {
+                l.Add(master);
+                l.Reverse();
+            }
         }
 
     }
