@@ -309,7 +309,7 @@ namespace XenAPI
         {
             get
             {
-                string[] toolIsoNames = {"xswindrivers.iso", "xs-tools.iso", "guest-tools.iso"};
+                string[] toolIsoNames = {"xswindrivers.iso", "xs-tools.iso", "halsign-tools.iso", "HalsignTools.iso", "halsign-vtools.iso", "vgate-tools.iso" };
                 return is_tools_iso || toolIsoNames.Contains(name_label);
             }
         }

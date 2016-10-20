@@ -62,6 +62,8 @@ namespace XenAPI
         public const string SM_Config_Type_CD = "cd";
 
         private const string XenServer_Tools_Label = "XenServer Tools";
+        private const string vGateServer_Tools_Label = "vGateServer Tools";
+        private const string Halsign_Tools_Label = "Halsign Tools";
 
         public override string ToString()
         {
@@ -132,7 +134,7 @@ namespace XenAPI
         {
             get
             {
-                return name_label == SR.XenServer_Tools_Label || is_tools_sr;
+                return name_label == SR.XenServer_Tools_Label || name_label == SR.vGateServer_Tools_Label || name_label == SR.Halsign_Tools_Label || is_tools_sr;
             }
         }
 

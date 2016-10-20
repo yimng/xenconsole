@@ -115,7 +115,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Retrieve the user information stored as binary objects on [XenServer]..
+        ///   Looks up a localized string similar to Retrieve the user information stored as binary objects on vGate..
         /// </summary>
         public static string Description_host_system_status_blobs {
             get {
@@ -142,7 +142,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tests for connectivity between [XenServer] and the internet.
+        ///   Looks up a localized string similar to Tests for connectivity between vGate and the internet.
         /// </summary>
         public static string Description_host_system_status_conntest {
             get {
@@ -160,7 +160,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The configuration settings of [Citrix] Storagelink.
+        ///   Looks up a localized string similar to The configuration settings of Halsign Storagelink.
         /// </summary>
         public static string Description_host_system_status_CVSM {
             get {
@@ -322,7 +322,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuration files used by the Pluggable Authentication Modules (PAM) in [XenServer]..
+        ///   Looks up a localized string similar to Configuration files used by the Pluggable Authentication Modules (PAM) in vGate..
         /// </summary>
         public static string Description_host_system_status_pam {
             get {
@@ -421,7 +421,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon internal logs.
+        ///   Looks up a localized string similar to vGate daemon internal logs.
         /// </summary>
         public static string Description_host_system_status_xapi {
             get {
@@ -430,7 +430,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon crash dumps.
+        ///   Looks up a localized string similar to vGate daemon crash dumps.
         /// </summary>
         public static string Description_host_system_status_xapi_debug {
             get {
@@ -439,7 +439,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon process details.
+        ///   Looks up a localized string similar to vGate daemon process details.
         /// </summary>
         public static string Description_host_system_status_xapi_subprocess {
             get {
@@ -475,7 +475,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Details of the [XenServer] such as version and build information, primary hard disk location and pool configuration.
+        ///   Looks up a localized string similar to Details of the vGate such as version and build information, primary hard disk location and pool configuration.
         /// </summary>
         public static string Description_host_system_status_xenserver_config {
             get {
@@ -484,7 +484,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The database which stores the state of the [XenServer].
+        ///   Looks up a localized string similar to The database which stores the state of the vGate.
         /// </summary>
         public static string Description_host_system_status_xenserver_databases {
             get {
@@ -502,7 +502,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Log files generated during the installation of the [XenServer].
+        ///   Looks up a localized string similar to Log files generated during the installation of the vGate.
         /// </summary>
         public static string Description_host_system_status_xenserver_install {
             get {
@@ -511,7 +511,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Log files concerning the [XenServer]&apos;s activity.
+        ///   Looks up a localized string similar to Log files concerning the vGate&apos;s activity.
         /// </summary>
         public static string Description_host_system_status_xenserver_logs {
             get {
@@ -664,7 +664,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must have the XenServerPSSnapIn installed to use [XenServer] PowerShell Commands. This can be found in the SDK..
+        ///   Looks up a localized string similar to You must have the XenServerPSSnapIn installed to use vGate PowerShell Commands. This can be found in the SDK..
         /// </summary>
         public static string Exception_PowerShellSnapInNotPresent {
             get {
@@ -781,7 +781,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Basic Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Basic Edition.
         /// </summary>
         public static string Label_host_edition_basic {
             get {
@@ -880,7 +880,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Premium Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Premium Edition.
         /// </summary>
         public static string Label_host_edition_premium {
             get {
@@ -889,7 +889,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Standard Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Standard Edition.
         /// </summary>
         public static string Label_host_edition_standard {
             get {
@@ -1060,7 +1060,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_enterprise {
             get {
@@ -1069,7 +1069,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Dell Express Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Express Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_express {
             get {
@@ -1078,7 +1078,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Dell Server Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Server Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_server {
             get {
@@ -1087,7 +1087,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product], Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_enterprise {
             get {
@@ -1096,7 +1096,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Dell Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_express {
             get {
@@ -1105,7 +1105,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product], Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_server {
             get {
@@ -1114,7 +1114,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product], HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_enterprise {
             get {
@@ -1123,7 +1123,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] HP Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] HP Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_express {
             get {
@@ -1132,7 +1132,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product], HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_server {
             get {
@@ -1141,7 +1141,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product].
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product].
         /// </summary>
         public static string Label_host_sku_type_FG_xe_enterprise {
             get {
@@ -1150,7 +1150,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product].
+        ///   Looks up a localized string similar to Halsign [XenServer product].
         /// </summary>
         public static string Label_host_sku_type_FG_xe_express {
             get {
@@ -1159,7 +1159,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] Essentials for [XenServer product].
+        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product].
         /// </summary>
         public static string Label_host_sku_type_FG_xe_server {
             get {
@@ -1168,7 +1168,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_enterprise {
             get {
@@ -1177,7 +1177,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] HP Select Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] HP Select Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_express {
             get {
@@ -1186,7 +1186,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] HP Server Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] HP Server Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_server {
             get {
@@ -1195,7 +1195,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_enterprise {
             get {
@@ -1204,7 +1204,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Express Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Express Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_express {
             get {
@@ -1213,7 +1213,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Server Edition.
+        ///   Looks up a localized string similar to Halsign [XenServer product] Server Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_server {
             get {
@@ -1222,7 +1222,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] build number.
+        ///   Looks up a localized string similar to vGate build number.
         /// </summary>
         public static string Label_host_software_version_build_number {
             get {
@@ -1231,7 +1231,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] build date.
+        ///   Looks up a localized string similar to vGate build date.
         /// </summary>
         public static string Label_host_software_version_date {
             get {
@@ -1240,7 +1240,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] version.
+        ///   Looks up a localized string similar to vGate version.
         /// </summary>
         public static string Label_host_software_version_product_version {
             get {
@@ -1294,7 +1294,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] StorageLink configuration.
+        ///   Looks up a localized string similar to Halsign StorageLink configuration.
         /// </summary>
         public static string Label_host_system_status_CVSM {
             get {
@@ -1555,7 +1555,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon internal logs.
+        ///   Looks up a localized string similar to vGate daemon internal logs.
         /// </summary>
         public static string Label_host_system_status_xapi {
             get {
@@ -1564,7 +1564,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon crash dumps.
+        ///   Looks up a localized string similar to vGate daemon crash dumps.
         /// </summary>
         public static string Label_host_system_status_xapi_debug {
             get {
@@ -1573,7 +1573,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] daemon subprocesses.
+        ///   Looks up a localized string similar to vGate daemon subprocesses.
         /// </summary>
         public static string Label_host_system_status_xapi_subprocess {
             get {
@@ -1609,7 +1609,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] configuration.
+        ///   Looks up a localized string similar to vGate configuration.
         /// </summary>
         public static string Label_host_system_status_xenserver_config {
             get {
@@ -1618,7 +1618,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] database.
+        ///   Looks up a localized string similar to vGate database.
         /// </summary>
         public static string Label_host_system_status_xenserver_databases {
             get {
@@ -1627,7 +1627,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] domains list.
+        ///   Looks up a localized string similar to vGate domains list.
         /// </summary>
         public static string Label_host_system_status_xenserver_domains {
             get {
@@ -1636,7 +1636,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] installation log files.
+        ///   Looks up a localized string similar to vGate installation log files.
         /// </summary>
         public static string Label_host_system_status_xenserver_install {
             get {
@@ -1645,7 +1645,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] logs.
+        ///   Looks up a localized string similar to vGate logs.
         /// </summary>
         public static string Label_host_system_status_xenserver_logs {
             get {
@@ -1726,7 +1726,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer].
+        ///   Looks up a localized string similar to vGate.
         /// </summary>
         public static string Label_host_XenMemory {
             get {
@@ -2626,7 +2626,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Healthcheck Latency.
+        ///   Looks up a localized string similar to vGate Healthcheck Latency.
         /// </summary>
         public static string Label_performance_xapi_latency {
             get {
@@ -3598,7 +3598,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buy [XenServer] Online.
+        ///   Looks up a localized string similar to Buy vGate Online.
         /// </summary>
         public static string Message_action_license_does_not_support_pooling {
             get {
@@ -3607,7 +3607,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Buy [XenServer] Online.
+        ///   Looks up a localized string similar to Buy vGate Online.
         /// </summary>
         public static string Message_action_license_expires_soon {
             get {
@@ -3789,7 +3789,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] on server &apos;{0}&apos; is taking too long to respond and may fence..
+        ///   Looks up a localized string similar to vGate on server &apos;{0}&apos; is taking too long to respond and may fence..
         /// </summary>
         public static string Message_body_ha_xapi_healthcheck_approaching_timeout {
             get {
@@ -4176,7 +4176,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The [XenServer product] license you are using does not allow you to use the VMPR feature. VMPR is available in [Citrix] [XenServer product] Advanced Edition or higher..
+        ///   Looks up a localized string similar to The [XenServer product] license you are using does not allow you to use the VMPR feature. VMPR is available in Halsign [XenServer product] Advanced Edition or higher..
         /// </summary>
         public static string Message_body_vmpp_license_error {
             get {
@@ -4662,7 +4662,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] healthcheck approaching timeout.
+        ///   Looks up a localized string similar to vGate healthcheck approaching timeout.
         /// </summary>
         public static string Message_name_ha_xapi_healthcheck_approaching_timeout {
             get {
@@ -4707,7 +4707,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] statistics synchronization failed.
+        ///   Looks up a localized string similar to vGate statistics synchronization failed.
         /// </summary>
         public static string Message_name_host_sync_data_failed {
             get {
@@ -5238,11 +5238,11 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool Admins have full access to all [XenServer] features and settings. They can access the [XenServer] console and manage the roles of other users.
+        ///   Looks up a localized string similar to Pool Admins have full access to all vGate features and settings. They can access the vGate console and manage the roles of other users.
         /// 
         ///- No restrictions
         ///- Role and user management
-        ///- Access to [XenServer] console.
+        ///- Access to vGate console.
         /// </summary>
         public static string Role_pool_admin_Description {
             get {
@@ -5302,7 +5302,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VM Admins can manage VMs and Templates and can access the storage necessary to complete these tasks. This role relies on [XenServer] to choose where to run each VM, and on templates to provide values for dynamic memory control (DMC) and Home Server settings.
+        ///   Looks up a localized string similar to VM Admins can manage VMs and Templates and can access the storage necessary to complete these tasks. This role relies on vGate to choose where to run each VM, and on templates to provide values for dynamic memory control (DMC) and Home Server settings.
         /// 
         ///- Manage VMs and Templates
         ///- No access to dynamic memory control features
@@ -5460,7 +5460,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools ISOs.
+        ///   Looks up a localized string similar to Halsign Tools ISOs.
         /// </summary>
         public static string SR_name_description_xenserver_tools {
             get {
@@ -5541,7 +5541,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools.
+        ///   Looks up a localized string similar to Halsign Tools.
         /// </summary>
         public static string SR_name_label_xenserver_tools {
             get {
@@ -5568,7 +5568,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This template may be used to install the [XenServer] Software Development Kit (SDK) API VM. .
+        ///   Looks up a localized string similar to This template may be used to install the vGate Software Development Kit (SDK) API VM. .
         /// </summary>
         public static string VM_TemplateDescription_Xen_API_SDK {
             get {
