@@ -21378,7 +21378,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to New LUN has diff size with old one.
         /// </summary>
         public static string LUN_SIZE_DIFF {
             get {
@@ -21387,7 +21387,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Upgrade vGate to enable LUN BondTechnology. LUN Bond allows vGate to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware&apos;s native features..
         /// </summary>
         public static string LUNBOND_BLURB_ENHANCEDSR {
             get {
@@ -21432,7 +21432,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vendor: {0}
+        ///Serial Number: {1}
+        ///SCSI ID: {2}
+        ///Size: {3}
+        ///
+        ///Vendor: {4}
+        ///Serial Number: {5}
+        ///SCSI ID: {6}
+        ///Size: {7}.
         /// </summary>
         public static string LVMOBOND_WARNING_DIALOG_LUN_DETAILS {
             get {

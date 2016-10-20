@@ -7435,7 +7435,7 @@ Standard features only</value>
     <value>Log Destination</value>
   </data>
   <data name="LUNBOND_BLURB_ENHANCEDSR" xml:space="preserve">
-    <value />
+    <value>Upgrade vGate to enable LUN BondTechnology. LUN Bond allows vGate to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware's native features.</value>
   </data>
   <data name="LUNPERVDIPICKER_IMPORT_VDI_COLUMN_TITLE" xml:space="preserve">
     <value>VM - VDI (Virtual Disks)</value>
@@ -7450,10 +7450,18 @@ Standard features only</value>
     <value>Map virtual disks (VDIs) to individual LUNs on the target SR</value>
   </data>
   <data name="LUN_SIZE_DIFF" xml:space="preserve">
-    <value />
+    <value>New LUN has diff size with old one</value>
   </data>
   <data name="LVMOBOND_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
-    <value />
+    <value>Vendor: {0}
+Serial Number: {1}
+SCSI ID: {2}
+Size: {3}
+
+Vendor: {4}
+Serial Number: {5}
+SCSI ID: {6}
+Size: {7}</value>
   </data>
   <data name="LVMOHBA_WARNING_DIALOG_HEADER_FOUND_EXISTING_SR" xml:space="preserve">
     <value>An existing SR was found on the selected LUN</value>
