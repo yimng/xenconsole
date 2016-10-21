@@ -168,6 +168,14 @@
     <Compile Include="Controls\ConsolePanel.Designer.cs">
       <DependentUpon>ConsolePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DataGridViewExs\ColumnEx\DataGridViewButtonColumnEx.cs" />
+    <Compile Include="Controls\DataGridViewExs\ColumnEx\DataGridViewCheckBoxColumnEx.cs" />
+    <Compile Include="Controls\DataGridViewExs\CommonEx\RectangeCommon.cs" />
+    <Compile Include="Controls\DataGridViewExs\DataGridViewExs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGridViewExs\EventArgsEx\DataGridViewButtonClickEventArgs.cs" />
+    <Compile Include="Controls\DataGridViewExs\EventsEx\DataGridViewEventHandlersEx.cs" />
     <Compile Include="Controls\DataGridViewEx\DataGridViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -327,6 +335,10 @@
     <Compile Include="Dialogs\OptionsPages\SaveAndRestoreOptionsPage.Designer.cs">
       <DependentUpon>SaveAndRestoreOptionsPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\PciBindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PciBindDialog.Designer.cs" />
     <Compile Include="Dialogs\ReplicationViewDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -704,6 +716,10 @@
     <Compile Include="SettingsPanels\HostMultipathPage.Designer.cs">
       <DependentUpon>HostMultipathPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TabPages\UsbDevicePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\UsbDevicePage.Designer.cs" />
     <Compile Include="Wizards\BackupWizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1867,6 +1883,8 @@
     <EmbeddedResource Include="Dialogs\OptionsPages\SaveAndRestoreOptionsPage.zh-CN.resx">
       <DependentUpon>SaveAndRestoreOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PciBindDialog.resx" />
+    <EmbeddedResource Include="Dialogs\PciBindDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\ReconnectAsDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReconnectAsDialog.cs</DependentUpon>
@@ -2144,6 +2162,8 @@
     <EmbeddedResource Include="TabPages\PvsPage.zh-CN.resx">
       <DependentUpon>PvsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\UsbDevicePage.resx" />
+    <EmbeddedResource Include="TabPages\UsbDevicePage.zh-CN.resx" />
     <EmbeddedResource Include="TabPages\WlbPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>WlbPage.cs</DependentUpon>

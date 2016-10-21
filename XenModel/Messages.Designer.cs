@@ -6189,6 +6189,26 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The usb device was bound. 
+        ///This change will take effect when you start VM..
+        /// </summary>
+        public static string BOND_USB_DEVICE_VM_HALT {
+            get {
+                return ResourceManager.GetString("BOND_USB_DEVICE_VM_HALT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The usb device was bound.
+        ///This change will take effect when you restart VM..
+        /// </summary>
+        public static string BOND_USB_DEVICE_VM_RUNNING {
+            get {
+                return ResourceManager.GetString("BOND_USB_DEVICE_VM_RUNNING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to VM will not boot from devices below this line.
         /// </summary>
         public static string BOOT_DEVICE_DISABLED_ROW_TEXT {
@@ -36707,6 +36727,33 @@ namespace XenAdmin {
         public static string URI_REGEX {
             get {
                 return ResourceManager.GetString("URI_REGEX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bind.
+        /// </summary>
+        public static string USB_DEVICE_BIND_TEXT {
+            get {
+                return ResourceManager.GetString("USB_DEVICE_BIND_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unbind.
+        /// </summary>
+        public static string USB_DEVICE_UNBIND_TEXT {
+            get {
+                return ResourceManager.GetString("USB_DEVICE_UNBIND_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to USB Device.
+        /// </summary>
+        public static string USBDEVICE_TAB_TITLE {
+            get {
+                return ResourceManager.GetString("USBDEVICE_TAB_TITLE", resourceCulture);
             }
         }
         

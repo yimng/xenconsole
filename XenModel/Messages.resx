@@ -2261,6 +2261,14 @@ Deleting this bond will automatically transfer the management interface on the b
 
 Deleting this bond will disrupt traffic through the secondary interface on the bond while the interface is moved to the first slave of the bond.</value>
   </data>
+  <data name="BOND_USB_DEVICE_VM_HALT" xml:space="preserve">
+    <value>The usb device was bound. 
+This change will take effect when you start VM.</value>
+  </data>
+  <data name="BOND_USB_DEVICE_VM_RUNNING" xml:space="preserve">
+    <value>The usb device was bound.
+This change will take effect when you restart VM.</value>
+  </data>
   <data name="BOOTORDER" xml:space="preserve">
     <value>Boot order: {0}</value>
   </data>
@@ -12709,6 +12717,15 @@ To learn more about the [XenServer] Dynamic Workload Balancing feature or to sta
   </data>
   <data name="URI_REGEX" xml:space="preserve">
     <value>^(http|https|file|ftp)://*</value>
+  </data>
+  <data name="USBDEVICE_TAB_TITLE" xml:space="preserve">
+    <value>USB Device</value>
+  </data>
+  <data name="USB_DEVICE_BIND_TEXT" xml:space="preserve">
+    <value>Bind</value>
+  </data>
+  <data name="USB_DEVICE_UNBIND_TEXT" xml:space="preserve">
+    <value>Unbind</value>
   </data>
   <data name="USER_AUTHORIZATION_FAILED" xml:space="preserve">
     <value>[XenCenter] was unable to authorize the action as {0}. See the application log files for more information.</value>
