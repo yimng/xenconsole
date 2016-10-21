@@ -14181,4 +14181,12 @@ SCSI ID: {6}
   <data name="RESET_VM_VDI" xml:space="preserve">
     <value>重置虚拟机磁盘</value>
   </data>
+  <data name="BACKUP_RESTORE" xml:space="preserve">
+    <value>备份恢复</value>
+  </data>
+  <data name="UPSELL_BLURB_BR" xml:space="preserve">
+    <value>升级 vGate 以启用备份恢复。备份恢复功能允许您对虚拟机制定备份计划，对虚拟机的元数据和磁盘数据进行备份，当虚拟机故障时，可以选择某一时间点的备份文件进行快速恢复，有效降低了由于系统故障而导致数据丢失的风险。
+
+要了解有关 vGate 备份恢复功能的更多信息，或者要启动 vGate 免费版，请单击下面的按钮。</value>
+  </data>
 </root>

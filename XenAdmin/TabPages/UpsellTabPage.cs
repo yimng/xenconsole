@@ -83,4 +83,11 @@ namespace XenAdmin.TabPages
             Messages.UPSELL_BLURB_WLB + Messages.UPSELL_BLURB_WLB_MORE, InvisibleMessages.UPSELL_LEARNMOREURL_WLB)
         { }
     }
+
+    public class BRUpsellPage : UpsellTabPage
+    {
+        public BRUpsellPage()
+            : base(Messages.BACKUP_RESTORE, Messages.UPSELL_BLURB_BR, InvisibleMessages.UPSELL_LEARNMOREURL_WLB)
+        { }
+    }
 }

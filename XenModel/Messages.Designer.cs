@@ -5842,6 +5842,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backup&amp;Restore.
+        /// </summary>
+        public static string BACKUP_RESTORE {
+            get {
+                return ResourceManager.GetString("BACKUP_RESTORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select the server to restore from the list below. If the server you want is not listed here, you can add it by clicking Add New Server..
         /// </summary>
         public static string BACKUP_SELECT_HOST {
@@ -36420,6 +36429,17 @@ namespace XenAdmin {
         public static string UPSELL_BLURB_ALERTS_MORE {
             get {
                 return ResourceManager.GetString("UPSELL_BLURB_ALERTS_MORE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrade vGate to enable Backup&amp;Restore. 
+        ///
+        ///To learn more about the vGate Backup&amp;Restore feature or to start a vGate trial, click the button below..
+        /// </summary>
+        public static string UPSELL_BLURB_BR {
+            get {
+                return ResourceManager.GetString("UPSELL_BLURB_BR", resourceCulture);
             }
         }
         

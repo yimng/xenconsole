@@ -2124,6 +2124,9 @@ Archive destination: {0}</value>
   <data name="BACKUP_RECUR_TEXT_WEEKS" xml:space="preserve">
     <value>Weeks</value>
   </data>
+  <data name="BACKUP_RESTORE" xml:space="preserve">
+    <value>Backup&amp;Restore</value>
+  </data>
   <data name="BACKUP_SELECT_HOST" xml:space="preserve">
     <value>Select the server to restore from the list below. If the server you want is not listed here, you can add it by clicking Add New Server.</value>
   </data>
@@ -12596,6 +12599,11 @@ To learn more about the [XenServer] Active Directory feature or to start a [XenS
     <value>
 
 To learn more about the [XenServer] Alerting and Reporting feature or to start a [XenServer] trial, click the button below.</value>
+  </data>
+  <data name="UPSELL_BLURB_BR" xml:space="preserve">
+    <value>Upgrade vGate to enable Backup&amp;Restore. 
+
+To learn more about the vGate Backup&amp;Restore feature or to start a vGate trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_CPM" xml:space="preserve">
     <value>Upgrade your [XenServer] license to enable VM live migration. This feature enables you to migrate running VMs on shared or local storage between servers in the same pool or across pools with no VM downtime. </value>
