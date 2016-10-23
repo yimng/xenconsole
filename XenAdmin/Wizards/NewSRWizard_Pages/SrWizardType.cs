@@ -280,6 +280,22 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         }
     }
 
+    public class SrWizardType_rawHba : SrWizardType
+    {
+        public override bool IsEnhancedSR { get { return false; } }
+        public override string FrontendBlurb { get { return Messages.NEWSR_RAWHBA_BLURB; } }
+        public override SR.SRTypes Type { get { return SR.SRTypes.rawhba; } }
+        public override string ContentType { get { return "user"; } }
+        public override bool ShowIntroducePrompt { get { return false; } }
+        public override bool ShowReattachWarning { get { return true; } }
+        public override bool AllowToCreateNewSr { get; set; }
+
+        public override void ResetSrName(IXenConnection connection)
+        {
+            SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_RAWHBA_DEFAULT_NAME, connection);
+        }
+    }
+
     public class SrWizardType_VhdoNfs : SrWizardType
     {
         public override IEnumerable<string> Errors

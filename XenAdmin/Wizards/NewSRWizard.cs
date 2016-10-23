@@ -334,6 +334,10 @@ namespace XenAdmin.Wizards
                     AddPage(xenTabPageLvmoHba);
                     AddPage(xenTabPageLvmoHbaSummary);
                 }
+                else if (m_srWizardType is SrWizardType_rawHba)
+                {
+                    xenTabPageSrName.setSrWizardNamePage();
+                }
                 else if (m_srWizardType is SrWizardType_lvmobond)
                 {
                     AddPage(xenTabPageLvmoBond);
@@ -565,6 +569,25 @@ namespace XenAdmin.Wizards
             {
                 FinishCanceled();
                 return;
+            }
+
+            if (m_srWizardType is SrWizardType_rawHba)
+            {
+                //m_srWizardType.ContentType = "";
+                SR[] SRs = xenConnection.Cache.SRs;
+                foreach (SR sr in SRs)
+                {
+                    if (sr.type == (SR.SRTypes.rawhba + ""))
+                    {
+                        MessageBox.Show(this,
+                        String.Format(Messages.RAWHBA_IS_EXISTS, sr.Name),
+                        Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        FinishCanceled();
+                        return;
+                    }
+                }
+                m_srWizardType.Description = Messages.NEWSR_RAWHBA_BLURB;
             }
 
             List<AsyncAction> actionList = GetActions(master, m_srWizardType.DisasterRecoveryTask);

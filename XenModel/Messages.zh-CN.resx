@@ -14207,4 +14207,18 @@ SCSI ID: {6}
   <data name="FOLDER_BROWSER_BUG_TOOL" xml:space="preserve">
     <value>选择报告保存的位置</value>
   </data>
+  <data name="MENU_INSTALL_LICENSE_KEY" xml:space="preserve">
+    <value>安装许可证密钥(&amp;I)...</value>
+  </data>
+  <data name="NEWSR_RAWHBA_BLURB" xml:space="preserve">
+    <value>每个资源池仅可以创建一个裸LUN映射存储,创建完成后没有被使用的LUN会在扫描存储后自动映射成一个虚拟磁盘(VDI)。
+
+如果你想把已映射的LUN创建为硬件HBA存储,需要先从裸LUN映射存储中将该LUN删除。</value>
+  </data>
+  <data name="NEWSR_RAWHBA_DEFAULT_NAME" xml:space="preserve">
+    <value>裸LUN映射存储</value>
+  </data>
+  <data name="RAWHBA_IS_EXISTS" xml:space="preserve">
+    <value>已存在一个名称为 “{0}”的裸LUN映射存储。每个资源池仅可以创建一个裸LUN映射存储。</value>
+  </data>
 </root>

@@ -64,13 +64,14 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
             radioButtonCslg.Tag = new SrWizardType_Cslg();
             radioButtonCifs.Tag = new SrWizardType_Cifs();
             radioButtonFcoe.Tag = new SrWizardType_Fcoe();
+            rawhbaButton.Tag = new SrWizardType_rawHba();
             radioButtonlunbond.Tag = new SrWizardType_lvmobond();
 
             _radioButtons = new[]
             {
                 radioButtonNfs, radioButtonIscsi, radioButtonFibreChannel,
                 radioButtonCslg, radioButtonCifs, radioButtonFcoe,
-                radioButtonNfsIso, radioButtonCifsIso, radioButtonlunbond
+                radioButtonNfsIso, radioButtonCifsIso, rawhbaButton, radioButtonlunbond
             };
         }
 

@@ -7910,6 +7910,9 @@ This will permanently delete and reinitialize all local storage on the servers. 
   <data name="MENU_EXPORT" xml:space="preserve">
     <value>&amp;Export...</value>
   </data>
+  <data name="MENU_INSTALL_LICENSE_KEY" xml:space="preserve">
+    <value>&amp;Install License Key...</value>
+  </data>
   <data name="MENU_MIGRATE_TO_HOME_SERVER" xml:space="preserve">
     <value>Migrate to Home Server</value>
   </data>
@@ -8758,6 +8761,14 @@ VM cloning uses the snapshot and clone capabilities of the filer to provide high
   </data>
   <data name="NEWSR_PATH_NFS" xml:space="preserve">
     <value>Enter a path for your NFS storage</value>
+  </data>
+  <data name="NEWSR_RAWHBA_BLURB" xml:space="preserve">
+    <value>Each pool can only have one RAW LUN Mapping SR, after creating it each unused FC LUN will be mapping to a VDI automatically after scan the SR.
+
+If you want to create a HBA SR for the mapped LUN, delete it from this SR firstly.</value>
+  </data>
+  <data name="NEWSR_RAWHBA_DEFAULT_NAME" xml:space="preserve">
+    <value>RAW LUN Mapping SR</value>
   </data>
   <data name="NEWSR_SELECT_LUN" xml:space="preserve">
     <value>Select the LUN to reattach or create a new SR on</value>
@@ -10351,6 +10362,9 @@ Do you wish to continue?</value>
   </data>
   <data name="RAID_TYPES" xml:space="preserve">
     <value>RAID Types</value>
+  </data>
+  <data name="RAWHBA_IS_EXISTS" xml:space="preserve">
+    <value>The SR '{0}' is exists.  Each pool can only have one RAW LUN Mapping SR.</value>
   </data>
   <data name="RBAC_CONSOLE_WARNING_MANY" xml:space="preserve">
     <value>Your current role is '{0}'.
@@ -14226,5 +14240,8 @@ You will need to navigate to the Console on each of the selected VMs to complete
   </data>
   <data name="NEWSR_LVMOBOND_TYPE_NAME" xml:space="preserve">
     <value>Lun Bond</value>
+  </data>
+  <data name="NEWSR_RAWHBA_TYPE_NAME" xml:space="preserve">
+    <value>Raw HBA</value>
   </data>
 </root>

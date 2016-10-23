@@ -22772,6 +22772,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Install License Key....
+        /// </summary>
+        public static string MENU_INSTALL_LICENSE_KEY {
+            get {
+                return ResourceManager.GetString("MENU_INSTALL_LICENSE_KEY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Migrate to Home Server.
         /// </summary>
         public static string MENU_MIGRATE_TO_HOME_SERVER {
@@ -25644,6 +25653,35 @@ namespace XenAdmin {
         public static string NEWSR_PATH_NFS {
             get {
                 return ResourceManager.GetString("NEWSR_PATH_NFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each pool can only have one RAW LUN Mapping SR, after creating it each unused FC LUN will be mapping to a VDI automatically after scan the SR.
+        ///
+        ///If you want to create a HBA SR for the mapped LUN, delete it from this SR firstly..
+        /// </summary>
+        public static string NEWSR_RAWHBA_BLURB {
+            get {
+                return ResourceManager.GetString("NEWSR_RAWHBA_BLURB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RAW LUN Mapping SR.
+        /// </summary>
+        public static string NEWSR_RAWHBA_DEFAULT_NAME {
+            get {
+                return ResourceManager.GetString("NEWSR_RAWHBA_DEFAULT_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raw HBA.
+        /// </summary>
+        public static string NEWSR_RAWHBA_TYPE_NAME {
+            get {
+                return ResourceManager.GetString("NEWSR_RAWHBA_TYPE_NAME", resourceCulture);
             }
         }
         
@@ -29798,6 +29836,15 @@ namespace XenAdmin {
         public static string RAID_TYPES {
             get {
                 return ResourceManager.GetString("RAID_TYPES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The SR &apos;{0}&apos; is exists.  Each pool can only have one RAW LUN Mapping SR..
+        /// </summary>
+        public static string RAWHBA_IS_EXISTS {
+            get {
+                return ResourceManager.GetString("RAWHBA_IS_EXISTS", resourceCulture);
             }
         }
         

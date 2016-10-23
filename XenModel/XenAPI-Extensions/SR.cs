@@ -266,7 +266,8 @@ namespace XenAPI
                     || type == SRTypes.lvmobond
                     || type == SRTypes.cslg
                     || type == SRTypes.smb
-                    || type == SRTypes.lvmofcoe;
+                    || type == SRTypes.lvmofcoe
+                    || type == SRTypes.rawhba;
             }
         }
 

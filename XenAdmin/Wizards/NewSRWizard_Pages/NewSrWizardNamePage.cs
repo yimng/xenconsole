@@ -43,6 +43,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         {
             InitializeComponent();
         }
+        public void setSrWizardNamePage()
+        {
+            checkBoxAutoDescription.Visible = false;
+            labelDescription.Visible = false;
+            textBoxDescription.Visible = false;
+        }
 
         #region XenTabPage overrides
 

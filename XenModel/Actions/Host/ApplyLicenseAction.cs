@@ -82,7 +82,7 @@ namespace XenAdmin.Actions
 
                 this.Description = string.Format(Messages.APPLYLICENSE_APPLYING, Filepath);
                 log.DebugFormat("Applying license to server {0}", this.Host.Name);
-                RelatedTask = XenAPI.Host.async_license_apply(this.Session, this.Host.opaque_ref, encodedContent);
+                RelatedTask = XenAPI.Host.async_license_add(this.Session, this.Host.opaque_ref, encodedContent);
                 PollToCompletion();
                 this.Description = Messages.APPLYLICENSE_APPLIED;
 
