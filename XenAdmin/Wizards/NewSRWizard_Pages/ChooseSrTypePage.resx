@@ -159,6 +159,9 @@
   <data name="&gt;&gt;radioButtonlunbond.Name" xml:space="preserve">
     <value>radioButtonlunbond</value>
   </data>
+  <data name="rawhbaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 181</value>
+  </data>
   <data name="radioButtonlunbond.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -172,7 +175,7 @@
     <value>XenAdmin.Controls.Common.AutoHeightLabel, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;labelISOlibrary.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -199,7 +202,7 @@
     <value>ISO library</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 302</value>
+    <value>210, 330</value>
   </data>
   <data name="radioButtonNfsIso.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -232,10 +235,13 @@
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="SRBlurb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 167</value>
+    <value>3, 154</value>
   </data>
   <data name="radioButtonCifsIso.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="rawhbaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="labelVirtualDiskStorage.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
@@ -243,11 +249,14 @@
   <data name="radioButtonNfsIso.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
+  <data name="&gt;&gt;rawhbaButton.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
   <data name="radioButtonFcoe.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 131</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="radioButtonFcoe" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifs" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCslg" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelVirtualDiskStorage" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfs" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonFibreChannel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonIscsi" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfsIso" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelISOlibrary" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifsIso" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonlunbond" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="radioButtonFcoe" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifs" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCslg" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelVirtualDiskStorage" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfs" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonFibreChannel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonIscsi" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonlunbond" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifsIso" Row="11" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfsIso" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelISOlibrary" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rawhbaButton" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="deprecationBanner.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 5</value>
@@ -280,7 +289,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;radioButtonNfsIso.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="radioButtonlunbond.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 3, 3, 3</value>
@@ -361,7 +370,7 @@
     <value>1</value>
   </data>
   <data name="SRBlurb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 163</value>
+    <value>312, 176</value>
   </data>
   <data name="radioButtonNfs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -373,7 +382,7 @@
     <value>Fill</value>
   </data>
   <data name="radioButtonlunbond.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 181</value>
+    <value>6, 211</value>
   </data>
   <data name="&gt;&gt;deprecationBanner.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -458,6 +467,9 @@
   <data name="&gt;&gt;radioButtonCifs.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="rawhbaButton.Text" xml:space="preserve">
+    <value>RAW &amp;Disks</value>
+  </data>
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -522,7 +534,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;radioButtonlunbond.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;radioButtonIscsi.Name" xml:space="preserve">
     <value>radioButtonIscsi</value>
@@ -535,6 +547,9 @@
   </data>
   <data name="radioButtonCifs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;rawhbaButton.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="labelISOlibrary.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -590,14 +605,17 @@
   <data name="&gt;&gt;radioButtonCifs.Parent" xml:space="preserve">
     <value>tableLayoutPanel3</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ChooseSrTypePage</value>
+  <data name="rawhbaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
   </data>
   <data name="selectedStoreTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 13</value>
+    <value>122, 1</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="radioButtonNfsIso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 247</value>
+    <value>6, 277</value>
   </data>
   <data name="&gt;&gt;radioButtonNfs.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -638,6 +656,9 @@
   <data name="radioButtonFcoe.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
+  <data name="rawhbaButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
   <data name="radioButtonNfs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -650,8 +671,8 @@
   <data name="radioButtonlunbond.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;rawhbaButton.Name" xml:space="preserve">
+    <value>rawhbaButton</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -667,6 +688,9 @@
   </data>
   <data name="&gt;&gt;labelISOlibrary.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rawhbaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -684,10 +708,10 @@
     <value>True</value>
   </data>
   <data name="radioButtonCifsIso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 272</value>
+    <value>6, 302</value>
   </data>
   <data name="&gt;&gt;radioButtonCifsIso.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="radioButtonIscsi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -726,7 +750,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelISOlibrary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 219</value>
+    <value>3, 249</value>
   </data>
   <data name="radioButtonlunbond.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -758,8 +782,14 @@
   <data name="radioButtonCslg.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
+  <data name="rawhbaButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 3, 3, 3</value>
+  </data>
   <data name="&gt;&gt;radioButtonFcoe.Name" xml:space="preserve">
     <value>radioButtonFcoe</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ChooseSrTypePage</value>
   </data>
   <data name="radioButtonNfs.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 19</value>

@@ -47,6 +47,7 @@
             this.radioButtonFcoe = new System.Windows.Forms.RadioButton();
             this.radioButtonCifs = new System.Windows.Forms.RadioButton();
             this.radioButtonlunbond = new System.Windows.Forms.RadioButton();
+            this.rawhbaButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -168,10 +169,11 @@
             this.tableLayoutPanel3.Controls.Add(this.radioButtonNfs, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonFibreChannel, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonIscsi, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonNfsIso, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.labelISOlibrary, 0, 8);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonCifsIso, 0, 10);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonlunbond, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonlunbond, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonCifsIso, 0, 11);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonNfsIso, 0, 10);
+            this.tableLayoutPanel3.Controls.Add(this.labelISOlibrary, 0, 9);
+            this.tableLayoutPanel3.Controls.Add(this.rawhbaButton, 0, 7);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // radioButtonFcoe
@@ -199,6 +201,14 @@
             this.radioButtonlunbond.ForeColor = System.Drawing.SystemColors.WindowText;
             this.radioButtonlunbond.Name = "radioButtonlunbond";
             this.radioButtonlunbond.UseVisualStyleBackColor = false;
+            // 
+            // rawhbaButton
+            // 
+            resources.ApplyResources(this.rawhbaButton, "rawhbaButton");
+            this.rawhbaButton.BackColor = System.Drawing.Color.Transparent;
+            this.rawhbaButton.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rawhbaButton.Name = "rawhbaButton";
+            this.rawhbaButton.UseVisualStyleBackColor = false;
             // 
             // ChooseSrTypePage
             // 
@@ -235,5 +245,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.RadioButton radioButtonFcoe;
         private System.Windows.Forms.RadioButton radioButtonlunbond;
+        private System.Windows.Forms.RadioButton rawhbaButton;
     }
 }
