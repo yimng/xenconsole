@@ -7027,6 +7027,13 @@
     </EmbeddedResource>
     <None Include="Images\VMTemplate_h32bit_32.png" />
     <None Include="Resources\addhost_48.png" />
+    <None Include="Resources\neokylin_blue.png" />
+    <None Include="Resources\neokylin_red.png" />
+    <None Include="Resources\neokylin_blue1.png" />
+    <None Include="Resources\neokylin_red1.png" />
+    <Content Include="putty.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestResources\credits.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
