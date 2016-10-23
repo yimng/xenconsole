@@ -252,12 +252,14 @@
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
@@ -265,7 +267,7 @@
     <value>0, 0, 0, 12</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>563, 25</value>
+    <value>563, 36</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -283,7 +285,7 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="labelName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -295,13 +297,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
+    <value>3, 43</value>
   </data>
   <data name="labelName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 5</value>
   </data>
   <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
+    <value>65, 12</value>
   </data>
   <data name="labelName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -319,19 +321,19 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="m_textBoxName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="m_textBoxName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 28</value>
+    <value>98, 39</value>
   </data>
   <data name="m_textBoxName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 5</value>
   </data>
   <data name="m_textBoxName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 20</value>
+    <value>387, 21</value>
   </data>
   <data name="m_textBoxName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -346,7 +348,7 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;m_textBoxName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="labelFileLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -358,13 +360,13 @@
     <value>NoControl</value>
   </data>
   <data name="labelFileLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 62</value>
+    <value>3, 75</value>
   </data>
   <data name="labelFileLocation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="labelFileLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+    <value>89, 12</value>
   </data>
   <data name="labelFileLocation.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -385,19 +387,19 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;labelFileLocation.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="m_textBoxLocation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="m_textBoxLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 58</value>
+    <value>98, 70</value>
   </data>
   <data name="m_textBoxLocation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
   </data>
   <data name="m_textBoxLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 20</value>
+    <value>387, 21</value>
   </data>
   <data name="m_textBoxLocation.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -412,13 +414,13 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;m_textBoxLocation.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="BrowseButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BrowseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 57</value>
+    <value>491, 69</value>
   </data>
   <data name="BrowseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 5</value>
@@ -442,7 +444,7 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;BrowseButton.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>5</value>
   </data>
   <data name="m_ctrlError.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -472,7 +474,7 @@
     <value>m_ctrlError</value>
   </data>
   <data name="&gt;&gt;m_ctrlError.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.Common.PasswordFailure, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.Common.PasswordFailure, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;m_ctrlError.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -688,6 +690,6 @@
     <value>BugToolPageDestination</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.XenTabPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

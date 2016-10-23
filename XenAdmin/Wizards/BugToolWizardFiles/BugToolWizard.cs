@@ -136,17 +136,7 @@ namespace XenAdmin.Wizards
                 // Close. We can't recover from a partially-completed ZipStatusReportAction.
                 base.FinishWizard();
                 return;
-            }
-
-            // upload the report files
-            if (bugToolPageDestination1.Upload)
-            {
-                var uploadAction = new Actions.UploadServerStatusReportAction(bugToolPageDestination1.OutputFile,
-                                                                       bugToolPageDestination1.UploadToken, bugToolPageDestination1.CaseNumber, 
-                                                                       Registry.HealthCheckUploadDomainName, false);
-                using (var dialog = new ActionProgressDialog(uploadAction, ProgressBarStyle.Marquee) {ShowCancel = true})
-                    dialog.ShowDialog();
-            }
+            }            
 
             // Save away the output path for next time
             XenAdmin.Properties.Settings.Default.ServerStatusPath = bugToolPageDestination1.OutputFile;

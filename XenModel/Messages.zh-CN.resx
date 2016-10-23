@@ -14204,4 +14204,7 @@ SCSI ID: {6}
   <data name="USB_DEVICE_UNBIND_TEXT" xml:space="preserve">
     <value>断开</value>
   </data>
+  <data name="FOLDER_BROWSER_BUG_TOOL" xml:space="preserve">
+    <value>选择报告保存的位置</value>
+  </data>
 </root>

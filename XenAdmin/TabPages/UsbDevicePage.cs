@@ -167,9 +167,12 @@ namespace XenAdmin.TabPages
 
                     try
                     {
-                        VM findvm = home.Connection.Cache.VMs.First(vm => vm.uuid != null && vm.is_a_real_vm && HalsignHelpers.IsVMShow(vm) &&
-                            vm.Home().Equals(home) && vm.other_config.ContainsKey("pci") &&
-                            vm.other_config["pci"].Contains(string.Concat("0000:", pcis.pcis[i].id)));
+                        VM findvm = home.Connection.Cache.VMs.First(vm => vm.uuid != null 
+                            && vm.is_a_real_vm 
+                            && HalsignHelpers.IsVMShow(vm) 
+                            //&& vm.Home().Equals(home) 
+                            && vm.other_config.ContainsKey("pci") 
+                            && vm.other_config["pci"].Contains(string.Concat("0000:", pcis.pcis[i].id)));
                         PcisdataGridViewExs.Rows[i].Cells[2].Value = findvm.name_label;
                         PcisdataGridViewExs.Rows[i].Cells[2].Tag = findvm.uuid;
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[3])).Bind = false;

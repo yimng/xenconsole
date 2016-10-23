@@ -121,7 +121,8 @@ namespace XenAdmin.Commands
         protected override bool CanExecute(VM vm)
         {
             ReadOnlyCollection<SelectedItem> selection = GetSelection();
-
+            if (vm.other_config.ContainsKey("halsign_br_ready") && "false".Equals(vm.other_config["halsign_br_ready"]))
+                return false;
             if (!vm.is_a_template && !vm.Locked && vm.allowed_operations.Contains(vm_operations.start) && EnabledTargetExists(vm, selection[0].Connection) && vm.power_state == vm_power_state.Halted)
             {
                 return true;

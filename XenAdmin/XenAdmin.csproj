@@ -2203,6 +2203,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>MemorySettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BugToolWizardFiles\BugToolPageDestination.ja.resx">
+      <DependentUpon>BugToolPageDestination.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\CrossPoolMigrateWizard\CrossPoolMigrateCopyModePage.ja.resx">
       <DependentUpon>CrossPoolMigrateCopyModePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -6259,9 +6262,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\BallooningWizard_Pages\MemorySettings.zh-CN.resx">
       <DependentUpon>MemorySettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\BugToolWizardFiles\BugToolPageDestination.ja.resx">
-      <DependentUpon>BugToolPageDestination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\BugToolWizardFiles\BugToolPageDestination.zh-CN.resx">
       <DependentUpon>BugToolPageDestination.cs</DependentUpon>

@@ -37,7 +37,6 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             this.columnImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.SelectButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.DescriptionLabel = new System.Windows.Forms.Label();
             this.DescriptionValue = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             this.TotalTimeValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -80,7 +80,6 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewItems, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SelectButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ClearButton, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel1, 0, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // dataGridViewItems
@@ -96,9 +95,9 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             resources.ApplyResources(this.dataGridViewItems, "dataGridViewItems");
             this.dataGridViewItems.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridViewItems.Name = "dataGridViewItems";
-            this.dataGridViewItems.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridViewItems_SortCompare);
             this.dataGridViewItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewItems_CellClick);
             this.dataGridViewItems.SelectionChanged += new System.EventHandler(this.dataGridViewItems_SelectionChanged);
+            this.dataGridViewItems.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.dataGridViewItems_SortCompare);
             // 
             // columnCheck
             // 
@@ -132,14 +131,6 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoEllipsis = true;
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // tableLayoutPanel4
             // 
@@ -229,9 +220,9 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             resources.ApplyResources(this, "$this");
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -253,7 +244,6 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
         private System.Windows.Forms.Label TimeValue;
         private System.Windows.Forms.Label TotalSizeLabel;
         private System.Windows.Forms.Label TotalSizeValue;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label TotalTimeLabel;
         private System.Windows.Forms.Label TotalTimeValue;
         private System.Windows.Forms.Button ClearButton;

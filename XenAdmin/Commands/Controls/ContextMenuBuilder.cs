@@ -865,6 +865,12 @@ namespace XenAdmin.Commands
             public override void Build(IMainWindow mainWindow, SelectedItemCollection selection, ContextMenuItemCollection items)
             {
                 VM vm = (VM)selection[0].XenObject;
+                if (vm.other_config.ContainsKey("halsign_br_ready") &&
+                    "false".Equals(vm.other_config["halsign_br_ready"]))
+                {
+                    items.AddIfEnabled(new PropertiesCommand(mainWindow, selection));
+                    return;
+                }
 
                 items.AddIfEnabled(new ShutDownVMCommand(mainWindow, selection));
                 items.AddIfEnabled(new StartVMCommand(mainWindow, selection), vm.power_state == vm_power_state.Halted);
