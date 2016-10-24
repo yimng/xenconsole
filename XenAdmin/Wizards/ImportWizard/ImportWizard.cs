@@ -176,8 +176,8 @@ namespace XenAdmin.Wizards.ImportWizard
 
 				var oldTypeOfImport = m_typeOfImport;//store previous type
 				m_typeOfImport = m_pageImportSource.TypeOfImport;
-				var appliancePages = new XenTabPage[] {m_pageEula, m_pageHost, m_pageStorage, m_pageNetwork, m_pageSecurity, m_pageOptions, m_pageTvmIp};
-                var imagePages = new XenTabPage[] { m_pageVMconfig, m_pageHost, m_pageStorage, m_pageNetwork, m_pageOptions, m_pageTvmIp };
+				var appliancePages = new XenTabPage[] {m_pageEula, m_pageHost, m_pageStorage, m_pageNetwork, m_pageSecurity, m_pageTvmIp};
+                var imagePages = new XenTabPage[] { m_pageVMconfig, m_pageHost, m_pageStorage, m_pageNetwork, m_pageTvmIp };
                 var xvaPages = new XenTabPage[] { m_pageXvaHost, m_pageXvaStorage, m_pageXvaNetwork };
 
 				switch (m_typeOfImport)

@@ -57,7 +57,7 @@ namespace XenAdmin.Wizards.ImportWizard
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 		private readonly string[] m_supportedImageTypes = new[] { ".vhd", ".vmdk" };//CA-61385: remove ".vdi", ".wim" support for Boston
 		private readonly string[] m_supportedApplianceTypes = new[] { ".ovf", ".ova", ".ova.gz" };
-		private readonly string[] m_supportedXvaTypes = new[] {".xva", "ova.xml"};
+		private readonly string[] m_supportedXvaTypes = new[] {".xva", ".va", ".tva", "ova.xml" };
 
 		/// <summary>
 		/// Stores the last valid selected appliance
@@ -623,7 +623,7 @@ namespace XenAdmin.Wizards.ImportWizard
 			                        		CheckFileExists = true,
 			                        		CheckPathExists = true,
 			                        		DereferenceLinks = true,
-											Filter = OvfModeOnly ? Messages.IMPORT_SOURCE_PAGE_FILETYPES_OVF_ONLY : Messages.IMPORT_SOURCE_PAGE_FILETYPES,
+											Filter = OvfModeOnly ? Messages.IMPORT_SOURCE_PAGE_FILETYPES_OVF_ONLY : Messages.IMPORT_SOURCE_PAGE_HALSIGNFILETYPES,
 			                        		RestoreDirectory = true,
 			                        		Multiselect = false,
 			                        	})

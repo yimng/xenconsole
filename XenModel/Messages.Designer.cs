@@ -15565,6 +15565,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VA File (*.va).
+        /// </summary>
+        public static string EXPORT_APPLIANCE_PAGE_FORMAT_VA {
+            get {
+                return ResourceManager.GetString("EXPORT_APPLIANCE_PAGE_FORMAT_VA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to XVA File (*.xva).
         /// </summary>
         public static string EXPORT_APPLIANCE_PAGE_FORMAT_XVA {
@@ -19432,6 +19441,15 @@ namespace XenAdmin {
         public static string IMPORT_SOURCE_PAGE_FILETYPES_OVF_ONLY {
             get {
                 return ResourceManager.GetString("IMPORT_SOURCE_PAGE_FILETYPES_OVF_ONLY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All import options (*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml)|*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml|OVF/OVA Package files (*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz|Virtual Hard Disk images (*.vhd;*.vmdk;)|*.vhd;*.vmdk;|XVA files (*.xva)|*.xva|vGate Virtual Appliance (*.va;*.tva)|*.va;*.tva|XVA Version 1|ova.xml.
+        /// </summary>
+        public static string IMPORT_SOURCE_PAGE_HALSIGNFILETYPES {
+            get {
+                return ResourceManager.GetString("IMPORT_SOURCE_PAGE_HALSIGNFILETYPES", resourceCulture);
             }
         }
         

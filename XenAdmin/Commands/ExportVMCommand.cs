@@ -105,7 +105,7 @@ namespace XenAdmin.Commands
                 while (true)
                 {
                     ExportVMDialog dlg = new ExportVMDialog();
-                    dlg.DefaultExt = "xva";
+                    dlg.DefaultExt = "va";
                     dlg.Filter = Messages.MAINWINDOW_XVA_BLURB;
                     dlg.Title = Messages.MAINWINDOW_XVA_TITLE;
 

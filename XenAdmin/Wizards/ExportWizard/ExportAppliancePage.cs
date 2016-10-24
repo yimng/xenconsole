@@ -130,14 +130,14 @@ namespace XenAdmin.Wizards.ExportWizard
 		{
 			m_comboBoxFormat.Items.Clear();
 			var ovfItem = new ToStringWrapper<bool>(false, Messages.EXPORT_APPLIANCE_PAGE_FORMAT_OVFOVA);
-			var xvaItem = new ToStringWrapper<bool>(true, Messages.EXPORT_APPLIANCE_PAGE_FORMAT_XVA);
+			var xvaItem = new ToStringWrapper<bool>(true, Messages.EXPORT_APPLIANCE_PAGE_FORMAT_VA);
 
 			if (OvfModeOnly)
 				m_comboBoxFormat.Items.Add(ovfItem);
 			else
-				m_comboBoxFormat.Items.AddRange(new[] {ovfItem, xvaItem});
+				m_comboBoxFormat.Items.AddRange(new[] {xvaItem, ovfItem });
 
-			m_comboBoxFormat.SelectedItem = ovfItem;
+			m_comboBoxFormat.SelectedItem = xvaItem;
 		}
 
         public override bool EnableNext()

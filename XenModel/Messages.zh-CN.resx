@@ -14221,4 +14221,10 @@ SCSI ID: {6}
   <data name="RAWHBA_IS_EXISTS" xml:space="preserve">
     <value>已存在一个名称为 “{0}”的裸LUN映射存储。每个资源池仅可以创建一个裸LUN映射存储。</value>
   </data>
+  <data name="EXPORT_APPLIANCE_PAGE_FORMAT_VA" xml:space="preserve">
+    <value>VA 文件 (*.va)</value>
+  </data>
+  <data name="IMPORT_SOURCE_PAGE_HALSIGNFILETYPES" xml:space="preserve">
+    <value>所有导入选项(*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml)|*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml|OVF/OVA 包文件(*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz|虚拟硬盘映像(*.vhd;*.vmdk;)|*.vhd;*.vmdk;|XVA 文件(*.xva)|*.xva|vGate 虚拟设备 (*.va;*.tva)|*.va;*.tva|XVA 版本 1|ova.xml</value>
+  </data>
 </root>

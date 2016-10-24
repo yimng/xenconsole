@@ -5489,6 +5489,9 @@ Would you like to eject these ISOs before continuing?</value>
   <data name="EXPORT_APPLIANCE_PAGE_FORMAT_OVFOVA" xml:space="preserve">
     <value>OVF/OVA Package (*.ovf, *.ova)</value>
   </data>
+  <data name="EXPORT_APPLIANCE_PAGE_FORMAT_VA" xml:space="preserve">
+    <value>VA File (*.va)</value>
+  </data>
   <data name="EXPORT_APPLIANCE_PAGE_FORMAT_XVA" xml:space="preserve">
     <value>XVA File (*.xva)</value>
   </data>
@@ -6816,6 +6819,9 @@ Click Configure HA to alter the settings displayed below.</value>
   </data>
   <data name="IMPORT_SOURCE_PAGE_FILETYPES_OVF_ONLY" xml:space="preserve">
     <value>OVF/OVA Package files (*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz</value>
+  </data>
+  <data name="IMPORT_SOURCE_PAGE_HALSIGNFILETYPES" xml:space="preserve">
+    <value>All import options (*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml)|*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml|OVF/OVA Package files (*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz|Virtual Hard Disk images (*.vhd;*.vmdk;)|*.vhd;*.vmdk;|XVA files (*.xva)|*.xva|vGate Virtual Appliance (*.va;*.tva)|*.va;*.tva|XVA Version 1|ova.xml</value>
   </data>
   <data name="IMPORT_SOURCE_PAGE_INTRO" xml:space="preserve">
     <value>Enter the pathname of an exported VM or template, an OVF/OVA package or a virtual hard disk image file or click Browse to find the file you want.</value>
