@@ -78,7 +78,7 @@ namespace XenAdmin.Actions
                 sshCp.OnTransferProgress += new FileTransferEvent(sshCp_OnTransferProgress);
                 sshCp.OnTransferEnd += new FileTransferEvent(sshCp_OnTransferEnd);
                 log.InfoFormat("sshCp Connecting...");
-                sshCp.Connect(22);
+                sshCp.Connect();
 
                 log.InfoFormat("sshCp Connecting OK .......");
 
