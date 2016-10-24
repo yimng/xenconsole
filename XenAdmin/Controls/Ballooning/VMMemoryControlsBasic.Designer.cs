@@ -31,6 +31,7 @@ namespace XenAdmin.Controls.Ballooning
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VMMemoryControlsBasic));
             this.spinnerPanel = new System.Windows.Forms.TableLayoutPanel();
             this.memorySpinnerDynMin = new XenAdmin.Controls.Ballooning.MemorySpinner();
+            this.memorySpinnerDynMax = new XenAdmin.Controls.Ballooning.MemorySpinner();
             this.vmShinyBar = new XenAdmin.Controls.Ballooning.VMShinyBar();
             this.radioOff = new System.Windows.Forms.RadioButton();
             this.radioOn = new System.Windows.Forms.RadioButton();
@@ -39,7 +40,6 @@ namespace XenAdmin.Controls.Ballooning
             this.labelDMCUnavailable = new System.Windows.Forms.Label();
             this.linkInstallTools = new System.Windows.Forms.LinkLabel();
             this.memorySpinnerFixed = new XenAdmin.Controls.Ballooning.MemorySpinner();
-            this.memorySpinnerDynMax = new XenAdmin.Controls.Ballooning.MemorySpinner();
             this.spinnerPanel.SuspendLayout();
             this.groupBoxOn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDMCUnavailable)).BeginInit();
@@ -54,23 +54,22 @@ namespace XenAdmin.Controls.Ballooning
             // 
             // memorySpinnerDynMin
             // 
-            this.memorySpinnerDynMin.Increment = 1D;
             resources.ApplyResources(this.memorySpinnerDynMin, "memorySpinnerDynMin");
+            this.memorySpinnerDynMin.Increment = 0.1D;
             this.memorySpinnerDynMin.Name = "memorySpinnerDynMin";
-            this.memorySpinnerDynMin.Units = "GB";
             this.memorySpinnerDynMin.SpinnerValueChanged += new System.EventHandler(this.DynamicSpinners_ValueChanged);
             // 
             // memorySpinnerDynMax
             // 
-            this.memorySpinnerDynMax.Increment = 1D;
             resources.ApplyResources(this.memorySpinnerDynMax, "memorySpinnerDynMax");
+            this.memorySpinnerDynMax.Increment = 0.1D;
             this.memorySpinnerDynMax.Name = "memorySpinnerDynMax";
-            this.memorySpinnerDynMax.Units = "GB";
             this.memorySpinnerDynMax.SpinnerValueChanged += new System.EventHandler(this.DynamicSpinners_ValueChanged);
             // 
             // vmShinyBar
             // 
             resources.ApplyResources(this.vmShinyBar, "vmShinyBar");
+            this.vmShinyBar.Increment = 0D;
             this.vmShinyBar.Name = "vmShinyBar";
             this.vmShinyBar.SliderDragged += new System.EventHandler(this.vmShinyBar_SliderDragged);
             // 
@@ -90,9 +89,9 @@ namespace XenAdmin.Controls.Ballooning
             // 
             // groupBoxOn
             // 
+            resources.ApplyResources(this.groupBoxOn, "groupBoxOn");
             this.groupBoxOn.Controls.Add(this.vmShinyBar);
             this.groupBoxOn.Controls.Add(this.spinnerPanel);
-            resources.ApplyResources(this.groupBoxOn, "groupBoxOn");
             this.groupBoxOn.Name = "groupBoxOn";
             this.groupBoxOn.TabStop = false;
             // 
@@ -118,10 +117,9 @@ namespace XenAdmin.Controls.Ballooning
             // 
             // memorySpinnerFixed
             // 
-            this.memorySpinnerFixed.Increment = 1D;
             resources.ApplyResources(this.memorySpinnerFixed, "memorySpinnerFixed");
+            this.memorySpinnerFixed.Increment = 0.1D;
             this.memorySpinnerFixed.Name = "memorySpinnerFixed";
-            this.memorySpinnerFixed.Units = "GB";
             this.memorySpinnerFixed.SpinnerValueChanged += new System.EventHandler(this.FixedSpinner_ValueChanged);
             // 
             // VMMemoryControlsBasic
