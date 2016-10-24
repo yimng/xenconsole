@@ -1412,6 +1412,7 @@ namespace XenAdmin.TabPages
                             sb.Append(Environment.NewLine);
 
                             //Row 2: Management Agent
+                            /**
                             if (isManagementAgentInstalled)
                             {
                                 sb.Append(Messages.VIRTUALIZATION_STATE_VM_MANAGEMENT_AGENT_INSTALLED);
@@ -1421,13 +1422,15 @@ namespace XenAdmin.TabPages
                                 sb.Append(Messages.VIRTUALIZATION_STATE_VM_MANAGEMENT_AGENT_NOT_INSTALLED);
                             }
                             sb.Append(Environment.NewLine);
+                            **/
                         }
                     }
-
+                    /**
                     //Row 3 : vendor device - Windows Update
                     if(!HiddenFeatures.WindowsUpdateHidden)
                         sb.Append(vm.has_vendor_device ? Messages.VIRTUALIZATION_STATE_VM_RECEIVING_UPDATES : Messages.VIRTUALIZATION_STATE_VM_NOT_RECEIVING_UPDATES);
 
+                    **/
                     // displaying Row1 - Row3
                     s.AddEntry(FriendlyName("VM.VirtualizationState"), sb.ToString());
 
@@ -1437,12 +1440,14 @@ namespace XenAdmin.TabPages
                         string installMessage = string.Empty;
                         if (canInstallIoDriversAndManagementAgent)
                         {
-                            installMessage = Messages.VIRTUALIZATION_STATE_VM_INSTALL_IO_DRIVERS_AND_MANAGEMENT_AGENT;
+                            installMessage = Messages.INSTALL_XENSERVER_TOOLS_DOTS;
                         }
+                        /**
                         else if (canInstallManagementAgentOnly)
                         {
                             installMessage = Messages.VIRTUALIZATION_STATE_VM_INSTALL_MANAGEMENT_AGENT;
                         }
+                        **/
 
                         if (!string.IsNullOrEmpty(installMessage))
                         {
