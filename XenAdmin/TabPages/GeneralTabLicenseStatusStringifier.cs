@@ -79,10 +79,12 @@ namespace XenAdmin.TabPages
                         return Status.PoolLicensingModel == LicenseStatus.LicensingModel.Clearwater ? Messages.LICENSE_UNSUPPORTED : Messages.LICENSE_EXPIRED;
                     }
 
+                    /**
                     if (Status.CurrentState == LicenseStatus.HostState.Free && Status.PoolLicensingModel != LicenseStatus.LicensingModel.PreClearwater)
                     {
                         return Status.PoolLicensingModel == LicenseStatus.LicensingModel.Clearwater ? Messages.LICENSE_UNSUPPORTED : Messages.LICENSE_EXPIRED;
                     }
+                    **/
 
                     TimeSpan s = Status.LicenseExpiresExactlyIn;
                     if (Status.LicencedHost.IsFreeLicense())
@@ -125,8 +127,8 @@ namespace XenAdmin.TabPages
         {
             get
             {
-                if (Status != null && Status.CurrentState == LicenseStatus.HostState.Free && Status.PoolLicensingModel != LicenseStatus.LicensingModel.PreClearwater)
-                    return false;
+                //if (Status != null && Status.CurrentState == LicenseStatus.HostState.Free && Status.PoolLicensingModel != LicenseStatus.LicensingModel.PreClearwater)
+                    //return false;
                 return true;
             }
         }

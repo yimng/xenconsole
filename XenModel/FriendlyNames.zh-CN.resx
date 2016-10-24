@@ -1970,4 +1970,13 @@
   <data name="Message.name-unknown" xml:space="preserve">
     <value>测试邮件</value>
   </data>
+  <data name="Label-host.edition-XE Advanced" xml:space="preserve">
+    <value>Halsign vGate 企业增强版</value>
+  </data>
+  <data name="Label-host.edition-XE Enterprise" xml:space="preserve">
+    <value>Halsign vGate 企业版</value>
+  </data>
+  <data name="Label-host.edition-XE Express" xml:space="preserve">
+    <value>Halsign vGate 标准版</value>
+  </data>
 </root>

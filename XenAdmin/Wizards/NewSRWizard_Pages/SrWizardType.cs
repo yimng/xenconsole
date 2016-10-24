@@ -284,6 +284,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_RAWHBA_BLURB; } }
+        public override string FrontendTypeName { get { return Messages.NEWSR_RAWHBA_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.rawhba; } }
         public override string ContentType { get { return "user"; } }
         public override bool ShowIntroducePrompt { get { return false; } }

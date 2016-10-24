@@ -772,7 +772,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Advanced Edition.
+        ///   Looks up a localized string similar to Halsign vGate Advanced Edition.
         /// </summary>
         public static string Label_host_edition_advanced {
             get {
@@ -781,7 +781,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Basic Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Basic Edition.
         /// </summary>
         public static string Label_host_edition_basic {
             get {
@@ -808,7 +808,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign vGate Enterprise Edition.
         /// </summary>
         public static string Label_host_edition_enterprise {
             get {
@@ -817,7 +817,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Enterprise Per-Socket.
+        ///   Looks up a localized string similar to Halsign vGate Per-Socket Edition.
         /// </summary>
         public static string Label_host_edition_enterprise_per_socket {
             get {
@@ -826,7 +826,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Enterprise Per-User.
+        ///   Looks up a localized string similar to Halsign vGate Enterprise Per-User.
         /// </summary>
         public static string Label_host_edition_enterprise_per_user {
             get {
@@ -835,7 +835,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] for XenDesktop.
+        ///   Looks up a localized string similar to Halsign vGate for vTop.
         /// </summary>
         public static string Label_host_edition_enterprise_xd {
             get {
@@ -844,7 +844,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product].
+        ///   Looks up a localized string similar to Halsign vGate Free Edition.
         /// </summary>
         public static string Label_host_edition_free {
             get {
@@ -853,7 +853,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product].
+        ///   Looks up a localized string similar to Halsign vGate Free Edition.
         /// </summary>
         public static string Label_host_edition_free_libre {
             get {
@@ -862,7 +862,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Per-Socket.
+        ///   Looks up a localized string similar to vGate product Per-Socket.
         /// </summary>
         public static string Label_host_edition_per_socket {
             get {
@@ -871,7 +871,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Platinum Edition.
+        ///   Looks up a localized string similar to vGate product Platinum Edition.
         /// </summary>
         public static string Label_host_edition_platinum {
             get {
@@ -880,7 +880,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Premium Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Premium Edition.
         /// </summary>
         public static string Label_host_edition_premium {
             get {
@@ -889,7 +889,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Standard Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Standard Edition.
         /// </summary>
         public static string Label_host_edition_standard {
             get {
@@ -898,7 +898,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Standard Per-Socket.
+        ///   Looks up a localized string similar to vGate product Standard Per-Socket.
         /// </summary>
         public static string Label_host_edition_standard_per_socket {
             get {
@@ -907,7 +907,34 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] for XenDesktop.
+        ///   Looks up a localized string similar to Halsign vGate Enterprise Plus Edition.
+        /// </summary>
+        public static string Label_host_edition_XE_Advanced {
+            get {
+                return ResourceManager.GetString("Label-host.edition-XE Advanced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Halsign vGate Enterprise Edition.
+        /// </summary>
+        public static string Label_host_edition_XE_Enterprise {
+            get {
+                return ResourceManager.GetString("Label-host.edition-XE Enterprise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Halsign vGate Standard Edition.
+        /// </summary>
+        public static string Label_host_edition_XE_Express {
+            get {
+                return ResourceManager.GetString("Label-host.edition-XE Express", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vGate product for XenDesktop.
         /// </summary>
         public static string Label_host_edition_xendesktop {
             get {
@@ -1060,7 +1087,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_enterprise {
             get {
@@ -1069,7 +1096,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Express Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Dell Express Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_express {
             get {
@@ -1078,7 +1105,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Server Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Dell Server Edition.
         /// </summary>
         public static string Label_host_sku_type_dell_xe_server {
             get {
@@ -1087,7 +1114,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product, Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_enterprise {
             get {
@@ -1096,7 +1123,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Dell Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Dell Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_express {
             get {
@@ -1105,7 +1132,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], Dell Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product, Dell Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_dell_xe_server {
             get {
@@ -1114,7 +1141,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product, HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_enterprise {
             get {
@@ -1123,7 +1150,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] HP Edition.
+        ///   Looks up a localized string similar to Halsign vGate product HP Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_express {
             get {
@@ -1132,7 +1159,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product], HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product, HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_FG_hp_xe_server {
             get {
@@ -1141,7 +1168,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product].
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product.
         /// </summary>
         public static string Label_host_sku_type_FG_xe_enterprise {
             get {
@@ -1150,7 +1177,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product].
+        ///   Looks up a localized string similar to Halsign vGate product.
         /// </summary>
         public static string Label_host_sku_type_FG_xe_express {
             get {
@@ -1159,7 +1186,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Essentials for [XenServer product].
+        ///   Looks up a localized string similar to Halsign Essentials for vGate product.
         /// </summary>
         public static string Label_host_sku_type_FG_xe_server {
             get {
@@ -1168,7 +1195,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] HP Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign vGate product HP Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_enterprise {
             get {
@@ -1177,7 +1204,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] HP Select Edition.
+        ///   Looks up a localized string similar to Halsign vGate product HP Select Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_express {
             get {
@@ -1186,7 +1213,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] HP Server Edition.
+        ///   Looks up a localized string similar to Halsign vGate product HP Server Edition.
         /// </summary>
         public static string Label_host_sku_type_hp_xe_server {
             get {
@@ -1195,7 +1222,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Enterprise Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Enterprise Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_enterprise {
             get {
@@ -1204,7 +1231,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Express Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Express Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_express {
             get {
@@ -1213,7 +1240,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign [XenServer product] Server Edition.
+        ///   Looks up a localized string similar to Halsign vGate product Server Edition.
         /// </summary>
         public static string Label_host_sku_type_xe_server {
             get {
@@ -3843,7 +3870,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The license on server &apos;{0}&apos; has expired or been changed, and no longer supports [XenServer product] Enterprise features..
+        ///   Looks up a localized string similar to The license on server &apos;{0}&apos; has expired or been changed, and no longer supports vGate product Enterprise features..
         /// </summary>
         public static string Message_body_license_does_not_support_pooling {
             get {
@@ -4176,7 +4203,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The [XenServer product] license you are using does not allow you to use the VMPR feature. VMPR is available in Halsign [XenServer product] Advanced Edition or higher..
+        ///   Looks up a localized string similar to The vGate product license you are using does not allow you to use the VMPR feature. VMPR is available in Halsign vGate product Advanced Edition or higher..
         /// </summary>
         public static string Message_body_vmpp_license_error {
             get {

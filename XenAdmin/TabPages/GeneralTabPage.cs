@@ -494,7 +494,7 @@ namespace XenAdmin.TabPages
                 generateVersionBox();
                 generateLicenseBox();
                 generateCPUBox();
-                generateHostPatchesBox();
+                //generateHostPatchesBox();
                 generateBootBox();
                 generateHABox();
                 generateStatusBox();
@@ -1020,6 +1020,7 @@ namespace XenAdmin.TabPages
             if(Helpers.ClearwaterOrGreater(host))
                 s.AddEntry(Messages.NUMBER_OF_SOCKETS, host.CpuSockets.ToString());
 
+            /**
             if (host.license_server.ContainsKey("address"))
             {
                 var licenseServerAddress = host.license_server["address"].Trim();
@@ -1039,6 +1040,7 @@ namespace XenAdmin.TabPages
             {
                 s.AddEntry(FriendlyName(String.Format("host.license_server-port")), host.license_server["port"]);
             }
+            **/
 
             foreach (string key in new string[] { "productcode", "serialnumber" })
             {

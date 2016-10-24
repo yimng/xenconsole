@@ -1976,4 +1976,13 @@
   <data name="Message.name-unknown" xml:space="preserve">
     <value>Test Email</value>
   </data>
+  <data name="Label-host.edition-XE Advanced" xml:space="preserve">
+    <value>Halsign vGate Enterprise Plus Edition</value>
+  </data>
+  <data name="Label-host.edition-XE Enterprise" xml:space="preserve">
+    <value>Halsign vGate Enterprise Edition</value>
+  </data>
+  <data name="Label-host.edition-XE Express" xml:space="preserve">
+    <value>Halsign vGate Standard Edition</value>
+  </data>
 </root>

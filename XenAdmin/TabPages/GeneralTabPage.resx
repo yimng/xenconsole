@@ -157,7 +157,7 @@
     <value>pdSectionReadCaching</value>
   </data>
   <data name="&gt;&gt;pdSectionReadCaching.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionReadCaching.Parent" xml:space="preserve">
     <value>panelReadCaching</value>
@@ -223,7 +223,7 @@
     <value>pdSectionDockerInfo</value>
   </data>
   <data name="&gt;&gt;pdSectionDockerInfo.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionDockerInfo.Parent" xml:space="preserve">
     <value>panelDockerInfo</value>
@@ -289,7 +289,7 @@
     <value>pdSectionDockerVersion</value>
   </data>
   <data name="&gt;&gt;pdSectionDockerVersion.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionDockerVersion.Parent" xml:space="preserve">
     <value>panelDockerVersion</value>
@@ -355,7 +355,7 @@
     <value>pdSectionStorageLinkSystemCapabilities</value>
   </data>
   <data name="&gt;&gt;pdSectionStorageLinkSystemCapabilities.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionStorageLinkSystemCapabilities.Parent" xml:space="preserve">
     <value>panelStorageLinkSystemCapabilities</value>
@@ -421,7 +421,7 @@
     <value>pdSectionMultipathBoot</value>
   </data>
   <data name="&gt;&gt;pdSectionMultipathBoot.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionMultipathBoot.Parent" xml:space="preserve">
     <value>panelMultipathBoot</value>
@@ -487,7 +487,7 @@
     <value>pdStorageLink</value>
   </data>
   <data name="&gt;&gt;pdStorageLink.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdStorageLink.Parent" xml:space="preserve">
     <value>panelStorageLink</value>
@@ -553,7 +553,7 @@
     <value>pdSectionUpdates</value>
   </data>
   <data name="&gt;&gt;pdSectionUpdates.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionUpdates.Parent" xml:space="preserve">
     <value>panelUpdates</value>
@@ -619,7 +619,7 @@
     <value>pdSectionVCPUs</value>
   </data>
   <data name="&gt;&gt;pdSectionVCPUs.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionVCPUs.Parent" xml:space="preserve">
     <value>panelMemoryAndVCPUs</value>
@@ -685,7 +685,7 @@
     <value>pdSectionMultipathing</value>
   </data>
   <data name="&gt;&gt;pdSectionMultipathing.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionMultipathing.Parent" xml:space="preserve">
     <value>panelMultipathing</value>
@@ -751,7 +751,7 @@
     <value>pdSectionStatus</value>
   </data>
   <data name="&gt;&gt;pdSectionStatus.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionStatus.Parent" xml:space="preserve">
     <value>panelStatus</value>
@@ -817,7 +817,7 @@
     <value>pdSectionHighAvailability</value>
   </data>
   <data name="&gt;&gt;pdSectionHighAvailability.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionHighAvailability.Parent" xml:space="preserve">
     <value>panelHighAvailability</value>
@@ -883,7 +883,7 @@
     <value>pdSectionBootOptions</value>
   </data>
   <data name="&gt;&gt;pdSectionBootOptions.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionBootOptions.Parent" xml:space="preserve">
     <value>panelBootOptions</value>
@@ -949,7 +949,7 @@
     <value>pdSectionCPU</value>
   </data>
   <data name="&gt;&gt;pdSectionCPU.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionCPU.Parent" xml:space="preserve">
     <value>panelCPU</value>
@@ -1015,7 +1015,7 @@
     <value>pdSectionLicense</value>
   </data>
   <data name="&gt;&gt;pdSectionLicense.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionLicense.Parent" xml:space="preserve">
     <value>panelLicense</value>
@@ -1081,7 +1081,7 @@
     <value>pdSectionVersion</value>
   </data>
   <data name="&gt;&gt;pdSectionVersion.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionVersion.Parent" xml:space="preserve">
     <value>panelVersion</value>
@@ -1147,7 +1147,7 @@
     <value>pdSectionMemory</value>
   </data>
   <data name="&gt;&gt;pdSectionMemory.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionMemory.Parent" xml:space="preserve">
     <value>panelMemory</value>
@@ -1213,7 +1213,7 @@
     <value>pdSectionManagementInterfaces</value>
   </data>
   <data name="&gt;&gt;pdSectionManagementInterfaces.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionManagementInterfaces.Parent" xml:space="preserve">
     <value>panelManagementInterfaces</value>
@@ -1279,7 +1279,7 @@
     <value>pdSectionCustomFields</value>
   </data>
   <data name="&gt;&gt;pdSectionCustomFields.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionCustomFields.Parent" xml:space="preserve">
     <value>panelCustomFields</value>
@@ -1345,7 +1345,7 @@
     <value>pdSectionGeneral</value>
   </data>
   <data name="&gt;&gt;pdSectionGeneral.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PDSection, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PDSection, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pdSectionGeneral.Parent" xml:space="preserve">
     <value>panelGeneral</value>
@@ -1393,7 +1393,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.PanelNoFocusScroll, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.PanelNoFocusScroll, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>pageContainerPanel</value>
@@ -1516,7 +1516,7 @@
     <value>Right</value>
   </data>
   <data name="linkLabelExpand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>586, 0</value>
+    <value>585, 0</value>
   </data>
   <data name="linkLabelExpand.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 2, 0</value>
@@ -1555,13 +1555,13 @@
     <value>Right</value>
   </data>
   <data name="linkLabelCollapse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 0</value>
+    <value>650, 0</value>
   </data>
   <data name="linkLabelCollapse.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>76, 28</value>
   </data>
   <data name="linkLabelCollapse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 28</value>
+    <value>77, 28</value>
   </data>
   <data name="linkLabelCollapse.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1672,6 +1672,6 @@
     <value>GeneralTabPage</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.TabPages.BaseTabPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.TabPages.BaseTabPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
