@@ -445,7 +445,8 @@ namespace XenAdmin.Controls.MainWindowControls
             if (NavigationMode == NavigationPane.NavigationMode.Tags
                 || NavigationMode == NavigationPane.NavigationMode.Folders
                 || NavigationMode == NavigationPane.NavigationMode.CustomFields
-                || NavigationMode == NavigationPane.NavigationMode.vApps)
+                //|| NavigationMode == NavigationPane.NavigationMode.vApps
+                )
             {
                 commands.Add(new DragDropTagCommand(Program.MainWindow, targetNode, dragData));
                 commands.Add(new DragDropIntoFolderCommand(Program.MainWindow, targetNode, dragData));

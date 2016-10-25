@@ -154,11 +154,13 @@ namespace XenAdmin
                     groupAcceptor = CreateGroupAcceptor(_highlightedDragTarget, newRootNode);
                     viewFields.Populate(search, groupAcceptor);
                     break;
+                /**
                 case NavigationPane.NavigationMode.vApps:
                     newRootNode = viewVapps.RootNode;
                     groupAcceptor = CreateGroupAcceptor(_highlightedDragTarget, newRootNode);
                     viewVapps.Populate(search, groupAcceptor);
                     break;
+                **/
                 case NavigationPane.NavigationMode.SavedSearch:
                     Util.ThrowIfParameterNull(search, "search");
                     newRootNode = new VirtualTreeNode(search.Name)
@@ -199,8 +201,10 @@ namespace XenAdmin
                     return _foldersViewExpanded;
                 case NavigationPane.NavigationMode.CustomFields:
                     return _fieldsViewExpanded;
+                /**
                 case NavigationPane.NavigationMode.vApps:
                     return _vappsViewExpanded;
+                **/
                 default:
                     return _infraViewExpanded;
             }
@@ -326,6 +330,12 @@ namespace XenAdmin
                 }
                 else if (group is VM)
                 {
+                    VM vm = group as VM;
+                    if ((vm.is_a_snapshot && vm.other_config.ContainsKey("halsign_snapshot")) ||
+                        (vm.DefaultTemplate && (vm.TemplateType == VM.VmTemplateType.Citrix ||
+                            vm.name_label.ToLowerInvariant().Contains("xen api") ||
+                            vm.name_label.ToLowerInvariant().Contains("centos 4"))))
+                        return null;
                     node = AddVMNode((VM)group);
                 }
                 else if (group is DockerContainer)

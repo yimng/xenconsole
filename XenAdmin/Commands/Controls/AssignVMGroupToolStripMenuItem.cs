@@ -285,8 +285,9 @@ namespace XenAdmin.Commands
 
             public bool CanExecute(VM vm)
             {
-                return vm != null && vm.is_a_real_vm && !vm.Locked && VMGroup<T>.FeaturePossible(vm.Connection) &&
-                       !Helpers.FeatureForbidden(vm.Connection, VMGroup<T>.FeatureRestricted);
+                //return vm != null && vm.is_a_real_vm && !vm.Locked && VMGroup<T>.FeaturePossible(vm.Connection) &&
+                //       !Helpers.FeatureForbidden(vm.Connection, VMGroup<T>.FeatureRestricted);
+                return false;
             }
             protected override bool CanExecuteCore(SelectedItemCollection selection)
             {

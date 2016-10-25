@@ -48,7 +48,7 @@ namespace XenAdmin.Controls.MainWindowControls
     {
         public enum NavigationMode
         {
-            Infrastructure, Objects, Tags, Folders, CustomFields, vApps,
+            Infrastructure, Objects, Tags, Folders, CustomFields, //vApps,
             SavedSearch, Notifications
         }
 
@@ -149,8 +149,8 @@ namespace XenAdmin.Controls.MainWindowControls
                         return Search.SearchForFolders();
                     case NavigationMode.CustomFields:
                         return Search.SearchForCustomFields();
-                    case NavigationMode.vApps:
-                        return Search.SearchForVapps();
+                    //case NavigationMode.vApps:
+                        //return Search.SearchForVapps();
                     default:
                         return m_search;
                 }
@@ -249,7 +249,7 @@ namespace XenAdmin.Controls.MainWindowControls
             toolStripMenuItemFields.Tag = NavigationMode.CustomFields;
             toolStripMenuItemFolders.Tag = NavigationMode.Folders;
             toolStripMenuItemTags.Tag = NavigationMode.Tags;
-            toolStripMenuItemVapps.Tag = NavigationMode.vApps;
+            //toolStripMenuItemVapps.Tag = NavigationMode.vApps;
 
             var items = from ToolStripItem item in buttonOrganizationBig.DropDownItems select item;
             buttonOrganizationBig.SetItemList(items.ToArray());

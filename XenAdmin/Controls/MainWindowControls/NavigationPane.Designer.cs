@@ -39,7 +39,6 @@
             this.toolStripMenuItemTags = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFolders = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFields = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemVapps = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonSearchesBig = new XenAdmin.Controls.MainWindowControls.NavigationDropDownButtonBig();
             this.buttonNotifyBig = new XenAdmin.Controls.MainWindowControls.NotificationButtonBig();
             this.toolStripSmall = new XenAdmin.Controls.MainWindowControls.NavigationToolStripSmall();
@@ -128,8 +127,7 @@
             this.buttonOrganizationBig.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemTags,
             this.toolStripMenuItemFolders,
-            this.toolStripMenuItemFields,
-            this.toolStripMenuItemVapps});
+            this.toolStripMenuItemFields});
             this.buttonOrganizationBig.Image = global::XenAdmin.Properties.Resources.org_view_24;
             resources.ApplyResources(this.buttonOrganizationBig, "buttonOrganizationBig");
             this.buttonOrganizationBig.Name = "buttonOrganizationBig";
@@ -152,13 +150,7 @@
             // 
             this.toolStripMenuItemFields.Image = global::XenAdmin.Properties.Resources._000_Fields_h32bit_16;
             this.toolStripMenuItemFields.Name = "toolStripMenuItemFields";
-            resources.ApplyResources(this.toolStripMenuItemFields, "toolStripMenuItemFields");
-            // 
-            // toolStripMenuItemVapps
-            // 
-            this.toolStripMenuItemVapps.Image = global::XenAdmin.Properties.Resources._000_VirtualAppliance_h32bit_16;
-            this.toolStripMenuItemVapps.Name = "toolStripMenuItemVapps";
-            resources.ApplyResources(this.toolStripMenuItemVapps, "toolStripMenuItemVapps");
+            resources.ApplyResources(this.toolStripMenuItemFields, "toolStripMenuItemFields");            
             // 
             // buttonSearchesBig
             // 
@@ -283,7 +275,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTags;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFolders;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFields;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemVapps;
         private NotificationsView notificationsView;
     }
 }

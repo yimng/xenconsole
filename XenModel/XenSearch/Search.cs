@@ -839,13 +839,13 @@ namespace XenAdmin.XenSearch
             searches["dead-beef-1234-vmsbynet"] = VMsByNetwork;
 
 			//VMs by vApps
-
+            /**
             Search VMsByAppliance = new Search(new Query(new QueryScope(ObjectTypes.VM), new BooleanQuery(PropertyNames.in_any_appliance, true)),
         	                                   new XenModelObjectPropertyGrouping<VM_appliance>(PropertyNames.appliance, null),
         	                                   false, Messages.DEFAULT_SEARCH_VMS_BY_APPLIANCE, "dead-beef-1234-vmsbyappliance", true);
 
         	searches["dead-beef-1234-vmsbyappliance"] = VMsByAppliance;
-
+            **/
             // Objects by Tag
 
             Search ObjByTag = new Search(

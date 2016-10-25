@@ -102,6 +102,7 @@ namespace XenAdmin.Commands
             return selection.FirstAsXenObject != null && selection.FirstAsXenObject.Connection != null && selection.FirstAsXenObject.Connection.IsConnected
                 && VMGroup<T>.FeaturePossible(selection.FirstAsXenObject.Connection)
 				&& (selection.PoolAncestor != null || selection.HostAncestor != null); //CA-61207: this check ensures there's no cross-pool selection
+            return false;
         }
 
         public override string ContextMenuText
