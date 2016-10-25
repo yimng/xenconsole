@@ -92,8 +92,8 @@ namespace XenAdmin.Wizards.ExportWizard
 			if ((bool)m_exportAsXva)
 			{
 				var filename = Path.Combine(m_pageExportAppliance.ApplianceDirectory, m_pageExportAppliance.ApplianceFileName);
-				if (!filename.EndsWith(".xva"))
-					filename += ".xva";
+				if (!filename.EndsWith(".va"))
+					filename += ".va";
 				
 				var vm = m_pageExportSelectVMs.VMsToExport.First();
 
