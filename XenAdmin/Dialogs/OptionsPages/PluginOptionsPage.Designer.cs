@@ -37,7 +37,6 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.labelIntro = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.refreshButton = new System.Windows.Forms.Button();
             this.m_tlpScanning = new System.Windows.Forms.TableLayoutPanel();
@@ -52,6 +51,7 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.colDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,8 +97,8 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.m_gridFeatures.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.m_gridFeatures.RowHeadersVisible = false;
             this.m_gridFeatures.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.m_gridFeatures.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.m_gridFeatures_RowStateChanged);
             this.m_gridFeatures.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_gridFeatures_CellContentClick);
+            this.m_gridFeatures.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.m_gridFeatures_RowStateChanged);
             // 
             // col1
             // 
@@ -122,14 +122,6 @@ namespace XenAdmin.Dialogs.OptionsPages
             resources.ApplyResources(this.labelIntro, "labelIntro");
             this.labelIntro.Name = "labelIntro";
             // 
-            // linkLabel1
-            // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
@@ -141,7 +133,6 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.tableLayoutPanel2.Controls.Add(this.m_gridFeatures, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.m_gridPlugins, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.linkLabel1, 0, 8);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
             // refreshButton
@@ -209,9 +200,9 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.m_gridPlugins.RowHeadersVisible = false;
             this.m_gridPlugins.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.m_gridPlugins.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.m_gridPlugins.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_gridPlugins_CellClick);
             this.m_gridPlugins.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.m_gridPlugins_CellFormatting);
             this.m_gridPlugins.SelectionChanged += new System.EventHandler(this.m_gridPlugins_SelectionChanged);
-            this.m_gridPlugins.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_gridPlugins_CellClick);
             // 
             // colEnabled
             // 
@@ -250,6 +241,13 @@ namespace XenAdmin.Dialogs.OptionsPages
             resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewCheckBoxColumn1, "dataGridViewCheckBoxColumn1");
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -292,7 +290,6 @@ namespace XenAdmin.Dialogs.OptionsPages
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelIntro;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.DataGridView m_gridPlugins;
@@ -313,5 +310,6 @@ namespace XenAdmin.Dialogs.OptionsPages
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelNoPlugins;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }
