@@ -344,7 +344,7 @@ namespace XenAdmin
         {
             base.OnShown(e);
             TheTabControl.Visible = true;
-            alertPage.Visible = updatesPage.Visible = eventsPage.Visible = false;
+            alertPage.Visible = /**updatesPage.Visible = **/eventsPage.Visible = false;
             navigationPane.FocusTreeView();
         }
 
@@ -2579,8 +2579,8 @@ namespace XenAdmin
         {
             if (alertPage.Visible)
                 Help.HelpManager.Launch("AlertSummaryDialog");
-            else if (updatesPage.Visible)
-                Help.HelpManager.Launch("ManageUpdatesDialog");
+            //else if (updatesPage.Visible)
+            //    Help.HelpManager.Launch("ManageUpdatesDialog");
             else if (eventsPage.Visible)
                 Help.HelpManager.Launch("EventsPane");
             else
@@ -2681,12 +2681,13 @@ namespace XenAdmin
                 {
                     int updatesCount = Updates.UpdateAlertsCount;
                     navigationPane.UpdateNotificationsButton(NotificationsSubMode.Updates, updatesCount);
-
+                    /**
                     if (updatesPage.Visible)
                     {
                         TitleLabel.Text = NotificationsSubModeItem.GetText(NotificationsSubMode.Updates, updatesCount);
                         TitleIcon.Image = NotificationsSubModeItem.GetImage(NotificationsSubMode.Updates, updatesCount);
                     }
+                    **/
                 });
         }
 
@@ -2921,15 +2922,16 @@ namespace XenAdmin
         private void navigationPane_NotificationsSubModeChanged(NotificationsSubModeItem submodeItem)
         {
             alertPage.Visible = submodeItem.SubMode == NotificationsSubMode.Alerts;
-            updatesPage.Visible = submodeItem.SubMode == NotificationsSubMode.Updates;
+            //updatesPage.Visible = submodeItem.SubMode == NotificationsSubMode.Updates;
             eventsPage.Visible = submodeItem.SubMode == NotificationsSubMode.Events;
             TheTabControl.Visible = false;
 
             if (alertPage.Visible)
                 alertPage.RefreshAlertList();
-
+            /**
             if (updatesPage.Visible)
                 updatesPage.RefreshUpdateList();
+            **/
 
             if (eventsPage.Visible)
             {
@@ -2951,7 +2953,7 @@ namespace XenAdmin
             {
                 bool tabControlWasVisible = TheTabControl.Visible;
                 TheTabControl.Visible = true;
-                alertPage.Visible = updatesPage.Visible = eventsPage.Visible = false;
+                alertPage.Visible = /**updatesPage.Visible =*/ eventsPage.Visible = false;
 
                 // force an update of the selected tab when switching back from Notification view, 
                 // as some tabs ignore the update events when not visible (e.g. Snapshots, HA)

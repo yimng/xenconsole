@@ -165,6 +165,7 @@
   <data name="pluginOptionsPage1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pluginOptionsPage1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
@@ -184,7 +185,7 @@
     <value>pluginOptionsPage1</value>
   </data>
   <data name="&gt;&gt;pluginOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.PluginOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.PluginOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pluginOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
@@ -217,13 +218,13 @@
     <value>saveAndRestoreOptionsPage1</value>
   </data>
   <data name="&gt;&gt;saveAndRestoreOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.SaveAndRestoreOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.SaveAndRestoreOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;saveAndRestoreOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
   </data>
   <data name="&gt;&gt;saveAndRestoreOptionsPage1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="securityOptionsPage1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -247,7 +248,7 @@
     <value>securityOptionsPage1</value>
   </data>
   <data name="&gt;&gt;securityOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.SecurityOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.SecurityOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;securityOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
@@ -277,7 +278,7 @@
     <value>updatesOptionsPage1</value>
   </data>
   <data name="&gt;&gt;updatesOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.UpdatesOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.UpdatesOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;updatesOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
@@ -340,7 +341,7 @@
     <value>consolesOptionsPage1</value>
   </data>
   <data name="&gt;&gt;consolesOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.ConsolesOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.ConsolesOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;consolesOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
@@ -373,7 +374,7 @@
     <value>connectionOptionsPage1</value>
   </data>
   <data name="&gt;&gt;connectionOptionsPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.OptionsPages.ConnectionOptionsPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.OptionsPages.ConnectionOptionsPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;connectionOptionsPage1.Parent" xml:space="preserve">
     <value>ContentPanel</value>
@@ -412,7 +413,7 @@
     <value>verticalTabs</value>
   </data>
   <data name="&gt;&gt;verticalTabs.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.VerticalTabs, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.VerticalTabs, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;verticalTabs.Parent" xml:space="preserve">
     <value>splitContainer.Panel1</value>
@@ -490,7 +491,7 @@
     <value>0</value>
   </data>
   <data name="blueBorder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 527</value>
+    <value>556, 512</value>
   </data>
   <data name="&gt;&gt;blueBorder.Name" xml:space="preserve">
     <value>blueBorder</value>
@@ -529,6 +530,6 @@
     <value>OptionsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.VerticallyTabbedDialog, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.VerticallyTabbedDialog, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

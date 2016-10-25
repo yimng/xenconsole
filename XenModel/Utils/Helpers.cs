@@ -498,7 +498,8 @@ namespace XenAdmin.Core
         // CP-3435: Disable Check for Updates in Common Criteria Certification project
         public static bool CommonCriteriaCertificationRelease
         {
-            get { return false; }
+            //get { return false; }
+            get { return true; }
         }
 
         /// <summary>
