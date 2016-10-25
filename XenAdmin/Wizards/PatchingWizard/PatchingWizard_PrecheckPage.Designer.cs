@@ -60,8 +60,8 @@ namespace XenAdmin.Wizards.PatchingWizard
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,7 +73,7 @@ namespace XenAdmin.Wizards.PatchingWizard
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 4);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -127,21 +127,21 @@ namespace XenAdmin.Wizards.PatchingWizard
             // 
             // progressBar1
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.progressBar1, 4);
             resources.ApplyResources(this.progressBar1, "progressBar1");
+            this.tableLayoutPanel1.SetColumnSpan(this.progressBar1, 4);
             this.progressBar1.Name = "progressBar1";
             // 
             // labelIssues
             // 
+            resources.ApplyResources(this.labelIssues, "labelIssues");
             this.labelIssues.AutoEllipsis = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelIssues, 3);
-            resources.ApplyResources(this.labelIssues, "labelIssues");
             this.labelIssues.Name = "labelIssues";
             // 
             // pictureBoxIssues
             // 
-            this.pictureBoxIssues.Image = global::XenAdmin.Properties.Resources._000_Abort_h32bit_16;
             resources.ApplyResources(this.pictureBoxIssues, "pictureBoxIssues");
+            this.pictureBoxIssues.Image = global::XenAdmin.Properties.Resources._000_Abort_h32bit_16;
             this.pictureBoxIssues.Name = "pictureBoxIssues";
             this.pictureBoxIssues.TabStop = false;
             // 
@@ -171,15 +171,15 @@ namespace XenAdmin.Wizards.PatchingWizard
             // 
             // labelProgress
             // 
+            resources.ApplyResources(this.labelProgress, "labelProgress");
             this.labelProgress.AutoEllipsis = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelProgress, 4);
-            resources.ApplyResources(this.labelProgress, "labelProgress");
             this.labelProgress.Name = "labelProgress";
             // 
             // PatchingWizard_PrecheckPage
             // 
-            this.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "PatchingWizard_PrecheckPage";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIssues)).EndInit();
