@@ -114,7 +114,7 @@ namespace XenAdmin.XenSearch
 
                 string warningMessage;
                 int colSpan;                
-
+                /**
                 if (property == PropertyNames.memoryValue && !status.HasFlag(VM.VirtualisationStatus.MANAGEMENT_INSTALLED))
                 {
                     if (vm.HasNewVirtualisationStates)
@@ -154,7 +154,7 @@ namespace XenAdmin.XenSearch
                                                   colSpan);
                     }
                 }
-
+                **/
                 if (property == PropertyNames.diskText && vm.HasNewVirtualisationStates && !status.HasFlag(VM.VirtualisationStatus.IO_DRIVERS_INSTALLED))
                 {
                     warningMessage = Messages.VIRTUALIZATION_STATE_VM_IO_NOT_OPTIMIZED;

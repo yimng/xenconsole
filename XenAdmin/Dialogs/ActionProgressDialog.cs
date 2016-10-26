@@ -156,6 +156,10 @@ namespace XenAdmin.Dialogs
 
             if (action.Succeeded || action.Cancelled)
             {
+                if (this.action.Succeeded)
+                    this.DialogResult = DialogResult.OK;
+                if (this.action.Cancelled)
+                    this.DialogResult = DialogResult.Cancel;
                 this.Close();
                 return;
             }

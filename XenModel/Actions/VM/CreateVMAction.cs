@@ -200,7 +200,7 @@ namespace XenAdmin.Actions.VMActions
 
             VM = Connection.WaitForCache(new XenRef<VM>(Result));
 
-            ApplyRecommendationsForVendorDevice();
+            //ApplyRecommendationsForVendorDevice();
             CopyBiosStrings();
             SetXenCenterProperties();
             ProvisionVM();
