@@ -58,7 +58,7 @@ namespace XenAdmin.Controls.MainWindowControls
             private set;
         }
 
-        private NotificationsSubMode lastNotificationsMode = NotificationsSubMode.Alerts;
+        private NotificationsSubMode lastNotificationsMode = NotificationsSubMode.Events;
 
         #region Events
 
