@@ -98,11 +98,11 @@ namespace XenAdmin.TabPages
 
                         if (s.TotalDays < 2)
                             return String.Format(Messages.LICENSE_REQUIRES_ACTIVATION_HOURS, Math.Floor(s.TotalHours));
+                        return String.Format(Messages.LICENSE_REQUIRES_ACTIVATION_DAYS, s.Days);
+                        //if (s.TotalDays < 30)
+                        //return String.Format(Messages.LICENSE_REQUIRES_ACTIVATION_DAYS, s.Days);
 
-                        if (s.TotalDays < 30)
-                            return String.Format(Messages.LICENSE_REQUIRES_ACTIVATION_DAYS, s.Days);
-
-                        return Messages.LICENSE_ACTIVATED;
+                        //return Messages.LICENSE_ACTIVATED;
                     }
 
                     if (s.TotalMinutes < 2)
