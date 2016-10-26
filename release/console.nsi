@@ -188,6 +188,8 @@ Section "Install components..."
   File /r "XenModel.dll"
   File /r "XenOvf.dll"
   File /r "XenOvfTransport.dll"
+  File /r "Org.Mentalis.Security.dll"
+  File /r "putty.exe"
 
   File /r "${APP_MAIN_NAME}.config"
   File /r "reports.xml"  
