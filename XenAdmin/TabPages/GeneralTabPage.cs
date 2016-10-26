@@ -906,7 +906,7 @@ namespace XenAdmin.TabPages
                         int max;
                         PBD.ParsePathCounts(status, out current, out max); //Guaranteed to work if PBD is in pathStatus
 
-                        AddMultipathLine(s, host.Name, current, max, pbd.ISCSISessions);
+                        AddMultipathLine(s, k, current, max, pbd.ISCSISessions);
                     }
                 }
             }
@@ -915,14 +915,14 @@ namespace XenAdmin.TabPages
         private void AddMultipathLine(PDSection s, String title, int current, int max, int iscsiSessions)
         {
             bool bad = current < max || (iscsiSessions != -1 && max < iscsiSessions);
-            string row = string.Format(Messages.MULTIPATH_STATUS, current, max);
+            string row = string.Format(Messages.MULTIPATH_STATUS, title, current, max);
             if (iscsiSessions != -1)
                 row += string.Format(Messages.MULTIPATH_STATUS_ISCSI_SESSIONS, iscsiSessions);
 
             if (bad)
-                s.AddEntry(title, row, Color.Red);
+                s.AddEntry("SCSI ID", row, Color.Red);
             else
-                s.AddEntry(title, row);
+                s.AddEntry("SCSI ID", row);
         }
 
         private void generateMultipathBootBox()
