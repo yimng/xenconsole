@@ -76,6 +76,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RDP\MSTSCLib.dll</HintPath>
     </Reference>
+    <Reference Include="Org.Mentalis.Security">
+      <HintPath>..\Org.Mentalis.Security.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
