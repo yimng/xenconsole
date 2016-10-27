@@ -336,6 +336,10 @@ namespace XenAdmin
                             vm.name_label.ToLowerInvariant().Contains("xen api") ||
                             vm.name_label.ToLowerInvariant().Contains("centos 4"))))
                         return null;
+                    if (vm.IsHidden && vm.name_label.ToLowerInvariant().Contains("transfer"))
+                    {
+                        return null;
+                    }
                     node = AddVMNode((VM)group);
                 }
                 else if (group is DockerContainer)
