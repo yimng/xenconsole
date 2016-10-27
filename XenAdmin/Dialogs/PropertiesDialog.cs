@@ -229,10 +229,12 @@ namespace XenAdmin.Dialogs
                     }
                 }
 
+                /**
                 if (is_hvm)
                 {
                     ShowTab(VMAdvancedEditPage = new VMAdvancedEditPage());
                 }
+                **/
 
                 if (is_vm && Helpers.ContainerCapability(xenObject.Connection) && ((VM)xenObjectCopy).CanBeEnlightened)
                     ShowTab(VMEnlightenmentEditPage = new VMEnlightenmentEditPage());
