@@ -4329,55 +4329,55 @@
     <value>当前池</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILBACK" xml:space="preserve">
-    <value>选择要故障恢复的 vApp 和各个 VM，并指定这些项目在恢复到池“{0}”后所需的电源状态。</value>
+    <value>选择要故障恢复的 VM，并指定这些项目在恢复到池“{0}”后所需的电源状态。</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILOVER" xml:space="preserve">
-    <value>选择要恢复的 vApp 和各 VM，并指定这些项目在恢复后所需的电源状态。</value>
+    <value>选择要恢复的 VM，并指定这些项目在恢复后所需的电源状态。</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART" xml:space="preserve">
-    <value>不启动已故障恢复的 vApp 和 VM(&amp;D)</value>
+    <value>不启动已故障恢复的 VM(&amp;D)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART_NOAMP" xml:space="preserve">
-    <value>不启动已故障恢复的 vApp 和 VM</value>
+    <value>不启动已故障恢复的VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_START" xml:space="preserve">
-    <value>立即启动已故障恢复的所有 vApp 和 VM(&amp;T)</value>
+    <value>立即启动已故障恢复的所有VM(&amp;T)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED" xml:space="preserve">
-    <value>启动处于暂停状态的已故障恢复 vApp 和 VM(&amp;R)</value>
+    <value>启动处于暂停状态的已故障恢复 VM(&amp;R)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED_NOAMP" xml:space="preserve">
-    <value>启动处于暂停状态的已故障恢复 vApp 和 VM</value>
+    <value>启动处于暂停状态的已故障恢复 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_START_NOAMP" xml:space="preserve">
-    <value>立即启动已故障恢复的所有 vApp 和 VM</value>
+    <value>立即启动已故障恢复的所有 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART" xml:space="preserve">
-    <value>不启动已恢复的 vApp 和 VM(&amp;D)</value>
+    <value>不启动已恢复的 VM(&amp;D)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART_NOAMP" xml:space="preserve">
-    <value>不启动已恢复的 vApp 和 VM</value>
+    <value>不启动已恢复的 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_START" xml:space="preserve">
-    <value>立即启动已恢复的所有 vApp 和 VM(&amp;T)</value>
+    <value>立即启动已恢复的所有 VM(&amp;T)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED" xml:space="preserve">
-    <value>启动处于暂停状态的已恢复 vApp 和 VM(&amp;R)</value>
+    <value>启动处于暂停状态的已恢复 VM(&amp;R)</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED_NOAMP" xml:space="preserve">
-    <value>启动处于暂停状态的已恢复 vApp 和 VM</value>
+    <value>启动处于暂停状态的已恢复 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_START_NOAMP" xml:space="preserve">
-    <value>立即启动已恢复的所有 vApp 和 VM</value>
+    <value>立即启动已恢复的所有 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TEXT" xml:space="preserve">
-    <value>选择 vApp 和 VM</value>
+    <value>选择 VM</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TITLE_FAILBACK" xml:space="preserve">
-    <value>选择要故障恢复到目标池的 vApp 或各个虚拟机</value>
+    <value>选择要故障恢复到目标池的各个虚拟机</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>选择要故障转移到目标池的 vApp 或各虚拟机</value>
+    <value>选择要故障转移到目标池的各虚拟机</value>
   </data>
   <data name="DR_WIZARD_APPLIANCE_CHECK_DESCRIPTION" xml:space="preserve">
     <value>vApp“{0}”</value>
@@ -4386,7 +4386,7 @@
     <value>[{1} 上的 {0}]</value>
   </data>
   <data name="DR_WIZARD_CHECKING_EXISTING_APPLIANCES_AND_VMS" xml:space="preserve">
-    <value>正在“{0}”中检查现有 vApp 和 VM</value>
+    <value>正在“{0}”中检查现有 VM</value>
   </data>
   <data name="DR_WIZARD_CHECKING_HA_STATUS" xml:space="preserve">
     <value>正在检查高可用性状态</value>
@@ -4407,43 +4407,43 @@
     <value>灾难恢复 - 故障转移到池“{0}”</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE1" xml:space="preserve">
-    <value>此向导将引导您完成必要的步骤，来测试关键 vApp 和 VM 的故障转移。所选 vApp 和 VM 将恢复到 DR 站点上的池“{0}”中，但不会启动。</value>
+    <value>此向导将引导您完成必要的步骤，来测试关键 VM 的故障转移。所选VM 将恢复到 DR 站点上的池“{0}”中，但不会启动。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE2" xml:space="preserve">
-    <value>将从远程存储镜像中检索要故障转移的 vApp 和 VM 的配置信息。开始进行故障转移测试前，此向导将运行一系列检查，以确保所选 vApp 和 VM 可以恢复到 DR 站点。</value>
+    <value>将从远程存储镜像中检索要故障转移的 VM 的配置信息。开始进行故障转移测试前，此向导将运行一系列检查，以确保所选 VM 可以恢复到 DR 站点。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE3" xml:space="preserve">
     <value>逐步完成此向导时，需要提供以下相关信息:
 
-*  当前存储 vApp 和 VM 配置数据的存储镜像。
-*  要故障转移到 DR 站点中的 vApp 和 VM。</value>
+*  当前存储 VM 配置数据的存储镜像。
+*  要故障转移到 DR 站点中的 VM。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE1" xml:space="preserve">
-    <value>此向导将引导您完成必要的步骤，以将 vApp 和 VM 故障恢复到主数据站点。</value>
+    <value>此向导将引导您完成必要的步骤，以将 VM 故障恢复到主数据站点。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE2" xml:space="preserve">
-    <value>将从远程存储镜像中检索要故障恢复的 vApp 和 VM 的配置信息。开始进行故障恢复前，此向导将运行一系列检查，以确保所选 vApp 和 VM 可以恢复到主数据站点。</value>
+    <value>将从远程存储镜像中检索要故障恢复的 VM 的配置信息。开始进行故障恢复前，此向导将运行一系列检查，以确保所选 VM 可以恢复到主数据站点。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE3" xml:space="preserve">
     <value>按步骤完成此向导时，需要提供以下相关信息:
 
-*  当前存储 vApp 和 VM 配置数据的存储镜像。
-*  要故障恢复的 vApp 和 VM。</value>
+*  当前存储 VM 配置数据的存储镜像。
+*  要故障恢复的 VM。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE4" xml:space="preserve">
     <value>在故障恢复前，必须停止存储镜像(VM 数据的远程复制)。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE1" xml:space="preserve">
-    <value>在主数据站点出现站点/数据中心故障时，此向导将引导您完成将关键 vApp 和 VM 进行故障转移所需的步骤。</value>
+    <value>在主数据站点出现站点/数据中心故障时，此向导将引导您完成将关键 VM 进行故障转移所需的步骤。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE2" xml:space="preserve">
-    <value>将从远程存储镜像中检索要恢复的 vApp 和 VM 的配置信息。开始进行故障转移前，此向导将运行一系列检查，以确保所选 vApp 和 VM 可以在 DR 站点上备份。</value>
+    <value>将从远程存储镜像中检索要恢复的 VM 的配置信息。开始进行故障转移前，此向导将运行一系列检查，以确保所选 VM 可以在 DR 站点上备份。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE3" xml:space="preserve">
     <value>逐步完成此向导时，需要提供以下相关信息:
 
-*  当前存储 vApp 和 VM 配置数据的存储镜像。
-*  要故障转移到 DR 站点的 vApp 和 VM。</value>
+*  当前存储 VM 配置数据的存储镜像。
+*  要故障转移到 DR 站点的 VM。</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE4" xml:space="preserve">
     <value>在故障转移前，必须停止存储镜像(VM 数据的远程复制)。</value>
@@ -4461,19 +4461,19 @@
     <value>故障转移必备条件</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_DRYRUN" xml:space="preserve">
-    <value>单击“故障转移”以开始进行所选 vApp 和 VM 的恢复测试。</value>
+    <value>单击“故障转移”以开始进行所选VM 的恢复测试。</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILBACK" xml:space="preserve">
-    <value>单击“故障恢复”以开始将所选 vApp 和 VM 恢复到主数据站点。</value>
+    <value>单击“故障恢复”以开始将所选 VM 恢复到主数据站点。</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILOVER" xml:space="preserve">
-    <value>单击“故障转移”以开始恢复所选的 vApp 和 VM。</value>
+    <value>单击“故障转移”以开始恢复所选的 VM。</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILBACK" xml:space="preserve">
-    <value>执行故障转移预检查是为了确保所选 vApp 和 VM 可以故障恢复到所选池。请采取相应措施解决所有问题。</value>
+    <value>执行故障转移预检查是为了确保所选 VM 可以故障恢复到所选池。请采取相应措施解决所有问题。</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILOVER" xml:space="preserve">
-    <value>执行预检查是为了确保所选 vApp 和 VM 可以进行故障转移。请采取相应措施解决所有问题。</value>
+    <value>执行预检查是为了确保所选 VM 可以进行故障转移。请采取相应措施解决所有问题。</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESELECT" xml:space="preserve">
     <value>取消选择</value>
@@ -4512,10 +4512,10 @@
     <value>预检查</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_TITLE_FAILBACK" xml:space="preserve">
-    <value>检查以确认所选 vApp 和 VM 可以进行故障恢复</value>
+    <value>检查以确认所选 VM 可以进行故障恢复</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>检查确认所选 vApp 和 VM 可以进行故障转移</value>
+    <value>检查确认所选 VM 可以进行故障转移</value>
   </data>
   <data name="DR_WIZARD_PROBLEM_EXISTING_APPLIANCE" xml:space="preserve">
     <value>池 {0} 上已存在更新版本的 VM</value>
@@ -4575,7 +4575,7 @@
     <value>[XenServer] 灾难恢复已完成。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_DRYRUN" xml:space="preserve">
-    <value>单击“下一步”删除已故障转移的 vApp 和 VM，并查看摘要报告。</value>
+    <value>单击“下一步”删除已故障转移的 VM，并查看摘要报告。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_FAILBACK" xml:space="preserve">
     <value>单击“下一步”以查看摘要报告。</value>
@@ -4665,7 +4665,7 @@
     <value>恢复过程已启动</value>
   </data>
   <data name="DR_WIZARD_REPORT_SELECTED_METADATA" xml:space="preserve">
-    <value>选定的 VM 和 vApp (按池分组): </value>
+    <value>选定的 VM(按池分组): </value>
   </data>
   <data name="DR_WIZARD_REPORT_SELECTED_POWER_STATE" xml:space="preserve">
     <value>恢复后的电源状态: {0}</value>
@@ -4674,10 +4674,10 @@
     <value>所选 SR: </value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_DESCRIPTION_FAILBACK" xml:space="preserve">
-    <value>选择包含要执行故障恢复的 VM 和 vApp 的配置数据的存储库(SR)。如果您知道哪些 SR 包含 VM 的磁盘，则可以立即将其包含在内。</value>
+    <value>选择包含要执行故障恢复的 VM的配置数据的存储库(SR)。如果您知道哪些 SR 包含 VM 的磁盘，则可以立即将其包含在内。</value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_DESCRIPTION_FAILOVER" xml:space="preserve">
-    <value>选择包含要执行故障转移的 VM 和 vApp 的 VM 配置数据的存储库(SR)。如果您知道哪些 SR 包含 VM 的磁盘，则可以立即将其包含在内。</value>
+    <value>选择包含要执行故障转移的 VM 的 VM 配置数据的存储库(SR)。如果您知道哪些 SR 包含 VM 的磁盘，则可以立即将其包含在内。</value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_SCAN_RESULT_NONE" xml:space="preserve">
     <value>未找到存储库</value>

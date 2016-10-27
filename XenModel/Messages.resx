@@ -4532,55 +4532,55 @@ Eject the CD and try again.</value>
     <value>Current pool</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILBACK" xml:space="preserve">
-    <value>Select the vApps and individual VMs you want to fail back and specify the required power state for them after they have been recovered to pool ‘{0}’.</value>
+    <value>Select the individual VMs you want to fail back and specify the required power state for them after they have been recovered to pool ‘{0}’.</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILOVER" xml:space="preserve">
-    <value>Select the vApps and individual VMs you want to recover and specify the required power state for them after they have been recovered.</value>
+    <value>Select the individual VMs you want to recover and specify the required power state for them after they have been recovered.</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART" xml:space="preserve">
-    <value>&amp;Do not start up failed back vApps and VMs</value>
+    <value>&amp;Do not start up failed back VMs</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART_NOAMP" xml:space="preserve">
-    <value>Do not start up failed back vApps and VMs</value>
+    <value>Do not start up failed back VMs</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_START" xml:space="preserve">
-    <value>S&amp;tart up all failed back vApps and VMs immediately</value>
+    <value>S&amp;tart up all failed back VMs immediately</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED" xml:space="preserve">
-    <value>Sta&amp;rt up failed back vApps and VMs in a paused state</value>
+    <value>Sta&amp;rt up failed back VMs in a paused state</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED_NOAMP" xml:space="preserve">
-    <value>Start up failed back vApps and VMs in a paused state</value>
+    <value>Start up failed back VMs in a paused state</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILBACK_START_NOAMP" xml:space="preserve">
-    <value>Start up all failed back vApps and VMs immediately</value>
+    <value>Start up all failed back VMs immediately</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART" xml:space="preserve">
-    <value>&amp;Do not start up recovered vApps and VMs</value>
+    <value>&amp;Do not start up recovered VMs</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART_NOAMP" xml:space="preserve">
-    <value>Do not start up recovered vApps and VMs</value>
+    <value>Do not start up recovered VMs</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_START" xml:space="preserve">
-    <value>S&amp;tart up all recovered vApps and VMs immediately</value>
+    <value>S&amp;tart up all recovered VMs immediately</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED" xml:space="preserve">
-    <value>Sta&amp;rt up recovered vApps and VMs in a paused state</value>
+    <value>Sta&amp;rt up recovered VMs in a paused state</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED_NOAMP" xml:space="preserve">
-    <value>Start up recovered vApps and VMs in a paused state</value>
+    <value>Start up recovered VMs in a paused state</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_FAILOVER_START_NOAMP" xml:space="preserve">
-    <value>Start up all recovered vApps and VMs immediately</value>
+    <value>Start up all recovered VMs immediately</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TEXT" xml:space="preserve">
-    <value>Select vApps &amp;&amp; VMs</value>
+    <value>Select VMs</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TITLE_FAILBACK" xml:space="preserve">
-    <value>Select the vApps or individual virtual machines to fail back to the target pool</value>
+    <value>Select the individual virtual machines to fail back to the target pool</value>
   </data>
   <data name="DR_WIZARD_APPLIANCESPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>Select the vApps or individual virtual machines to fail over to the target pool</value>
+    <value>Select the individual virtual machines to fail over to the target pool</value>
   </data>
   <data name="DR_WIZARD_APPLIANCE_CHECK_DESCRIPTION" xml:space="preserve">
     <value>vApp '{0}'</value>
@@ -4589,7 +4589,7 @@ Eject the CD and try again.</value>
     <value>[{0} on {1}]</value>
   </data>
   <data name="DR_WIZARD_CHECKING_EXISTING_APPLIANCES_AND_VMS" xml:space="preserve">
-    <value>Checking for existing vApps and VMs in '{0}'</value>
+    <value>Checking for existing VMs in '{0}'</value>
   </data>
   <data name="DR_WIZARD_CHECKING_HA_STATUS" xml:space="preserve">
     <value>Checking HA status</value>
@@ -4610,43 +4610,43 @@ Eject the CD and try again.</value>
     <value>Disaster Recovery - Failover to pool '{0}'</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE1" xml:space="preserve">
-    <value>This wizard will take you through the steps needed to perform a test failover of your critical vApps and VMs. The vApps and VMs you select will be recovered to pool ‘{0}’ on the DR site but will not be started up.</value>
+    <value>This wizard will take you through the steps needed to perform a test failover of your critical VMs. The VMs you select will be recovered to pool ‘{0}’ on the DR site but will not be started up.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE2" xml:space="preserve">
-    <value>Configuration information for the vApps and VMs to be failed over will be retrieved from remote storage mirrors. Before test failover begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be recovered to your DR site.</value>
+    <value>Configuration information for the VMs to be failed over will be retrieved from remote storage mirrors. Before test failover begins, the wizard will run a number of checks to ensure that the selected VMs can be recovered to your DR site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_DRYRUN_LINE3" xml:space="preserve">
     <value>You will need to provide information about the following as you step through this wizard:
 
-*  The storage mirrors where the vApp and VM configuration data is currently stored.
-*  Which vApps and VMs you want to fail over to the DR site.</value>
+*  The storage mirrors where the VM configuration data is currently stored.
+*  Which VMs you want to fail over to the DR site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE1" xml:space="preserve">
-    <value>This wizard will take you through the steps needed to fail back vApps and VMs to your primary data site.</value>
+    <value>This wizard will take you through the steps needed to fail back VMs to your primary data site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE2" xml:space="preserve">
-    <value>Configuration information for the vApps and VMs to be failed back will be retrieved from remote storage mirrors. Before failback begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be recovered to your primary data site.</value>
+    <value>Configuration information for the VMs to be failed back will be retrieved from remote storage mirrors. Before failback begins, the wizard will run a number of checks to ensure that the selected VMs can be recovered to your primary data site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE3" xml:space="preserve">
     <value>You will need to provide information about the following as you step through this wizard:
 
 *  The storage mirrors where the vApp and VM configuration data is currently stored.
-*  Which vApps and VMs you want to fail back.</value>
+*  Which VMs you want to fail back.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILBACK_LINE4" xml:space="preserve">
     <value>Before failback can take place, storage mirroring – remote replication of your VM data – must be halted.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE1" xml:space="preserve">
-    <value>This wizard will take you through the steps needed to fail over your critical vApps and VMs in the event of a site/datacenter failure at your primary data site.</value>
+    <value>This wizard will take you through the steps needed to fail over your critical VMs in the event of a site/datacenter failure at your primary data site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE2" xml:space="preserve">
-    <value>Configuration information for the vApps and VMs to be recovered will be retrieved from remote storage mirrors. Before failover begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be brought back up on your DR site.</value>
+    <value>Configuration information for the VMs to be recovered will be retrieved from remote storage mirrors. Before failover begins, the wizard will run a number of checks to ensure that the selected VMs can be brought back up on your DR site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE3" xml:space="preserve">
     <value>You will need to provide information about the following as you step though this wizard:
 
-*  The storage mirrors where the vApp and VM configuration data is currently stored.
-*  Which vApps and VMs you want to fail over to the DR site.</value>
+*  The storage mirrors where the VM configuration data is currently stored.
+*  Which VMs you want to fail over to the DR site.</value>
   </data>
   <data name="DR_WIZARD_FIRSTPAGE_FAILOVER_LINE4" xml:space="preserve">
     <value>Before failover can take place, storage mirroring – remote replication of your VM data – must be halted.</value>
@@ -4664,19 +4664,19 @@ Eject the CD and try again.</value>
     <value>Failover prerequisites</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_DRYRUN" xml:space="preserve">
-    <value>Click Fail Over to begin the test recovery of the selected vApps and VMs.</value>
+    <value>Click Fail Over to begin the test recovery of the selected VMs.</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILBACK" xml:space="preserve">
-    <value>Click Fail Back to begin recovery of the selected vApps and VMs to your primary data site.</value>
+    <value>Click Fail Back to begin recovery of the selected VMs to your primary data site.</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILOVER" xml:space="preserve">
-    <value>Click Fail Over to begin recovery of the selected vApps and VMs.</value>
+    <value>Click Fail Over to begin recovery of the selected VMs.</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILBACK" xml:space="preserve">
-    <value>Failover pre-checks are performed to ensure that the selected vApps and VMs can be failed back to the selected pool. Please take appropriate action to resolve any issues.</value>
+    <value>Failover pre-checks are performed to ensure that the selected VMs can be failed back to the selected pool. Please take appropriate action to resolve any issues.</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILOVER" xml:space="preserve">
-    <value>Pre-checks are performed to ensure that the selected vApps and VMs can be failed over. Please take appropriate action to resolve any issues.</value>
+    <value>Pre-checks are performed to ensure that the selected VMs can be failed over. Please take appropriate action to resolve any issues.</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_DESELECT" xml:space="preserve">
     <value>Deselect</value>
@@ -4715,10 +4715,10 @@ Eject the CD and try again.</value>
     <value>Pre-checks</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_TITLE_FAILBACK" xml:space="preserve">
-    <value>Check that the selected vApps and VMs can be failed back</value>
+    <value>Check that the selected VMs can be failed back</value>
   </data>
   <data name="DR_WIZARD_PRECHECKPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>Check that the selected vApps and VMs can be failed over</value>
+    <value>Check that the selected VMs can be failed over</value>
   </data>
   <data name="DR_WIZARD_PROBLEM_EXISTING_APPLIANCE" xml:space="preserve">
     <value>Newer versions of its VMs already exist on pool {0}</value>
@@ -4778,7 +4778,7 @@ Eject the CD and try again.</value>
     <value>[XenServer] Disaster Recovery is complete.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_DRYRUN" xml:space="preserve">
-    <value>Click Next to remove the vApps and VMs that were failed over and to see the summary report.</value>
+    <value>Click Next to remove the VMs that were failed over and to see the summary report.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_FAILBACK" xml:space="preserve">
     <value>Click Next to see the summary report.</value>
@@ -4868,7 +4868,7 @@ Eject the CD and try again.</value>
     <value>Recovery process started</value>
   </data>
   <data name="DR_WIZARD_REPORT_SELECTED_METADATA" xml:space="preserve">
-    <value>Selected VMs and vApps, grouped by pool: </value>
+    <value>Selected VMs, grouped by pool: </value>
   </data>
   <data name="DR_WIZARD_REPORT_SELECTED_POWER_STATE" xml:space="preserve">
     <value>Power state after recovery: {0}</value>

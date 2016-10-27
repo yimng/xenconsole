@@ -12761,7 +12761,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the vApps and individual VMs you want to fail back and specify the required power state for them after they have been recovered to pool ‘{0}’..
+        ///   Looks up a localized string similar to Select the individual VMs you want to fail back and specify the required power state for them after they have been recovered to pool ‘{0}’..
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILBACK {
             get {
@@ -12770,7 +12770,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the vApps and individual VMs you want to recover and specify the required power state for them after they have been recovered..
+        ///   Looks up a localized string similar to Select the individual VMs you want to recover and specify the required power state for them after they have been recovered..
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_DESCRIPTION_FAILOVER {
             get {
@@ -12779,7 +12779,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;Do not start up failed back vApps and VMs.
+        ///   Looks up a localized string similar to &amp;Do not start up failed back VMs.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART {
             get {
@@ -12788,7 +12788,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do not start up failed back vApps and VMs.
+        ///   Looks up a localized string similar to Do not start up failed back VMs.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_DONOTSTART_NOAMP {
             get {
@@ -12797,7 +12797,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to S&amp;tart up all failed back vApps and VMs immediately.
+        ///   Looks up a localized string similar to S&amp;tart up all failed back VMs immediately.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_START {
             get {
@@ -12806,7 +12806,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start up all failed back vApps and VMs immediately.
+        ///   Looks up a localized string similar to Start up all failed back VMs immediately.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_START_NOAMP {
             get {
@@ -12815,7 +12815,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sta&amp;rt up failed back vApps and VMs in a paused state.
+        ///   Looks up a localized string similar to Sta&amp;rt up failed back VMs in a paused state.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED {
             get {
@@ -12824,7 +12824,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start up failed back vApps and VMs in a paused state.
+        ///   Looks up a localized string similar to Start up failed back VMs in a paused state.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILBACK_STARTPAUSED_NOAMP {
             get {
@@ -12833,7 +12833,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;Do not start up recovered vApps and VMs.
+        ///   Looks up a localized string similar to &amp;Do not start up recovered VMs.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART {
             get {
@@ -12842,7 +12842,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do not start up recovered vApps and VMs.
+        ///   Looks up a localized string similar to Do not start up recovered VMs.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_DONOTSTART_NOAMP {
             get {
@@ -12851,7 +12851,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to S&amp;tart up all recovered vApps and VMs immediately.
+        ///   Looks up a localized string similar to S&amp;tart up all recovered VMs immediately.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_START {
             get {
@@ -12860,7 +12860,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start up all recovered vApps and VMs immediately.
+        ///   Looks up a localized string similar to Start up all recovered VMs immediately.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_START_NOAMP {
             get {
@@ -12869,7 +12869,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sta&amp;rt up recovered vApps and VMs in a paused state.
+        ///   Looks up a localized string similar to Sta&amp;rt up recovered VMs in a paused state.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED {
             get {
@@ -12878,7 +12878,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start up recovered vApps and VMs in a paused state.
+        ///   Looks up a localized string similar to Start up recovered VMs in a paused state.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_FAILOVER_STARTPAUSED_NOAMP {
             get {
@@ -12887,7 +12887,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select vApps &amp;&amp; VMs.
+        ///   Looks up a localized string similar to Select VMs.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_TEXT {
             get {
@@ -12896,7 +12896,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the vApps or individual virtual machines to fail back to the target pool.
+        ///   Looks up a localized string similar to Select the individual virtual machines to fail back to the target pool.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_TITLE_FAILBACK {
             get {
@@ -12905,7 +12905,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the vApps or individual virtual machines to fail over to the target pool.
+        ///   Looks up a localized string similar to Select the individual virtual machines to fail over to the target pool.
         /// </summary>
         public static string DR_WIZARD_APPLIANCESPAGE_TITLE_FAILOVER {
             get {
@@ -12923,7 +12923,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checking for existing vApps and VMs in &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Checking for existing VMs in &apos;{0}&apos;.
         /// </summary>
         public static string DR_WIZARD_CHECKING_EXISTING_APPLIANCES_AND_VMS {
             get {
@@ -12986,7 +12986,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This wizard will take you through the steps needed to perform a test failover of your critical vApps and VMs. The vApps and VMs you select will be recovered to pool ‘{0}’ on the DR site but will not be started up..
+        ///   Looks up a localized string similar to This wizard will take you through the steps needed to perform a test failover of your critical VMs. The VMs you select will be recovered to pool ‘{0}’ on the DR site but will not be started up..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_DRYRUN_LINE1 {
             get {
@@ -12995,7 +12995,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuration information for the vApps and VMs to be failed over will be retrieved from remote storage mirrors. Before test failover begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be recovered to your DR site..
+        ///   Looks up a localized string similar to Configuration information for the VMs to be failed over will be retrieved from remote storage mirrors. Before test failover begins, the wizard will run a number of checks to ensure that the selected VMs can be recovered to your DR site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_DRYRUN_LINE2 {
             get {
@@ -13006,8 +13006,8 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to You will need to provide information about the following as you step through this wizard:
         ///
-        ///*  The storage mirrors where the vApp and VM configuration data is currently stored.
-        ///*  Which vApps and VMs you want to fail over to the DR site..
+        ///*  The storage mirrors where the VM configuration data is currently stored.
+        ///*  Which VMs you want to fail over to the DR site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_DRYRUN_LINE3 {
             get {
@@ -13016,7 +13016,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This wizard will take you through the steps needed to fail back vApps and VMs to your primary data site..
+        ///   Looks up a localized string similar to This wizard will take you through the steps needed to fail back VMs to your primary data site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILBACK_LINE1 {
             get {
@@ -13025,7 +13025,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuration information for the vApps and VMs to be failed back will be retrieved from remote storage mirrors. Before failback begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be recovered to your primary data site..
+        ///   Looks up a localized string similar to Configuration information for the VMs to be failed back will be retrieved from remote storage mirrors. Before failback begins, the wizard will run a number of checks to ensure that the selected VMs can be recovered to your primary data site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILBACK_LINE2 {
             get {
@@ -13037,7 +13037,7 @@ namespace XenAdmin {
         ///   Looks up a localized string similar to You will need to provide information about the following as you step through this wizard:
         ///
         ///*  The storage mirrors where the vApp and VM configuration data is currently stored.
-        ///*  Which vApps and VMs you want to fail back..
+        ///*  Which VMs you want to fail back..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILBACK_LINE3 {
             get {
@@ -13055,7 +13055,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This wizard will take you through the steps needed to fail over your critical vApps and VMs in the event of a site/datacenter failure at your primary data site..
+        ///   Looks up a localized string similar to This wizard will take you through the steps needed to fail over your critical VMs in the event of a site/datacenter failure at your primary data site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILOVER_LINE1 {
             get {
@@ -13064,7 +13064,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Configuration information for the vApps and VMs to be recovered will be retrieved from remote storage mirrors. Before failover begins, the wizard will run a number of checks to ensure that the selected vApps and VMs can be brought back up on your DR site..
+        ///   Looks up a localized string similar to Configuration information for the VMs to be recovered will be retrieved from remote storage mirrors. Before failover begins, the wizard will run a number of checks to ensure that the selected VMs can be brought back up on your DR site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILOVER_LINE2 {
             get {
@@ -13075,8 +13075,8 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to You will need to provide information about the following as you step though this wizard:
         ///
-        ///*  The storage mirrors where the vApp and VM configuration data is currently stored.
-        ///*  Which vApps and VMs you want to fail over to the DR site..
+        ///*  The storage mirrors where the VM configuration data is currently stored.
+        ///*  Which VMs you want to fail over to the DR site..
         /// </summary>
         public static string DR_WIZARD_FIRSTPAGE_FAILOVER_LINE3 {
             get {
@@ -13130,7 +13130,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click Fail Over to begin the test recovery of the selected vApps and VMs..
+        ///   Looks up a localized string similar to Click Fail Over to begin the test recovery of the selected VMs..
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_CONTINUE_DRYRUN {
             get {
@@ -13139,7 +13139,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click Fail Back to begin recovery of the selected vApps and VMs to your primary data site..
+        ///   Looks up a localized string similar to Click Fail Back to begin recovery of the selected VMs to your primary data site..
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILBACK {
             get {
@@ -13148,7 +13148,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click Fail Over to begin recovery of the selected vApps and VMs..
+        ///   Looks up a localized string similar to Click Fail Over to begin recovery of the selected VMs..
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_CONTINUE_FAILOVER {
             get {
@@ -13157,7 +13157,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failover pre-checks are performed to ensure that the selected vApps and VMs can be failed back to the selected pool. Please take appropriate action to resolve any issues..
+        ///   Looks up a localized string similar to Failover pre-checks are performed to ensure that the selected VMs can be failed back to the selected pool. Please take appropriate action to resolve any issues..
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILBACK {
             get {
@@ -13166,7 +13166,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pre-checks are performed to ensure that the selected vApps and VMs can be failed over. Please take appropriate action to resolve any issues..
+        ///   Looks up a localized string similar to Pre-checks are performed to ensure that the selected VMs can be failed over. Please take appropriate action to resolve any issues..
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_DESCRIPTION_FAILOVER {
             get {
@@ -13283,7 +13283,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check that the selected vApps and VMs can be failed back.
+        ///   Looks up a localized string similar to Check that the selected VMs can be failed back.
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_TITLE_FAILBACK {
             get {
@@ -13292,7 +13292,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check that the selected vApps and VMs can be failed over.
+        ///   Looks up a localized string similar to Check that the selected VMs can be failed over.
         /// </summary>
         public static string DR_WIZARD_PRECHECKPAGE_TITLE_FAILOVER {
             get {
@@ -13472,7 +13472,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click Next to remove the vApps and VMs that were failed over and to see the summary report..
+        ///   Looks up a localized string similar to Click Next to remove the VMs that were failed over and to see the summary report..
         /// </summary>
         public static string DR_WIZARD_RECOVERPAGE_CONTINUE_DRYRUN {
             get {
@@ -13706,7 +13706,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected VMs and vApps, grouped by pool: .
+        ///   Looks up a localized string similar to Selected VMs, grouped by pool: .
         /// </summary>
         public static string DR_WIZARD_REPORT_SELECTED_METADATA {
             get {

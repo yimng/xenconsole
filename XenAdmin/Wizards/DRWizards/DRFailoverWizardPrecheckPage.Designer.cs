@@ -102,6 +102,7 @@
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -113,13 +114,12 @@
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 3);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.HideSelection = true;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect;
@@ -152,8 +152,8 @@
             // 
             // labelPrechecksFirstLine
             // 
-            this.labelPrechecksFirstLine.AutoEllipsis = true;
             resources.ApplyResources(this.labelPrechecksFirstLine, "labelPrechecksFirstLine");
+            this.labelPrechecksFirstLine.AutoEllipsis = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelPrechecksFirstLine, 3);
             this.labelPrechecksFirstLine.Name = "labelPrechecksFirstLine";
             // 
@@ -180,8 +180,8 @@
             // 
             // labelPrecheckStatus
             // 
-            this.labelPrecheckStatus.AutoEllipsis = true;
             resources.ApplyResources(this.labelPrecheckStatus, "labelPrecheckStatus");
+            this.labelPrecheckStatus.AutoEllipsis = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelPrecheckStatus, 3);
             this.labelPrecheckStatus.Name = "labelPrecheckStatus";
             // 

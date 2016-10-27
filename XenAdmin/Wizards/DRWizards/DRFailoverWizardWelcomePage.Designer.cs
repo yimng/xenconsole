@@ -63,8 +63,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::XenAdmin.Properties.Resources._000_TestFailover_h32bit_32;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::XenAdmin.Properties.Resources._000_TestFailover_h32bit_32;
             this.pictureBox3.Name = "pictureBox3";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox3, 2);
             this.pictureBox3.TabStop = false;
@@ -72,8 +72,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::XenAdmin.Properties.Resources._000_Failback_h32bit_32;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::XenAdmin.Properties.Resources._000_Failback_h32bit_32;
             this.pictureBox2.Name = "pictureBox2";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox2, 2);
             this.pictureBox2.TabStop = false;
@@ -126,8 +126,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::XenAdmin.Properties.Resources._000_Failover_h32bit_32;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::XenAdmin.Properties.Resources._000_Failover_h32bit_32;
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
             this.pictureBox1.TabStop = false;
