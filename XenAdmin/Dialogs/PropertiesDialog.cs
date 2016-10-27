@@ -55,7 +55,7 @@ namespace XenAdmin.Dialogs
         private LogDestinationEditPage LogDestinationEditPage;
         private HomeServerEditPage HomeServerPage;
         private BootOptionsEditPage StartupOptionsEditPage;
-        private VMAdvancedEditPage VMAdvancedEditPage;
+        //private VMAdvancedEditPage VMAdvancedEditPage;
         private PerfmonAlertEditPage PerfmonAlertEditPage;
         private EditNetworkPage editNetworkPage;
         private VDISizeLocationPage vdiSizeLocation;
