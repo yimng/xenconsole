@@ -151,7 +151,11 @@ namespace XenAdmin.Wizards.NewVMWizard
             TemplatesGridView.Rows.Clear();
             foreach (VM vm in Connection.Cache.VMs)
             {
-                if (!vm.is_a_template || !vm.Show(Properties.Settings.Default.ShowHiddenVMs))
+                if (!vm.is_a_template || !vm.Show(Properties.Settings.Default.ShowHiddenVMs) ||
+                    (vm.is_a_snapshot && vm.other_config.ContainsKey("halsign_snapshot")) ||
+                    (vm.DefaultTemplate && (vm.TemplateType == VM.VmTemplateType.Citrix ||
+                        vm.name_label.ToLowerInvariant().Contains("xen api") ||
+                        vm.name_label.ToLowerInvariant().Contains("centos 4"))))
                     continue;
 
                 TemplatesGridView.Rows.Add(new TemplatesGridViewItem(vm));
