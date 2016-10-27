@@ -207,6 +207,14 @@ Section "Install components..."
   CreateShortCut "$SMPROGRAMS\${PRODUCT_NAME}\${PRODUCT_NAME} ${PRODUCT_DIS_VER}.lnk" "$INSTDIR\${APP_NAME}"
   CreateShortCut "$desktop\${PRODUCT_NAME} ${PRODUCT_DIS_VER}.lnk" "$INSTDIR\${APP_NAME}"
   
+  WriteRegStr "HKCR" ".vhd" "" "${PRODUCT_CODE}.vhd"
+  WriteRegStr "HKCR" "${PRODUCT_CODE}.vhd" "" "${PRODUCT_SUITE} Virtual Appliance"
+  WriteRegStr "HKCR" "${PRODUCT_CODE}.vhd\DefaultIcon" "" "$INSTDIR\default.ico"
+  
+  WriteRegStr "HKCR" ".ovf" "" "${PRODUCT_CODE}.ovf"
+  WriteRegStr "HKCR" "${PRODUCT_CODE}.ovf" "" "${PRODUCT_SUITE} Virtual Appliance"
+  WriteRegStr "HKCR" "${PRODUCT_CODE}.ovf\DefaultIcon" "" "$INSTDIR\default.ico"
+  
   WriteRegStr "HKCR" ".tva" "" "${PRODUCT_CODE}.tva"
   WriteRegStr "HKCR" "${PRODUCT_CODE}.tva" "" "${PRODUCT_SUITE} Virtual Appliance"
   WriteRegStr "HKCR" "${PRODUCT_CODE}.tva\DefaultIcon" "" "$INSTDIR\default.ico"
