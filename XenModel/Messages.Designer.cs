@@ -6506,6 +6506,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browse Storage.
+        /// </summary>
+        public static string BROWSE_STORAGE {
+            get {
+                return ResourceManager.GetString("BROWSE_STORAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse Storage Of &apos;{0}&apos;.
+        /// </summary>
+        public static string BROWSE_STORAGE_DIALOG_TITLE {
+            get {
+                return ResourceManager.GetString("BROWSE_STORAGE_DIALOG_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to status-report-.
         /// </summary>
         public static string BUGTOOL_FILE_PREFIX {
@@ -16978,6 +16996,60 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Capabilities.
+        /// </summary>
+        public static string GENERAL_TAB_CAPABILITIES {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_CAPABILITIES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        public static string GENERAL_TAB_GENERAL {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_GENERAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Root Disk Multipathing.
+        /// </summary>
+        public static string GENERAL_TAB_MULTIPATH_BOOT {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_MULTIPATH_BOOT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multipathing.
+        /// </summary>
+        public static string GENERAL_TAB_MULTIPATHING {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_MULTIPATHING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string GENERAL_TAB_STATUS {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_STATUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StorageLink.
+        /// </summary>
+        public static string GENERAL_TAB_STORAGELINK {
+            get {
+                return ResourceManager.GetString("GENERAL_TAB_STORAGELINK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Not Found.
         /// </summary>
         public static string GENERAL_UNKNOWN {
@@ -23822,11 +23894,38 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Virtual Disks.
+        /// </summary>
+        public static string NAME_DESCRIPTION_BROWSE_DISK {
+            get {
+                return ResourceManager.GetString("NAME_DESCRIPTION_BROWSE_DISK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to General.
         /// </summary>
         public static string NAME_DESCRIPTION_TAGS {
             get {
                 return ResourceManager.GetString("NAME_DESCRIPTION_TAGS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virtual Disks Of The Storage.
+        /// </summary>
+        public static string NAME_SUB_DESCRIPTION_BROWSE_DISK {
+            get {
+                return ResourceManager.GetString("NAME_SUB_DESCRIPTION_BROWSE_DISK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storage General Properties.
+        /// </summary>
+        public static string NAME_SUB_DESCRIPTION_BROWSE_GENERAL {
+            get {
+                return ResourceManager.GetString("NAME_SUB_DESCRIPTION_BROWSE_GENERAL", resourceCulture);
             }
         }
         
@@ -36240,6 +36339,15 @@ namespace XenAdmin {
         public static string UPGRADE_SLAVE {
             get {
                 return ResourceManager.GetString("UPGRADE_SLAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Upgrade.
+        /// </summary>
+        public static string UPGRADE_SR {
+            get {
+                return ResourceManager.GetString("UPGRADE_SR", resourceCulture);
             }
         }
         

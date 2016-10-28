@@ -118,6 +118,7 @@
     <Compile Include="Alerts\Types\XenServerPatchAlert.cs" />
     <Compile Include="Alerts\Types\XenServerVersionAlert.cs" />
     <Compile Include="Commands\BRBackupCommand.cs" />
+    <Compile Include="Commands\BrowseStorageCommand.cs" />
     <Compile Include="Commands\BRReplicationCommand.cs" />
     <Compile Include="Commands\BRRestoreCommand.cs" />
     <Compile Include="Commands\BRToolStripMenuItem.cs">
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="Controls\HalsignControls\BackupJobs.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HalsignControls\GeneralListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HalsignControls\GeneralUnit.cs" />
+    <Compile Include="Controls\HalsignControls\SlidePanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\ListViewEx.cs">
       <SubType>Component</SubType>
@@ -310,6 +318,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\BackupViewDialog.Designer.cs" />
+    <Compile Include="Dialogs\BrowseStorageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\HealthCheck\HealthCheckOverviewLauncher.cs" />
     <Compile Include="Dialogs\ExportVMDialog.cs">
     </Compile>
@@ -395,6 +406,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPanels\BrowseStorageGeneralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\BrowseStorageVirtualDiskPage.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SettingsPanels\LivePatchingEditPage.cs">
       <SubType>UserControl</SubType>
@@ -1647,6 +1664,12 @@
     <EmbeddedResource Include="Controls\HalsignControls\BackupJobs.zh-CN.resx">
       <DependentUpon>BackupJobs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HalsignControls\GeneralListViewEx.resx">
+      <DependentUpon>GeneralListViewEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HalsignControls\GeneralUnit.resx">
+      <DependentUpon>GeneralUnit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ThinProvisioningParametersControl.ja.resx">
       <DependentUpon>ThinProvisioningParametersControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -1676,6 +1699,9 @@
     <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\BackupViewDialog.resx" />
     <EmbeddedResource Include="Dialogs\BackupViewDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\BrowseStorageDialog.resx">
+      <DependentUpon>BrowseStorageDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\CommandErrorDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CommandErrorDialog.cs</DependentUpon>
@@ -1979,6 +2005,15 @@
     <EmbeddedResource Include="Plugins\UI\TabPageCredentialsDialog.resx">
       <DependentUpon>TabPageCredentialsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\BrowseStorageGeneralPage.resx">
+      <DependentUpon>BrowseStorageGeneralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\BrowseStorageVirtualDiskPage.resx">
+      <DependentUpon>BrowseStorageVirtualDiskPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\BrowseStorageVirtualDiskPage.zh-CN.resx">
+      <DependentUpon>BrowseStorageVirtualDiskPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\HostPowerONPages\HostPowerONEditPage.resx">
       <SubType>Designer</SubType>

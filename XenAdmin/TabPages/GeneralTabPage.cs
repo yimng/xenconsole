@@ -1383,10 +1383,11 @@ namespace XenAdmin.TabPages
                 {
                     var gm = vm.Connection.Resolve(vm.guest_metrics);
 
-                    bool isIoOptimized = gm != null && gm.PV_drivers_detected;
-                    bool isManagementAgentInstalled = vm.GetVirtualisationStatus.HasFlag(VM.VirtualisationStatus.MANAGEMENT_INSTALLED);
+                    //bool isIoOptimized = gm != null && gm.PV_drivers_detected;
+                    bool isIoOptimized = gm != null && gm.PV_drivers_installed;
+                    //bool isManagementAgentInstalled = vm.GetVirtualisationStatus.HasFlag(VM.VirtualisationStatus.MANAGEMENT_INSTALLED);
                     bool canInstallIoDriversAndManagementAgent = InstallToolsCommand.CanExecute(vm) && !isIoOptimized;
-                    bool canInstallManagementAgentOnly = InstallToolsCommand.CanExecute(vm) && isIoOptimized && !isManagementAgentInstalled;
+                    //bool canInstallManagementAgentOnly = InstallToolsCommand.CanExecute(vm) && isIoOptimized && !isManagementAgentInstalled;
                     //canInstallIoDriversOnly is missing - management agent communicates with XS using the I/O drivers
 
                     var sb = new StringBuilder();

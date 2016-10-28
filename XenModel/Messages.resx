@@ -2287,6 +2287,12 @@ This change will take effect when you restart VM.</value>
   <data name="BROKEN_TOOLS_PROMPT" xml:space="preserve">
     <value>Your Tools ISO is on a broken SR, [XenCenter] will attempt to fix it before proceeding. Do you wish to continue?</value>
   </data>
+  <data name="BROWSE_STORAGE" xml:space="preserve">
+    <value>Browse Storage</value>
+  </data>
+  <data name="BROWSE_STORAGE_DIALOG_TITLE" xml:space="preserve">
+    <value>Browse Storage Of '{0}'</value>
+  </data>
   <data name="BR_ACTION_FAILED" xml:space="preserve">
     <value>Job deploy failed</value>
   </data>
@@ -5936,6 +5942,24 @@ Would you like to eject these ISOs before continuing?</value>
   <data name="GENERAL_STATE_OK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="GENERAL_TAB_CAPABILITIES" xml:space="preserve">
+    <value>Capabilities</value>
+  </data>
+  <data name="GENERAL_TAB_GENERAL" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GENERAL_TAB_MULTIPATHING" xml:space="preserve">
+    <value>Multipathing</value>
+  </data>
+  <data name="GENERAL_TAB_MULTIPATH_BOOT" xml:space="preserve">
+    <value>Root Disk Multipathing</value>
+  </data>
+  <data name="GENERAL_TAB_STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="GENERAL_TAB_STORAGELINK" xml:space="preserve">
+    <value>StorageLink</value>
+  </data>
   <data name="GENERAL_UNKNOWN" xml:space="preserve">
     <value>Not Found</value>
   </data>
@@ -8282,8 +8306,17 @@ To learn more about the [XenServer] Live VDI Migration feature or to start a [Xe
   <data name="NAME" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="NAME_DESCRIPTION_BROWSE_DISK" xml:space="preserve">
+    <value>Virtual Disks</value>
+  </data>
   <data name="NAME_DESCRIPTION_TAGS" xml:space="preserve">
     <value>General</value>
+  </data>
+  <data name="NAME_SUB_DESCRIPTION_BROWSE_DISK" xml:space="preserve">
+    <value>Virtual Disks Of The Storage</value>
+  </data>
+  <data name="NAME_SUB_DESCRIPTION_BROWSE_GENERAL" xml:space="preserve">
+    <value>Storage General Properties</value>
   </data>
   <data name="NAME_WITH_LOCATION" xml:space="preserve">
     <value>{0} {1}</value>
@@ -12563,6 +12596,9 @@ Note that if RBAC is enabled, only updates which you have privileges to dismiss 
   </data>
   <data name="UPGRADE_SLAVE" xml:space="preserve">
     <value>Upgrade '{0}'</value>
+  </data>
+  <data name="UPGRADE_SR" xml:space="preserve">
+    <value>&amp;Upgrade</value>
   </data>
   <data name="UPGRADING" xml:space="preserve">
     <value>Upgrading</value>

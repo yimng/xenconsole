@@ -933,6 +933,8 @@ namespace XenAdmin.Commands
         {
             public override void Build(IMainWindow mainWindow, SelectedItemCollection selection, ContextMenuItemCollection items)
             {
+                items.AddIfEnabled(new BrowseStorageCommand(mainWindow, selection));
+                items.AddSeparator();
                 items.AddIfEnabled(new RepairSRCommand(mainWindow, selection));
                 items.AddIfEnabled(new SetAsDefaultSRCommand(mainWindow, selection));
                 items.AddIfEnabled(new ConvertToThinSRCommand(mainWindow, selection));

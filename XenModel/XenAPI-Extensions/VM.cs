@@ -895,7 +895,8 @@ namespace XenAPI
         {
             get
             {
-                return IsWindows && XenAdmin.Core.Helpers.DundeeOrGreater(Connection);
+                //return IsWindows && XenAdmin.Core.Helpers.DundeeOrGreater(Connection);
+                return false;
             }
         }
 

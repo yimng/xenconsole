@@ -14233,4 +14233,37 @@ SCSI ID: {6}
   <data name="EXPORT_OVA_PACKAGE" xml:space="preserve">
     <value>从'{0}'导出OVA包到'{1}’</value>
   </data>
+  <data name="BROWSE_STORAGE" xml:space="preserve">
+    <value>浏览存储</value>
+  </data>
+  <data name="BROWSE_STORAGE_DIALOG_TITLE" xml:space="preserve">
+    <value>浏览“{0}”存储</value>
+  </data>
+  <data name="GENERAL_TAB_GENERAL" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="GENERAL_TAB_MULTIPATHING" xml:space="preserve">
+    <value>多路径</value>
+  </data>
+  <data name="GENERAL_TAB_MULTIPATH_BOOT" xml:space="preserve">
+    <value>根磁盘多路径功能</value>
+  </data>
+  <data name="GENERAL_TAB_STATUS" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="GENERAL_TAB_STORAGELINK" xml:space="preserve">
+    <value>StorageLink</value>
+  </data>
+  <data name="NAME_DESCRIPTION_BROWSE_DISK" xml:space="preserve">
+    <value>虚拟磁盘</value>
+  </data>
+  <data name="NAME_SUB_DESCRIPTION_BROWSE_DISK" xml:space="preserve">
+    <value>存储中的虚拟磁盘</value>
+  </data>
+  <data name="NAME_SUB_DESCRIPTION_BROWSE_GENERAL" xml:space="preserve">
+    <value>存储常规属性</value>
+  </data>
+  <data name="UPGRADE_SR" xml:space="preserve">
+    <value>升级(&amp;U)</value>
+  </data>
 </root>
