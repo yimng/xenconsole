@@ -14266,4 +14266,7 @@ SCSI ID: {6}
   <data name="UPGRADE_SR" xml:space="preserve">
     <value>升级(&amp;U)</value>
   </data>
+  <data name="CONFIRM_REBOOT_SERVER_YES_BUTTON_LABEL" xml:space="preserve">
+    <value>重启</value>
+  </data>
 </root>

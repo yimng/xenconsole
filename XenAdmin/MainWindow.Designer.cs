@@ -278,7 +278,6 @@ namespace XenAdmin
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripSeparator();
             this.xenSourceOnTheWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xenCenterPluginsOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.pluginItemsPlaceHolderToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutXenSourceAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuBar = new XenAdmin.Controls.MenuStripEx();
@@ -1781,7 +1780,6 @@ namespace XenAdmin
             this.toolStripMenuItem17,
             this.xenSourceOnTheWebToolStripMenuItem,
             this.xenCenterPluginsOnlineToolStripMenuItem,
-            this.toolStripSeparator7,
             this.pluginItemsPlaceHolderToolStripMenuItem8,
             this.aboutXenSourceAdminToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -1827,11 +1825,6 @@ namespace XenAdmin
             this.xenCenterPluginsOnlineToolStripMenuItem.Name = "xenCenterPluginsOnlineToolStripMenuItem";
             resources.ApplyResources(this.xenCenterPluginsOnlineToolStripMenuItem, "xenCenterPluginsOnlineToolStripMenuItem");
             this.xenCenterPluginsOnlineToolStripMenuItem.Click += new System.EventHandler(this.xenCenterPluginsOnTheWebToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             // 
             // pluginItemsPlaceHolderToolStripMenuItem8
             // 
@@ -2050,7 +2043,6 @@ namespace XenAdmin
         private System.Windows.Forms.ToolStripMenuItem viewApplicationLogToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem xenSourceOnTheWebToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem aboutXenSourceAdminToolStripMenuItem;
         private XenAdmin.Controls.MenuStripEx MainMenuBar;
         private System.Windows.Forms.Panel MenuPanel;
