@@ -2871,6 +2871,9 @@
     <None Include="Halsign.cer">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Help\vGate Console.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="HomePage.zh-CN.mht">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -2909,9 +2912,6 @@
     <Compile Include="Commands\MigrateVirtualDiskCommand.cs" />
     <Compile Include="Commands\UpdateVIFCommand.cs" />
     <Content Include="halsign_host_upgrade.py">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Help\Halsign Console.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Help\XenCenter.ja.chm">
