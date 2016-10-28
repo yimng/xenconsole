@@ -1071,8 +1071,8 @@ namespace XenAdmin.TabPages
             bool isXCP = host.IsXCP;
             if (host.software_version.ContainsKey("date"))
                 pdSectionVersion.AddEntry(isXCP ? Messages.SOFTWARE_VERSION_XCP_DATE : Messages.SOFTWARE_VERSION_DATE, host.software_version["date"]);
-            if (host.software_version.ContainsKey("build_number"))
-                pdSectionVersion.AddEntry(isXCP ? Messages.SOFTWARE_VERSION_XCP_BUILD_NUMBER : Messages.SOFTWARE_VERSION_BUILD_NUMBER, host.software_version["build_number"]);
+            if (host.software_version.ContainsKey("release_number"))
+                pdSectionVersion.AddEntry(isXCP ? Messages.SOFTWARE_VERSION_XCP_BUILD_NUMBER : Messages.SOFTWARE_VERSION_BUILD_NUMBER, host.software_version["release_number"]);            
             if (isXCP && host.software_version.ContainsKey("platform_version"))
                 pdSectionVersion.AddEntry(Messages.SOFTWARE_VERSION_XCP_PLATFORM_VERSION, host.software_version["platform_version"]);
             if (!isXCP && host.software_version.ContainsKey("product_version"))
