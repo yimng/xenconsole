@@ -36,11 +36,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("vGate Console")]
-[assembly: AssemblyDescription("vGate Console")]
+[assembly: AssemblyTitle("Halsign Console")]
+[assembly: AssemblyDescription("Halsign Console")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Halsign")]
-[assembly: AssemblyProduct("vGate Console")]
+[assembly: AssemblyProduct("Halsign Console")]
 [assembly: AssemblyCopyright("Copyright © 2013 Halsign Corporation. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
