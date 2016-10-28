@@ -41,7 +41,7 @@ copy /y .\XenAdmin\bin\Release\*.cer ..\..\release\vconsole\build-60000-new\rele
 copy /y .\XenAdmin\bin\Release\*.py ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\BuildInfo ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\ConsoleMain.exe.config ..\..\release\vconsole\build-60000-new\release
-copy /y .\XenAdmin\bin\Release\HalsignConsole.exe ..\..\release\vconsole\build-60000-new\release
+copy /y .\XenAdmin\bin\Release\vGateConsole.exe ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\ConsoleMain.exe ..\..\release\vconsole\build-60000-new\release
 copy /y .\XenAdmin\bin\Release\*.dll ..\..\release\vconsole\build-60000-new\release
 

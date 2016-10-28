@@ -228,28 +228,29 @@ namespace XenAdmin.SettingsPanels
                         {
                             if (issciRemoved(scsiid))
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
-                                ToolStripMenuItem itm = MainWindow.NewToolStripMenuItem("Add", Resources._000_StorageBroken_h32bit_16, delegate(object sender, EventArgs e)
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                              
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
                                 {
                                     List<FibreChannelDevice> devices;
                                     var success = LVMoBond.FiberChannelScan(this, xenObject.Connection, out devices);
                                     Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddLUNDialog(xenObject, devices));
-                                });
+                                };
 
                                 ctxMenuItems.Add(itm);
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
                             }
                             else if (canissciRemove())
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
-                                ToolStripMenuItem itm = MainWindow.NewToolStripMenuItem("remove", Resources._000_StorageBroken_h32bit_16, delegate(object sender, EventArgs e)
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                               
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
                                 {
-
                                     AsyncAction Action = new SrRemoveLUNAction(xenObject.Connection, xenObject, scsiid);
                                     ActionProgressDialog dialog = new ActionProgressDialog(Action, ProgressBarStyle.Marquee) { ShowCancel = true };
                                     dialog.ShowDialog(this);
 
-                                });
+                                };
                                 ctxMenuItems.Add(itm);
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
                             }
@@ -294,10 +295,12 @@ namespace XenAdmin.SettingsPanels
                 bool flag = (sr.IsBroken() || !sr.MultipathAOK);
                 bool isDetached = sr.IsDetached;
                 List<ToolStripMenuItem> contextMenuItems = new List<ToolStripMenuItem>();
-                ToolStripMenuItem item = MainWindow.NewToolStripMenuItem(Messages.GENERAL_SR_CONTEXT_REPAIR, Resources._000_StorageBroken_h32bit_16, delegate(object sender, EventArgs e)
-                {                    
+                
+                ToolStripMenuItem item = new ToolStripMenuItem(Messages.GENERAL_SR_CONTEXT_REPAIR) { Image = Resources._000_StorageBroken_h32bit_16 };
+                item.Click += delegate
+                {
                     Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new RepairSRDialog(sr));
-                });
+                };
                 contextMenuItems.Add(item);
                 if (flag && !isDetached)
                 {
