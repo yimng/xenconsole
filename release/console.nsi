@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "HalsignConsole.exe"
+OutFile "vGateConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
