@@ -14228,10 +14228,10 @@ SCSI ID: {6}
     <value>所有导入选项(*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml)|*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml|OVF/OVA 包文件(*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz|虚拟硬盘映像(*.vhd;*.vmdk;)|*.vhd;*.vmdk;|XVA 文件(*.xva)|*.xva|vGate 虚拟设备 (*.va;*.tva)|*.va;*.tva|XVA 版本 1|ova.xml</value>
   </data>
   <data name="EXPORT_OVF_PACKAGE" xml:space="preserve">
-    <value>从'{0}'导出OVF包到'{1}’</value>
+    <value>从'{1}'导出OVF包'{0}’</value>
   </data>
   <data name="EXPORT_OVA_PACKAGE" xml:space="preserve">
-    <value>从'{0}'导出OVA包到'{1}’</value>
+    <value>从'{1}'导出OVA'{0}’</value>
   </data>
   <data name="BROWSE_STORAGE" xml:space="preserve">
     <value>浏览存储</value>
@@ -14268,5 +14268,8 @@ SCSI ID: {6}
   </data>
   <data name="CONFIRM_REBOOT_SERVER_YES_BUTTON_LABEL" xml:space="preserve">
     <value>重启</value>
+  </data>
+  <data name="EXPORT_VM_TITLE" xml:space="preserve">
+    <value>正在从“{1}”导出 VM“{0}”</value>
   </data>
 </root>
