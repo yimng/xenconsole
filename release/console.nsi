@@ -4,7 +4,7 @@
 
 !define PRODUCER_NAME      "Halsign"
 !define PRODUCT_SUITE      "Halsign"
-!define PRODUCT_NAME       "Halsign Console"
+!define PRODUCT_NAME       "vGate Console"
 !define PRODUCT_DIS_VER    "6.0"
 !define PRODUCT_VERSION    "6.0.0"
 !define PRODUCT_PUBLISHER  "Halsign Corporation."
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "HalsignConsole.exe"
+OutFile "vGateConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
