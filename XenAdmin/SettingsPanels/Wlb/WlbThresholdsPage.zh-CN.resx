@@ -142,7 +142,7 @@
     <value>37</value>
   </data>
   <data name="labelBlurb.Text" xml:space="preserve">
-    <value>当资源使用率达到其临界阈值时，将触发优化建议并阻止 Workload Balancing 在该服务器上放置其他工作负载。</value>
+    <value>当资源使用率达到其临界阈值时，将触发优化建议并阻止 负载均衡 在该服务器上放置其他工作负载。</value>
   </data>
   <data name="&gt;&gt;labelBlurb.Name" xml:space="preserve">
     <value>labelBlurb</value>

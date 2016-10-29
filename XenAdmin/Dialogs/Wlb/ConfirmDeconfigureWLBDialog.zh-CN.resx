@@ -132,9 +132,9 @@
     <value>0</value>
   </data>
   <data name="labelMessage.Text" xml:space="preserve">
-    <value>立即取消运行向导将保持 Workload Balancing 使用默认配置启动，但不会启用。
+    <value>立即取消运行向导将保持 负载均衡 使用默认配置启动，但不会启用。
 
-是否要完全取消配置 Workload Balancing?</value>
+是否要完全取消配置 负载均衡?</value>
   </data>
   <data name="&gt;&gt;labelMessage.Name" xml:space="preserve">
     <value>labelMessage</value>
@@ -293,7 +293,7 @@
     <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>禁用 Workload Balancing</value>
+    <value>禁用 负载均衡</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ConfirmDeconfigureWLBDialog</value>

@@ -235,7 +235,7 @@
     <value>0</value>
   </data>
   <data name="lableScheduledTaskBlurb.Text" xml:space="preserve">
-    <value>指定希望 Workload Balancing 自动更改优化模式的时间。</value>
+    <value>指定希望 负载均衡 自动更改优化模式的时间。</value>
   </data>
   <data name="&gt;&gt;lableScheduledTaskBlurb.Name" xml:space="preserve">
     <value>lableScheduledTaskBlurb</value>

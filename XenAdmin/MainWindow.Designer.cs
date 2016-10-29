@@ -91,7 +91,7 @@ namespace XenAdmin
             this.TabPageDockerProcess = new System.Windows.Forms.TabPage();
             this.TabPageDockerDetails = new System.Windows.Forms.TabPage();
             this.alertPage = new XenAdmin.TabPages.AlertSummaryPage();
-            //this.updatesPage = new XenAdmin.TabPages.ManageUpdatesPage();
+            this.updatesPage = new XenAdmin.TabPages.ManageUpdatesPage();
             this.eventsPage = new XenAdmin.TabPages.HistoryPage();
             this.TitleBackPanel = new XenAdmin.Controls.GradientPanel.GradientPanel();
             this.TitleIcon = new System.Windows.Forms.PictureBox();
@@ -278,6 +278,7 @@ namespace XenAdmin
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripSeparator();
             this.xenSourceOnTheWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xenCenterPluginsOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.pluginItemsPlaceHolderToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutXenSourceAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuBar = new XenAdmin.Controls.MenuStripEx();
@@ -321,7 +322,7 @@ namespace XenAdmin
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.Controls.Add(this.TheTabControl);
             this.splitContainer1.Panel2.Controls.Add(this.alertPage);
-            //this.splitContainer1.Panel2.Controls.Add(this.updatesPage);
+            this.splitContainer1.Panel2.Controls.Add(this.updatesPage);
             this.splitContainer1.Panel2.Controls.Add(this.eventsPage);
             this.splitContainer1.Panel2.Controls.Add(this.TitleBackPanel);
             resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
@@ -530,11 +531,9 @@ namespace XenAdmin
             // 
             // updatesPage
             // 
-            /**
             resources.ApplyResources(this.updatesPage, "updatesPage");
             this.updatesPage.BackColor = System.Drawing.SystemColors.Window;
             this.updatesPage.Name = "updatesPage";
-            **/
             // 
             // eventsPage
             // 
@@ -1780,6 +1779,7 @@ namespace XenAdmin
             this.toolStripMenuItem17,
             this.xenSourceOnTheWebToolStripMenuItem,
             this.xenCenterPluginsOnlineToolStripMenuItem,
+            this.toolStripSeparator7,
             this.pluginItemsPlaceHolderToolStripMenuItem8,
             this.aboutXenSourceAdminToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -1825,6 +1825,11 @@ namespace XenAdmin
             this.xenCenterPluginsOnlineToolStripMenuItem.Name = "xenCenterPluginsOnlineToolStripMenuItem";
             resources.ApplyResources(this.xenCenterPluginsOnlineToolStripMenuItem, "xenCenterPluginsOnlineToolStripMenuItem");
             this.xenCenterPluginsOnlineToolStripMenuItem.Click += new System.EventHandler(this.xenCenterPluginsOnTheWebToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             // 
             // pluginItemsPlaceHolderToolStripMenuItem8
             // 
@@ -2043,6 +2048,7 @@ namespace XenAdmin
         private System.Windows.Forms.ToolStripMenuItem viewApplicationLogToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem17;
         private System.Windows.Forms.ToolStripMenuItem xenSourceOnTheWebToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem aboutXenSourceAdminToolStripMenuItem;
         private XenAdmin.Controls.MenuStripEx MainMenuBar;
         private System.Windows.Forms.Panel MenuPanel;
@@ -2122,12 +2128,12 @@ namespace XenAdmin
         private CommandToolStripMenuItem vMProtectionAndRecoveryToolStripMenuItem;
         private AssignGroupToolStripMenuItemVMPP assignPolicyToolStripMenuItem;
         private CommandToolStripMenuItem changePoolPasswordToolStripMenuItem;
-		private ToolStripSeparator toolStripSeparator30;
-		private CommandToolStripMenuItem virtualAppliancesToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator30;
+        private CommandToolStripMenuItem virtualAppliancesToolStripMenuItem;
         private AssignGroupToolStripMenuItemVM_appliance assignToVirtualApplianceToolStripMenuItem;
-		private CommandToolStripMenuItem disasterRecoveryToolStripMenuItem;
-		private CommandToolStripMenuItem DrWizardToolStripMenuItem;
-		private CommandToolStripMenuItem drConfigureToolStripMenuItem;
+        private CommandToolStripMenuItem disasterRecoveryToolStripMenuItem;
+        private CommandToolStripMenuItem DrWizardToolStripMenuItem;
+        private CommandToolStripMenuItem drConfigureToolStripMenuItem;
         private CommandToolStripMenuItem securityGroupsToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private CommandToolStripMenuItem HostPasswordToolStripMenuItem;
@@ -2143,7 +2149,7 @@ namespace XenAdmin
         private CommandToolStripMenuItem restartToolstackToolStripMenuItem;
         private XenAdmin.Controls.MainWindowControls.NavigationPane navigationPane;
         private XenAdmin.TabPages.AlertSummaryPage alertPage;
-        //private XenAdmin.TabPages.ManageUpdatesPage updatesPage;
+        private XenAdmin.TabPages.ManageUpdatesPage updatesPage;
         private XenAdmin.TabPages.HistoryPage eventsPage;
         private ToolStripMenuItem customTemplatesToolStripMenuItem;
         private ToolStripMenuItem templatesToolStripMenuItem1;

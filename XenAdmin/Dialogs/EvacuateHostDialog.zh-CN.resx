@@ -529,7 +529,7 @@
     <value>1</value>
   </data>
   <data name="lableWLBEnabled.Text" xml:space="preserve">
-    <value>Workload Balancing 已启用</value>
+    <value>负载均衡 已启用</value>
   </data>
   <data name="lableWLBEnabled.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

@@ -267,9 +267,9 @@
     <value>11</value>
   </data>
   <data name="labelMessage.Text" xml:space="preserve">
-    <value>是否要与此池中的 Workload Balancing 服务器断开连接?
+    <value>是否要与此池中的 负载均衡 服务器断开连接?
 
-如果断开连接，则将停止此资源池的所有 Workload Balancing 操作，并从 Workload Balancing 数据库中删除与此池有关的所有信息。
+如果断开连接，则将停止此资源池的所有 负载均衡 操作，并从 负载均衡 数据库中删除与此池有关的所有信息。
 
 </value>
   </data>
@@ -298,7 +298,7 @@
     <value>Tahoma, 8pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>断开 Workload Balancing 服务器连接</value>
+    <value>断开 负载均衡 服务器连接</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DisableWLBDialog</value>

@@ -175,7 +175,7 @@
     <value>1</value>
   </data>
   <data name="labelStatus.Text" xml:space="preserve">
-    <value>池 {0} 当前未连接到 Workload Balancing (WLB)服务器。
+    <value>池 {0} 当前未连接到 负载均衡 (WLB)服务器。
 
 {1}</value>
   </data>

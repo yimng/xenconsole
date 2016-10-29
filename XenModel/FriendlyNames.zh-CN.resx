@@ -751,7 +751,7 @@
     <value>VNCTerm 故障转储</value>
   </data>
   <data name="Label-host.system_status-wlb" xml:space="preserve">
-    <value>Workload Balancing 状态</value>
+    <value>负载均衡 状态</value>
   </data>
   <data name="Label-host.system_status-xapi" xml:space="preserve">
     <value>[XenServer] 守护程序内部日志</value>
@@ -1507,7 +1507,7 @@
     <value>池操作员可以管理池范围内的资源，其中包括设置存储、管理修补程序和创建资源池。
  
 - 配置池资源
-- 对高可用性(HA)、Workload Balancing (WLB)和修补程序管理功能具有完全访问权限
+- 对高可用性(HA)、负载均衡 (WLB)和修补程序管理功能具有完全访问权限
 - 无权进行角色管理</value>
   </data>
   <data name="Role.pool-operator.NameLabel" xml:space="preserve">
