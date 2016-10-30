@@ -102,8 +102,8 @@ namespace XenAdmin.Controls.XenSearch
                 PropertyNames.storage, ObjectTypes.LocalSR | ObjectTypes.RemoteSR));
             queryTypes.Add(new RecursiveXMOListQueryType<VDI>(6, ObjectTypes.VM | ObjectTypes.VDI, PropertyNames.disks, ObjectTypes.VDI));
 
-			queryTypes.Add(new RecursiveXMOQueryType<VM_appliance>(7, ObjectTypes.VM, PropertyNames.appliance, ObjectTypes.Appliance));
-			queryTypes.Add(new BooleanQueryType(7, ObjectTypes.VM, PropertyNames.in_any_appliance));
+			//queryTypes.Add(new RecursiveXMOQueryType<VM_appliance>(7, ObjectTypes.VM, PropertyNames.appliance, ObjectTypes.Appliance));
+			//queryTypes.Add(new BooleanQueryType(7, ObjectTypes.VM, PropertyNames.in_any_appliance));
 
             queryTypes.Add(new RecursiveXMOQueryType<Folder>(8, ObjectTypes.AllIncFolders, PropertyNames.folder, ObjectTypes.Folder));
             queryTypes.Add(new RecursiveXMOListQueryType<Folder>(8, ObjectTypes.AllIncFolders, PropertyNames.folders, ObjectTypes.Folder));

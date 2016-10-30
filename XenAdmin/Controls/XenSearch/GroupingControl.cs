@@ -82,7 +82,7 @@ namespace XenAdmin.Controls.XenSearch
             potentialGroups.Add(new PropertyGroupingType<VM.HA_Restart_Priority>(ObjectTypes.VM, PropertyNames.ha_restart_priority));
             potentialGroups.Add(new BoolGroupingType(ObjectTypes.VM, PropertyNames.read_caching_enabled));
             potentialGroups.Add(new BoolGroupingType(ObjectTypes.VM, PropertyNames.vendor_device_state));
-			potentialGroups.Add(applianceGroup);
+			//potentialGroups.Add(applianceGroup);
             potentialGroups.Add(new PropertyGroupingType<String>(ObjectTypes.AllExcFolders, PropertyNames.tags));
             potentialGroups.Add(new XenModelObjectPropertyGroupingType<VM>(
                 ObjectTypes.AllExcFolders & ~ObjectTypes.Pool & ~ObjectTypes.Server & ~ObjectTypes.VM,
