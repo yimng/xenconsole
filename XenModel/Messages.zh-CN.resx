@@ -14087,7 +14087,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value />
   </data>
   <data name="NEWSR_BOND_DEFAULT_NAME" xml:space="preserve">
-    <value />
+    <value>硬件 HBA 虚拟磁盘存储绑定</value>
   </data>
   <data name="NEWSR_LVMOBOND_DESCRIPTION" xml:space="preserve">
     <value />
@@ -14104,16 +14104,16 @@ SCSI ID: {6}
 大小: {7}</value>
   </data>
   <data name="SELECT_LUN_WARNING" xml:space="preserve">
-    <value />
+    <value>请选择两个大小相同的设备</value>
   </data>
   <data name="ACTION_SR_LUN_ADDING" xml:space="preserve">
-    <value />
+    <value>正在添加SR {0} LUN</value>
   </data>
   <data name="ACTION_SR_LUN_REMOVE_SUCCESSFUL" xml:space="preserve">
-    <value />
+    <value>LUN 删除成功</value>
   </data>
   <data name="ACTION_SR_LUN_REMOVING" xml:space="preserve">
-    <value />
+    <value>正在删除SR {0} LUN</value>
   </data>
   <data name="LUNBOND_BLURB_ENHANCEDSR" xml:space="preserve">
     <value>升级 vGate 以启用 LUN Bond 技术。LUN Bond使得 vGate 可以充分利用现有的存储硬件并自动卸载存储操作。这样便可以使用存储硬件固有的特性，在硬件层面实现具有高性能和空间效率的存储置备、克隆和快照功能。</value>
@@ -14122,7 +14122,7 @@ SCSI ID: {6}
     <value>新添加的LUN和旧的LUN大小不一样</value>
   </data>
   <data name="REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING" xml:space="preserve">
-    <value />
+    <value>存储修复失败（SCSIID为{0}的LUN无法访问，请检查硬件设备）。你确认要让该SR只含有一个LUN来使用吗？这样会降低存储的效率。</value>
   </data>
   <data name="UPLOADISO_FILTER" xml:space="preserve">
     <value>上传ISO | *.iso;*.ISO</value>
@@ -14271,5 +14271,12 @@ SCSI ID: {6}
   </data>
   <data name="EXPORT_VM_TITLE" xml:space="preserve">
     <value>正在从“{1}”导出 VM“{0}”</value>
+  </data>
+  <data name="NEWSR_LVMOBOND_BLURB" xml:space="preserve">
+    <value>vGate 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
+
+要将绑定的 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 vGate 主机中的存储设备、网络设备和 HBA。
+
+完成所有配置后， 该存储将由两个绑定的LUN 支持的 SCSI 包装成软raid设备显示给主机。然后可以使用该软raid设备访问这个两个绑定的LUN。</value>
   </data>
 </root>

@@ -2122,7 +2122,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Adding SR {0} LUN.
         /// </summary>
         public static string ACTION_SR_LUN_ADDING {
             get {
@@ -2131,7 +2131,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to LUN remove successfully.
         /// </summary>
         public static string ACTION_SR_LUN_REMOVE_SUCCESSFUL {
             get {
@@ -2140,7 +2140,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Removing SR {0} LUN.
         /// </summary>
         public static string ACTION_SR_LUN_REMOVING {
             get {
@@ -25075,7 +25075,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Hardware HBA Bond virtual disk storage.
         /// </summary>
         public static string NEWSR_BOND_DEFAULT_NAME {
             get {
@@ -25396,7 +25396,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Shared Logical Volume Manager (LVM) support is available using either iSCSI or Fibre Channel access to a shared LUN. 
+        ///
+        ///Using the LVM-based shared SR provides the same performance benefits as unshared LVM for local disk storage, however in the shared context, iSCSI or Fibre Channel-based SRs enable VM agility — VMs may be started on any server in a pool and migrated between them..
         /// </summary>
         public static string NEWSR_LVMOBOND_BLURB {
             get {
@@ -25405,7 +25407,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Hardware HBA Bond SR [{0} - {1}].
         /// </summary>
         public static string NEWSR_LVMOBOND_DESCRIPTION {
             get {
@@ -30824,7 +30826,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to SR repaire failed (The LUN with SCSIID {0} is not access, please check hardware device). Are you sure to use the SR with ONLY one LUN? This is not efficiency.
         /// </summary>
         public static string REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING {
             get {
@@ -32011,7 +32013,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Please select two devices with same size..
         /// </summary>
         public static string SELECT_LUN_WARNING {
             get {

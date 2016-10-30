@@ -91,10 +91,11 @@ namespace XenAdmin.Commands
                 base.DropDownItems.Add(new ToolStripSeparator());
                 base.DropDownItems.Add(new CommandToolStripMenuItem(new ForceVMShutDownCommand(mainWindow, selection)));
                 base.DropDownItems.Add(new CommandToolStripMenuItem(new ForceVMRebootCommand(mainWindow, selection)));
-
+                /**
                 DropDownItems.Add(new ToolStripSeparator());
                 DropDownItems.Add(new CommandToolStripMenuItem(new VappStartCommand(mainWindow, selection)));
                 DropDownItems.Add(new CommandToolStripMenuItem(new VappShutDownCommand(mainWindow, selection)));
+                **/
             }
         }
 

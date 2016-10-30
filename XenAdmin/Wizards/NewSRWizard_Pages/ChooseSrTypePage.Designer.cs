@@ -201,6 +201,7 @@
             this.radioButtonlunbond.ForeColor = System.Drawing.SystemColors.WindowText;
             this.radioButtonlunbond.Name = "radioButtonlunbond";
             this.radioButtonlunbond.UseVisualStyleBackColor = false;
+            this.radioButtonlunbond.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // rawhbaButton
             // 
@@ -209,6 +210,7 @@
             this.rawhbaButton.ForeColor = System.Drawing.SystemColors.WindowText;
             this.rawhbaButton.Name = "rawhbaButton";
             this.rawhbaButton.UseVisualStyleBackColor = false;
+            this.rawhbaButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // ChooseSrTypePage
             // 

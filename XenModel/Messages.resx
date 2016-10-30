@@ -826,13 +826,13 @@
     <value>Forgetting SR '{0}' on '{1}'...</value>
   </data>
   <data name="ACTION_SR_LUN_ADDING" xml:space="preserve">
-    <value />
+    <value>Adding SR {0} LUN</value>
   </data>
   <data name="ACTION_SR_LUN_REMOVE_SUCCESSFUL" xml:space="preserve">
-    <value />
+    <value>LUN remove successfully</value>
   </data>
   <data name="ACTION_SR_LUN_REMOVING" xml:space="preserve">
-    <value />
+    <value>Removing SR {0} LUN</value>
   </data>
   <data name="ACTION_SR_REPAIRING" xml:space="preserve">
     <value>Repairing SR {0}</value>
@@ -8556,7 +8556,7 @@ You should only proceed if you have verified that these settings are correct.</v
     <value>NFS SR [{0}]</value>
   </data>
   <data name="NEWSR_BOND_DEFAULT_NAME" xml:space="preserve">
-    <value />
+    <value>Hardware HBA Bond virtual disk storage</value>
   </data>
   <data name="NEWSR_CIFS_ACTION" xml:space="preserve">
     <value>SMB SR [{0}]</value>
@@ -8667,10 +8667,12 @@ Do you wish to format the disk?</value>
     <value>This LUN is already in use as SR {0} on server {1}.</value>
   </data>
   <data name="NEWSR_LVMOBOND_BLURB" xml:space="preserve">
-    <value />
+    <value>Shared Logical Volume Manager (LVM) support is available using either iSCSI or Fibre Channel access to a shared LUN. 
+
+Using the LVM-based shared SR provides the same performance benefits as unshared LVM for local disk storage, however in the shared context, iSCSI or Fibre Channel-based SRs enable VM agility — VMs may be started on any server in a pool and migrated between them.</value>
   </data>
   <data name="NEWSR_LVMOBOND_DESCRIPTION" xml:space="preserve">
-    <value />
+    <value>Hardware HBA Bond SR [{0} - {1}]</value>
   </data>
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
     <value>[XenServer] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
@@ -10709,7 +10711,7 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Connection Missing</value>
   </data>
   <data name="REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING" xml:space="preserve">
-    <value />
+    <value>SR repaire failed (The LUN with SCSIID {0} is not access, please check hardware device). Are you sure to use the SR with ONLY one LUN? This is not efficiency</value>
   </data>
   <data name="REPAIR_SR_DIALOG_TITLE_MULTIPLE" xml:space="preserve">
     <value>Repair Storage Repositories</value>
@@ -11116,7 +11118,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>Select Default SR</value>
   </data>
   <data name="SELECT_LUN_WARNING" xml:space="preserve">
-    <value />
+    <value>Please select two devices with same size.</value>
   </data>
   <data name="SELECT_NETWORK_TOOLTIP" xml:space="preserve">
     <value>There are no networks available for this network interface</value>

@@ -86,6 +86,7 @@ namespace XenAdmin.Commands
 
         protected override bool CanExecuteCore(SelectedItemCollection selection)
         {
+            /**
             if (selection.AllItemsAre<VM_appliance>())
                 return selection.AtLeastOneXenObjectCan<VM_appliance>(CanShutDownAppliance);
 
@@ -99,7 +100,7 @@ namespace XenAdmin.Commands
                         return CanShutDownAppliance(firstVm.Connection.Resolve(firstVapp));
                 }
             }
-
+            **/
             return false;
         }
 
