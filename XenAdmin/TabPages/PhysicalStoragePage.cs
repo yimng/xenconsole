@@ -170,7 +170,15 @@ namespace XenAdmin.TabPages
             }
             else
             {
-                Program.Invoke(this, () => RefreshRowForSr((SR)sender));
+                RefreshRowForSr((SR)sender);
+            }
+        }
+        private void pbd_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "currently_attached")
+            {
+                PBD pbd = (PBD)sender;
+                RefreshRowForSr(pbd.Connection.Resolve(pbd.SR));
             }
         }
 
@@ -275,6 +283,9 @@ namespace XenAdmin.TabPages
 
                 foreach (PBD pbd in pbds)
                 {
+                    pbd.PropertyChanged -= pbd_PropertyChanged;
+                    pbd.PropertyChanged += pbd_PropertyChanged;
+
                     SR sr = pbd.Connection.Resolve(pbd.SR);
 
                     if (sr == null || sr.IsToolsSR || !sr.Show(Properties.Settings.Default.ShowHiddenVMs))
