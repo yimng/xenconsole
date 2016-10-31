@@ -135,7 +135,7 @@ namespace XenAdmin.Wizards.ExportWizard
 			if (OvfModeOnly)
 				m_comboBoxFormat.Items.Add(ovfItem);
 			else
-				m_comboBoxFormat.Items.AddRange(new[] {xvaItem, ovfItem });
+				m_comboBoxFormat.Items.AddRange(new[] {xvaItem});
 
 			m_comboBoxFormat.SelectedItem = xvaItem;
 		}
