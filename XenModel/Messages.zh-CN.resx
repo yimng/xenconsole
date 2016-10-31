@@ -14279,4 +14279,7 @@ SCSI ID: {6}
 
 完成所有配置后， 该存储将由两个绑定的LUN 支持的 SCSI 包装成软raid设备显示给主机。然后可以使用该软raid设备访问这个两个绑定的LUN。</value>
   </data>
+  <data name="TARGET_SERVER" xml:space="preserve">
+    <value>目标服务器</value>
+  </data>
 </root>

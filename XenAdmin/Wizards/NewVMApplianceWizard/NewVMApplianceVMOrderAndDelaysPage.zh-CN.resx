@@ -145,7 +145,7 @@
     <value>6</value>
   </data>
   <data name="labelwizard.Text" xml:space="preserve">
-    <value>这些选项用于指定在通过 vApp 自动启动 VM 或执行高可用性操作期间 VM 的首选启动顺序和时间。启动顺序为 0 (零)的 VM 将首先启动。也可以配置延迟间隔，以指定从 VM 启动到再按启动顺序启动下一组 VM 之间的等待时间。
+    <value>这些选项用于指定在执行高可用性操作期间 VM 的首选启动顺序和时间。启动顺序为 0 (零)的 VM 将首先启动。也可以配置延迟间隔，以指定从 VM 启动到再按启动顺序启动下一组 VM 之间的等待时间。
 </value>
   </data>
   <data name="&gt;&gt;labelwizard.Name" xml:space="preserve">
