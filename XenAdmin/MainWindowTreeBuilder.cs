@@ -351,12 +351,7 @@ namespace XenAdmin
                     node = AddVmApplianceNode((VM_appliance)group);
                 }
                 else if (group is SR)
-                {
-                    SR sr = group as SR;
-                    if (!sr.IsLocalSR)
-                    {
-                        return null;
-                    }
+                {                    
                     node = AddSRNode((SR)group);
                 }
                 else if (group is XenAPI.Network)
