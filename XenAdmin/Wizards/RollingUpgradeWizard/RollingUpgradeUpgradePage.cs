@@ -454,6 +454,20 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
         private List<PlanAction> GetSubTasksFor(Host host)
         {
             List<XenRef<VM>> runningVMs = RunningVMs(host);
+            if (!precheck)
+            {
+                return new List<PlanAction>
+                       {
+                           new PatchUpgradeHostPlanAction(host, InstallMethodConfig,this.FileName)
+                       };
+            }
+            return new List<PlanAction>
+                       {
+                           new EvacuateHostPlanAction(host),
+                           new PatchUpgradeHostPlanAction(host, InstallMethodConfig,this.FileName),
+                           new BringBabiesBackAction(runningVMs, host, true)
+                       };
+            /**
             if (ManualModeSelected)
                 return new List<PlanAction>
                            {
@@ -467,6 +481,7 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
                            new UpgradeHostPlanAction(host, InstallMethodConfig),
                            new BringBabiesBackAction(runningVMs, host, true)
                        };
+            **/
         }
 
         private static List<XenRef<VM>> RunningVMs(Host host)
