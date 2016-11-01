@@ -6898,6 +6898,9 @@ Click Configure HA to alter the settings displayed below.</value>
   <data name="IMPORT_THREAD_NAME" xml:space="preserve">
     <value>XenAppliance.Import.Thread</value>
   </data>
+  <data name="IMPORT_UPGRADE_PAGE_TGZ_ONLY" xml:space="preserve">
+    <value>Enter the pathname of an TGZ package or click Browse to find the file you want.</value>
+  </data>
   <data name="IMPORT_URI_NO_DESTINATION" xml:space="preserve">
     <value>Import is a URI but no destination path defined.</value>
   </data>
@@ -9932,6 +9935,9 @@ Size: {3}</value>
     <value>{0}
 File not found</value>
   </data>
+  <data name="PATCH_PACKAGE_HALSIGNFILETYPES" xml:space="preserve">
+    <value>vGate server patch package (*.tgz;)|*.tgz;</value>
+  </data>
   <data name="PATCH_UPLOADED" xml:space="preserve">
     <value>Update uploaded to server '{0}' </value>
   </data>
@@ -11669,6 +11675,9 @@ The upper limit: SR size / {2}</value>
   </data>
   <data name="START_SHUTDOWN_VMS" xml:space="preserve">
     <value>Start shut down VMs</value>
+  </data>
+  <data name="START_SSH_FAILED" xml:space="preserve">
+    <value>cann't start ssh</value>
   </data>
   <data name="START_TIME" xml:space="preserve">
     <value>Start time</value>

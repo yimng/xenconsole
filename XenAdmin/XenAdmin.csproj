@@ -68,6 +68,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DiscUtils.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\log4net.dll</HintPath>
     </Reference>
@@ -96,6 +102,9 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tamir.SharpSSH">
+      <HintPath>..\Tamir.SharpSSH.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\BRActions\BackupAction.cs" />
@@ -1104,6 +1113,14 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Wizards\RestoreWizard_Pages\RestoreDataModel.cs" />
+    <Compile Include="Wizards\RollingUpgradeWizard\PlanActions\PatchUpgradeHostPlanAction.cs" />
+    <Compile Include="Wizards\RollingUpgradeWizard\PlanActions\PatchUpgradeThread.cs" />
+    <Compile Include="Wizards\RollingUpgradeWizard\RollingUpgradeWizard_SelectPackagePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\RollingUpgradeWizard\RollingUpgradeWizard_SelectPackagePage.designer.cs">
+      <DependentUpon>RollingUpgradeWizard_SelectPackagePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="XenSearch\TreeNodeGroupAcceptor.cs">
     </Compile>
     <Compile Include="Dialogs\FolderChangeDialog.cs">
@@ -2827,6 +2844,12 @@
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.resx" />
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RollingUpgradeWizard\RollingUpgradeWizard_SelectPackagePage.resx">
+      <DependentUpon>RollingUpgradeWizard_SelectPackagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RollingUpgradeWizard\RollingUpgradeWizard_SelectPackagePage.zh-CN.resx">
+      <DependentUpon>RollingUpgradeWizard_SelectPackagePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\WizardProgress.resx">
       <DependentUpon>WizardProgress.cs</DependentUpon>
       <SubType>Designer</SubType>

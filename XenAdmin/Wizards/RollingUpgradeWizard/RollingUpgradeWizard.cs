@@ -38,6 +38,7 @@ using XenAdmin.Controls;
 using XenAdmin.Core;
 using XenAdmin.Dialogs;
 using System.Windows.Forms;
+using XenAdmin.Diagnostics.Problems;
 
 namespace XenAdmin.Wizards.RollingUpgradeWizard
 {
@@ -52,6 +53,8 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
         private readonly RollingUpgradeWizardInstallMethodPage RollingUpgradeWizardInstallMethodPage;
         private readonly RollingUpgradeWizardUpgradeModePage RollingUpgradeWizardUpgradeModePage;
         private readonly RollingUpgradeReadyToUpgradePage RollingUpgradeReadyToUpgradePage;
+        private readonly RollingUpgradeWizardSelectPackagePage RollingUpgradeWizardSelectPackagePage;
+
 
         public RollingUpgradeWizard()
         {
@@ -64,28 +67,31 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
             RollingUpgradeWizardInstallMethodPage = new RollingUpgradeWizardInstallMethodPage();
             RollingUpgradeWizardUpgradeModePage = new RollingUpgradeWizardUpgradeModePage();
             RollingUpgradeReadyToUpgradePage = new RollingUpgradeReadyToUpgradePage();
+            RollingUpgradeWizardSelectPackagePage = new RollingUpgradeWizardSelectPackagePage();
 
             AddPage(RollingUpgradeWizardFirstPage);
             AddPage(RollingUpgradeWizardSelectPool);
-            AddPage(RollingUpgradeWizardUpgradeModePage);
+            
+            //AddPage(RollingUpgradeWizardUpgradeModePage);
+
+            AddPage(RollingUpgradeWizardSelectPackagePage);
             AddPage(RollingUpgradeWizardPrecheckPage);
             //Here has to be inserted the installer location page if automatic
-            AddPage(RollingUpgradeReadyToUpgradePage);
+            //AddPage(RollingUpgradeReadyToUpgradePage);
             AddPage(RollingUpgradeUpgradePage);
         }
 
         protected override void FinishWizard()
         {
             var brokenSRs = RollingUpgradeWizardSelectPool.SelectedMasters
+                //.Where(Helpers.BostonOrGreater)
                 .Any(master => master != null && master.Connection.Cache.SRs.Any(sr => sr.IsBroken(true)));
             if(brokenSRs)
             {
-                using (var dlg = new ThreeButtonDialog(
+                new ThreeButtonDialog(
                     new ThreeButtonDialog.Details(SystemIcons.Warning,
-                        Messages.BROKEN_SRS_AFTER_UPGRADE)))
-                {
-                    dlg.ShowDialog(Program.MainWindow);
-                }
+                        Messages.BROKEN_SRS_AFTER_UPGRADE))
+                        .ShowDialog(Program.MainWindow);
             }
             base.FinishWizard();
         }
@@ -98,20 +104,22 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
             {
                 var selectedMasters = RollingUpgradeWizardSelectPool.SelectedMasters;
                 RollingUpgradeWizardPrecheckPage.SelectedMasters = selectedMasters;
-                RollingUpgradeWizardInstallMethodPage.SelectedMasters = selectedMasters;
-                RollingUpgradeReadyToUpgradePage.SelectedMasters = selectedMasters;
+                //RollingUpgradeWizardInstallMethodPage.SelectedMasters = selectedMasters;
+                //RollingUpgradeReadyToUpgradePage.SelectedMasters = selectedMasters;
+                RollingUpgradeWizardSelectPackagePage.SelectedMasters = selectedMasters;
                 RollingUpgradeUpgradePage.SelectedMasters = selectedMasters;
             }
             else if (prevPageType == typeof(RollingUpgradeWizardUpgradeModePage))
             {
                 var manualModeSelected = RollingUpgradeWizardUpgradeModePage.ManualModeSelected;
-                
+
                 RemovePageAt(4);
-                if (manualModeSelected)
+                /*if (manualModeSelected)
                     AddPage(RollingUpgradeReadyToUpgradePage, 4);
                 else
                     AddPage(RollingUpgradeWizardInstallMethodPage, 4);
-
+                */
+                AddPage(RollingUpgradeWizardSelectPackagePage, 4);
                 RollingUpgradeWizardPrecheckPage.ManualModeSelected = manualModeSelected;
                 RollingUpgradeUpgradePage.ManualModeSelected = manualModeSelected;
             }
@@ -119,6 +127,16 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
                 RollingUpgradeUpgradePage.InstallMethodConfig = RollingUpgradeWizardInstallMethodPage.InstallMethodConfig;
             else if (prevPageType == typeof(RollingUpgradeWizardPrecheckPage))
                 RollingUpgradeUpgradePage.ProblemsResolvedPreCheck = RollingUpgradeWizardPrecheckPage.ProblemsResolvedPreCheck;
+            else if (prevPageType == typeof(RollingUpgradeWizardSelectPackagePage))
+            {
+                RollingUpgradeUpgradePage.FileName = RollingUpgradeWizardSelectPackagePage.GetFileName();
+                if (!RollingUpgradeWizardSelectPackagePage.isPrecheck())
+                {
+                    RollingUpgradeUpgradePage.ProblemsResolvedPreCheck = new List<Problem>();
+                    RollingUpgradeUpgradePage.precheck = false;
+                    RemovePageAt(3);
+                }
+            }
         }
 
         protected override void OnShown(System.EventArgs e)
@@ -151,10 +169,10 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
                 using (MultipleAction multipleAction = new MultipleAction(xenConnection, Messages.REVERT_WIZARD_CHANGES,
                                                                           Messages.REVERTING_WIZARD_CHANGES,
                                                                           Messages.REVERTED_WIZARD_CHANGES,
-                                                                          subActions, false, true))
+                                                                          subActions, true))
                 {
-                    using (var dialog = new ActionProgressDialog(multipleAction, ProgressBarStyle.Blocks))
-                        dialog.ShowDialog(Program.MainWindow);
+                    ActionProgressDialog dialog = new ActionProgressDialog(multipleAction, ProgressBarStyle.Blocks);
+                    dialog.ShowDialog(Program.MainWindow);
                 }
             }
         }

@@ -14282,4 +14282,13 @@ SCSI ID: {6}
   <data name="TARGET_SERVER" xml:space="preserve">
     <value>目标服务器</value>
   </data>
+  <data name="IMPORT_UPGRADE_PAGE_TGZ_ONLY" xml:space="preserve">
+    <value>输入 TGZ 包的路径名，或者单击“浏览”找到所需文件。</value>
+  </data>
+  <data name="PATCH_PACKAGE_HALSIGNFILETYPES" xml:space="preserve">
+    <value>vGate server 补丁包 (*.tgz;)|*.tgz;</value>
+  </data>
+  <data name="START_SSH_FAILED" xml:space="preserve">
+    <value>无法启动ssh服务</value>
+  </data>
 </root>

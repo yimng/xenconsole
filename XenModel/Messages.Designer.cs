@@ -19679,6 +19679,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter the pathname of an TGZ package or click Browse to find the file you want..
+        /// </summary>
+        public static string IMPORT_UPGRADE_PAGE_TGZ_ONLY {
+            get {
+                return ResourceManager.GetString("IMPORT_UPGRADE_PAGE_TGZ_ONLY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Import is a URI but no destination path defined..
         /// </summary>
         public static string IMPORT_URI_NO_DESTINATION {
@@ -27806,6 +27815,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to vGate server patch package (*.tgz;)|*.tgz;.
+        /// </summary>
+        public static string PATCH_PACKAGE_HALSIGNFILETYPES {
+            get {
+                return ResourceManager.GetString("PATCH_PACKAGE_HALSIGNFILETYPES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update uploaded to server &apos;{0}&apos; .
         /// </summary>
         public static string PATCH_UPLOADED {
@@ -33588,6 +33606,15 @@ namespace XenAdmin {
         public static string START_SHUTDOWN_VMS {
             get {
                 return ResourceManager.GetString("START_SHUTDOWN_VMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cann&apos;t start ssh.
+        /// </summary>
+        public static string START_SSH_FAILED {
+            get {
+                return ResourceManager.GetString("START_SSH_FAILED", resourceCulture);
             }
         }
         

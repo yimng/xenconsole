@@ -60,6 +60,7 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
         private UnwindProblemsAction revertAction = null;
         private SemiAutomaticBackgroundThread bworker;
         private AutomaticBackgroundThread _workerAutomaticUpgrade;
+        private PatchUpgradeThread _workerPatchUpgrade;
         #endregion
 
         public RollingUpgradeUpgradePage()
@@ -162,6 +163,8 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
         public Dictionary<string, string> InstallMethodConfig { private get; set; }
         public List<Problem> ProblemsResolvedPreCheck { private get; set; }
         public RollingUpgradeStatus UpgradeStatus { get; private set; }
+        public String FileName { private get; set; }
+        public bool precheck { get; set; }
 
         #endregion
 
@@ -179,14 +182,28 @@ namespace XenAdmin.Wizards.RollingUpgradeWizard
 
         private void StartUpgrade()
         {
-            if (ManualModeSelected)
+            StartPatchUpgrade();
+            /*if (ManualModeSelected)
             {
                 StartSemiAutomaticUpgrade();
             }
             else
             {
                 StartAutomaticUpgrade();
-            }
+            }*/
+        }
+
+        private void StartPatchUpgrade()
+        {
+            _workerPatchUpgrade = new PatchUpgradeThread(SelectedMasters, planActions, revertAction);
+            _workerPatchUpgrade.ReportRunning += ReportRunning;
+            _workerPatchUpgrade.ReportException += ReportException;
+            _workerPatchUpgrade.ReportHostDone += ReportHostDone;
+            _workerPatchUpgrade.ReportRevertDone += ReportRevertDone;
+            _workerPatchUpgrade.Completed += Completed;
+            _workerPatchUpgrade.Start();
+
+            UpgradeStatus = RollingUpgradeStatus.Started;
         }
 
         private string completedTitleLabel = Messages.ROLLING_UPGRADE_UPGRADE_COMPLETED;
