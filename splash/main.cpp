@@ -64,7 +64,7 @@ const int LongTimerId = 2;
 
 const int ShortTimerInterval = 100;
 // How long to wait for XenCenterMain to start
-const int LongTimerInterval = 10000;
+const int LongTimerInterval = 30000;
 
 const int PipeTimeout = 60 * 1000;
 
@@ -88,7 +88,7 @@ const size_t PathLen = 17;
 const TCHAR ProductVersion[] = TEXT("0.0");
 const TCHAR ProductBuild[] = TEXT("0000");
 #else
-const TCHAR ProductVersion[] = TEXT("5.2.0");
+const TCHAR ProductVersion[] = TEXT("6.0.0");
 const TCHAR ProductBuild[] = TEXT("1128");
 #endif
 
