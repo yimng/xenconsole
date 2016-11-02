@@ -93,5 +93,13 @@ namespace XenAdmin.Commands
                 return Images.StaticImages._000_PoolNew_h32bit_16;
             }
         }
+
+        public override Image ToolBarImage
+        {
+            get
+            {
+                return Resources._000_PoolNew_h32bit_24;
+            }
+        }
     }
 }
