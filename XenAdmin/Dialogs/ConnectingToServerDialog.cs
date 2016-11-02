@@ -233,6 +233,11 @@ namespace XenAdmin.Dialogs
                                                        {
                                                            Show(getOwnerForm());
                                                        }
+                                                       if (!result)
+                                                       {
+                                                           if (_connection != null)
+                                                               XenConnectionUI.connectionDialogs.Remove(_connection);
+                                                       }
                                                    });
             return result;
         }
