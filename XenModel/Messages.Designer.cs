@@ -22052,6 +22052,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disconnect Workload &amp;Balancing Server.
+        /// </summary>
+        public static string MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Ta&amp;gs....
         /// </summary>
         public static string MAINWINDOW_EDIT_TAGS {

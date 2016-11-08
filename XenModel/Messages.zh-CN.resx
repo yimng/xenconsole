@@ -14291,4 +14291,7 @@ SCSI ID: {6}
   <data name="START_SSH_FAILED" xml:space="preserve">
     <value>无法启动ssh服务</value>
   </data>
+  <data name="MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU" xml:space="preserve">
+    <value>断开负载均衡服务器连接(&amp;B)</value>
+  </data>
 </root>

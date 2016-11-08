@@ -732,6 +732,8 @@ namespace XenAdmin.Commands
                 items.Add(new DisconnectPoolCommand(mainWindow, selection));
                 items.Add(new PoolReconnectAsCommand(mainWindow, selection));
                 items.AddSeparator();
+                items.Add(new DeletePoolCommand(mainWindow, selection));
+                items.Add(new DisconnectWlbServerCommand(mainWindow, selection));
                 items.AddPluginItems(PluginContextMenu.pool, selection);
                 items.AddSeparator();
                 items.Add(new PoolPropertiesCommand(mainWindow, selection));

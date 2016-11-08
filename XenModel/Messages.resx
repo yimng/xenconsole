@@ -7670,6 +7670,9 @@ This will permanently delete and reinitialize all local storage on the servers. 
   <data name="MAINWINDOW_DISCONNECT_CONTEXT_MENU_POOL" xml:space="preserve">
     <value>&amp;Disconnect</value>
   </data>
+  <data name="MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU" xml:space="preserve">
+    <value>Disconnect Workload &amp;Balancing Server</value>
+  </data>
   <data name="MAINWINDOW_EDIT_TAGS" xml:space="preserve">
     <value>Edit Ta&amp;gs...</value>
   </data>

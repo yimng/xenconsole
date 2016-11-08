@@ -57,7 +57,10 @@ namespace XenAdmin.Commands
         public DisconnectWlbServerCommand()
         {
         }
-
+        public DisconnectWlbServerCommand(IMainWindow mainWindow, IEnumerable<SelectedItem> selection)
+            : base(mainWindow, selection)
+        {
+        }
         protected override void ExecuteCore(SelectedItemCollection selection)
         {
             if (Helpers.FeatureForbidden(selection[0].XenObject, Host.RestrictWLB))
@@ -103,6 +106,14 @@ namespace XenAdmin.Commands
                 return inPool  && (Helpers.WlbConfigured(pool.Connection) && !Helpers.FeatureForbidden(connection, Host.RestrictWLB));
             }
             return false;
+        }
+
+        public override string ContextMenuText
+        {
+            get
+            {
+                return Messages.MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU;
+            }
         }
     }
 }
