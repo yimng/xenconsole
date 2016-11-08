@@ -54,5 +54,27 @@ namespace XenAdmin.Actions
             XenAPI.SR.scan(Session, SR.opaque_ref);
             Description = Messages.COMPLETED;
         }
+
+        protected override void CleanOnError()
+        {
+            Failure f = Exception as Failure;
+            if (f != null && f.ErrorDescription[0] == "SR_BACKEND_FAILURE_181")
+            {
+                //detach the PBD to inform the user to fix this sr
+                if (SR.IsDetachable())
+                    UnplugPBDs();
+            }
+        }
+
+        private void UnplugPBDs()
+        {
+            if (SR.PBDs.Count < 1)
+                return;
+
+            foreach (XenRef<PBD> pbd in SR.PBDs)
+            {
+                PBD.async_unplug(Session, pbd.opaque_ref);
+            }
+        }
     }
 }

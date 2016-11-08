@@ -310,7 +310,11 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
 
                 var list = new List<DataGridViewRow>();
                 foreach (Capability c in _capabilities)
+                {
+                    if (c.Key.Equals("CVSM"))
+                        continue;
                     list.Add(new CapabilityRow(c));
+                }                    
 
                 dataGridViewItems.Rows.AddRange(list.ToArray());
             }

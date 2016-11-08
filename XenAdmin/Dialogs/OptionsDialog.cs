@@ -85,11 +85,11 @@ namespace XenAdmin.Dialogs
             ConnectionOptionsPage.Log();
             ConsolesOptionsPage.Log();
             SecurityOptionsPage.Log();
-            if (!Helpers.CommonCriteriaCertificationRelease)
-                UpdatesOptionsPage.Log();
+            //if (!Helpers.CommonCriteriaCertificationRelease)
+            //    UpdatesOptionsPage.Log();
             DisplayOptionsPage.Log();
             SaveAndRestoreOptionsPage.Log();
-            PluginOptionsPage.Log();
+            //PluginOptionsPage.Log();
             ConfirmationOptionsPage.Log();
         }
 

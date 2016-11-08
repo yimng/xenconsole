@@ -73,7 +73,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 
         protected override bool IsShowEncryption
         {
-            get { return false; }
+            get { return true; }
         }
 
         protected override bool ImplementsIsDirty()

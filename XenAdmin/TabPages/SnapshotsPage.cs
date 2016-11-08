@@ -307,8 +307,13 @@ namespace XenAdmin.TabPages
             {
                 if (VM == null || VM.snapshots == null)
                     return;
-                var snapshots = VM.Connection.ResolveAll(VM.snapshots);
-
+                List<XenAPI.VM> snapshots = new List<VM>();
+                foreach (VM snapshot in this.VM.Connection.ResolveAll<XenAPI.VM>(this.VM.snapshots))
+                {
+                    if (snapshot.other_config.ContainsKey("halsign_snapshot"))
+                        continue;
+                    snapshots.Add(snapshot);
+                }
 
                 if (snapshots.Count == 0)
                 {
