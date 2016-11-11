@@ -64,7 +64,7 @@ const int LongTimerId = 2;
 
 const int ShortTimerInterval = 100;
 // How long to wait for XenCenterMain to start
-const int LongTimerInterval = 10000;
+const int LongTimerInterval = 30000;
 
 const int PipeTimeout = 60 * 1000;
 

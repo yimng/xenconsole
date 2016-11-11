@@ -581,6 +581,7 @@ namespace XenAdmin
                 Program.Invoke(Program.MainWindow, Program.CloseSplash);
             });
 
+            /**
             if (!Program.RunInAutomatedTestMode && !Helpers.CommonCriteriaCertificationRelease)
             {
                 if (!Properties.Settings.Default.SeenAllowUpdatesDialog)
@@ -600,7 +601,7 @@ namespace XenAdmin
                 healthCheckResultTimer.Tick += HealthCheckResultTimer_Tick;
                 healthCheckResultTimer.Start();
             }
-
+            **/
             ProcessCommand(CommandLineArgType, CommandLineParam);
         }
 
