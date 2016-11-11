@@ -50,6 +50,7 @@ namespace XenAdmin.Actions.VMActions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        private readonly bool UseIntellicache;
         private readonly string NameLabel;
         private readonly string NameDescription;
         private readonly InstallMethod InsMethod;
@@ -115,7 +116,7 @@ namespace XenAdmin.Actions.VMActions
             string name, string description, InstallMethod installMethod,
             string pvArgs, VDI cd, string url, Host homeServer, long vcpusMax, long vcpusAtStartup,
             long memoryDynamicMin, long memoryDynamicMax, long memoryStaticMax,
-            List<DiskDescription> disks, SR fullCopySR, List<VIF> vifs, bool startAfter,
+            List<DiskDescription> disks, SR fullCopySR, List<VIF> vifs, bool startAfter, bool useIntelliCache,
             Action<VM, bool> warningDialogHAInvalidConfig,
             Action<VMStartAbstractAction, Failure> startDiagnosisForm,
             GPU_group gpuGroup, VGPU_type vgpuType, bool modifyVgpuSettings, long coresPerSocket, string cloudConfigDriveTemplateText)
@@ -140,6 +141,7 @@ namespace XenAdmin.Actions.VMActions
             Disks = disks;
             Vifs = vifs;
             StartAfter = startAfter;
+            UseIntellicache = useIntelliCache;
             _warningDialogHAInvalidConfig = warningDialogHAInvalidConfig;
             _startDiagnosisForm = startDiagnosisForm;
             GpuGroup = gpuGroup;
@@ -485,7 +487,10 @@ namespace XenAdmin.Actions.VMActions
 
                 if (vdi == null)
                     continue;
-
+                if (UseIntellicache)
+                {
+                    VDI.set_allow_caching(Session, vdi.opaque_ref, true);
+                }
                 if (vdi.name_description != disk.Disk.name_description)
                     VDI.set_name_description(Session, vdi.opaque_ref, disk.Disk.name_description);
                 if (vdi.name_label != disk.Disk.name_label)

@@ -72,7 +72,13 @@ namespace XenAdmin.Wizards.NewVMWizard
                 return AutoStartCheckBox.Checked;
             }
         }
-
+        public bool UseIntelliCache
+        {
+            get
+            {
+                return UseSSDCache.Checked;
+            }
+        }
         public override void PageLoaded(PageLoadedDirection direction)
         {
             base.PageLoaded(direction);

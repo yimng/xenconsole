@@ -36,6 +36,7 @@ namespace XenAdmin.Wizards.NewVMWizard
             this.SummaryGridView = new XenAdmin.Controls.DataGridViewEx.DataGridViewEx();
             this.PropertyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UseSSDCache = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,10 +95,17 @@ namespace XenAdmin.Wizards.NewVMWizard
             this.ValueColumn.Name = "ValueColumn";
             this.ValueColumn.ReadOnly = true;
             // 
+            // UseSSDCache
+            // 
+            resources.ApplyResources(this.UseSSDCache, "UseSSDCache");
+            this.UseSSDCache.Name = "UseSSDCache";
+            this.UseSSDCache.UseVisualStyleBackColor = true;
+            // 
             // Page_Finish
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.UseSSDCache);
             this.Controls.Add(this.SummaryGridView);
             this.Controls.Add(this.AutoStartCheckBox);
             this.Controls.Add(this.richTextBox1);
@@ -115,5 +123,6 @@ namespace XenAdmin.Wizards.NewVMWizard
         private XenAdmin.Controls.DataGridViewEx.DataGridViewEx SummaryGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn PropertyColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValueColumn;
+        private System.Windows.Forms.CheckBox UseSSDCache;
     }
 }

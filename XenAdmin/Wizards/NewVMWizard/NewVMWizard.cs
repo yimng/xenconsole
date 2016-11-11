@@ -177,6 +177,7 @@ namespace XenAdmin.Wizards.NewVMWizard
                                         page_6_Storage.FullCopySR,
                                         page_7_Networking.SelectedVifs,
                                         page_8_Finish.StartImmediately,
+                                        page_8_Finish.UseIntelliCache,
                                         VMOperationCommand.WarningDialogHAInvalidConfig,
                                         VMOperationCommand.StartDiagnosisForm,
                                         gpuCapability ? pageVgpu.GpuGroup : null,
