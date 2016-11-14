@@ -1009,6 +1009,7 @@ namespace XenAdmin
             XenAPI.Session.Proxy = XenAdminConfigManager.Provider.GetProxyFromSettings(null);
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Stores the Basic and Digest authentication modules, used for proxy server authentication, 
         /// for later use; this is needed because we cannot create new instances of them and it 
@@ -1055,7 +1056,7 @@ namespace XenAdmin
             XenAPI.HTTP.CurrentProxyAuthenticationMethod = authSetting;
         }
 
-        private const string SplashWindowClass = "XenCenterSplash0001";
+        private const string SplashWindowClass = "ConsoleSplash0001";
 
         internal static void CloseSplash()
         {
@@ -1063,7 +1064,7 @@ namespace XenAdmin
 
             if (hWnd == IntPtr.Zero)
             {
-                //log.Warn("Couldn't find splash screen in CloseSplash()", new System.ComponentModel.Win32Exception());
+                log.Warn("Couldn't find splash screen in CloseSplash()", new System.ComponentModel.Win32Exception());
                 return;
             }
 
