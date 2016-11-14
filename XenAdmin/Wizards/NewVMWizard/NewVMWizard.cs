@@ -150,6 +150,7 @@ namespace XenAdmin.Wizards.NewVMWizard
             page_3_InstallationMedia.Affinity = affinity;
             page_4_HomeServer.Affinity = affinity;
             page_6_Storage.Affinity = affinity;
+            page_8_Finish.Affinity = affinity;
         }
 
         protected override void FinishWizard()
@@ -286,6 +287,7 @@ namespace XenAdmin.Wizards.NewVMWizard
                     m_affinity = page_4_HomeServer.SelectedHomeServer;
                     page_6_Storage.Affinity = m_affinity;
                     page_CloudConfigParameters.Affinity = m_affinity;
+                    page_8_Finish.Affinity = m_affinity;
                 }
             }
             else if (prevPageType == typeof(Page_Storage))

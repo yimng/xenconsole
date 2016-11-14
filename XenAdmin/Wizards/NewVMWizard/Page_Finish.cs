@@ -33,7 +33,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using XenAdmin.Controls;
-
+using XenAPI;
 
 namespace XenAdmin.Wizards.NewVMWizard
 {
@@ -95,8 +95,41 @@ namespace XenAdmin.Wizards.NewVMWizard
         public override void SelectDefaultControl()
         {
             AutoStartCheckBox.Select();
+            UseSSDCache.Visible = ShowSSDCache();
         }
 
         public Func<IEnumerable<KeyValuePair<string, string>>> SummaryRetreiver { private get; set; }
+        public Host Affinity { private get; set; }
+
+        private bool ShowSSDCache()
+        {
+            List<SR> AllSRs = new List<SR>(Connection.Cache.SRs);
+            List<SR> srs;
+            if (Affinity != null)
+            {
+                srs = new List<SR>();
+                foreach(SR sr in AllSRs)
+                {
+                    if (sr.GetStorageHost() == Affinity)
+                    {
+                        srs.Add(sr);
+                    }
+                }
+            }
+            else
+            {
+                srs = AllSRs;
+            }
+            foreach (SR sr in srs)
+            {
+                if (sr == null || sr.IsToolsSR || !sr.Show(Properties.Settings.Default.ShowHiddenVMs))
+                    continue;
+                if (sr.GetSRType(true) == SR.SRTypes.ext && SR.get_local_cache_enabled(Connection.Session, sr.opaque_ref))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
