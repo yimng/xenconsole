@@ -14294,4 +14294,22 @@ SCSI ID: {6}
   <data name="MAINWINDOW_DISCONNECT_WLB_CONTEXT_MENU" xml:space="preserve">
     <value>断开负载均衡服务器连接(&amp;B)</value>
   </data>
+  <data name="ACTION_HOSTS_EJECT" xml:space="preserve">
+    <value>弹出所有主机上的CD</value>
+  </data>
+  <data name="ACTION_HOSTS_EJECTING" xml:space="preserve">
+    <value>正在弹出所有主机上的CD</value>
+  </data>
+  <data name="ACTION_HOST_EJECT" xml:space="preserve">
+    <value>弹出主机上的CD</value>
+  </data>
+  <data name="ACTION_HOST_EJECTING" xml:space="preserve">
+    <value>正在弹出CD</value>
+  </data>
+  <data name="HOST_EJECT" xml:space="preserve">
+    <value>弹出CD</value>
+  </data>
+  <data name="MAINWINDOW_EJECT" xml:space="preserve">
+    <value>弹出主机上的CD</value>
+  </data>
 </root>

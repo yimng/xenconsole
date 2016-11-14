@@ -525,6 +525,12 @@
   <data name="ACTION_HEALTHCHECK_AUTHENTICATION_PROGRESS" xml:space="preserve">
     <value>Authenticating with [Citrix] Insight Services</value>
   </data>
+  <data name="ACTION_HOSTS_EJECT" xml:space="preserve">
+    <value>eject CD on host</value>
+  </data>
+  <data name="ACTION_HOSTS_EJECTING" xml:space="preserve">
+    <value>ejecting CD on hosts</value>
+  </data>
   <data name="ACTION_HOSTS_REBOOTED" xml:space="preserve">
     <value>Servers rebooted</value>
   </data>
@@ -536,6 +542,12 @@
   </data>
   <data name="ACTION_HOSTS_SHUTTING_DOWN" xml:space="preserve">
     <value>Shutting down servers</value>
+  </data>
+  <data name="ACTION_HOST_EJECT" xml:space="preserve">
+    <value>eject CD on host</value>
+  </data>
+  <data name="ACTION_HOST_EJECTING" xml:space="preserve">
+    <value>ejecting CD</value>
   </data>
   <data name="ACTION_HOST_REBOOTED" xml:space="preserve">
     <value>Server '{0}' rebooted</value>
@@ -6526,6 +6538,9 @@ Click Configure HA to alter the settings displayed below.</value>
   <data name="HOST_DISABLE" xml:space="preserve">
     <value>Server entering maintenance mode</value>
   </data>
+  <data name="HOST_EJECT" xml:space="preserve">
+    <value>eject CD</value>
+  </data>
   <data name="HOST_ENABLE" xml:space="preserve">
     <value>Server exiting maintenance mode</value>
   </data>
@@ -7675,6 +7690,9 @@ This will permanently delete and reinitialize all local storage on the servers. 
   </data>
   <data name="MAINWINDOW_EDIT_TAGS" xml:space="preserve">
     <value>Edit Ta&amp;gs...</value>
+  </data>
+  <data name="MAINWINDOW_EJECT" xml:space="preserve">
+    <value>eject CD on host</value>
   </data>
   <data name="MAINWINDOW_EXPIRE_MESSAGE" xml:space="preserve">
     <value>The [XenServer] license on '{0}' will expire in {1}.</value>

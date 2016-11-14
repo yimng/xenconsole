@@ -1285,6 +1285,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to eject CD on host.
+        /// </summary>
+        public static string ACTION_HOST_EJECT {
+            get {
+                return ResourceManager.GetString("ACTION_HOST_EJECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ejecting CD.
+        /// </summary>
+        public static string ACTION_HOST_EJECTING {
+            get {
+                return ResourceManager.GetString("ACTION_HOST_EJECTING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Server &apos;{0}&apos; rebooted.
         /// </summary>
         public static string ACTION_HOST_REBOOTED {
@@ -1353,6 +1371,24 @@ namespace XenAdmin {
         public static string ACTION_HOST_STARTING {
             get {
                 return ResourceManager.GetString("ACTION_HOST_STARTING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to eject CD on host.
+        /// </summary>
+        public static string ACTION_HOSTS_EJECT {
+            get {
+                return ResourceManager.GetString("ACTION_HOSTS_EJECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ejecting CD on hosts.
+        /// </summary>
+        public static string ACTION_HOSTS_EJECTING {
+            get {
+                return ResourceManager.GetString("ACTION_HOSTS_EJECTING", resourceCulture);
             }
         }
         
@@ -18605,6 +18641,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to eject CD.
+        /// </summary>
+        public static string HOST_EJECT {
+            get {
+                return ResourceManager.GetString("HOST_EJECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Server exiting maintenance mode.
         /// </summary>
         public static string HOST_ENABLE {
@@ -22066,6 +22111,15 @@ namespace XenAdmin {
         public static string MAINWINDOW_EDIT_TAGS {
             get {
                 return ResourceManager.GetString("MAINWINDOW_EDIT_TAGS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to eject CD on host.
+        /// </summary>
+        public static string MAINWINDOW_EJECT {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_EJECT", resourceCulture);
             }
         }
         

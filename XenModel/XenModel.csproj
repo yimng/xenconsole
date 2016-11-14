@@ -85,6 +85,7 @@
     <Compile Include="Actions\Host\ApplyLicenseEditionAction.cs" />
     <Compile Include="Actions\Host\ChangeControlDomainMemoryAction.cs" />
     <Compile Include="Actions\Host\DestroyHostAction.cs" />
+    <Compile Include="Actions\Host\EjectHostAction.cs" />
     <Compile Include="Actions\Host\EnableHostAction.cs" />
     <Compile Include="Actions\Host\EvacuateHostAction.cs" />
     <Compile Include="Actions\Host\HostAbstractAction.cs" />

@@ -1517,6 +1517,14 @@ namespace XenAPI
             return XenRef<Task>.Create(session.proxy.async_host_shutdown(session.uuid, (_host != null) ? _host : "").parse());
         }
 
+        public static void eject(Session session, string _host)
+        {
+            session.proxy.host_eject(session.uuid, (_host != null) ? _host : "").parse();
+        }
+        public static XenRef<Task> async_eject(Session session, string _host)
+        {
+            return XenRef<Task>.Create(session.proxy.async_host_eject(session.uuid, (_host != null) ? _host : "").parse());
+        }
         /// <summary>
         /// Reboot the host. (This function can only be called if there are no currently running VMs on the host and it is disabled.)
         /// First published in XenServer 4.0.

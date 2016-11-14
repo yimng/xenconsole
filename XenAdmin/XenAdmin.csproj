@@ -141,6 +141,7 @@
     <Compile Include="Commands\ConvertToThinSRCommand.cs" />
     <Compile Include="Commands\DisablePvsReadCachingCommand.cs" />
     <Compile Include="Commands\EnablePvsReadCachingCommand.cs" />
+    <Compile Include="Commands\EjectHostCommand.cs" />
     <Compile Include="Commands\InstallLicenseCommand.cs" />
     <Compile Include="Commands\RestartDockerContainerCommand.cs" />
     <Compile Include="Commands\ResumeDockerContainerCommand.cs" />

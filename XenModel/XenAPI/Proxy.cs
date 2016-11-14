@@ -3368,6 +3368,14 @@ namespace XenAPI
         Response<string>
         async_host_shutdown(string session, string _host);
 
+        [XmlRpcMethod("host.eject")]
+        Response<string>
+        host_eject(string session, string _host);
+
+        [XmlRpcMethod("Async.host.eject")]
+        Response<string>
+        async_host_eject(string session, string _host);
+
         [XmlRpcMethod("host.reboot")]
         Response<string>
         host_reboot(string session, string _host);

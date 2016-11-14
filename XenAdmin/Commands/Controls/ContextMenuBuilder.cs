@@ -542,6 +542,7 @@ namespace XenAdmin.Commands
 
                 items.AddIfEnabled(new RebootHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new ShutDownHostCommand(mainWindow, selection));
+                items.AddIfEnabled(new EjectHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new RestartToolstackCommand(mainWindow, selection));
                 items.AddIfEnabled(new BRToolStripMenuItem(mainWindow, selection));
                 items.AddSeparator();
@@ -597,6 +598,7 @@ namespace XenAdmin.Commands
 
                 items.AddIfEnabled(new RebootHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new ShutDownHostCommand(mainWindow, selection));
+                items.AddIfEnabled(new EjectHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new PowerOnHostCommand(mainWindow, selection));
                 items.AddIfEnabled(new RestartToolstackCommand(mainWindow, selection));
                 items.AddSeparator();

@@ -1009,7 +1009,6 @@ namespace XenAdmin
             XenAPI.Session.Proxy = XenAdminConfigManager.Provider.GetProxyFromSettings(null);
         }
 
-<<<<<<< HEAD
         /// <summary>
         /// Stores the Basic and Digest authentication modules, used for proxy server authentication, 
         /// for later use; this is needed because we cannot create new instances of them and it 
