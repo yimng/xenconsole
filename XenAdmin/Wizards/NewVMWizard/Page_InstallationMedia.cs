@@ -48,7 +48,8 @@ namespace XenAdmin.Wizards.NewVMWizard
     public partial class Page_InstallationMedia : XenTabPage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        
+
+        private Host m_host;
         private VM m_template;
 
         public Page_InstallationMedia()
@@ -68,10 +69,12 @@ namespace XenAdmin.Wizards.NewVMWizard
         {
             base.PageLoaded(direction);
             VM oldTemplate = m_template;
+            Host oldHost = m_host;
             m_template = SelectedTemplate;
+            m_host = Affinity;
 
             // We only want to do all these updates if the template has changed (or has gone from null -> selected)
-            if (oldTemplate == m_template)
+            if (oldTemplate == m_template && oldHost == m_host)
                 return;
 
             /* This method is supposed to do the following:
@@ -164,7 +167,7 @@ namespace XenAdmin.Wizards.NewVMWizard
         {
             CdDropDownBox.host = Affinity;
             CdDropDownBox.vm = m_template;
-
+            CdDropDownBox.SelectedCD = null;
             CdDropDownBox.refreshAll();
 
             RegisterBespokeEventsAgainstCdDropDownBox();
