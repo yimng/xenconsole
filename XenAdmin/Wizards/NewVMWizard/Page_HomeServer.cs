@@ -40,8 +40,6 @@ namespace XenAdmin.Wizards.NewVMWizard
 {
     public partial class Page_HomeServer : XenTabPage
     {
-        private VM Template;
-
         public Page_HomeServer()
         {
             InitializeComponent();
