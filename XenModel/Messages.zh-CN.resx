@@ -14321,4 +14321,7 @@ SCSI ID: {6}
   <data name="SSD_CACHE" xml:space="preserve">
     <value>SSD 缓存加速</value>
   </data>
+  <data name="OVERRIDE_VDI_CHECK" xml:space="preserve">
+    <value>在服务器上有一个同名的iso文件，你确定上传本地的iso到服务器上吗，这将会覆盖服务器上的iso!</value>
+  </data>
 </root>
