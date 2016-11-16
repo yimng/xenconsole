@@ -155,8 +155,8 @@ namespace XenAdmin.Wizards.HAWizard_Pages
             resources.ApplyResources(this.dataGridViewVms, "dataGridViewVms");
             this.dataGridViewVms.MultiSelect = true;
             this.dataGridViewVms.Name = "dataGridViewVms";
-            this.dataGridViewVms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewVms_KeyDown);
             this.dataGridViewVms.SelectionChanged += new System.EventHandler(this.dataGridViewVms_SelectionChanged);
+            this.dataGridViewVms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewVms_KeyDown);
             // 
             // colImage
             // 
