@@ -43,6 +43,7 @@ namespace XenAdmin.Controls
 {
     public class ISODropDownBox : NonSelectableComboBox
     {
+        public Host host;
         public VM vm;
         protected VBD cdrom;
         protected bool refreshOnClose = false;
@@ -137,6 +138,11 @@ namespace XenAdmin.Controls
                             continue;
                         }
                     }
+                }
+
+                if (sr.Home != null && this.host != null && sr.Home != this.host)
+                {
+                    continue;
                 }
 
                 items.Add(new ToStringWrapper<SR>(sr, sr.Name));

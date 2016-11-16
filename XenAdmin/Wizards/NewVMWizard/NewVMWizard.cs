@@ -51,8 +51,8 @@ namespace XenAdmin.Wizards.NewVMWizard
         private readonly Page_Template page_1_Template;
         private readonly Page_CopyBiosStrings page_1b_BiosLocking;
         private readonly Page_Name page_2_Name;
-        private readonly Page_InstallationMedia page_3_InstallationMedia;
-        private readonly Page_HomeServer page_4_HomeServer;
+        private readonly Page_InstallationMedia page_4_InstallationMedia;
+        private readonly Page_HomeServer page_3_HomeServer;
         private readonly Page_CpuMem page_5_CpuMem;
         private readonly Page_Storage page_6_Storage;
         private readonly Page_Networking page_7_Networking;
@@ -76,8 +76,8 @@ namespace XenAdmin.Wizards.NewVMWizard
             page_1_Template = new Page_Template();
             page_1b_BiosLocking = new Page_CopyBiosStrings();
             page_2_Name = new Page_Name();
-            page_3_InstallationMedia = new Page_InstallationMedia();
-            page_4_HomeServer = new Page_HomeServer();
+            page_4_InstallationMedia = new Page_InstallationMedia();
+            page_3_HomeServer = new Page_HomeServer();
             page_5_CpuMem = new Page_CpuMem();
             page_6_Storage = new Page_Storage();
             page_7_Networking = new Page_Networking();
@@ -115,7 +115,7 @@ namespace XenAdmin.Wizards.NewVMWizard
                 affinityCheck.ApiCallsToCheck.Add("vm.set_affinity");
                 affinityCheck.WarningAction = new RBACWarningPage.PermissionCheckActionDelegate(delegate()
                 {
-                    page_4_HomeServer.DisableStep = true;
+                    page_3_HomeServer.DisableStep = true;
                     BlockAffinitySelection = true;
                     Program.Invoke(this, RefreshProgress);
                 });
@@ -141,14 +141,14 @@ namespace XenAdmin.Wizards.NewVMWizard
 
             page_8_Finish.SummaryRetreiver = GetSummary;
 
-            AddPages(page_1_Template, page_2_Name, page_3_InstallationMedia, page_4_HomeServer,
+            AddPages(page_1_Template, page_2_Name, page_3_HomeServer, page_4_InstallationMedia,
                      page_5_CpuMem, page_6_Storage, page_7_Networking, page_8_Finish);
 
             m_affinity = affinity;
             page_1_Template.SelectedTemplate = template;
             page_1b_BiosLocking.Affinity = affinity;
-            page_3_InstallationMedia.Affinity = affinity;
-            page_4_HomeServer.Affinity = affinity;
+            page_4_InstallationMedia.Affinity = affinity;
+            page_3_HomeServer.Affinity = affinity;
             page_6_Storage.Affinity = affinity;
             page_8_Finish.Affinity = affinity;
         }
@@ -162,10 +162,10 @@ namespace XenAdmin.Wizards.NewVMWizard
                                             : null,
                                         page_2_Name.SelectedName,
                                         page_2_Name.SelectedDescription,
-                                        page_3_InstallationMedia.SelectedInstallMethod,
-                                        page_3_InstallationMedia.SelectedPvArgs,
-                                        page_3_InstallationMedia.SelectedCD,
-                                        page_3_InstallationMedia.SelectedUrl,
+                                        page_4_InstallationMedia.SelectedInstallMethod,
+                                        page_4_InstallationMedia.SelectedPvArgs,
+                                        page_4_InstallationMedia.SelectedCD,
+                                        page_4_InstallationMedia.SelectedUrl,
                                         m_affinity,
                                         page_5_CpuMem.SelectedVcpusMax,
                                         page_5_CpuMem.SelectedVcpusAtStartup,
@@ -209,8 +209,8 @@ namespace XenAdmin.Wizards.NewVMWizard
 
                 page_1b_BiosLocking.SelectedTemplate = selectedTemplate;
                 page_2_Name.SelectedTemplate = selectedTemplate;
-                page_3_InstallationMedia.SelectedTemplate = selectedTemplate;
-                page_4_HomeServer.SelectedTemplate = selectedTemplate;
+                page_4_InstallationMedia.SelectedTemplate = selectedTemplate;
+                page_3_HomeServer.SelectedTemplate = selectedTemplate;
                 page_5_CpuMem.SelectedTemplate = selectedTemplate;
                 pageVgpu.vm = selectedTemplate;
                 page_6_Storage.SelectedTemplate = selectedTemplate;
@@ -231,12 +231,12 @@ namespace XenAdmin.Wizards.NewVMWizard
                     // insert after template page
                     AddAfterPage(page_1_Template, page_1b_BiosLocking);
 
-                    page_4_HomeServer.DisableStep = selectedTemplate.DefaultTemplate;
+                    page_3_HomeServer.DisableStep = selectedTemplate.DefaultTemplate;
                 }
                 else
                 {
                     if (!BlockAffinitySelection)
-                        page_4_HomeServer.DisableStep = false;
+                        page_3_HomeServer.DisableStep = false;
                 }
 
                 // if custom template has no cd drive (must have been removed via cli) don't add one
@@ -245,8 +245,8 @@ namespace XenAdmin.Wizards.NewVMWizard
                 if (selectedTemplate != null && selectedTemplate.DefaultTemplate && string.IsNullOrEmpty(selectedTemplate.InstallMethods))
                     noInstallMedia = true;
 
-                page_3_InstallationMedia.ShowInstallationMedia = !noInstallMedia;
-                page_3_InstallationMedia.DisableStep = noInstallMedia && !page_3_InstallationMedia.ShowBootParameters;
+                page_4_InstallationMedia.ShowInstallationMedia = !noInstallMedia;
+                page_4_InstallationMedia.DisableStep = noInstallMedia && !page_4_InstallationMedia.ShowBootParameters;
 
                 // The user cannot set their own affinity, use the one off the template
                 if (BlockAffinitySelection)
@@ -257,13 +257,13 @@ namespace XenAdmin.Wizards.NewVMWizard
                 {
                     AddAfterPage(page_6_Storage, page_CloudConfigParameters);
                 }
-            }
+            }            
             else if (prevPageType == typeof(Page_CopyBiosStrings))
             {
                 if (page_1_Template.CopyBiosStrings && page_1_Template.SelectedTemplate.DefaultTemplate)
                 {
                     m_affinity = page_1b_BiosLocking.CopyBiosStringsFrom;
-                    page_4_HomeServer.Affinity = m_affinity;
+                    page_3_HomeServer.Affinity = m_affinity;
                     page_6_Storage.Affinity = m_affinity;
                 }
             }
@@ -273,23 +273,22 @@ namespace XenAdmin.Wizards.NewVMWizard
                 page_6_Storage.SelectedName = selectedName;
                 page_7_Networking.SelectedName = selectedName;
             }
-            else if (prevPageType == typeof(Page_InstallationMedia))
-            {
-                var selectedInstallMethod = page_3_InstallationMedia.SelectedInstallMethod;
-                page_4_HomeServer.SelectedCD = page_3_InstallationMedia.SelectedCD;
-                page_4_HomeServer.SelectedInstallMethod = selectedInstallMethod;
-                page_6_Storage.SelectedInstallMethod = selectedInstallMethod;
-            }
             else if (prevPageType == typeof(Page_HomeServer))
             {
-                if (!page_4_HomeServer.DisableStep)
+                if (!page_3_HomeServer.DisableStep)
                 {
-                    m_affinity = page_4_HomeServer.SelectedHomeServer;
+                    m_affinity = page_3_HomeServer.SelectedHomeServer;
+                    page_4_InstallationMedia.Affinity = m_affinity;
                     page_6_Storage.Affinity = m_affinity;
                     page_CloudConfigParameters.Affinity = m_affinity;
                     page_8_Finish.Affinity = m_affinity;
                 }
             }
+            else if (prevPageType == typeof(Page_InstallationMedia))
+            {
+                var selectedInstallMethod = page_4_InstallationMedia.SelectedInstallMethod;
+                page_6_Storage.SelectedInstallMethod = selectedInstallMethod;
+            }            
             else if (prevPageType == typeof(Page_Storage))
             {
                 RemovePage(page_6b_LunPerVdi);

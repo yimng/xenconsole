@@ -162,6 +162,7 @@ namespace XenAdmin.Wizards.NewVMWizard
 
         private void LoadCdBox()
         {
+            CdDropDownBox.host = Affinity;
             CdDropDownBox.vm = m_template;
 
             CdDropDownBox.refreshAll();

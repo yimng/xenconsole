@@ -41,7 +41,6 @@ namespace XenAdmin.Wizards.NewVMWizard
     public partial class Page_HomeServer : XenTabPage
     {
         private VM Template;
-        private Host CdAffinity;
 
         public Page_HomeServer()
         {
@@ -118,6 +117,7 @@ namespace XenAdmin.Wizards.NewVMWizard
 
         public override void SelectDefaultControl()
         {
+            affinityPicker1.SetAffinity(Connection, Affinity, null);           
             affinityPicker1.Select();
         }
 
@@ -128,9 +128,7 @@ namespace XenAdmin.Wizards.NewVMWizard
         public Host SelectedHomeServer { get { return affinityPicker1.SelectedAffinity; } }
 
         public Host Affinity { private get; set; }
-        public VM SelectedTemplate { private get; set; }
-        public InstallMethod SelectedInstallMethod { private get; set; }
-        public VDI SelectedCD { private get; set; }
+        public VM SelectedTemplate { private get; set; }       
 
         #endregion
 

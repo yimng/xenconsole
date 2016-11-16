@@ -480,7 +480,7 @@ namespace XenAdmin.TabPages
                             }
                         }
                     }
-                    var action = new UploadISOAction(host, dlg.FileName, path);
+                    var action = new UploadISOAction(pbd.Connection.Resolve<Host>(pbd.host), dlg.FileName, path);
                     ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Continuous, false) { ShowCancel = true };
                     dialog.ShowDialog(this);
                     if (dialog.action.Succeeded)
