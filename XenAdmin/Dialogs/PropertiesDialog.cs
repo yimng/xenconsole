@@ -43,6 +43,7 @@ using XenAdmin.Core;
 using XenAdmin.Wizards.NewPolicyWizard;
 using XenAdmin.Wizards.NewVMApplianceWizard;
 using XenAdmin.Wizards.GenericPages;
+using System.Linq;
 
 namespace XenAdmin.Dialogs
 {
@@ -82,6 +83,7 @@ namespace XenAdmin.Dialogs
         private Page_CloudConfigParameters CloudConfigParametersPage;
         private SecurityEditPage SecurityEditPage;
         private LivePatchingEditPage LivePatchingEditPage;
+        private UseSSDCachePage UseSSDCachePage;
         #endregion
 
         private IXenObject xenObject, xenObjectBefore, xenObjectCopy;
@@ -271,10 +273,10 @@ namespace XenAdmin.Dialogs
                 if (!is_vdi)
                     return;
 
-                ShowTab(vdiSizeLocation = new VDISizeLocationPage());
-
+                ShowTab(vdiSizeLocation = new VDISizeLocationPage());                
                 VDI vdi = xenObjectCopy as VDI;
-
+                if (!(vdi.GetVMs()).Any(vm => vm.IsRunning))
+                    ShowTab(UseSSDCachePage = new UseSSDCachePage());
                 List<VBDEditPage> vbdEditPages = new List<VBDEditPage>();
 
                 foreach (VBD vbd in vdi.Connection.ResolveAll(vdi.VBDs))

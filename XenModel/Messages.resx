@@ -297,6 +297,9 @@
   <data name="ACTION_DISABLE_PVS_READ_CACHING_FOR" xml:space="preserve">
     <value>Disabling PVS-Accelerator for VM '{0}'</value>
   </data>
+  <data name="ACTION_DISABLE_SSD_CACHE" xml:space="preserve">
+    <value>disable ssd cache</value>
+  </data>
   <data name="ACTION_DISABLE_VM_ENLIGHTENMENT_DESCRIPTION" xml:space="preserve">
     <value>Disabling </value>
   </data>
@@ -416,6 +419,9 @@
   </data>
   <data name="ACTION_ENABLE_PVS_READ_CACHING_FOR" xml:space="preserve">
     <value>Enabling PVS-Accelerator for VM '{0}' on '{1}'</value>
+  </data>
+  <data name="ACTION_ENABLE_SSD_CACHE" xml:space="preserve">
+    <value>enable ssd cache</value>
   </data>
   <data name="ACTION_ENABLE_VM_ENLIGHTENMENT_DESCRIPTION" xml:space="preserve">
     <value>Enabling</value>
@@ -11651,6 +11657,9 @@ The upper limit: SR size / {2}</value>
   </data>
   <data name="SR_X_ON_Y" xml:space="preserve">
     <value>SR {0} on {1}</value>
+  </data>
+  <data name="SSD_CACHE" xml:space="preserve">
+    <value>SSD Cache</value>
   </data>
   <data name="STANDARD_PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
     <value>[XenServer product] &amp;Standard Per-Socket ({0} required)</value>

@@ -589,6 +589,14 @@ namespace XenAdmin {
             get {
                 return ResourceManager.GetString("ACTION_DISABLE_PVS_READ_CACHING_FOR", resourceCulture);
             }
+	}
+        /// <summary>
+        ///   Looks up a localized string similar to disable ssd cache.
+        /// </summary>
+        public static string ACTION_DISABLE_SSD_CACHE {
+            get {
+                return ResourceManager.GetString("ACTION_DISABLE_SSD_CACHE", resourceCulture);
+            }
         }
         
         /// <summary>
@@ -948,6 +956,14 @@ namespace XenAdmin {
         public static string ACTION_ENABLE_PVS_READ_CACHING_FOR {
             get {
                 return ResourceManager.GetString("ACTION_ENABLE_PVS_READ_CACHING_FOR", resourceCulture);
+            }
+	}
+        /// <summary>
+        ///   Looks up a localized string similar to enable ssd cache.
+        /// </summary>
+        public static string ACTION_ENABLE_SSD_CACHE {
+            get {
+                return ResourceManager.GetString("ACTION_ENABLE_SSD_CACHE", resourceCulture);
             }
         }
         
@@ -33624,6 +33640,15 @@ namespace XenAdmin {
         public static string SRWIZARD_STORAGE_NAME {
             get {
                 return ResourceManager.GetString("SRWIZARD_STORAGE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSD Cache.
+        /// </summary>
+        public static string SSD_CACHE {
+            get {
+                return ResourceManager.GetString("SSD_CACHE", resourceCulture);
             }
         }
         

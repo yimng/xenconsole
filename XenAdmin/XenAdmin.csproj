@@ -435,6 +435,12 @@
     <Compile Include="SettingsPanels\SecurityEditPage.Designer.cs">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsPanels\UseSSDCachePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\UseSSDCachePage.Designer.cs">
+      <DependentUpon>UseSSDCachePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsPanels\VMEnlightenmentEditPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2130,6 +2136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\SecurityEditPage.zh-CN.resx">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\UseSSDCachePage.resx">
+      <DependentUpon>UseSSDCachePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\UseSSDCachePage.zh-CN.resx">
+      <DependentUpon>UseSSDCachePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\VDISizeLocationPage.resx">
       <DependentUpon>VDISizeLocationPage.cs</DependentUpon>

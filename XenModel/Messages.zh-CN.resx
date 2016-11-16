@@ -14312,4 +14312,13 @@ SCSI ID: {6}
   <data name="MAINWINDOW_EJECT" xml:space="preserve">
     <value>弹出主机上的CD</value>
   </data>
+  <data name="ACTION_DISABLE_SSD_CACHE" xml:space="preserve">
+    <value>不使用 SSD Cache 加速</value>
+  </data>
+  <data name="ACTION_ENABLE_SSD_CACHE" xml:space="preserve">
+    <value>使用 SSD Cache 加速</value>
+  </data>
+  <data name="SSD_CACHE" xml:space="preserve">
+    <value>SSD 缓存加速</value>
+  </data>
 </root>
