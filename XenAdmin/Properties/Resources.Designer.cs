@@ -1063,6 +1063,16 @@ namespace XenAdmin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _000_SSDCache_h32bit_16 {
+            get {
+                object obj = ResourceManager.GetObject("_000_SSDCache_h32bit_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _000_StartVM_h32bit_16 {
             get {
                 object obj = ResourceManager.GetObject("_000_StartVM_h32bit_16", resourceCulture);

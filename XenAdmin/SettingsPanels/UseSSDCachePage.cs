@@ -24,7 +24,7 @@ namespace XenAdmin.SettingsPanels
         {
             get
             {
-                return Properties.Resources._000_VirtualStorage_h32bit_16;
+                return Properties.Resources._000_SSDCache_h32bit_16;
             }
         }
 
