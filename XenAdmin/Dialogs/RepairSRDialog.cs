@@ -321,9 +321,10 @@ namespace XenAdmin.Dialogs
                             int start = s.IndexOf(":");
                             String scsiid = s.Substring(start + 2, s.Length - start - 2);
                             DialogResult confirmResult = MessageBox.Show(string.Format(Messages.REPAIR_SR_DIALOG_SINGLE_LUN_RAID_WARNING, scsiid),
-                                         "Confirm !",
-                                         MessageBoxButtons.YesNo);
-                            if (confirmResult == DialogResult.Yes)
+                                         Messages.MESSAGEBOX_CONFIRM,
+                                         MessageBoxButtons.OKCancel,
+                                         MessageBoxIcon.Question);
+                            if (confirmResult == DialogResult.OK)
                             {
 
                                 _repairAction = new SrRepairLUNAction(_srList[0].Connection, _srList[0], scsiid);

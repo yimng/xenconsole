@@ -468,8 +468,8 @@ namespace XenAdmin.TabPages
                         if (vdilocation == filename)
                         {
                             DialogResult confirmResult = MessageBox.Show(Messages.OVERRIDE_VDI_CHECK, Messages.MESSAGEBOX_CONFIRM,
-                                         MessageBoxButtons.YesNo);
-                            if (confirmResult == DialogResult.Yes)
+                                         MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                            if (confirmResult == DialogResult.OK)
                             {
                                 VDI.destroy(vdi.Connection.Session, vdi.opaque_ref);
                                 break;
