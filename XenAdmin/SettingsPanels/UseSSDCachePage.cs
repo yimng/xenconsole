@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using XenAdmin.Actions;
 using XenAPI;
@@ -13,6 +15,7 @@ namespace XenAdmin.SettingsPanels
         {
             InitializeComponent();
             Text = Messages.SSD_CACHE;
+            ssdCacheWarningImage.Image = SystemIcons.Information.ToBitmap().GetThumbnailImage(16, 16, null, IntPtr.Zero);
         }
 
         public bool HasChanged
@@ -91,6 +94,7 @@ namespace XenAdmin.SettingsPanels
         {
             currentValue = VDI.get_allow_caching(this.vdi.Connection.Session, this.vdi.opaque_ref);
             useSSDCacheCheckBox.Checked = currentValue;
+            useSSDCacheCheckBox.Enabled = !((vdi.GetVMs()).Any(vm => vm.IsRunning));
         }
     }
 }

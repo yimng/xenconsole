@@ -275,7 +275,7 @@ namespace XenAdmin.Dialogs
 
                 ShowTab(vdiSizeLocation = new VDISizeLocationPage());                
                 VDI vdi = xenObjectCopy as VDI;
-                if (!(vdi.GetVMs()).Any(vm => vm.IsRunning))
+                //if (!(vdi.GetVMs()).Any(vm => vm.IsRunning))
                     ShowTab(UseSSDCachePage = new UseSSDCachePage());
                 List<VBDEditPage> vbdEditPages = new List<VBDEditPage>();
 

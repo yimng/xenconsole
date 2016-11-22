@@ -117,14 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ssdCacheWarningLabel.Text" xml:space="preserve">
+    <value>要编辑这一设置，VDI 所在的虚拟机必须处于关机状态。</value>
+  </data>
+  <data name="labelUseSSDCache.Text" xml:space="preserve">
+    <value>可配置此 VDI 使用 SSD 缓存加速来提高 IO 的读写性能。在这个 VDI 上选择打开这一特性。</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="useSSDCacheCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 16</value>
   </data>
   <data name="useSSDCacheCheckBox.Text" xml:space="preserve">
     <value>使用 SSD 缓存加速(&amp;E)</value>
-  </data>
-  <data name="labelUseSSDCache.Text" xml:space="preserve">
-    <value>可配置此 VDI 使用 SSD 缓存加速来提高 IO 的读写性能。在这个 VDI 上选择打开这一特性。</value>
   </data>
 </root>
