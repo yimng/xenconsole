@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -94,7 +95,41 @@ namespace XenAdmin.SettingsPanels
         {
             currentValue = VDI.get_allow_caching(this.vdi.Connection.Session, this.vdi.opaque_ref);
             useSSDCacheCheckBox.Checked = currentValue;
-            useSSDCacheCheckBox.Enabled = !((vdi.GetVMs()).Any(vm => vm.IsRunning));
+            var vms = vdi.GetVMs();
+            useSSDCacheCheckBox.Enabled = !(vms.Any(vm => vm.IsRunning)) && ShowSSDCache(vdi);
+        }
+
+        private bool ShowSSDCache(VDI vdi)
+        {
+            var vms = vdi.GetVMs();
+            var Affinity = vms[0] != null ? vms[0].GetStorageHost(true) : null;
+            List<SR> AllSRs = new List<SR>(vdi.Connection.Cache.SRs);
+            List<SR> srs;
+            if (Affinity != null)
+            {
+                srs = new List<SR>();
+                foreach (SR sr in AllSRs)
+                {
+                    if (sr.GetStorageHost() == Affinity)
+                    {
+                        srs.Add(sr);
+                    }
+                }
+            }
+            else
+            {
+                srs = AllSRs;
+            }
+            foreach (SR sr in srs)
+            {
+                if (sr == null || sr.IsToolsSR || !sr.Show(Properties.Settings.Default.ShowHiddenVMs))
+                    continue;
+                if (sr.GetSRType(true) == SR.SRTypes.ext && SR.get_local_cache_enabled(vdi.Connection.Session, sr.opaque_ref))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
