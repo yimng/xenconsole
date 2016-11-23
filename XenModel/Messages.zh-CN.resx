@@ -14324,4 +14324,7 @@ SCSI ID: {6}
   <data name="OVERRIDE_VDI_CHECK" xml:space="preserve">
     <value>在服务器上有一个同名的 ISO 文件，你确定上传本地的 ISO 到服务器上吗，这将会覆盖服务器上的 ISO!</value>
   </data>
+  <data name="FOLDER_BROWSER_EXPORT_APPLIANCE" xml:space="preserve">
+    <value>请选择要保存的文件目录</value>
+  </data>
 </root>
