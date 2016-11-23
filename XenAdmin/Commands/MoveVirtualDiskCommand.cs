@@ -80,7 +80,7 @@ namespace XenAdmin.Commands
                 return false;
 
             SR sr = vdi.Connection.Resolve(vdi.SR);
-            if (sr == null || sr.HBALunPerVDI)
+            if (sr == null || sr.HBALunPerVDI || sr.GetSRType(true) == SR.SRTypes.iso)
                 return false;
 
             return true;
