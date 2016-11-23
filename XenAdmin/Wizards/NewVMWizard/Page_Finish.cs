@@ -95,41 +95,46 @@ namespace XenAdmin.Wizards.NewVMWizard
         public override void SelectDefaultControl()
         {
             AutoStartCheckBox.Select();
-            UseSSDCache.Visible = ShowSSDCache();
+            UseSSDCache.Enabled = EnableSSDCache();
         }
 
         public Func<IEnumerable<KeyValuePair<string, string>>> SummaryRetreiver { private get; set; }
-        public Host Affinity { private get; set; }
+        public Host Affinity { get; set; }
+        public SR sysSR { get; set; }
 
-        private bool ShowSSDCache()
+        private bool EnableSSDCache()
         {
             List<SR> AllSRs = new List<SR>(Connection.Cache.SRs);
-            List<SR> srs;
             if (Affinity != null)
             {
-                srs = new List<SR>();
-                foreach(SR sr in AllSRs)
+                foreach(PBD pbd in Connection.ResolveAll<PBD>(Affinity.PBDs))
                 {
-                    if (sr.GetStorageHost() == Affinity)
+                    SR sr = Connection.Resolve<SR>(pbd.SR);
+                    if (sr.GetSRType(true) == SR.SRTypes.ext && SR.get_local_cache_enabled(Connection.Session, sr.opaque_ref))
                     {
-                        srs.Add(sr);
+                        return true;
                     }
                 }
             }
             else
             {
-                srs = AllSRs;
-            }
-            foreach (SR sr in srs)
-            {
-                if (sr == null || sr.IsToolsSR || !sr.Show(Properties.Settings.Default.ShowHiddenVMs))
-                    continue;
-                if (sr.GetSRType(true) == SR.SRTypes.ext && SR.get_local_cache_enabled(Connection.Session, sr.opaque_ref))
+                if (!sysSR.IsLocalSR && sysSR.GetSRType(true) != SR.SRTypes.nfs)
                 {
-                    return true;
+                    return false;
+                }
+                else
+                {
+                    foreach(SR sr in AllSRs)
+                    {
+                        if (sr.GetSRType(true) == SR.SRTypes.ext && SR.get_local_cache_enabled(Connection.Session, sr.opaque_ref))
+                        {
+                            Affinity = sr.GetStorageHost();
+                            return true;// pool has ssd cache
+                        }
+                    }
                 }
             }
-            return false;
+            return false;        
         }
     }
 }

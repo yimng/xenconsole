@@ -102,6 +102,11 @@ namespace XenAdmin.SettingsPanels
         private bool ShowSSDCache(VDI vdi)
         {
             var vms = vdi.GetVMs();
+            SR vmsr = vdi.Connection.Resolve<SR>(vdi.SR);
+            if (!vmsr.IsLocalSR && vmsr.GetSRType(true) != SR.SRTypes.nfs)
+            {
+                return false;
+            }
             var Affinity = vms[0] != null ? vms[0].GetStorageHost(true) : null;
             List<SR> AllSRs = new List<SR>(vdi.Connection.Cache.SRs);
             List<SR> srs;

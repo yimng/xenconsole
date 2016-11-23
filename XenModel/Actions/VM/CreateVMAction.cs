@@ -51,6 +51,7 @@ namespace XenAdmin.Actions.VMActions
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly bool UseIntellicache;
+        private readonly Host suggestedAffinity;
         private readonly string NameLabel;
         private readonly string NameDescription;
         private readonly InstallMethod InsMethod;
@@ -116,7 +117,7 @@ namespace XenAdmin.Actions.VMActions
             string name, string description, InstallMethod installMethod,
             string pvArgs, VDI cd, string url, Host homeServer, long vcpusMax, long vcpusAtStartup,
             long memoryDynamicMin, long memoryDynamicMax, long memoryStaticMax,
-            List<DiskDescription> disks, SR fullCopySR, List<VIF> vifs, bool startAfter, bool useIntelliCache,
+            List<DiskDescription> disks, SR fullCopySR, List<VIF> vifs, bool startAfter, bool useIntelliCache, Host suggestedHost,
             Action<VM, bool> warningDialogHAInvalidConfig,
             Action<VMStartAbstractAction, Failure> startDiagnosisForm,
             GPU_group gpuGroup, VGPU_type vgpuType, bool modifyVgpuSettings, long coresPerSocket, string cloudConfigDriveTemplateText)
@@ -142,6 +143,7 @@ namespace XenAdmin.Actions.VMActions
             Vifs = vifs;
             StartAfter = startAfter;
             UseIntellicache = useIntelliCache;
+            suggestedAffinity = suggestedHost;
             _warningDialogHAInvalidConfig = warningDialogHAInvalidConfig;
             _startDiagnosisForm = startDiagnosisForm;
             GpuGroup = gpuGroup;
@@ -317,7 +319,8 @@ namespace XenAdmin.Actions.VMActions
 
             // Check these values have changed before setting them, as they are RBAC protected
             if (HomeServerChanged())
-                XenAPI.VM.set_affinity(Session, VM.opaque_ref, HomeServer != null ? HomeServer.opaque_ref : Helper.NullOpaqueRef);
+                XenAPI.VM.set_affinity(Session, VM.opaque_ref, HomeServer != null ? HomeServer.opaque_ref : 
+                    (suggestedAffinity != null ? suggestedAffinity.opaque_ref : Helper.NullOpaqueRef));
 
             if (Template.memory_dynamic_min != MemoryDynamicMin || Template.memory_dynamic_max != MemoryDynamicMax || Template.memory_static_max != MemoryStaticMax)
                 XenAPI.VM.set_memory_limits(Session, VM.opaque_ref, Template.memory_static_min, MemoryStaticMax, MemoryDynamicMin, MemoryDynamicMax);
@@ -327,7 +330,14 @@ namespace XenAdmin.Actions.VMActions
         {
             if (HomeServer == null)
             {
-                return Template.affinity.opaque_ref != Helper.NullOpaqueRef;
+                if (suggestedAffinity == null)
+                {
+                    return Template.affinity.opaque_ref != Helper.NullOpaqueRef;
+                }
+                else
+                {
+                    return Template.affinity.opaque_ref != suggestedAffinity.opaque_ref;
+                }                
             }
             return HomeServer.opaque_ref != Template.affinity.opaque_ref;
         }
