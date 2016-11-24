@@ -1985,4 +1985,7 @@
   <data name="Label-host.edition-XE Express" xml:space="preserve">
     <value>Halsign vGate Standard Edition</value>
   </data>
+  <data name="Label-SR.SRTypes-lvmobond" xml:space="preserve">
+    <value>LUN Bond</value>
+  </data>
 </root>

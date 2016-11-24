@@ -74,7 +74,7 @@ namespace XenAdmin.Commands
 
         private bool CanBeMoved(VDI vdi)
         {
-            if (vdi == null || vdi.is_a_snapshot || vdi.Locked || vdi.IsHaType)
+            if (vdi == null || vdi.is_a_snapshot || vdi.Locked || vdi.IsHaType || vdi.VDIType == VDI.FriendlyType.ISO)
                 return false;
             if (vdi.VBDs.Count != 0)
                 return false;

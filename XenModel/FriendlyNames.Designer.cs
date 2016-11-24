@@ -2950,6 +2950,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LUN Bond.
+        /// </summary>
+        public static string Label_SR_SRTypes_lvmobond {
+            get {
+                return ResourceManager.GetString("Label-SR.SRTypes-lvmobond", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hardware HBA.
         /// </summary>
         public static string Label_SR_SRTypes_lvmofc {

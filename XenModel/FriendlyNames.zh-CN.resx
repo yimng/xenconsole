@@ -1979,4 +1979,7 @@
   <data name="Label-host.edition-XE Express" xml:space="preserve">
     <value>Halsign vGate 标准版</value>
   </data>
+  <data name="Label-SR.SRTypes-lvmobond" xml:space="preserve">
+    <value>LUN 绑定</value>
+  </data>
 </root>
