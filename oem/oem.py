@@ -55,7 +55,7 @@ for line in rf:
 # replace in file brand
 s=""
 with open("../XenAdmin/Branding.cs","r") as brand:    
-    s = f.read()
+    s = brand.read()
     for o,n in zip(old, new):
             s = s.replace(o, n)
 with open("../XenAdmin/Branding.cs", "r+") as newbrand:
