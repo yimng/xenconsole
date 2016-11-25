@@ -15,13 +15,11 @@ old = []
 new = []
 cf = open(corpconf, encoding='utf-8')
 for line in cf:
-	if line.startwith('#'):
-		continue
+    if line.startswith('#'):
+        continue
     (k, v) = line.split('=')
     old.append(k)
     new.append(v.rstrip())
-    if k == 'halsign':
-        oemname = v.rstrip()
 cf.close()
 
 # replace the resx files
@@ -52,4 +50,4 @@ ff.close()
 rf = open(rcconf)
 for line in rf:
     (k, v) = line.split('=')
-    copyfile(path.join(src, path.normpath(k)), path.join(dst, path.normpath(v.rstrip().replace("halsign", oemname))))
+    copyfile(path.join(src, path.normpath(k)), path.join(dst, path.normpath(v.rstrip())))
