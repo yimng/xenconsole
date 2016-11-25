@@ -26,24 +26,24 @@ cf.close()
 ff = open(resxfiles)
 encode = 'ascii'
 for line in ff:
-	print(path.join(dst, path.normpath(line.rstrip())))
-	try:
-		f = open(path.join(dst, path.normpath(line.rstrip())), 'r')
-		s = f.read()
-		f.close()		
-		f = open(path.join(dst, path.normpath(line.rstrip())), 'r+')
-		for o,n in zip(old, new):
-			s = s.replace(o, n)
-		f.write(s)
-	except:
-		f = open(path.join(dst, path.normpath(line.rstrip())), 'r', encoding='utf-8')
-		s = f.read()
-		f.close()
-		f = open(path.join(dst, path.normpath(line.rstrip())), 'r+', encoding='utf-8')
-		for o,n in zip(old, new):
-			s = s.replace(o, n)
-		f.write(s)
-	f.close()
+    print(path.join(dst, path.normpath(line.rstrip())))
+    try:
+        f = open(path.join(dst, path.normpath(line.rstrip())), 'r')
+        s = f.read()
+        f.close()       
+        f = open(path.join(dst, path.normpath(line.rstrip())), 'r+')
+        for o,n in zip(old, new):
+            s = s.replace(o, n)
+        f.write(s)
+    except:
+        f = open(path.join(dst, path.normpath(line.rstrip())), 'r', encoding='utf-8')
+        s = f.read()
+        f.close()
+        f = open(path.join(dst, path.normpath(line.rstrip())), 'r+', encoding='utf-8')
+        for o,n in zip(old, new):
+            s = s.replace(o, n)
+        f.write(s)
+    f.close()
 ff.close()
 
 # replace the images
@@ -51,3 +51,15 @@ rf = open(rcconf)
 for line in rf:
     (k, v) = line.split('=')
     copyfile(path.join(src, path.normpath(k)), path.join(dst, path.normpath(v.rstrip())))
+
+# replace in file brand
+s=""
+with open("../XenAdmin/Branding.cs","r") as brand:    
+    s = f.read()
+    for o,n in zip(old, new):
+            s = s.replace(o, n)
+with open("../XenAdmin/Branding.cs", "r+") as newbrand:
+    newbrand.write(s)
+
+
+	
