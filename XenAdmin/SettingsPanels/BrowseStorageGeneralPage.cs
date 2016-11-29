@@ -157,12 +157,17 @@ namespace XenAdmin.SettingsPanels
             return false;
         }
 
-        private bool issciRemoved(string scsiid)
+        private bool CanAddLUN(string scsiid)
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
 
             foreach (PBD pdb in sr.Connection.ResolveAll<PBD>(sr.PBDs))
             {
+                if (pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("spare rebuilding") ||
+                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("spare rebuilding") )
+                {
+                    return false;// it is adding lun
+                }
                 if (pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
                     pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
                     !pdb.other_config.ContainsKey("LUN1-status") || !pdb.other_config.ContainsKey("LUN2-status"))
@@ -226,7 +231,7 @@ namespace XenAdmin.SettingsPanels
                     {
                         if (xenObject.GetSRType(true) == SR.SRTypes.lvmobond)
                         {
-                            if (issciRemoved(scsiid))
+                            if (CanAddLUN(scsiid))
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                              
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
