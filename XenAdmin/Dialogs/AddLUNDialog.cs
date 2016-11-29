@@ -158,7 +158,10 @@ namespace XenAdmin.Dialogs
 
         private void action_Completed(ActionBase sender)
         {
-            base.FinalizeProgressControls(sender);
+            Program.Invoke(this, () =>
+            {
+                FinalizeProgressControls(sender);
+            });
         }
     }
 }

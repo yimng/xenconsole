@@ -607,21 +607,29 @@ namespace XenAdmin.Wizards
             }
 
             ProgressBarStyle progressBarStyle = FinalAction is SrIntroduceAction ? ProgressBarStyle.Blocks : ProgressBarStyle.Marquee;
-            using (var dialog = new ActionProgressDialog(FinalAction, progressBarStyle) {ShowCancel = true})
+            if (m_srWizardType is SrWizardType_lvmobond)
             {
-                if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe)
-                {
-                    ActionProgressDialog closureDialog = dialog;
-                    // close dialog even when there's an error for HBA SR type as there will be the Summary page displayed.
-                    FinalAction.Completed +=
-                        s => Program.Invoke(Program.MainWindow, () =>
-                        {
-                            if (closureDialog != null)
-                                closureDialog.Close();
-                        });
-                }
-                dialog.ShowDialog(this);
+                FinalAction.RunAsync();
             }
+            else
+            {
+                using (var dialog = new ActionProgressDialog(FinalAction, progressBarStyle) { ShowCancel = true })
+                {
+                    if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe)
+                    {
+                        ActionProgressDialog closureDialog = dialog;
+                        // close dialog even when there's an error for HBA SR type as there will be the Summary page displayed.
+                        FinalAction.Completed +=
+                            s => Program.Invoke(Program.MainWindow, () =>
+                            {
+                                if (closureDialog != null)
+                                    closureDialog.Close();
+                            });
+                    }
+                    dialog.ShowDialog(this);
+                }
+            }
+            
 
             if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond)
             {
@@ -642,20 +650,23 @@ namespace XenAdmin.Wizards
             }
 
             // If action failed and frontend wants to stay open, just return
-            if (!FinalAction.Succeeded)
+            if (!(m_srWizardType is SrWizardType_lvmobond))
             {
-                DialogResult = DialogResult.None;
-                FinishCanceled();
-
-                if (m_srWizardType.AutoDescriptionRequired)
+                if (!FinalAction.Succeeded)
                 {
-                    foreach (var srDescriptor in m_srWizardType.SrDescriptors)
-                    {
-                        srDescriptor.Description = null;
-                    }
-                }
+                    DialogResult = DialogResult.None;
+                    FinishCanceled();
 
-                return;
+                    if (m_srWizardType.AutoDescriptionRequired)
+                    {
+                        foreach (var srDescriptor in m_srWizardType.SrDescriptors)
+                        {
+                            srDescriptor.Description = null;
+                        }
+                    }
+
+                    return;
+                }
             }
 
             // Close wizard
@@ -675,20 +686,24 @@ namespace XenAdmin.Wizards
             if (srDescriptor == null)
                 return;
 
-            if (action.Succeeded)
+            if (srDescriptor is LvmObondSrDescriptor)
             {
-                if (srDescriptor is LvmOhbaSrDescriptor)
-                    xenTabPageLvmoHbaSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
-                if (srDescriptor is LvmObondSrDescriptor)
-                    xenTabPageLvmoBondSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
+                xenTabPageLvmoBondSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
             }
             else
             {
-                if (srDescriptor is LvmOhbaSrDescriptor)
-                    xenTabPageLvmoHbaSummary.FailedToCreateSRs.Add(srDescriptor);
-                if (srDescriptor is LvmObondSrDescriptor)
-                    xenTabPageLvmoBondSummary.FailedToCreateSRs.Add(srDescriptor);
+                if (action.Succeeded)
+                {
+                    if (srDescriptor is LvmOhbaSrDescriptor)
+                        xenTabPageLvmoHbaSummary.SuccessfullyCreatedSRs.Add(srDescriptor);                    
+                }
+                else
+                {
+                    if (srDescriptor is LvmOhbaSrDescriptor)
+                        xenTabPageLvmoHbaSummary.FailedToCreateSRs.Add(srDescriptor);                   
+                }
             }
+            
         }
 
         private List<AsyncAction> GetActions(Host master, bool disasterRecoveryTask)

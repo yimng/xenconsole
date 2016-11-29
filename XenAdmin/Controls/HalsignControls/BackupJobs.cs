@@ -873,6 +873,10 @@ namespace XenAdmin.Controls.HalsignControls
                                 old_jobs.Remove(this.dataGridView_CurrentJobs.Rows[i]);
                                 new_job = false;
                                 this.dataGridView_CurrentJobs.Rows[i].Cells[0].Value = job.job_name;
+                                this.dataGridView_CurrentJobs.Rows[i].Cells[2].Value =
+                                string.IsNullOrEmpty(job.start_time)
+                                    ? string.Empty
+                                    : HalsignUtil.FormatSecond(long.Parse(job.start_time), "yyyy-MM-dd HH:mm:ss");
                                 if (job.request.StartsWith(BackupRestoreConfig.BACKUP_IMMEDIATELY))
                                 {
                                     this.dataGridView_CurrentJobs.Rows[i].Cells[1].Value = Messages.BACKUP_IMMEDIATELY;
@@ -1235,6 +1239,10 @@ namespace XenAdmin.Controls.HalsignControls
                             old_jobs.Remove(this.dataGridView_CurrentJobs.Rows[i]);
                             new_job = false;
                             this.dataGridView_CurrentJobs.Rows[i].Cells[0].Value = job.job_name;
+                            this.dataGridView_CurrentJobs.Rows[i].Cells[2].Value =
+                            string.IsNullOrEmpty(job.start_time)
+                                ? string.Empty
+                                : HalsignUtil.FormatSecond(long.Parse(job.start_time), "yyyy-MM-dd HH:mm:ss");
                             if (job.request.StartsWith(BackupRestoreConfig.BACKUP_IMMEDIATELY))
                             {
                                 this.dataGridView_CurrentJobs.Rows[i].Cells[1].Value = Messages.BACKUP_IMMEDIATELY;
