@@ -294,7 +294,7 @@ namespace XenAdmin.Wizards.NewVMWizard
             {
                 RemovePage(page_6b_LunPerVdi);
                 List<SR> srs = page_6_Storage.SelectedDisks.ConvertAll(d => xenConnection.Resolve(d.Disk.SR));
-                VDI sysvdi = page_6_Storage.SelectedDisks.Where(d => d.Disk.type == vdi_type.system).First().Disk;
+                VDI sysvdi = page_6_Storage.SelectedDisks.First().Disk;
                 page_8_Finish.sysSR = xenConnection.Resolve(sysvdi.SR);
                 if (srs.Any(sr => sr.HBALunPerVDI))
                 {
