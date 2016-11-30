@@ -54,11 +54,11 @@ for line in rf:
 
 # replace in file brand
 s=""
-with open("../XenAdmin/Branding.cs","r") as brand:    
+with open("../XenAdmin/Branding.cs","r", encoding='utf-8') as brand:    
     s = brand.read()
     for o,n in zip(old, new):
             s = s.replace(o, n)
-with open("../XenAdmin/Branding.cs", "r+") as newbrand:
+with open("../XenAdmin/Branding.cs", "r+", encoding='utf-8') as newbrand:
     newbrand.write(s)
 
 
