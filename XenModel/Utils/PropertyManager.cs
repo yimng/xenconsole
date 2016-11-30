@@ -49,7 +49,7 @@ namespace XenAdmin.Core
         {
             string result = FriendlyNames.GetString(s);
 #if DEBUG
-			Debug.Assert(result != null, string.Format("{0} doesn't exist in FriendlyNames", s));
+			//Debug.Assert(result != null, string.Format("{0} doesn't exist in FriendlyNames", s));
 #endif
             return result;
         }
