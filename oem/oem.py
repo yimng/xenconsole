@@ -61,5 +61,4 @@ with open("../XenAdmin/Branding.cs","r", encoding='utf-8') as brand:
 with open("../XenAdmin/Branding.cs", "r+", encoding='utf-8') as newbrand:
     newbrand.write(s)
 
-
-	
+copyfile('console.nsi', '../release/')
