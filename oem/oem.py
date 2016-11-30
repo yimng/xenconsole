@@ -1,7 +1,7 @@
 #!/bin/python
 
 from os import path
-from shutil import copyfile
+from shutil import copyfile, copy
 from io import open
 
 resxfiles = "oem_files.conf"
@@ -61,4 +61,4 @@ with open("../XenAdmin/Branding.cs","r", encoding='utf-8') as brand:
 with open("../XenAdmin/Branding.cs", "r+", encoding='utf-8') as newbrand:
     newbrand.write(s)
 
-copyfile('console.nsi', '../release/')
+copy('console.nsi', '../release/')
