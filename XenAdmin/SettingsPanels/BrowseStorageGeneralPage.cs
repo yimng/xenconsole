@@ -45,6 +45,7 @@ using HalsignLib;
 using XenAdmin.Actions;
 using XenAdmin.Wizards.NewSRWizard_Pages;
 using XenAdmin.Wizards.NewSRWizard_Pages.Frontends;
+using System.Linq;
 
 namespace XenAdmin.SettingsPanels
 {
@@ -160,36 +161,32 @@ namespace XenAdmin.SettingsPanels
         private bool CanAddLUN(string scsiid)
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
-
-            foreach (PBD pdb in sr.Connection.ResolveAll<PBD>(sr.PBDs))
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("spare rebuilding") ||
+                    pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("spare rebuilding")))
             {
-                if (pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("spare rebuilding") ||
-                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("spare rebuilding") )
-                {
-                    return false;// it is adding lun
-                }
-                if (pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
-                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
-                    !pdb.other_config.ContainsKey("LUN1-status") || !pdb.other_config.ContainsKey("LUN2-status"))
-                {
-                    return true;
-                }
+                return false;
             }
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
+                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
+                    !pdb.other_config.ContainsKey("LUN1-status") || !pdb.other_config.ContainsKey("LUN2-status")))
+            {
+                return true;
+            }
+            
             return false;
         }
 
         private bool canissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
-
-            foreach (PBD pdb in sr.Connection.ResolveAll<PBD>(sr.PBDs))
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("removed") ||
+                    pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("removed")))
             {
-                if (pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed")||
-                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed"))
-                {
-                    return false;
-                }
+                return false;
             }
+            
             return true;
         }
 
