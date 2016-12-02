@@ -181,6 +181,12 @@ namespace XenAdmin.SettingsPanels
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+
+            if (pbds.Any<PBD>(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("spare rebuilding") ||
+                    pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("spare rebuilding")))
+            {
+                return false;
+            }
             if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("removed") ||
                     pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("removed")))
             {
