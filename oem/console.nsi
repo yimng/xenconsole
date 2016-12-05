@@ -2,15 +2,15 @@
 ; Copyright (c) 2008-2010 Halsign, Inc.  All rights reserved.
 ;
 
-!define PRODUCER_NAME      "Cldmind"
-!define PRODUCT_SUITE      "Cldmind"
-!define PRODUCT_NAME       "Cldmind Console"
+!define PRODUCER_NAME      "Cloud"
+!define PRODUCT_SUITE      "Cloud"
+!define PRODUCT_NAME       "CloudConsole"
 !define PRODUCT_DIS_VER    "2.2.1"
 !define PRODUCT_VERSION    "2.2.1"
 !define PRODUCT_PUBLISHER  "Cldmind Corporation."
 !define PRODUCT_WEB_SITE   "http://www.cldmind.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
-!define PRODUCT_CODE       "Cldmind Console"
+!define PRODUCT_CODE       "CloudConsole"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define BINARY_DIR         "BinDir"
