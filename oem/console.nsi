@@ -8,7 +8,7 @@
 !define PRODUCT_DIS_VER    "6.0"
 !define PRODUCT_VERSION    "6.0.0"
 !define PRODUCT_PUBLISHER  "cldmind Corporation."
-!define PRODUCT_WEB_SITE   "http://www.halsign.com"
+!define PRODUCT_WEB_SITE   "http://www.cldmind.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
 !define PRODUCT_CODE       "cldmind Console"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
