@@ -2,15 +2,15 @@
 ; Copyright (c) 2008-2010 Halsign, Inc.  All rights reserved.
 ;
 
-!define PRODUCER_NAME      "cldmind"
-!define PRODUCT_SUITE      "cldmind"
-!define PRODUCT_NAME       "cldmind Console"
-!define PRODUCT_DIS_VER    "6.0"
-!define PRODUCT_VERSION    "6.0.0"
-!define PRODUCT_PUBLISHER  "cldmind Corporation."
+!define PRODUCER_NAME      "Cldmind"
+!define PRODUCT_SUITE      "Cldmind"
+!define PRODUCT_NAME       "Cldmind Console"
+!define PRODUCT_DIS_VER    "2.2.1"
+!define PRODUCT_VERSION    "2.2.1"
+!define PRODUCT_PUBLISHER  "Cldmind Corporation."
 !define PRODUCT_WEB_SITE   "http://www.cldmind.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
-!define PRODUCT_CODE       "cldmind Console"
+!define PRODUCT_CODE       "Cldmind Console"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define BINARY_DIR         "BinDir"
