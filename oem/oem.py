@@ -18,6 +18,7 @@ def getResx(dir, resx):
         for f in fnmatch.filter(files, '*.resx'):
             resx.append(os.path.join(dir, root, f))
 getResx('../XenAdmin', resx)
+getResx('../XenModel', resx)
 
 # get oem name
 old = []
