@@ -4,6 +4,7 @@ from os import path
 from shutil import copyfile, copy
 from io import open
 import fnmatch
+import os
 
 resxfiles = "oem_files.conf"
 corpconf = "oem.properties"
