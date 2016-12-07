@@ -15,7 +15,7 @@ resx=[]
 def getResx(dir, resx):
     for root, dirs, files in os.walk(dir):
         for f in fnmatch.filter(files, '*.resx'):
-	    resx.append(os.path.join(dir, root, f))
+            resx.append(os.path.join(dir, root, f))
 getResx('../XenAdmin', resx)
 
 # get oem name
@@ -34,20 +34,20 @@ for line in resx:
     print(line)
     try:
         f = open(line, 'r')
-	s = f.read()
-	f.close()
-	f = open(line, 'r+')
-	for o,n in zip(old, new):
-	    s = s.replace(o, n)
-	f.write(s)
+        s = f.read()
+        f.close()
+        f = open(line, 'r+')
+        for o,n in zip(old, new):
+            s = s.replace(o, n)
+        f.write(s)
     except:
         f = open(line, 'r', encoding='utf-8')
-	s = f.read()
-	f.close()
-	f = open(line, 'r+' encoding='utf-8')
-	for o, n in zip(old, new):
-	    s = s.replace(o, n)
-	f.write(s)
+        s = f.read()
+        f.close()
+        f = open(line, 'r+', encoding='utf-8')
+        for o, n in zip(old, new):
+            s = s.replace(o, n)
+        f.write(s)
 
 
 # replace the resx files
