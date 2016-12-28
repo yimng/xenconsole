@@ -1573,6 +1573,24 @@ namespace XenAPI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The number of running vm exceeds the license limit..
+        /// </summary>
+        public static string LICENSE_RUNNING_VM_IN_MAX {
+            get {
+                return ResourceManager.GetString("LICENSE_RUNNING_VM_IN_MAX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of CPUs that license allowed is less than the numbers in current host..
+        /// </summary>
+        public static string LICENSE_SOCKET_OUTNUMBER {
+            get {
+                return ResourceManager.GetString("LICENSE_SOCKET_OUTNUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The server was unable to contact your domain server. Check your settings are correct and that a route to the server exists..
         /// </summary>
         public static string LIKEWISE_WINERROR_0251E {

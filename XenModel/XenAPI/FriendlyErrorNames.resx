@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ACTIVATION_WHILE_NOT_FREE" xml:space="preserve">
     <value>An activation key can only be applied when the edition is set to 'free'.</value>
@@ -620,6 +620,12 @@
   </data>
   <data name="LICENSE_PROCESSING_ERROR" xml:space="preserve">
     <value>There was an error processing your license.  Please contact your support representative</value>
+  </data>
+  <data name="LICENSE_RUNNING_VM_IN_MAX" xml:space="preserve">
+    <value>The number of running vm exceeds the license limit.</value>
+  </data>
+  <data name="LICENSE_SOCKET_OUTNUMBER" xml:space="preserve">
+    <value>The number of CPUs that license allowed is less than the numbers in current host.</value>
   </data>
   <data name="LIKEWISE_WINERROR_0251E" xml:space="preserve">
     <value>The server was unable to contact your domain server. Check your settings are correct and that a route to the server exists.</value>

@@ -618,6 +618,12 @@
   <data name="LICENSE_PROCESSING_ERROR" xml:space="preserve">
     <value>处理许可证时出错。请与支持代表联系</value>
   </data>
+  <data name="LICENSE_RUNNING_VM_IN_MAX" xml:space="preserve">
+    <value>正在运行的虚拟机数超出了授权的限制。</value>
+  </data>
+  <data name="LICENSE_SOCKET_OUTNUMBER" xml:space="preserve">
+    <value>当前主机上的物理 CPU 数超过许可证允许的最大 CPU 数。</value>
+  </data>
   <data name="LIKEWISE_WINERROR_0251E" xml:space="preserve">
     <value>此服务器无法与域服务器联系。请检查您的设置是否正确以及是否存在到服务器的路由。</value>
   </data>
