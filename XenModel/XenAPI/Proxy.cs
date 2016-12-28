@@ -3428,14 +3428,6 @@ namespace XenAPI
         Response<string []>
         host_list_methods(string session);
 
-        [XmlRpcMethod("host.license_apply")]
-        Response<string>
-        host_license_apply(string session, string _host, string _contents);
-
-        [XmlRpcMethod("Async.host.license_apply")]
-        Response<string>
-        async_host_license_apply(string session, string _host, string _contents);
-
         [XmlRpcMethod("host.license_add")]
         Response<string>
         host_license_add(string session, string _host, string _contents);

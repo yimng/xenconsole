@@ -1671,31 +1671,7 @@ namespace XenAPI
         public static string[] list_methods(Session session)
         {
             return (string [])session.proxy.host_list_methods(session.uuid).parse();
-        }
-
-        /// <summary>
-        /// Apply a new license to a host
-        /// First published in XenServer 4.0.
-        /// </summary>
-        /// <param name="session">The session</param>
-        /// <param name="_host">The opaque_ref of the given host</param>
-        /// <param name="_contents">The contents of the license file, base64 encoded</param>
-        public static void license_apply(Session session, string _host, string _contents)
-        {
-            session.proxy.host_license_apply(session.uuid, (_host != null) ? _host : "", (_contents != null) ? _contents : "").parse();
-        }
-
-        /// <summary>
-        /// Apply a new license to a host
-        /// First published in XenServer 4.0.
-        /// </summary>
-        /// <param name="session">The session</param>
-        /// <param name="_host">The opaque_ref of the given host</param>
-        /// <param name="_contents">The contents of the license file, base64 encoded</param>
-        public static XenRef<Task> async_license_apply(Session session, string _host, string _contents)
-        {
-            return XenRef<Task>.Create(session.proxy.async_host_license_apply(session.uuid, (_host != null) ? _host : "", (_contents != null) ? _contents : "").parse());
-        }
+        }        
 
         /// <summary>
         /// Apply a new license to a host
