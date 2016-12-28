@@ -1982,4 +1982,7 @@
   <data name="Label-SR.SRTypes-lvmobond" xml:space="preserve">
     <value>LUN 绑定</value>
   </data>
+  <data name="Label-host.license_params-max_vms" xml:space="preserve">
+    <value>最大可运行的虚拟机数量</value>
+  </data>
 </root>

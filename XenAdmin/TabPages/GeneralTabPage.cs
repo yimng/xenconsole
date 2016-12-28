@@ -1020,6 +1020,11 @@ namespace XenAdmin.TabPages
             if(Helpers.ClearwaterOrGreater(host))
                 s.AddEntry(Messages.NUMBER_OF_SOCKETS, host.CpuSockets.ToString());
 
+            if (info.ContainsKey("max_VMs"))
+            {
+                s.AddEntry(FriendlyName("host.license_params-max_vms"), host.license_params["max_VMs"]);
+            }
+
             /**
             if (host.license_server.ContainsKey("address"))
             {

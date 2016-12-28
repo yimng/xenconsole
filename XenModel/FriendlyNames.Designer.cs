@@ -997,6 +997,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to max running vm number.
+        /// </summary>
+        public static string Label_host_license_params_max_vms {
+            get {
+                return ResourceManager.GetString("Label-host.license_params-max_vms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product code.
         /// </summary>
         public static string Label_host_license_params_productcode {

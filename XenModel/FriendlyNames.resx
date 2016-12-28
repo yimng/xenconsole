@@ -1988,4 +1988,7 @@
   <data name="Label-SR.SRTypes-lvmobond" xml:space="preserve">
     <value>LUN Bond</value>
   </data>
+  <data name="Label-host.license_params-max_vms" xml:space="preserve">
+    <value>max running vm number</value>
+  </data>
 </root>
