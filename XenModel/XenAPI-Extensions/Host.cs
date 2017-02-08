@@ -299,7 +299,14 @@ namespace XenAPI
         {
             return h._RestrictWLB;
         }
-
+        private bool _RestrictBR
+        {
+            get { return BoolKeyPreferTrue(license_params, "restrict_br"); }
+        }
+        public static bool RestrictBR(Host h)
+        {
+            return h._RestrictBR;
+        }
         private bool _RestrictVSwitchController
         {
             get { return BoolKeyPreferTrue(license_params, "restrict_vswitch_controller"); }

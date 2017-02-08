@@ -37,6 +37,7 @@ using System.ComponentModel;
 using HalsignTop;
 using XenAPI;
 using XenAdmin;
+using XenAdmin.Core;
 
 namespace XenAdmin.Commands
 {
@@ -81,10 +82,10 @@ namespace XenAdmin.Commands
             /// <returns></returns>
             protected override bool CanExecuteCore(SelectedItemCollection selection)
             {
+                /**
                 var conn = selection.GetConnectionOfFirstItem();
                 if (conn == null)
-                    return false;
-
+                    return false;                
                 Host tempHost = Pool.getLowestLicenseHost(XenAdmin.Core.Helpers.GetPool(conn));
                 if (tempHost != null)
                 {
@@ -94,7 +95,12 @@ namespace XenAdmin.Commands
                         return false;
                     }
                 }
-
+                **/
+                bool restrict_br = Helpers.FeatureForbidden(selection[0].XenObject, Host.RestrictBR);
+                if (restrict_br)
+                {
+                    return false;
+                }
                 if (selection.Count == 1)
                 {
                     if (selection[0].Value is Host)
