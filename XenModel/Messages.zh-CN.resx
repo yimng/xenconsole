@@ -14327,4 +14327,7 @@ SCSI ID: {6}
   <data name="FOLDER_BROWSER_EXPORT_APPLIANCE" xml:space="preserve">
     <value>请选择要保存的文件目录</value>
   </data>
+  <data name="OVERVIEW_UNITS_OT" xml:space="preserve">
+    <value>(平均|最大 KB/秒)</value>
+  </data>
 </root>

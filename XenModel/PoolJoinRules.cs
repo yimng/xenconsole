@@ -118,7 +118,7 @@ namespace XenAdmin.Core
             if (DifferentServerVersion(slaveHost, masterHost))
                 return Reason.DifferentServerVersion;
 
-            if (FreeHostPaidMaster(slaveHost, masterHost, allowLicenseUpgrade))
+            if (FreeHostPaidMaster(slaveHost, masterHost, false))
                 return Helpers.ClearwaterOrGreater(masterHost) ? 
                     Reason.UnlicensedHostLicensedMaster : 
                     Reason.FreeHostPaidMaster;

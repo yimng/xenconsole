@@ -106,7 +106,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
             radioButtonFcoe.Visible = Helpers.DundeeOrGreater(Connection);
 
-            radioButtonlunbond.Visible = Helpers.after_5_2_1(Connection);
+            radioButtonlunbond.Visible = !Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR);
 
             foreach (var radioButton in _radioButtons)
             {

@@ -49,8 +49,9 @@ namespace XenAPI
         public enum Edition
         {
             Free,
-            Advanced,
+            Express,
             Enterprise,
+            Advanced,
             Platinum,
             EnterpriseXD,
             PerSocket,     //Added in Clearwater (PR-1589)
@@ -79,9 +80,11 @@ namespace XenAPI
         {
             switch (editionText)
             {
-                case "advanced":
+                case "XE Express":
+                    return Edition.Express;
+                case "XE Advanced":
                     return Edition.Advanced;
-                case "enterprise":
+                case "XE Enterprise":
                     return Edition.Enterprise;
                 case "enterprise-xd":
                     return Edition.EnterpriseXD;
@@ -135,10 +138,12 @@ namespace XenAPI
         {
             switch (edition)
             {
+                case Edition.Express:
+                    return "XE Express";
                 case Edition.Advanced:
-                    return "advanced";
+                    return "XE Advanced";
                 case Edition.Enterprise:
-                    return "enterprise";
+                    return "XE Enterprise";
                 case Edition.Platinum:
                     return "platinum";
                 case Edition.EnterpriseXD:
@@ -306,6 +311,14 @@ namespace XenAPI
         public static bool RestrictBR(Host h)
         {
             return h._RestrictBR;
+        }
+        private bool _RestrictLUNBondSR
+        {
+            get { return BoolKeyPreferTrue(license_params, "restrict_lunbondsr"); }
+        }
+        public static bool RestrictLUNBondSR(Host h)
+        {
+            return h._RestrictLUNBondSR;
         }
         private bool _RestrictVSwitchController
         {

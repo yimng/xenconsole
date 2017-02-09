@@ -27638,6 +27638,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (avg | max KBs).
+        /// </summary>
+        public static string OVERVIEW_UNITS_OT {
+            get {
+                return ResourceManager.GetString("OVERVIEW_UNITS_OT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Created by [XenCenter] Disk Image Import.
         /// </summary>
         public static string OVF_CREATED {
