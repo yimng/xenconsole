@@ -56,7 +56,7 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
             this.selectedVMs = selectedVMs;
             this.wizardMode = wizardMode;
             this.ignoredConnections = ignoredConnections ?? new List<IXenConnection>();
-
+            InitializeCheckbox();
             InitializeText();
         }
 
@@ -73,7 +73,9 @@ namespace XenAdmin.Wizards.CrossPoolMigrateWizard
 
         protected override bool IsShowEncryption
         {
-            get { return true; }
+            get {
+                return selectedVMs.All(vm => vm.power_state == XenAPI.vm_power_state.Running);
+            }
         }
 
         protected override bool ImplementsIsDirty()

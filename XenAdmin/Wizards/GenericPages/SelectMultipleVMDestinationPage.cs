@@ -110,7 +110,7 @@ namespace XenAdmin.Wizards.GenericPages
 	        m_colTarget.HeaderText = TargetColumnHeaderText;
 	    }
 
-        private void InitializeCheckbox()
+        protected void InitializeCheckbox()
         {
             m_EncryptionChkbox.Visible = IsShowEncryption;
         }   
