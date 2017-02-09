@@ -45,7 +45,7 @@ namespace XenAdmin
         public const string BRAND_CONSOLE = "vGate";
         public const string PRODUCT_BRAND = "vGate";
         public const string COMPANY_NAME_SHORT = "Halsign";
-        public const string SEARCH = "[vGatesearch]";
+        public const string SEARCH = "vGatesearch";
         public const string UPDATE = "[xsupdate]";
         public const string UPDATEISO = "[iso]";
         public const string BACKUP = "[xbk]";
