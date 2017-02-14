@@ -106,7 +106,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
             radioButtonFcoe.Visible = Helpers.DundeeOrGreater(Connection);
 
-            radioButtonlunbond.Visible = !Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR);
+            radioButtonlunbond.Visible = Helpers.after_5_2_1(Connection);
 
             foreach (var radioButton in _radioButtons)
             {
@@ -261,14 +261,16 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     selectedStoreTypeLabel.Text = string.Empty;
                     SRBlurb.Visible = false;
                     upsellPage1.Visible = true;
-                    if (frontend is SrWizardType_lvmobond)
-                    {
-                        upsellPage1.SetAllTexts(Messages.LUNBOND_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
-                    }
-                    else
-                    {
-                        upsellPage1.SetAllTexts(Messages.UPSELL_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
-                    }
+                    upsellPage1.SetAllTexts(Messages.UPSELL_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
+                    m_allowNext = false;
+                }
+                else if (frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR))
+                {
+                    selectedStoreTypeLabel.Visible = false;
+                    selectedStoreTypeLabel.Text = string.Empty;
+                    SRBlurb.Visible = false;
+                    upsellPage1.Visible = true;
+                    upsellPage1.SetAllTexts(Messages.LUNBOND_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
                     m_allowNext = false;
                 }
                 else
