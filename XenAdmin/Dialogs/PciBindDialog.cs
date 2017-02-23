@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using XenAPI;
 using HalsignLib;
 using XenAdmin.Commands;
+using HalsignModel;
 
 namespace XenAdmin.Dialogs
 {
@@ -39,6 +40,7 @@ namespace XenAdmin.Dialogs
 
         private void Bindbutton_Click(object sender, EventArgs e)
         {
+            string errormsg = "";
             var vmref = VM.get_by_uuid(m_host.Connection.Session, this.VMsComboBox.SelectedValue.ToString());
             VM selectedvm = VM.get_record(m_host.Connection.Session, vmref);
             Dictionary<string, string> other_config = selectedvm.other_config;
@@ -48,14 +50,25 @@ namespace XenAdmin.Dialogs
                 args.Add("id", this.m_id);
                 args.Add("vm_uuid", selectedvm.uuid);
                 string result = XenAPI.Host.call_plugin(m_host.Connection.Session, m_host.opaque_ref, "pvusbinfo.py", "assign", args);
-                
-                if (!other_config.ContainsKey("usbmode"))
+                var assignresult = (UsbDeviceInfoConfig.AssingResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.AssingResult));
+                if (assignresult.returncode == "0")
                 {
-                    other_config.Add("usbmode", "pvusb");
-                } else
-                {
-                    other_config["usbmode"] = "pvusb";
+                    if (!other_config.ContainsKey("usbmode"))
+                    {
+                        other_config.Add("usbmode", "pvusb");
+                    }
+                    else
+                    {
+                        other_config["usbmode"] = "pvusb";
+                    }
+                    XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
+                    selectedvm.NotifyPropertyChanged("other_config");
                 }
+                else
+                {
+                    errormsg = assignresult.returnvalue;
+                }
+                
             }
             else
             {
@@ -82,11 +95,14 @@ namespace XenAdmin.Dialogs
                     }
                 }
                 //string msg = selectedvm.power_state == vm_power_state.Halted ? Messages.BOND_USB_DEVICE_VM_HALT : Messages.BOND_USB_DEVICE_VM_RUNNING;
-                //MessageBox.Show(this, msg);                
+                //MessageBox.Show(this, msg);       
+                XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
+                selectedvm.NotifyPropertyChanged("other_config");
             }
-            XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
-            selectedvm.NotifyPropertyChanged("other_config");
+            if (!string.IsNullOrEmpty(errormsg))
+                MessageBox.Show(this, errormsg);
             this.Close();
+            
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)

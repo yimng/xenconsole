@@ -46,12 +46,21 @@ namespace HalsignModel
         }
 
         [DataContract]
-        public class PVUsbResult
+        public class PVUsbListResult
         {
             [DataMember(Name = "returncode")]
             public string returncode { get; set; }
             [DataMember(Name = "returnvalue")]
             public List<UsbDeviceInfoConfig.USBInfo> returnvalue { get; set; }
+        }
+
+        [DataContract]
+        public class AssingResult
+        {
+            [DataMember(Name = "returncode")]
+            public string returncode { get; set; }
+            [DataMember(Name = "returnvalue")]
+            public string returnvalue { get; set; }
         }
     }
 }

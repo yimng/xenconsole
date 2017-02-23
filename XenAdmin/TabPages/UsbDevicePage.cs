@@ -108,7 +108,7 @@ namespace XenAdmin.TabPages
                 if (this.home != null)
                 {
                     string result = XenAPI.Host.call_plugin(home.Connection.Session, home.opaque_ref, "pvusbinfo.py", "list", null);
-                    var ret = (UsbDeviceInfoConfig.PVUsbResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbResult));
+                    var ret = (UsbDeviceInfoConfig.PVUsbListResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbListResult));
                     foreach (UsbDeviceInfoConfig.USBInfo usbinfo in ret.returnvalue)
                     {
                         DataRow row = dtTable.NewRow();
@@ -116,7 +116,7 @@ namespace XenAdmin.TabPages
                         row["pciid"] = usbinfo.pciid;
                         row["bus"] = string.Concat("Bus ", usbinfo.busid);
 
-                        row["devices"] = usbinfo.longname != null ? usbinfo.longname : usbinfo.shortname;
+                        row["devices"] = usbinfo.shortname + " （" + usbinfo.longname + ")";
                         if (usbinfo.vm != null)
                         {
                             XenRef<VM> vmRef = VM.get_by_uuid(home.Connection.Session, usbinfo.vm);
@@ -173,14 +173,14 @@ namespace XenAdmin.TabPages
             if(this.home != null)
             {
                 string result = XenAPI.Host.call_plugin(home.Connection.Session, home.opaque_ref, "pvusbinfo.py", "list", null);
-                var pvusbresult = (UsbDeviceInfoConfig.PVUsbResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbResult));
+                var pvusbresult = (UsbDeviceInfoConfig.PVUsbListResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbListResult));
                 for (int i = 0; i < pvusbresult.returnvalue.Count; i++)
                 {
                     PcisdataGridViewExs.Rows.Add();
                     PcisdataGridViewExs.Rows[i].Tag = pvusbresult.returnvalue[i].id;
                     PcisdataGridViewExs.Rows[i].Cells[0].Value = string.Concat("Bus ", pvusbresult.returnvalue[i].busid);
                     PcisdataGridViewExs.Rows[i].Cells[0].Tag = pvusbresult.returnvalue[i].pciid;
-                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].longname != null ? pvusbresult.returnvalue[i].longname : pvusbresult.returnvalue[i].shortname;
+                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].shortname + " （" + pvusbresult.returnvalue[i].shortname + ")";
                     if (pvusbresult.returnvalue[i].vm != null)
                     {
                         XenRef<VM> vmRef = VM.get_by_uuid(home.Connection.Session, pvusbresult.returnvalue[i].vm);
