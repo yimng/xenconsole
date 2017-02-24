@@ -43,7 +43,7 @@ namespace XenAdmin.Dialogs
         private Host m_host;
         private string m_id;
         private string mode;
-        private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
+        //private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
         private void Bindbutton_Click(object sender, EventArgs e)
         {
             string errormsg = "";
@@ -105,8 +105,8 @@ namespace XenAdmin.Dialogs
                 XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
                 selectedvm.NotifyPropertyChanged("other_config");
             }
-            if (!string.IsNullOrEmpty(errormsg))
-                MessageBox.Show(this, errorDescriptions.GetString(errormsg));
+            //if (!string.IsNullOrEmpty(errormsg))
+                //MessageBox.Show(this, errorDescriptions.GetString(errormsg));
             this.Close();            
         }
 

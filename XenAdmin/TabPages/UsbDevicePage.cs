@@ -29,7 +29,7 @@ namespace XenAdmin.TabPages
         private Host home;
         private DataTable dtTable;
         private static object lockobj = new object();
-        private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
+        //private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
         private delegate void BuildDataListHandler();
 
         private void Initdatatable()
@@ -288,8 +288,8 @@ namespace XenAdmin.TabPages
                     var unassignresult = (UsbDeviceInfoConfig.AssingResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.AssingResult));
                     if (unassignresult.returncode != "0")
                     {
-                        if (!string.IsNullOrEmpty(unassignresult.returnvalue))
-                            MessageBox.Show(this, errorDescriptions.GetString(unassignresult.returnvalue));
+                        //if (!string.IsNullOrEmpty(unassignresult.returnvalue))
+                        //    MessageBox.Show(this, errorDescriptions.GetString(unassignresult.returnvalue));
                     }
                     else
                     {
