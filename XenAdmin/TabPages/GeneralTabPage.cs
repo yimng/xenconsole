@@ -1022,7 +1022,8 @@ namespace XenAdmin.TabPages
 
             if (info.ContainsKey("max_VMs"))
             {
-                s.AddEntry(FriendlyName("host.license_params-max_vms"), host.license_params["max_VMs"]);
+                if (host.license_params["max_VMs"] != "-1")
+                    s.AddEntry(FriendlyName("host.license_params-max_vms"), host.license_params["max_VMs"]);
             }
 
             /**

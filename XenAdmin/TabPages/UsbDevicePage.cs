@@ -13,6 +13,7 @@ using HalsignModel;
 using XenAdmin.Controls;
 using XenAdmin.Controls.DataGridViewExs;
 using XenAdmin.Dialogs;
+using System.Resources;
 
 namespace XenAdmin.TabPages
 {
@@ -28,7 +29,7 @@ namespace XenAdmin.TabPages
         private Host home;
         private DataTable dtTable;
         private static object lockobj = new object();
-
+        private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
         private delegate void BuildDataListHandler();
 
         private void Initdatatable()
@@ -91,8 +92,7 @@ namespace XenAdmin.TabPages
                         PcisdataGridViewExs.Rows[i].Cells[2].Value = dtTable.Rows[i]["vm_name"];
                         PcisdataGridViewExs.Rows[i].Cells[2].Tag = dtTable.Rows[i]["vm_uuid"];
                         PcisdataGridViewExs.Rows[i].Cells[3].Value = dtTable.Rows[i]["usbmode"];
-                        usbmode.Frozen = !(bool)(dtTable.Rows[i]["bind"]);
-                        
+
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Bind = (bool)(dtTable.Rows[i]["bind"]);           
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Enabled = (bool)(dtTable.Rows[i]["enabled"]);
                     }
@@ -116,7 +116,7 @@ namespace XenAdmin.TabPages
                         row["pciid"] = usbinfo.pciid;
                         row["bus"] = string.Concat("Bus ", usbinfo.busid);
 
-                        row["devices"] = usbinfo.shortname + " （" + usbinfo.longname + ")";
+                        row["devices"] = usbinfo.shortname + " （" + usbinfo.longname + " )";
                         if (usbinfo.vm != null)
                         {
                             XenRef<VM> vmRef = VM.get_by_uuid(home.Connection.Session, usbinfo.vm);
@@ -124,7 +124,7 @@ namespace XenAdmin.TabPages
 
                             row["vm_name"] = bindvm.name_label;
                             row["vm_uuid"] = usbinfo.vm;
-                            row["usbmode"] = bindvm.other_config["usbmode"];
+                            row["usbmode"] = "pvusb";
                             row["bind"] = false;
                             row["enabled"] = true;
                         }
@@ -132,10 +132,10 @@ namespace XenAdmin.TabPages
                         {
                             VM findvm = home.Connection.Cache.VMs.FirstOrDefault(vm => vm.uuid != null
                                 && vm.is_a_real_vm
-                                && HalsignHelpers.IsVMShow(vm)
-                                //&& vm.Home().Equals(home) 
+                                && HalsignHelpers.IsVMShow(vm)                                
                                 && vm.other_config.ContainsKey("pci")
-                                && vm.other_config["pci"].Contains(string.Concat("0000:", usbinfo.pciid)));
+                                && vm.other_config["pci"].Contains(string.Concat("0000:", usbinfo.pciid))
+                                && vm.Home().Equals(home));
 
                             if (findvm == null)
                             {
@@ -150,9 +150,7 @@ namespace XenAdmin.TabPages
                                 row["usbmode"] = "vt-d";
                                 row["bind"] = false;
                                 row["enabled"] = true;
-                            }
-
-                            
+                            }                            
                         }
 
                         dtTable.Rows.Add(row);
@@ -180,7 +178,7 @@ namespace XenAdmin.TabPages
                     PcisdataGridViewExs.Rows[i].Tag = pvusbresult.returnvalue[i].id;
                     PcisdataGridViewExs.Rows[i].Cells[0].Value = string.Concat("Bus ", pvusbresult.returnvalue[i].busid);
                     PcisdataGridViewExs.Rows[i].Cells[0].Tag = pvusbresult.returnvalue[i].pciid;
-                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].shortname + " （" + pvusbresult.returnvalue[i].shortname + ")";
+                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].shortname + " （" + pvusbresult.returnvalue[i].shortname + " )";
                     if (pvusbresult.returnvalue[i].vm != null)
                     {
                         XenRef<VM> vmRef = VM.get_by_uuid(home.Connection.Session, pvusbresult.returnvalue[i].vm);
@@ -196,9 +194,9 @@ namespace XenAdmin.TabPages
                         VM findvm = home.Connection.Cache.VMs.FirstOrDefault(vm => vm.uuid != null
                             && vm.is_a_real_vm
                             && HalsignHelpers.IsVMShow(vm)
-                            //&& vm.Home().Equals(home) 
                             && vm.other_config.ContainsKey("pci")
-                            && vm.other_config["pci"].Contains(string.Concat("0000:", pvusbresult.returnvalue[i].pciid)));
+                            && vm.other_config["pci"].Contains(string.Concat("0000:", pvusbresult.returnvalue[i].pciid))
+                            && vm.Home().Equals(home));
                         if (findvm == null)
                         {
                             PcisdataGridViewExs.Rows[i].Cells[3].Value = "pvusb";
@@ -250,39 +248,57 @@ namespace XenAdmin.TabPages
                 var vmref = VM.get_by_uuid(this.home.Connection.Session, vmuuid);
                 VM selectedvm = VM.get_record(this.home.Connection.Session, vmref);
                 Dictionary<string, string> other_config = selectedvm.other_config;
-                string mode = other_config["usbmode"];
-                other_config.Remove("usbmode");
+                string mode = PcisdataGridViewExs.Rows[e.RowIndex].Cells[3].Value.ToString();
+                
                 if (mode == "vt-d")
                 {
-                    string pcistr = string.Concat("0/0000:", PcisdataGridViewExs.Rows[e.RowIndex].Cells[0].Tag.ToString());
-                    string pci_val = other_config["pci"];
-                    string[] devices = pci_val.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    if (other_config["pci"] == pcistr)
+                    if (other_config.ContainsKey("pci"))
                     {
-                        other_config.Remove("pci");
-                    }
-                    else if (other_config["pci"].StartsWith(pcistr) && devices.Length > 1)
-                    {
-                        pci_val = pci_val.Remove(0, pcistr.Length + 1);
-                        other_config["pci"] = pci_val;
-                    }
-                    else
-                    {
-                        int position = other_config["pci"].IndexOf(pcistr, StringComparison.CurrentCultureIgnoreCase);
-                        if (position != -1)
+                        string pcistr = string.Concat("0/0000:", PcisdataGridViewExs.Rows[e.RowIndex].Cells[0].Tag.ToString());
+                        string pci_val = other_config["pci"];
+                        string[] devices = pci_val.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                        if (other_config["pci"] == pcistr)
                         {
-                            pci_val = pci_val.Remove(position - 1, pcistr.Length + 1);
+                            other_config.Remove("pci");
+                        }
+                        else if (other_config["pci"].StartsWith(pcistr) && devices.Length > 1)
+                        {
+                            pci_val = pci_val.Remove(0, pcistr.Length + 1);
                             other_config["pci"] = pci_val;
                         }
-                    }
-                } else if (mode == "pvusb")
+                        else
+                        {
+                            int position = other_config["pci"].IndexOf(pcistr, StringComparison.CurrentCultureIgnoreCase);
+                            if (position != -1)
+                            {
+                                pci_val = pci_val.Remove(position - 1, pcistr.Length + 1);
+                                other_config["pci"] = pci_val;
+                            }
+                        }
+                        other_config.Remove("usbmode");
+                        XenAPI.VM.set_other_config(home.Connection.Session, vmref, other_config);
+                        selectedvm.NotifyPropertyChanged("other_config");
+                    }                    
+                }
+                else if (mode == "pvusb")
                 {
                     Dictionary<string, string> args = new Dictionary<string, string>();
                     args.Add("id", PcisdataGridViewExs.Rows[e.RowIndex].Tag.ToString());
                     string result = XenAPI.Host.call_plugin(home.Connection.Session, home.opaque_ref, "pvusbinfo.py", "unassign", args);
+                    var unassignresult = (UsbDeviceInfoConfig.AssingResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.AssingResult));
+                    if (unassignresult.returncode != "0")
+                    {
+                        if (!string.IsNullOrEmpty(unassignresult.returnvalue))
+                            MessageBox.Show(this, errorDescriptions.GetString(unassignresult.returnvalue));
+                    }
+                    else
+                    {
+                        other_config.Remove("usbmode");
+                        XenAPI.VM.set_other_config(home.Connection.Session, vmref, other_config);
+                        selectedvm.NotifyPropertyChanged("other_config");
+                    }
                 }
-                XenAPI.VM.set_other_config(home.Connection.Session, vmref, other_config);
-                selectedvm.NotifyPropertyChanged("other_config");
+                
             }
         }
     }
