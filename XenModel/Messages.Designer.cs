@@ -22158,6 +22158,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to request license.
+        /// </summary>
+        public static string MAINWINDOW_EXPORT_MAC {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_EXPORT_MAC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to request license.
+        /// </summary>
+        public static string MAINWINDOW_EXPORT_MAC_CONTEXT_MENU {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_EXPORT_MAC_CONTEXT_MENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E&amp;xport Resource Data....
         /// </summary>
         public static string MAINWINDOW_EXPORT_POOL_RESOURCE_DATA {

@@ -14330,4 +14330,10 @@ SCSI ID: {6}
   <data name="OVERVIEW_UNITS_OT" xml:space="preserve">
     <value>(平均|最大 KB/秒)</value>
   </data>
+  <data name="MAINWINDOW_EXPORT_MAC" xml:space="preserve">
+    <value>申请许可证</value>
+  </data>
+  <data name="MAINWINDOW_EXPORT_MAC_CONTEXT_MENU" xml:space="preserve">
+    <value>申请许可证</value>
+  </data>
 </root>

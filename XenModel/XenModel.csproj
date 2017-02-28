@@ -185,6 +185,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Messages.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.zh-CN.resx</DependentUpon>
+    </Compile>
     <Compile Include="Network\Cache.cs" />
     <Compile Include="Network\ConnectTask.cs" />
     <Compile Include="Network\Heartbeat.cs" />

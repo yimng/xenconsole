@@ -501,6 +501,7 @@ namespace XenAdmin.Commands
                 items.AddIfEnabled(new EditTagsCommand(mainWindow, selection));
                 items.AddSeparator();
                 items.AddPluginItems(PluginContextMenu.server, selection);
+                items.AddIfEnabled(new ExportMacCommand(mainWindow, selection));
                 items.AddSeparator();
             }
 
@@ -558,6 +559,7 @@ namespace XenAdmin.Commands
                 items.AddPluginItems(PluginContextMenu.server, selection);
                 items.AddSeparator();
                 items.AddIfEnabled(new HostPropertiesCommand(mainWindow, selection));
+                items.AddIfEnabled(new ExportMacCommand(mainWindow, selection));
             }
 
             public override bool IsValid(SelectedItemCollection selection)
@@ -612,6 +614,7 @@ namespace XenAdmin.Commands
                 items.AddSeparator();
 
                 items.AddIfEnabled(new HostPropertiesCommand(mainWindow, selection));
+                items.AddIfEnabled(new ExportMacCommand(mainWindow, selection));
             }
 
             public override bool IsValid(SelectedItemCollection selection)
@@ -739,6 +742,7 @@ namespace XenAdmin.Commands
                 items.AddPluginItems(PluginContextMenu.pool, selection);
                 items.AddSeparator();
                 items.Add(new PoolPropertiesCommand(mainWindow, selection));
+                items.Add(new ExportMacCommand(mainWindow, selection));
             }
 
             public override bool IsValid(SelectedItemCollection selection)
