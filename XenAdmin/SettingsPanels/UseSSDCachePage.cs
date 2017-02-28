@@ -107,7 +107,7 @@ namespace XenAdmin.SettingsPanels
             {
                 return false;
             }
-            var Affinity = vms[0] != null ? vms[0].GetStorageHost(true) : null;
+            var Affinity = vms.Count == 0 ? null : (vms[0] == null ? null : vms[0].GetStorageHost(true));
             List<SR> AllSRs = new List<SR>(vdi.Connection.Cache.SRs);
             List<SR> srs;
             if (Affinity != null)
