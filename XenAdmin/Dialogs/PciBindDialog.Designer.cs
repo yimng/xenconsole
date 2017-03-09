@@ -72,6 +72,7 @@
             this.VMsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VMsComboBox.FormattingEnabled = true;
             this.VMsComboBox.Name = "VMsComboBox";
+            this.VMsComboBox.SelectedIndexChanged += new System.EventHandler(this.VMsComboBox_SelectedIndexChanged);
             // 
             // BusNamelabel
             // 
