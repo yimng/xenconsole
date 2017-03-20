@@ -112,77 +112,76 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>USB 控制器</value>
+  <data name="buttonSave.Text" xml:space="preserve">
+    <value>保存(&amp;S)</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
-    <value>97</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 32</value>
   </data>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>USB 设备</value>
+  <data name="textBoxPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 23</value>
   </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>虚拟机</value>
+  <data name="textBoxvSwitchControllerIP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 3</value>
   </data>
-  <data name="usbmode.HeaderText" xml:space="preserve">
-    <value>USB 模式</value>
+  <data name="textBoxvSwitchControllerIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 23</value>
   </data>
-  <data name="dataGridViewButtonColumnEx1.HeaderText" xml:space="preserve">
-    <value>连接设备</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PcisdataGridViewExs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
-  </data>
-  <data name="PcisdataGridViewExs.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>780, 450</value>
-  </data>
-  <data name="PcisdataGridViewExs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>717, 287</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 10.5pt</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>717, 20</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>1. 在使用 USB 穿透之前，请确定主机已启用 vt-d 功能。</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 10.5pt</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 20</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>协议</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>717, 20</value>
+    <value>64, 29</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>2. 连接 USB 设备后，请重新启动虚拟机使设置生效。</value>
+    <value>端口(&amp;P):</value>
   </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 10.5pt</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>IP 地址(&amp;I):</value>
+  </data>
+  <data name="checkBoxRegister.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 21</value>
+  </data>
+  <data name="checkBoxRegister.Text" xml:space="preserve">
+    <value>同时将该资源池注册到控制器(&amp;R)</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>717, 20</value>
+    <value>64, 29</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>3. 断开 USB 连接后，在下一次主机重启前无法再次连接。</value>
+    <value>用户名(&amp;U):</value>
   </data>
-  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 60</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 29</value>
   </data>
-  <data name="tableLayoutPanel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 9pt</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>密码(&amp;W):</value>
+  </data>
+  <data name="textBoxUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 61</value>
+  </data>
+  <data name="textBoxUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 23</value>
+  </data>
+  <data name="textBoxPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 90</value>
+  </data>
+  <data name="textBoxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 23</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>取消(&amp;C)</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>配置 vSwitch Controller</value>
   </data>
 </root>

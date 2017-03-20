@@ -118,6 +118,7 @@
     <Compile Include="Actions\GUIActions\IgnorePatchAction.cs" />
     <Compile Include="Actions\GUIActions\SaveDataSourceStateAction.cs" />
     <Compile Include="Actions\GUIActions\SearchAction.cs" />
+    <Compile Include="Actions\OVSCActions\OVSCConfigurationAction.cs" />
     <Compile Include="Alerts\Types\AlarmMessageAlert.cs" />
     <Compile Include="Alerts\Types\XenServerUpdateAlert.cs" />
     <Compile Include="Alerts\Types\DuplicateIqnAlert.cs" />
@@ -408,6 +409,12 @@
     </Compile>
     <Compile Include="Dialogs\UpsellDialog.designer.cs">
       <DependentUpon>UpsellDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\vSwitchControllerConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\vSwitchControllerConfigDialog.designer.cs">
+      <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.cs">
       <SubType>Form</SubType>
@@ -762,6 +769,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TabPages\UsbDevicePage.Designer.cs" />
+    <Compile Include="TabPages\vSwitchController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabPages\vSwitchController.designer.cs">
+      <DependentUpon>vSwitchController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\BackupWizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2018,6 +2031,12 @@
       <SubType>Designer</SubType>
       <DependentUpon>SelectVMsToSuspendDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\vSwitchControllerConfigDialog.resx">
+      <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\vSwitchControllerConfigDialog.zh-CN.resx">
+      <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\Wlb\WlbEditScheduledTask.resx">
@@ -2238,6 +2257,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TabPages\UsbDevicePage.resx" />
     <EmbeddedResource Include="TabPages\UsbDevicePage.zh-CN.resx" />
+    <EmbeddedResource Include="TabPages\vSwitchController.resx">
+      <DependentUpon>vSwitchController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\vSwitchController.zh-CN.resx">
+      <DependentUpon>vSwitchController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabPages\WlbPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>WlbPage.cs</DependentUpon>
