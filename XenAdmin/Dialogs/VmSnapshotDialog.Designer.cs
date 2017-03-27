@@ -39,23 +39,23 @@ namespace XenAdmin.Dialogs
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.memoryRadioButton = new System.Windows.Forms.RadioButton();
-            this.CheckpointInfoPictureBox = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.quiesceCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBoxQuiesceInfo = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.diskRadioButton = new System.Windows.Forms.RadioButton();
             this.pictureBoxSnapshotsInfo = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.memoryRadioButton = new System.Windows.Forms.RadioButton();
+            this.CheckpointInfoPictureBox = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckpointInfoPictureBox)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiesceInfo)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshotsInfo)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckpointInfoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -117,34 +117,9 @@ namespace XenAdmin.Dialogs
             // flowLayoutPanel3
             // 
             resources.ApplyResources(this.flowLayoutPanel3, "flowLayoutPanel3");
-            this.flowLayoutPanel3.Controls.Add(this.memoryRadioButton);
-            this.flowLayoutPanel3.Controls.Add(this.CheckpointInfoPictureBox);
+            this.flowLayoutPanel3.Controls.Add(this.quiesceCheckBox);
+            this.flowLayoutPanel3.Controls.Add(this.pictureBoxQuiesceInfo);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            // 
-            // memoryRadioButton
-            // 
-            resources.ApplyResources(this.memoryRadioButton, "memoryRadioButton");
-            this.memoryRadioButton.Name = "memoryRadioButton";
-            this.memoryRadioButton.TabStop = true;
-            this.memoryRadioButton.UseVisualStyleBackColor = true;
-            this.memoryRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
-            // 
-            // CheckpointInfoPictureBox
-            // 
-            this.CheckpointInfoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.CheckpointInfoPictureBox, "CheckpointInfoPictureBox");
-            this.CheckpointInfoPictureBox.Image = global::XenAdmin.Properties.Resources._000_Info3_h32bit_16;
-            this.CheckpointInfoPictureBox.Name = "CheckpointInfoPictureBox";
-            this.CheckpointInfoPictureBox.TabStop = false;
-            this.CheckpointInfoPictureBox.MouseLeave += new System.EventHandler(this.CheckpointInfoPictureBox_MouseLeave);
-            this.CheckpointInfoPictureBox.Click += new System.EventHandler(this.CheckpointInfoPictureBox_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
-            this.flowLayoutPanel2.Controls.Add(this.quiesceCheckBox);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBoxQuiesceInfo);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // quiesceCheckBox
             // 
@@ -160,22 +135,20 @@ namespace XenAdmin.Dialogs
             this.pictureBoxQuiesceInfo.Image = global::XenAdmin.Properties.Resources._000_Info3_h32bit_16;
             this.pictureBoxQuiesceInfo.Name = "pictureBoxQuiesceInfo";
             this.pictureBoxQuiesceInfo.TabStop = false;
-            this.pictureBoxQuiesceInfo.MouseLeave += new System.EventHandler(this.pictureBoxQuiesceInfo_MouseLeave);
             this.pictureBoxQuiesceInfo.Click += new System.EventHandler(this.pictureBoxQuiesceInfo_Click);
+            this.pictureBoxQuiesceInfo.MouseLeave += new System.EventHandler(this.pictureBoxQuiesceInfo_MouseLeave);
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel2
             // 
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Controls.Add(this.diskRadioButton);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBoxSnapshotsInfo);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
+            this.flowLayoutPanel2.Controls.Add(this.diskRadioButton);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBoxSnapshotsInfo);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // diskRadioButton
             // 
             resources.ApplyResources(this.diskRadioButton, "diskRadioButton");
-            this.diskRadioButton.Checked = true;
             this.diskRadioButton.Name = "diskRadioButton";
-            this.diskRadioButton.TabStop = true;
             this.diskRadioButton.UseVisualStyleBackColor = true;
             this.diskRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
@@ -186,8 +159,34 @@ namespace XenAdmin.Dialogs
             this.pictureBoxSnapshotsInfo.Image = global::XenAdmin.Properties.Resources._000_Info3_h32bit_16;
             this.pictureBoxSnapshotsInfo.Name = "pictureBoxSnapshotsInfo";
             this.pictureBoxSnapshotsInfo.TabStop = false;
-            this.pictureBoxSnapshotsInfo.MouseLeave += new System.EventHandler(this.pictureBoxSnapshotsInfo_MouseLeave);
             this.pictureBoxSnapshotsInfo.Click += new System.EventHandler(this.pictureBoxSnapshotsInfo_Click);
+            this.pictureBoxSnapshotsInfo.MouseLeave += new System.EventHandler(this.pictureBoxSnapshotsInfo_MouseLeave);
+            // 
+            // flowLayoutPanel1
+            // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Controls.Add(this.memoryRadioButton);
+            this.flowLayoutPanel1.Controls.Add(this.CheckpointInfoPictureBox);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+            // memoryRadioButton
+            // 
+            resources.ApplyResources(this.memoryRadioButton, "memoryRadioButton");
+            this.memoryRadioButton.Checked = true;
+            this.memoryRadioButton.Name = "memoryRadioButton";
+            this.memoryRadioButton.TabStop = true;
+            this.memoryRadioButton.UseVisualStyleBackColor = true;
+            this.memoryRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
+            // CheckpointInfoPictureBox
+            // 
+            this.CheckpointInfoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.CheckpointInfoPictureBox, "CheckpointInfoPictureBox");
+            this.CheckpointInfoPictureBox.Image = global::XenAdmin.Properties.Resources._000_Info3_h32bit_16;
+            this.CheckpointInfoPictureBox.Name = "CheckpointInfoPictureBox";
+            this.CheckpointInfoPictureBox.TabStop = false;
+            this.CheckpointInfoPictureBox.Click += new System.EventHandler(this.CheckpointInfoPictureBox_Click);
+            this.CheckpointInfoPictureBox.MouseLeave += new System.EventHandler(this.CheckpointInfoPictureBox_MouseLeave);
             // 
             // VmSnapshotDialog
             // 
@@ -206,13 +205,13 @@ namespace XenAdmin.Dialogs
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckpointInfoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiesceInfo)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuiesceInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshotsInfo)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSnapshotsInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckpointInfoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

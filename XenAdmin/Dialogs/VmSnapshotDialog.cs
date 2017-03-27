@@ -55,6 +55,11 @@ namespace XenAdmin.Dialogs
             memoryRadioButton.Enabled = _VM.allowed_operations.Contains(vm_operations.checkpoint)
                 && !Helpers.FeatureForbidden(_VM, Host.RestrictCheckpoint);
             CheckpointInfoPictureBox.Visible = !memoryRadioButton.Enabled;
+            if (_VM.power_state != vm_power_state.Running)
+            {
+                memoryRadioButton.Checked = false;
+                diskRadioButton.Checked = true;
+            }
             UpdateOK();
         }
 
