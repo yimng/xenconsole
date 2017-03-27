@@ -178,11 +178,11 @@ namespace XenAdmin.TabPages
                     PcisdataGridViewExs.Rows[i].Tag = pvusbresult.returnvalue[i].id;
                     PcisdataGridViewExs.Rows[i].Cells[0].Value = string.Concat("Bus ", pvusbresult.returnvalue[i].busid);
                     PcisdataGridViewExs.Rows[i].Cells[0].Tag = pvusbresult.returnvalue[i].pciid;
-                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].shortname + " （" + pvusbresult.returnvalue[i].shortname + " )";
+                    PcisdataGridViewExs.Rows[i].Cells[1].Value = pvusbresult.returnvalue[i].shortname + " （" + pvusbresult.returnvalue[i].longname + " )";
                     if (pvusbresult.returnvalue[i].vm != null)
-                    {
-                        XenRef<VM> vmRef = VM.get_by_uuid(home.Connection.Session, pvusbresult.returnvalue[i].vm);
-                        VM bindvm = VM.get_record(home.Connection.Session, vmRef);
+                    {                       
+                        string vmuuid = pvusbresult.returnvalue[i].vm;
+                        VM bindvm = home.Connection.Cache.VMs.First(vm => vm.uuid == vmuuid);
                         PcisdataGridViewExs.Rows[i].Cells[2].Value = bindvm.name_label;
                         PcisdataGridViewExs.Rows[i].Cells[2].Tag = pvusbresult.returnvalue[i].vm;
                         PcisdataGridViewExs.Rows[i].Cells[3].Value = bindvm.other_config["usbmode"];
@@ -245,8 +245,7 @@ namespace XenAdmin.TabPages
             else
             {
                 string vmuuid = PcisdataGridViewExs.Rows[e.RowIndex].Cells[2].Tag.ToString();
-                var vmref = VM.get_by_uuid(this.home.Connection.Session, vmuuid);
-                VM selectedvm = VM.get_record(this.home.Connection.Session, vmref);
+                VM selectedvm = home.Connection.Cache.VMs.First(vm => vm.uuid == vmuuid);
                 Dictionary<string, string> other_config = selectedvm.other_config;
                 string mode = PcisdataGridViewExs.Rows[e.RowIndex].Cells[3].Value.ToString();
                 
@@ -276,7 +275,7 @@ namespace XenAdmin.TabPages
                             }
                         }
                         other_config.Remove("usbmode");
-                        XenAPI.VM.set_other_config(home.Connection.Session, vmref, other_config);
+                        XenAPI.VM.set_other_config(home.Connection.Session, selectedvm.opaque_ref, other_config);
                         selectedvm.NotifyPropertyChanged("other_config");
                     }                    
                 }
@@ -294,7 +293,7 @@ namespace XenAdmin.TabPages
                     else
                     {
                         other_config.Remove("usbmode");
-                        XenAPI.VM.set_other_config(home.Connection.Session, vmref, other_config);
+                        XenAPI.VM.set_other_config(home.Connection.Session, selectedvm.opaque_ref, other_config);
                         selectedvm.NotifyPropertyChanged("other_config");
                     }
                 }

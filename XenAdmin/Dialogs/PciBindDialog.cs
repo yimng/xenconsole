@@ -47,8 +47,7 @@ namespace XenAdmin.Dialogs
         private void Bindbutton_Click(object sender, EventArgs e)
         {
             string errormsg = "";
-            var vmref = VM.get_by_uuid(m_host.Connection.Session, this.VMsComboBox.SelectedValue.ToString());
-            VM selectedvm = VM.get_record(m_host.Connection.Session, vmref);
+            VM selectedvm = m_host.Connection.Cache.VMs.First(vm => vm.uuid == this.VMsComboBox.SelectedValue.ToString() && vm.Home() == m_host);
             Dictionary<string, string> other_config = selectedvm.other_config;
             if (mode == "pvusb")
             {                
@@ -67,7 +66,7 @@ namespace XenAdmin.Dialogs
                     {
                         other_config["usbmode"] = "pvusb";
                     }     
-                    XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
+                    XenAPI.VM.set_other_config(m_host.Connection.Session, selectedvm.opaque_ref, other_config);
                     selectedvm.NotifyPropertyChanged("other_config");
                 }
                 else
@@ -102,7 +101,7 @@ namespace XenAdmin.Dialogs
                 }
                 //string msg = selectedvm.power_state == vm_power_state.Halted ? Messages.BOND_USB_DEVICE_VM_HALT : Messages.BOND_USB_DEVICE_VM_RUNNING;
                 //MessageBox.Show(this, msg);       
-                XenAPI.VM.set_other_config(m_host.Connection.Session, vmref, other_config);
+                XenAPI.VM.set_other_config(m_host.Connection.Session, selectedvm.opaque_ref, other_config);
                 selectedvm.NotifyPropertyChanged("other_config");
             }
             //if (!string.IsNullOrEmpty(errormsg))
