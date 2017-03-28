@@ -112,15 +112,19 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tableLayoutPanel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei, 9pt</value>
+  </data>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>USB 控制器</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
     <value>97</value>
   </data>
@@ -130,21 +134,23 @@
   <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>虚拟机</value>
   </data>
-  <data name="usbmode.HeaderText" xml:space="preserve">
-    <value>USB 模式</value>
+  <data name="dataGridViewButtonColumnEx1.ButtonSize" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
   </data>
   <data name="dataGridViewButtonColumnEx1.HeaderText" xml:space="preserve">
     <value>连接设备</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PcisdataGridViewExs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
+    <value>3, 69</value>
   </data>
   <data name="PcisdataGridViewExs.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>780, 450</value>
   </data>
   <data name="PcisdataGridViewExs.Size" type="System.Drawing.Size, System.Drawing">
     <value>717, 287</value>
+  </data>
+  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>720, 60</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei, 10.5pt</value>
@@ -178,11 +184,5 @@
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>3. 断开 USB 连接后，在下一次主机重启前无法再次连接。</value>
-  </data>
-  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 60</value>
-  </data>
-  <data name="tableLayoutPanel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei, 9pt</value>
   </data>
 </root>
