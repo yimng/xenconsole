@@ -481,9 +481,10 @@ namespace XenAdmin.TabPages
                         }
                     }
                     var action = new UploadISOAction(pbd.Connection.Resolve<Host>(pbd.host), dlg.FileName, path);
-                    ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Continuous, false) { ShowCancel = true };
-                    dialog.ShowDialog(this);
-                    if (dialog.action.Succeeded)
+                    //ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Continuous, false) { ShowCancel = true };
+                    //dialog.ShowDialog(this);
+                    action.RunAsync();
+                    if (action.Succeeded)
                     {
                         SR.scan(sr.Connection.Session, sr.opaque_ref);
                     }

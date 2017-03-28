@@ -129,6 +129,7 @@ namespace XenAdmin.Actions
             Description = string.Format(Messages.UPLOAD_ISO_ACTION_DETAIL_DESC, fromfile,
                                         Util.DiskSizeString(transferredBytes),
                                         Util.DiskSizeString(totalBytes));
+            Thread.Sleep(1);
         }
 
         private void sshCp_OnTransferEnd(string src, string dst, long transferredBytes, long totalBytes, string message)
