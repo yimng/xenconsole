@@ -116,6 +116,7 @@ namespace XenAdmin.Actions.OVFActions
 			OVF.Validate(m_package.PackageSourceFile, out validationErrors);
 
 			PercentComplete = 20;
+            left_percent = 100 - PercentComplete;
 			Description = Messages.IMPORTING_VMS;
 
 			var session = Connection.Session;

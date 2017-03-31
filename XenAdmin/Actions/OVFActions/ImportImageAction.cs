@@ -82,6 +82,7 @@ namespace XenAdmin.Actions.OVFActions
 			Uri uri = new Uri(url);
 
 			PercentComplete = 20;
+            left_percent = 100 - PercentComplete;
 			Description = Messages.IMPORTING_DISK_IMAGE;
 
 			//create a copy of the ovf envelope

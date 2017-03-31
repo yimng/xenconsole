@@ -39,6 +39,7 @@ namespace XenAdmin.Actions.OVFActions
 {
 	public abstract class ApplianceAction : AsyncAction
 	{
+        protected int left_percent = 100;
 		protected string m_networkUuid;
 		protected bool m_isTvmIpStatic;
 		protected string m_tvmIpAddress;
@@ -93,6 +94,11 @@ namespace XenAdmin.Actions.OVFActions
 		{
 			if (!string.IsNullOrEmpty(e.Message))
 				Description = e.Message;
+            //int LeftToComplete = 100 - PercentComplete;
+            if (e.Total != 0 && e.Transfered != 0)
+            {
+                PercentComplete = 100 - left_percent + (int)(left_percent * (long)e.Transfered / (long)e.Total); 
+            }
 		}
 
 		public override void RecomputeCanCancel()
