@@ -289,7 +289,7 @@
     <value>已对选定 VM 禁用 PVS 加速器</value>
   </data>
   <data name="ACTION_DISABLE_LIVE_PATCHING" xml:space="preserve">
-    <value>禁用实时修补</value>
+    <value>Disable live patching</value>
   </data>
   <data name="ACTION_DISABLE_PVS_READ_CACHING" xml:space="preserve">
     <value>禁用 PVS 加速器</value>
@@ -304,7 +304,7 @@
     <value>在 VM“{0}”上禁用容器管理</value>
   </data>
   <data name="ACTION_DISABLING_LIVE_PATCHING" xml:space="preserve">
-    <value>对“{0}”禁用实时修补</value>
+    <value>Disabling live patching for '{0}'</value>
   </data>
   <data name="ACTION_DISABLING_PVS_READ_CACHING" xml:space="preserve">
     <value>正在对选定 VM 禁用 PVS 加速器</value>
@@ -409,7 +409,7 @@
     <value>已对选定 VM 启用 PVS 加速器</value>
   </data>
   <data name="ACTION_ENABLE_LIVE_PATCHING" xml:space="preserve">
-    <value>启用实时修补</value>
+    <value>Enable live patching</value>
   </data>
   <data name="ACTION_ENABLE_PVS_READ_CACHING" xml:space="preserve">
     <value>启用 PVS 加速器</value>
@@ -424,7 +424,7 @@
     <value>在 VM“{0}”上启用容器管理</value>
   </data>
   <data name="ACTION_ENABLING_LIVE_PATCHING" xml:space="preserve">
-    <value>对“{0}”启用实时修补</value>
+    <value>Enabling live patching for '{0}'</value>
   </data>
   <data name="ACTION_ENABLING_PVS_READ_CACHING" xml:space="preserve">
     <value>正在对选定 VM 启用 PVS 加速器</value>
@@ -2853,7 +2853,7 @@
     <value>重新启动服务器</value>
   </data>
   <data name="CONFIRM_REBOOT_SERVER_YES_BUTTON_LABEL" xml:space="preserve">
-    <value>是，重新启动(&amp;Y)</value>
+    <value>重启</value>
   </data>
   <data name="CONFIRM_REBOOT_VM" xml:space="preserve">
     <value>是否确实要重新启动所选 VM?</value>
@@ -5233,10 +5233,10 @@
     <value>选择所需的清单文件、签名和输出文件格式选项</value>
   </data>
   <data name="EXPORT_OVA_PACKAGE" xml:space="preserve">
-    <value>从“{1}”中导出 OVA 包“{0}”</value>
+    <value>从'{1}'导出OVA'{0}’</value>
   </data>
   <data name="EXPORT_OVF_PACKAGE" xml:space="preserve">
-    <value>从“{1}”中导出 OVF 包“{0}”</value>
+    <value>从'{1}'导出OVF包'{0}’</value>
   </data>
   <data name="EXPORT_SECURITY_PAGE_ERROR_CERTIFICATE_INVALID" xml:space="preserve">
     <value>此证书无效。</value>
@@ -5281,7 +5281,7 @@
     <value>将更新导出到 {0}</value>
   </data>
   <data name="EXPORT_VM_TITLE" xml:space="preserve">
-    <value>从“{1}”中导出 VM“{0}”</value>
+    <value>正在从“{1}”导出 VM“{0}”</value>
   </data>
   <data name="EXPORT_VM_VERIFY_POST_INSTALL" xml:space="preserve">
     <value>完成时验证导出(&amp;V)</value>
@@ -5473,13 +5473,13 @@
     <value>已存在同名文件夹</value>
   </data>
   <data name="FOLDER_BROWSER_BUG_TOOL" xml:space="preserve">
-    <value>指定要用于保存报告的文件夹。</value>
+    <value>选择报告保存的位置</value>
   </data>
   <data name="FOLDER_BROWSER_DOWNLOAD_APPLIANCE" xml:space="preserve">
     <value>指定要将文件下载到的文件夹。</value>
   </data>
   <data name="FOLDER_BROWSER_EXPORT_APPLIANCE" xml:space="preserve">
-    <value>指定用于保存所导出的文件的文件夹。</value>
+    <value>请选择要保存的文件目录</value>
   </data>
   <data name="FOLDER_NO_CONNECTION" xml:space="preserve">
     <value>连接服务器以创建文件夹</value>
@@ -5602,7 +5602,7 @@
     <value>输入 vApp 名称和可选说明。</value>
   </data>
   <data name="GENERAL_PANEL_UPDATE_KEY" xml:space="preserve">
-    <value>{1} 上的 {0}</value>
+    <value>{0} on {1}</value>
   </data>
   <data name="GENERAL_PANEL_UPDATE_REBOOT_WARNING" xml:space="preserve">
     <value>需要重新启动服务器“{0}”，更新“{1}”才能生效</value>
@@ -5763,10 +5763,6 @@
   <data name="HAWIZARD_ASSIGNPRIORITIESPAGE_TITLE" xml:space="preserve">
     <value>为此池中的 VM 配置高可用性重启优先级、重启顺序和延迟间隔</value>
   </data>
-
-
-
-
   <data name="HA_ASSIGN_PRIORITIES_MIXED_PROTECTION_LEVELS" xml:space="preserve">
     <value>(多个值)</value>
   </data>
@@ -7085,7 +7081,7 @@ XenApp/XenDesktop Platinum 功能已启用</value>
     <value>, </value>
   </data>
   <data name="LIVE_PATCHING" xml:space="preserve">
-    <value>实时修补</value>
+    <value>Live Patching</value>
   </data>
   <data name="LIVE_PATCHING_FAILED_MULTI_HOST" xml:space="preserve">
     <value>对服务器 {0} 执行实时修补功能失败。要应用此修补程序，请将这些服务器置于维护模式并重新启动。</value>
@@ -13609,24 +13605,6 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="YOU_ARE_HERE" xml:space="preserve">
     <value>您在此处</value>
   </data>
-  <data name="ACTION_DISABLE_LIVE_PATCHING" xml:space="preserve">
-    <value>Disable live patching</value>
-  </data>
-  <data name="ACTION_DISABLING_LIVE_PATCHING" xml:space="preserve">
-    <value>Disabling live patching for '{0}'</value>
-  </data>
-  <data name="ACTION_ENABLE_LIVE_PATCHING" xml:space="preserve">
-    <value>Enable live patching</value>
-  </data>
-  <data name="ACTION_ENABLING_LIVE_PATCHING" xml:space="preserve">
-    <value>Enabling live patching for '{0}'</value>
-  </data>
-  <data name="LIVE_PATCHING" xml:space="preserve">
-    <value>Live Patching</value>
-  </data>
-  <data name="GENERAL_PANEL_UPDATE_KEY" xml:space="preserve">
-    <value>{0} on {1}</value>
-  </data>
   <data name="BACKUP_ERROR_1503" xml:space="preserve">
     <value>用户{0}不存在</value>
   </data>
@@ -14204,9 +14182,6 @@ SCSI ID: {6}
   <data name="USB_DEVICE_UNBIND_TEXT" xml:space="preserve">
     <value>断开</value>
   </data>
-  <data name="FOLDER_BROWSER_BUG_TOOL" xml:space="preserve">
-    <value>选择报告保存的位置</value>
-  </data>
   <data name="MENU_INSTALL_LICENSE_KEY" xml:space="preserve">
     <value>安装许可证密钥(&amp;I)...</value>
   </data>
@@ -14226,12 +14201,6 @@ SCSI ID: {6}
   </data>
   <data name="IMPORT_SOURCE_PAGE_HALSIGNFILETYPES" xml:space="preserve">
     <value>所有导入选项(*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml)|*.ovf;*.ova;*.ova.gz;*.vhd;*.vmdk;*.xva;*.va;*.tva;ova.xml|OVF/OVA 包文件(*.ovf;*.ova;*.ova.gz)|*.ovf;*.ova*;*.ova.gz|虚拟硬盘映像(*.vhd;*.vmdk;)|*.vhd;*.vmdk;|XVA 文件(*.xva)|*.xva|vGate 虚拟设备 (*.va;*.tva)|*.va;*.tva|XVA 版本 1|ova.xml</value>
-  </data>
-  <data name="EXPORT_OVF_PACKAGE" xml:space="preserve">
-    <value>从'{1}'导出OVF包'{0}’</value>
-  </data>
-  <data name="EXPORT_OVA_PACKAGE" xml:space="preserve">
-    <value>从'{1}'导出OVA'{0}’</value>
   </data>
   <data name="BROWSE_STORAGE" xml:space="preserve">
     <value>浏览存储</value>
@@ -14266,21 +14235,12 @@ SCSI ID: {6}
   <data name="UPGRADE_SR" xml:space="preserve">
     <value>升级(&amp;U)</value>
   </data>
-  <data name="CONFIRM_REBOOT_SERVER_YES_BUTTON_LABEL" xml:space="preserve">
-    <value>重启</value>
-  </data>
-  <data name="EXPORT_VM_TITLE" xml:space="preserve">
-    <value>正在从“{1}”导出 VM“{0}”</value>
-  </data>
   <data name="NEWSR_LVMOBOND_BLURB" xml:space="preserve">
     <value>vGate 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
 
 要将绑定的 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 vGate 主机中的存储设备、网络设备和 HBA。
 
 完成所有配置后， 该存储将由两个绑定的LUN 支持的 SCSI 包装成软raid设备显示给主机。然后可以使用该软raid设备访问这个两个绑定的LUN。</value>
-  </data>
-  <data name="TARGET_SERVER" xml:space="preserve">
-    <value>目标服务器</value>
   </data>
   <data name="IMPORT_UPGRADE_PAGE_TGZ_ONLY" xml:space="preserve">
     <value>输入 TGZ 包的路径名，或者单击“浏览”找到所需文件。</value>
@@ -14324,9 +14284,6 @@ SCSI ID: {6}
   <data name="OVERRIDE_VDI_CHECK" xml:space="preserve">
     <value>在服务器上有一个同名的 ISO 文件，你确定上传本地的 ISO 到服务器上吗，这将会覆盖服务器上的 ISO!</value>
   </data>
-  <data name="FOLDER_BROWSER_EXPORT_APPLIANCE" xml:space="preserve">
-    <value>请选择要保存的文件目录</value>
-  </data>
   <data name="OVERVIEW_UNITS_OT" xml:space="preserve">
     <value>(平均|最大 KB/秒)</value>
   </data>
@@ -14335,5 +14292,53 @@ SCSI ID: {6}
   </data>
   <data name="MAINWINDOW_EXPORT_MAC_CONTEXT_MENU" xml:space="preserve">
     <value>申请许可证</value>
+  </data>
+  <data name="CPUNUM_ONLY_WHEN_RUNNING" xml:space="preserve">
+    <value>只有在虚拟机开机状态下才能更改vCPU数。</value>
+  </data>
+  <data name="MAINWINDOW_INSTANT_VMS_FROM_TEMPLATE" xml:space="preserve">
+    <value>批量创建虚拟机</value>
+  </data>
+  <data name="ERR_CONTROLLER_ACCOUNT_INVALID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_INVALID_PARAMS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_VGATE_ACCOUNT_INVALID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_IP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_PORT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_USERNAME" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_PAGE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UPSELL_BLURB_SC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VSWITCH_CONTROLLER" xml:space="preserve">
+    <value />
   </data>
 </root>

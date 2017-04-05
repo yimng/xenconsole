@@ -3647,6 +3647,12 @@ For optimal performance and reliability during VM migration, ensure that the net
   <data name="CPU" xml:space="preserve">
     <value>CPU</value>
   </data>
+  <data name="CPUNUM_ONLY_WHEN_RUNNING" xml:space="preserve">
+    <value>CPU number should be modified when VM is running.</value>
+  </data>
+  <data name="CPUS" xml:space="preserve">
+    <value>Cpus</value>
+  </data>
   <data name="CPU_AND_MEMORY" xml:space="preserve">
     <value>CPU and Memory</value>
   </data>
@@ -7744,6 +7750,9 @@ This will permanently delete and reinitialize all local storage on the servers. 
   </data>
   <data name="MAINWINDOW_INSTALL_TOOLS" xml:space="preserve">
     <value>Inst&amp;all [XenServer product] Tools...</value>
+  </data>
+  <data name="MAINWINDOW_INSTANT_VMS_FROM_TEMPLATE" xml:space="preserve">
+    <value>Input the number of VMs</value>
   </data>
   <data name="MAINWINDOW_INSTANT_VM_FROM_TEMPLATE" xml:space="preserve">
     <value>&amp;Quick Create</value>
@@ -14335,5 +14344,53 @@ You will need to navigate to the Console on each of the selected VMs to complete
   </data>
   <data name="NEWSR_RAWHBA_TYPE_NAME" xml:space="preserve">
     <value>Raw HBA</value>
+  </data>
+  <data name="ERR_CONTROLLER_ACCOUNT_INVALID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_INVALID_PARAMS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ERR_VGATE_ACCOUNT_INVALID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MESSAGEBOX_OVSC_DELETE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_IP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_PORT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_PROTOCOL" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_CONFIGURE_USERNAME" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OVSC_PAGE_TITLE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UPSELL_BLURB_SC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VSWITCH_CONTROLLER" xml:space="preserve">
+    <value />
   </data>
 </root>

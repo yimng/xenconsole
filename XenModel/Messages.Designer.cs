@@ -589,7 +589,8 @@ namespace XenAdmin {
             get {
                 return ResourceManager.GetString("ACTION_DISABLE_PVS_READ_CACHING_FOR", resourceCulture);
             }
-	}
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to disable ssd cache.
         /// </summary>
@@ -957,7 +958,8 @@ namespace XenAdmin {
             get {
                 return ResourceManager.GetString("ACTION_ENABLE_PVS_READ_CACHING_FOR", resourceCulture);
             }
-	}
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to enable ssd cache.
         /// </summary>
@@ -10250,6 +10252,24 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CPU number should be modified when VM is running..
+        /// </summary>
+        public static string CPUNUM_ONLY_WHEN_RUNNING {
+            get {
+                return ResourceManager.GetString("CPUNUM_ONLY_WHEN_RUNNING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cpus.
+        /// </summary>
+        public static string CPUS {
+            get {
+                return ResourceManager.GetString("CPUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating CD drive.
         /// </summary>
         public static string CREATE_CD_DRIVE {
@@ -14493,6 +14513,24 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        public static string ERR_CONTROLLER_ACCOUNT_INVALID {
+            get {
+                return ResourceManager.GetString("ERR_CONTROLLER_ACCOUNT_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_INVALID_PARAMS {
+            get {
+                return ResourceManager.GetString("ERR_INVALID_PARAMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         public static string ERR_OTH_CHANGE_DIR {
             get {
                 return ResourceManager.GetString("ERR_OTH_CHANGE_DIR", resourceCulture);
@@ -14568,6 +14606,15 @@ namespace XenAdmin {
         public static string ERR_SR_ZFS_SNAP {
             get {
                 return ResourceManager.GetString("ERR_SR_ZFS_SNAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ERR_VGATE_ACCOUNT_INVALID {
+            get {
+                return ResourceManager.GetString("ERR_VGATE_ACCOUNT_INVALID", resourceCulture);
             }
         }
         
@@ -20397,6 +20444,33 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string INSTANT_CREATE_VMS {
+            get {
+                return ResourceManager.GetString("INSTANT_CREATE_VMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string INSTANT_CREATE_VMS_FINISH {
+            get {
+                return ResourceManager.GetString("INSTANT_CREATE_VMS_FINISH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string INSTANT_CREATE_VMS_START {
+            get {
+                return ResourceManager.GetString("INSTANT_CREATE_VMS_START", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Creating VM &apos;{0}&apos; from template &apos;{1}&apos;.
         /// </summary>
         public static string INSTANT_VM_CREATE_DESCRIPTION {
@@ -22284,6 +22358,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input the number of VMs.
+        /// </summary>
+        public static string MAINWINDOW_INSTANT_VMS_FROM_TEMPLATE {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_INSTANT_VMS_FROM_TEMPLATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Removed connection to {0}.
         /// </summary>
         public static string MAINWINDOW_LOG_REMOVECONNECTION {
@@ -23504,6 +23587,24 @@ namespace XenAdmin {
         public static string MESSAGEBOX_NETWORK_DELETE_TITLE {
             get {
                 return ResourceManager.GetString("MESSAGEBOX_NETWORK_DELETE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string MESSAGEBOX_OVSC_DELETE {
+            get {
+                return ResourceManager.GetString("MESSAGEBOX_OVSC_DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string MESSAGEBOX_OVSC_DELETE_TITLE {
+            get {
+                return ResourceManager.GetString("MESSAGEBOX_OVSC_DELETE_TITLE", resourceCulture);
             }
         }
         
@@ -27688,6 +27789,60 @@ namespace XenAdmin {
         public static string OVF_NET_DESCRIPTION {
             get {
                 return ResourceManager.GetString("OVF_NET_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_CONFIGURE_IP {
+            get {
+                return ResourceManager.GetString("OVSC_CONFIGURE_IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_CONFIGURE_PORT {
+            get {
+                return ResourceManager.GetString("OVSC_CONFIGURE_PORT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_CONFIGURE_PROTOCOL {
+            get {
+                return ResourceManager.GetString("OVSC_CONFIGURE_PROTOCOL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_CONFIGURE_TITLE {
+            get {
+                return ResourceManager.GetString("OVSC_CONFIGURE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_CONFIGURE_USERNAME {
+            get {
+                return ResourceManager.GetString("OVSC_CONFIGURE_USERNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string OVSC_PAGE_TITLE {
+            get {
+                return ResourceManager.GetString("OVSC_PAGE_TITLE", resourceCulture);
             }
         }
         
@@ -36950,6 +37105,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string UPSELL_BLURB_SC {
+            get {
+                return ResourceManager.GetString("UPSELL_BLURB_SC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable vApps. The vApps feature allows you to place your VMs into groups, allowing them to be started or stopped as a unit, and also allowing them to be easily recovered at your DR site in the event of a disaster at your primary production site..
         /// </summary>
         public static string UPSELL_BLURB_VM_APPLIANCES {
@@ -39051,6 +39215,15 @@ namespace XenAdmin {
         public static string VOLUMES {
             get {
                 return ResourceManager.GetString("VOLUMES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string VSWITCH_CONTROLLER {
+            get {
+                return ResourceManager.GetString("VSWITCH_CONTROLLER", resourceCulture);
             }
         }
         

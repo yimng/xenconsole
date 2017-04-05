@@ -830,6 +830,12 @@
     <Compile Include="Wizards\CrossPoolMigrateWizard\IntraPoolCopyPage.Designer.cs">
       <DependentUpon>IntraPoolCopyPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizards\InstantVMsWizard\InstantVMsWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\InstantVMsWizard\InstantVMsWizard.designer.cs">
+      <DependentUpon>InstantVMsWizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewPolicyWizard\NewPolicySnapshotTypePageSpecific.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2336,6 +2342,12 @@
     <EmbeddedResource Include="Wizards\GenericPages\RBACWarningPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>RBACWarningPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\InstantVMsWizard\InstantVMsWizard.resx">
+      <DependentUpon>InstantVMsWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\InstantVMsWizard\InstantVMsWizard.zh-CN.resx">
+      <DependentUpon>InstantVMsWizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\CIFSFrontend.ja.resx">
       <DependentUpon>CIFSFrontend.cs</DependentUpon>
