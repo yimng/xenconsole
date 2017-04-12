@@ -94,13 +94,13 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
         public override void PageLoaded(PageLoadedDirection direction)
         {
             base.PageLoaded(direction);
-            PerformCheck(CheckPathValid);
+            PerformCheck(CheckPathValid, CheckCredentialsEntered);
         }
 
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
         {
             if (direction == PageLoadedDirection.Forward)
-                cancel = !PerformCheck(CheckPathValid);
+                cancel = !PerformCheck(CheckPathValid, CheckCredentialsEntered, CheckUploadAuthentication);
 
             base.PageLeave(direction, ref cancel);
         }
@@ -121,6 +121,24 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
                     name = string.Concat(name, ".zip");
 
                 return string.Format(@"{0}\{1}", folder, name);
+            }
+        }
+
+        public bool Upload
+        {
+            get
+            {
+                return uploadCheckBox.Checked;
+            }
+        }
+
+        public string UploadToken { get; private set; }
+
+        public string CaseNumber
+        {
+            get
+            {
+                return caseNumberTextBox.Text.Trim();
             }
         }
 
@@ -161,17 +179,74 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
 
             return true;
         }
-        
+
+        private bool CheckCredentialsEntered(out string error)
+        {
+            error = string.Empty;
+
+            if (!uploadCheckBox.Checked)
+                return true;
+
+            if (string.IsNullOrEmpty(usernameTextBox.Text.Trim()) || string.IsNullOrEmpty(passwordTextBox.Text))
+                return false;
+
+            return true;
+        }
+
+        private bool CheckUploadAuthentication(out string error)
+        {
+            error = string.Empty;
+
+            if (!uploadCheckBox.Checked)
+                return true;
+            
+            if (string.IsNullOrEmpty(usernameTextBox.Text.Trim()) || string.IsNullOrEmpty(passwordTextBox.Text))
+                return false;
+
+            var action = new HealthCheckAuthenticationAction(usernameTextBox.Text.Trim(), passwordTextBox.Text.Trim(),
+                Registry.HealthCheckIdentityTokenDomainName, Registry.HealthCheckUploadGrantTokenDomainName,
+                Registry.HealthCheckUploadTokenDomainName, Registry.HealthCheckDiagnosticDomainName, Registry.HealthCheckProductKey, 
+                TokenExpiration, false);
+
+            using (var dlg = new ActionProgressDialog(action, ProgressBarStyle.Blocks))
+                dlg.ShowDialog(Parent);
+
+            if (!action.Succeeded)
+            {
+                error = action.Exception != null ? action.Exception.Message : Messages.ERROR_UNKNOWN;
+                UploadToken = null;
+                return false;
+            }
+           
+            UploadToken = action.UploadToken;  // curent upload token
+            return !string.IsNullOrEmpty(UploadToken);
+        }
+
+        private bool CheckCaseNumberValid(out string error)
+        {
+            error = string.Empty;
+
+            if (!uploadCheckBox.Checked || string.IsNullOrEmpty(caseNumberTextBox.Text.Trim()))
+                return true;
+
+            ulong val;
+            if (ulong.TryParse(caseNumberTextBox.Text.Trim(), out val) && val > 0 && val < 1000000000)
+                return true;
+
+            error = Messages.BUGTOOL_PAGE_DESTINATION_INVALID_CASE_NO;
+            return false;
+        }
+
         #region Control event handlers
 
         private void m_textBoxName_TextChanged(object sender, EventArgs e)
         {
-            PerformCheck(CheckPathValid);
+            PerformCheck(CheckPathValid, CheckCaseNumberValid, CheckCredentialsEntered);
         }
 
         private void m_textBoxLocation_TextChanged(object sender, EventArgs e)
         {
-            PerformCheck(CheckPathValid);
+            PerformCheck(CheckPathValid, CheckCaseNumberValid, CheckCredentialsEntered);
         }
 
         private void BrowseButton_Click(object sender, EventArgs e)
@@ -183,6 +258,22 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             }
         }
 
+        private void uploadCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            PerformCheck(CheckPathValid, CheckCaseNumberValid, CheckCredentialsEntered);
+        }
+
+        private void credentials_TextChanged(object sender, EventArgs e)
+        {
+            uploadCheckBox.Checked = true;
+            PerformCheck(CheckPathValid, CheckCaseNumberValid, CheckCredentialsEntered);
+        }
+        
+        private void caseNumberLabelTextBox_TextChanged(object sender, EventArgs e)
+        {
+            uploadCheckBox.Checked = true;
+            PerformCheck(CheckPathValid, CheckCaseNumberValid, CheckCredentialsEntered);
+        }
 
         #endregion
 

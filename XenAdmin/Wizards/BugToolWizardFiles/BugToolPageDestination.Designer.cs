@@ -30,6 +30,10 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BugToolPageDestination));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.m_textBoxName = new System.Windows.Forms.TextBox();
@@ -65,6 +69,29 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             this.tableLayoutPanel1.Controls.Add(this.optionalLabel, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.enterCredentialsLinkLabel, 0, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // usernameLabel
+            // 
+            resources.ApplyResources(this.usernameLabel, "usernameLabel");
+            this.usernameLabel.Name = "usernameLabel";
+            // 
+            // passwordLabel
+            // 
+            resources.ApplyResources(this.passwordLabel, "passwordLabel");
+            this.passwordLabel.Name = "passwordLabel";
+            // 
+            // passwordTextBox
+            // 
+            resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.credentials_TextChanged);
+            // 
+            // usernameTextBox
+            // 
+            resources.ApplyResources(this.usernameTextBox, "usernameTextBox");
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.credentials_TextChanged);
             // 
             // label2
             // 
@@ -160,6 +187,11 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox m_textBoxName;
         private XenAdmin.Controls.Common.PasswordFailure m_ctrlError;
+        private System.Windows.Forms.CheckBox uploadCheckBox;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label labelFileLocation;
         private System.Windows.Forms.TextBox m_textBoxLocation;
         private System.Windows.Forms.Button BrowseButton;
