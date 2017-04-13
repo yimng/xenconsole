@@ -2335,7 +2335,7 @@
     <value>246, 22</value>
   </data>
   <data name="installToolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Inst&amp;all [XenServer product] Tools</value>
+    <value>Inst&amp;all [vGate product] Tools</value>
   </data>
   <data name="sendCtrlAltDelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 22</value>
@@ -2647,7 +2647,7 @@
     <value>228, 22</value>
   </data>
   <data name="xenSourceOnTheWebToolStripMenuItem.Text" xml:space="preserve">
-    <value>[XenServer product] on the &amp;Web</value>
+    <value>[vGate product] on the &amp;Web</value>
   </data>
   <data name="xenCenterPluginsOnlineToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 22</value>

@@ -176,7 +176,7 @@
     <value>137, 12</value>
   </data>
   <data name="linkInstallTools.Text" xml:space="preserve">
-    <value>立即安装 [XenServer product] Tools</value>
+    <value>立即安装 [vGate product] Tools</value>
   </data>
   <data name="&gt;&gt;linkInstallTools.Name" xml:space="preserve">
     <value>linkInstallTools</value>

@@ -370,7 +370,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="linkInstallTools.Text" xml:space="preserve">
-    <value>Install [XenServer product] Tools now</value>
+    <value>Install [vGate product] Tools now</value>
   </data>
   <data name="&gt;&gt;radioOn.ZOrder" xml:space="preserve">
     <value>5</value>
