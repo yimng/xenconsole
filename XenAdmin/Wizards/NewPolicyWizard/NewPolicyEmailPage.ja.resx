@@ -370,7 +370,7 @@
     <value>1</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>[XenServer] での VM 保護ジョブに関するアラート (VM スナップショットが作成またはアーカイブされた場合や、スナップショットまたはアーカイブが失敗した場合など) が生成されたときに、通知メールが送信されるように設定できます。</value>
+    <value>[vGate] での VM 保護ジョブに関するアラート (VM スナップショットが作成またはアーカイブされた場合や、スナップショットまたはアーカイブが失敗した場合など) が生成されたときに、通知メールが送信されるように設定できます。</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>

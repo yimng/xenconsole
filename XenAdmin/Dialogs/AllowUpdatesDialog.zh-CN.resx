@@ -210,7 +210,7 @@
     <value>1</value>
   </data>
   <data name="BlurbLabel.Text" xml:space="preserve">
-    <value>是否希望 [vGate Console] 定期在 Internet 中检查 [XenServer] 更新和新版本的 [vGate Console]?</value>
+    <value>是否希望 [vGate Console] 定期在 Internet 中检查 [vGate] 更新和新版本的 [vGate Console]?</value>
   </data>
   <data name="&gt;&gt;BlurbLabel.Name" xml:space="preserve">
     <value>BlurbLabel</value>

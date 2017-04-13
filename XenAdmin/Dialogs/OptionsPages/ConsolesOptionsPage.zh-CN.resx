@@ -190,7 +190,7 @@
     <value>4</value>
   </data>
   <data name="checkBoxDisableRDPPolling.Text" xml:space="preserve">
-    <value>启用远程桌面控制台扫描(&amp;N)([XenServer] 6.5 及更高版本)</value>
+    <value>启用远程桌面控制台扫描(&amp;N)([vGate] 6.5 及更高版本)</value>
   </data>
   <data name="&gt;&gt;checkBoxDisableRDPPolling.Name" xml:space="preserve">
     <value>checkBoxDisableRDPPolling</value>

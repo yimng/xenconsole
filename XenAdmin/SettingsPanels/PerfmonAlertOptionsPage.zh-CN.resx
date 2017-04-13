@@ -200,7 +200,7 @@
     <value>480, 36</value>
   </data>
   <data name="SendEmailNoteLabel.Text" xml:space="preserve">
-    <value>[XenServer] 可以通过电子邮件向您提供与托管服务器正在生成的系统警报有关的更新信息。要启用此功能，请为此池中的服务器和 VM (或此独立服务器)输入用于接收电子邮件通知的地址。</value>
+    <value>[vGate] 可以通过电子邮件向您提供与托管服务器正在生成的系统警报有关的更新信息。要启用此功能，请为此池中的服务器和 VM (或此独立服务器)输入用于接收电子邮件通知的地址。</value>
   </data>
   <data name="EmailNotificationCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 49</value>

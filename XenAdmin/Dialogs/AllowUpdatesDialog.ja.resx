@@ -210,7 +210,7 @@
     <value>1</value>
   </data>
   <data name="BlurbLabel.Text" xml:space="preserve">
-    <value>[vGate Console] で定期的に [XenServer] や [vGate Console] のアップデートおよび新しいバージョンをインターネットでチェックしますか?</value>
+    <value>[vGate Console] で定期的に [vGate] や [vGate Console] のアップデートおよび新しいバージョンをインターネットでチェックしますか?</value>
   </data>
   <data name="&gt;&gt;BlurbLabel.Name" xml:space="preserve">
     <value>BlurbLabel</value>

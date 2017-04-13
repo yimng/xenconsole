@@ -718,7 +718,7 @@
     <value>2</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>ここでは、プロキシ サーバーを構成したり、待機時間が長い環境での [XenServer] 接続をカスタマイズしたりできます。</value>
+    <value>ここでは、プロキシ サーバーを構成したり、待機時間が長い環境での [vGate] 接続をカスタマイズしたりできます。</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>

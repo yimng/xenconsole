@@ -190,7 +190,7 @@
     <value>4</value>
   </data>
   <data name="checkBoxDisableRDPPolling.Text" xml:space="preserve">
-    <value>リモート デスクトップ コンソールのスキャンを有効にする([XenServer] 6.5 以前)(&amp;N)</value>
+    <value>リモート デスクトップ コンソールのスキャンを有効にする([vGate] 6.5 以前)(&amp;N)</value>
   </data>
   <data name="&gt;&gt;checkBoxDisableRDPPolling.Name" xml:space="preserve">
     <value>checkBoxDisableRDPPolling</value>
