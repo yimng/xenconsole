@@ -1388,7 +1388,7 @@
   <data name="ADD_HOST_TO_POOL_CPU_MASKING_MESSAGE" xml:space="preserve">
     <value>正在尝试将服务器“{0}”添加到使用较旧 CPU 的池。
 
-[XenServer] 可以通过重新启动服务器并将其 CPU 降至池中现有服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[XenServer] 硬件兼容性列表”中列出的 CPU 组合。
+[vGate] 可以通过重新启动服务器并将其 CPU 降至池中现有服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[vGate] 硬件兼容性列表”中列出的 CPU 组合。
 
 是否要执行此操作?</value>
   </data>
@@ -1397,7 +1397,7 @@
 
 {0}
 
-[XenServer] 可以通过重新启动服务器并将其 CPU 降至池中现有服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[XenServer] 硬件兼容性列表”中列出的 CPU 组合。
+[vGate] 可以通过重新启动服务器并将其 CPU 降至池中现有服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[vGate] 硬件兼容性列表”中列出的 CPU 组合。
 
 是否要执行此操作?</value>
   </data>
@@ -1700,7 +1700,7 @@
     <value>控制域上的文件系统已满</value>
   </data>
   <data name="ALERT_ALARM_FILESYSTEM_DESCRIPTION" xml:space="preserve">
-    <value>{0} 上控制域的磁盘使用量已达到 {1}。如果此磁盘满载，[XenServer] 的性能将受到严重影响。应删除日志文件或其他不重要的(用户创建的)文件。</value>
+    <value>{0} 上控制域的磁盘使用量已达到 {1}。如果此磁盘满载，[vGate] 的性能将受到严重影响。应删除日志文件或其他不重要的(用户创建的)文件。</value>
   </data>
   <data name="ALERT_ALARM_LOG_FILESYSTEM" xml:space="preserve">
     <value>日志分区上的文件系统已满载</value>
@@ -2366,7 +2366,7 @@
 {1}</value>
   </data>
   <data name="CANNOT_DELETE_DEFAULT_TEMPLATE" xml:space="preserve">
-    <value>不能删除 [XenServer] 模板。</value>
+    <value>不能删除 [vGate] 模板。</value>
   </data>
   <data name="CANNOT_DELETE_DR_VD" xml:space="preserve">
     <value>此虚拟磁盘供 DR 使用。要将其删除，请对 DR 进行配置，使其不将数据保存到此存储库中。</value>
@@ -2475,7 +2475,7 @@
     <value>更改策略“{0}”状态</value>
   </data>
   <data name="CHANGE_SERVER_CD" xml:space="preserve">
-    <value>插入 [XenServer] CD</value>
+    <value>插入 [vGate] CD</value>
   </data>
   <data name="CHANGE_SERVER_PASSWORD" xml:space="preserve">
     <value>更改服务器密码...</value>
@@ -2602,7 +2602,7 @@
     <value>折叠子项(&amp;C)</value>
   </data>
   <data name="COMMON_CRITERIA_TEXT" xml:space="preserve">
-    <value>只能与 [XenServer] 的 Common Criteria 版本结合使用</value>
+    <value>只能与 [vGate] 的 Common Criteria 版本结合使用</value>
   </data>
   <data name="COMPLETED" xml:space="preserve">
     <value>已完成</value>
@@ -3051,7 +3051,7 @@
     <value>连接 {0}: 将尝试在 {1} 秒后连接其他池成员</value>
   </data>
   <data name="CONNECT_NO_XAPI_FAILURE" xml:space="preserve">
-    <value>找不到在 {0} 上运行的 [XenServer]。</value>
+    <value>找不到在 {0} 上运行的 [vGate]。</value>
   </data>
   <data name="CONNECT_RESOLUTION_FAILURE" xml:space="preserve">
     <value>找不到 {0}。</value>
@@ -3725,7 +3725,7 @@
     <value>默认值</value>
   </data>
   <data name="DEFAULT_INSTALL_OF_XENSERVER" xml:space="preserve">
-    <value>默认安装 [XenServer]</value>
+    <value>默认安装 [vGate]</value>
   </data>
   <data name="DEFAULT_SEARCH" xml:space="preserve">
     <value>默认搜索</value>
@@ -4572,7 +4572,7 @@
     <value>已完成针对池“{0}”的故障恢复。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_COMPLETE_FAILOVER" xml:space="preserve">
-    <value>[XenServer] 灾难恢复已完成。</value>
+    <value>[vGate] 灾难恢复已完成。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_DRYRUN" xml:space="preserve">
     <value>单击“下一步”删除已故障转移的 VM，并查看摘要报告。</value>
@@ -4590,7 +4590,7 @@
     <value>正在进行故障恢复。此过程需要一段时间。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_IN_PROGRESS_FAILOVER" xml:space="preserve">
-    <value>正在进行 [XenServer] 灾难恢复。此过程需要一段时间。</value>
+    <value>正在进行 [vGate] 灾难恢复。此过程需要一段时间。</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_OVERALL_PROGRESS" xml:space="preserve">
     <value>总体进度: 已完成 {0} 项任务(共 {1} 项)</value>
@@ -4623,7 +4623,7 @@
     <value>针对池“{0}”的故障恢复进度</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>[XenServer] 灾难恢复进度</value>
+    <value>[vGate] 灾难恢复进度</value>
   </data>
   <data name="DR_WIZARD_REPORTPAGE_TEXT" xml:space="preserve">
     <value>摘要</value>
@@ -4857,7 +4857,7 @@
     <value>结尾</value>
   </data>
   <data name="ENTERPRISE_PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[XenServer] Enterprise Per-Socket (需要 {0})(&amp;E)</value>
+    <value>[vGate] Enterprise Per-Socket (需要 {0})(&amp;E)</value>
   </data>
   <data name="ENTER_MAINTENANCE_MODE" xml:space="preserve">
     <value>进入维护模式(&amp;M)...</value>
@@ -5031,7 +5031,7 @@
     <value>未找到文件 {0}</value>
   </data>
   <data name="ERROR_HOST_STILL_BOOTING" xml:space="preserve">
-    <value>[XenServer] 仍在启动。</value>
+    <value>[vGate] 仍在启动。</value>
   </data>
   <data name="ERROR_INVALID_GATEWAY" xml:space="preserve">
     <value>网关无效。</value>
@@ -5052,7 +5052,7 @@
     <value>您无权访问该服务器。</value>
   </data>
   <data name="ERROR_NO_XENSERVER" xml:space="preserve">
-    <value>在“{0}”上找不到 [XenServer]。</value>
+    <value>在“{0}”上找不到 [vGate]。</value>
   </data>
   <data name="ERROR_PREPARING_HOST" xml:space="preserve">
     <value>准备主机时出错</value>
@@ -5839,7 +5839,7 @@
     <value>是否确实要为池“{0}”禁用高可用性?</value>
   </data>
   <data name="HA_EDIT_DIALOG_BLURB" xml:space="preserve">
-    <value>[XenServer] 高可用性(HA)允许在基础硬件出现故障或单个服务器丢失时自动重新启动虚拟机。“{0}”已启用高可用性。</value>
+    <value>[vGate] 高可用性(HA)允许在基础硬件出现故障或单个服务器丢失时自动重新启动虚拟机。“{0}”已启用高可用性。</value>
   </data>
   <data name="HA_EDIT_NOW" xml:space="preserve">
     <value>立即更改这些高可用性设置...</value>
@@ -6925,7 +6925,7 @@ SCSI ID: {2}
     <value>1 分钟后过期</value>
   </data>
   <data name="LICENSE_EXPIRY_PURCHACE" xml:space="preserve">
-    <value>在线 [XenServer]</value>
+    <value>在线 [vGate]</value>
     <comment>this text could be improved</comment>
   </data>
   <data name="LICENSE_EXPIRY_TITLE" xml:space="preserve">
@@ -6974,7 +6974,7 @@ SCSI ID: {2}
     <value>高可用性处于启用状态时无法更改主机的许可证</value>
   </data>
   <data name="LICENSE_NO_MULTISELECT_ACTIVATE" xml:space="preserve">
-    <value>激活免费 [XenServer] 时，必须一次选择一个服务器。</value>
+    <value>激活免费 [vGate] 时，必须一次选择一个服务器。</value>
   </data>
   <data name="LICENSE_NO_MULTISELECT_LICENSE" xml:space="preserve">
     <value>向版本低于 [BRANDING_VERSION_5_6] 的服务器授权时，必须一次选择一个服务器。</value>
@@ -7042,7 +7042,7 @@ XenApp/XenDesktop Platinum 功能已启用</value>
 仅限 Standard 功能</value>
   </data>
   <data name="LICENSE_TOO_MANY_SERVERS_SELECTED_CAPTION" xml:space="preserve">
-    <value>激活密钥一次只能应用到一款免费 [XenServer] 产品。</value>
+    <value>激活密钥一次只能应用到一款免费 [vGate] 产品。</value>
   </data>
   <data name="LICENSE_UNSUPPORTED" xml:space="preserve">
     <value>不受支持</value>
@@ -7066,13 +7066,13 @@ XenApp/XenDesktop Platinum 功能已启用</value>
     <value>您的许可证已过期</value>
   </data>
   <data name="LICENSING_DIALOG_EXPIRED_TEXT" xml:space="preserve">
-    <value>一个或多个托管服务器已过期。请分配 [XenServer] 许可证，或激活免费 [XenServer] 产品。</value>
+    <value>一个或多个托管服务器已过期。请分配 [vGate] 许可证，或激活免费 [vGate] 产品。</value>
   </data>
   <data name="LICENSING_DIALOG_EXPIRING_SOON_TEXT" xml:space="preserve">
-    <value>一个或多个托管服务器即将到期。请分配 [XenServer] 许可证，或激活免费 [XenServer] 产品。</value>
+    <value>一个或多个托管服务器即将到期。请分配 [vGate] 许可证，或激活免费 [vGate] 产品。</value>
   </data>
   <data name="LICENSING_DIALOG_TEXT" xml:space="preserve">
-    <value>激活免费 [XenServer] 产品或为 [XenServer] Advanced Edition、Enterprise Edition 和 Platinum Edition 分配/释放许可证。</value>
+    <value>激活免费 [vGate] 产品或为 [vGate] Advanced Edition、Enterprise Edition 和 Platinum Edition 分配/释放许可证。</value>
   </data>
   <data name="LINK_STATUS" xml:space="preserve">
     <value>链接状态</value>
@@ -7277,10 +7277,10 @@ SCSI ID: {2}
     <value>编辑标记(&amp;G)...</value>
   </data>
   <data name="MAINWINDOW_EXPIRE_MESSAGE" xml:space="preserve">
-    <value>“{0}”上的 [XenServer] 许可证将于 {1}内过期。</value>
+    <value>“{0}”上的 [vGate] 许可证将于 {1}内过期。</value>
   </data>
   <data name="MAINWINDOW_EXPIRE_MESSAGE_TOO_LATE" xml:space="preserve">
-    <value>“{0}”上的 [XenServer] 许可证已过期。</value>
+    <value>“{0}”上的 [vGate] 许可证已过期。</value>
   </data>
   <data name="MAINWINDOW_EXPORT_POOL_RESOURCE_DATA" xml:space="preserve">
     <value>导出资源数据(&amp;X)...</value>
@@ -7532,7 +7532,7 @@ SCSI ID: {2}
     <value>内存(&amp;M):</value>
   </data>
   <data name="MEMORY_XEN" xml:space="preserve">
-    <value>[XenServer]</value>
+    <value>[vGate]</value>
   </data>
   <data name="MEM_NOT_WHEN_SUSPENDED" xml:space="preserve">
     <value>VM 挂起时无法更改内存</value>
@@ -7791,12 +7791,12 @@ SCSI ID: {2}
     <value>请弹出 CD</value>
   </data>
   <data name="MIGRATE_VDI_UPSELL_BLURB" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 VDI 实时迁移。此功能允许您在同一池中的两个 SR 之间迁移多个正在运行的 VDI，而不会造成 VM 停机。 </value>
+    <value>升级您的 [vGate] 许可证以启用 VDI 实时迁移。此功能允许您在同一池中的两个 SR 之间迁移多个正在运行的 VDI，而不会造成 VM 停机。 </value>
   </data>
   <data name="MIGRATE_VDI_UPSELL_BLURB_MORE" xml:space="preserve">
     <value>
 
-要了解有关 [XenServer] 实时 VDI 迁移功能的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解有关 [vGate] 实时 VDI 迁移功能的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="MIGRATE_VMS_OFF_SERVER" xml:space="preserve">
     <value>将 VM 迁移出服务器“{0}”</value>
@@ -8093,7 +8093,7 @@ SCSI ID: {2}
     <value>此服务器的版本与主服务器不同</value>
   </data>
   <data name="NEWPOOL_FREE_HOST_PAID_MASTER" xml:space="preserve">
-    <value>不能将免费版 [XenServer] 添加到使用 [XenServer] Advanced Edition 或更高版本的许可证的池中</value>
+    <value>不能将免费版 [vGate] 添加到使用 [vGate] Advanced Edition 或更高版本的许可证的池中</value>
   </data>
   <data name="NEWPOOL_HAS_RUNNING_VMS" xml:space="preserve">
     <value>此服务器有正在运行或已挂起的 VM</value>
@@ -8199,7 +8199,7 @@ SCSI ID: {2}
     <value>StorageLink 技术</value>
   </data>
   <data name="NEWSR_EQUAL_LOGIC_BLURB" xml:space="preserve">
-    <value>Dell EqualLogic 是一种可扩展的高性能网络连接存储形式，支持在不停机的情况下增加容量。可以使用 Dell EqualLogic 共享存储来支持 [XenServer] 功能，例如实时迁移和高可用性。</value>
+    <value>Dell EqualLogic 是一种可扩展的高性能网络连接存储形式，支持在不停机的情况下增加容量。可以使用 Dell EqualLogic 共享存储来支持 [vGate] 功能，例如实时迁移和高可用性。</value>
   </data>
   <data name="NEWSR_EQUAL_LOGIC_DESCRIPTION" xml:space="preserve">
     <value>Dell EqualLogic SR [{0} ({1})]</value>
@@ -8246,7 +8246,7 @@ SCSI ID: {2}
     <value>该 LUN 已在服务器 {1} 中作为 SR {0} 使用。</value>
   </data>
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
-    <value>[XenServer] 主机在这种情况下使用支持 FCoE 的受支持融合网络适配器(CNA)来支持基于软件的以太网光纤通道。
+    <value>[vGate] 主机在这种情况下使用支持 FCoE 的受支持融合网络适配器(CNA)来支持基于软件的以太网光纤通道。
 
 要将 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括配置 FCoE 架构以及将 LUN 分配给 CNA 的公共全球名称(PWWN)。 
 
@@ -8259,9 +8259,9 @@ SCSI ID: {2}
     <value>软件 FCoE</value>
   </data>
   <data name="NEWSR_LVMOHBA_BLURB" xml:space="preserve">
-    <value>[XenServer] 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
+    <value>[vGate] 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
 
-要将 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 [XenServer] 主机中的存储设备、网络设备和 HBA。
+要将 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 [vGate] 主机中的存储设备、网络设备和 HBA。
 
 完成所有配置后，HBA 将一个由 LUN 支持的 SCSI 设备显示给主机。然后可以使用该 SCSI 设备访问 LUN，就像本地连接了 SCSI 设备一样。</value>
   </data>
@@ -8735,7 +8735,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="NEW_POOL_CPU_MASKING_MESSAGE" xml:space="preserve">
     <value>正在尝试将服务器“{0}”添加到主服务器使用较旧 CPU 的池中。
 
-[XenServer] 可以通过重新启动服务器并将其 CPU 降至主服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[XenServer] 硬件兼容性列表”中列出的 CPU 组合。
+[vGate] 可以通过重新启动服务器并将其 CPU 降至主服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[vGate] 硬件兼容性列表”中列出的 CPU 组合。
 
 是否要执行此操作?</value>
   </data>
@@ -8744,7 +8744,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
 
 {0}
 
-[XenServer] 可以通过重新启动服务器并将其 CPU 降至主服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[XenServer] 硬件兼容性列表”中列出的 CPU 组合。
+[vGate] 可以通过重新启动服务器并将其 CPU 降至主服务器的级别来继续进行操作。这样将关闭服务器上运行的所有 VM。此功能适用于“[vGate] 硬件兼容性列表”中列出的 CPU 组合。
 
 是否要执行此操作?</value>
   </data>
@@ -8976,9 +8976,9 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="NOT_SAFE_TO_UPGRADE_DEFAULT_WARNING_LONG" xml:space="preserve">
     <value>本地磁盘上的 VM 将阻止磁盘重新分区。
 
-新磁盘分区方案在包括更大的 dom0 和备份分区以及用于日志记录、交换和 UEFI 的专用分区的 [XenServer] [BRANDING_VERSION_7_0] 及更高版本中可用。
+新磁盘分区方案在包括更大的 dom0 和备份分区以及用于日志记录、交换和 UEFI 的专用分区的 [vGate] [BRANDING_VERSION_7_0] 及更高版本中可用。
 
-但是，本地存储上存在 VM，因此将保留当前的分区方案。要在升级到 [XenServer] [BRANDING_VERSION_7_0] 或更高版本时从重新分区中获益，必须先移动本地存储中的 VM。</value>
+但是，本地存储上存在 VM，因此将保留当前的分区方案。要在升级到 [vGate] [BRANDING_VERSION_7_0] 或更高版本时从重新分区中获益，必须先移动本地存储中的 VM。</value>
   </data>
   <data name="NOT_SAFE_TO_UPGRADE_DEFAULT_WARNING_SHORT" xml:space="preserve">
     <value>{0}: 本地磁盘上的 VM 将阻止磁盘重新分区。</value>
@@ -8986,7 +8986,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="NOT_SAFE_TO_UPGRADE_NOT_ENOUGH_SPACE_LONG" xml:space="preserve">
     <value>本地存储的磁盘大小阻止重新分区。
 
-新磁盘分区方案在包括更大的 dom0 和备份分区以及用于日志记录、交换和 UEFI 的专用分区的 [XenServer] [BRANDING_VERSION_7_0] 及更高版本中可用。
+新磁盘分区方案在包括更大的 dom0 和备份分区以及用于日志记录、交换和 UEFI 的专用分区的 [vGate] [BRANDING_VERSION_7_0] 及更高版本中可用。
 
 但是，由于空间不足，无法执行重新分区，因此将保留当前的分区方案。</value>
   </data>
@@ -9033,7 +9033,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>没有可消除的系统警报。</value>
   </data>
   <data name="NO_MORE_USERDEVICES" xml:space="preserve">
-    <value>[XenServer] 无法为此 VM 创建更多磁盘</value>
+    <value>[vGate] 无法为此 VM 创建更多磁盘</value>
   </data>
   <data name="NO_NAME" xml:space="preserve">
     <value>(无名称)</value>
@@ -9045,7 +9045,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>此时没有需要激活的服务器。</value>
   </data>
   <data name="NO_SESSION_INFO" xml:space="preserve">
-    <value>没有可用的 [XenServer] 会话信息，无法继续。</value>
+    <value>没有可用的 [vGate] 会话信息，无法继续。</value>
   </data>
   <data name="NO_SNAPSHOTS" xml:space="preserve">
     <value>该 VM 没有任何快照。</value>
@@ -9339,16 +9339,16 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>选择现有更新进行安装，或上载新更新</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTPATCHPAGE_UPDATESEXT" xml:space="preserve">
-    <value>[XenServer] 更新和补充包(*.{0}、*.iso)|*.{0};*.iso</value>
+    <value>[vGate] 更新和补充包(*.{0}、*.iso)|*.{0};*.iso</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_HOST_VERSION" xml:space="preserve">
-    <value>自动更新功能在此 [XenServer] 版本上不受支持</value>
+    <value>自动更新功能在此 [vGate] 版本上不受支持</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_PARTIALLY_UPGRADED" xml:space="preserve">
-    <value>自动更新功能在部分升级的 [XenServer] 池中不受支持</value>
+    <value>自动更新功能在部分升级的 [vGate] 池中不受支持</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_CANNOT_INSTALL_SUPP_PACKS" xml:space="preserve">
-    <value>无法在此版本的 [XenServer] 上安装补充包</value>
+    <value>无法在此版本的 [vGate] 上安装补充包</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_HOST_UNLICENSED" xml:space="preserve">
     <value>需要专享升级服务</value>
@@ -9574,7 +9574,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>已升级主机</value>
   </data>
   <data name="PLAN_ACTION_STATUS_INSTALLING_XENSERVER" xml:space="preserve">
-    <value>正在安装 [XenServer]</value>
+    <value>正在安装 [vGate]</value>
   </data>
   <data name="PLAN_ACTION_STATUS_MIGRATING_VMS_FROM_HOST" xml:space="preserve">
     <value>正在从主机中迁移 VM</value>
@@ -9755,7 +9755,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>选择要导入该 VM 的池或独立服务器。主服务器设置将从模板获得。\n\n如果该值与所选资源池中的服务器不对应，则所有资源安排决策都将忽略该值。</value>
   </data>
   <data name="POOL_VERSIONS_LINK_TEXT" xml:space="preserve">
-    <value>池已部分升级到 [XenServer] {0}</value>
+    <value>池已部分升级到 [vGate] {0}</value>
   </data>
   <data name="POOL_VERSIONS_LINK_TEXT_SHORT" xml:space="preserve">
     <value>已部分升级</value>
@@ -9809,7 +9809,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>尝试连接到 StorageLink Gateway 时出错: \n\n{0}\n\n请检查此主机的设置并重新连接。</value>
   </data>
   <data name="PROBLEM_UNSUPPORTED_STORAGELINK_SR" xml:space="preserve">
-    <value>[XenServer] 不再使用 StorageLink SR。请先删除 StorageLink SR，然后再升级。</value>
+    <value>[vGate] 不再使用 StorageLink SR。请先删除 StorageLink SR，然后再升级。</value>
   </data>
   <data name="PROBLEM_VMAPPLIANCEPROBLEM_TITLE" xml:space="preserve">
     <value>vApp {0}</value>
@@ -9821,7 +9821,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>继续(&amp;P)</value>
   </data>
   <data name="PROMPT_XS_CD" xml:space="preserve">
-    <value>请将 [XenServer] CD 插入服务器“{0}”上的物理驱动器中。
+    <value>请将 [vGate] CD 插入服务器“{0}”上的物理驱动器中。
 按“确定”继续执行向导，然后返回到服务器，并按屏幕说明操作。</value>
   </data>
   <data name="PROPERTIES_DIALOG_TITLE" xml:space="preserve">
@@ -10366,13 +10366,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
 请检查服务器的启动顺序，然后再次重新启动。</value>
   </data>
   <data name="ROLLING_UPGRADE_REBOOT_MESSAGE" xml:space="preserve">
-    <value>要在 {0} 上安装 [XenServer] 升级，请执行以下步骤:
+    <value>要在 {0} 上安装 [vGate] 升级，请执行以下步骤:
     
-1. 将 [XenServer] 安装 CD-ROM 插入到服务器的 CD/DVD 驱动器中或设置 PXE 网络引导顺序。
+1. 将 [vGate] 安装 CD-ROM 插入到服务器的 CD/DVD 驱动器中或设置 PXE 网络引导顺序。
 2. 单击下面的“立即重新启动”按钮以重新启动服务器并开始安装。
 3. 转至服务器的控制台并按照屏幕上的说明进行操作以安装升级。
 
-要跳过此服务器并继续在池中的下一个服务器上进行安装，请单击“跳过此服务器”。请注意，不支持在安装了不同 [XenServer] 版本的服务器上运行池，因此，过后应尽快升级此池滚动升级过程中未升级的任何服务器。
+要跳过此服务器并继续在池中的下一个服务器上进行安装，请单击“跳过此服务器”。请注意，不支持在安装了不同 [vGate] 版本的服务器上运行池，因此，过后应尽快升级此池滚动升级过程中未升级的任何服务器。
 
 必须先升级主服务器，因此，如果跳过此主服务器，则将取消此池的池滚动升级过程。
 </value>
@@ -10390,16 +10390,16 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>池滚动升级未完成。</value>
   </data>
   <data name="RPU_WARNING_DESCRIPTION_CLEARWATER_OR_GREATER" xml:space="preserve">
-    <value>{0}: 新版本的 [XenServer] 需要将新许可证添加到您的许可证服务器。</value>
+    <value>{0}: 新版本的 [vGate] 需要将新许可证添加到您的许可证服务器。</value>
   </data>
   <data name="RPU_WIZARD_TAMPA_AND_OLDER_TITLE" xml:space="preserve">
     <value>正在检查许可状态</value>
   </data>
   <data name="RPU_WIZARD_VMPR_VMPP_DEPRECATION" xml:space="preserve">
-    <value>{0}: [XenServer] [BRANDING_VERSION_6_2] 不再使用 VM 保护策略</value>
+    <value>{0}: [vGate] [BRANDING_VERSION_6_2] 不再使用 VM 保护策略</value>
   </data>
   <data name="RPU_WIZARD_WSS_DEPRECATED" xml:space="preserve">
-    <value>{0}: [XenServer] [BRANDING_VERSION_6_2] 不再使用 WSS 服务器</value>
+    <value>{0}: [vGate] [BRANDING_VERSION_6_2] 不再使用 WSS 服务器</value>
   </data>
   <data name="RUNNING_ARCHIVE" xml:space="preserve">
     <value>正在存档</value>
@@ -10525,7 +10525,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>所选主机或池未连接</value>
   </data>
   <data name="SELECTION_CANNOT_BE_MIXED_FOR_LICENSING" xml:space="preserve">
-    <value>必须分别对不同版本的 [XenServer] 进行授权</value>
+    <value>必须分别对不同版本的 [vGate] 进行授权</value>
   </data>
   <data name="SELECT_A_FILTER" xml:space="preserve">
     <value>选择过滤器...</value>
@@ -10579,7 +10579,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>服务器(&amp;S):</value>
   </data>
   <data name="SERVER_OUT_OF_DATE" xml:space="preserve">
-    <value>[XenServer] 已过时</value>
+    <value>[vGate] 已过时</value>
   </data>
   <data name="SERVER_OUT_OF_DATE_DETAIL" xml:space="preserve">
     <value>服务器“{0}”已过期，不能再与之连接。</value>
@@ -10606,7 +10606,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>池主服务器上的当前时间为: {0}</value>
   </data>
   <data name="SERVER_TOO_OLD" xml:space="preserve">
-    <value>本版本的 [vGate Console] 支持 [XenServer] [BRANDING_VERSION_6_0] 及更高版本。</value>
+    <value>本版本的 [vGate Console] 支持 [vGate] [BRANDING_VERSION_6_0] 及更高版本。</value>
   </data>
   <data name="SERVER_TOO_OLD_SOLUTION" xml:space="preserve">
     <value>使用早期版本的 [vGate Console] 管理此服务器。</value>
@@ -10853,13 +10853,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>要对计划快照使用哪种快照类型?</value>
   </data>
   <data name="SOFTWARE_VERSION_BUILD_NUMBER" xml:space="preserve">
-    <value>[XenServer] 内部版本号</value>
+    <value>[vGate] 内部版本号</value>
   </data>
   <data name="SOFTWARE_VERSION_DATE" xml:space="preserve">
-    <value>[XenServer] 内部版本日期</value>
+    <value>[vGate] 内部版本日期</value>
   </data>
   <data name="SOFTWARE_VERSION_PRODUCT_VERSION" xml:space="preserve">
-    <value>[XenServer] 版本</value>
+    <value>[vGate] 版本</value>
   </data>
   <data name="SOFTWARE_VERSION_XCP_BUILD_NUMBER" xml:space="preserve">
     <value>XCP 内部版本号</value>
@@ -10874,7 +10874,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>使用正确的用户名和密码重试。</value>
   </data>
   <data name="SOLUTION_CHECK_XENSERVER" xml:space="preserve">
-    <value>检查确认已在“{0}”上正确配置 [XenServer]，然后重试。</value>
+    <value>检查确认已在“{0}”上正确配置 [vGate]，然后重试。</value>
   </data>
   <data name="SOLUTION_HOST_STILL_BOOTING" xml:space="preserve">
     <value>请稍候，然后重试。</value>
@@ -11458,7 +11458,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>已达到该模板的最大网络数。</value>
   </data>
   <data name="TOOLTIP_NICS_PER_BOND_LIMIT" xml:space="preserve">
-    <value>[XenServer] 仅支持每个绑定使用 {0} 个 NIC。</value>
+    <value>[vGate] 仅支持每个绑定使用 {0} 个 NIC。</value>
   </data>
   <data name="TOOLTIP_REMOVE_NETWORK_IO_DRIVERS" xml:space="preserve">
     <value>必须安装 I/O 驱动程序才能删除正在运行的 VM 上的网络</value>
@@ -11571,7 +11571,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>更新</value>
   </data>
   <data name="UPDATES_DESC" xml:space="preserve">
-    <value>自动检查 [XenServer] 或 [vGate Console] 更新</value>
+    <value>自动检查 [vGate] 或 [vGate Console] 更新</value>
   </data>
   <data name="UPDATES_DIALOG_ACTION_REQUIRED" xml:space="preserve">
     <value>要使更新在应用后生效，需要执行以下操作:
@@ -12007,118 +12007,118 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>已上载</value>
   </data>
   <data name="UPSELL_BLURB_AD" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 Active Directory。Active Directory 允许您通过添加命名用户帐户来配置 [XenServer] 访问控制功能。</value>
+    <value>升级您的 [vGate] 许可证以启用 Active Directory。Active Directory 允许您通过添加命名用户帐户来配置 [vGate] 访问控制功能。</value>
   </data>
   <data name="UPSELL_BLURB_AD_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] Active Directory 功能有关的更多信息，或者启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] Active Directory 功能有关的更多信息，或者启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_ALERTS" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用警报和报告功能。基于电子邮件的性能和错误警报将在错误情况或性能问题对关键服务产生影响之前，抢先将这些情况或问题通知给管理员。</value>
+    <value>升级您的 [vGate] 许可证以启用警报和报告功能。基于电子邮件的性能和错误警报将在错误情况或性能问题对关键服务产生影响之前，抢先将这些情况或问题通知给管理员。</value>
   </data>
   <data name="UPSELL_BLURB_ALERTS_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 警报和报告功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 警报和报告功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_CPM" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 VM 实时迁移。通过此功能，您能够在同一池中的服务器之间或跨池迁移共享存储或本地存储上正在运行的 VM，而不会导致 VM 停机。 </value>
+    <value>升级您的 [vGate] 许可证以启用 VM 实时迁移。通过此功能，您能够在同一池中的服务器之间或跨池迁移共享存储或本地存储上正在运行的 VM，而不会导致 VM 停机。 </value>
   </data>
   <data name="UPSELL_BLURB_CPM_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 跨池迁移功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 跨池迁移功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_CPUMASKING" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用异构池。异构池允许由使用不同 CPU 的主机构成一个资源池，并允许虚拟机在这些主机之间迁移。</value>
+    <value>升级您的 [vGate] 许可证以启用异构池。异构池允许由使用不同 CPU 的主机构成一个资源池，并允许虚拟机在这些主机之间迁移。</value>
   </data>
   <data name="UPSELL_BLURB_CPUMASKING_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 异构池功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 异构池功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_DMC" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用动态内存控制功能。通过动态内存控制功能，[XenServer] 可以调整活动虚拟机的内存，并对主机服务器不断变化的要求进行动态响应。</value>
+    <value>升级您的 [vGate] 许可证以启用动态内存控制功能。通过动态内存控制功能，[vGate] 可以调整活动虚拟机的内存，并对主机服务器不断变化的要求进行动态响应。</value>
   </data>
   <data name="UPSELL_BLURB_DMC_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 动态内存控制功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 动态内存控制功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_DR" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用灾难恢复功能。通过灾难恢复功能，您可以在主生产站点发生灾难性故障时在 DR 站点恢复关键 VM 和 vApp。</value>
+    <value>升级您的 [vGate] 许可证以启用灾难恢复功能。通过灾难恢复功能，您可以在主生产站点发生灾难性故障时在 DR 站点恢复关键 VM 和 vApp。</value>
   </data>
   <data name="UPSELL_BLURB_DR_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 灾难恢复功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 灾难恢复功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_ENHANCEDSR" xml:space="preserve">
-    <value>升级 [XenServer] 许可证以启用 StorageLink™ 技术。StorageLink 使 XenServer 能够充分利用现有存储硬件并自动卸载存储操作。这样便可以使用存储硬件固有的特性，在硬件层面实现具有高性能和空间效率的存储置备、克隆和快照功能。</value>
+    <value>升级 [vGate] 许可证以启用 StorageLink™ 技术。StorageLink 使 XenServer 能够充分利用现有存储硬件并自动卸载存储操作。这样便可以使用存储硬件固有的特性，在硬件层面实现具有高性能和空间效率的存储置备、克隆和快照功能。</value>
   </data>
   <data name="UPSELL_BLURB_GPU" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 GPU 直通功能。通过 GPU 直通功能，可以为 VM 分配专用图形处理器以提高图形性能。</value>
+    <value>升级您的 [vGate] 许可证以启用 GPU 直通功能。通过 GPU 直通功能，可以为 VM 分配专用图形处理器以提高图形性能。</value>
   </data>
   <data name="UPSELL_BLURB_GPU_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] GPU 直通功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] GPU 直通功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_HA" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用高可用性。通过高可用性，虚拟机可以在基础硬件出现故障或单个 VM 出现故障时自动重新启动。如果服务器出现故障，VM 将智能地在资源池中的其他虚拟化服务器上重新启动。</value>
+    <value>升级您的 [vGate] 许可证以启用高可用性。通过高可用性，虚拟机可以在基础硬件出现故障或单个 VM 出现故障时自动重新启动。如果服务器出现故障，VM 将智能地在资源池中的其他虚拟化服务器上重新启动。</value>
   </data>
   <data name="UPSELL_BLURB_HA_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 高可用性功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 高可用性功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_PERFORMANCE" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用性能报告功能。性能报告提供关于整体环境性能趋势的指导，并使您能够在业务需求发生变化时对生产能力做出准确规划。</value>
+    <value>升级您的 [vGate] 许可证以启用性能报告功能。性能报告提供关于整体环境性能趋势的指导，并使您能够在业务需求发生变化时对生产能力做出准确规划。</value>
   </data>
   <data name="UPSELL_BLURB_PERFORMANCE_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 性能报告功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 性能报告功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_RBAC" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用基于角色的访问控制。通过 RBAC 功能，可以控制对 [XenServer] 资源池中重要组件的访问，并具有完全的审核日志记录功能，能够与当前 Active Directory 设置实现无缝集成。</value>
+    <value>升级您的 [vGate] 许可证以启用基于角色的访问控制。通过 RBAC 功能，可以控制对 [vGate] 资源池中重要组件的访问，并具有完全的审核日志记录功能，能够与当前 Active Directory 设置实现无缝集成。</value>
   </data>
   <data name="UPSELL_BLURB_RBAC_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 基于角色的访问控制功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 基于角色的访问控制功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_VMSS" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 VM 计划快照功能。通过 VM 计划快照功能，可以为您的关键 VM 创建自动快照。</value>
+    <value>升级您的 [vGate] 许可证以启用 VM 计划快照功能。通过 VM 计划快照功能，可以为您的关键 VM 创建自动快照。</value>
   </data>
   <data name="UPSELL_BLURB_VMSS_MORE" xml:space="preserve">
     <value>
-要了解与 [XenServer] VM 计划快照功能有关的更多信息或者启动 XenServer 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] VM 计划快照功能有关的更多信息或者启动 XenServer 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_VM_APPLIANCES" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 vApp。通过 vApp 功能，您可以将 VM 放置到组中，从而允许这些 VM 作为一个单元来启动或停止，同时还允许这些 VM 在主生产站点出现灾难性故障时在 DR 站点上轻松恢复。</value>
+    <value>升级您的 [vGate] 许可证以启用 vApp。通过 vApp 功能，您可以将 VM 放置到组中，从而允许这些 VM 作为一个单元来启动或停止，同时还允许这些 VM 在主生产站点出现灾难性故障时在 DR 站点上轻松恢复。</value>
   </data>
   <data name="UPSELL_BLURB_VM_APPLIANCES_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 的 vApp 功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 的 vApp 功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_VM_PROTECTION" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用 VM 保护和恢复功能。通过 VM 保护和恢复功能，您可以安排时间自动生成快照并(可选)将这些快照存档到 CIFS 或 NFS 共享，从而保护关键 VM。</value>
+    <value>升级您的 [vGate] 许可证以启用 VM 保护和恢复功能。通过 VM 保护和恢复功能，您可以安排时间自动生成快照并(可选)将这些快照存档到 CIFS 或 NFS 共享，从而保护关键 VM。</value>
   </data>
   <data name="UPSELL_BLURB_VM_PROTECTION_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] VM 保护和恢复功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] VM 保护和恢复功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPSELL_BLURB_WLB" xml:space="preserve">
-    <value>升级您的 [XenServer] 许可证以启用动态工作负载平衡。动态工作负载平衡功能不断对虚拟机和 [XenServer] 主机的性能进行配置，并对新工作负载进行智能重新平衡和最优安排，以确保最有效地利用资源池中的物理服务器资源。</value>
+    <value>升级您的 [vGate] 许可证以启用动态工作负载平衡。动态工作负载平衡功能不断对虚拟机和 [vGate] 主机的性能进行配置，并对新工作负载进行智能重新平衡和最优安排，以确保最有效地利用资源池中的物理服务器资源。</value>
   </data>
   <data name="UPSELL_BLURB_WLB_MORE" xml:space="preserve">
     <value>
 
-要了解与 [XenServer] 动态工作负载平衡功能有关的更多信息或启动 [XenServer] 试用版，请单击下面的按钮。</value>
+要了解与 [vGate] 动态工作负载平衡功能有关的更多信息或启动 [vGate] 试用版，请单击下面的按钮。</value>
   </data>
   <data name="UPTIME" xml:space="preserve">
     <value>运行时间</value>
@@ -12969,34 +12969,34 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>WLB 未知错误。</value>
   </data>
   <data name="WLB_ERROR_4001" xml:space="preserve">
-    <value>WLB 与 [XenServer] 建立会话时出错。</value>
+    <value>WLB 与 [vGate] 建立会话时出错。</value>
   </data>
   <data name="WLB_ERROR_4002" xml:space="preserve">
-    <value>WLB 无法登录 [XenServer]。这可能是因为凭据无效。</value>
+    <value>WLB 无法登录 [vGate]。这可能是因为凭据无效。</value>
   </data>
   <data name="WLB_ERROR_4003" xml:space="preserve">
-    <value>WLB 无法连接到 [XenServer]。这可能是因为 [XenServer] 处于脱机状态或 TCP/IP 地址不正确。</value>
+    <value>WLB 无法连接到 [vGate]。这可能是因为 [vGate] 处于脱机状态或 TCP/IP 地址不正确。</value>
   </data>
   <data name="WLB_ERROR_4004" xml:space="preserve">
-    <value>WLB 从 [XenServer] 接收到空参数，而这是不允许的。</value>
+    <value>WLB 从 [vGate] 接收到空参数，而这是不允许的。</value>
   </data>
   <data name="WLB_ERROR_4005" xml:space="preserve">
     <value>缺少 WLB 注册表项。</value>
   </data>
   <data name="WLB_ERROR_4007" xml:space="preserve">
-    <value>WLB 从 [XenServer] 接收到无效参数。</value>
+    <value>WLB 从 [vGate] 接收到无效参数。</value>
   </data>
   <data name="WLB_ERROR_4008" xml:space="preserve">
-    <value>WLB 数据收集服务无法检索 [XenServer] 数据。</value>
+    <value>WLB 数据收集服务无法检索 [vGate] 数据。</value>
   </data>
   <data name="WLB_ERROR_4009" xml:space="preserve">
     <value>WLB 数据库中缺少 WLB 配置数据。</value>
   </data>
   <data name="WLB_ERROR_4010" xml:space="preserve">
-    <value>WLB 从 [XenServer] 接收到无效操作。</value>
+    <value>WLB 从 [vGate] 接收到无效操作。</value>
   </data>
   <data name="WLB_ERROR_4011" xml:space="preserve">
-    <value>WLB 从 [XenServer] 接收到超出范围的参数。</value>
+    <value>WLB 从 [vGate] 接收到超出范围的参数。</value>
   </data>
   <data name="WLB_ERROR_4012" xml:space="preserve">
     <value>WLB 数据收集服务未正确初始化。</value>
@@ -13026,7 +13026,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>池中的一个或多个主机没有合适的许可证。</value>
   </data>
   <data name="WLB_ERROR_4021" xml:space="preserve">
-    <value>WLB 无法连接到 [XenServer]，因为提供的凭据无效。</value>
+    <value>WLB 无法连接到 [vGate]，因为提供的凭据无效。</value>
   </data>
   <data name="WLB_ERROR_4022" xml:space="preserve">
     <value>WLB 无法撤离显式排除的主机。</value>
@@ -13035,10 +13035,10 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>WLB 此时无法保存配置。请确认所有 Workload Balancing 服务都在运行，然后在几分钟后尝试重新输入配置。</value>
   </data>
   <data name="WLB_ERROR_5" xml:space="preserve">
-    <value>[XenServer] 无法使用提供的 WLB 服务器凭据连接到 WLB 服务器。</value>
+    <value>[vGate] 无法使用提供的 WLB 服务器凭据连接到 WLB 服务器。</value>
   </data>
   <data name="WLB_ERROR_6" xml:space="preserve">
-    <value>WLB 连接到 [XenServer] 时所使用的用户身份权限不足，或者没有访问 [XenServer] 的权限。请使用有效用户身份重新初始化 WLB。</value>
+    <value>WLB 连接到 [vGate] 时所使用的用户身份权限不足，或者没有访问 [vGate] 的权限。请使用有效用户身份重新初始化 WLB。</value>
   </data>
   <data name="WLB_ERROR_SERVER_NOT_FOUND" xml:space="preserve">
     <value>找不到指定的 WLB 服务器。请检查设置。</value>
@@ -13215,7 +13215,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>配置错误: {0}</value>
   </data>
   <data name="WLB_RECONFIGURE_CREDS" xml:space="preserve">
-    <value>存储的 [XenServer] 凭据不再有效。请更新 Workload Balancing 的连接设置。</value>
+    <value>存储的 [vGate] 凭据不再有效。请更新 Workload Balancing 的连接设置。</value>
   </data>
   <data name="WLB_RECONNECT" xml:space="preserve">
     <value>重新连接(&amp;C)...</value>
@@ -13550,28 +13550,28 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>保存的搜索(*.{0})|*.{0}</value>
   </data>
   <data name="XENSERVER" xml:space="preserve">
-    <value>[XenServer]</value>
+    <value>[vGate]</value>
   </data>
   <data name="XENSERVER_6_2" xml:space="preserve">
-    <value>[XenServer] [BRANDING_VERSION_6_2]</value>
+    <value>[vGate] [BRANDING_VERSION_6_2]</value>
   </data>
   <data name="XENSERVER_6_5" xml:space="preserve">
-    <value>[XenServer] [BRANDING_VERSION_6_5]</value>
+    <value>[vGate] [BRANDING_VERSION_6_5]</value>
   </data>
   <data name="XENSERVER_TEMPLATES" xml:space="preserve">
-    <value>[XenServer] 模板</value>
+    <value>[vGate] 模板</value>
   </data>
   <data name="XENSERVER_UPGRADE_REQUIRED" xml:space="preserve">
     <value>需要升级许可证</value>
   </data>
   <data name="XSUPDATE" xml:space="preserve">
-    <value>[XenServer] 更新文件({0})|{0}|所有文件({1})|{1}</value>
+    <value>[vGate] 更新文件({0})|{0}|所有文件({1})|{1}</value>
   </data>
   <data name="XS_BACKUP_FILES" xml:space="preserve">
-    <value>[XenServer] 备份文件</value>
+    <value>[vGate] 备份文件</value>
   </data>
   <data name="XS_LICENSE_FILES" xml:space="preserve">
-    <value>[XenServer] 许可证文件</value>
+    <value>[vGate] 许可证文件</value>
   </data>
   <data name="XS_TOOLS_MESSAGE_MORE_THAN_ONE_VM" xml:space="preserve">
     <value>[XenServer product] Tools DVD 现在将插入每个选定 VM 的 DVD 驱动器中。驱动器中当前的任何磁盘都将被弹出。

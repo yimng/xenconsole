@@ -1433,7 +1433,7 @@ Do you want to do this?</value>
   <data name="ADD_HOST_TO_POOL_CPU_MASKING_MESSAGE" xml:space="preserve">
     <value>You are attempting to add the server '{0}' to a pool that is using older CPUs.
 
-[XenServer] can continue by rebooting the server and reducing its CPU to the level of the existing servers in the pool. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+[vGate] can continue by rebooting the server and reducing its CPU to the level of the existing servers in the pool. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
 
 Do you want to do this?</value>
   </data>
@@ -1442,7 +1442,7 @@ Do you want to do this?</value>
 
 {0}
 
-[XenServer] can continue by rebooting the servers and reducing their CPUs to the level of the existing servers in the pool. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+[vGate] can continue by rebooting the servers and reducing their CPUs to the level of the existing servers in the pool. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
 
 Do you want to do this?</value>
   </data>
@@ -1745,7 +1745,7 @@ This alarm is set to be triggered when the memory required by the control domain
     <value>File System on Control Domain Full</value>
   </data>
   <data name="ALERT_ALARM_FILESYSTEM_DESCRIPTION" xml:space="preserve">
-    <value>Disk usage for the Control Domain on {0} has reached {1}. [XenServer]'s performance will be critically affected if this disk becomes full. Log files or other non-essential (user created) files should be removed.</value>
+    <value>Disk usage for the Control Domain on {0} has reached {1}. [vGate]'s performance will be critically affected if this disk becomes full. Log files or other non-essential (user created) files should be removed.</value>
   </data>
   <data name="ALERT_ALARM_LOG_FILESYSTEM" xml:space="preserve">
     <value>File System on Logs Partition Full</value>
@@ -2551,7 +2551,7 @@ This change will take effect when you restart VM.</value>
 {1}</value>
   </data>
   <data name="CANNOT_DELETE_DEFAULT_TEMPLATE" xml:space="preserve">
-    <value>[XenServer] templates cannot be deleted.</value>
+    <value>[vGate] templates cannot be deleted.</value>
   </data>
   <data name="CANNOT_DELETE_DR_VD" xml:space="preserve">
     <value>This virtual disk is used for DR. To delete it, configure DR not to save data to this storage repository.</value>
@@ -2660,7 +2660,7 @@ This change will take effect when you restart VM.</value>
     <value>Change policy '{0}' status</value>
   </data>
   <data name="CHANGE_SERVER_CD" xml:space="preserve">
-    <value>Insert [XenServer] CD</value>
+    <value>Insert [vGate] CD</value>
   </data>
   <data name="CHANGE_SERVER_PASSWORD" xml:space="preserve">
     <value>Change Server Password...</value>
@@ -2807,7 +2807,7 @@ Do you want to assign it to the schedule '{2}' instead?</value>
     <value />
   </data>
   <data name="COMMON_CRITERIA_TEXT" xml:space="preserve">
-    <value>for use with Common Criteria versions of [XenServer] only</value>
+    <value>for use with Common Criteria versions of [vGate] only</value>
   </data>
   <data name="COMPLETED" xml:space="preserve">
     <value>Completed</value>
@@ -3271,7 +3271,7 @@ You can only connect to a single [Citrix] [XenServer product] Express Edition se
     <value>Connection to {0}: will try to connect to another pool member in {1} seconds</value>
   </data>
   <data name="CONNECT_NO_XAPI_FAILURE" xml:space="preserve">
-    <value>Could not find [XenServer] running on {0}.</value>
+    <value>Could not find [vGate] running on {0}.</value>
   </data>
   <data name="CONNECT_RESOLUTION_FAILURE" xml:space="preserve">
     <value>Could not find {0}.</value>
@@ -3951,7 +3951,7 @@ For optimal performance and reliability during VM migration, ensure that the net
     <value>Default</value>
   </data>
   <data name="DEFAULT_INSTALL_OF_XENSERVER" xml:space="preserve">
-    <value>Default install of [XenServer]</value>
+    <value>Default install of [vGate]</value>
   </data>
   <data name="DEFAULT_SEARCH" xml:space="preserve">
     <value>Default Search</value>
@@ -4805,7 +4805,7 @@ Eject the CD and try again.</value>
     <value>Failback to pool '{0}' is complete.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_COMPLETE_FAILOVER" xml:space="preserve">
-    <value>[XenServer] Disaster Recovery is complete.</value>
+    <value>[vGate] Disaster Recovery is complete.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_CONTINUE_DRYRUN" xml:space="preserve">
     <value>Click Next to remove the VMs that were failed over and to see the summary report.</value>
@@ -4823,7 +4823,7 @@ Eject the CD and try again.</value>
     <value>Failback is in progress. This may take some time.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_IN_PROGRESS_FAILOVER" xml:space="preserve">
-    <value>[XenServer] Disaster Recovery is in progress. This may take some time.</value>
+    <value>[vGate] Disaster Recovery is in progress. This may take some time.</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_OVERALL_PROGRESS" xml:space="preserve">
     <value>Overall progress: {0} of {1} tasks done</value>
@@ -4856,7 +4856,7 @@ Eject the CD and try again.</value>
     <value>Progress of failback to pool '{0}'</value>
   </data>
   <data name="DR_WIZARD_RECOVERPAGE_TITLE_FAILOVER" xml:space="preserve">
-    <value>[XenServer] Disaster Recovery progress</value>
+    <value>[vGate] Disaster Recovery progress</value>
   </data>
   <data name="DR_WIZARD_REPORTPAGE_TEXT" xml:space="preserve">
     <value>Summary</value>
@@ -5093,7 +5093,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>ends with</value>
   </data>
   <data name="ENTERPRISE_PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[XenServer] &amp;Enterprise Per-Socket ({0} required)</value>
+    <value>[vGate] &amp;Enterprise Per-Socket ({0} required)</value>
   </data>
   <data name="ENTER_MAINTENANCE_MODE" xml:space="preserve">
     <value>Enter &amp;Maintenance Mode...</value>
@@ -5267,7 +5267,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>File {0} not found</value>
   </data>
   <data name="ERROR_HOST_STILL_BOOTING" xml:space="preserve">
-    <value>[XenServer] is still booting.</value>
+    <value>[vGate] is still booting.</value>
   </data>
   <data name="ERROR_INVALID_GATEWAY" xml:space="preserve">
     <value>Gateway is invalid.</value>
@@ -5288,7 +5288,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>You are not authorized to access this server.</value>
   </data>
   <data name="ERROR_NO_XENSERVER" xml:space="preserve">
-    <value>Could not find [XenServer] on '{0}'.</value>
+    <value>Could not find [vGate] on '{0}'.</value>
   </data>
   <data name="ERROR_PREPARING_HOST" xml:space="preserve">
     <value>Error preparing host</value>
@@ -6210,7 +6210,7 @@ not currently live:
     <value>Are you sure you want to disable HA for pool '{0}'?</value>
   </data>
   <data name="HA_EDIT_DIALOG_BLURB" xml:space="preserve">
-    <value>[XenServer] High Availability (HA) allows virtual machines to automatically be restarted in the event of an underlying hardware failure or loss of an individual server. HA is enabled for '{0}'.</value>
+    <value>[vGate] High Availability (HA) allows virtual machines to automatically be restarted in the event of an underlying hardware failure or loss of an individual server. HA is enabled for '{0}'.</value>
   </data>
   <data name="HA_EDIT_NOW" xml:space="preserve">
     <value>Change these HA settings now...</value>
@@ -7329,7 +7329,7 @@ Size: {3}</value>
     <value>Expires in 1 minute</value>
   </data>
   <data name="LICENSE_EXPIRY_PURCHACE" xml:space="preserve">
-    <value>[XenServer] Online</value>
+    <value>[vGate] Online</value>
     <comment>this text could be improved</comment>
   </data>
   <data name="LICENSE_EXPIRY_TITLE" xml:space="preserve">
@@ -7378,7 +7378,7 @@ Size: {3}</value>
     <value>The license for a host cannot be changed when HA is on</value>
   </data>
   <data name="LICENSE_NO_MULTISELECT_ACTIVATE" xml:space="preserve">
-    <value>Servers must be selected one at a time when activating free [XenServer].</value>
+    <value>Servers must be selected one at a time when activating free [vGate].</value>
   </data>
   <data name="LICENSE_NO_MULTISELECT_LICENSE" xml:space="preserve">
     <value>Servers must be selected one at a time when licensing servers which have a version lower than [BRANDING_VERSION_5_6].</value>
@@ -7446,7 +7446,7 @@ Premium features enabled</value>
 Standard features only</value>
   </data>
   <data name="LICENSE_TOO_MANY_SERVERS_SELECTED_CAPTION" xml:space="preserve">
-    <value>Activation keys can only be applied to one Free [XenServer] product at a time.</value>
+    <value>Activation keys can only be applied to one Free [vGate] product at a time.</value>
   </data>
   <data name="LICENSE_UNSUPPORTED" xml:space="preserve">
     <value>Unsupported</value>
@@ -7470,13 +7470,13 @@ Standard features only</value>
     <value>Your license has expired</value>
   </data>
   <data name="LICENSING_DIALOG_EXPIRED_TEXT" xml:space="preserve">
-    <value>One or more managed servers have expired. Either assign [XenServer] licenses, or activate Free [XenServer] products.</value>
+    <value>One or more managed servers have expired. Either assign [vGate] licenses, or activate Free [vGate] products.</value>
   </data>
   <data name="LICENSING_DIALOG_EXPIRING_SOON_TEXT" xml:space="preserve">
-    <value>One or more managed servers will expire soon. Either assign [XenServer] licenses, or activate Free [XenServer] products.</value>
+    <value>One or more managed servers will expire soon. Either assign [vGate] licenses, or activate Free [vGate] products.</value>
   </data>
   <data name="LICENSING_DIALOG_TEXT" xml:space="preserve">
-    <value>Activate your free [XenServer] products or assign/release licenses for [XenServer] Advanced, Enterprise and Platinum Editions.</value>
+    <value>Activate your free [vGate] products or assign/release licenses for [vGate] Advanced, Enterprise and Platinum Editions.</value>
   </data>
   <data name="LINK_STATUS" xml:space="preserve">
     <value>Link Status</value>
@@ -7707,10 +7707,10 @@ This will permanently delete and reinitialize all local storage on the servers. 
     <value>eject CD on host</value>
   </data>
   <data name="MAINWINDOW_EXPIRE_MESSAGE" xml:space="preserve">
-    <value>The [XenServer] license on '{0}' will expire in {1}.</value>
+    <value>The [vGate] license on '{0}' will expire in {1}.</value>
   </data>
   <data name="MAINWINDOW_EXPIRE_MESSAGE_TOO_LATE" xml:space="preserve">
-    <value>The [XenServer] license on '{0}' has expired.</value>
+    <value>The [vGate] license on '{0}' has expired.</value>
   </data>
   <data name="MAINWINDOW_EXPORT_MAC" xml:space="preserve">
     <value>request license</value>
@@ -7977,7 +7977,7 @@ This will permanently delete and reinitialize all local storage on the servers. 
     <value>&amp;Memory:</value>
   </data>
   <data name="MEMORY_XEN" xml:space="preserve">
-    <value>[XenServer]</value>
+    <value>[vGate]</value>
   </data>
   <data name="MEM_NOT_WHEN_SUSPENDED" xml:space="preserve">
     <value>The memory cannot be changed when the VM is suspended</value>
@@ -8239,12 +8239,12 @@ To fix a corrupt configuration file revert changes to {0} or delete the file to 
     <value>Please eject your CD</value>
   </data>
   <data name="MIGRATE_VDI_UPSELL_BLURB" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable VDI live migration. This feature enables you to migrate multiple running VDIs between SRs in the same pool with no VM downtime. </value>
+    <value>Upgrade your [vGate] license to enable VDI live migration. This feature enables you to migrate multiple running VDIs between SRs in the same pool with no VM downtime. </value>
   </data>
   <data name="MIGRATE_VDI_UPSELL_BLURB_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Live VDI Migration feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Live VDI Migration feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="MIGRATE_VMS_OFF_SERVER" xml:space="preserve">
     <value>Migrate VMs off server '{0}'</value>
@@ -8556,7 +8556,7 @@ You should only proceed if you have verified that these settings are correct.</v
     <value>This server is a different version to the master</value>
   </data>
   <data name="NEWPOOL_FREE_HOST_PAID_MASTER" xml:space="preserve">
-    <value>You cannot add a Free Edition [XenServer] to a pool with [XenServer] Advanced Edition or higher licenses</value>
+    <value>You cannot add a Free Edition [vGate] to a pool with [vGate] Advanced Edition or higher licenses</value>
   </data>
   <data name="NEWPOOL_HAS_RUNNING_VMS" xml:space="preserve">
     <value>This server has running VMs</value>
@@ -8665,7 +8665,7 @@ When you configure a SMB storage repository, you simply provide the hostname or 
     <value>StorageLink technology</value>
   </data>
   <data name="NEWSR_EQUAL_LOGIC_BLURB" xml:space="preserve">
-    <value>Dell EqualLogic is a scalable form of high performance network attached storage, which supports the addition of capacity without downtime. You can use Dell EqualLogic shared storage to support [XenServer] features such as Live Migration and High Availability.</value>
+    <value>Dell EqualLogic is a scalable form of high performance network attached storage, which supports the addition of capacity without downtime. You can use Dell EqualLogic shared storage to support [vGate] features such as Live Migration and High Availability.</value>
   </data>
   <data name="NEWSR_EQUAL_LOGIC_DESCRIPTION" xml:space="preserve">
     <value>Dell EqualLogic SR [{0} ({1})]</value>
@@ -8720,7 +8720,7 @@ Using the LVM-based shared SR provides the same performance benefits as unshared
     <value>Hardware HBA Bond SR [{0} - {1}]</value>
   </data>
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
-    <value>[XenServer] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
+    <value>[vGate] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
 
 All configuration required to expose a LUN to the host must be completed manually, including configuring your FCoE fabric, and allocating LUN(s) to your CNA’s public world wide name (PWWN). 
 
@@ -8733,9 +8733,9 @@ Once this configuration has been carried out, this wizard will walk you through 
     <value>Software FCoE</value>
   </data>
   <data name="NEWSR_LVMOHBA_BLURB" xml:space="preserve">
-    <value>[XenServer] hosts support Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and shared Serial Attached SCSI (SAS) storage area networks (SANs) using host bus adapters (HBAs).
+    <value>[vGate] hosts support Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and shared Serial Attached SCSI (SAS) storage area networks (SANs) using host bus adapters (HBAs).
 
-All configuration required to expose a LUN to the host must be completed manually, including storage devices, network devices, and the HBA within the [XenServer] host.
+All configuration required to expose a LUN to the host must be completed manually, including storage devices, network devices, and the HBA within the [vGate] host.
 
 Once all configuration is complete the HBA will expose a SCSI device backed by the LUN to the host. The SCSI device can then be used to access the LUN as if it were a locally attached SCSI device.</value>
   </data>
@@ -9217,7 +9217,7 @@ All pool members must use the same authentication method. Do you want to enable 
   <data name="NEW_POOL_CPU_MASKING_MESSAGE" xml:space="preserve">
     <value>You are attempting to add the server '{0}' to a pool with a master that is using an older CPU.
 
-[XenServer] can continue by rebooting the server and reducing its CPU to the level of the master. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+[vGate] can continue by rebooting the server and reducing its CPU to the level of the master. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
 
 Do you want to do this?</value>
   </data>
@@ -9226,7 +9226,7 @@ Do you want to do this?</value>
 
 {0}
 
-[XenServer] can continue by rebooting the servers and reducing their CPUs to the level of the master. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+[vGate] can continue by rebooting the servers and reducing their CPUs to the level of the master. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
 
 Do you want to do this?</value>
   </data>
@@ -9461,9 +9461,9 @@ It is strongly recommended that you Cancel and apply the latest version of the p
   <data name="NOT_SAFE_TO_UPGRADE_DEFAULT_WARNING_LONG" xml:space="preserve">
     <value>VMs on local disk will prevent disk repartitioning.
 
-A new disk partitioning scheme is available in [XenServer] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
+A new disk partitioning scheme is available in [vGate] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
 
-However, there are VMs on local storage, so the current partitioning scheme will be retained. To benefit from repartitioning on upgrade to [XenServer] [BRANDING_VERSION_7_0] or above, VMs must be moved from local storage first.</value>
+However, there are VMs on local storage, so the current partitioning scheme will be retained. To benefit from repartitioning on upgrade to [vGate] [BRANDING_VERSION_7_0] or above, VMs must be moved from local storage first.</value>
   </data>
   <data name="NOT_SAFE_TO_UPGRADE_DEFAULT_WARNING_SHORT" xml:space="preserve">
     <value>{0}: VMs on local disk will prevent disk repartitioning.</value>
@@ -9471,7 +9471,7 @@ However, there are VMs on local storage, so the current partitioning scheme will
   <data name="NOT_SAFE_TO_UPGRADE_NOT_ENOUGH_SPACE_LONG" xml:space="preserve">
     <value>The disk size of the local storage prevents repartitioning.
 
-A new disk partitioning scheme is available in [XenServer] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
+A new disk partitioning scheme is available in [vGate] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
 
 However, there is not enough space to perform the repartitioning, so the current partitioning scheme will be retained.</value>
   </data>
@@ -9518,7 +9518,7 @@ However, there is not enough space to perform the repartitioning, so the current
     <value>There are no system alerts available to dismiss.</value>
   </data>
   <data name="NO_MORE_USERDEVICES" xml:space="preserve">
-    <value>[XenServer] cannot create any more disks for this VM</value>
+    <value>[vGate] cannot create any more disks for this VM</value>
   </data>
   <data name="NO_NAME" xml:space="preserve">
     <value>(No Name)</value>
@@ -9530,7 +9530,7 @@ However, there is not enough space to perform the repartitioning, so the current
     <value>There are no servers that need activating at this time.</value>
   </data>
   <data name="NO_SESSION_INFO" xml:space="preserve">
-    <value>No [XenServer] session information is available, cannot continue.</value>
+    <value>No [vGate] session information is available, cannot continue.</value>
   </data>
   <data name="NO_SNAPSHOTS" xml:space="preserve">
     <value>This VM does not have any snapshots.</value>
@@ -9833,16 +9833,16 @@ However, there is not enough space to perform the repartitioning, so the current
     <value>Choose an existing update to install or upload a new one</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTPATCHPAGE_UPDATESEXT" xml:space="preserve">
-    <value>[XenServer] Updates and Supplemental Packs (*.{0}, *.iso)|*.{0};*.iso</value>
+    <value>[vGate] Updates and Supplemental Packs (*.{0}, *.iso)|*.{0};*.iso</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_HOST_VERSION" xml:space="preserve">
-    <value>Automated updates are not supported on this [XenServer] version</value>
+    <value>Automated updates are not supported on this [vGate] version</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_PARTIALLY_UPGRADED" xml:space="preserve">
-    <value>Automated updates are not supported on partially upgraded [XenServer] pools</value>
+    <value>Automated updates are not supported on partially upgraded [vGate] pools</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_CANNOT_INSTALL_SUPP_PACKS" xml:space="preserve">
-    <value>Cannot install supplemental packs on this [XenServer] version</value>
+    <value>Cannot install supplemental packs on this [vGate] version</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_HOST_UNLICENSED" xml:space="preserve">
     <value>Subscription Advantage required</value>
@@ -9854,7 +9854,7 @@ However, there is not enough space to perform the repartitioning, so the current
     <value>The server is unreachable</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_MIXED_VERSIONS" xml:space="preserve">
-    <value>The same update cannot be applied to {0} and {1} versions of [XenServer]</value>
+    <value>The same update cannot be applied to {0} and {1} versions of [vGate]</value>
   </data>
   <data name="PATCHINGWIZARD_SELECTSERVERPAGE_PATCH_ALREADY_APPLIED" xml:space="preserve">
     <value>Update already applied</value>
@@ -10074,7 +10074,7 @@ File not found</value>
     <value>Host has been upgraded</value>
   </data>
   <data name="PLAN_ACTION_STATUS_INSTALLING_XENSERVER" xml:space="preserve">
-    <value>Installing [XenServer]</value>
+    <value>Installing [vGate]</value>
   </data>
   <data name="PLAN_ACTION_STATUS_MIGRATING_VMS_FROM_HOST" xml:space="preserve">
     <value>Migrating VMs from host</value>
@@ -10255,7 +10255,7 @@ The VM protection policy for this VM does not have automatic archiving configure
     <value>Select a pool or stand alone server to import this VM to. The home server setting will be taken from the template.\n\nIf this value does not correspond to a server within the selected resource pool then it will be ignored for all resourcing decisions.</value>
   </data>
   <data name="POOL_VERSIONS_LINK_TEXT" xml:space="preserve">
-    <value>Pool partially upgraded to [XenServer] {0}</value>
+    <value>Pool partially upgraded to [vGate] {0}</value>
   </data>
   <data name="POOL_VERSIONS_LINK_TEXT_SHORT" xml:space="preserve">
     <value>Partially upgraded</value>
@@ -10309,7 +10309,7 @@ The VM protection policy for this VM does not have automatic archiving configure
     <value>An error has occurred while attempting to connect to Storage Link Gateway: \n\n{0}\n\nPlease review the settings for this host and reconnect.</value>
   </data>
   <data name="PROBLEM_UNSUPPORTED_STORAGELINK_SR" xml:space="preserve">
-    <value>The use of StorageLink SRs was removed in [XenServer]. Remove StorageLink SRs before upgrading.</value>
+    <value>The use of StorageLink SRs was removed in [vGate]. Remove StorageLink SRs before upgrading.</value>
   </data>
   <data name="PROBLEM_VMAPPLIANCEPROBLEM_TITLE" xml:space="preserve">
     <value>vApp {0}</value>
@@ -10321,7 +10321,7 @@ The VM protection policy for this VM does not have automatic archiving configure
     <value>&amp;Proceed</value>
   </data>
   <data name="PROMPT_XS_CD" xml:space="preserve">
-    <value>Please insert the [XenServer] CD into the physical drive on server '{0}'.
+    <value>Please insert the [vGate] CD into the physical drive on server '{0}'.
 Press OK to continue the wizard and return to the server and follow the instructions on screen.</value>
   </data>
   <data name="PROPERTIES_DIALOG_TITLE" xml:space="preserve">
@@ -10986,13 +10986,13 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
 Check the boot order in the server and reboot again.</value>
   </data>
   <data name="ROLLING_UPGRADE_REBOOT_MESSAGE" xml:space="preserve">
-    <value>To install the [XenServer] upgrade on {0}, follow these steps:
+    <value>To install the [vGate] upgrade on {0}, follow these steps:
     
-1. Insert the [XenServer] installation CD-ROM in the server’s CD/DVD drive or set up a PXE network boot.
+1. Insert the [vGate] installation CD-ROM in the server’s CD/DVD drive or set up a PXE network boot.
 2. Click the Reboot Now button below to reboot the server and begin the installation.
 3. Go to the server’s console and follow the on-screen instructions to install the upgrade.
 
-To skip this server and continue to the next server in the pool, click Skip This Server. Note that running a pool with servers on different versions of [XenServer] is not supported, and so any servers that are not upgraded during this rolling pool upgrade should be upgraded as soon as possible afterwards.
+To skip this server and continue to the next server in the pool, click Skip This Server. Note that running a pool with servers on different versions of [vGate] is not supported, and so any servers that are not upgraded during this rolling pool upgrade should be upgraded as soon as possible afterwards.
 
 The master must be upgraded first, so if you skip the master, the rolling pool upgrade will be canceled for this pool.
 </value>
@@ -11010,16 +11010,16 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>Rolling pool upgrade did not complete.</value>
   </data>
   <data name="RPU_WARNING_DESCRIPTION_CLEARWATER_OR_GREATER" xml:space="preserve">
-    <value>'{0}': New versions of [XenServer] require new licenses to be added to your license server.</value>
+    <value>'{0}': New versions of [vGate] require new licenses to be added to your license server.</value>
   </data>
   <data name="RPU_WIZARD_TAMPA_AND_OLDER_TITLE" xml:space="preserve">
     <value>Checking licensing status</value>
   </data>
   <data name="RPU_WIZARD_VMPR_VMPP_DEPRECATION" xml:space="preserve">
-    <value>'{0}': VM Protection Policies were removed in [XenServer] [BRANDING_VERSION_6_2]</value>
+    <value>'{0}': VM Protection Policies were removed in [vGate] [BRANDING_VERSION_6_2]</value>
   </data>
   <data name="RPU_WIZARD_WSS_DEPRECATED" xml:space="preserve">
-    <value>'{0}': The use of WSS servers was removed in [XenServer] [BRANDING_VERSION_6_2]</value>
+    <value>'{0}': The use of WSS servers was removed in [vGate] [BRANDING_VERSION_6_2]</value>
   </data>
   <data name="RUNNING_ARCHIVE" xml:space="preserve">
     <value>Archiving</value>
@@ -11160,7 +11160,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>The hosts or pools selected are not connected</value>
   </data>
   <data name="SELECTION_CANNOT_BE_MIXED_FOR_LICENSING" xml:space="preserve">
-    <value>Different versions of [XenServer] must be licensed separately</value>
+    <value>Different versions of [vGate] must be licensed separately</value>
   </data>
   <data name="SELECT_A_FILTER" xml:space="preserve">
     <value>Select a filter...</value>
@@ -11220,7 +11220,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>&amp;Server:</value>
   </data>
   <data name="SERVER_OUT_OF_DATE" xml:space="preserve">
-    <value>[XenServer] Out of Date</value>
+    <value>[vGate] Out of Date</value>
   </data>
   <data name="SERVER_OUT_OF_DATE_DETAIL" xml:space="preserve">
     <value>Server '{0}' is out of date and can no longer be connected to.</value>
@@ -11247,7 +11247,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>The current time on the pool master is: {0}</value>
   </data>
   <data name="SERVER_TOO_OLD" xml:space="preserve">
-    <value>This version of [vGate Console] supports [XenServer] [BRANDING_VERSION_6_0] onwards.</value>
+    <value>This version of [vGate Console] supports [vGate] [BRANDING_VERSION_6_0] onwards.</value>
   </data>
   <data name="SERVER_TOO_OLD_SOLUTION" xml:space="preserve">
     <value>Use an earlier version of [vGate Console] to manage this server.</value>
@@ -11497,13 +11497,13 @@ Do you want to connect to the pool master '{1}'?</value>
     <value>What type of snapshot do you want to use for scheduled snapshots?</value>
   </data>
   <data name="SOFTWARE_VERSION_BUILD_NUMBER" xml:space="preserve">
-    <value>[XenServer] build number</value>
+    <value>[vGate] build number</value>
   </data>
   <data name="SOFTWARE_VERSION_DATE" xml:space="preserve">
-    <value>[XenServer] build date</value>
+    <value>[vGate] build date</value>
   </data>
   <data name="SOFTWARE_VERSION_PRODUCT_VERSION" xml:space="preserve">
-    <value>[XenServer] version</value>
+    <value>[vGate] version</value>
   </data>
   <data name="SOFTWARE_VERSION_XCP_BUILD_NUMBER" xml:space="preserve">
     <value>XCP build number</value>
@@ -11521,7 +11521,7 @@ Do you want to connect to the pool master '{1}'?</value>
     <value>Check that the proxy server on '{0}' is configured correctly and [vGate Console]'s connection settings are correct and try again.</value>
   </data>
   <data name="SOLUTION_CHECK_XENSERVER" xml:space="preserve">
-    <value>Check that [XenServer] is configured correctly on '{0}' and try again.</value>
+    <value>Check that [vGate] is configured correctly on '{0}' and try again.</value>
   </data>
   <data name="SOLUTION_HOST_STILL_BOOTING" xml:space="preserve">
     <value>Please wait and then try again.</value>
@@ -12129,7 +12129,7 @@ Refer to the "[XenServer product] Administrator's Guide" for instructions on how
     <value>The maximum number of networks for this template has been reached.</value>
   </data>
   <data name="TOOLTIP_NICS_PER_BOND_LIMIT" xml:space="preserve">
-    <value>[XenServer] only supports {0} NICs per Bond.</value>
+    <value>[vGate] only supports {0} NICs per Bond.</value>
   </data>
   <data name="TOOLTIP_REMOVE_NETWORK_IO_DRIVERS" xml:space="preserve">
     <value>I/O drivers must be installed to remove a network on a running VM</value>
@@ -12245,7 +12245,7 @@ Verify that the file is a valid {1} export.</value>
     <value>Updates</value>
   </data>
   <data name="UPDATES_DESC" xml:space="preserve">
-    <value>Automatically check for [XenServer] or [vGate Console] updates</value>
+    <value>Automatically check for [vGate] or [vGate Console] updates</value>
   </data>
   <data name="UPDATES_DIALOG_ACTION_REQUIRED" xml:space="preserve">
     <value>For the update to take effect after application, the following action is required:
@@ -12708,20 +12708,20 @@ Note that if RBAC is enabled, only updates which you have privileges to dismiss 
     <value>Uploaded</value>
   </data>
   <data name="UPSELL_BLURB_AD" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Active Directory.  Active Directory allows you to configure [XenServer] access control by adding named user accounts.</value>
+    <value>Upgrade your [vGate] license to enable Active Directory.  Active Directory allows you to configure [vGate] access control by adding named user accounts.</value>
   </data>
   <data name="UPSELL_BLURB_AD_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Active Directory feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Active Directory feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_ALERTS" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Alerting and Reporting capabilities. Email based performance and error alerting will proactively notify administrators of error conditions or performance problems before they affect critical services.</value>
+    <value>Upgrade your [vGate] license to enable Alerting and Reporting capabilities. Email based performance and error alerting will proactively notify administrators of error conditions or performance problems before they affect critical services.</value>
   </data>
   <data name="UPSELL_BLURB_ALERTS_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Alerting and Reporting feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Alerting and Reporting feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_BR" xml:space="preserve">
     <value>Upgrade vGate to enable Backup&amp;Restore. 
@@ -12729,103 +12729,103 @@ To learn more about the [XenServer] Alerting and Reporting feature or to start a
 To learn more about the vGate Backup&amp;Restore feature or to start a vGate trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_CPM" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable VM live migration. This feature enables you to migrate running VMs on shared or local storage between servers in the same pool or across pools with no VM downtime. </value>
+    <value>Upgrade your [vGate] license to enable VM live migration. This feature enables you to migrate running VMs on shared or local storage between servers in the same pool or across pools with no VM downtime. </value>
   </data>
   <data name="UPSELL_BLURB_CPM_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Cross-Pool Migration feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Cross-Pool Migration feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_CPUMASKING" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Heterogeneous Pools. Heterogeneous Pools allows hosts with different CPUs to form a resource pool, and allows virtual machines to migrate between them.</value>
+    <value>Upgrade your [vGate] license to enable Heterogeneous Pools. Heterogeneous Pools allows hosts with different CPUs to form a resource pool, and allows virtual machines to migrate between them.</value>
   </data>
   <data name="UPSELL_BLURB_CPUMASKING_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Heterogeneous Pools feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Heterogeneous Pools feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_DMC" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Dynamic Memory Control.  Dynamic Memory Control allows [XenServer] to adjust the memory of live virtual machines, and respond dynamically to changing demands on the host server.</value>
+    <value>Upgrade your [vGate] license to enable Dynamic Memory Control.  Dynamic Memory Control allows [vGate] to adjust the memory of live virtual machines, and respond dynamically to changing demands on the host server.</value>
   </data>
   <data name="UPSELL_BLURB_DMC_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Dynamic Memory Control feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Dynamic Memory Control feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_DR" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Disaster Recovery. The Disaster Recovery feature allows you to recover your critical VMs and vApps at your DR site in the event of a disaster at your primary production site.</value>
+    <value>Upgrade your [vGate] license to enable Disaster Recovery. The Disaster Recovery feature allows you to recover your critical VMs and vApps at your DR site in the event of a disaster at your primary production site.</value>
   </data>
   <data name="UPSELL_BLURB_DR_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Disaster Recovery feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Disaster Recovery feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_ENHANCEDSR" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable StorageLink™ Technology. StorageLink allows [XenServer] to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware's native features.</value>
+    <value>Upgrade your [vGate] license to enable StorageLink™ Technology. StorageLink allows [vGate] to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware's native features.</value>
   </data>
   <data name="UPSELL_BLURB_GPU" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable GPU pass-through. The GPU pass-through feature allows you to assign a dedicated graphics processing unit to a VM for higher graphics performance.</value>
+    <value>Upgrade your [vGate] license to enable GPU pass-through. The GPU pass-through feature allows you to assign a dedicated graphics processing unit to a VM for higher graphics performance.</value>
   </data>
   <data name="UPSELL_BLURB_GPU_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] GPU pass-through feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] GPU pass-through feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_HA" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable High Availability. High Availability allows virtual machines to be automatically restarted in the event of an underlying hardware failure or individual VM failure. If the server fails the VMs will be intelligently restarted on other virtualized servers in the resource pool.</value>
+    <value>Upgrade your [vGate] license to enable High Availability. High Availability allows virtual machines to be automatically restarted in the event of an underlying hardware failure or individual VM failure. If the server fails the VMs will be intelligently restarted on other virtualized servers in the resource pool.</value>
   </data>
   <data name="UPSELL_BLURB_HA_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] High Availability feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] High Availability feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_PERFORMANCE" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Performance Reporting capabilities. Performance Reporting provides guidance on overall environment performance trends and enables you to accurately plan capacity as business needs change.</value>
+    <value>Upgrade your [vGate] license to enable Performance Reporting capabilities. Performance Reporting provides guidance on overall environment performance trends and enables you to accurately plan capacity as business needs change.</value>
   </data>
   <data name="UPSELL_BLURB_PERFORMANCE_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Performance Reporting capabilities feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Performance Reporting capabilities feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_RBAC" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Role Based Access Control. Using the RBAC feature, you will be able to control access to vital components in your [XenServer] resource pools, with full audit logging capabilities and seamless integration with your current Active Directory setup.</value>
+    <value>Upgrade your [vGate] license to enable Role Based Access Control. Using the RBAC feature, you will be able to control access to vital components in your [vGate] resource pools, with full audit logging capabilities and seamless integration with your current Active Directory setup.</value>
   </data>
   <data name="UPSELL_BLURB_RBAC_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Role Based Access Control feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Role Based Access Control feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_VMSS" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable VM Scheduled Snapshots. VM Scheduled Snapshost allows you to create automatic snapshots for your critical VMs.</value>
+    <value>Upgrade your [vGate] license to enable VM Scheduled Snapshots. VM Scheduled Snapshost allows you to create automatic snapshots for your critical VMs.</value>
   </data>
   <data name="UPSELL_BLURB_VMSS_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] VM Scheduled Snapshots feature or to start a XenServer trial, click the button below.</value>
+To learn more about the [vGate] VM Scheduled Snapshots feature or to start a XenServer trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_VM_APPLIANCES" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable vApps. The vApps feature allows you to place your VMs into groups, allowing them to be started or stopped as a unit, and also allowing them to be easily recovered at your DR site in the event of a disaster at your primary production site.</value>
+    <value>Upgrade your [vGate] license to enable vApps. The vApps feature allows you to place your VMs into groups, allowing them to be started or stopped as a unit, and also allowing them to be easily recovered at your DR site in the event of a disaster at your primary production site.</value>
   </data>
   <data name="UPSELL_BLURB_VM_APPLIANCES_MORE" xml:space="preserve">
     <value>
 
-To learn more about the vApps feature of [XenServer] or to start a [XenServer] trial, click the button below.</value>
+To learn more about the vApps feature of [vGate] or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_VM_PROTECTION" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable VM Protection and Recovery. VM Protection and Recovery allows you to protect your critical VMs by scheduling automatic snapshots, and optionally, archiving those snapshots to a CIFS or NFS share.</value>
+    <value>Upgrade your [vGate] license to enable VM Protection and Recovery. VM Protection and Recovery allows you to protect your critical VMs by scheduling automatic snapshots, and optionally, archiving those snapshots to a CIFS or NFS share.</value>
   </data>
   <data name="UPSELL_BLURB_VM_PROTECTION_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] VM Protection and Recovery feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] VM Protection and Recovery feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_WLB" xml:space="preserve">
-    <value>Upgrade your [XenServer] license to enable Dynamic Workload Balancing. Dynamic Workload Balancing continually profiles your virtual machines’ and [XenServer] hosts’ performance and will intelligently rebalance and optimally place new workloads to ensure the best use of physical server resources in your resource pool.</value>
+    <value>Upgrade your [vGate] license to enable Dynamic Workload Balancing. Dynamic Workload Balancing continually profiles your virtual machines’ and [vGate] hosts’ performance and will intelligently rebalance and optimally place new workloads to ensure the best use of physical server resources in your resource pool.</value>
   </data>
   <data name="UPSELL_BLURB_WLB_MORE" xml:space="preserve">
     <value>
 
-To learn more about the [XenServer] Dynamic Workload Balancing feature or to start a [XenServer] trial, click the button below.</value>
+To learn more about the [vGate] Dynamic Workload Balancing feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPTIME" xml:space="preserve">
     <value>Uptime</value>
@@ -13703,34 +13703,34 @@ A {1} user cannot alter the Workload Balancing settings.</value>
     <value>WLB unknown error.</value>
   </data>
   <data name="WLB_ERROR_4001" xml:space="preserve">
-    <value>An error occurd when WLB  establish a session with [XenServer].</value>
+    <value>An error occurd when WLB  establish a session with [vGate].</value>
   </data>
   <data name="WLB_ERROR_4002" xml:space="preserve">
-    <value>WLB could not log into [XenServer]. It could be due to invalid credentials.</value>
+    <value>WLB could not log into [vGate]. It could be due to invalid credentials.</value>
   </data>
   <data name="WLB_ERROR_4003" xml:space="preserve">
-    <value>WLB cannot connect to [XenServer]. It could be the [XenServer] being offline or an incorrect TCP/IP address.</value>
+    <value>WLB cannot connect to [vGate]. It could be the [vGate] being offline or an incorrect TCP/IP address.</value>
   </data>
   <data name="WLB_ERROR_4004" xml:space="preserve">
-    <value>WLB received a null argument from [XenServer], which is not allowed.</value>
+    <value>WLB received a null argument from [vGate], which is not allowed.</value>
   </data>
   <data name="WLB_ERROR_4005" xml:space="preserve">
     <value>WLB registry key is missing.</value>
   </data>
   <data name="WLB_ERROR_4007" xml:space="preserve">
-    <value>WLB received an invalid argument from [XenServer].</value>
+    <value>WLB received an invalid argument from [vGate].</value>
   </data>
   <data name="WLB_ERROR_4008" xml:space="preserve">
-    <value>WLB data collection service cannot retrieve [XenServer] data.</value>
+    <value>WLB data collection service cannot retrieve [vGate] data.</value>
   </data>
   <data name="WLB_ERROR_4009" xml:space="preserve">
     <value>WLB configuration data is missing in WLB database.</value>
   </data>
   <data name="WLB_ERROR_4010" xml:space="preserve">
-    <value>WLB received an invalid operation from [XenServer].</value>
+    <value>WLB received an invalid operation from [vGate].</value>
   </data>
   <data name="WLB_ERROR_4011" xml:space="preserve">
-    <value>WLB received an out of range argument from [XenServer].</value>
+    <value>WLB received an out of range argument from [vGate].</value>
   </data>
   <data name="WLB_ERROR_4012" xml:space="preserve">
     <value>WLB data collection service is not properly initialized.</value>
@@ -13760,7 +13760,7 @@ A {1} user cannot alter the Workload Balancing settings.</value>
     <value>One or more hosts in the pool do not have an appropriate license.</value>
   </data>
   <data name="WLB_ERROR_4021" xml:space="preserve">
-    <value>WLB could not connect to [XenServer] because the supplied credentials were invalid.</value>
+    <value>WLB could not connect to [vGate] because the supplied credentials were invalid.</value>
   </data>
   <data name="WLB_ERROR_4022" xml:space="preserve">
     <value>WLB unable to evacuate an explicitly excluded host.</value>
@@ -13769,10 +13769,10 @@ A {1} user cannot alter the Workload Balancing settings.</value>
     <value>WLB cannot save your configuration at this time.  Verify all Workload Balancing services are running, and try reentering your configuration in a few minutes.</value>
   </data>
   <data name="WLB_ERROR_5" xml:space="preserve">
-    <value>[XenServer] cannot connect to the WLB Server with the supplied WLB Server credentials.</value>
+    <value>[vGate] cannot connect to the WLB Server with the supplied WLB Server credentials.</value>
   </data>
   <data name="WLB_ERROR_6" xml:space="preserve">
-    <value>The user WLB uses to connect to [XenServer] either doesn't have sufficient privileges or doesn't have access to [XenServer]. Please re-initialize WLB with an valid user.</value>
+    <value>The user WLB uses to connect to [vGate] either doesn't have sufficient privileges or doesn't have access to [vGate]. Please re-initialize WLB with an valid user.</value>
   </data>
   <data name="WLB_ERROR_SERVER_NOT_FOUND" xml:space="preserve">
     <value>The specified WLB Server could not be found.  Please check your settings.</value>
@@ -13949,7 +13949,7 @@ Would you like to adjust the current Optimization Mode to match the schedule?</v
     <value>Configuration Error: {0}</value>
   </data>
   <data name="WLB_RECONFIGURE_CREDS" xml:space="preserve">
-    <value>The stored [XenServer] credentials are no longer valid.  Please update the connection settings for Workload Balancing.</value>
+    <value>The stored [vGate] credentials are no longer valid.  Please update the connection settings for Workload Balancing.</value>
   </data>
   <data name="WLB_RECONNECT" xml:space="preserve">
     <value>Re&amp;connect...</value>
@@ -14284,28 +14284,28 @@ Are you sure you want to enable automated power management for this Host?</value
     <value>Saved Searches (*.{0})|*.{0}</value>
   </data>
   <data name="XENSERVER" xml:space="preserve">
-    <value>[XenServer]</value>
+    <value>[vGate]</value>
   </data>
   <data name="XENSERVER_6_2" xml:space="preserve">
-    <value>[XenServer] [BRANDING_VERSION_6_2]</value>
+    <value>[vGate] [BRANDING_VERSION_6_2]</value>
   </data>
   <data name="XENSERVER_6_5" xml:space="preserve">
-    <value>[XenServer] [BRANDING_VERSION_6_5]</value>
+    <value>[vGate] [BRANDING_VERSION_6_5]</value>
   </data>
   <data name="XENSERVER_TEMPLATES" xml:space="preserve">
-    <value>[XenServer] Templates</value>
+    <value>[vGate] Templates</value>
   </data>
   <data name="XENSERVER_UPGRADE_REQUIRED" xml:space="preserve">
     <value>License Upgrade Required</value>
   </data>
   <data name="XSUPDATE" xml:space="preserve">
-    <value>[XenServer] Update Files ({0})|{0}|All files ({1})|{1}</value>
+    <value>[vGate] Update Files ({0})|{0}|All files ({1})|{1}</value>
   </data>
   <data name="XS_BACKUP_FILES" xml:space="preserve">
-    <value>[XenServer] Backup Files</value>
+    <value>[vGate] Backup Files</value>
   </data>
   <data name="XS_LICENSE_FILES" xml:space="preserve">
-    <value>[XenServer] License Files</value>
+    <value>[vGate] License Files</value>
   </data>
   <data name="XS_TOOLS_MESSAGE_MORE_THAN_ONE_VM" xml:space="preserve">
     <value>[XenServer product] Tools DVDs will now be inserted into the DVD drive of each of the selected VMs. Any disks currently in the drives will be ejected.
