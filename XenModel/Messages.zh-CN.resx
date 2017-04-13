@@ -943,7 +943,7 @@
     <value>已完成编译状态报告(出错)。已完成编译部分状态报告。</value>
   </data>
   <data name="ACTION_SYSTEM_STATUS_SUCCESSFUL_WITH_ERRORS_XCLOGS" xml:space="preserve">
-    <value>已完成编译状态报告(出错)。仅完成编译 [XenCenter] 日志。</value>
+    <value>已完成编译状态报告(出错)。仅完成编译 [vGate Console] 日志。</value>
   </data>
   <data name="ACTION_SYSTEM_STATUS_TITLE" xml:space="preserve">
     <value>正在获取系统状态信息</value>
@@ -1258,7 +1258,7 @@
     <value>激活(&amp;C)</value>
   </data>
   <data name="ACTIVATION_FAILED_MESSAGE" xml:space="preserve">
-    <value>[XenCenter] 无法与激活服务器联系。
+    <value>[vGate Console] 无法与激活服务器联系。
 
 如果您当前未连接到 Internet，我们可以将激活请求
 保存为一个文件，供您以后上载。
@@ -1320,7 +1320,7 @@
     <value>地址</value>
   </data>
   <data name="ADDSERVER_PASS_NEW" xml:space="preserve">
-    <value>[XenCenter] 无法再使用现有凭据向此服务器进行身份验证。请输入新凭据以继续操作。</value>
+    <value>[vGate Console] 无法再使用现有凭据向此服务器进行身份验证。请输入新凭据以继续操作。</value>
   </data>
   <data name="ADD_CUSTOM_FIELD" xml:space="preserve">
     <value>添加自定义字段“{0}”</value>
@@ -1592,7 +1592,7 @@
 是否要继续?</value>
   </data>
   <data name="AD_MASTER_UNAVAILABLE_BLURB" xml:space="preserve">
-    <value>[XenCenter] 正在建立当前的外部身份验证配置，请稍候。</value>
+    <value>[vGate Console] 正在建立当前的外部身份验证配置，请稍候。</value>
   </data>
   <data name="AD_NOT_CONFIGURED_BLURB" xml:space="preserve">
     <value>池“{0}”当前未配置 AD。要启用 AD 身份验证，请单击“加入域”。</value>
@@ -1791,7 +1791,7 @@
     <value>转至 Web 页面</value>
   </data>
   <data name="ALERT_NEW_VERSION" xml:space="preserve">
-    <value>新 [XenCenter] 可用</value>
+    <value>新 [vGate Console] 可用</value>
   </data>
   <data name="ALERT_NEW_VERSION_DETAILS" xml:space="preserve">
     <value>{0} 现在可用。可从 [Citrix] 网站下载新版本。</value>
@@ -1841,7 +1841,7 @@
   <data name="ALREADY_ATTACHED_ELSEWHERE" xml:space="preserve">
     <value>SR“{0}”当前已连接到其他位置。是否要将其连接到“{1}”? 
 
-警告: 必须确保 SR 当前未由任何未连接到 [XenCenter] 的服务器使用。否则可能会导致数据丢失。</value>
+警告: 必须确保 SR 当前未由任何未连接到 [vGate Console] 的服务器使用。否则可能会导致数据丢失。</value>
   </data>
   <data name="ALREADY_CONNECTED" xml:space="preserve">
     <value>已经连接到服务器“{0}”。</value>
@@ -2147,9 +2147,9 @@
   <data name="BOND_CREATE_WILL_DISTURB_PRIMARY" xml:space="preserve">
     <value>创建此绑定会自动将其中一个所选绑定成员上的管理接口移动到绑定本身:
 
-- [XenCenter] 与池之间的连接将暂时中断
+- [vGate Console] 与池之间的连接将暂时中断
 
-- 如果您的网络配置不正确，[XenCenter] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
+- 如果您的网络配置不正确，[vGate Console] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
   </data>
   <data name="BOND_CREATE_WILL_DISTURB_SECONDARY" xml:space="preserve">
     <value>创建此绑定将中断通过绑定成员上的辅助接口进行的通信，而接口将移动到绑定本身。</value>
@@ -2169,20 +2169,20 @@
 
 删除此绑定会自动将绑定上的管理接口和辅助接口转移到绑定的第一个从属成员: 
 
-- [XenCenter] 与池之间的连接将暂时中断
+- [vGate Console] 与池之间的连接将暂时中断
 
 - 通过辅助接口进行的通信将中断
 
-- 如果您的网络配置不正确，[XenCenter] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
+- 如果您的网络配置不正确，[vGate Console] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
   </data>
   <data name="BOND_DELETE_WILL_DISTURB_PRIMARY" xml:space="preserve">
     <value>{0}
 
 删除此绑定会自动将绑定上的管理接口转移到绑定的第一个从属成员: 
 
-- [XenCenter] 与池之间的连接将暂时中断
+- [vGate Console] 与池之间的连接将暂时中断
 
-- 如果您的网络配置不正确，[XenCenter] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
+- 如果您的网络配置不正确，[vGate Console] 可能会永久断开与池之间的连接，或者池成员可能无法相互通信。</value>
   </data>
   <data name="BOND_DELETE_WILL_DISTURB_SECONDARY" xml:space="preserve">
     <value>{0}
@@ -2205,7 +2205,7 @@
     <value>升级后存在损坏的 SR。要解决该问题，应重新连接 SR。</value>
   </data>
   <data name="BROKEN_TOOLS_PROMPT" xml:space="preserve">
-    <value>Tools ISO 位于损坏的 SR 上，[XenCenter] 将尝试修复该问题，然后再继续操作。是否继续?</value>
+    <value>Tools ISO 位于损坏的 SR 上，[vGate Console] 将尝试修复该问题，然后再继续操作。是否继续?</value>
   </data>
   <data name="BUGTOOL_FILE_PREFIX" xml:space="preserve">
     <value>status-report-</value>
@@ -2411,7 +2411,7 @@
     <value>该虚拟磁盘当前正在使用，无法删除。</value>
   </data>
   <data name="CANNOT_FIND_SR_WIZARD_TYPE" xml:space="preserve">
-    <value>无法使用 [XenCenter] 配置类型为“{0}”的 SR。</value>
+    <value>无法使用 [vGate Console] 配置类型为“{0}”的 SR。</value>
   </data>
   <data name="CANNOT_MIGRATE_VDI_NON_RUNNING_VM" xml:space="preserve">
     <value>不能移动此虚拟磁盘，因为此虚拟磁盘连接到未运行的 VM。</value>
@@ -2457,10 +2457,10 @@
     <value>更改...</value>
   </data>
   <data name="CHANGED_MASTER_PASSWORD" xml:space="preserve">
-    <value>已更改 [XenCenter] 主密码</value>
+    <value>已更改 [vGate Console] 主密码</value>
   </data>
   <data name="CHANGED_MASTER_PASSWORD_LONG" xml:space="preserve">
-    <value>已更改用于会话还原的 [XenCenter] 主密码</value>
+    <value>已更改用于会话还原的 [vGate Console] 主密码</value>
   </data>
   <data name="CHANGED_SERVER_CD" xml:space="preserve">
     <value>服务器 CD 已更改</value>
@@ -2868,10 +2868,10 @@
     <value>重新启动 VM</value>
   </data>
   <data name="CONFIRM_RESTART_TOOLSTACK_MANY_SERVERS" xml:space="preserve">
-    <value>是否确实要重新启动选定服务器上的 Toolstack? 请注意，[XenCenter] 将暂时断开与选定服务器的连接。</value>
+    <value>是否确实要重新启动选定服务器上的 Toolstack? 请注意，[vGate Console] 将暂时断开与选定服务器的连接。</value>
   </data>
   <data name="CONFIRM_RESTART_TOOLSTACK_ONE_SERVER" xml:space="preserve">
-    <value>是否确实要重新启动“{0}”上的 Toolstack? 请注意，[XenCenter] 将暂时断开与该服务器的连接。</value>
+    <value>是否确实要重新启动“{0}”上的 Toolstack? 请注意，[vGate Console] 将暂时断开与该服务器的连接。</value>
   </data>
   <data name="CONFIRM_RESTART_TOOLSTACK_TITLE" xml:space="preserve">
     <value>重新启动 Toolstack</value>
@@ -3974,7 +3974,7 @@
     <value>{0} (已分离)</value>
   </data>
   <data name="DETACHED_ISCI_DETECTED" xml:space="preserve">
-    <value>[XenCenter] 检测到此 LUN 上已存在 SR。此 SR 当前未由“{0}”使用，是否要连接?</value>
+    <value>[vGate Console] 检测到此 LUN 上已存在 SR。此 SR 当前未由“{0}”使用，是否要连接?</value>
   </data>
   <data name="DETACH_ALL_BUTTON_LABEL" xml:space="preserve">
     <value>全部分离(&amp;D)</value>
@@ -4866,7 +4866,7 @@
     <value>进入维护模式(&amp;E)...</value>
   </data>
   <data name="ENTER_MASTER_PASSWORD_TO_ACCESS_SETTINGS_TT" xml:space="preserve">
-    <value>要访问保存的会话，需要在启动 [XenCenter] 时输入主密码</value>
+    <value>要访问保存的会话，需要在启动 [vGate Console] 时输入主密码</value>
   </data>
   <data name="ENTER_VALID_QOS" xml:space="preserve">
     <value>QoS 限制值应大于零</value>
@@ -4887,7 +4887,7 @@
     <value>用户名和密码不匹配。</value>
   </data>
   <data name="ERROR_CONNECTING_BLURB" xml:space="preserve">
-    <value>[XenCenter] 在连接到此服务器时遇到问题。</value>
+    <value>[vGate Console] 在连接到此服务器时遇到问题。</value>
   </data>
   <data name="ERROR_DEACTIVATING_MULTIPLE_VDIS_MESSAGE" xml:space="preserve">
     <value>无法取消激活以下虚拟磁盘:</value>
@@ -5058,7 +5058,7 @@
     <value>准备主机时出错</value>
   </data>
   <data name="ERROR_PUTTY_LAUNCHING" xml:space="preserve">
-    <value>[XenCenter] 在启动 PuTTY 时遇到问题。</value>
+    <value>[vGate Console] 在启动 PuTTY 时遇到问题。</value>
   </data>
   <data name="ERROR_SECURE_CHANNEL_FAILURE" xml:space="preserve">
     <value>无法创建 SSL/TLS 安全通道。</value>
@@ -5739,12 +5739,12 @@
     <value>组角色</value>
   </data>
   <data name="GUI_OUT_OF_DATE" xml:space="preserve">
-    <value>此版本的 [XenCenter] 已过时，无法连接到 {0}。</value>
+    <value>此版本的 [vGate Console] 已过时，无法连接到 {0}。</value>
   </data>
   <data name="GUI_OUT_OF_DATE_MORE" xml:space="preserve">
     <value>
 
-可以从以下位置获取兼容的 [XenCenter] 版本:</value>
+可以从以下位置获取兼容的 [vGate Console] 版本:</value>
   </data>
   <data name="HA" xml:space="preserve">
     <value>高可用性</value>
@@ -6026,7 +6026,7 @@
     <value>检查配置并激活高可用性</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_EXISTING_TOKEN" xml:space="preserve">
-    <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。[XenCenter] 检测到之前已成功为其他已连接的池之一进行身份验证。可以选择重复使用或再次进行身份验证。</value>
+    <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。[vGate Console] 检测到之前已成功为其他已连接的池之一进行身份验证。可以选择重复使用或再次进行身份验证。</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_NO_TOKEN" xml:space="preserve">
     <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。请通过提供 MyCitrix 凭据进行注册(请参阅 http://www.citrix.com/welcome.html)。这些凭据只能用于获取上载令牌，不存储在此计算机或您的服务器上。</value>
@@ -6618,7 +6618,7 @@
     <value>为导入的虚拟机选择存储库。</value>
   </data>
   <data name="INCOMPATIBLE_PRODUCTS" xml:space="preserve">
-    <value>此服务器版本与 [XenCenter] 不兼容。</value>
+    <value>此服务器版本与 [vGate Console] 不兼容。</value>
   </data>
   <data name="INCOMPATIBLE_PROTOCOL_VERSION" xml:space="preserve">
     <value>协议版本不兼容</value>
@@ -7379,7 +7379,7 @@ SCSI ID: {2}
     <value>在恢复模式下启动(&amp;V)</value>
   </data>
   <data name="MAINWINDOW_REMOVE_HOST" xml:space="preserve">
-    <value>从 [XenCenter] 中删除(&amp;V)</value>
+    <value>从 [vGate Console] 中删除(&amp;V)</value>
   </data>
   <data name="MAINWINDOW_REMOVE_HOST_CRASHDUMPS" xml:space="preserve">
     <value>删除故障转储文件(&amp;F)</value>
@@ -7747,7 +7747,7 @@ SCSI ID: {2}
 {1}</value>
   </data>
   <data name="MESSAGEBOX_PROGRAM_UNEXPECTED_TITLE" xml:space="preserve">
-    <value>[XenCenter] - 错误</value>
+    <value>[vGate Console] - 错误</value>
   </data>
   <data name="MESSAGEBOX_RECONNECT_FAIL" xml:space="preserve">
     <value>无法重新连接 {0}。服务器不可用。</value>
@@ -7951,12 +7951,12 @@ SCSI ID: {2}
     <value>配置 IP 地址 - {0}</value>
   </data>
   <data name="NETWORKING_PROPERTIES_WARNING_CHANGING_MANAGEMENT_HOST" xml:space="preserve">
-    <value>正在重新配置主管理接口。如果新设置不正确，[XenCenter] 可能会与服务器永久断开连接。
+    <value>正在重新配置主管理接口。如果新设置不正确，[vGate Console] 可能会与服务器永久断开连接。
 
 只有在确认这些设置正确后才能继续操作。</value>
   </data>
   <data name="NETWORKING_PROPERTIES_WARNING_CHANGING_MANAGEMENT_POOL" xml:space="preserve">
-    <value>正在重新配置主管理接口。如果新设置不正确，[XenCenter] 可能会与服务器永久断开连接，或者池成员可能无法互相联系。
+    <value>正在重新配置主管理接口。如果新设置不正确，[vGate Console] 可能会与服务器永久断开连接，或者池成员可能无法互相联系。
 
 只有在确认这些设置正确后才能继续操作。</value>
   </data>
@@ -8069,7 +8069,7 @@ SCSI ID: {2}
     <value>已创建磁盘</value>
   </data>
   <data name="NEWER_GUI_AVAILABLE" xml:space="preserve">
-    <value>有更新版本的 [XenCenter] 可用。请与支持代表联系。</value>
+    <value>有更新版本的 [vGate Console] 可用。请与支持代表联系。</value>
   </data>
   <data name="NEWNETWORKWIZARD_TITLE" xml:space="preserve">
     <value>新建网络 - {0}</value>
@@ -8307,7 +8307,7 @@ SCSI ID: {2}
     <value>iSCSI</value>
   </data>
   <data name="NEWSR_MULTI_POOL_WARNING" xml:space="preserve">
-    <value>警告: 必须确保以下 SR 当前未由任何未连接到 [XenCenter] 的服务器使用。否则可能会导致数据丢失。
+    <value>警告: 必须确保以下 SR 当前未由任何未连接到 [vGate Console] 的服务器使用。否则可能会导致数据丢失。
 
 SR:  {0}
 
@@ -8956,7 +8956,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>可用空间: {0}</value>
   </data>
   <data name="NOT_ENOUGH_SPACE_MESSAGE_CLEANUP" xml:space="preserve">
-    <value>[XenCenter] 可以通过删除其余的更新文件释放 {0}。是否要继续清理?</value>
+    <value>[vGate Console] 可以通过删除其余的更新文件释放 {0}。是否要继续清理?</value>
   </data>
   <data name="NOT_ENOUGH_SPACE_MESSAGE_INSTALL" xml:space="preserve">
     <value>“{0}”上的空间不足，无法安装更新“{1}”。</value>
@@ -9135,7 +9135,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>(平均/最大KB/秒)</value>
   </data>
   <data name="OVF_CREATED" xml:space="preserve">
-    <value>由 [XenCenter] 磁盘映像导入创建</value>
+    <value>由 [vGate Console] 磁盘映像导入创建</value>
   </data>
   <data name="OVF_DISK_CAPTION" xml:space="preserve">
     <value>虚拟磁盘</value>
@@ -9393,11 +9393,11 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>自动更新已完成。</value>
   </data>
   <data name="PATCHINGWIZARD_UPLOADPAGE_MESSAGE_DOWNLOAD_AND_UPLOAD" xml:space="preserve">
-    <value>[XenCenter] 现在正在下载您的更新并将其上载到在上一步骤中指定的服务器。
+    <value>[vGate Console] 现在正在下载您的更新并将其上载到在上一步骤中指定的服务器。
 请等待完成这些操作，然后单击“下一步”继续进行安装。</value>
   </data>
   <data name="PATCHINGWIZARD_UPLOADPAGE_MESSAGE_ONLY_UPLOAD" xml:space="preserve">
-    <value>[XenCenter] 正在将您的更新上载到在上一步骤中指定的服务器。
+    <value>[vGate Console] 正在将您的更新上载到在上一步骤中指定的服务器。
 请等待完成此操作，然后单击“下一步”继续安装。</value>
   </data>
   <data name="PATCHINGWIZARD_UPLOADPAGE_TEXT" xml:space="preserve">
@@ -9597,7 +9597,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>插件</value>
   </data>
   <data name="PLUGINS_DESC" xml:space="preserve">
-    <value>调整 [XenCenter] 插件的设置</value>
+    <value>调整 [vGate Console] 插件的设置</value>
   </data>
   <data name="PLUGINS_MENU_ITEMS_ONLY_ONE_CHILD_ALLOWED" xml:space="preserve">
     <value>菜单项功能必须只有一个命令 XML 节点作为子项</value>
@@ -10567,7 +10567,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>服务器、VM、自定义模板和远程 SR</value>
   </data>
   <data name="SERVER_API_INCOMPATIBLE" xml:space="preserve">
-    <value>此服务器正在使用与 [XenCenter] 不兼容的 API。</value>
+    <value>此服务器正在使用与 [vGate Console] 不兼容的 API。</value>
   </data>
   <data name="SERVER_COLON" xml:space="preserve">
     <value>服务器:</value>
@@ -10606,10 +10606,10 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>池主服务器上的当前时间为: {0}</value>
   </data>
   <data name="SERVER_TOO_OLD" xml:space="preserve">
-    <value>本版本的 [XenCenter] 支持 [XenServer] [BRANDING_VERSION_6_0] 及更高版本。</value>
+    <value>本版本的 [vGate Console] 支持 [XenServer] [BRANDING_VERSION_6_0] 及更高版本。</value>
   </data>
   <data name="SERVER_TOO_OLD_SOLUTION" xml:space="preserve">
-    <value>使用早期版本的 [XenCenter] 管理此服务器。</value>
+    <value>使用早期版本的 [vGate Console] 管理此服务器。</value>
   </data>
   <data name="SERVER_X" xml:space="preserve">
     <value>服务器“{0}”</value>
@@ -10889,7 +10889,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value />
   </data>
   <data name="SOME_ERRORS_ENCOUNTERED" xml:space="preserve">
-    <value>遇到一些错误。有关详细信息，请参阅 [XenCenter] 日志。</value>
+    <value>遇到一些错误。有关详细信息，请参阅 [vGate Console] 日志。</value>
   </data>
   <data name="SPACED_HYPHEN" xml:space="preserve">
     <value> - </value>
@@ -10940,13 +10940,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>该 SR 上当前正在执行某项操作。</value>
   </data>
   <data name="SR_CANNOT_BE_DESTROYED_WITH_XC" xml:space="preserve">
-    <value>通过 [XenCenter] 无法销毁此 SR。</value>
+    <value>通过 [vGate Console] 无法销毁此 SR。</value>
   </data>
   <data name="SR_CANNOT_BE_DETACHED_WITH_XC" xml:space="preserve">
-    <value>通过 [XenCenter] 无法分离此 SR。</value>
+    <value>通过 [vGate Console] 无法分离此 SR。</value>
   </data>
   <data name="SR_CANNOT_BE_FORGOTTEN_WITH_XC" xml:space="preserve">
-    <value>通过 [XenCenter] 无法忘记此 SR。</value>
+    <value>通过 [vGate Console] 无法忘记此 SR。</value>
   </data>
   <data name="SR_CANNOT_BE_SEEN" xml:space="preserve">
     <value>从 {0} 无法看到该存储库</value>
@@ -11524,12 +11524,12 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>将本地存储的 VM、模板或快照作为新 VM 导入。</value>
   </data>
   <data name="UNABLE_TO_IMPORT_SEARCH" xml:space="preserve">
-    <value>[XenCenter] 无法从文件“{0}”中导入保存的搜索。
+    <value>[vGate Console] 无法从文件“{0}”中导入保存的搜索。
 
 请确认该文件属于有效的 {1} 导出。</value>
   </data>
   <data name="UNCOMPRESS_APPLIANCE_DESCRIPTION" xml:space="preserve">
-    <value>[XenCenter] 将文件解压到“{0}”。 解压后，将删除原始文件“{1}”。是否继续?</value>
+    <value>[vGate Console] 将文件解压到“{0}”。 解压后，将删除原始文件“{1}”。是否继续?</value>
   </data>
   <data name="UNINSTALL" xml:space="preserve">
     <value>删除</value>
@@ -11571,7 +11571,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>更新</value>
   </data>
   <data name="UPDATES_DESC" xml:space="preserve">
-    <value>自动检查 [XenServer] 或 [XenCenter] 更新</value>
+    <value>自动检查 [XenServer] 或 [vGate Console] 更新</value>
   </data>
   <data name="UPDATES_DIALOG_ACTION_REQUIRED" xml:space="preserve">
     <value>要使更新在应用后生效，需要执行以下操作:
@@ -12127,7 +12127,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>^(http|https|file|ftp)://*</value>
   </data>
   <data name="USER_AUTHORIZATION_FAILED" xml:space="preserve">
-    <value>[XenCenter] 无法以 {0} 身份为操作授权。有关详细信息，请参阅应用程序日志文件。</value>
+    <value>[vGate Console] 无法以 {0} 身份为操作授权。有关详细信息，请参阅应用程序日志文件。</value>
   </data>
   <data name="USER_NOT_AUTHORIZED" xml:space="preserve">
     <value>您所输入的用户无权完成该操作</value>
@@ -13538,13 +13538,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>无法运行 XenApplianceWizards 可执行文件。有关详细信息，请参阅客户端日志。</value>
   </data>
   <data name="XENCENTER" xml:space="preserve">
-    <value>[XenCenter]</value>
+    <value>[vGate Console]</value>
   </data>
   <data name="XENCENTER_CONFIG_FILTER" xml:space="preserve">
-    <value>[XenCenter] 设置|*.config</value>
+    <value>[vGate Console] 设置|*.config</value>
   </data>
   <data name="XENCENTER_NEWER_AVAILABLE" xml:space="preserve">
-    <value>更新的 [XenCenter] 可用</value>
+    <value>更新的 [vGate Console] 可用</value>
   </data>
   <data name="XENSEARCH_SAVED_SEARCH" xml:space="preserve">
     <value>保存的搜索(*.{0})|*.{0}</value>
