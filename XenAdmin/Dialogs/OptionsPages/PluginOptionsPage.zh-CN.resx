@@ -137,13 +137,13 @@
     <value>252, 15</value>
   </data>
   <data name="labelIntro.Text" xml:space="preserve">
-    <value>可以使用插件扩展 [XenCenter] 的功能。</value>
+    <value>可以使用插件扩展 [vGate Console] 的功能。</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 15</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value>联机查找 [XenCenter] 插件</value>
+    <value>联机查找 [vGate Console] 插件</value>
   </data>
   <data name="refreshButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 26</value>

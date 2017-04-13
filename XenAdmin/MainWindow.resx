@@ -2218,7 +2218,7 @@
     <value>216, 22</value>
   </data>
   <data name="removeHostToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remo&amp;ve from [XenCenter]</value>
+    <value>Remo&amp;ve from [vGate Console]</value>
   </data>
   <data name="toolStripSeparator15.Size" type="System.Drawing.Size, System.Drawing">
     <value>213, 6</value>
@@ -2638,7 +2638,7 @@
     <value>228, 22</value>
   </data>
   <data name="viewApplicationLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>View [XenCenter] &amp;Log Files</value>
+    <value>View [vGate Console] &amp;Log Files</value>
   </data>
   <data name="toolStripMenuItem17.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 6</value>
@@ -2653,7 +2653,7 @@
     <value>228, 22</value>
   </data>
   <data name="xenCenterPluginsOnlineToolStripMenuItem.Text" xml:space="preserve">
-    <value>[XenCenter] &amp;Plugins online</value>
+    <value>[vGate Console] &amp;Plugins online</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 6</value>
@@ -2668,7 +2668,7 @@
     <value>228, 22</value>
   </data>
   <data name="aboutXenSourceAdminToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;About [XenCenter]</value>
+    <value>&amp;About [vGate Console]</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 20</value>
@@ -2809,7 +2809,7 @@
     <value>No</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>[XenCenter]</value>
+    <value>[vGate Console]</value>
   </data>
   <data name="&gt;&gt;backButton.Name" xml:space="preserve">
     <value>backButton</value>

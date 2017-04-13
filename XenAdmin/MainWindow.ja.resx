@@ -2218,7 +2218,7 @@
     <value>212, 22</value>
   </data>
   <data name="removeHostToolStripMenuItem.Text" xml:space="preserve">
-    <value>[XenCenter] から削除(&amp;V)</value>
+    <value>[vGate Console] から削除(&amp;V)</value>
   </data>
   <data name="toolStripSeparator15.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 6</value>
@@ -2638,7 +2638,7 @@
     <value>197, 22</value>
   </data>
   <data name="viewApplicationLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>[XenCenter] ログ ファイルの表示(&amp;L)</value>
+    <value>[vGate Console] ログ ファイルの表示(&amp;L)</value>
   </data>
   <data name="toolStripMenuItem17.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 6</value>
@@ -2653,7 +2653,7 @@
     <value>192, 22</value>
   </data>
   <data name="xenCenterPluginsOnlineToolStripMenuItem.Text" xml:space="preserve">
-    <value>[XenCenter] プラグイン オンライン(&amp;P)</value>
+    <value>[vGate Console] プラグイン オンライン(&amp;P)</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 6</value>
@@ -2809,7 +2809,7 @@
     <value>No</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>[XenCenter]</value>
+    <value>[vGate Console]</value>
   </data>
   <data name="&gt;&gt;backButton.Name" xml:space="preserve">
     <value>backButton</value>

@@ -2218,7 +2218,7 @@
     <value>212, 22</value>
   </data>
   <data name="removeHostToolStripMenuItem.Text" xml:space="preserve">
-    <value>从 [XenCenter] 中删除(&amp;V)</value>
+    <value>从 [vGate Console] 中删除(&amp;V)</value>
   </data>
   <data name="toolStripSeparator15.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 6</value>
@@ -2638,7 +2638,7 @@
     <value>197, 22</value>
   </data>
   <data name="viewApplicationLogToolStripMenuItem.Text" xml:space="preserve">
-    <value>查看 [XenCenter] 日志文件(&amp;L)</value>
+    <value>查看 [vGate Console] 日志文件(&amp;L)</value>
   </data>
   <data name="toolStripMenuItem17.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 6</value>
@@ -2653,7 +2653,7 @@
     <value>192, 22</value>
   </data>
   <data name="xenCenterPluginsOnlineToolStripMenuItem.Text" xml:space="preserve">
-    <value>联机 [XenCenter] 插件(&amp;P)</value>
+    <value>联机 [vGate Console] 插件(&amp;P)</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 6</value>
@@ -2668,7 +2668,7 @@
     <value>197, 22</value>
   </data>
   <data name="aboutXenSourceAdminToolStripMenuItem.Text" xml:space="preserve">
-    <value>关于 [XenCenter](&amp;A)</value>
+    <value>关于 [vGate Console](&amp;A)</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 20</value>
@@ -2809,7 +2809,7 @@
     <value>No</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>[XenCenter]</value>
+    <value>[vGate Console]</value>
   </data>
   <data name="&gt;&gt;backButton.Name" xml:space="preserve">
     <value>backButton</value>

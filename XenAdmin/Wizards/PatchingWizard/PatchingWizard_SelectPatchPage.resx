@@ -247,7 +247,7 @@
     <value>3</value>
   </data>
   <data name="automatedUpdatesOptionLabel.Text" xml:space="preserve">
-    <value>[XenCenter] will download and install all current updates from [Citrix], usually with only a single reboot at the end.</value>
+    <value>[vGate Console] will download and install all current updates from [Citrix], usually with only a single reboot at the end.</value>
   </data>
   <data name="&gt;&gt;automatedUpdatesOptionLabel.Name" xml:space="preserve">
     <value>automatedUpdatesOptionLabel</value>

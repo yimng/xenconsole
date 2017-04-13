@@ -194,7 +194,7 @@
     <value>417, 68</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>是否希望 [XenCenter] 将 [XenServer product] Tools DVD 插入 VM 的 DVD 驱动器中并将您引导至 VM 的控制台?
+    <value>是否希望 [vGate Console] 将 [XenServer product] Tools DVD 插入 VM 的 DVD 驱动器中并将您引导至 VM 的控制台?
 
 安装 [XenServer product] Tools 时将弹出 VM 的 DVD 驱动器中的任何磁盘。</value>
   </data>

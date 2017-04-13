@@ -1309,7 +1309,7 @@
     <value>21</value>
   </data>
   <data name="currentXsCredentialsRadioButton.Text" xml:space="preserve">
-    <value>現在の [XenCenter] 資格情報を使用する(&amp;R)</value>
+    <value>現在の [vGate Console] 資格情報を使用する(&amp;R)</value>
   </data>
   <data name="&gt;&gt;currentXsCredentialsRadioButton.Name" xml:space="preserve">
     <value>currentXsCredentialsRadioButton</value>
