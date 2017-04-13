@@ -499,7 +499,7 @@
     <value>6</value>
   </data>
   <data name="uploadCheckBox.Text" xml:space="preserve">
-    <value>[Citrix] Insight Services に状態レポートをアップロード(&amp;U)</value>
+    <value>[Halsign] Insight Services に状態レポートをアップロード(&amp;U)</value>
   </data>
   <data name="&gt;&gt;uploadCheckBox.Name" xml:space="preserve">
     <value>uploadCheckBox</value>
@@ -628,7 +628,7 @@
     <value>16</value>
   </data>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>MyCitrix 資格情報を入力します (http://www.citrix.com/welcome.html 参照)。この資格情報は、[Citrix] Insight Services での認証に一度のみ使用され、このマシンやサーバーには格納されません。</value>
+    <value>MyCitrix 資格情報を入力します (http://www.citrix.com/welcome.html 参照)。この資格情報は、[Halsign] Insight Services での認証に一度のみ使用され、このマシンやサーバーには格納されません。</value>
   </data>
   <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
     <value>richTextBox1</value>

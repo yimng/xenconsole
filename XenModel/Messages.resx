@@ -493,7 +493,7 @@
     <value>Get space requirements</value>
   </data>
   <data name="ACTION_GET_HEALTH_CHECK_RESULT" xml:space="preserve">
-    <value>Get Health Check analysis result from [Citrix] Insight Services</value>
+    <value>Get Health Check analysis result from [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_GET_HEALTH_CHECK_RESULT_FAILED" xml:space="preserve">
     <value>Failed to get the analysis result</value>
@@ -526,10 +526,10 @@
     <value>Setting HA restart priority on '{0}' to '{1}'</value>
   </data>
   <data name="ACTION_HEALTHCHECK_AUTHENTICATION" xml:space="preserve">
-    <value>Authentication with [Citrix] Insight Services</value>
+    <value>Authentication with [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_HEALTHCHECK_AUTHENTICATION_PROGRESS" xml:space="preserve">
-    <value>Authenticating with [Citrix] Insight Services</value>
+    <value>Authenticating with [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_HOSTS_EJECT" xml:space="preserve">
     <value>eject CD on host</value>
@@ -1009,13 +1009,13 @@
     <value>Upload error. The patch was uploaded, but it cannot be found on the host.</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT" xml:space="preserve">
-    <value>Upload server status report to [Citrix] Insight Services</value>
+    <value>Upload server status report to [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT_FAILED" xml:space="preserve">
     <value>Failed to upload the status report.</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT_PROGRESS" xml:space="preserve">
-    <value>Uploading report to [Citrix] Insight Services</value>
+    <value>Uploading report to [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_VDI_CREATED" xml:space="preserve">
     <value>Virtual disk created</value>
@@ -1839,7 +1839,7 @@ Note that if RBAC is enabled, only alerts which you have privileges to dismiss w
     <value>New [vGate Console] Available</value>
   </data>
   <data name="ALERT_NEW_VERSION_DETAILS" xml:space="preserve">
-    <value>{0} is now available. Download the new version from the [Citrix] website.</value>
+    <value>{0} is now available. Download the new version from the [Halsign] website.</value>
   </data>
   <data name="ALERT_NEW_VERSION_DOWNLOAD" xml:space="preserve">
     <value>Go to Web Page</value>
@@ -3253,9 +3253,9 @@ Would you like to carry out the operation at this time?</value>
     <comment>Message shown when user attempts to connect to a second XE Express host from the UI</comment>
   </data>
   <data name="CONNECTION_RESTRICTED_MESSAGE_LONG" xml:space="preserve">
-    <value>Connection to server {0} restricted - a connection to a [Citrix] [vGate product] Express Edition server ({1}) already exists.
+    <value>Connection to server {0} restricted - a connection to a [Halsign] [vGate product] Express Edition server ({1}) already exists.
 
-You can only connect to a single [Citrix] [vGate product] Express Edition server at a time. To find out how to upgrade your license, follow the link below.</value>
+You can only connect to a single [Halsign] [vGate product] Express Edition server at a time. To find out how to upgrade your license, follow the link below.</value>
   </data>
   <data name="CONNECTION_RESTRICTED_NOTICE_TITLE" xml:space="preserve">
     <value>Cannot connect to {0} because of license restriction</value>
@@ -4516,7 +4516,7 @@ This will also delete its subfolders.</value>
     <value>Download...</value>
   </data>
   <data name="DOWNLOAD_LATEST_XS_BODY" xml:space="preserve">
-    <value>{0} is now available. Download the latest at the [Citrix] website.</value>
+    <value>{0} is now available. Download the latest at the [Halsign] website.</value>
   </data>
   <data name="DO_NOT_SHOW_THIS_MESSAGE" xml:space="preserve">
     <value>&amp;Don't show this message again</value>
@@ -6397,10 +6397,10 @@ Click Configure HA to alter the settings displayed below.</value>
     <value>Review configuration and activate HA</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_EXISTING_TOKEN" xml:space="preserve">
-    <value>Authentication with [Citrix] Insight Services is required in order to enable this feature. [vGate Console] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again.</value>
+    <value>Authentication with [Halsign] Insight Services is required in order to enable this feature. [vGate Console] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again.</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_NO_TOKEN" xml:space="preserve">
-    <value>Authentication with [Citrix] Insight Services is required in order to enable this feature. Please register by providing MyCitrix credentials (see {0}). These credentials will only be used to obtain an upload token and will not be stored on this machine or on your server.</value>
+    <value>Authentication with [Halsign] Insight Services is required in order to enable this feature. Please register by providing MyCitrix credentials (see {0}). These credentials will only be used to obtain an upload token and will not be stored on this machine or on your server.</value>
   </data>
   <data name="HEALTHCHECK_ENROLLMENT_CONFIRMATION_BUTTON_LABEL" xml:space="preserve">
     <value>OK, Enable Health Check</value>
@@ -6436,7 +6436,7 @@ Click Configure HA to alter the settings displayed below.</value>
     <value>1 issue detected</value>
   </data>
   <data name="HEALTH_CHECK_AUTHENTICATION_FAILED" xml:space="preserve">
-    <value>Authentication with [Citrix] Insight Services failed. See the application log files for more information.</value>
+    <value>Authentication with [Halsign] Insight Services failed. See the application log files for more information.</value>
   </data>
   <data name="HEALTH_CHECK_AUTHENTICATION_INVALID_CREDENTIALS" xml:space="preserve">
     <value>Invalid user name or password. Please try again.</value>
@@ -9094,7 +9094,7 @@ Review these settings, then click Previous if you need to change anything. Other
     <value>CentOS</value>
   </data>
   <data name="NEWVMWIZARD_TEMPLATEPAGE_CITRIX" xml:space="preserve">
-    <value>[Citrix]</value>
+    <value>[Halsign]</value>
   </data>
   <data name="NEWVMWIZARD_TEMPLATEPAGE_COREOS" xml:space="preserve">
     <value>CoreOS</value>
@@ -10008,7 +10008,7 @@ File not found</value>
     <value>Permission Denied</value>
   </data>
   <data name="PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[Citrix] [vGate product] Per-&amp;Socket ({0} required)</value>
+    <value>[Halsign] [vGate product] Per-&amp;Socket ({0} required)</value>
   </data>
   <data name="PHYSICAL_DEVICE" xml:space="preserve">
     <value>Physical device</value>
@@ -11761,7 +11761,7 @@ The upper limit: SR size / {2}</value>
     <value>In progress</value>
   </data>
   <data name="STATUS_REPORT_ENTER_CREDENTIALS_MESSAGE" xml:space="preserve">
-    <value>Enter your MyCitrix credentials (see {0}). These credentials will only be used to authenticate with [Citrix] Insight Services once and will not be stored on this machine or on your server.</value>
+    <value>Enter your MyCitrix credentials (see {0}). These credentials will only be used to authenticate with [Halsign] Insight Services once and will not be stored on this machine or on your server.</value>
   </data>
   <data name="STATUS_REPORT_ZIP_FAILED" xml:space="preserve">
     <value>There was an error while packaging the server status report. Only a partial report may be available</value>

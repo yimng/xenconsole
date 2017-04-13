@@ -559,7 +559,7 @@
     <value>24</value>
   </data>
   <data name="authenticationRubricTextBox.Text" xml:space="preserve">
-    <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。请通过提供 MyCitrix 凭据进行注册(请参阅 http://www.citrix.com/welcome.html)。这些凭据只能用于获取上载令牌，不存储在此计算机或您的服务器上。</value>
+    <value>需要在 [Halsign] Insight Services 中进行身份验证才能启用此功能。请通过提供 MyCitrix 凭据进行注册(请参阅 http://www.citrix.com/welcome.html)。这些凭据只能用于获取上载令牌，不存储在此计算机或您的服务器上。</value>
   </data>
   <data name="&gt;&gt;authenticationRubricTextBox.Name" xml:space="preserve">
     <value>authenticationRubricTextBox</value>

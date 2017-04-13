@@ -172,7 +172,7 @@
     <value>7</value>
   </data>
   <data name="policyStatementTextBox.Text" xml:space="preserve">
-    <value>根据 [Citrix] Insight Services 策略(网址为 https://cis.citrix.com/legal/)和 [Citrix] 隐私策略(网址为 http://www.citrix.com/about/legal/privacy.html)的规定，运行状况检查上载到 [Citrix] Insight Services 的信息将用于故障诊断和诊断支持以及改进产品质量、可靠性和性能。</value>
+    <value>根据 [Halsign] Insight Services 策略(网址为 https://cis.citrix.com/legal/)和 [Halsign] 隐私策略(网址为 http://www.citrix.com/about/legal/privacy.html)的规定，运行状况检查上载到 [Halsign] Insight Services 的信息将用于故障诊断和诊断支持以及改进产品质量、可靠性和性能。</value>
   </data>
   <data name="&gt;&gt;policyStatementTextBox.Name" xml:space="preserve">
     <value>policyStatementTextBox</value>

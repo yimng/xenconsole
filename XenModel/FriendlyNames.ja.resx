@@ -151,7 +151,7 @@
     <value>VM の再起動を常に試行します</value>
   </data>
   <data name="Description-host.system_status-CVSM" xml:space="preserve">
-    <value>[Citrix] StorageLink の構成設定</value>
+    <value>[Halsign] StorageLink の構成設定</value>
   </data>
   <data name="Description-host.system_status-X11" xml:space="preserve">
     <value>X サーバーのログ ファイル</value>
@@ -601,58 +601,58 @@
     <value>プール メンバー</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product], Dell Enterprise Edition</value>
+    <value>[Halsign] Essentials for [vGate product], Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product] Dell Edition</value>
+    <value>[Halsign] [vGate product] Dell Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product], Dell Enterprise Edition</value>
+    <value>[Halsign] Essentials for [vGate product], Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product], HP Enterprise Edition</value>
+    <value>[Halsign] Essentials for [vGate product], HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product] HP Edition</value>
+    <value>[Halsign] [vGate product] HP Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product], HP Enterprise Edition</value>
+    <value>[Halsign] Essentials for [vGate product], HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product]</value>
+    <value>[Halsign] Essentials for [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product]</value>
+    <value>[Halsign] [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [vGate product]</value>
+    <value>[Halsign] Essentials for [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [vGate product] Dell Enterprise Edition</value>
+    <value>[Halsign] [vGate product] Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product] Dell Express Edition</value>
+    <value>[Halsign] [vGate product] Dell Express Edition</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_server" xml:space="preserve">
-    <value>[Citrix] [vGate product] Dell Server Edition</value>
+    <value>[Halsign] [vGate product] Dell Server Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [vGate product] HP Enterprise Edition</value>
+    <value>[Halsign] [vGate product] HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product] HP Select Edition</value>
+    <value>[Halsign] [vGate product] HP Select Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_server" xml:space="preserve">
-    <value>[Citrix] [vGate product] HP Server Edition</value>
+    <value>[Halsign] [vGate product] HP Server Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [vGate product] Enterprise Edition</value>
+    <value>[Halsign] [vGate product] Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_express" xml:space="preserve">
-    <value>[Citrix] [vGate product] Express Edition</value>
+    <value>[Halsign] [vGate product] Express Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_server" xml:space="preserve">
-    <value>[Citrix] [vGate product] Server Edition</value>
+    <value>[Halsign] [vGate product] Server Edition</value>
   </data>
   <data name="Label-host.software_version-build_number" xml:space="preserve">
     <value>[vGate] ビルド番号</value>
@@ -664,7 +664,7 @@
     <value>[vGate] バージョン</value>
   </data>
   <data name="Label-host.system_status-CVSM" xml:space="preserve">
-    <value>[Citrix] StorageLink 構成</value>
+    <value>[Halsign] StorageLink 構成</value>
   </data>
   <data name="Label-host.system_status-X11" xml:space="preserve">
     <value>X サーバー ログ</value>
@@ -1194,7 +1194,7 @@
     <value>バックアップ成功</value>
   </data>
   <data name="Message.body-vmpp_license_error" xml:space="preserve">
-    <value>使用している [vGate product] ライセンスでは、VMPR 機能を使用できません。VMPR 機能は、[Citrix] [vGate product] Advanced Edition またはそれ以上のエディションで使用できます。</value>
+    <value>使用している [vGate product] ライセンスでは、VMPR 機能を使用できません。VMPR 機能は、[Halsign] [vGate product] Advanced Edition またはそれ以上のエディションで使用できます。</value>
   </data>
   <data name="Message.body-vmpp_snapshot_archive_already_exists" xml:space="preserve">
     <value>このスナップショットはアーカイブ済みです。</value>
@@ -1878,10 +1878,10 @@
     <value>ボリューム マネージャーのログ</value>
   </data>
   <data name="Label-host.edition-premium" xml:space="preserve">
-    <value>[Citrix] [vGate product] Premium Edition</value>
+    <value>[Halsign] [vGate product] Premium Edition</value>
   </data>
   <data name="Label-host.edition-basic" xml:space="preserve">
-    <value>[Citrix] [vGate product] Basic Edition</value>
+    <value>[Halsign] [vGate product] Basic Edition</value>
   </data>
   <data name="Label-host.system_status-xscontainer" xml:space="preserve">
     <value>コンテナー管理のログ</value>
@@ -1893,7 +1893,7 @@
     <value>接続テスト</value>
   </data>
   <data name="Label-host.edition-standard" xml:space="preserve">
-    <value>[Citrix] [vGate product] Standard Edition</value>
+    <value>[Halsign] [vGate product] Standard Edition</value>
   </data>
   <data name="Label-Pool_patch.required-updates" xml:space="preserve">
     <value>必要なアップデート</value>

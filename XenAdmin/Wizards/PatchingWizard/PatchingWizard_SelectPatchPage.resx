@@ -145,7 +145,7 @@
     <value>1</value>
   </data>
   <data name="labelWithoutAutomatedUpdates.Text" xml:space="preserve">
-    <value>Select an update to be downloaded from [Citrix] or browse your computer for an update or supplemental pack file.</value>
+    <value>Select an update to be downloaded from [Halsign] or browse your computer for an update or supplemental pack file.</value>
   </data>
   <data name="&gt;&gt;labelWithoutAutomatedUpdates.Name" xml:space="preserve">
     <value>labelWithoutAutomatedUpdates</value>
@@ -181,7 +181,7 @@
     <value>0</value>
   </data>
   <data name="labelWithAutomatedUpdates.Text" xml:space="preserve">
-    <value>Select Automated Updates, choose an update to be downloaded from [Citrix], or browse your computer for an update or supplemental pack file.</value>
+    <value>Select Automated Updates, choose an update to be downloaded from [Halsign], or browse your computer for an update or supplemental pack file.</value>
   </data>
   <data name="&gt;&gt;labelWithAutomatedUpdates.Name" xml:space="preserve">
     <value>labelWithAutomatedUpdates</value>
@@ -247,7 +247,7 @@
     <value>3</value>
   </data>
   <data name="automatedUpdatesOptionLabel.Text" xml:space="preserve">
-    <value>[vGate Console] will download and install all current updates from [Citrix], usually with only a single reboot at the end.</value>
+    <value>[vGate Console] will download and install all current updates from [Halsign], usually with only a single reboot at the end.</value>
   </data>
   <data name="&gt;&gt;automatedUpdatesOptionLabel.Name" xml:space="preserve">
     <value>automatedUpdatesOptionLabel</value>
@@ -280,7 +280,7 @@
     <value>4</value>
   </data>
   <data name="downloadUpdateRadioButton.Text" xml:space="preserve">
-    <value>&amp;Download update from [Citrix]</value>
+    <value>&amp;Download update from [Halsign]</value>
   </data>
   <data name="&gt;&gt;downloadUpdateRadioButton.Name" xml:space="preserve">
     <value>downloadUpdateRadioButton</value>

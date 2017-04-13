@@ -172,7 +172,7 @@
     <value>7</value>
   </data>
   <data name="policyStatementTextBox.Text" xml:space="preserve">
-    <value>ヘルス チェックによって [Citrix] Insight Services にアップロードされる情報は、トラブルシューティングや診断サポート、および [Citrix] Insight Services Policy (https://cis.citrix.com/legal/) と [Citrix] Privacy Policy (http://www.citrix.com/about/legal/privacy.html) で必要な製品の品質、信頼性、パフォーマンスを改善するために使用されます。</value>
+    <value>ヘルス チェックによって [Halsign] Insight Services にアップロードされる情報は、トラブルシューティングや診断サポート、および [Halsign] Insight Services Policy (https://cis.citrix.com/legal/) と [Halsign] Privacy Policy (http://www.citrix.com/about/legal/privacy.html) で必要な製品の品質、信頼性、パフォーマンスを改善するために使用されます。</value>
   </data>
   <data name="&gt;&gt;policyStatementTextBox.Name" xml:space="preserve">
     <value>policyStatementTextBox</value>

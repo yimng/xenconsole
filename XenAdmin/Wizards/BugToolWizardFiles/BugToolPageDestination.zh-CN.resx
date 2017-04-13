@@ -499,7 +499,7 @@
     <value>6</value>
   </data>
   <data name="uploadCheckBox.Text" xml:space="preserve">
-    <value>将状态报告上载到 [Citrix] Insight Services(&amp;U)</value>
+    <value>将状态报告上载到 [Halsign] Insight Services(&amp;U)</value>
   </data>
   <data name="&gt;&gt;uploadCheckBox.Name" xml:space="preserve">
     <value>uploadCheckBox</value>
@@ -628,7 +628,7 @@
     <value>16</value>
   </data>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>输入您的 MyCitrix 凭据(请参阅 http://www.citrix.com/welcome.html)。这些凭据将仅用于在 [Citrix] Insight Services 中进行一次身份验证，不会存储在此计算机或您的服务器上。</value>
+    <value>输入您的 MyCitrix 凭据(请参阅 http://www.citrix.com/welcome.html)。这些凭据将仅用于在 [Halsign] Insight Services 中进行一次身份验证，不会存储在此计算机或您的服务器上。</value>
   </data>
   <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
     <value>richTextBox1</value>

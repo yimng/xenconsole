@@ -559,7 +559,7 @@
     <value>24</value>
   </data>
   <data name="authenticationRubricTextBox.Text" xml:space="preserve">
-    <value>この機能を有効にするには、[Citrix] Insight Services による認証が必要です。MyCitrix 資格情報を入力して登録してください (http://www.citrix.com/welcome.html 参照)。この資格情報はアップロード トークンの取得にのみ使用され、このマシンやサーバーには格納されません。</value>
+    <value>この機能を有効にするには、[Halsign] Insight Services による認証が必要です。MyCitrix 資格情報を入力して登録してください (http://www.citrix.com/welcome.html 参照)。この資格情報はアップロード トークンの取得にのみ使用され、このマシンやサーバーには格納されません。</value>
   </data>
   <data name="&gt;&gt;authenticationRubricTextBox.Name" xml:space="preserve">
     <value>authenticationRubricTextBox</value>

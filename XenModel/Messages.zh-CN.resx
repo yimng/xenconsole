@@ -487,7 +487,7 @@
     <value>获取空间要求</value>
   </data>
   <data name="ACTION_GET_HEALTH_CHECK_RESULT" xml:space="preserve">
-    <value>从 [Citrix] Insight Services 获取运行状况检查分析结果</value>
+    <value>从 [Halsign] Insight Services 获取运行状况检查分析结果</value>
   </data>
   <data name="ACTION_GET_HEALTH_CHECK_RESULT_FAILED" xml:space="preserve">
     <value>获取分析结果失败</value>
@@ -520,10 +520,10 @@
     <value>正在将 {0} 上的高可用性重启优先级设置为 {1}</value>
   </data>
   <data name="ACTION_HEALTHCHECK_AUTHENTICATION" xml:space="preserve">
-    <value>在 [Citrix] Insight Services 中进行身份验证</value>
+    <value>在 [Halsign] Insight Services 中进行身份验证</value>
   </data>
   <data name="ACTION_HEALTHCHECK_AUTHENTICATION_PROGRESS" xml:space="preserve">
-    <value>正在 [Citrix] Insight Services 中进行身份验证</value>
+    <value>正在 [Halsign] Insight Services 中进行身份验证</value>
   </data>
   <data name="ACTION_HOSTS_REBOOTED" xml:space="preserve">
     <value>服务器已重新启动</value>
@@ -982,13 +982,13 @@
     <value>上载错误。此修补程序已上载，但在主机上找不到。</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT" xml:space="preserve">
-    <value>将服务器状态报告上载到 [Citrix] Insight Services</value>
+    <value>将服务器状态报告上载到 [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT_FAILED" xml:space="preserve">
     <value>上载状态报告失败。</value>
   </data>
   <data name="ACTION_UPLOAD_SERVER_STATUS_REPORT_PROGRESS" xml:space="preserve">
-    <value>正在将报告上载到 [Citrix] Insight Services</value>
+    <value>正在将报告上载到 [Halsign] Insight Services</value>
   </data>
   <data name="ACTION_VDI_CREATED" xml:space="preserve">
     <value>已创建虚拟磁盘</value>
@@ -1794,7 +1794,7 @@
     <value>新 [vGate Console] 可用</value>
   </data>
   <data name="ALERT_NEW_VERSION_DETAILS" xml:space="preserve">
-    <value>{0} 现在可用。可从 [Citrix] 网站下载新版本。</value>
+    <value>{0} 现在可用。可从 [Halsign] 网站下载新版本。</value>
   </data>
   <data name="ALERT_NEW_VERSION_DOWNLOAD" xml:space="preserve">
     <value>转至 Web 页面</value>
@@ -3033,9 +3033,9 @@
     <comment>Message shown when user attempts to connect to a second XE Express host from the UI</comment>
   </data>
   <data name="CONNECTION_RESTRICTED_MESSAGE_LONG" xml:space="preserve">
-    <value>与服务器 {0} 的连接受到限制 - 已经与 [Citrix] [vGate product] Express Edition 服务器({1})建立连接。
+    <value>与服务器 {0} 的连接受到限制 - 已经与 [Halsign] [vGate product] Express Edition 服务器({1})建立连接。
 
-一次只能连接到一个 [Citrix] [vGate product] Express Edition 服务器。要了解许可证的升级方法，请进入下面的链接。</value>
+一次只能连接到一个 [Halsign] [vGate product] Express Edition 服务器。要了解许可证的升级方法，请进入下面的链接。</value>
   </data>
   <data name="CONNECTION_RESTRICTED_NOTICE_TITLE" xml:space="preserve">
     <value>由于许可证限制，无法连接 {0}</value>
@@ -4286,7 +4286,7 @@
     <value>下载...</value>
   </data>
   <data name="DOWNLOAD_LATEST_XS_BODY" xml:space="preserve">
-    <value>{0} 现在可用。请在 [Citrix] 网站下载最新版本。</value>
+    <value>{0} 现在可用。请在 [Halsign] 网站下载最新版本。</value>
   </data>
   <data name="DO_NOT_SHOW_THIS_MESSAGE" xml:space="preserve">
     <value>不再显示此消息(&amp;D)</value>
@@ -6026,10 +6026,10 @@
     <value>检查配置并激活高可用性</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_EXISTING_TOKEN" xml:space="preserve">
-    <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。[vGate Console] 检测到之前已成功为其他已连接的池之一进行身份验证。可以选择重复使用或再次进行身份验证。</value>
+    <value>需要在 [Halsign] Insight Services 中进行身份验证才能启用此功能。[vGate Console] 检测到之前已成功为其他已连接的池之一进行身份验证。可以选择重复使用或再次进行身份验证。</value>
   </data>
   <data name="HEALTHCHECK_AUTHENTICATION_RUBRIC_NO_TOKEN" xml:space="preserve">
-    <value>需要在 [Citrix] Insight Services 中进行身份验证才能启用此功能。请通过提供 MyCitrix 凭据进行注册(请参阅 http://www.citrix.com/welcome.html)。这些凭据只能用于获取上载令牌，不存储在此计算机或您的服务器上。</value>
+    <value>需要在 [Halsign] Insight Services 中进行身份验证才能启用此功能。请通过提供 MyCitrix 凭据进行注册(请参阅 http://www.citrix.com/welcome.html)。这些凭据只能用于获取上载令牌，不存储在此计算机或您的服务器上。</value>
   </data>
   <data name="HEALTHCHECK_ENROLLMENT_CONFIRMATION_BUTTON_LABEL" xml:space="preserve">
     <value>好的，启用运行状况检查</value>
@@ -6065,7 +6065,7 @@
     <value>检测到 1 个问题</value>
   </data>
   <data name="HEALTH_CHECK_AUTHENTICATION_FAILED" xml:space="preserve">
-    <value>在 [Citrix] Insight Services 中进行身份验证失败。有关详细信息，请参阅应用程序日志文件。</value>
+    <value>在 [Halsign] Insight Services 中进行身份验证失败。有关详细信息，请参阅应用程序日志文件。</value>
   </data>
   <data name="HEALTH_CHECK_AUTHENTICATION_INVALID_CREDENTIALS" xml:space="preserve">
     <value>无效用户名或密码。请重试。</value>
@@ -8612,7 +8612,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>CentOS</value>
   </data>
   <data name="NEWVMWIZARD_TEMPLATEPAGE_CITRIX" xml:space="preserve">
-    <value>[Citrix]</value>
+    <value>[Halsign]</value>
   </data>
   <data name="NEWVMWIZARD_TEMPLATEPAGE_COREOS" xml:space="preserve">
     <value>CoreOS</value>
@@ -9508,7 +9508,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>权限遭拒</value>
   </data>
   <data name="PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[Citrix] [vGate product] Per-Socket (需要 {0})(&amp;S)</value>
+    <value>[Halsign] [vGate product] Per-Socket (需要 {0})(&amp;S)</value>
   </data>
   <data name="PHYSICAL_DEVICE" xml:space="preserve">
     <value>物理设备</value>
