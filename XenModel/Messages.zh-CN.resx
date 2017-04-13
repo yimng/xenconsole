@@ -2316,7 +2316,7 @@
     <value>必须先在 VM“{0}”上安装 I/O 驱动程序，才能为该 VM 激活此虚拟磁盘。</value>
   </data>
   <data name="CANNOT_ACTIVATE_VD_VM_NEEDS_TOOLS" xml:space="preserve">
-    <value>必须先在 VM“{0}”上安装 [XenServer product] Tools，才能为该 VM 激活此虚拟磁盘。</value>
+    <value>必须先在 VM“{0}”上安装 [vGate product] Tools，才能为该 VM 激活此虚拟磁盘。</value>
   </data>
   <data name="CANNOT_CONFIGURE_JUMBO_DISTURB_MANAGEMENT" xml:space="preserve">
     <value>(无法更改网络的 MTU，因为它正作为管理接口“{0}”使用)</value>
@@ -2349,7 +2349,7 @@
     <value>必须先在 VM“{0}”上安装 I/O 驱动程序，才能为该 VM 取消激活此虚拟磁盘。</value>
   </data>
   <data name="CANNOT_DEACTIVATE_VDI_NEEDS_TOOLS" xml:space="preserve">
-    <value>必须先在 VM“{0}”上安装 [XenServer product] Tools，才能为该 VM 取消激活此虚拟磁盘。</value>
+    <value>必须先在 VM“{0}”上安装 [vGate product] Tools，才能为该 VM 取消激活此虚拟磁盘。</value>
   </data>
   <data name="CANNOT_DEACTIVATE_VDI_VM_NOT_RUNNING" xml:space="preserve">
     <value>无法在 VM“{0}”上取消激活该虚拟磁盘，因为 VM 未运行。</value>
@@ -2390,7 +2390,7 @@
     <value>此快照当前正在使用，无法删除。</value>
   </data>
   <data name="CANNOT_DELETE_TOOLS_SR" xml:space="preserve">
-    <value>不支持删除 [XenServer product] Tools ISO 存储。</value>
+    <value>不支持删除 [vGate product] Tools ISO 存储。</value>
   </data>
   <data name="CANNOT_DELETE_VDI_ACTIVE_ON" xml:space="preserve">
     <value>该虚拟磁盘在 VM“{0}”上处于活动状态。请先将该虚拟磁盘取消激活，然后再删除。</value>
@@ -3033,9 +3033,9 @@
     <comment>Message shown when user attempts to connect to a second XE Express host from the UI</comment>
   </data>
   <data name="CONNECTION_RESTRICTED_MESSAGE_LONG" xml:space="preserve">
-    <value>与服务器 {0} 的连接受到限制 - 已经与 [Citrix] [XenServer product] Express Edition 服务器({1})建立连接。
+    <value>与服务器 {0} 的连接受到限制 - 已经与 [Citrix] [vGate product] Express Edition 服务器({1})建立连接。
 
-一次只能连接到一个 [Citrix] [XenServer product] Express Edition 服务器。要了解许可证的升级方法，请进入下面的链接。</value>
+一次只能连接到一个 [Citrix] [vGate product] Express Edition 服务器。要了解许可证的升级方法，请进入下面的链接。</value>
   </data>
   <data name="CONNECTION_RESTRICTED_NOTICE_TITLE" xml:space="preserve">
     <value>由于许可证限制，无法连接 {0}</value>
@@ -3749,7 +3749,7 @@
     <value>按电源状态搜索 VM</value>
   </data>
   <data name="DEFAULT_SEARCH_VMS_WO_XS_TOOLS" xml:space="preserve">
-    <value>未安装 [XenServer product] Tools 的 VM</value>
+    <value>未安装 [vGate product] Tools 的 VM</value>
   </data>
   <data name="DEFAULT_VDI_NAME" xml:space="preserve">
     <value>新虚拟磁盘</value>
@@ -4142,10 +4142,10 @@
     <value>显示选项</value>
   </data>
   <data name="DMC_UNAVAILABLE_NOTOOLS" xml:space="preserve">
-    <value>无法设置内存范围，因为未在此 VM 上安装 [XenServer product] Tools。</value>
+    <value>无法设置内存范围，因为未在此 VM 上安装 [vGate product] Tools。</value>
   </data>
   <data name="DMC_UNAVAILABLE_NOTOOLS_PLURAL" xml:space="preserve">
-    <value>无法设置内存范围，因为未在这些 VM 上安装 [XenServer product] Tools。</value>
+    <value>无法设置内存范围，因为未在这些 VM 上安装 [vGate product] Tools。</value>
   </data>
   <data name="DMC_UNAVAILABLE_NOTSUPPORTED" xml:space="preserve">
     <value>无法设置内存范围，因为该 VM 上的操作系统不支持内存范围。</value>
@@ -4160,10 +4160,10 @@
     <value>无法设置内存范围，因为未在这些 VM 上安装 I/O 驱动程序。</value>
   </data>
   <data name="DMC_UNAVAILABLE_OLDTOOLS" xml:space="preserve">
-    <value>无法设置内存范围，因为此 VM 上安装的 [XenServer product] Tools 已过时。</value>
+    <value>无法设置内存范围，因为此 VM 上安装的 [vGate product] Tools 已过时。</value>
   </data>
   <data name="DMC_UNAVAILABLE_OLDTOOLS_PLURAL" xml:space="preserve">
-    <value>无法设置内存范围，因为这些 VM 上安装的 [XenServer product] Tools 已过时。</value>
+    <value>无法设置内存范围，因为这些 VM 上安装的 [vGate product] Tools 已过时。</value>
   </data>
   <data name="DMC_UNAVAILABLE_TEMPLATE" xml:space="preserve">
     <value>无法为该模板设置内存范围。</value>
@@ -5088,7 +5088,7 @@
     <value>{0} 安装管理代理</value>
   </data>
   <data name="EVACUATE_HOST_INSTALL_TOOLS_PROMPT" xml:space="preserve">
-    <value>{0} 安装 [XenServer product] Tools</value>
+    <value>{0} 安装 [vGate product] Tools</value>
   </data>
   <data name="EVACUATE_HOST_LOCAL_CD" xml:space="preserve">
     <value>此 VM 使用本地 CD。</value>
@@ -5727,7 +5727,7 @@
     <value>性能图表</value>
   </data>
   <data name="GRAPH_NEEDS_TOOLS" xml:space="preserve">
-    <value>需要安装 [XenServer product] Tools，才能查看此 VM 的内存数据</value>
+    <value>需要安装 [vGate product] Tools，才能查看此 VM 的内存数据</value>
   </data>
   <data name="GREATER_THAN" xml:space="preserve">
     <value>&gt; {0}</value>
@@ -6648,7 +6648,7 @@
     <value>磁盘和内存快照需要安装 I/O 驱动程序</value>
   </data>
   <data name="INFO_DISKMEMORY_MODE_NO_TOOLS" xml:space="preserve">
-    <value>磁盘和内存快照需要安装 [XenServer product] Tools</value>
+    <value>磁盘和内存快照需要安装 [vGate product] Tools</value>
   </data>
   <data name="INFO_DISKMEMORY_MODE_POWER_STATE" xml:space="preserve">
     <value>磁盘和内存快照需要 VM 处于运行状态</value>
@@ -6663,7 +6663,7 @@
     <value>静态快照需要安装管理代理</value>
   </data>
   <data name="INFO_QUIESCE_MODE_NO_TOOLS" xml:space="preserve">
-    <value>静态快照需要安装 [XenServer product] Tools</value>
+    <value>静态快照需要安装 [vGate product] Tools</value>
   </data>
   <data name="INFO_QUIESCE_MODE_POWER_STATE" xml:space="preserve">
     <value>静止快照需要 VM 处于运行状态</value>
@@ -6684,19 +6684,19 @@
     <value>在所选 VM 上找不到 CD 驱动器。</value>
   </data>
   <data name="INSTALLTOOLS_COULDNOTFIND_WIN" xml:space="preserve">
-    <value>找不到 [XenServer product] Tools 安装光盘。</value>
+    <value>找不到 [vGate product] Tools 安装光盘。</value>
   </data>
   <data name="INSTALLTOOLS_DONE" xml:space="preserve">
-    <value>已启动 [XenServer product] Tools 安装。</value>
+    <value>已启动 [vGate product] Tools 安装。</value>
   </data>
   <data name="INSTALLTOOLS_EXIST" xml:space="preserve">
-    <value>已在此 VM 上安装 [XenServer product] Tools。</value>
+    <value>已在此 VM 上安装 [vGate product] Tools。</value>
   </data>
   <data name="INSTALLTOOLS_STARTING" xml:space="preserve">
-    <value>正在启动 [XenServer product] Tools 安装。</value>
+    <value>正在启动 [vGate product] Tools 安装。</value>
   </data>
   <data name="INSTALLTOOLS_TITLE" xml:space="preserve">
-    <value>正在 VM“{0}”上安装 [XenServer product] Tools</value>
+    <value>正在 VM“{0}”上安装 [vGate product] Tools</value>
   </data>
   <data name="INSTALL_FILES_CANNOT_BE_FOUND" xml:space="preserve">
     <value>在指定网络位置找不到安装文件</value>
@@ -6708,13 +6708,13 @@
     <value>安装待定更新(&amp;U)...</value>
   </data>
   <data name="INSTALL_XENSERVER_TOOLS" xml:space="preserve">
-    <value>安装 [XenServer product] Tools</value>
+    <value>安装 [vGate product] Tools</value>
   </data>
   <data name="INSTALL_XENSERVER_TOOLS_DOTS" xml:space="preserve">
-    <value>安装 [XenServer product] Tools...</value>
+    <value>安装 [vGate product] Tools...</value>
   </data>
   <data name="INSTALL_XS_TOOLS" xml:space="preserve">
-    <value>安装 [XenServer product] Tools</value>
+    <value>安装 [vGate product] Tools</value>
   </data>
   <data name="INSTANT_VM_CREATE_DESCRIPTION" xml:space="preserve">
     <value>正在从模板“{1}”创建 VM“{0}”</value>
@@ -7313,7 +7313,7 @@ SCSI ID: {2}
     <value>高可用性(&amp;H)...</value>
   </data>
   <data name="MAINWINDOW_INSTALL_TOOLS" xml:space="preserve">
-    <value>安装 [XenServer product] Tools(&amp;A)...</value>
+    <value>安装 [vGate product] Tools(&amp;A)...</value>
   </data>
   <data name="MAINWINDOW_INSTANT_VM_FROM_TEMPLATE" xml:space="preserve">
     <value>快速创建(&amp;Q)</value>
@@ -7871,7 +7871,7 @@ SCSI ID: {2}
     <value>支持多路径</value>
   </data>
   <data name="MULTIPATH_FAILED" xml:space="preserve">
-    <value>至少一个存储的一个或多个路径失败。有关配置存储多路径的信息，请参阅《[XenServer product] 管理员指南》。</value>
+    <value>至少一个存储的一个或多个路径失败。有关配置存储多路径的信息，请参阅《[vGate product] 管理员指南》。</value>
   </data>
   <data name="MULTIPATH_NOT_ACTIVE" xml:space="preserve">
     <value>非活动</value>
@@ -8123,7 +8123,7 @@ SCSI ID: {2}
     <value>您在主服务器上的当前角色无权将主机添加到主服务器的池中</value>
   </data>
   <data name="NEWPOOL_PAID_HOST_FREE_MASTER" xml:space="preserve">
-    <value>不能将使用 [XenServer product] Advanced Edition 或更高版本的许可证的服务器添加到免费版服务器的池中</value>
+    <value>不能将使用 [vGate product] Advanced Edition 或更高版本的许可证的服务器添加到免费版服务器的池中</value>
   </data>
   <data name="NEWPOOL_POOLINGRESTRICTED" xml:space="preserve">
     <value>池操作受该服务器许可证的限制</value>
@@ -8684,7 +8684,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>选择要创建磁盘的存储库</value>
   </data>
   <data name="NEW_DVD_DRIVES_REQUIRED" xml:space="preserve">
-    <value>在要安装 [XenServer product] Tools 的 VM 中，至少有一个 VM 没有 DVD 驱动器。是否要为需要 DVD 驱动器的每个 VM 创建新 DVD 驱动器?</value>
+    <value>在要安装 [vGate product] Tools 的 VM 中，至少有一个 VM 没有 DVD 驱动器。是否要为需要 DVD 驱动器的每个 VM 创建新 DVD 驱动器?</value>
   </data>
   <data name="NEW_DVD_DRIVE_CREATED" xml:space="preserve">
     <value>已创建 DVD 驱动器</value>
@@ -8703,10 +8703,10 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   </data>
   <data name="NEW_DVD_DRIVE_REBOOT_TOOLS" xml:space="preserve">
     <value>必须关闭并重新启动 VM，才能完成安装新 DVD 驱动器。
-重新启动 VM 后，请再次单击“安装 [XenServer product] Tools”菜单项。</value>
+重新启动 VM 后，请再次单击“安装 [vGate product] Tools”菜单项。</value>
   </data>
   <data name="NEW_DVD_DRIVE_REQUIRED" xml:space="preserve">
-    <value>要安装 [XenServer product] Tools 的 VM 没有 DVD 驱动器，是否要创建?</value>
+    <value>要安装 [vGate product] Tools 的 VM 没有 DVD 驱动器，是否要创建?</value>
   </data>
   <data name="NEW_FOLDER" xml:space="preserve">
     <value>新建文件夹(&amp;N)...</value>
@@ -9508,7 +9508,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>权限遭拒</value>
   </data>
   <data name="PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Per-Socket (需要 {0})(&amp;S)</value>
+    <value>[Citrix] [vGate product] Per-Socket (需要 {0})(&amp;S)</value>
   </data>
   <data name="PHYSICAL_DEVICE" xml:space="preserve">
     <value>物理设备</value>
@@ -9888,13 +9888,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>PVS 加速器</value>
   </data>
   <data name="PV_DRIVERS_NOT_INSTALLED" xml:space="preserve">
-    <value>未安装 [XenServer product] Tools</value>
+    <value>未安装 [vGate product] Tools</value>
   </data>
   <data name="PV_DRIVERS_OUT_OF_DATE" xml:space="preserve">
-    <value>[XenServer product] Tools 已过时(安装的版本为 {0})</value>
+    <value>[vGate product] Tools 已过时(安装的版本为 {0})</value>
   </data>
   <data name="PV_DRIVERS_OUT_OF_DATE_UNKNOWN_VERSION" xml:space="preserve">
-    <value>[XenServer product] Tools 已过时</value>
+    <value>[vGate product] Tools 已过时</value>
   </data>
   <data name="QOS_LIMIT_INVALID" xml:space="preserve">
     <value>QoS 限制必须介于 1 和 2147483647 之间(或者留空)。</value>
@@ -10265,7 +10265,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>还原消除的更新</value>
   </data>
   <data name="RESTORE_FROM_BACKUP_FINALIZE" xml:space="preserve">
-    <value>备份文件已加载到服务器“{0}”中。有关如何完成还原过程的说明，请参阅《[XenServer product] 管理员指南》。</value>
+    <value>备份文件已加载到服务器“{0}”中。有关如何完成还原过程的说明，请参阅《[vGate product] 管理员指南》。</value>
   </data>
   <data name="RESTORE_HOST" xml:space="preserve">
     <value>从备份还原...</value>
@@ -11030,7 +11030,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>{1} 上的 SR {0}</value>
   </data>
   <data name="STANDARD_PERSOCKET_LICENSES_X_REQUIRED" xml:space="preserve">
-    <value>[XenServer product] Standard Per-Socket (需要 {0})(&amp;S)</value>
+    <value>[vGate product] Standard Per-Socket (需要 {0})(&amp;S)</value>
   </data>
   <data name="STARTED" xml:space="preserve">
     <value>已启动</value>
@@ -11212,7 +11212,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="SUPP_PACK_INSTALL_FAILED_MORE_INFO" xml:space="preserve">
     <value>{0}
 
-有关如何在服务器上手动安装补充包的说明，请参阅《[XenServer product] 管理员指南》。</value>
+有关如何在服务器上手动安装补充包的说明，请参阅《[vGate product] 管理员指南》。</value>
   </data>
   <data name="SUPP_PACK_MISSING_ON" xml:space="preserve">
     <value>{0} (未在 {1} 上安装)</value>
@@ -11305,13 +11305,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>操作系统: {0}</value>
   </data>
   <data name="TEMPLATE_INFO_TOOLSNOTPRESENT" xml:space="preserve">
-    <value>[XenServer product] Tools: 不存在</value>
+    <value>[vGate product] Tools: 不存在</value>
   </data>
   <data name="TEMPLATE_INFO_TOOLSOLD" xml:space="preserve">
-    <value>[XenServer product] Tools: 已过时(安装的版本为 {0}.{1})</value>
+    <value>[vGate product] Tools: 已过时(安装的版本为 {0}.{1})</value>
   </data>
   <data name="TEMPLATE_INFO_TOOLSUPTODATE" xml:space="preserve">
-    <value>[XenServer product] Tools: 最新版本</value>
+    <value>[vGate product] Tools: 最新版本</value>
   </data>
   <data name="TEMPLATE_INFO_VCPUS" xml:space="preserve">
     <value>vCPU 数: {0}</value>
@@ -11416,7 +11416,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>VM 运行时无法激活或取消激活系统磁盘</value>
   </data>
   <data name="TOOLTIP_DEACTIVATE_VDI_NEED_TOOLS" xml:space="preserve">
-    <value>不能从正在运行的未安装 [XenServer product] Tools 的 VM 中激活或取消激活磁盘</value>
+    <value>不能从正在运行的未安装 [vGate product] Tools 的 VM 中激活或取消激活磁盘</value>
   </data>
   <data name="TOOLTIP_DEACTIVATE_VIF_SUSPENDED" xml:space="preserve">
     <value>VM 挂起时无法停用网络</value>
@@ -11431,7 +11431,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>VM 运行时无法删除系统磁盘</value>
   </data>
   <data name="TOOLTIP_DELETE_VDI_NEED_TOOLS" xml:space="preserve">
-    <value>不能从正在运行的未安装 [XenServer product] Tools 的 VM 中删除磁盘</value>
+    <value>不能从正在运行的未安装 [vGate product] Tools 的 VM 中删除磁盘</value>
   </data>
   <data name="TOOLTIP_DETACH_SUSPENDED" xml:space="preserve">
     <value>VM 挂起时无法删除磁盘</value>
@@ -11443,13 +11443,13 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>必须先取消激活磁盘，才能进行分离。</value>
   </data>
   <data name="TOOLTIP_DETACH_VDI_NEED_TOOLS" xml:space="preserve">
-    <value>不能从正在运行的未安装 [XenServer product] Tools 的 VM 中移除磁盘</value>
+    <value>不能从正在运行的未安装 [vGate product] Tools 的 VM 中移除磁盘</value>
   </data>
   <data name="TOOLTIP_EDIT_NETWORK_IO_DRIVERS" xml:space="preserve">
     <value>必须安装 I/O 驱动程序才能编辑正在运行的 VM 上的网络</value>
   </data>
   <data name="TOOLTIP_EDIT_NETWORK_TOOLS" xml:space="preserve">
-    <value>必须安装 [XenServer product] Tools 才能编辑正在运行的 VM 上的网络</value>
+    <value>必须安装 [vGate product] Tools 才能编辑正在运行的 VM 上的网络</value>
   </data>
   <data name="TOOLTIP_MAX_NETWORKS_FROM_DEFAULT_TEMPLATE" xml:space="preserve">
     <value>创建 VM 时，默认模板最多支持 {0} 个网络</value>
@@ -11467,7 +11467,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>无法从挂起的 VM 中删除网络</value>
   </data>
   <data name="TOOLTIP_REMOVE_NETWORK_TOOLS" xml:space="preserve">
-    <value>必须安装 [XenServer product] Tools 才能删除正在运行的 VM 上的网络</value>
+    <value>必须安装 [vGate product] Tools 才能删除正在运行的 VM 上的网络</value>
   </data>
   <data name="TOOLTIP_REMOVE_PIF" xml:space="preserve">
     <value>无法删除该网络，因为它是物理设备</value>
@@ -11771,10 +11771,10 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>{0}: 不需要重新启动此服务器，因为使用实时修补。</value>
   </data>
   <data name="UPDATES_WIZARD_NO_TOOLS" xml:space="preserve">
-    <value>VM {0} 未安装 [XenServer product] Tools。</value>
+    <value>VM {0} 未安装 [vGate product] Tools。</value>
   </data>
   <data name="UPDATES_WIZARD_OUT_OF_DATE_TOOLS" xml:space="preserve">
-    <value>安装最新版本的 [XenServer product] Tools 之前不能暂停 VM {0}。</value>
+    <value>安装最新版本的 [vGate product] Tools 之前不能暂停 VM {0}。</value>
   </data>
   <data name="UPDATES_WIZARD_PAGE1_TOPTEXT" xml:space="preserve">
     <value>选中每个要更新的每个服务器所对应的复选框。选中池的复选框可选择该池中的所有可用服务器。</value>
@@ -13574,12 +13574,12 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>[vGate] 许可证文件</value>
   </data>
   <data name="XS_TOOLS_MESSAGE_MORE_THAN_ONE_VM" xml:space="preserve">
-    <value>[XenServer product] Tools DVD 现在将插入每个选定 VM 的 DVD 驱动器中。驱动器中当前的任何磁盘都将被弹出。
+    <value>[vGate product] Tools DVD 现在将插入每个选定 VM 的 DVD 驱动器中。驱动器中当前的任何磁盘都将被弹出。
 
 您将需要导航到每个选定 VM 上的控制台才能完成安装。</value>
   </data>
   <data name="XS_TOOLS_SR_NOT_FOUND" xml:space="preserve">
-    <value>找不到 [XenServer product] Tools SR。</value>
+    <value>找不到 [vGate product] Tools SR。</value>
   </data>
   <data name="X_HIDDEN" xml:space="preserve">
     <value>{0} (隐藏)</value>

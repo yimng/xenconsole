@@ -544,19 +544,19 @@
     <value>许可证</value>
   </data>
   <data name="Label-host.edition-advanced" xml:space="preserve">
-    <value>[XenServer product] Advanced Edition</value>
+    <value>[vGate product] Advanced Edition</value>
   </data>
   <data name="Label-host.edition-enterprise" xml:space="preserve">
-    <value>[XenServer product] Enterprise Edition</value>
+    <value>[vGate product] Enterprise Edition</value>
   </data>
   <data name="Label-host.edition-enterprise-xd" xml:space="preserve">
-    <value>[XenServer product] for XenDesktop</value>
+    <value>[vGate product] for XenDesktop</value>
   </data>
   <data name="Label-host.edition-free" xml:space="preserve">
-    <value>[XenServer product]</value>
+    <value>[vGate product]</value>
   </data>
   <data name="Label-host.edition-platinum" xml:space="preserve">
-    <value>[XenServer product] Platinum Edition</value>
+    <value>[vGate product] Platinum Edition</value>
   </data>
   <data name="Label-host.enabled" xml:space="preserve">
     <value>已启用</value>
@@ -601,58 +601,58 @@
     <value>池成员</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product] Dell Enterprise Edition</value>
+    <value>[Citrix] Essentials for [vGate product] Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Dell Edition</value>
+    <value>[Citrix] [vGate product] Dell Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-dell_xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product] Dell Enterprise Edition</value>
+    <value>[Citrix] Essentials for [vGate product] Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product] HP Enterprise Edition</value>
+    <value>[Citrix] Essentials for [vGate product] HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product] HP Edition</value>
+    <value>[Citrix] [vGate product] HP Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-hp_xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product] HP Enterprise Edition</value>
+    <value>[Citrix] Essentials for [vGate product] HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_enterprise" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product]</value>
+    <value>[Citrix] Essentials for [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product]</value>
+    <value>[Citrix] [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-FG-xe_server" xml:space="preserve">
-    <value>[Citrix] Essentials for [XenServer product]</value>
+    <value>[Citrix] Essentials for [vGate product]</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Dell Enterprise Edition</value>
+    <value>[Citrix] [vGate product] Dell Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Dell Express Edition</value>
+    <value>[Citrix] [vGate product] Dell Express Edition</value>
   </data>
   <data name="Label-host.sku_type-dell_xe_server" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Dell Server Edition</value>
+    <value>[Citrix] [vGate product] Dell Server Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [XenServer product] HP Enterprise Edition</value>
+    <value>[Citrix] [vGate product] HP Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product] HP Select Edition</value>
+    <value>[Citrix] [vGate product] HP Select Edition</value>
   </data>
   <data name="Label-host.sku_type-hp_xe_server" xml:space="preserve">
-    <value>[Citrix] [XenServer product] HP Server Edition</value>
+    <value>[Citrix] [vGate product] HP Server Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_enterprise" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Enterprise Edition</value>
+    <value>[Citrix] [vGate product] Enterprise Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_express" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Express Edition</value>
+    <value>[Citrix] [vGate product] Express Edition</value>
   </data>
   <data name="Label-host.sku_type-xe_server" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Server Edition</value>
+    <value>[Citrix] [vGate product] Server Edition</value>
   </data>
   <data name="Label-host.software_version-build_number" xml:space="preserve">
     <value>[vGate] 内部版本号</value>
@@ -1095,7 +1095,7 @@
     <value>在池中同步性能统计信息时出现临时故障，这可能是因为一个或多个服务器处于脱机状态。稍后将再次尝试同步。</value>
   </data>
   <data name="Message.body-license_does_not_support_pooling" xml:space="preserve">
-    <value>服务器“{0}”上的许可证已过期或被更改，不再支持 [XenServer product] Enterprise 功能。</value>
+    <value>服务器“{0}”上的许可证已过期或被更改，不再支持 [vGate product] Enterprise 功能。</value>
   </data>
   <data name="Message.body-license_expired" xml:space="preserve">
     <value>{0} 的许可证已过期。</value>
@@ -1194,7 +1194,7 @@
     <value>备份成功</value>
   </data>
   <data name="Message.body-vmpp_license_error" xml:space="preserve">
-    <value>正在使用的 [XenServer product] 许可证不允许您使用 VMPR 功能。VMPR 在 [Citrix] [XenServer product] Advanced Edition 或更高版本中可用。</value>
+    <value>正在使用的 [vGate product] 许可证不允许您使用 VMPR 功能。VMPR 在 [Citrix] [vGate product] Advanced Edition 或更高版本中可用。</value>
   </data>
   <data name="Message.body-vmpp_snapshot_archive_already_exists" xml:space="preserve">
     <value>已存档快照。</value>
@@ -1668,10 +1668,10 @@
     <value>潜在回收的内存</value>
   </data>
   <data name="Label-host.edition-per-socket" xml:space="preserve">
-    <value>[XenServer product] Per-Socket</value>
+    <value>[vGate product] Per-Socket</value>
   </data>
   <data name="Label-host.edition-xendesktop" xml:space="preserve">
-    <value>[XenServer product] for XenDesktop</value>
+    <value>[vGate product] for XenDesktop</value>
   </data>
   <data name="Message.help-extauth_init_in_host_failed" xml:space="preserve">
     <value>有关 AD 的帮助</value>
@@ -1716,7 +1716,7 @@
     <value>{0} {1} 内存利用率</value>
   </data>
   <data name="Label-host.edition-free/libre" xml:space="preserve">
-    <value>[XenServer product]</value>
+    <value>[vGate product]</value>
   </data>
   <data name="Message.name-SRUnavailable" xml:space="preserve">
     <value>无法回收释放的空间，因为 SR 正忙</value>
@@ -1746,13 +1746,13 @@
     <value>许可证服务器版本已过时。</value>
   </data>
   <data name="Label-host.edition-enterprise-per-socket" xml:space="preserve">
-    <value>[XenServer product] Enterprise Per-Socket</value>
+    <value>[vGate product] Enterprise Per-Socket</value>
   </data>
   <data name="Label-host.edition-enterprise-per-user" xml:space="preserve">
-    <value>[XenServer product] Enterprise Per-User</value>
+    <value>[vGate product] Enterprise Per-User</value>
   </data>
   <data name="Label-host.edition-standard-per-socket" xml:space="preserve">
-    <value>[XenServer product] Standard Per-Socket</value>
+    <value>[vGate product] Standard Per-Socket</value>
   </data>
   <data name="Label-host.edition-xendesktop-platinum" xml:space="preserve">
     <value>XenDesktop Platinum</value>
@@ -1878,10 +1878,10 @@
     <value>卷管理器日志</value>
   </data>
   <data name="Label-host.edition-premium" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Premium Edition</value>
+    <value>[Citrix] [vGate product] Premium Edition</value>
   </data>
   <data name="Label-host.edition-basic" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Basic Edition</value>
+    <value>[Citrix] [vGate product] Basic Edition</value>
   </data>
   <data name="Label-host.system_status-xscontainer" xml:space="preserve">
     <value>容器管理日志</value>
@@ -1893,7 +1893,7 @@
     <value>测试连接</value>
   </data>
   <data name="Label-host.edition-standard" xml:space="preserve">
-    <value>[Citrix] [XenServer product] Standard Edition</value>
+    <value>[Citrix] [vGate product] Standard Edition</value>
   </data>
   <data name="Label-Pool_patch.required-updates" xml:space="preserve">
     <value>必需的更新</value>
