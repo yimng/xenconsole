@@ -289,7 +289,7 @@
     <value>1</value>
   </data>
   <data name="labelInformation.Text" xml:space="preserve">
-    <value>Welcome to Halsign Console</value>
+    <value>Welcome to [vGate Console]</value>
   </data>
   <data name="&gt;&gt;labelInformation.Name" xml:space="preserve">
     <value>labelInformation</value>

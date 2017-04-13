@@ -192,7 +192,7 @@
 </value>
   </data>
   <data name="labelWarning.Text" xml:space="preserve">
-    <value>为了防止数据丢失，您必须确保 LUN 没有被其他任何系统使用，包括没有 Halsign Console 连接的 vGate 主机。</value>
+    <value>为了防止数据丢失，您必须确保 LUN 没有被其他任何系统使用，包括没有 [vGate Console] 连接的 vGate 主机。</value>
   </data>
   <data name="labelLUNDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 68</value>

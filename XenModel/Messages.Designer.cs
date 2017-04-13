@@ -37671,7 +37671,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Console version {0} (build {1}).
+        ///   Looks up a localized string similar to [vGate Console] version {0} (build {1}).
         /// </summary>
         public static string VERSION_NUMBER {
             get {

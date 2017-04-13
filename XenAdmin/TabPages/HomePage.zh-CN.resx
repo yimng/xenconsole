@@ -126,7 +126,7 @@
     <value>143, 13</value>
   </data>
   <data name="labelInformation.Text" xml:space="preserve">
-    <value>欢迎使用 Halsign Console</value>
+    <value>欢迎使用 [vGate Console]</value>
   </data>
   <data name="LinkLabelHomePage.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 295</value>
