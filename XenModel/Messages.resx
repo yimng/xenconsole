@@ -12984,7 +12984,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>Signature verification failed. {0}</value>
   </data>
   <data name="VERSION_NUMBER" xml:space="preserve">
-    <value>Halsign Console version {0} (build {1})</value>
+    <value>[vGate Console] version {0} (build {1})</value>
   </data>
   <data name="VGPU_DESCRIPTION_MANY" xml:space="preserve">
     <value>{0} virtual GPU ({1} per GPU, {2}, {3} displays)</value>
