@@ -196,7 +196,7 @@ namespace XenAdmin
             this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
             this.maintenanceModeToolStripMenuItem1 = new XenAdmin.Commands.CommandToolStripMenuItem();
             this.controlDomainMemoryToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
-            this.RemoveCrashdumpsToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
+            this.installLicenseToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
             this.HostPasswordToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
             this.ChangeRootPasswordToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
             this.forgetSavedPasswordToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
@@ -293,6 +293,7 @@ namespace XenAdmin
             this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.securityGroupsToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
+            this.commandToolStripMenuItem1 = new XenAdmin.Commands.CommandToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -1208,7 +1209,8 @@ namespace XenAdmin
             this.toolStripSeparator23,
             this.maintenanceModeToolStripMenuItem1,
             this.controlDomainMemoryToolStripMenuItem,
-            this.RemoveCrashdumpsToolStripMenuItem,
+            this.commandToolStripMenuItem1,
+            this.installLicenseToolStripMenuItem,
             this.HostPasswordToolStripMenuItem,
             this.toolStripSeparator25,
             this.destroyServerToolStripMenuItem,
@@ -1346,11 +1348,11 @@ namespace XenAdmin
             this.controlDomainMemoryToolStripMenuItem.Command = new XenAdmin.Commands.ChangeControlDomainMemoryCommand();
             this.controlDomainMemoryToolStripMenuItem.Name = "controlDomainMemoryToolStripMenuItem";
             // 
-            // RemoveCrashdumpsToolStripMenuItem
+            // installLicenseToolStripMenuItem
             // 
-            resources.ApplyResources(this.RemoveCrashdumpsToolStripMenuItem, "RemoveCrashdumpsToolStripMenuItem");
-            this.RemoveCrashdumpsToolStripMenuItem.Command = new XenAdmin.Commands.RemoveHostCrashDumpsCommand();
-            this.RemoveCrashdumpsToolStripMenuItem.Name = "RemoveCrashdumpsToolStripMenuItem";
+            resources.ApplyResources(this.installLicenseToolStripMenuItem, "installLicenseToolStripMenuItem");
+            this.installLicenseToolStripMenuItem.Command = new XenAdmin.Commands.InstallLicenseCommand();
+            this.installLicenseToolStripMenuItem.Name = "installLicenseToolStripMenuItem";
             // 
             // HostPasswordToolStripMenuItem
             // 
@@ -1991,6 +1993,12 @@ namespace XenAdmin
             resources.ApplyResources(this.securityGroupsToolStripMenuItem, "securityGroupsToolStripMenuItem");
             this.securityGroupsToolStripMenuItem.Name = "securityGroupsToolStripMenuItem";
             // 
+            // commandToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.commandToolStripMenuItem1, "commandToolStripMenuItem1");
+            this.commandToolStripMenuItem1.Command = new XenAdmin.Commands.RemoveHostCrashDumpsCommand();
+            this.commandToolStripMenuItem1.Name = "commandToolStripMenuItem1";
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -2088,7 +2096,7 @@ namespace XenAdmin
         private CommandToolStripMenuItem removeHostToolStripMenuItem;
         private AddSelectedHostToPoolToolStripMenuItem addServerToPoolMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private CommandToolStripMenuItem RemoveCrashdumpsToolStripMenuItem;
+        private CommandToolStripMenuItem installLicenseToolStripMenuItem;
         private CommandToolStripMenuItem maintenanceModeToolStripMenuItem1;
         private CommandToolStripMenuItem backupToolStripMenuItem;
         private CommandToolStripMenuItem restoreFromBackupToolStripMenuItem;
@@ -2267,6 +2275,7 @@ namespace XenAdmin
         private TabPage TabPageUsbDevice;
         private TabPage TabPagevSwitchController;
         private TabPage TabPageSCUpsell;
+        private CommandToolStripMenuItem commandToolStripMenuItem1;
     }
 
 }
