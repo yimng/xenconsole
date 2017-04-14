@@ -101,6 +101,8 @@ namespace XenAdmin
         internal readonly ADUpsellPage AdUpsellPage = new ADUpsellPage();
         internal readonly GpuPage GpuPage = new GpuPage();
         internal readonly PvsPage PvsPage = new PvsPage();
+        internal readonly BackupPage BackupPage = new BackupPage();
+        internal readonly BRUpsellPage BRUpsellPage = new BRUpsellPage();
         internal readonly DockerProcessPage DockerProcessPage = new DockerProcessPage();
         internal readonly DockerDetailsPage DockerDetailsPage = new DockerDetailsPage();
 
@@ -193,6 +195,7 @@ namespace XenAdmin
             AddTabContents(AdUpsellPage, TabPageADUpsell);
             AddTabContents(GpuPage, TabPageGPU);
             AddTabContents(PvsPage, TabPagePvs);
+            AddTabContents(BackupPage, TabPageBackup);
             AddTabContents(SearchPage, TabPageSearch);
             AddTabContents(DockerProcessPage, TabPageDockerProcess);
             AddTabContents(DockerDetailsPage, TabPageDockerDetails);
@@ -1457,6 +1460,8 @@ namespace XenAdmin
                 ShowTab(f.TabPage, true);
 
             ShowTab(TabPageSearch, true);
+            bool br_upsell = Helpers.FeatureForbidden(SelectionManager.Selection.FirstAsXenObject, Host.RestrictBR);
+            ShowTab(br_upsell ? TabPageBRUpsell : TabPageBackup, !multi && (isRealVMSelected || isPoolSelected));
 
             // N.B. Change NewTabs definition if you add more tabs here.
 
@@ -2021,6 +2026,10 @@ namespace XenAdmin
                 {
                     PvsPage.Connection = SelectionManager.Selection.GetConnectionOfFirstItem();
                 }
+                else if (t == TabPageBackup)
+                {
+                    BackupPage.XenModelObject = SelectionManager.Selection.FirstAsXenObject;
+                }
             }
 
             if (t == TabPageSearch)
@@ -2061,7 +2070,7 @@ namespace XenAdmin
         /// </summary>
         public enum Tab
         {
-            Overview, Home, Settings, Storage, Network, Console, CvmConsole, Performance, NICs, SR, DockerProcess, DockerDetails
+            Overview, Home, Settings, Storage, Network, Console, CvmConsole, Performance, NICs, SR, DockerProcess, DockerDetails, BR
         }
 
         public void SwitchToTab(Tab tab)
@@ -2103,6 +2112,9 @@ namespace XenAdmin
                     break;
                 case Tab.DockerDetails:
                     TheTabControl.SelectedTab = TabPageDockerDetails;
+                    break;
+                case Tab.BR:
+                    TheTabControl.SelectedTab = TabPageBackup;
                     break;
                 default:
                     throw new NotImplementedException();
@@ -2494,6 +2506,8 @@ namespace XenAdmin
                 return "TabPageDockerDetails" + modelObj;
             if (TheTabControl.SelectedTab == TabPagePvs)
                 return "TabPagePvs" + modelObj;
+            if (TheTabControl.SelectedTab == TabPageBackup)
+                return "TabPageBackup" + modelObj;
             return "TabPageUnknown";
         }
 
