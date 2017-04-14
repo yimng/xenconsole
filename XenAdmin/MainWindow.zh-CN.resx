@@ -121,97 +121,177 @@
   <data name="navigationPane.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 649</value>
   </data>
+  <data name="navigationPane.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageHome.Text" xml:space="preserve">
     <value>主页</value>
+  </data>
+  <data name="TabPageHome.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageGeneral.Text" xml:space="preserve">
     <value>常规</value>
   </data>
+  <data name="TabPageGeneral.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageBallooning.Text" xml:space="preserve">
     <value>内存</value>
+  </data>
+  <data name="TabPageBallooning.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageBallooningUpsell.Text" xml:space="preserve">
     <value>内存</value>
   </data>
+  <data name="TabPageBallooningUpsell.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageConsole.Text" xml:space="preserve">
     <value>控制台</value>
+  </data>
+  <data name="TabPageConsole.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageCvmConsole.Text" xml:space="preserve">
     <value>Nutanix CVM 控制台</value>
   </data>
+  <data name="TabPageCvmConsole.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageStorage.Text" xml:space="preserve">
     <value>存储</value>
+  </data>
+  <data name="TabPageStorage.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPagePhysicalStorage.Text" xml:space="preserve">
     <value>存储</value>
   </data>
+  <data name="TabPagePhysicalStorage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageSR.Text" xml:space="preserve">
     <value>存储</value>
+  </data>
+  <data name="TabPageSR.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageNetwork.Text" xml:space="preserve">
     <value>网络连接</value>
   </data>
+  <data name="TabPageNetwork.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageNICs.Text" xml:space="preserve">
-    <value>NIC</value>
+    <value>网卡</value>
+  </data>
+  <data name="TabPageNICs.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPagePeformance.Text" xml:space="preserve">
     <value>性能</value>
   </data>
+  <data name="TabPagePeformance.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageHA.Text" xml:space="preserve">
     <value>高可用性</value>
+  </data>
+  <data name="TabPageHA.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageHAUpsell.Text" xml:space="preserve">
     <value>高可用性</value>
   </data>
+  <data name="TabPageHAUpsell.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="snapshotPage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageSnapshots.Text" xml:space="preserve">
     <value>快照</value>
+  </data>
+  <data name="TabPageSnapshots.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageWLB.Text" xml:space="preserve">
     <value>负载均衡</value>
   </data>
+  <data name="TabPageWLB.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageWLBUpsell.Text" xml:space="preserve">
     <value>负载均衡</value>
+  </data>
+  <data name="TabPageWLBUpsell.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageAD.Text" xml:space="preserve">
     <value>用户</value>
   </data>
+  <data name="TabPageAD.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageADUpsell.Text" xml:space="preserve">
     <value>用户</value>
+  </data>
+  <data name="TabPageADUpsell.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageGPU.Text" xml:space="preserve">
     <value>显卡</value>
   </data>
+  <data name="TabPageGPU.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TabPagePvs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageSearch.Text" xml:space="preserve">
     <value>搜索</value>
+  </data>
+  <data name="TabPageSearch.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageDockerProcess.Text" xml:space="preserve">
     <value>进程</value>
   </data>
+  <data name="TabPageDockerProcess.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageDockerDetails.Text" xml:space="preserve">
     <value>详细信息</value>
+  </data>
+  <data name="TabPageDockerDetails.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageBackup.Text" xml:space="preserve">
     <value>备份恢复</value>
   </data>
+  <data name="TabPageBackup.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TabPageBRUpsell.Text" xml:space="preserve">
     <value>备份恢复</value>
+  </data>
+  <data name="TabPageBRUpsell.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="TabPageUsbDevice.Text" xml:space="preserve">
     <value>USB 设备</value>
   </data>
-  <data name="TabPagevSwitchController.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="TabPageUsbDevice.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TabPagevSwitchController.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPagevSwitchController.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 592</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabPagevSwitchController.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
   </data>
   <data name="TabPagevSwitchController.Text" xml:space="preserve">
     <value>vSwitch Controller</value>
@@ -219,17 +299,8 @@
   <data name="TabPagevSwitchController.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="TabPageSCUpsell.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
   <data name="TabPageSCUpsell.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPageSCUpsell.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 592</value>
-  </data>
-  <data name="TabPageSCUpsell.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
   </data>
   <data name="TabPageSCUpsell.Text" xml:space="preserve">
     <value>vSwitch Controller</value>
@@ -237,11 +308,47 @@
   <data name="TabPageSCUpsell.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="TheTabControl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="alertPage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="updatesPage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="eventsPage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TitleIcon.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="loggedInLabel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolTipContainer1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TitleLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TitleBackPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 3</value>
   </data>
+  <data name="TitleBackPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1008, 649</value>
+  </data>
+  <data name="splitContainer1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 28</value>
@@ -283,11 +390,11 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVEhL1VY7DsIwDO0MVHADaCN2jsAROAJH4AiMjJwA
-        cYRujFCKmDkBYmVjghH8GvNTnTQ0AoknPXWI7ec4jtOgDJtat5eF8WjdUHP6rjSjJAvVOKurPptVAwUd
-        pKHaUbCrjWlDHeg7Zjc3LJvtFmcqBjURYtg1hzEDAi7ZG1lXJ6uQt8CdNiE6g6noVIEoHZLm0BroEsnY
-        k+/NoNuzaHjcLq7ny6WUki/KxuE1RCOilwgR10ALWErlK0LUJcNtFhZz+ovEKxah8SAa/J/IN8sVJVrk
-        FwcPoKcFA2+Rt/Fiuoz72SQXKqPki9HC4TVoznQkQx+mYTzk8E/QgrHLPid3lYQqj1WBdL6FCfwKLCIL
-        0dmBzq8jQA4VShcl1h1IQDPkXWdo7yepxL5/LQBfWOzuQYxxt8yD4AYZsxpdenlBEAAAAABJRU5ErkJg
+        cYRujBSKmDkBYmVjghH8GvNTnTQ0AoknPXWI7ec4jtOgDJtat5eF8WjdUHP6pppRkoVqnNVVn82qgYIO
+        0lDtKNjVxlVDHeg7Zjc3LJvtFmcqBjURYtg1hzEDAi7ZG1lTJ6uQt8CdNiE6g6noVIEoHZLm0BroEsnY
+        k+/NoNuzaHjcLq7ny6WUki/KxuE1RCOilwgR10ALWErlK0LUJcNtFhZz+ovEKYvQeBAN/k/km+WKEi3y
+        i4MH0NOCgbfI23gxXcb9bJILlVHyxWjh8Bo0ZzqSoQ9XYTzk8E/QgrHLPid3lYQqj1WBdL6FCfwKLCIL
+        0dmBzq8jQA4VShcl1h1IQDPkXWdo7yepxL5/LQBfWOzuQYxxt8yD4Abk4RpUyOwNbgAAAABJRU5ErkJg
         gg==
 </value>
   </data>
@@ -330,27 +437,27 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVEhLYyAE5NfbCyivsQxQXm3egIyV1loUqK6yMoAq
-        Iw+ADFBeY75AeY3Ff7x4ldkDpTXmCVBtxAPl1RYTsBqID6+yuECUz0BBo7TG7ABWQ4jDHwhaRKEFMIzb
+        Iw+ADFBeY75AeY3Ff7x4pekDpTXmCVBtxAPl1RYTsBqID6+yuECUz0BBo7TG7ABWQ4jDHwhaRKEFMIzb
         InCEYtEUstXnv/VGJwxxvBgYT6BQgRoNAfLrzRWAkh8wFAPxuqsz/n/79eX/1FO1GHJ4MdDRUOMhAF9E
         gyyBgZuvz/+vPJCMVR0W/AHFNyDvYVEExsiWwMCRB5vBwYhNPTKGJ21IfsCuCISxWQICoCAEyWHTA8fA
         EAJbAgw7B6wKoBiXJTDw9uuL/+1HC7DqBaVWmCVYUxUME7IEBkDxlbUrAkUv3S2hfXDRJeJBgOZJGATo
-        khnpUqyAAK5URrUCEgYU11hswKqJNIy/TqFLpQUDNK1+kQEkMdCwIYEMQEFIWZOIgQEAY2EbKjHhNQsA
+        khnpUqyAAK5URrUCEgYU11hswKqJNIy/TqFLpQUDNK1+kQEkMdCwIYEMQEFIWZOIgQEAKrEbHj/YDcsA
         AAAASUVORK5CYII=
 </value>
   </data>
   <data name="RebootToolbarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIhSURBVEhLnZY9SwNBEIbzE/wH0Rz2Vt6phWJtIVjYip2V
-        loKNlWAnCLYKdsmJaRQslICNBAQR0UZBLVIIkoBgyvWezW6c282dFwdekuzMzsc7O7spFZEgnloMauF2
-        JZ5sWAS1aK8Shyvl03DUmA0v5dPZERwHcdRJoPLQCxrOma3FRGdewLmHpDrjIl+gYKCDgqAqWDDufMkK
-        sH+zpZpvl6rVflff3a5qf32qh1ZTr8/U5z37sTiqG5dpoYGJQYqitYtl9fLxqB1ngcDYyX2gchJtGNe/
-        EsThkTRaOlvQGeOIz/OnY7V5tap1fNbuD1L6AYE6KdpMFSkj6MhxoAFVtlIq2rleV43nel+fqoYfcjNO
-        2Qhs9llAb20Bvevrq9GdCUHDk3MuNkIFG8hSrruAQhkAcBikTZ+yoDr5KhXQcHi7qyHXB4Gqocj2xztt
-        dkhTi/8EzumJp8sKQnZZMzA0+kGSBkkF5VM6FPA963RZcNzp30B6bRAmVCosvxacmLxAVG2TcnU6ACKv
-        E3h1A8hNLqDUXjdyRjTkEdbXulFw7gkkg3mbDQhAEtYO2qSe5E2InnBNSwMg54BsmR+SAOgkre58MBbG
-        9a/oapx5ATTT7ZGEvU7cfbxJxnVaxqvTE4mB91hBC5lCDXcagEIve4u/Hq+sQMURHhlX+aIDObNTAB2v
-        0UVEH+2/g3WSgdvOfXKLSO+96f0tsuB5oGJjkiOl0g9MoDhV7tJSlQAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIiSURBVEhLnZY9SwNBEIbzE/wHag57G71TC8XaQrCwFTsr
+        LQWbVIKdINgqWJmcJI2ChSLYiCCIiDYKamEhiAFBy/WezW4yt5u7XBx4SbIzOx/v7OymVESCeGI+qIWV
+        cjx+YRHUou1yHC4N1sMhY9a/DNanB3AcxFEzgcpDK2g4Y7YWE515AecekuqMi3yBgq4OCoKqYMG48yUr
+        wM7Vhrp+PVPvX2/q5/dXfX1/qvv3a70+1Zj17IfjqGFcpoUGJgYpilZOF9Xzx4N2nAUCYyf3gfJRtGZc
+        dySIw31ptHA8pzPGEZ8njwdq/XxZ6/is3e2m9F0CNVO0mSpSRtCR40ADqmylVLR5uaounhptfaoafsjN
+        OGUjsNlnAb21BfSura9GtyYEDU/OudgIFWwgS7nuAgplAMBhkDZtyoLDsRepgIa9my0Nud4NVA1Ftj/e
+        abNDmlr8J3BOTzxdVhCyy5qBvtEOkjRIKiif0qGA71mny4LjTv+60muDMKFSYfm14MTkBaJqm5Sr0wEQ
+        eZ3AqxtAbnIBpfa6kTOiIY+wvtaNgnNPIBnM22xAAJKwdtAm9SRvQrSEa1oaADkHZMv8kARAJ2l154Ox
+        MK47oqtx5gXQTLdHEvY6cffxJhnXaRmpTo4mBt5jBS1kCjXcaQAKvewtej1eWYGKI9w3rvJFB3JmpwCa
+        XqOLiD7avYM1k4Gr5D65RaT13rT+FlnwPFCxMcmRUukPODE4T7jUZXQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="RebootToolbarButton.Size" type="System.Drawing.Size, System.Drawing">
@@ -398,6 +505,9 @@
   <data name="pauseContainerToolStripButton.Text" xml:space="preserve">
     <value>暂停</value>
   </data>
+  <data name="ToolStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="ShowToolbarMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 22</value>
   </data>
@@ -406,6 +516,9 @@
   </data>
   <data name="ToolBarContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 26</value>
+  </data>
+  <data name="ToolBarContextMenu.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="FileImportVMToolStripMenuItem.Text" xml:space="preserve">
     <value>导入(&amp;I)...</value>
@@ -490,6 +603,10 @@
   </data>
   <data name="virtualAppliancesToolStripMenuItem.Text" xml:space="preserve">
     <value>vApp(&amp;V)...</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="virtualAppliancesToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="toolStripSeparator30.Size" type="System.Drawing.Size, System.Drawing">
     <value>289, 6</value>
@@ -845,6 +962,9 @@
   <data name="assignToVirtualApplianceToolStripMenuItem.Text" xml:space="preserve">
     <value>分配给 vApp(&amp;V)</value>
   </data>
+  <data name="assignToVirtualApplianceToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 6</value>
   </data>
@@ -881,8 +1001,14 @@
   <data name="enablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 22</value>
   </data>
+  <data name="enablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
+    <value>启用 PVS 加速器(&amp;B)...</value>
+  </data>
   <data name="disablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 22</value>
+  </data>
+  <data name="disablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
+    <value>禁用 PVS 加速器(&amp;V)</value>
   </data>
   <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 6</value>
@@ -964,6 +1090,9 @@
   </data>
   <data name="DestroyStorageRepositoryToolStripMenuItem.Text" xml:space="preserve">
     <value>销毁(&amp;O)</value>
+  </data>
+  <data name="ConvertToThinStorageRepositoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>转换 SR(&amp;C)...</value>
   </data>
   <data name="SRPropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>属性(&amp;R)</value>
@@ -1055,6 +1184,9 @@
   <data name="LicenseManagerMenuItem.Text" xml:space="preserve">
     <value>许可证管理器(&amp;L)...</value>
   </data>
+  <data name="LicenseManagerMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripSeparator13.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 6</value>
   </data>
@@ -1063,6 +1195,9 @@
   </data>
   <data name="installNewUpdateToolStripMenuItem.Text" xml:space="preserve">
     <value>安装更新(&amp;U)...</value>
+  </data>
+  <data name="installNewUpdateToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="rollingUpgradeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 22</value>
@@ -1148,13 +1283,25 @@
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>帮助(&amp;H)</value>
   </data>
+  <data name="MainMenuBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MenuPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 704</value>
+  </data>
+  <data name="StatusStrip.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1008, 731</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>950, 750</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>
