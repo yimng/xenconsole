@@ -291,6 +291,8 @@ namespace XenAdmin
             this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.securityGroupsToolStripMenuItem = new XenAdmin.Commands.CommandToolStripMenuItem();
+            this.TabPagevSwitchController = new System.Windows.Forms.TabPage();
+            this.TabPageSCUpsell = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -379,6 +381,8 @@ namespace XenAdmin
             this.TheTabControl.Controls.Add(this.TabPageBackup);
             this.TheTabControl.Controls.Add(this.TabPageBRUpsell);
             this.TheTabControl.Controls.Add(this.TabPageUsbDevice);
+            this.TheTabControl.Controls.Add(this.TabPagevSwitchController);
+            this.TheTabControl.Controls.Add(this.TabPageSCUpsell);
             this.TheTabControl.Name = "TheTabControl";
             this.TheTabControl.SelectedIndex = 4;
             this.statusToolTip.SetToolTip(this.TheTabControl, resources.GetString("TheTabControl.ToolTip"));
@@ -1973,6 +1977,20 @@ namespace XenAdmin
             resources.ApplyResources(this.securityGroupsToolStripMenuItem, "securityGroupsToolStripMenuItem");
             this.securityGroupsToolStripMenuItem.Name = "securityGroupsToolStripMenuItem";
             // 
+            // TabPagevSwitchController
+            // 
+            resources.ApplyResources(this.TabPagevSwitchController, "TabPagevSwitchController");
+            this.TabPagevSwitchController.Name = "TabPagevSwitchController";
+            this.statusToolTip.SetToolTip(this.TabPagevSwitchController, resources.GetString("TabPagevSwitchController.ToolTip"));
+            this.TabPagevSwitchController.UseVisualStyleBackColor = true;
+            // 
+            // TabPageSCUpsell
+            // 
+            resources.ApplyResources(this.TabPageSCUpsell, "TabPageSCUpsell");
+            this.TabPageSCUpsell.Name = "TabPageSCUpsell";
+            this.statusToolTip.SetToolTip(this.TabPageSCUpsell, resources.GetString("TabPageSCUpsell.ToolTip"));
+            this.TabPageSCUpsell.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -2247,6 +2265,8 @@ namespace XenAdmin
         private TabPage TabPageBackup;
         private TabPage TabPageBRUpsell;
         private TabPage TabPageUsbDevice;
+        private TabPage TabPagevSwitchController;
+        private TabPage TabPageSCUpsell;
     }
 
 }

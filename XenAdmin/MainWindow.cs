@@ -104,6 +104,7 @@ namespace XenAdmin
         internal readonly BackupPage BackupPage = new BackupPage();
         internal readonly BRUpsellPage BRUpsellPage = new BRUpsellPage();
         internal readonly UsbDevicePage UsbDevicePage = new UsbDevicePage();
+        internal readonly vSwitchControllerPage vSwitchControllerPage = new vSwitchControllerPage();
         internal readonly DockerProcessPage DockerProcessPage = new DockerProcessPage();
         internal readonly DockerDetailsPage DockerDetailsPage = new DockerDetailsPage();
 
@@ -174,6 +175,7 @@ namespace XenAdmin
             components.Add(PvsPage);
             components.Add(SearchPage);
             components.Add(UsbDevicePage);
+            components.Add(vSwitchControllerPage);
             components.Add(DockerProcessPage);
             components.Add(DockerDetailsPage);
 
@@ -200,6 +202,7 @@ namespace XenAdmin
             AddTabContents(BRUpsellPage, TabPageBRUpsell);
             AddTabContents(BackupPage, TabPageBackup);
             AddTabContents(UsbDevicePage, TabPageUsbDevice);
+            AddTabContents(vSwitchControllerPage, TabPagevSwitchController);
             AddTabContents(SearchPage, TabPageSearch);
             AddTabContents(DockerProcessPage, TabPageDockerProcess);
             AddTabContents(DockerDetailsPage, TabPageDockerDetails);
@@ -1467,6 +1470,8 @@ namespace XenAdmin
             bool br_upsell = Helpers.FeatureForbidden(SelectionManager.Selection.FirstAsXenObject, Host.RestrictBR);
             ShowTab(br_upsell ? TabPageBRUpsell : TabPageBackup, !multi && (isRealVMSelected || isPoolSelected));
             ShowTab(this.TabPageUsbDevice, isHostSelected && isHostLive && !(Helpers.GetPoolOfOne(selectionConnection).ha_enabled));
+            Boolean sc_upsell = false;
+            ShowTab(sc_upsell ? TabPageSCUpsell : TabPagevSwitchController, isPoolSelected || (isHostSelected && isHostLive && string.IsNullOrEmpty(Helpers.GetPoolOfOne(selectionConnection).name_label)));
 
             // N.B. Change NewTabs definition if you add more tabs here.
 
@@ -2038,6 +2043,11 @@ namespace XenAdmin
                 else if (t == TabPageUsbDevice)
                 {
                     UsbDevicePage.XenObject = SelectionManager.Selection.FirstAsXenObject;
+                }
+                else if (t == TabPagevSwitchController)
+                {
+                    IXenConnection connection = SelectionManager.Selection.FirstAsXenObject.Connection;
+                    vSwitchControllerPage._Pool = Helpers.GetPoolOfOne(connection);
                 }
             }
 
