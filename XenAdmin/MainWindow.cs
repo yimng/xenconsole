@@ -197,6 +197,7 @@ namespace XenAdmin
             AddTabContents(AdUpsellPage, TabPageADUpsell);
             AddTabContents(GpuPage, TabPageGPU);
             AddTabContents(PvsPage, TabPagePvs);
+            AddTabContents(BRUpsellPage, TabPageBRUpsell);
             AddTabContents(BackupPage, TabPageBackup);
             AddTabContents(UsbDevicePage, TabPageUsbDevice);
             AddTabContents(SearchPage, TabPageSearch);
