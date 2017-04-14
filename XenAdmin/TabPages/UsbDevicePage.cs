@@ -171,7 +171,14 @@ namespace XenAdmin.TabPages
             if(this.home != null)
             {
                 string result = XenAPI.Host.call_plugin(home.Connection.Session, home.opaque_ref, "pvusbinfo.py", "list", null);
-                var pvusbresult = (UsbDeviceInfoConfig.PVUsbListResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbListResult));
+                UsbDeviceInfoConfig.PVUsbListResult pvusbresult = null;
+                try
+                {
+                    pvusbresult = (UsbDeviceInfoConfig.PVUsbListResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.PVUsbListResult));
+                }
+                catch {
+                    return;
+                }
                 for (int i = 0; i < pvusbresult.returnvalue.Count; i++)
                 {
                     PcisdataGridViewExs.Rows.Add();
