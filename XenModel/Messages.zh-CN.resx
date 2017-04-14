@@ -13708,7 +13708,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>周</value>
   </data>
   <data name="BACKUP_VM" xml:space="preserve">
-    <value />
+    <value>备份虚拟机</value>
   </data>
   <data name="BACKUP_WEEKLY" xml:space="preserve">
     <value>备份 周</value>
@@ -13726,7 +13726,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>检测到虚拟机 {0} 连接了可移动物理存储，请重新选择。</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
-    <value />
+    <value>周五</value>
   </data>
   <data name="FULL_BACKUP_NOW" xml:space="preserve">
     <value>全新备份 立即</value>
@@ -13735,10 +13735,10 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>全新备份 一次</value>
   </data>
   <data name="FULL_BACKUP_RECURS_EVERY" xml:space="preserve">
-    <value />
+    <value>全新备份间隔:{0}次</value>
   </data>
   <data name="MONDAY" xml:space="preserve">
-    <value />
+    <value>周一</value>
   </data>
   <data name="NEW_REPLICATION" xml:space="preserve">
     <value>全新复制</value>
@@ -13756,73 +13756,73 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>{0} 用户无法备份虚拟机。请以具有足够权限的其他用户身份登录，然后重试。</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_REPLICATION" xml:space="preserve">
-    <value />
+    <value>{0} 用户无法复制虚拟机。请以具有足够权限的其他用户身份登录，然后重试。</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_RESTORE" xml:space="preserve">
-    <value />
+    <value>{0} 用户无法恢复虚拟机。请以具有足够权限的其他用户身份登录，然后重试。</value>
   </data>
   <data name="REPLICATED_VM_RUNNING_INFO" xml:space="preserve">
-    <value />
+    <value>您当前要同步的虚拟机正在运行，在进行同步操作前请先关闭虚拟机。</value>
   </data>
   <data name="REPLICATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>请选择需要复制的虚拟机</value>
   </data>
   <data name="REPLICATION_COMPLETE_TEXT" xml:space="preserve">
-    <value />
+    <value>完成</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>任务设置</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>输入任务名称、虚拟机的后缀名称，并选择要复制到的位置</value>
   </data>
   <data name="REPLICATION_NETWORK_TEXT" xml:space="preserve">
-    <value />
+    <value>请选择默认网络</value>
   </data>
   <data name="RESTORE_COMPLETE_TITLE" xml:space="preserve">
-    <value />
+    <value>完成</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TEXT" xml:space="preserve">
-    <value />
+    <value>设置任务计划</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TITLE" xml:space="preserve">
-    <value />
+    <value>定义恢复任务计划</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>任务设置</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TITLE" xml:space="preserve">
     <value>输入任务名称、 定义虚拟机命名，并选择目标位置。</value>
   </data>
   <data name="RESTORE_LIST" xml:space="preserve">
-    <value />
+    <value>恢复列表</value>
   </data>
   <data name="RESTORE_ROOT_PROMPT" xml:space="preserve">
-    <value />
+    <value>不能使用root用户</value>
   </data>
   <data name="RESTORE_SELECT_VM_TEXT" xml:space="preserve">
-    <value />
+    <value>选择虚拟机</value>
   </data>
   <data name="RESTORE_SELECT_VM_TITLE" xml:space="preserve">
-    <value />
+    <value>选择要恢复的虚拟机</value>
   </data>
   <data name="RESTORE_SET_STORAGE" xml:space="preserve">
     <value>选择存储库（Halsign MC）</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>查看虚拟机</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>审查任务概要</value>
   </data>
   <data name="SATURDAY" xml:space="preserve">
-    <value />
+    <value>周六</value>
   </data>
   <data name="SCHEDULE_JOB" xml:space="preserve">
     <value>任务计划</value>
   </data>
   <data name="SCHEDULE_REPLICATION" xml:space="preserve">
-    <value />
+    <value>定义复制时间表</value>
   </data>
   <data name="SELECT_VM_REPLICATE" xml:space="preserve">
     <value>选择要复制的虚拟机</value>
@@ -13834,235 +13834,235 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>任务概要</value>
   </data>
   <data name="SUNDAY" xml:space="preserve">
-    <value />
+    <value>周日</value>
   </data>
   <data name="SYNCHRONIZATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>请设置每一个虚拟机的同步计划</value>
   </data>
   <data name="THURSDAY" xml:space="preserve">
-    <value />
+    <value>周四</value>
   </data>
   <data name="TUESDAY" xml:space="preserve">
-    <value />
+    <value>周二</value>
   </data>
   <data name="WEDNESDAY" xml:space="preserve">
-    <value />
+    <value>周三</value>
   </data>
   <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
-    <value />
+    <value>配置</value>
   </data>
   <data name="BR_CONFIG_STATUS" xml:space="preserve">
-    <value />
+    <value>Halsign MC 配置状态</value>
   </data>
   <data name="BR_DISABLED" xml:space="preserve">
-    <value />
+    <value>禁用</value>
   </data>
   <data name="BR_ENABLED" xml:space="preserve">
-    <value />
+    <value>正常</value>
   </data>
   <data name="BR_PAGE_TITLE" xml:space="preserve">
-    <value />
+    <value>备份恢复</value>
   </data>
   <data name="BR_STATUS_CANCELED" xml:space="preserve">
-    <value />
+    <value>取消</value>
   </data>
   <data name="BR_STATUS_FAILED" xml:space="preserve">
-    <value />
+    <value>失败</value>
   </data>
   <data name="BR_STATUS_INACTIVE" xml:space="preserve">
-    <value />
+    <value>未运行</value>
   </data>
   <data name="BR_STATUS_INQUEUE" xml:space="preserve">
-    <value />
+    <value>排队</value>
   </data>
   <data name="BR_STATUS_PENDING" xml:space="preserve">
-    <value />
+    <value>等待</value>
   </data>
   <data name="BR_STATUS_RUNNING" xml:space="preserve">
-    <value />
+    <value>正在进行</value>
   </data>
   <data name="BR_STATUS_SUCCESS" xml:space="preserve">
-    <value />
+    <value>成功</value>
   </data>
   <data name="BR_STORAGE_IP" xml:space="preserve">
-    <value />
+    <value>Halsign MC 地址</value>
   </data>
   <data name="BR_STORAGE_USERNAME" xml:space="preserve">
-    <value />
+    <value>用户名</value>
   </data>
   <data name="CONFIRM_DELETE_BACKUP" xml:space="preserve">
-    <value />
+    <value>此操作不可恢复。您确定要删除"{0}"的备份配置吗？</value>
   </data>
   <data name="DISABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>禁用配置</value>
   </data>
   <data name="ENABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>启用配置</value>
   </data>
   <data name="ERR_SR_CHKZFS" xml:space="preserve">
-    <value />
+    <value>检查文件系统错误</value>
   </data>
   <data name="ERR_SR_INFO" xml:space="preserve">
-    <value />
+    <value>获取备份恢复存储错误</value>
   </data>
   <data name="ERR_SR_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>创建副本错误</value>
   </data>
   <data name="ERR_XEN_GET_VM_BY_UUID" xml:space="preserve">
-    <value />
+    <value>根据UUID获取虚拟机错误</value>
   </data>
   <data name="ERR_XEN_LOGIN" xml:space="preserve">
-    <value />
+    <value>登进服务管理系统错误</value>
   </data>
   <data name="FULL_BACKUP_CIRCLE" xml:space="preserve">
-    <value />
+    <value>全新备份 小时</value>
   </data>
   <data name="FULL_BACKUP_DAILY" xml:space="preserve">
-    <value />
+    <value>全新备份 天</value>
   </data>
   <data name="FULL_BACKUP_WEEKLY" xml:space="preserve">
-    <value />
+    <value>全新备份 周</value>
   </data>
   <data name="JOB_STATUS_CANCELING" xml:space="preserve">
-    <value />
+    <value>正在取消</value>
   </data>
   <data name="JOB_STATUS_CHK_ZFS" xml:space="preserve">
-    <value />
+    <value>检查数据</value>
   </data>
   <data name="JOB_STATUS_DELETE_SNAP" xml:space="preserve">
-    <value />
+    <value>删除快照</value>
   </data>
   <data name="JOB_STATUS_GEN_METADATA" xml:space="preserve">
-    <value />
+    <value>生成元数据</value>
   </data>
   <data name="JOB_STATUS_TRANS_DATA" xml:space="preserve">
-    <value />
+    <value>传输数据</value>
   </data>
   <data name="JOB_STATUS_TRANS_METADATA" xml:space="preserve">
-    <value />
+    <value>传输元数据</value>
   </data>
   <data name="JOB_STATUS_VERIFY_DATA" xml:space="preserve">
-    <value />
+    <value>检查数据</value>
   </data>
   <data name="JOB_STATUS_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>检查数据</value>
   </data>
   <data name="REPLICATION_CIRCLE" xml:space="preserve">
-    <value />
+    <value>复制 小时</value>
   </data>
   <data name="REPLICATION_DAILY" xml:space="preserve">
-    <value />
+    <value>复制 天</value>
   </data>
   <data name="REPLICATION_IMMEDIATELY" xml:space="preserve">
-    <value />
+    <value>立即复制</value>
   </data>
   <data name="REPLICATION_ONCE" xml:space="preserve">
-    <value />
+    <value>复制 一次</value>
   </data>
   <data name="REPLICATION_SYNCH" xml:space="preserve">
-    <value />
+    <value>立即同步</value>
   </data>
   <data name="REPLICATION_WEEKLY" xml:space="preserve">
-    <value />
+    <value>复制 周</value>
   </data>
   <data name="RESTORE_NOW" xml:space="preserve">
-    <value />
+    <value>恢复 立即</value>
   </data>
   <data name="RESTORE_ONCE" xml:space="preserve">
-    <value />
+    <value>恢复 一次</value>
   </data>
   <data name="COMMANDS_EDIT" xml:space="preserve">
-    <value />
+    <value>属性</value>
   </data>
   <data name="COMMANDS_NEW_SR" xml:space="preserve">
-    <value />
+    <value>新建 SR</value>
   </data>
   <data name="COMMANDS_NEW_VM" xml:space="preserve">
-    <value />
+    <value>新建虚拟机</value>
   </data>
   <data name="COMMANDS_REBOOT" xml:space="preserve">
-    <value />
+    <value>重新启动</value>
   </data>
   <data name="COMMANDS_START" xml:space="preserve">
-    <value />
+    <value>启动</value>
   </data>
   <data name="CONFIRM_CANCEL_BR_JOB" xml:space="preserve">
-    <value />
+    <value>您确定要取消当前选中的任务吗？</value>
   </data>
   <data name="CONFIRM_DELETE_BR_JOB" xml:space="preserve">
-    <value />
+    <value>您确定要移除当前选中的任务吗？</value>
   </data>
   <data name="ERR_AGT_NEW_JOB" xml:space="preserve">
-    <value />
+    <value>创建任务错误</value>
   </data>
   <data name="ERR_OTH_CHANGE_DIR" xml:space="preserve">
-    <value />
+    <value>更改目录错误</value>
   </data>
   <data name="ERR_OTH_MAKE_DIR" xml:space="preserve">
-    <value />
+    <value>创建目录错误</value>
   </data>
   <data name="ERR_OTH_MAKE_FILE" xml:space="preserve">
-    <value />
+    <value>创建文件错误</value>
   </data>
   <data name="ERR_OTH_REPLICATION_VM_RUN" xml:space="preserve">
-    <value />
+    <value>被同步虚拟机正处于开机状态，同步任务被推迟到下次进行。</value>
   </data>
   <data name="ERR_OTH_RSYNC" xml:space="preserve">
-    <value />
+    <value>数据传输错误</value>
   </data>
   <data name="ERR_OTH_UNKNOWN" xml:space="preserve">
-    <value />
+    <value>未知错误</value>
   </data>
   <data name="ERR_XEN_DEL_SNAP" xml:space="preserve">
-    <value />
+    <value>删除快照错误</value>
   </data>
   <data name="ERR_XEN_DISK_CONFLICT" xml:space="preserve">
-    <value />
+    <value>磁盘冲突</value>
   </data>
   <data name="ERR_XEN_GET_NETWORK" xml:space="preserve">
-    <value />
+    <value>获取NETWORK错误</value>
   </data>
   <data name="ERR_XEN_GET_POOLS" xml:space="preserve">
-    <value />
+    <value>获取资源池错误</value>
   </data>
   <data name="ERR_XEN_GET_SR" xml:space="preserve">
-    <value />
+    <value>获取SR错误</value>
   </data>
   <data name="ERR_XEN_GET_VBDS" xml:space="preserve">
-    <value />
+    <value>获取VBD错误</value>
   </data>
   <data name="ERR_XEN_GET_VDI" xml:space="preserve">
-    <value />
+    <value>获取VDI错误</value>
   </data>
   <data name="ERR_XEN_GET_VIFS" xml:space="preserve">
-    <value />
+    <value>获取VIF错误</value>
   </data>
   <data name="ERR_XEN_GET_VM_REC" xml:space="preserve">
-    <value />
+    <value>获取虚拟机记录错误</value>
   </data>
   <data name="ERR_XEN_NEW_SNAP" xml:space="preserve">
-    <value />
+    <value>创建快照错误</value>
   </data>
   <data name="ERR_XEN_NEW_VBD" xml:space="preserve">
-    <value />
+    <value>创建VBD错误</value>
   </data>
   <data name="ERR_XEN_NEW_VDI" xml:space="preserve">
-    <value />
+    <value>创建VDI错误</value>
   </data>
   <data name="ERR_XEN_NEW_VIF" xml:space="preserve">
-    <value />
+    <value>创建VIF错误</value>
   </data>
   <data name="ERR_XEN_NEW_VM" xml:space="preserve">
-    <value />
+    <value>创建虚拟机错误</value>
   </data>
   <data name="ERR_XEN_REMOTE_LOGIN" xml:space="preserve">
-    <value />
+    <value>登录远程主机错误</value>
   </data>
   <data name="ERR_XEN_UPDATE_OTH_CFG" xml:space="preserve">
-    <value />
+    <value>更新配置数据错误</value>
   </data>
   <data name="SUMMARY_COMMANDS_TITLE" xml:space="preserve">
-    <value />
+    <value>操作</value>
   </data>
   <data name="NEWSR_BOND_DEFAULT_NAME" xml:space="preserve">
     <value>硬件 HBA 虚拟磁盘存储绑定</value>
@@ -14300,13 +14300,13 @@ SCSI ID: {6}
     <value>批量创建虚拟机</value>
   </data>
   <data name="ERR_CONTROLLER_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>Halsign SC 用户名或密码不正确。</value>
   </data>
   <data name="ERR_INVALID_PARAMS" xml:space="preserve">
-    <value />
+    <value>参数不正确。</value>
   </data>
   <data name="ERR_VGATE_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>vGate 用户名或密码不正确。</value>
   </data>
   <data name="INSTANT_CREATE_VMS" xml:space="preserve">
     <value />
@@ -14318,27 +14318,32 @@ SCSI ID: {6}
     <value />
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
-    <value />
+    <value>您确定要删除 vSwitch Controller 配置信息么?</value>
   </data>
   <data name="OVSC_CONFIGURE_IP" xml:space="preserve">
-    <value />
+    <value>vSwitch Controller IP</value>
   </data>
   <data name="OVSC_CONFIGURE_PORT" xml:space="preserve">
-    <value />
+    <value>端口</value>
   </data>
   <data name="OVSC_CONFIGURE_TITLE" xml:space="preserve">
-    <value />
+    <value>配置信息</value>
   </data>
   <data name="OVSC_CONFIGURE_USERNAME" xml:space="preserve">
-    <value />
+    <value>用户名</value>
   </data>
   <data name="OVSC_PAGE_TITLE" xml:space="preserve">
     <value />
   </data>
   <data name="UPSELL_BLURB_SC" xml:space="preserve">
-    <value />
+    <value>升级 vGate 以启用安全中心。通过配置安全中心，可以在虚拟化网络实现访问控制、服务质量保证、网络监控、虚拟化审计等高级功能，有效提升了服务器虚拟化在使用过程中的安全性和可控性。
+
+要了解有关 vGate 安全中心功能的更多信息，或者要启动 vGate 免费版，请单击下面的按钮。</value>
   </data>
   <data name="VSWITCH_CONTROLLER" xml:space="preserve">
-    <value />
+    <value>安全中心</value>
+  </data>
+  <data name="OVSC_CONFIGURE_PROTOCOL" xml:space="preserve">
+    <value>协议</value>
   </data>
 </root>
