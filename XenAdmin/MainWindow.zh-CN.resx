@@ -121,6 +121,12 @@
   <data name="navigationPane.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 649</value>
   </data>
+  <data name="TitleBackPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 649</value>
+  </data>
   <data name="TabPageHome.Text" xml:space="preserve">
     <value>主页</value>
   </data>
@@ -212,12 +218,6 @@
   <data name="TabPageSCUpsell.Text" xml:space="preserve">
     <value>vSwitch Controller</value>
   </data>
-  <data name="TitleBackPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 649</value>
-  </data>
   <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 28</value>
   </data>
@@ -257,13 +257,13 @@
   <data name="shutDownToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE/SURBVEhL1VYxbsMwDPSaxkbzg9QWuvcJeUKf0CfkCR47
-        5gVBnuAtY+06yJwXFFm7ZYpHh2cxcQxTsmqhBXrAwYNIHkVRlIMh7B6eX8ooWX6GakPfXDPOykil5VQt
-        2GwcKOhrHqkDBattLEJ1pG/Kbm74eJzPOFMxqIkQw645jBkQcMneyIk6WYW8Ba60CdEZrESnEUTpkDSH
-        1kCXSMae7DaDbs++4fd+W5+rapCSL8rG4TVEI6KXCBHXQAtYSuUrQtQlw20WFhv6iyQ5i9B4EA3+n8hv
-        livOtMhfHDyAnhYMvEU648V0Gb/W743QECVfjBYOr0Fz5kky9GERJW8cvgUtGLvs5+SukjDmseqRzrc3
-        ge+BRWQhOjvQ+XUEyGFE6eLMugMJaIam6wzt3ZJK7PvXAvCFxe5uxBh3yzwILskjGk435w/+AAAAAElF
-        TkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVEhL1VY7DsIwDO0MVHADaCN2jsAROAJH4AiMjJwA
+        cYRujFCKmDkBYmVjghH8GvNTnTQ0AoknPXWI7ec4jtOgDJtat5eF8WjdUHP6rjSjJAvVOKurPptVAwUd
+        pKHaUbCrjWlDHeg7Zjc3LJvtFmcqBjURYtg1hzEDAi7ZG1lXJ6uQt8CdNiE6g6noVIEoHZLm0BroEsnY
+        k+/NoNuzaHjcLq7ny6WUki/KxuE1RCOilwgR10ALWErlK0LUJcNtFhZz+ovEKxah8SAa/J/IN8sVJVrk
+        FwcPoKcFA2+Rt/Fiuoz72SQXKqPki9HC4TVoznQkQx+mYTzk8E/QgrHLPid3lYQqj1WBdL6FCfwKLCIL
+        0dmBzq8jQA4VShcl1h1IQDPkXWdo7yepxL5/LQBfWOzuQYxxt8yD4AYZsxpdenlBEAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="powerOnHostToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -305,27 +305,27 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVEhLYyAE5NfbCyivsQxQXm3egIyV1loUqK6yMoAq
-        Iw+ADFBeY75AeY3Ff7x4hekDpTXmCVBtxAPl1RYTsBqID6+yuECUz0BBo7TG7ABWQ4jDHwhaRKEFMIzb
+        Iw+ADFBeY75AeY3Ff7x4ldkDpTXmCVBtxAPl1RYTsBqID6+yuECUz0BBo7TG7ABWQ4jDHwhaRKEFMIzb
         InCEYtEUstXnv/VGJwxxvBgYT6BQgRoNAfLrzRWAkh8wFAPxuqsz/n/79eX/1FO1GHJ4MdDRUOMhAF9E
         gyyBgZuvz/+vPJCMVR0W/AHFNyDvYVEExsiWwMCRB5vBwYhNPTKGJ21IfsCuCISxWQICoCAEyWHTA8fA
         EAJbAgw7B6wKoBiXJTDw9uuL/+1HC7DqBaVWmCVYUxUME7IEBkDxlbUrAkUv3S2hfXDRJeJBgOZJGATo
-        khnpUqyAAK5URrUCEgYU11hswKqJNIy/TqFLpQUDNK1+kQEkMdCwIYEMQEFIWZOIgQEADlYbGLRnL5oA
+        khnpUqyAAK5URrUCEgYU11hswKqJNIy/TqFLpQUDNK1+kQEkMdCwIYEMQEFIWZOIgQEAY2EbKjHhNQsA
         AAAASUVORK5CYII=
 </value>
   </data>
   <data name="RebootToolbarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIiSURBVEhLnZY9SwNBEIbzE/wHag57G71TC8XaQrCwFTsr
-        LQWbVIKdINgq2EhykjQKFopgI4IgItooqIWFIAYELdd7NrvJ3G7ucnHgJcnO7Hy8s7ObUhEJ4on5oBZW
-        yvH4hUVQi7bLcbg0WA+HjFn/MlifHsBxEEfNBCoPraDhjNlaTHTmBZx7SKozLvIFCro6KAiqggXjzpes
-        ADtXG+r69Uy9f72pn99f9fX9qe7fr/X6VGPWsx+Oo4ZxmRYamBikKFo5XVTPHw/acRYIjJ3cB8pH0Zpx
-        3ZEgDvel0cLxnM4YR3yePB6o9fNlreOzdreb0ncJ1EzRZqpIGUFHjgMNqLKVUtHm5aq6eGq09alq+CE3
-        45SNwGafBfTWFtC7tr4a3ZoQNDw552IjVLCBLOW6CyiUAQCHQdq0KQsOx16kAhr2brY05Ho3UDUU2f54
-        p80OaWrxn8A5PfF0WUHILmsG+kY7SNIgqaB8SocCvmedLguOO/3rSq8NwoRKheXXghOTF4iqbVKuTgdA
-        5HUCr24AuckFlNrrRs6IhjzC+lo3Cs49gWQwb7MBAUjC2kGb1JO8CdESrmlpAOQckC3zQxIAnaTVnQ/G
-        wrjuiK7GmRdAM90eSdjrxN3Hm2Rcp2WkOjmaGHiPFbSQKdRwpwEo9LK36PV4ZQUqjnDfuMoXHciZnQJo
-        eo0uIvpo9w7WTAaukvvkFpHWe9P6W2TB80DFxiRHSqU/Lfg4TOxmZ2AAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIhSURBVEhLnZY9SwNBEIbzE/wH0Rz2Vt6phWJtIVjYip2V
+        loKNlWAnCLYKdsmJaRQslICNBAQR0UZBLVIIkoBgyvWezW6c282dFwdekuzMzsc7O7spFZEgnloMauF2
+        JZ5sWAS1aK8Shyvl03DUmA0v5dPZERwHcdRJoPLQCxrOma3FRGdewLmHpDrjIl+gYKCDgqAqWDDufMkK
+        sH+zpZpvl6rVflff3a5qf32qh1ZTr8/U5z37sTiqG5dpoYGJQYqitYtl9fLxqB1ngcDYyX2gchJtGNe/
+        EsThkTRaOlvQGeOIz/OnY7V5tap1fNbuD1L6AYE6KdpMFSkj6MhxoAFVtlIq2rleV43nel+fqoYfcjNO
+        2Qhs9llAb20Bvevrq9GdCUHDk3MuNkIFG8hSrruAQhkAcBikTZ+yoDr5KhXQcHi7qyHXB4Gqocj2xztt
+        dkhTi/8EzumJp8sKQnZZMzA0+kGSBkkF5VM6FPA963RZcNzp30B6bRAmVCosvxacmLxAVG2TcnU6ACKv
+        E3h1A8hNLqDUXjdyRjTkEdbXulFw7gkkg3mbDQhAEtYO2qSe5E2InnBNSwMg54BsmR+SAOgkre58MBbG
+        9a/oapx5ATTT7ZGEvU7cfbxJxnVaxqvTE4mB91hBC5lCDXcagEIve4u/Hq+sQMURHhlX+aIDObNTAB2v
+        0UVEH+2/g3WSgdvOfXKLSO+96f0tsuB5oGJjkiOl0g9MoDhV7tJSlQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="RebootToolbarButton.Size" type="System.Drawing.Size, System.Drawing">
@@ -373,14 +373,213 @@
   <data name="pauseContainerToolStripButton.Text" xml:space="preserve">
     <value>暂停</value>
   </data>
+  <data name="ToolBarContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 26</value>
+  </data>
   <data name="ShowToolbarMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 22</value>
   </data>
   <data name="ShowToolbarMenuItem.Text" xml:space="preserve">
     <value>显示工具栏(&amp;T)</value>
   </data>
-  <data name="ToolBarContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 26</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件(&amp;F)</value>
+  </data>
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>查看(&amp;V)</value>
+  </data>
+  <data name="poolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="poolToolStripMenuItem.Text" xml:space="preserve">
+    <value>池(&amp;P)</value>
+  </data>
+  <data name="HostMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="HostMenuItem.Text" xml:space="preserve">
+    <value>服务器(&amp;S)</value>
+  </data>
+  <data name="NewVmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="NewVmToolStripMenuItem.Text" xml:space="preserve">
+    <value>新建 VM(&amp;N)...</value>
+  </data>
+  <data name="startShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="startShutdownToolStripMenuItem.Text" xml:space="preserve">
+    <value>启动/关闭(&amp;S)</value>
+  </data>
+  <data name="resumeOnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="resumeOnToolStripMenuItem.Text" xml:space="preserve">
+    <value>在服务器上恢复(&amp;U)</value>
+  </data>
+  <data name="relocateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="relocateToolStripMenuItem.Text" xml:space="preserve">
+    <value>迁移至服务器(&amp;I)</value>
+  </data>
+  <data name="startOnHostToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="startOnHostToolStripMenuItem.Text" xml:space="preserve">
+    <value>在服务器上启动(&amp;O)</value>
+  </data>
+  <data name="toolStripSeparator20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 6</value>
+  </data>
+  <data name="assignSnapshotScheduleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="assignSnapshotScheduleToolStripMenuItem.Text" xml:space="preserve">
+    <value>分配至快照计划(&amp;H)...</value>
+  </data>
+  <data name="assignPolicyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="assignPolicyToolStripMenuItem.Text" xml:space="preserve">
+    <value>分配给 VM 保护策略(&amp;P)...</value>
+  </data>
+  <data name="assignToVirtualApplianceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="assignToVirtualApplianceToolStripMenuItem.Text" xml:space="preserve">
+    <value>分配给 vApp(&amp;V)</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="assignToVirtualApplianceToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 6</value>
+  </data>
+  <data name="copyVMtoSharedStorageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="copyVMtoSharedStorageMenuItem.Text" xml:space="preserve">
+    <value>复制 VM(&amp;C)</value>
+  </data>
+  <data name="MoveVMToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="MoveVMToolStripMenuItem.Text" xml:space="preserve">
+    <value>移动 VM(&amp;M)</value>
+  </data>
+  <data name="snapshotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="snapshotToolStripMenuItem.Text" xml:space="preserve">
+    <value>生成快照(&amp;K)</value>
+  </data>
+  <data name="commandToolStripMenuItem2.Text" xml:space="preserve">
+    <value>转换为模板(&amp;T)</value>
+  </data>
+  <data name="commandToolStripMenuItem3.Text" xml:space="preserve">
+    <value>重置虚拟机 VDI</value>
+  </data>
+  <data name="VMResetPowerStateCommand.Text" xml:space="preserve">
+    <value>重置虚拟机电源状态</value>
+  </data>
+  <data name="exportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="exportToolStripMenuItem.Text" xml:space="preserve">
+    <value>导出(&amp;E)...</value>
+  </data>
+  <data name="enablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="enablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
+    <value>启用 PVS 加速器(&amp;B)...</value>
+  </data>
+  <data name="disablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="disablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
+    <value>禁用 PVS 加速器(&amp;V)</value>
+  </data>
+  <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 6</value>
+  </data>
+  <data name="installToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="installToolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>安装 [vGate product] Tools(&amp;A)</value>
+  </data>
+  <data name="sendCtrlAltDelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="sendCtrlAltDelToolStripMenuItem.Text" xml:space="preserve">
+    <value>发送 Ctrl+Alt+Del(&amp;A)</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 6</value>
+  </data>
+  <data name="uninstallToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="uninstallToolStripMenuItem.Text" xml:space="preserve">
+    <value>删除 VM(&amp;D)</value>
+  </data>
+  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 6</value>
+  </data>
+  <data name="pluginItemsPlaceHolderToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="VMPropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 22</value>
+  </data>
+  <data name="VMPropertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>属性(&amp;R)</value>
+  </data>
+  <data name="VMToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="VMToolStripMenuItem.Text" xml:space="preserve">
+    <value>虚拟机(&amp;M)</value>
+  </data>
+  <data name="StorageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="StorageToolStripMenuItem.Text" xml:space="preserve">
+    <value>存储(&amp;O)</value>
+  </data>
+  <data name="templatesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="templatesToolStripMenuItem.Text" xml:space="preserve">
+    <value>模板(&amp;T)</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 20</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>工具(&amp;L)</value>
+  </data>
+  <data name="windowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="windowToolStripMenuItem.Text" xml:space="preserve">
+    <value>窗口(&amp;W)</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助(&amp;H)</value>
   </data>
   <data name="FileImportVMToolStripMenuItem.Text" xml:space="preserve">
     <value>导入(&amp;I)...</value>
@@ -397,12 +596,6 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>退出(&amp;X)</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>文件(&amp;F)</value>
-  </data>
   <data name="customTemplatesToolStripMenuItem.Text" xml:space="preserve">
     <value>自定义模板(&amp;C)</value>
   </data>
@@ -417,12 +610,6 @@
   </data>
   <data name="toolbarToolStripMenuItem.Text" xml:space="preserve">
     <value>工具栏(&amp;T)</value>
-  </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>查看(&amp;V)</value>
   </data>
   <data name="AddPoolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 22</value>
@@ -466,7 +653,6 @@
   <data name="virtualAppliancesToolStripMenuItem.Text" xml:space="preserve">
     <value>vApp(&amp;V)...</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="virtualAppliancesToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -479,6 +665,12 @@
   <data name="highAvailabilityToolStripMenuItem.Text" xml:space="preserve">
     <value>高可用性(&amp;H)...</value>
   </data>
+  <data name="disasterRecoveryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 22</value>
+  </data>
+  <data name="disasterRecoveryToolStripMenuItem.Text" xml:space="preserve">
+    <value>灾难恢复(&amp;S)</value>
+  </data>
   <data name="drConfigureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 22</value>
   </data>
@@ -490,12 +682,6 @@
   </data>
   <data name="DrWizardToolStripMenuItem.Text" xml:space="preserve">
     <value>灾难恢复向导(&amp;D)...</value>
-  </data>
-  <data name="disasterRecoveryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
-  </data>
-  <data name="disasterRecoveryToolStripMenuItem.Text" xml:space="preserve">
-    <value>灾难恢复(&amp;S)</value>
   </data>
   <data name="VMSnapshotScheduleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 22</value>
@@ -553,12 +739,6 @@
   </data>
   <data name="PoolPropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>属性(&amp;R)</value>
-  </data>
-  <data name="poolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="poolToolStripMenuItem.Text" xml:space="preserve">
-    <value>池(&amp;P)</value>
   </data>
   <data name="AddHostToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 22</value>
@@ -638,6 +818,12 @@
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 6</value>
   </data>
+  <data name="connectDisconnectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 22</value>
+  </data>
+  <data name="connectDisconnectToolStripMenuItem.Text" xml:space="preserve">
+    <value>连接/断开连接(&amp;C)</value>
+  </data>
   <data name="ReconnectToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
   </data>
@@ -670,12 +856,6 @@
   </data>
   <data name="disconnectAllToolStripMenuItem.Text" xml:space="preserve">
     <value>全部断开连接(&amp;S)</value>
-  </data>
-  <data name="connectDisconnectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="connectDisconnectToolStripMenuItem.Text" xml:space="preserve">
-    <value>连接/断开连接(&amp;C)</value>
   </data>
   <data name="addServerToPoolMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 22</value>
@@ -722,6 +902,12 @@
   <data name="installLicenseToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Install License Key...</value>
   </data>
+  <data name="HostPasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 22</value>
+  </data>
+  <data name="HostPasswordToolStripMenuItem.Text" xml:space="preserve">
+    <value>密码(&amp;W)</value>
+  </data>
   <data name="ChangeRootPasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 22</value>
   </data>
@@ -733,12 +919,6 @@
   </data>
   <data name="forgetSavedPasswordToolStripMenuItem.Text" xml:space="preserve">
     <value>忘记密码(&amp;F)</value>
-  </data>
-  <data name="HostPasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
-  </data>
-  <data name="HostPasswordToolStripMenuItem.Text" xml:space="preserve">
-    <value>密码(&amp;W)</value>
   </data>
   <data name="toolStripSeparator25.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 6</value>
@@ -767,153 +947,6 @@
   <data name="ServerPropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>属性(&amp;R)</value>
   </data>
-  <data name="HostMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 20</value>
-  </data>
-  <data name="HostMenuItem.Text" xml:space="preserve">
-    <value>服务器(&amp;S)</value>
-  </data>
-  <data name="NewVmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="NewVmToolStripMenuItem.Text" xml:space="preserve">
-    <value>新建 VM(&amp;N)...</value>
-  </data>
-  <data name="startShutdownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="startShutdownToolStripMenuItem.Text" xml:space="preserve">
-    <value>启动/关闭(&amp;S)</value>
-  </data>
-  <data name="resumeOnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="resumeOnToolStripMenuItem.Text" xml:space="preserve">
-    <value>在服务器上恢复(&amp;U)</value>
-  </data>
-  <data name="relocateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="relocateToolStripMenuItem.Text" xml:space="preserve">
-    <value>迁移至服务器(&amp;I)</value>
-  </data>
-  <data name="startOnHostToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="startOnHostToolStripMenuItem.Text" xml:space="preserve">
-    <value>在服务器上启动(&amp;O)</value>
-  </data>
-  <data name="toolStripSeparator20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
-  </data>
-  <data name="assignSnapshotScheduleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="assignSnapshotScheduleToolStripMenuItem.Text" xml:space="preserve">
-    <value>分配至快照计划(&amp;H)...</value>
-  </data>
-  <data name="assignPolicyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="assignPolicyToolStripMenuItem.Text" xml:space="preserve">
-    <value>分配给 VM 保护策略(&amp;P)...</value>
-  </data>
-  <data name="assignToVirtualApplianceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="assignToVirtualApplianceToolStripMenuItem.Text" xml:space="preserve">
-    <value>分配给 vApp(&amp;V)</value>
-  </data>
-  <data name="assignToVirtualApplianceToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
-  </data>
-  <data name="copyVMtoSharedStorageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="copyVMtoSharedStorageMenuItem.Text" xml:space="preserve">
-    <value>复制 VM(&amp;C)</value>
-  </data>
-  <data name="MoveVMToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="MoveVMToolStripMenuItem.Text" xml:space="preserve">
-    <value>移动 VM(&amp;M)</value>
-  </data>
-  <data name="snapshotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="snapshotToolStripMenuItem.Text" xml:space="preserve">
-    <value>生成快照(&amp;K)</value>
-  </data>
-  <data name="convertToTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="convertToTemplateToolStripMenuItem.Text" xml:space="preserve">
-    <value>转换为模板(&amp;T)</value>
-  </data>
-  <data name="exportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="exportToolStripMenuItem.Text" xml:space="preserve">
-    <value>导出(&amp;E)...</value>
-  </data>
-  <data name="enablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="enablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
-    <value>启用 PVS 加速器(&amp;B)...</value>
-  </data>
-  <data name="disablePVSReadcachingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="disablePVSReadcachingToolStripMenuItem.Text" xml:space="preserve">
-    <value>禁用 PVS 加速器(&amp;V)</value>
-  </data>
-  <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
-  </data>
-  <data name="installToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="installToolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>安装 [vGate product] Tools(&amp;A)</value>
-  </data>
-  <data name="sendCtrlAltDelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="sendCtrlAltDelToolStripMenuItem.Text" xml:space="preserve">
-    <value>发送 Ctrl+Alt+Del(&amp;A)</value>
-  </data>
-  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
-  </data>
-  <data name="uninstallToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="uninstallToolStripMenuItem.Text" xml:space="preserve">
-    <value>删除 VM(&amp;D)</value>
-  </data>
-  <data name="toolStripSeparator10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 6</value>
-  </data>
-  <data name="pluginItemsPlaceHolderToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="VMPropertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
-  </data>
-  <data name="VMPropertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>属性(&amp;R)</value>
-  </data>
-  <data name="VMToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
-  </data>
-  <data name="VMToolStripMenuItem.Text" xml:space="preserve">
-    <value>虚拟机(&amp;M)</value>
-  </data>
   <data name="AddStorageToolStripMenuItem.Text" xml:space="preserve">
     <value>新建存储(&amp;N)...</value>
   </data>
@@ -922,6 +955,9 @@
   </data>
   <data name="DefaultSRToolStripMenuItem.Text" xml:space="preserve">
     <value>设为默认值(&amp;T)</value>
+  </data>
+  <data name="virtualDisksToolStripMenuItem.Text" xml:space="preserve">
+    <value>虚拟磁盘(&amp;V)</value>
   </data>
   <data name="addVirtualDiskToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 22</value>
@@ -934,9 +970,6 @@
   </data>
   <data name="attachVirtualDiskToolStripMenuItem.Text" xml:space="preserve">
     <value>连接虚拟磁盘(&amp;A)...</value>
-  </data>
-  <data name="virtualDisksToolStripMenuItem.Text" xml:space="preserve">
-    <value>虚拟磁盘(&amp;V)</value>
   </data>
   <data name="reclaimFreedSpacetripMenuItem.Text" xml:space="preserve">
     <value>回收释放的空间(&amp;C)</value>
@@ -959,11 +992,11 @@
   <data name="SRPropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>属性(&amp;R)</value>
   </data>
-  <data name="StorageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+  <data name="CreateVmFromTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 22</value>
   </data>
-  <data name="StorageToolStripMenuItem.Text" xml:space="preserve">
-    <value>存储(&amp;O)</value>
+  <data name="CreateVmFromTemplateToolStripMenuItem.Text" xml:space="preserve">
+    <value>根据所选项创建 VM(&amp;V)</value>
   </data>
   <data name="newVMFromTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 22</value>
@@ -976,12 +1009,6 @@
   </data>
   <data name="InstantVmToolStripMenuItem.Text" xml:space="preserve">
     <value>快速创建(&amp;Q)</value>
-  </data>
-  <data name="CreateVmFromTemplateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
-  </data>
-  <data name="CreateVmFromTemplateToolStripMenuItem.Text" xml:space="preserve">
-    <value>根据所选项创建 VM(&amp;V)</value>
   </data>
   <data name="toolStripSeparator29.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 6</value>
@@ -1018,12 +1045,6 @@
   </data>
   <data name="templatePropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>属性(&amp;R)</value>
-  </data>
-  <data name="templatesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="templatesToolStripMenuItem.Text" xml:space="preserve">
-    <value>模板(&amp;T)</value>
   </data>
   <data name="bugToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 22</value>
@@ -1079,18 +1100,6 @@
   <data name="preferencesToolStripMenuItem.Text" xml:space="preserve">
     <value>选项(&amp;O)...</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>工具(&amp;L)</value>
-  </data>
-  <data name="windowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="windowToolStripMenuItem.Text" xml:space="preserve">
-    <value>窗口(&amp;W)</value>
-  </data>
   <data name="helpTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 22</value>
   </data>
@@ -1138,12 +1147,6 @@
   </data>
   <data name="aboutXenSourceAdminToolStripMenuItem.Text" xml:space="preserve">
     <value>关于 [vGate Console](&amp;A)</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>帮助(&amp;H)</value>
   </data>
   <data name="StatusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 704</value>
