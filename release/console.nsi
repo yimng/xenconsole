@@ -171,7 +171,7 @@ Section "Install components..."
   File /r ${APP_NAME}
   File /r ${APP_MAIN_NAME}
   File /r "CommandLib.dll"
-  File /r "ConsoleLib.dll"
+  File /r "XencenterLib.dll"
   File /r "CookComputing.XmlRpcV2.dll"
   File /r "DiffieHellman.dll"
   File /r "DiscUtils.dll"
