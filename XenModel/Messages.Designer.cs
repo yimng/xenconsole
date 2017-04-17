@@ -1177,7 +1177,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get Health Check analysis result from [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Get Health Check analysis result from [Halsign] Insight Services.
         /// </summary>
         public static string ACTION_GET_HEALTH_CHECK_RESULT {
             get {
@@ -1285,7 +1285,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Authentication with [Halsign] Insight Services.
         /// </summary>
         public static string ACTION_HEALTHCHECK_AUTHENTICATION {
             get {
@@ -1294,7 +1294,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authenticating with [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Authenticating with [Halsign] Insight Services.
         /// </summary>
         public static string ACTION_HEALTHCHECK_AUTHENTICATION_PROGRESS {
             get {
@@ -2617,7 +2617,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Finished compiling status report (with errors). Only [XenCenter] logs were compiled..
+        ///   Looks up a localized string similar to Finished compiling status report (with errors). Only [vGate Console] logs were compiled..
         /// </summary>
         public static string ACTION_SYSTEM_STATUS_SUCCESSFUL_WITH_ERRORS_XCLOGS {
             get {
@@ -2725,7 +2725,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upload server status report to [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Upload server status report to [Halsign] Insight Services.
         /// </summary>
         public static string ACTION_UPLOAD_SERVER_STATUS_REPORT {
             get {
@@ -2743,7 +2743,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uploading report to [Citrix] Insight Services.
+        ///   Looks up a localized string similar to Uploading report to [Halsign] Insight Services.
         /// </summary>
         public static string ACTION_UPLOAD_SERVER_STATUS_REPORT_PROGRESS {
             get {
@@ -3616,7 +3616,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] is unable to contact the activation server.
+        ///   Looks up a localized string similar to [vGate Console] is unable to contact the activation server.
         ///
         ///If you are not currently connected to the internet, we can save
         ///the activation request to a file, for you to upload at a later date.
@@ -3986,7 +3986,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please wait while [XenCenter] establishes your current external authentication configuration..
+        ///   Looks up a localized string similar to Please wait while [vGate Console] establishes your current external authentication configuration..
         /// </summary>
         public static string AD_MASTER_UNAVAILABLE_BLURB {
             get {
@@ -4267,7 +4267,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to You are attempting to add the server &apos;{0}&apos; to a pool that is using older CPUs.
         ///
-        ///[XenServer] can continue by rebooting the server and reducing its CPU to the level of the existing servers in the pool. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+        ///[vGate] can continue by rebooting the server and reducing its CPU to the level of the existing servers in the pool. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
         ///
         ///Do you want to do this?.
         /// </summary>
@@ -4282,7 +4282,7 @@ namespace XenAdmin {
         ///
         ///{0}
         ///
-        ///[XenServer] can continue by rebooting the servers and reducing their CPUs to the level of the existing servers in the pool. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+        ///[vGate] can continue by rebooting the servers and reducing their CPUs to the level of the existing servers in the pool. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
         ///
         ///Do you want to do this?.
         /// </summary>
@@ -4559,7 +4559,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] can no longer authenticate with the existing credentials for this server. Enter new credentials to proceed..
+        ///   Looks up a localized string similar to [vGate Console] can no longer authenticate with the existing credentials for this server. Enter new credentials to proceed..
         /// </summary>
         public static string ADDSERVER_PASS_NEW {
             get {
@@ -4715,7 +4715,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disk usage for the Control Domain on {0} has reached {1}. [XenServer]&apos;s performance will be critically affected if this disk becomes full. Log files or other non-essential (user created) files should be removed..
+        ///   Looks up a localized string similar to Disk usage for the Control Domain on {0} has reached {1}. [vGate]&apos;s performance will be critically affected if this disk becomes full. Log files or other non-essential (user created) files should be removed..
         /// </summary>
         public static string ALERT_ALARM_FILESYSTEM_DESCRIPTION {
             get {
@@ -4968,7 +4968,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New [XenCenter] Available.
+        ///   Looks up a localized string similar to New [vGate Console] Available.
         /// </summary>
         public static string ALERT_NEW_VERSION {
             get {
@@ -4977,7 +4977,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is now available. Download the new version from the [Citrix] website..
+        ///   Looks up a localized string similar to {0} is now available. Download the new version from the [Halsign] website..
         /// </summary>
         public static string ALERT_NEW_VERSION_DETAILS {
             get {
@@ -5141,7 +5141,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to The SR &apos;{0}&apos; is currently attached elsewhere. Do you want to attach it to &apos;{1}&apos;? 
         ///
-        ///Warning: you must ensure that the SR is not in use by any server not connected to [XenCenter]. Failure to do so may result in data loss..
+        ///Warning: you must ensure that the SR is not in use by any server not connected to [vGate Console]. Failure to do so may result in data loss..
         /// </summary>
         public static string ALREADY_ATTACHED_ELSEWHERE {
             get {
@@ -6158,9 +6158,9 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to Creating this bond will automatically move the management interface on one of your selected bond members to the bond itself:
         ///
-        ///- [XenCenter] connections to the pool will temporarily be disturbed
+        ///- [vGate Console] connections to the pool will temporarily be disturbed
         ///
-        ///- If your network configuration is incorrect then [XenCenter] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
+        ///- If your network configuration is incorrect then [vGate Console] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
         /// </summary>
         public static string BOND_CREATE_WILL_DISTURB_PRIMARY {
             get {
@@ -6204,11 +6204,11 @@ namespace XenAdmin {
         ///
         ///Deleting this bond will automatically transfer the management and secondary interfaces on the bond to the first slave member of the bond: 
         ///
-        ///- [XenCenter] connections to the pool will temporarily be disturbed
+        ///- [vGate Console] connections to the pool will temporarily be disturbed
         ///
         ///- Traffic through the secondary interface will be disrupted
         ///
-        ///- If your network configuration is incorrect then [XenCenter] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
+        ///- If your network configuration is incorrect then [vGate Console] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
         /// </summary>
         public static string BOND_DELETE_WILL_DISTURB_BOTH {
             get {
@@ -6221,9 +6221,9 @@ namespace XenAdmin {
         ///
         ///Deleting this bond will automatically transfer the management interface on the bond to the first slave member of the bond: 
         ///
-        ///- [XenCenter] connections to the pool will temporarily be disturbed
+        ///- [vGate Console] connections to the pool will temporarily be disturbed
         ///
-        ///- If your network configuration is incorrect then [XenCenter] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
+        ///- If your network configuration is incorrect then [vGate Console] may permanently lose the connection to the pool, or pool members may be unable to contact each other..
         /// </summary>
         public static string BOND_DELETE_WILL_DISTURB_PRIMARY {
             get {
@@ -6551,7 +6551,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your Tools ISO is on a broken SR, [XenCenter] will attempt to fix it before proceeding. Do you wish to continue?.
+        ///   Looks up a localized string similar to Your Tools ISO is on a broken SR, [vGate Console] will attempt to fix it before proceeding. Do you wish to continue?.
         /// </summary>
         public static string BROKEN_TOOLS_PROMPT {
             get {
@@ -6902,7 +6902,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must install [XenServer product] Tools on VM &apos;{0}&apos; before you can activate this virtual disk for the VM..
+        ///   Looks up a localized string similar to You must install [vGate product] Tools on VM &apos;{0}&apos; before you can activate this virtual disk for the VM..
         /// </summary>
         public static string CANNOT_ACTIVATE_VD_VM_NEEDS_TOOLS {
             get {
@@ -7001,7 +7001,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You must install [XenServer product] Tools on VM &apos;{0}&apos; before you can deactivate this virtual disk for the VM..
+        ///   Looks up a localized string similar to You must install [vGate product] Tools on VM &apos;{0}&apos; before you can deactivate this virtual disk for the VM..
         /// </summary>
         public static string CANNOT_DEACTIVATE_VDI_NEEDS_TOOLS {
             get {
@@ -7048,7 +7048,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] templates cannot be deleted..
+        ///   Looks up a localized string similar to [vGate] templates cannot be deleted..
         /// </summary>
         public static string CANNOT_DELETE_DEFAULT_TEMPLATE {
             get {
@@ -7120,7 +7120,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deleting the [XenServer product] Tools ISO storage is not supported..
+        ///   Looks up a localized string similar to Deleting the [vGate product] Tools ISO storage is not supported..
         /// </summary>
         public static string CANNOT_DELETE_TOOLS_SR {
             get {
@@ -7183,7 +7183,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You cannot configure an SR of type &apos;{0}&apos; using [XenCenter]..
+        ///   Looks up a localized string similar to You cannot configure an SR of type &apos;{0}&apos; using [vGate Console]..
         /// </summary>
         public static string CANNOT_FIND_SR_WIZARD_TYPE {
             get {
@@ -7322,7 +7322,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Insert [XenServer] CD.
+        ///   Looks up a localized string similar to Insert [vGate] CD.
         /// </summary>
         public static string CHANGE_SERVER_CD {
             get {
@@ -7433,7 +7433,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changed [XenCenter] master password.
+        ///   Looks up a localized string similar to Changed [vGate Console] master password.
         /// </summary>
         public static string CHANGED_MASTER_PASSWORD {
             get {
@@ -7442,7 +7442,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changed [XenCenter] master password for session restore.
+        ///   Looks up a localized string similar to Changed [vGate Console] master password for session restore.
         /// </summary>
         public static string CHANGED_MASTER_PASSWORD_LONG {
             get {
@@ -7784,7 +7784,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to for use with Common Criteria versions of [XenServer] only.
+        ///   Looks up a localized string similar to for use with Common Criteria versions of [vGate] only.
         /// </summary>
         public static string COMMON_CRITERIA_TEXT {
             get {
@@ -8503,7 +8503,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to restart the toolstack on the selected servers? Note that [XenCenter] will temporarily lose connection to them..
+        ///   Looks up a localized string similar to Are you sure you want to restart the toolstack on the selected servers? Note that [vGate Console] will temporarily lose connection to them..
         /// </summary>
         public static string CONFIRM_RESTART_TOOLSTACK_MANY_SERVERS {
             get {
@@ -8512,7 +8512,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to restart the toolstack on &apos;{0}&apos;? Note that [XenCenter] will temporarily lose connection to the server..
+        ///   Looks up a localized string similar to Are you sure you want to restart the toolstack on &apos;{0}&apos;? Note that [vGate Console] will temporarily lose connection to the server..
         /// </summary>
         public static string CONFIRM_RESTART_TOOLSTACK_ONE_SERVER {
             get {
@@ -8766,7 +8766,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find [XenServer] running on {0}..
+        ///   Looks up a localized string similar to Could not find [vGate] running on {0}..
         /// </summary>
         public static string CONNECT_NO_XAPI_FAILURE {
             get {
@@ -9027,9 +9027,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connection to server {0} restricted - a connection to a [Citrix] [XenServer product] Express Edition server ({1}) already exists.
+        ///   Looks up a localized string similar to Connection to server {0} restricted - a connection to a [Halsign] [vGate product] Express Edition server ({1}) already exists.
         ///
-        ///You can only connect to a single [Citrix] [XenServer product] Express Edition server at a time. To find out how to upgrade your license, follow the link below..
+        ///You can only connect to a single [Halsign] [vGate product] Express Edition server at a time. To find out how to upgrade your license, follow the link below..
         /// </summary>
         public static string CONNECTION_RESTRICTED_MESSAGE_LONG {
             get {
@@ -11062,7 +11062,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Default install of [XenServer].
+        ///   Looks up a localized string similar to Default install of [vGate].
         /// </summary>
         public static string DEFAULT_INSTALL_OF_XENSERVER {
             get {
@@ -11134,7 +11134,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VMs without [XenServer product] Tools.
+        ///   Looks up a localized string similar to VMs without [vGate product] Tools.
         /// </summary>
         public static string DEFAULT_SEARCH_VMS_WO_XS_TOOLS {
             get {
@@ -11816,7 +11816,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] has detected that an SR already exists on this LUN. This SR is not currently in use by &apos;{0}&apos;,  would you like to attach it?.
+        ///   Looks up a localized string similar to [vGate Console] has detected that an SR already exists on this LUN. This SR is not currently in use by &apos;{0}&apos;,  would you like to attach it?.
         /// </summary>
         public static string DETACHED_ISCI_DETECTED {
             get {
@@ -12329,7 +12329,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A memory range cannot be set because [XenServer product] Tools are not installed on this VM..
+        ///   Looks up a localized string similar to A memory range cannot be set because [vGate product] Tools are not installed on this VM..
         /// </summary>
         public static string DMC_UNAVAILABLE_NOTOOLS {
             get {
@@ -12338,7 +12338,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A memory range cannot be set because [XenServer product] Tools are not installed on these VMs..
+        ///   Looks up a localized string similar to A memory range cannot be set because [vGate product] Tools are not installed on these VMs..
         /// </summary>
         public static string DMC_UNAVAILABLE_NOTOOLS_PLURAL {
             get {
@@ -12365,7 +12365,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A memory range cannot be set because [XenServer product] Tools are out of date on this VM..
+        ///   Looks up a localized string similar to A memory range cannot be set because [vGate product] Tools are out of date on this VM..
         /// </summary>
         public static string DMC_UNAVAILABLE_OLDTOOLS {
             get {
@@ -12374,7 +12374,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A memory range cannot be set because [XenServer product] Tools are out of date on these VMs..
+        ///   Looks up a localized string similar to A memory range cannot be set because [vGate product] Tools are out of date on these VMs..
         /// </summary>
         public static string DMC_UNAVAILABLE_OLDTOOLS_PLURAL {
             get {
@@ -12743,7 +12743,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} is now available. Download the latest at the [Citrix] website..
+        ///   Looks up a localized string similar to {0} is now available. Download the latest at the [Halsign] website..
         /// </summary>
         public static string DOWNLOAD_LATEST_XS_BODY {
             get {
@@ -13553,7 +13553,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Disaster Recovery is complete..
+        ///   Looks up a localized string similar to [vGate] Disaster Recovery is complete..
         /// </summary>
         public static string DR_WIZARD_RECOVERPAGE_COMPLETE_FAILOVER {
             get {
@@ -13607,7 +13607,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Disaster Recovery is in progress. This may take some time..
+        ///   Looks up a localized string similar to [vGate] Disaster Recovery is in progress. This may take some time..
         /// </summary>
         public static string DR_WIZARD_RECOVERPAGE_IN_PROGRESS_FAILOVER {
             get {
@@ -13706,7 +13706,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Disaster Recovery progress.
+        ///   Looks up a localized string similar to [vGate] Disaster Recovery progress.
         /// </summary>
         public static string DR_WIZARD_RECOVERPAGE_TITLE_FAILOVER {
             get {
@@ -14466,7 +14466,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To access your saved session it is required that you enter the master password when starting [XenCenter].
+        ///   Looks up a localized string similar to To access your saved session it is required that you enter the master password when starting [vGate Console].
         /// </summary>
         public static string ENTER_MASTER_PASSWORD_TO_ACCESS_SETTINGS_TT {
             get {
@@ -14484,7 +14484,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] &amp;Enterprise Per-Socket ({0} required).
+        ///   Looks up a localized string similar to [vGate] &amp;Enterprise Per-Socket ({0} required).
         /// </summary>
         public static string ENTERPRISE_PERSOCKET_LICENSES_X_REQUIRED {
             get {
@@ -14826,7 +14826,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] has encountered a problem connecting to this server..
+        ///   Looks up a localized string similar to [vGate Console] has encountered a problem connecting to this server..
         /// </summary>
         public static string ERROR_CONNECTING_BLURB {
             get {
@@ -15258,7 +15258,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] is still booting..
+        ///   Looks up a localized string similar to [vGate] is still booting..
         /// </summary>
         public static string ERROR_HOST_STILL_BOOTING {
             get {
@@ -15312,7 +15312,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find [XenServer] on &apos;{0}&apos;..
+        ///   Looks up a localized string similar to Could not find [vGate] on &apos;{0}&apos;..
         /// </summary>
         public static string ERROR_NO_XENSERVER {
             get {
@@ -15348,7 +15348,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] has encountered a problem launching PuTTY..
+        ///   Looks up a localized string similar to [vGate Console] has encountered a problem launching PuTTY..
         /// </summary>
         public static string ERROR_PUTTY_LAUNCHING {
             get {
@@ -15429,7 +15429,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Install [XenServer product] Tools.
+        ///   Looks up a localized string similar to {0} Install [vGate product] Tools.
         /// </summary>
         public static string EVACUATE_HOST_INSTALL_TOOLS_PROMPT {
             get {
@@ -17374,7 +17374,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To view memory data for this VM, you need to install [XenServer product] Tools.
+        ///   Looks up a localized string similar to To view memory data for this VM, you need to install [vGate product] Tools.
         /// </summary>
         public static string GRAPH_NEEDS_TOOLS {
             get {
@@ -17520,7 +17520,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This version of [XenCenter] is out of date and cannot connect to {0}..
+        ///   Looks up a localized string similar to This version of [vGate Console] is out of date and cannot connect to {0}..
         /// </summary>
         public static string GUI_OUT_OF_DATE {
             get {
@@ -17531,7 +17531,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///You can get a compatible version of [XenCenter] from the following location:.
+        ///You can get a compatible version of [vGate Console] from the following location:.
         /// </summary>
         public static string GUI_OUT_OF_DATE_MORE {
             get {
@@ -17762,7 +17762,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] High Availability (HA) allows virtual machines to automatically be restarted in the event of an underlying hardware failure or loss of an individual server. HA is enabled for &apos;{0}&apos;..
+        ///   Looks up a localized string similar to [vGate] High Availability (HA) allows virtual machines to automatically be restarted in the event of an underlying hardware failure or loss of an individual server. HA is enabled for &apos;{0}&apos;..
         /// </summary>
         public static string HA_EDIT_DIALOG_BLURB {
             get {
@@ -18317,7 +18317,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services failed. See the application log files for more information..
+        ///   Looks up a localized string similar to Authentication with [Halsign] Insight Services failed. See the application log files for more information..
         /// </summary>
         public static string HEALTH_CHECK_AUTHENTICATION_FAILED {
             get {
@@ -18353,7 +18353,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services is required in order to enable this feature. [XenCenter] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again..
+        ///   Looks up a localized string similar to Authentication with [Halsign] Insight Services is required in order to enable this feature. [vGate Console] detected a previous successful authentication for one of other connected pools. You can choose to re-use it or authenticate again..
         /// </summary>
         public static string HEALTHCHECK_AUTHENTICATION_RUBRIC_EXISTING_TOKEN {
             get {
@@ -18362,7 +18362,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authentication with [Citrix] Insight Services is required in order to enable this feature. Please register by providing MyCitrix credentials (see {0}). These credentials will only be used to obtain an upload token and will not be stored on this machine or on your server..
+        ///   Looks up a localized string similar to Authentication with [Halsign] Insight Services is required in order to enable this feature. Please register by providing MyCitrix credentials (see {0}). These credentials will only be used to obtain an upload token and will not be stored on this machine or on your server..
         /// </summary>
         public static string HEALTHCHECK_AUTHENTICATION_RUBRIC_NO_TOKEN {
             get {
@@ -20147,7 +20147,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This server version is incompatible with [XenCenter]..
+        ///   Looks up a localized string similar to This server version is incompatible with [vGate Console]..
         /// </summary>
         public static string INCOMPATIBLE_PRODUCTS {
             get {
@@ -20237,7 +20237,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disk and memory snapshots need [XenServer product] Tools to be installed.
+        ///   Looks up a localized string similar to Disk and memory snapshots need [vGate product] Tools to be installed.
         /// </summary>
         public static string INFO_DISKMEMORY_MODE_NO_TOOLS {
             get {
@@ -20273,7 +20273,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quiesced snapshots need [XenServer product] Tools to be installed.
+        ///   Looks up a localized string similar to Quiesced snapshots need [vGate product] Tools to be installed.
         /// </summary>
         public static string INFO_QUIESCE_MODE_NO_TOOLS {
             get {
@@ -20363,7 +20363,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install [XenServer product] Tools.
+        ///   Looks up a localized string similar to Install [vGate product] Tools.
         /// </summary>
         public static string INSTALL_XENSERVER_TOOLS {
             get {
@@ -20372,7 +20372,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install [XenServer product] Tools....
+        ///   Looks up a localized string similar to Install [vGate product] Tools....
         /// </summary>
         public static string INSTALL_XENSERVER_TOOLS_DOTS {
             get {
@@ -20381,7 +20381,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install [XenServer product] Tools.
+        ///   Looks up a localized string similar to Install [vGate product] Tools.
         /// </summary>
         public static string INSTALL_XS_TOOLS {
             get {
@@ -20399,7 +20399,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find the [XenServer product] Tools install disc..
+        ///   Looks up a localized string similar to Could not find the [vGate product] Tools install disc..
         /// </summary>
         public static string INSTALLTOOLS_COULDNOTFIND_WIN {
             get {
@@ -20408,7 +20408,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools installation launched..
+        ///   Looks up a localized string similar to [vGate product] Tools installation launched..
         /// </summary>
         public static string INSTALLTOOLS_DONE {
             get {
@@ -20417,7 +20417,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools are already installed on this VM..
+        ///   Looks up a localized string similar to [vGate product] Tools are already installed on this VM..
         /// </summary>
         public static string INSTALLTOOLS_EXIST {
             get {
@@ -20426,7 +20426,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Launching [XenServer product] Tools installation..
+        ///   Looks up a localized string similar to Launching [vGate product] Tools installation..
         /// </summary>
         public static string INSTALLTOOLS_STARTING {
             get {
@@ -20435,7 +20435,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installing [XenServer product] Tools on VM {0}.
+        ///   Looks up a localized string similar to Installing [vGate product] Tools on VM {0}.
         /// </summary>
         public static string INSTALLTOOLS_TITLE {
             get {
@@ -21123,7 +21123,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Online.
+        ///   Looks up a localized string similar to [vGate] Online.
         /// </summary>
         public static string LICENSE_EXPIRY_PURCHACE {
             get {
@@ -21258,7 +21258,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Servers must be selected one at a time when activating free [XenServer]..
+        ///   Looks up a localized string similar to Servers must be selected one at a time when activating free [vGate]..
         /// </summary>
         public static string LICENSE_NO_MULTISELECT_ACTIVATE {
             get {
@@ -21461,7 +21461,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activation keys can only be applied to one Free [XenServer] product at a time..
+        ///   Looks up a localized string similar to Activation keys can only be applied to one Free [vGate] product at a time..
         /// </summary>
         public static string LICENSE_TOO_MANY_SERVERS_SELECTED_CAPTION {
             get {
@@ -21533,7 +21533,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to One or more managed servers have expired. Either assign [XenServer] licenses, or activate Free [XenServer] products..
+        ///   Looks up a localized string similar to One or more managed servers have expired. Either assign [vGate] licenses, or activate Free [vGate] products..
         /// </summary>
         public static string LICENSING_DIALOG_EXPIRED_TEXT {
             get {
@@ -21542,7 +21542,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to One or more managed servers will expire soon. Either assign [XenServer] licenses, or activate Free [XenServer] products..
+        ///   Looks up a localized string similar to One or more managed servers will expire soon. Either assign [vGate] licenses, or activate Free [vGate] products..
         /// </summary>
         public static string LICENSING_DIALOG_EXPIRING_SOON_TEXT {
             get {
@@ -21551,7 +21551,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activate your free [XenServer] products or assign/release licenses for [XenServer] Advanced, Enterprise and Platinum Editions..
+        ///   Looks up a localized string similar to Activate your free [vGate] products or assign/release licenses for [vGate] Advanced, Enterprise and Platinum Editions..
         /// </summary>
         public static string LICENSING_DIALOG_TEXT {
             get {
@@ -22214,7 +22214,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The [XenServer] license on &apos;{0}&apos; will expire in {1}..
+        ///   Looks up a localized string similar to The [vGate] license on &apos;{0}&apos; will expire in {1}..
         /// </summary>
         public static string MAINWINDOW_EXPIRE_MESSAGE {
             get {
@@ -22223,7 +22223,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The [XenServer] license on &apos;{0}&apos; has expired..
+        ///   Looks up a localized string similar to The [vGate] license on &apos;{0}&apos; has expired..
         /// </summary>
         public static string MAINWINDOW_EXPIRE_MESSAGE_TOO_LATE {
             get {
@@ -22340,7 +22340,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inst&amp;all [XenServer product] Tools....
+        ///   Looks up a localized string similar to Inst&amp;all [vGate product] Tools....
         /// </summary>
         public static string MAINWINDOW_INSTALL_TOOLS {
             get {
@@ -22547,7 +22547,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remo&amp;ve from [XenCenter].
+        ///   Looks up a localized string similar to Remo&amp;ve from [vGate Console].
         /// </summary>
         public static string MAINWINDOW_REMOVE_HOST {
             get {
@@ -23033,7 +23033,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer].
+        ///   Looks up a localized string similar to [vGate].
         /// </summary>
         public static string MEMORY_XEN {
             get {
@@ -23647,7 +23647,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] - Error.
+        ///   Looks up a localized string similar to [vGate Console] - Error.
         /// </summary>
         public static string MESSAGEBOX_PROGRAM_UNEXPECTED_TITLE {
             get {
@@ -23766,7 +23766,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable VDI live migration. This feature enables you to migrate multiple running VDIs between SRs in the same pool with no VM downtime. .
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable VDI live migration. This feature enables you to migrate multiple running VDIs between SRs in the same pool with no VM downtime. .
         /// </summary>
         public static string MIGRATE_VDI_UPSELL_BLURB {
             get {
@@ -23777,7 +23777,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Live VDI Migration feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Live VDI Migration feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string MIGRATE_VDI_UPSELL_BLURB_MORE {
             get {
@@ -24029,7 +24029,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to One or more paths to at least one of your storages has failed. Refer to the &quot;[XenServer product] Administrator&apos;s Guide&quot; for information about configuring storage multipathing..
+        ///   Looks up a localized string similar to One or more paths to at least one of your storages has failed. Refer to the &quot;[vGate product] Administrator&apos;s Guide&quot; for information about configuring storage multipathing..
         /// </summary>
         public static string MULTIPATH_FAILED {
             get {
@@ -24508,7 +24508,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are reconfiguring the primary management interface.  If the new settings are incorrect then [XenCenter] may permanently lose the connection to the server.
+        ///   Looks up a localized string similar to You are reconfiguring the primary management interface.  If the new settings are incorrect then [vGate Console] may permanently lose the connection to the server.
         ///
         ///You should only proceed if you have verified that these settings are correct..
         /// </summary>
@@ -24519,7 +24519,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are reconfiguring the primary management interface.  If the new settings are incorrect then [XenCenter] may permanently lose the connection to the server, or pool members may be unable to contact each other.
+        ///   Looks up a localized string similar to You are reconfiguring the primary management interface.  If the new settings are incorrect then [vGate Console] may permanently lose the connection to the server, or pool members may be unable to contact each other.
         ///
         ///You should only proceed if you have verified that these settings are correct..
         /// </summary>
@@ -24666,7 +24666,7 @@ namespace XenAdmin {
         
         /// <summary>
         ///   Looks up a localized string similar to You must shutdown and then restart the VM to finish the installation of the new DVD drive.
-        ///Once the VM has restarted click the Install [XenServer product] Tools menu item once again..
+        ///Once the VM has restarted click the Install [vGate product] Tools menu item once again..
         /// </summary>
         public static string NEW_DVD_DRIVE_REBOOT_TOOLS {
             get {
@@ -24675,7 +24675,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The VM you wish to install [XenServer product] Tools onto has no DVD drive, would you like to create one?.
+        ///   Looks up a localized string similar to The VM you wish to install [vGate product] Tools onto has no DVD drive, would you like to create one?.
         /// </summary>
         public static string NEW_DVD_DRIVE_REQUIRED {
             get {
@@ -24684,7 +24684,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to At least one of the VMs you wish to install [XenServer product] Tools onto has no DVD drive. Would you like to create a new DVD drive for each of the VMs that requires one?.
+        ///   Looks up a localized string similar to At least one of the VMs you wish to install [vGate product] Tools onto has no DVD drive. Would you like to create a new DVD drive for each of the VMs that requires one?.
         /// </summary>
         public static string NEW_DVD_DRIVES_REQUIRED {
             get {
@@ -24755,7 +24755,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to You are attempting to add the server &apos;{0}&apos; to a pool with a master that is using an older CPU.
         ///
-        ///[XenServer] can continue by rebooting the server and reducing its CPU to the level of the master. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+        ///[vGate] can continue by rebooting the server and reducing its CPU to the level of the master. This will shut down any VMs running on the server. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
         ///
         ///Do you want to do this?.
         /// </summary>
@@ -24770,7 +24770,7 @@ namespace XenAdmin {
         ///
         ///{0}
         ///
-        ///[XenServer] can continue by rebooting the servers and reducing their CPUs to the level of the master. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [XenServer] Hardware Compatibility List.
+        ///[vGate] can continue by rebooting the servers and reducing their CPUs to the level of the master. This will shut down any VMs running on the servers. This feature is supported for CPU combinations listed in the [vGate] Hardware Compatibility List.
         ///
         ///Do you want to do this?.
         /// </summary>
@@ -25075,7 +25075,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is a newer version of [XenCenter] available. Please contact your support representative..
+        ///   Looks up a localized string similar to There is a newer version of [vGate Console] available. Please contact your support representative..
         /// </summary>
         public static string NEWER_GUI_AVAILABLE {
             get {
@@ -25147,7 +25147,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You cannot add a Free Edition [XenServer] to a pool with [XenServer] Advanced Edition or higher licenses.
+        ///   Looks up a localized string similar to You cannot add a Free Edition [vGate] to a pool with [vGate] Advanced Edition or higher licenses.
         /// </summary>
         public static string NEWPOOL_FREE_HOST_PAID_MASTER {
             get {
@@ -25237,7 +25237,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You cannot add server with a [XenServer product] Advanced Edition or higher license to a pool of Free Edition servers.
+        ///   Looks up a localized string similar to You cannot add server with a [vGate product] Advanced Edition or higher license to a pool of Free Edition servers.
         /// </summary>
         public static string NEWPOOL_PAID_HOST_FREE_MASTER {
             get {
@@ -25466,7 +25466,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dell EqualLogic is a scalable form of high performance network attached storage, which supports the addition of capacity without downtime. You can use Dell EqualLogic shared storage to support [XenServer] features such as Live Migration and High Availability..
+        ///   Looks up a localized string similar to Dell EqualLogic is a scalable form of high performance network attached storage, which supports the addition of capacity without downtime. You can use Dell EqualLogic shared storage to support [vGate] features such as Live Migration and High Availability..
         /// </summary>
         public static string NEWSR_EQUAL_LOGIC_BLURB {
             get {
@@ -25632,11 +25632,11 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
+        ///   Looks up a localized string similar to [vGate] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
         ///
         ///All configuration required to expose a LUN to the host must be completed manually, including configuring your FCoE fabric, and allocating LUN(s) to your CNA’s public world wide name (PWWN). 
         ///
-        ///Once this configuration has been carried out, this wizard will walk you through discovering and mounting a LUN available to the hosts CNA’s as a SCSI device. The SC [rest of string was truncated]&quot;;.
+        ///Once this configuration has been carried out, this wizard will walk you through discovering and mounting a LUN available to the hosts CNA’s as a SCSI device. The SCSI d [rest of string was truncated]&quot;;.
         /// </summary>
         public static string NEWSR_LVMOFCOE_BLURB {
             get {
@@ -25663,11 +25663,11 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] hosts support Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and shared Serial Attached SCSI (SAS) storage area networks (SANs) using host bus adapters (HBAs).
+        ///   Looks up a localized string similar to [vGate] hosts support Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and shared Serial Attached SCSI (SAS) storage area networks (SANs) using host bus adapters (HBAs).
         ///
-        ///All configuration required to expose a LUN to the host must be completed manually, including storage devices, network devices, and the HBA within the [XenServer] host.
+        ///All configuration required to expose a LUN to the host must be completed manually, including storage devices, network devices, and the HBA within the [vGate] host.
         ///
-        ///Once all configuration is complete the HBA will expose a SCSI device backed by the LUN to the host. The SCSI device can then be used to access the LUN as if i [rest of string was truncated]&quot;;.
+        ///Once all configuration is complete the HBA will expose a SCSI device backed by the LUN to the host. The SCSI device can then be used to access the LUN as if it were a [rest of string was truncated]&quot;;.
         /// </summary>
         public static string NEWSR_LVMOHBA_BLURB {
             get {
@@ -25795,7 +25795,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning: you must ensure that the following SR is not in use by any server not connected to [XenCenter]. Failure to do so may result in data loss.
+        ///   Looks up a localized string similar to Warning: you must ensure that the following SR is not in use by any server not connected to [vGate Console]. Failure to do so may result in data loss.
         ///
         ///SR:  {0}
         ///
@@ -26732,7 +26732,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix].
+        ///   Looks up a localized string similar to [Halsign].
         /// </summary>
         public static string NEWVMWIZARD_TEMPLATEPAGE_CITRIX {
             get {
@@ -27065,7 +27065,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] cannot create any more disks for this VM.
+        ///   Looks up a localized string similar to [vGate] cannot create any more disks for this VM.
         /// </summary>
         public static string NO_MORE_USERDEVICES {
             get {
@@ -27101,7 +27101,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No [XenServer] session information is available, cannot continue..
+        ///   Looks up a localized string similar to No [vGate] session information is available, cannot continue..
         /// </summary>
         public static string NO_SESSION_INFO {
             get {
@@ -27281,7 +27281,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] can free up {0} by removing residual update files. Do you wish to proceed with the cleanup?.
+        ///   Looks up a localized string similar to [vGate Console] can free up {0} by removing residual update files. Do you wish to proceed with the cleanup?.
         /// </summary>
         public static string NOT_ENOUGH_SPACE_MESSAGE_CLEANUP {
             get {
@@ -27337,9 +27337,9 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to VMs on local disk will prevent disk repartitioning.
         ///
-        ///A new disk partitioning scheme is available in [XenServer] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
+        ///A new disk partitioning scheme is available in [vGate] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
         ///
-        ///However, there are VMs on local storage, so the current partitioning scheme will be retained. To benefit from repartitioning on upgrade to [XenServer] [BRANDING_VERSION_7_0] or above, VMs must be moved from local storage first..
+        ///However, there are VMs on local storage, so the current partitioning scheme will be retained. To benefit from repartitioning on upgrade to [vGate] [BRANDING_VERSION_7_0] or above, VMs must be moved from local storage first..
         /// </summary>
         public static string NOT_SAFE_TO_UPGRADE_DEFAULT_WARNING_LONG {
             get {
@@ -27359,7 +27359,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to The disk size of the local storage prevents repartitioning.
         ///
-        ///A new disk partitioning scheme is available in [XenServer] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
+        ///A new disk partitioning scheme is available in [vGate] [BRANDING_VERSION_7_0] and above that includes larger dom0 and backup partitions, and dedicated partitions for logging, swap and UEFI.
         ///
         ///However, there is not enough space to perform the repartitioning, so the current partitioning scheme will be retained..
         /// </summary>
@@ -27766,7 +27766,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created by [XenCenter] Disk Image Import.
+        ///   Looks up a localized string similar to Created by [vGate Console] Disk Image Import.
         /// </summary>
         public static string OVF_CREATED {
             get {
@@ -28644,7 +28644,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Updates and Supplemental Packs (*.{0}, *.iso)|*.{0};*.iso.
+        ///   Looks up a localized string similar to [vGate] Updates and Supplemental Packs (*.{0}, *.iso)|*.{0};*.iso.
         /// </summary>
         public static string PATCHINGWIZARD_SELECTPATCHPAGE_UPDATESEXT {
             get {
@@ -28653,7 +28653,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automated updates are not supported on this [XenServer] version.
+        ///   Looks up a localized string similar to Automated updates are not supported on this [vGate] version.
         /// </summary>
         public static string PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_HOST_VERSION {
             get {
@@ -28662,7 +28662,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automated updates are not supported on partially upgraded [XenServer] pools.
+        ///   Looks up a localized string similar to Automated updates are not supported on partially upgraded [vGate] pools.
         /// </summary>
         public static string PATCHINGWIZARD_SELECTSERVERPAGE_AUTOMATED_UPDATES_NOT_SUPPORTED_PARTIALLY_UPGRADED {
             get {
@@ -28672,7 +28672,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot install supplemental packs on this [XenServer] version.
+        ///   Looks up a localized string similar to Cannot install supplemental packs on this [vGate] version.
         /// </summary>
         public static string PATCHINGWIZARD_SELECTSERVERPAGE_CANNOT_INSTALL_SUPP_PACKS {
             get {
@@ -28708,7 +28708,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The same update cannot be applied to {0} and {1} versions of [XenServer].
+        ///   Looks up a localized string similar to The same update cannot be applied to {0} and {1} versions of [vGate].
         /// </summary>
         public static string PATCHINGWIZARD_SELECTSERVERPAGE_MIXED_VERSIONS {
             get {
@@ -28810,7 +28810,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] is now downloading your update and uploading it to the servers specified in the previous step.
+        ///   Looks up a localized string similar to [vGate Console] is now downloading your update and uploading it to the servers specified in the previous step.
         ///Please wait for these operations to complete, then click Next to continue with the installation..
         /// </summary>
         public static string PATCHINGWIZARD_UPLOADPAGE_MESSAGE_DOWNLOAD_AND_UPLOAD {
@@ -28820,7 +28820,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] is now uploading your update to the servers specified in the previous step.
+        ///   Looks up a localized string similar to [vGate Console] is now uploading your update to the servers specified in the previous step.
         ///Please wait for this operation to complete, then click Next to continue with the installation..
         /// </summary>
         public static string PATCHINGWIZARD_UPLOADPAGE_MESSAGE_ONLY_UPLOAD {
@@ -28920,7 +28920,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [Citrix] [XenServer product] Per-&amp;Socket ({0} required).
+        ///   Looks up a localized string similar to [Halsign] [vGate product] Per-&amp;Socket ({0} required).
         /// </summary>
         public static string PERSOCKET_LICENSES_X_REQUIRED {
             get {
@@ -29064,7 +29064,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installing [XenServer].
+        ///   Looks up a localized string similar to Installing [vGate].
         /// </summary>
         public static string PLAN_ACTION_STATUS_INSTALLING_XENSERVER {
             get {
@@ -29264,7 +29264,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adjust settings for plugins to [XenCenter].
+        ///   Looks up a localized string similar to Adjust settings for plugins to [vGate Console].
         /// </summary>
         public static string PLUGINS_DESC {
             get {
@@ -29581,7 +29581,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pool partially upgraded to [XenServer] {0}.
+        ///   Looks up a localized string similar to Pool partially upgraded to [vGate] {0}.
         /// </summary>
         public static string POOL_VERSIONS_LINK_TEXT {
             get {
@@ -29815,7 +29815,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The use of StorageLink SRs was removed in [XenServer]. Remove StorageLink SRs before upgrading..
+        ///   Looks up a localized string similar to The use of StorageLink SRs was removed in [vGate]. Remove StorageLink SRs before upgrading..
         /// </summary>
         public static string PROBLEM_UNSUPPORTED_STORAGELINK_SR {
             get {
@@ -29851,7 +29851,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please insert the [XenServer] CD into the physical drive on server &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Please insert the [vGate] CD into the physical drive on server &apos;{0}&apos;.
         ///Press OK to continue the wizard and return to the server and follow the instructions on screen..
         /// </summary>
         public static string PROMPT_XS_CD {
@@ -29960,7 +29960,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools not installed.
+        ///   Looks up a localized string similar to [vGate product] Tools not installed.
         /// </summary>
         public static string PV_DRIVERS_NOT_INSTALLED {
             get {
@@ -29969,7 +29969,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools out of date (version {0} installed).
+        ///   Looks up a localized string similar to [vGate product] Tools out of date (version {0} installed).
         /// </summary>
         public static string PV_DRIVERS_OUT_OF_DATE {
             get {
@@ -29978,7 +29978,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools out of date.
+        ///   Looks up a localized string similar to [vGate product] Tools out of date.
         /// </summary>
         public static string PV_DRIVERS_OUT_OF_DATE_UNKNOWN_VERSION {
             get {
@@ -31357,7 +31357,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Backup file loaded to server &apos;{0}&apos;.  Refer to the &quot;[XenServer product] Administrator&apos;s Guide&quot; for instructions on how to complete the restore procedure..
+        ///   Looks up a localized string similar to Backup file loaded to server &apos;{0}&apos;.  Refer to the &quot;[vGate product] Administrator&apos;s Guide&quot; for instructions on how to complete the restore procedure..
         /// </summary>
         public static string RESTORE_FROM_BACKUP_FINALIZE {
             get {
@@ -31773,13 +31773,13 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To install the [XenServer] upgrade on {0}, follow these steps:
+        ///   Looks up a localized string similar to To install the [vGate] upgrade on {0}, follow these steps:
         ///    
-        ///1. Insert the [XenServer] installation CD-ROM in the server’s CD/DVD drive or set up a PXE network boot.
+        ///1. Insert the [vGate] installation CD-ROM in the server’s CD/DVD drive or set up a PXE network boot.
         ///2. Click the Reboot Now button below to reboot the server and begin the installation.
         ///3. Go to the server’s console and follow the on-screen instructions to install the upgrade.
         ///
-        ///To skip this server and continue to the next server in the pool, click Skip This Server. Note that running a pool with servers on different versions of [X [rest of string was truncated]&quot;;.
+        ///To skip this server and continue to the next server in the pool, click Skip This Server. Note that running a pool with servers on different versions of [vGate] is [rest of string was truncated]&quot;;.
         /// </summary>
         public static string ROLLING_UPGRADE_REBOOT_MESSAGE {
             get {
@@ -31833,7 +31833,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos;: New versions of [XenServer] require new licenses to be added to your license server..
+        ///   Looks up a localized string similar to &apos;{0}&apos;: New versions of [vGate] require new licenses to be added to your license server..
         /// </summary>
         public static string RPU_WARNING_DESCRIPTION_CLEARWATER_OR_GREATER {
             get {
@@ -31851,7 +31851,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos;: VM Protection Policies were removed in [XenServer] [BRANDING_VERSION_6_2].
+        ///   Looks up a localized string similar to &apos;{0}&apos;: VM Protection Policies were removed in [vGate] [BRANDING_VERSION_6_2].
         /// </summary>
         public static string RPU_WIZARD_VMPR_VMPP_DEPRECATION {
             get {
@@ -31860,7 +31860,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos;: The use of WSS servers was removed in [XenServer] [BRANDING_VERSION_6_2].
+        ///   Looks up a localized string similar to &apos;{0}&apos;: The use of WSS servers was removed in [vGate] [BRANDING_VERSION_6_2].
         /// </summary>
         public static string RPU_WIZARD_WSS_DEPRECATED {
             get {
@@ -32373,7 +32373,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Different versions of [XenServer] must be licensed separately.
+        ///   Looks up a localized string similar to Different versions of [vGate] must be licensed separately.
         /// </summary>
         public static string SELECTION_CANNOT_BE_MIXED_FOR_LICENSING {
             get {
@@ -32391,7 +32391,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This server is using an API that is incompatible with [XenCenter]..
+        ///   Looks up a localized string similar to This server is using an API that is incompatible with [vGate Console]..
         /// </summary>
         public static string SERVER_API_INCOMPATIBLE {
             get {
@@ -32427,7 +32427,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Out of Date.
+        ///   Looks up a localized string similar to [vGate] Out of Date.
         /// </summary>
         public static string SERVER_OUT_OF_DATE {
             get {
@@ -32508,7 +32508,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This version of [XenCenter] supports [XenServer] [BRANDING_VERSION_6_0] onwards..
+        ///   Looks up a localized string similar to This version of [vGate Console] supports [vGate] [BRANDING_VERSION_6_0] onwards..
         /// </summary>
         public static string SERVER_TOO_OLD {
             get {
@@ -32517,7 +32517,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use an earlier version of [XenCenter] to manage this server..
+        ///   Looks up a localized string similar to Use an earlier version of [vGate Console] to manage this server..
         /// </summary>
         public static string SERVER_TOO_OLD_SOLUTION {
             get {
@@ -33292,7 +33292,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] build number.
+        ///   Looks up a localized string similar to [vGate] build number.
         /// </summary>
         public static string SOFTWARE_VERSION_BUILD_NUMBER {
             get {
@@ -33301,7 +33301,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] build date.
+        ///   Looks up a localized string similar to [vGate] build date.
         /// </summary>
         public static string SOFTWARE_VERSION_DATE {
             get {
@@ -33310,7 +33310,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] version.
+        ///   Looks up a localized string similar to [vGate] version.
         /// </summary>
         public static string SOFTWARE_VERSION_PRODUCT_VERSION {
             get {
@@ -33355,7 +33355,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check that the proxy server on &apos;{0}&apos; is configured correctly and [XenCenter]&apos;s connection settings are correct and try again..
+        ///   Looks up a localized string similar to Check that the proxy server on &apos;{0}&apos; is configured correctly and [vGate Console]&apos;s connection settings are correct and try again..
         /// </summary>
         public static string SOLUTION_CHECK_PROXY {
             get {
@@ -33364,7 +33364,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check that [XenServer] is configured correctly on &apos;{0}&apos; and try again..
+        ///   Looks up a localized string similar to Check that [vGate] is configured correctly on &apos;{0}&apos; and try again..
         /// </summary>
         public static string SOLUTION_CHECK_XENSERVER {
             get {
@@ -33409,7 +33409,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Some errors were encountered. See the [XenCenter] log for more information..
+        ///   Looks up a localized string similar to Some errors were encountered. See the [vGate Console] log for more information..
         /// </summary>
         public static string SOME_ERRORS_ENCOUNTERED {
             get {
@@ -33454,7 +33454,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This SR cannot be destroyed with [XenCenter]..
+        ///   Looks up a localized string similar to This SR cannot be destroyed with [vGate Console]..
         /// </summary>
         public static string SR_CANNOT_BE_DESTROYED_WITH_XC {
             get {
@@ -33463,7 +33463,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This SR cannot be detached with [XenCenter]..
+        ///   Looks up a localized string similar to This SR cannot be detached with [vGate Console]..
         /// </summary>
         public static string SR_CANNOT_BE_DETACHED_WITH_XC {
             get {
@@ -33472,7 +33472,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This SR cannot be forgotten with [XenCenter]..
+        ///   Looks up a localized string similar to This SR cannot be forgotten with [vGate Console]..
         /// </summary>
         public static string SR_CANNOT_BE_FORGOTTEN_WITH_XC {
             get {
@@ -33835,7 +33835,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] &amp;Standard Per-Socket ({0} required).
+        ///   Looks up a localized string similar to [vGate product] &amp;Standard Per-Socket ({0} required).
         /// </summary>
         public static string STANDARD_PERSOCKET_LICENSES_X_REQUIRED {
             get {
@@ -34078,7 +34078,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter your MyCitrix credentials (see {0}). These credentials will only be used to authenticate with [Citrix] Insight Services once and will not be stored on this machine or on your server..
+        ///   Looks up a localized string similar to Enter your MyCitrix credentials (see {0}). These credentials will only be used to authenticate with [Halsign] Insight Services once and will not be stored on this machine or on your server..
         /// </summary>
         public static string STATUS_REPORT_ENTER_CREDENTIALS_MESSAGE {
             get {
@@ -34422,7 +34422,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to {0}
         ///
-        ///Refer to the &quot;[XenServer product] Administrator&apos;s Guide&quot; for instructions on how to manually install a supplemental pack on a server..
+        ///Refer to the &quot;[vGate product] Administrator&apos;s Guide&quot; for instructions on how to manually install a supplemental pack on a server..
         /// </summary>
         public static string SUPP_PACK_INSTALL_FAILED_MORE_INFO {
             get {
@@ -34710,7 +34710,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools: Not present.
+        ///   Looks up a localized string similar to [vGate product] Tools: Not present.
         /// </summary>
         public static string TEMPLATE_INFO_TOOLSNOTPRESENT {
             get {
@@ -34719,7 +34719,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools: Out of date (version {0}.{1} installed).
+        ///   Looks up a localized string similar to [vGate product] Tools: Out of date (version {0}.{1} installed).
         /// </summary>
         public static string TEMPLATE_INFO_TOOLSOLD {
             get {
@@ -34728,7 +34728,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools: Up to date.
+        ///   Looks up a localized string similar to [vGate product] Tools: Up to date.
         /// </summary>
         public static string TEMPLATE_INFO_TOOLSUPTODATE {
             get {
@@ -35052,7 +35052,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disks cannot be activated or deactivated from running VMs without [XenServer product] Tools installed.
+        ///   Looks up a localized string similar to Disks cannot be activated or deactivated from running VMs without [vGate product] Tools installed.
         /// </summary>
         public static string TOOLTIP_DEACTIVATE_VDI_NEED_TOOLS {
             get {
@@ -35097,7 +35097,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disks cannot be deleted from running VMs without [XenServer product] Tools installed.
+        ///   Looks up a localized string similar to Disks cannot be deleted from running VMs without [vGate product] Tools installed.
         /// </summary>
         public static string TOOLTIP_DELETE_VDI_NEED_TOOLS {
             get {
@@ -35133,7 +35133,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disks cannot be removed from running VMs without [XenServer product] Tools installed.
+        ///   Looks up a localized string similar to Disks cannot be removed from running VMs without [vGate product] Tools installed.
         /// </summary>
         public static string TOOLTIP_DETACH_VDI_NEED_TOOLS {
             get {
@@ -35151,7 +35151,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools must be installed to edit a network on a running VM.
+        ///   Looks up a localized string similar to [vGate product] Tools must be installed to edit a network on a running VM.
         /// </summary>
         public static string TOOLTIP_EDIT_NETWORK_TOOLS {
             get {
@@ -35178,7 +35178,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] only supports {0} NICs per Bond..
+        ///   Looks up a localized string similar to [vGate] only supports {0} NICs per Bond..
         /// </summary>
         public static string TOOLTIP_NICS_PER_BOND_LIMIT {
             get {
@@ -35205,7 +35205,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools must be installed to remove a network on a running VM.
+        ///   Looks up a localized string similar to [vGate product] Tools must be installed to remove a network on a running VM.
         /// </summary>
         public static string TOOLTIP_REMOVE_NETWORK_TOOLS {
             get {
@@ -35385,7 +35385,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] was unable to import a saved search from file &apos;{0}&apos;.
+        ///   Looks up a localized string similar to [vGate Console] was unable to import a saved search from file &apos;{0}&apos;.
         ///
         ///Verify that the file is a valid {1} export..
         /// </summary>
@@ -35396,7 +35396,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] will uncompress the file to &apos;{0}&apos;. After uncompression the original file &apos;{1}&apos; will be deleted. Continue?.
+        ///   Looks up a localized string similar to [vGate Console] will uncompress the file to &apos;{0}&apos;. After uncompression the original file &apos;{1}&apos; will be deleted. Continue?.
         /// </summary>
         public static string UNCOMPRESS_APPLIANCE_DESCRIPTION {
             get {
@@ -35645,7 +35645,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatically check for [XenServer] or [XenCenter] updates.
+        ///   Looks up a localized string similar to Automatically check for [vGate] or [vGate Console] updates.
         /// </summary>
         public static string UPDATES_DESC {
             get {
@@ -36208,7 +36208,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The VM {0} does not have [XenServer product] Tools installed..
+        ///   Looks up a localized string similar to The VM {0} does not have [vGate product] Tools installed..
         /// </summary>
         public static string UPDATES_WIZARD_NO_TOOLS {
             get {
@@ -36244,7 +36244,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The VM {0} cannot be suspended until it has up to date [XenServer product] Tools..
+        ///   Looks up a localized string similar to The VM {0} cannot be suspended until it has up to date [vGate product] Tools..
         /// </summary>
         public static string UPDATES_WIZARD_OUT_OF_DATE_TOOLS {
             get {
@@ -36885,7 +36885,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Active Directory.  Active Directory allows you to configure [XenServer] access control by adding named user accounts..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Active Directory.  Active Directory allows you to configure [vGate] access control by adding named user accounts..
         /// </summary>
         public static string UPSELL_BLURB_AD {
             get {
@@ -36896,7 +36896,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Active Directory feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Active Directory feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_AD_MORE {
             get {
@@ -36905,7 +36905,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Alerting and Reporting capabilities. Email based performance and error alerting will proactively notify administrators of error conditions or performance problems before they affect critical services..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Alerting and Reporting capabilities. Email based performance and error alerting will proactively notify administrators of error conditions or performance problems before they affect critical services..
         /// </summary>
         public static string UPSELL_BLURB_ALERTS {
             get {
@@ -36916,7 +36916,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Alerting and Reporting feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Alerting and Reporting feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_ALERTS_MORE {
             get {
@@ -36936,7 +36936,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable VM live migration. This feature enables you to migrate running VMs on shared or local storage between servers in the same pool or across pools with no VM downtime. .
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable VM live migration. This feature enables you to migrate running VMs on shared or local storage between servers in the same pool or across pools with no VM downtime. .
         /// </summary>
         public static string UPSELL_BLURB_CPM {
             get {
@@ -36947,7 +36947,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Cross-Pool Migration feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Cross-Pool Migration feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_CPM_MORE {
             get {
@@ -36956,7 +36956,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Heterogeneous Pools. Heterogeneous Pools allows hosts with different CPUs to form a resource pool, and allows virtual machines to migrate between them..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Heterogeneous Pools. Heterogeneous Pools allows hosts with different CPUs to form a resource pool, and allows virtual machines to migrate between them..
         /// </summary>
         public static string UPSELL_BLURB_CPUMASKING {
             get {
@@ -36967,7 +36967,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Heterogeneous Pools feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Heterogeneous Pools feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_CPUMASKING_MORE {
             get {
@@ -36976,7 +36976,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Dynamic Memory Control.  Dynamic Memory Control allows [XenServer] to adjust the memory of live virtual machines, and respond dynamically to changing demands on the host server..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Dynamic Memory Control.  Dynamic Memory Control allows [vGate] to adjust the memory of live virtual machines, and respond dynamically to changing demands on the host server..
         /// </summary>
         public static string UPSELL_BLURB_DMC {
             get {
@@ -36987,7 +36987,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Dynamic Memory Control feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Dynamic Memory Control feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_DMC_MORE {
             get {
@@ -36996,7 +36996,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Disaster Recovery. The Disaster Recovery feature allows you to recover your critical VMs and vApps at your DR site in the event of a disaster at your primary production site..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Disaster Recovery. The Disaster Recovery feature allows you to recover your critical VMs and vApps at your DR site in the event of a disaster at your primary production site..
         /// </summary>
         public static string UPSELL_BLURB_DR {
             get {
@@ -37007,7 +37007,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Disaster Recovery feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Disaster Recovery feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_DR_MORE {
             get {
@@ -37016,7 +37016,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable StorageLink™ Technology. StorageLink allows [XenServer] to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware&apos;s native features..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable StorageLink™ Technology. StorageLink allows [vGate] to leverage all the power of your existing storage hardware and offload storage operations automatically. This allows for high performance and space efficient storage provisioning, cloning, and snapshot capabilities to be handled in hardware using your storage hardware&apos;s native features..
         /// </summary>
         public static string UPSELL_BLURB_ENHANCEDSR {
             get {
@@ -37025,7 +37025,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable GPU pass-through. The GPU pass-through feature allows you to assign a dedicated graphics processing unit to a VM for higher graphics performance..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable GPU pass-through. The GPU pass-through feature allows you to assign a dedicated graphics processing unit to a VM for higher graphics performance..
         /// </summary>
         public static string UPSELL_BLURB_GPU {
             get {
@@ -37036,7 +37036,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] GPU pass-through feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] GPU pass-through feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_GPU_MORE {
             get {
@@ -37045,7 +37045,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable High Availability. High Availability allows virtual machines to be automatically restarted in the event of an underlying hardware failure or individual VM failure. If the server fails the VMs will be intelligently restarted on other virtualized servers in the resource pool..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable High Availability. High Availability allows virtual machines to be automatically restarted in the event of an underlying hardware failure or individual VM failure. If the server fails the VMs will be intelligently restarted on other virtualized servers in the resource pool..
         /// </summary>
         public static string UPSELL_BLURB_HA {
             get {
@@ -37056,7 +37056,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] High Availability feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] High Availability feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_HA_MORE {
             get {
@@ -37065,7 +37065,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Performance Reporting capabilities. Performance Reporting provides guidance on overall environment performance trends and enables you to accurately plan capacity as business needs change..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Performance Reporting capabilities. Performance Reporting provides guidance on overall environment performance trends and enables you to accurately plan capacity as business needs change..
         /// </summary>
         public static string UPSELL_BLURB_PERFORMANCE {
             get {
@@ -37076,7 +37076,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Performance Reporting capabilities feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Performance Reporting capabilities feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_PERFORMANCE_MORE {
             get {
@@ -37085,7 +37085,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Role Based Access Control. Using the RBAC feature, you will be able to control access to vital components in your [XenServer] resource pools, with full audit logging capabilities and seamless integration with your current Active Directory setup..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Role Based Access Control. Using the RBAC feature, you will be able to control access to vital components in your [vGate] resource pools, with full audit logging capabilities and seamless integration with your current Active Directory setup..
         /// </summary>
         public static string UPSELL_BLURB_RBAC {
             get {
@@ -37096,7 +37096,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Role Based Access Control feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Role Based Access Control feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_RBAC_MORE {
             get {
@@ -37114,7 +37114,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable vApps. The vApps feature allows you to place your VMs into groups, allowing them to be started or stopped as a unit, and also allowing them to be easily recovered at your DR site in the event of a disaster at your primary production site..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable vApps. The vApps feature allows you to place your VMs into groups, allowing them to be started or stopped as a unit, and also allowing them to be easily recovered at your DR site in the event of a disaster at your primary production site..
         /// </summary>
         public static string UPSELL_BLURB_VM_APPLIANCES {
             get {
@@ -37125,7 +37125,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the vApps feature of [XenServer] or to start a [XenServer] trial, click the button below..
+        ///To learn more about the vApps feature of [vGate] or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_VM_APPLIANCES_MORE {
             get {
@@ -37134,7 +37134,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable VM Protection and Recovery. VM Protection and Recovery allows you to protect your critical VMs by scheduling automatic snapshots, and optionally, archiving those snapshots to a CIFS or NFS share..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable VM Protection and Recovery. VM Protection and Recovery allows you to protect your critical VMs by scheduling automatic snapshots, and optionally, archiving those snapshots to a CIFS or NFS share..
         /// </summary>
         public static string UPSELL_BLURB_VM_PROTECTION {
             get {
@@ -37145,7 +37145,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] VM Protection and Recovery feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] VM Protection and Recovery feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_VM_PROTECTION_MORE {
             get {
@@ -37154,7 +37154,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable VM Scheduled Snapshots. VM Scheduled Snapshost allows you to create automatic snapshots for your critical VMs..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable VM Scheduled Snapshots. VM Scheduled Snapshost allows you to create automatic snapshots for your critical VMs..
         /// </summary>
         public static string UPSELL_BLURB_VMSS {
             get {
@@ -37165,7 +37165,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] VM Scheduled Snapshots feature or to start a XenServer trial, click the button below..
+        ///To learn more about the [vGate] VM Scheduled Snapshots feature or to start a XenServer trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_VMSS_MORE {
             get {
@@ -37174,7 +37174,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrade your [XenServer] license to enable Dynamic Workload Balancing. Dynamic Workload Balancing continually profiles your virtual machines’ and [XenServer] hosts’ performance and will intelligently rebalance and optimally place new workloads to ensure the best use of physical server resources in your resource pool..
+        ///   Looks up a localized string similar to Upgrade your [vGate] license to enable Dynamic Workload Balancing. Dynamic Workload Balancing continually profiles your virtual machines’ and [vGate] hosts’ performance and will intelligently rebalance and optimally place new workloads to ensure the best use of physical server resources in your resource pool..
         /// </summary>
         public static string UPSELL_BLURB_WLB {
             get {
@@ -37185,7 +37185,7 @@ namespace XenAdmin {
         /// <summary>
         ///   Looks up a localized string similar to 
         ///
-        ///To learn more about the [XenServer] Dynamic Workload Balancing feature or to start a [XenServer] trial, click the button below..
+        ///To learn more about the [vGate] Dynamic Workload Balancing feature or to start a [vGate] trial, click the button below..
         /// </summary>
         public static string UPSELL_BLURB_WLB_MORE {
             get {
@@ -37239,7 +37239,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] was unable to authorize the action as {0}. See the application log files for more information..
+        ///   Looks up a localized string similar to [vGate Console] was unable to authorize the action as {0}. See the application log files for more information..
         /// </summary>
         public static string USER_AUTHORIZATION_FAILED {
             get {
@@ -39704,7 +39704,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurd when WLB  establish a session with [XenServer]..
+        ///   Looks up a localized string similar to An error occurd when WLB  establish a session with [vGate]..
         /// </summary>
         public static string WLB_ERROR_4001 {
             get {
@@ -39713,7 +39713,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB could not log into [XenServer]. It could be due to invalid credentials..
+        ///   Looks up a localized string similar to WLB could not log into [vGate]. It could be due to invalid credentials..
         /// </summary>
         public static string WLB_ERROR_4002 {
             get {
@@ -39722,7 +39722,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB cannot connect to [XenServer]. It could be the [XenServer] being offline or an incorrect TCP/IP address..
+        ///   Looks up a localized string similar to WLB cannot connect to [vGate]. It could be the [vGate] being offline or an incorrect TCP/IP address..
         /// </summary>
         public static string WLB_ERROR_4003 {
             get {
@@ -39731,7 +39731,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB received a null argument from [XenServer], which is not allowed..
+        ///   Looks up a localized string similar to WLB received a null argument from [vGate], which is not allowed..
         /// </summary>
         public static string WLB_ERROR_4004 {
             get {
@@ -39749,7 +39749,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB received an invalid argument from [XenServer]..
+        ///   Looks up a localized string similar to WLB received an invalid argument from [vGate]..
         /// </summary>
         public static string WLB_ERROR_4007 {
             get {
@@ -39758,7 +39758,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB data collection service cannot retrieve [XenServer] data..
+        ///   Looks up a localized string similar to WLB data collection service cannot retrieve [vGate] data..
         /// </summary>
         public static string WLB_ERROR_4008 {
             get {
@@ -39776,7 +39776,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB received an invalid operation from [XenServer]..
+        ///   Looks up a localized string similar to WLB received an invalid operation from [vGate]..
         /// </summary>
         public static string WLB_ERROR_4010 {
             get {
@@ -39785,7 +39785,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB received an out of range argument from [XenServer]..
+        ///   Looks up a localized string similar to WLB received an out of range argument from [vGate]..
         /// </summary>
         public static string WLB_ERROR_4011 {
             get {
@@ -39875,7 +39875,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WLB could not connect to [XenServer] because the supplied credentials were invalid..
+        ///   Looks up a localized string similar to WLB could not connect to [vGate] because the supplied credentials were invalid..
         /// </summary>
         public static string WLB_ERROR_4021 {
             get {
@@ -39902,7 +39902,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] cannot connect to the WLB Server with the supplied WLB Server credentials..
+        ///   Looks up a localized string similar to [vGate] cannot connect to the WLB Server with the supplied WLB Server credentials..
         /// </summary>
         public static string WLB_ERROR_5 {
             get {
@@ -39911,7 +39911,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The user WLB uses to connect to [XenServer] either doesn&apos;t have sufficient privileges or doesn&apos;t have access to [XenServer]. Please re-initialize WLB with an valid user..
+        ///   Looks up a localized string similar to The user WLB uses to connect to [vGate] either doesn&apos;t have sufficient privileges or doesn&apos;t have access to [vGate]. Please re-initialize WLB with an valid user..
         /// </summary>
         public static string WLB_ERROR_6 {
             get {
@@ -40430,7 +40430,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The stored [XenServer] credentials are no longer valid.  Please update the connection settings for Workload Balancing..
+        ///   Looks up a localized string similar to The stored [vGate] credentials are no longer valid.  Please update the connection settings for Workload Balancing..
         /// </summary>
         public static string WLB_RECONFIGURE_CREDS {
             get {
@@ -41539,7 +41539,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter].
+        ///   Looks up a localized string similar to [vGate Console].
         /// </summary>
         public static string XENCENTER {
             get {
@@ -41548,7 +41548,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenCenter] Settings|*.config.
+        ///   Looks up a localized string similar to [vGate Console] Settings|*.config.
         /// </summary>
         public static string XENCENTER_CONFIG_FILTER {
             get {
@@ -41557,7 +41557,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Newer [XenCenter] Available.
+        ///   Looks up a localized string similar to Newer [vGate Console] Available.
         /// </summary>
         public static string XENCENTER_NEWER_AVAILABLE {
             get {
@@ -41575,7 +41575,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer].
+        ///   Looks up a localized string similar to [vGate].
         /// </summary>
         public static string XENSERVER {
             get {
@@ -41584,7 +41584,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] [BRANDING_VERSION_6_2].
+        ///   Looks up a localized string similar to [vGate] [BRANDING_VERSION_6_2].
         /// </summary>
         public static string XENSERVER_6_2 {
             get {
@@ -41593,7 +41593,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] [BRANDING_VERSION_6_5].
+        ///   Looks up a localized string similar to [vGate] [BRANDING_VERSION_6_5].
         /// </summary>
         public static string XENSERVER_6_5 {
             get {
@@ -41602,7 +41602,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Templates.
+        ///   Looks up a localized string similar to [vGate] Templates.
         /// </summary>
         public static string XENSERVER_TEMPLATES {
             get {
@@ -41620,7 +41620,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Backup Files.
+        ///   Looks up a localized string similar to [vGate] Backup Files.
         /// </summary>
         public static string XS_BACKUP_FILES {
             get {
@@ -41629,7 +41629,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] License Files.
+        ///   Looks up a localized string similar to [vGate] License Files.
         /// </summary>
         public static string XS_LICENSE_FILES {
             get {
@@ -41638,7 +41638,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer product] Tools DVDs will now be inserted into the DVD drive of each of the selected VMs. Any disks currently in the drives will be ejected.
+        ///   Looks up a localized string similar to [vGate product] Tools DVDs will now be inserted into the DVD drive of each of the selected VMs. Any disks currently in the drives will be ejected.
         ///
         ///You will need to navigate to the Console on each of the selected VMs to complete the installation..
         /// </summary>
@@ -41649,7 +41649,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The [XenServer product] Tools SR could not be found..
+        ///   Looks up a localized string similar to The [vGate product] Tools SR could not be found..
         /// </summary>
         public static string XS_TOOLS_SR_NOT_FOUND {
             get {
@@ -41658,7 +41658,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [XenServer] Update Files ({0})|{0}|All files ({1})|{1}.
+        ///   Looks up a localized string similar to [vGate] Update Files ({0})|{0}|All files ({1})|{1}.
         /// </summary>
         public static string XSUPDATE {
             get {
