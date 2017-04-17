@@ -535,6 +535,7 @@ namespace XenAdmin
             try
             {
                 Settings.RestoreSession();
+                /***
                 new TransferProxySettingsAction(
                     (HTTPHelper.ProxyStyle)Properties.Settings.Default.ProxySetting,
                     Properties.Settings.Default.ProxyAddress,
@@ -546,6 +547,7 @@ namespace XenAdmin
                     Properties.Settings.Default.ProxyUsername,
                     Properties.Settings.Default.ProxyPassword,
                     (HTTP.ProxyAuthenticationMethod)Properties.Settings.Default.ProxyAuthenticationMethod).RunAsync();
+                **/
             }
             catch (ConfigurationErrorsException ex)
             {
@@ -977,7 +979,7 @@ namespace XenAdmin
 
         public static bool SameProductBrand(Host host)
         {
-            return host.ProductBrand == Branding.PRODUCT_BRAND || Branding.PRODUCT_BRAND == "[XenServer product]";
+            return host.ProductBrand == Branding.PRODUCT_BRAND || Branding.PRODUCT_BRAND == "[vGate product]";
         }
 
         /// <summary>

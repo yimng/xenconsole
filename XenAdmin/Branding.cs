@@ -40,7 +40,7 @@ namespace XenAdmin
     static public class Branding
     {
         public const string PRODUCT_VERSION_TEXT = "6.0";
-        public const string XENCENTER_VERSION = "6.0.0";
+        public const string XENCENTER_VERSION = "6.0.1";
         public const string COMPANY_NAME_LEGAL = "Halsign Corporation";
         public const string BRAND_CONSOLE = "vGate";
         public const string PRODUCT_BRAND = "vGate";
