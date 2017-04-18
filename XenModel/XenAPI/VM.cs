@@ -5526,6 +5526,34 @@ namespace XenAPI
                 }
             }
         }
+        public int VCPUCap
+        {
+            get
+            {
+                if (VCPUs_params != null && VCPUs_params.ContainsKey("cap"))
+                {
+                    int cap;
+                    if (int.TryParse(VCPUs_params["cap"], out cap))
+                        return cap > 0 ? cap : 100;
+                    else
+                        return 100;
+                }
+                else
+                    return 100;
+            }
+            set
+            {
+                if (value != VCPUCap)
+                {
+                    Dictionary<string, string> new_VCPUs_params =
+                        VCPUs_params == null ?
+                            new Dictionary<string, string>() :
+                            new Dictionary<string, string>(VCPUs_params);
+                    new_VCPUs_params["cap"] = value.ToString();
+                    VCPUs_params = new_VCPUs_params;
+                }
+            }
+        }
         private string _reference_label;
     }
 }

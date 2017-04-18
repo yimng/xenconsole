@@ -56,6 +56,8 @@ namespace XenAdmin.SettingsPanels
         private decimal _OrigVCPUWeight;
         private decimal _CurrentVCPUWeight;
         private bool isVcpuHotplugSupported;
+        private decimal _OrigCap;
+        private decimal _CurrentCap;
 
         // Please note that the comboBoxVCPUs control can represent two different VM properties, depending whether the VM supports vCPU hotplug or not: 
         // If vCPU hotplug is supported, comboBoxVCPUs represents the maximum number of vCPUs (VCPUs_max). And the initial number of vCPUs is represented in comboBoxInitialVCPUs (which is only visible in this case) 
@@ -162,6 +164,22 @@ namespace XenAdmin.SettingsPanels
         public void Repopulate()
         {
             VM vm = this.vm;
+            int preCap = vm.VCPUCap;
+            trackBar1.Maximum = Convert.ToInt32(vm.VCPUs_at_startup * 100);
+            trackBar1.Minimum = 50;
+            if (preCap > vm.VCPUs_at_startup * 100)
+            {
+                Dictionary<String, String> setCap = new Dictionary<String, String>();
+                setCap.Add("cap", Convert.ToString(vm.VCPUs_at_startup * 100));
+                XenAPI.VM.set_VCPUs_params(vm.Connection.Session, vm.opaque_ref, setCap);
+                this.trackBar1.Value = Convert.ToInt32(vm.VCPUs_at_startup * 100);
+            }
+            else
+            {
+                this.trackBar1.Value = vm.VCPUCap;
+            }
+            label3.Text = Convert.ToString(trackBar1.Value) + "%";
+            label5.Text = Convert.ToInt32(vm.VCPUs_at_startup * 100) + "%";
 
             Text = ShowMemory ? Messages.CPU_AND_MEMORY : Messages.CPU;
             if (!ShowMemory)
@@ -191,14 +209,14 @@ namespace XenAdmin.SettingsPanels
                 this.nudMemory.Maximum = max;
                 this.nudMemory.Text = (this.nudMemory.Value = value).ToString();
             }
-
+            _CurrentCap = Convert.ToDecimal(vm.VCPUCap);
             Host currentHost = Helpers.GetMaster(this.vm.Connection);
             if (currentHost != null)
             {
                 // Show the performance warning about vCPUs > pCPUs.
                 // Don't show if the VM isn't running, since we don't know which server it will
                 // run on (and so can't count the number of pCPUs).
-                if ( vm.power_state == vm_power_state.Running
+                if (vm.power_state == vm_power_state.Running
                     && vm.VCPUs_at_startup > currentHost.host_CPUs.Count
                     && !vm.IgnoreExcessiveVcpus)
                 {
@@ -229,8 +247,10 @@ namespace XenAdmin.SettingsPanels
 
             _CurrentVCPUWeight = Convert.ToDecimal(vm.VCPUWeight);
 
+            _OrigCap = _CurrentCap;
+
             InitializeVcpuControls();
-            
+
             _ValidToSave = true;
         }
 
@@ -243,7 +263,7 @@ namespace XenAdmin.SettingsPanels
             labelInitialVCPUs.Text = vm.power_state == vm_power_state.Halted
                 ? Messages.VM_CPUMEMPAGE_INITIAL_VCPUS_LABEL
                 : Messages.VM_CPUMEMPAGE_CURRENT_VCPUS_LABEL;
-            
+
             labelInitialVCPUs.Visible = comboBoxInitialVCPUs.Visible = isVcpuHotplugSupported;
             comboBoxInitialVCPUs.Enabled = isVcpuHotplugSupported &&
                                            (vm.power_state == vm_power_state.Halted ||
@@ -316,9 +336,15 @@ namespace XenAdmin.SettingsPanels
 
         public bool HasChanged
         {
-            get { return HasVCPUChanged || HasMemoryChanged || HasTopologyChanged || HasVCPUsAtStartupChanged || HasVCPUWeightChanged; }
+            get { return HasVCPUChanged || HasMemoryChanged || HasTopologyChanged || HasVCPUsAtStartupChanged || HasVCPUWeightChanged||HasCapChanged; }
         }
-
+        private bool HasCapChanged
+        {
+            get
+            {
+                return _OrigCap != trackBar1.Value;
+            }
+        }
         private bool HasMemoryChanged
         {
             get
@@ -383,7 +409,12 @@ namespace XenAdmin.SettingsPanels
             {
                 vm.VCPUWeight = Convert.ToInt32(_CurrentVCPUWeight);
             }
-
+            if (HasCapChanged)
+            {
+                Dictionary<String, String> setCap = new Dictionary<String, String>();
+                setCap.Add("cap", Convert.ToString(trackBar1.Value));
+                XenAPI.VM.set_VCPUs_params(vm.Connection.Session, vm.opaque_ref, setCap);
+            }
             if (HasVCPUChanged || HasVCPUsAtStartupChanged)
             {
                 actions.Add(new ChangeVCPUSettingsAction(vm, SelectedVcpusMax, SelectedVcpusAtStartup));
@@ -393,8 +424,8 @@ namespace XenAdmin.SettingsPanels
             {
                 vm.CoresPerSocket = comboBoxTopology.CoresPerSocket;
             }
-			
-			if (HasMemoryChanged)
+
+            if (HasMemoryChanged)
             {
                 actions.Add(memoryAction);  // Calculated in ValidToSave
             }
@@ -495,7 +526,7 @@ namespace XenAdmin.SettingsPanels
                 // If VcpusAtStartup and VcpusMax are equal, and VcpusMax is changed, then VcpusAtStartup is changed to match
                 // But if the numbers are unequal, and VcpusMax is changed but is still higher than VcpusAtStartup, then VcpusAtStartup is unchanged
                 var newValue = SelectedVcpusAtStartup;
-               
+
                 if (SelectedVcpusMax < SelectedVcpusAtStartup)
                     newValue = SelectedVcpusMax;
                 else if (SelectedVcpusAtStartup == _prevVCPUsMax && SelectedVcpusMax != _prevVCPUsMax)
@@ -515,7 +546,7 @@ namespace XenAdmin.SettingsPanels
                     String.Format(Messages.CPU_SUB, SelectedVcpusAtStartup);
             }
         }
-        
+
         private void comboBoxTopology_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValidateVCPUSettings();
@@ -525,6 +556,11 @@ namespace XenAdmin.SettingsPanels
         {
             if (comboBoxVCPUs.SelectedItem != null)
                 labelInvalidVCPUWarning.Text = VM.ValidVCPUConfiguration((long)comboBoxVCPUs.SelectedItem, comboBoxTopology.CoresPerSocket);
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label3.Text = Convert.ToString(trackBar1.Value) + "%";
         }
     }
 }

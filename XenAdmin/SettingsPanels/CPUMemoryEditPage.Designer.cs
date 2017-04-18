@@ -37,24 +37,33 @@ namespace XenAdmin.SettingsPanels
             this.comboBoxInitialVCPUs = new System.Windows.Forms.ComboBox();
             this.labelInitialVCPUs = new System.Windows.Forms.Label();
             this.labelInvalidVCPUWarning = new System.Windows.Forms.Label();
-            this.comboBoxTopology = new XenAdmin.Controls.CPUTopologyComboBox();
             this.labelTopology = new System.Windows.Forms.Label();
             this.MemWarningLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMB = new System.Windows.Forms.Label();
             this.nudMemory = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.transparentTrackBar1 = new XenAdmin.Controls.TransparentTrackBar();
             this.lblVCPUs = new System.Windows.Forms.Label();
             this.lblVcpuWarning = new System.Windows.Forms.LinkLabel();
             this.lblMemory = new System.Windows.Forms.Label();
             this.VCPUWarningLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxVCPUs = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxTopology = new XenAdmin.Controls.CPUTopologyComboBox();
+            this.transparentTrackBar1 = new XenAdmin.Controls.TransparentTrackBar();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMemory)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSliderHighest
@@ -118,15 +127,6 @@ namespace XenAdmin.SettingsPanels
             this.labelInvalidVCPUWarning.ForeColor = System.Drawing.Color.Red;
             this.labelInvalidVCPUWarning.Name = "labelInvalidVCPUWarning";
             // 
-            // comboBoxTopology
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.comboBoxTopology, 2);
-            this.comboBoxTopology.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxTopology, "comboBoxTopology");
-            this.comboBoxTopology.FormattingEnabled = true;
-            this.comboBoxTopology.Name = "comboBoxTopology";
-            this.comboBoxTopology.SelectedIndexChanged += new System.EventHandler(this.comboBoxTopology_SelectedIndexChanged);
-            // 
             // labelTopology
             // 
             resources.ApplyResources(this.labelTopology, "labelTopology");
@@ -182,13 +182,6 @@ namespace XenAdmin.SettingsPanels
             this.panel1.Controls.Add(this.transparentTrackBar1);
             this.panel1.Name = "panel1";
             // 
-            // transparentTrackBar1
-            // 
-            resources.ApplyResources(this.transparentTrackBar1, "transparentTrackBar1");
-            this.transparentTrackBar1.BackColor = System.Drawing.Color.Transparent;
-            this.transparentTrackBar1.Name = "transparentTrackBar1";
-            this.transparentTrackBar1.TabStop = false;
-            // 
             // lblVCPUs
             // 
             resources.ApplyResources(this.lblVCPUs, "lblVCPUs");
@@ -229,11 +222,71 @@ namespace XenAdmin.SettingsPanels
             this.comboBoxVCPUs.Name = "comboBoxVCPUs";
             this.comboBoxVCPUs.SelectedIndexChanged += new System.EventHandler(this.comboBoxVCPUs_SelectedIndexChanged);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.trackBar1);
+            this.panel3.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // label2
+            // 
+            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // trackBar1
+            // 
+            resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // comboBoxTopology
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.comboBoxTopology, 2);
+            this.comboBoxTopology.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBoxTopology, "comboBoxTopology");
+            this.comboBoxTopology.FormattingEnabled = true;
+            this.comboBoxTopology.Name = "comboBoxTopology";
+            this.comboBoxTopology.SelectedIndexChanged += new System.EventHandler(this.comboBoxTopology_SelectedIndexChanged);
+            // 
+            // transparentTrackBar1
+            // 
+            resources.ApplyResources(this.transparentTrackBar1, "transparentTrackBar1");
+            this.transparentTrackBar1.BackColor = System.Drawing.Color.Transparent;
+            this.transparentTrackBar1.Name = "transparentTrackBar1";
+            this.transparentTrackBar1.TabStop = false;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // CPUMemoryEditPage
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -245,6 +298,9 @@ namespace XenAdmin.SettingsPanels
             ((System.ComponentModel.ISupportInitialize)(this.nudMemory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +329,12 @@ namespace XenAdmin.SettingsPanels
         private System.Windows.Forms.ComboBox comboBoxVCPUs;
         private System.Windows.Forms.ComboBox comboBoxInitialVCPUs;
         private System.Windows.Forms.Label labelInitialVCPUs;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -255,6 +255,7 @@ namespace XenAdmin
             GeneralPage.LicenseLauncher = licenseManagerLauncher;
 
             toolStripSeparator7.Visible = xenSourceOnTheWebToolStripMenuItem.Visible = xenCenterPluginsOnlineToolStripMenuItem.Visible = !HiddenFeatures.ToolStripMenuItemHidden;
+            xenSourceOnTheWebToolStripMenuItem.Visible = xenCenterPluginsOnlineToolStripMenuItem.Visible = false;
             healthCheckToolStripMenuItem1.Visible = !HiddenFeatures.HealthCheckHidden;
         }
 
