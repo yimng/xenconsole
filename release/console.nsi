@@ -197,7 +197,6 @@ Section "Install components..."
   File /r "halsign_host_upgrade.py"
   File /r "BuildInfo"
   File /r "uninstall.ico"
-  File /r "x86\"
   WriteUninstaller "$INSTDIR\uninst.exe"
 
   WriteIniStr "$INSTDIR\${PRODUCT_SUITE}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
