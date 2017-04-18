@@ -2,15 +2,15 @@
 ; Copyright (c) 2008-2010 Halsign, Inc.  All rights reserved.
 ;
 
-!define PRODUCER_NAME      "Halsign"
-!define PRODUCT_SUITE      "Halsign"
-!define PRODUCT_NAME       "vGate Console"
-!define PRODUCT_DIS_VER    "6.0"
+!define PRODUCER_NAME      "START"
+!define PRODUCT_SUITE      "START"
+!define PRODUCT_NAME       "START Console"
+!define PRODUCT_DIS_VER    "6.0.0"
 !define PRODUCT_VERSION    "6.0.0"
-!define PRODUCT_PUBLISHER  "Halsign Corporation."
-!define PRODUCT_WEB_SITE   "http://www.halsign.com"
+!define PRODUCT_PUBLISHER  "START Corporation."
+!define PRODUCT_WEB_SITE   "www.itep.com.cn"
 !define PRODUCT_CODE_KEY   "ProductCode"
-!define PRODUCT_CODE       "vGate Console"
+!define PRODUCT_CODE       "START Console"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define BINARY_DIR         "BinDir"
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "vGateConsole.exe"
+OutFile "StartConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
@@ -150,7 +150,7 @@ Section "Install components..."
   File /r "zh-CN\XenOvfTransport.resources.dll"
   File /r "zh-CN\EULA"
   SetOutPath "$INSTDIR\Help"
-  File /r "Help\${PRODUCT_CODE}.chm"
+  ;File /r "Help\${PRODUCT_CODE}.chm"
   SetOutPath "$INSTDIR\Schemas"
   File /r "Schemas\CIM_OperatingSystem.xml"
   File /r "Schemas\CIM_ResourceAllocationSettingData.xml"
@@ -171,7 +171,7 @@ Section "Install components..."
   File /r ${APP_NAME}
   File /r ${APP_MAIN_NAME}
   File /r "CommandLib.dll"
-  File /r "XencenterLib.dll"
+  File /r "XenCenterLib.dll"
   File /r "CookComputing.XmlRpcV2.dll"
   File /r "DiffieHellman.dll"
   File /r "DiscUtils.dll"
