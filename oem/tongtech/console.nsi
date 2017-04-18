@@ -2,15 +2,15 @@
 ; Copyright (c) 2008-2010 Halsign, Inc.  All rights reserved.
 ;
 
-!define PRODUCER_NAME      "Cloud"
-!define PRODUCT_SUITE      "Cloud"
-!define PRODUCT_NAME       "CloudConsole"
-!define PRODUCT_DIS_VER    "2.2.1"
-!define PRODUCT_VERSION    "2.2.1"
-!define PRODUCT_PUBLISHER  "Cldmind Corporation."
-!define PRODUCT_WEB_SITE   "http://www.cldmind.com"
+!define PRODUCER_NAME      "oCloud"
+!define PRODUCT_SUITE      "oCloud"
+!define PRODUCT_NAME       "oCloud Client"
+!define PRODUCT_DIS_VER    "4.5"
+!define PRODUCT_VERSION    "4.5"
+!define PRODUCT_PUBLISHER  "TongTech Corporation."
+!define PRODUCT_WEB_SITE   "www.tongtech.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
-!define PRODUCT_CODE       "CloudConsole"
+!define PRODUCT_CODE       "oCloud Client"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define BINARY_DIR         "BinDir"
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "CloudConsole.exe"
+OutFile "TongTechConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide

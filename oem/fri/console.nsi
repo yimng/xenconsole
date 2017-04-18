@@ -8,7 +8,7 @@
 !define PRODUCT_DIS_VER    "2.2.1"
 !define PRODUCT_VERSION    "2.2.1"
 !define PRODUCT_PUBLISHER  "Cldmind Corporation."
-!define PRODUCT_WEB_SITE   "http://www.cldmind.com"
+!define PRODUCT_WEB_SITE   "www.fri.com.cn"
 !define PRODUCT_CODE_KEY   "ProductCode"
 !define PRODUCT_CODE       "CloudConsole"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "CloudConsole.exe"
+OutFile "FriConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
