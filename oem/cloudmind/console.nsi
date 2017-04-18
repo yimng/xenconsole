@@ -2,15 +2,15 @@
 ; Copyright (c) 2008-2010 Halsign, Inc.  All rights reserved.
 ;
 
-!define PRODUCER_NAME      "Halsign"
-!define PRODUCT_SUITE      "Halsign"
-!define PRODUCT_NAME       "Halsign Console"
-!define PRODUCT_DIS_VER    "6.0.1"
-!define PRODUCT_VERSION    "6.0.1"
-!define PRODUCT_PUBLISHER  "Halsign Corporation."
-!define PRODUCT_WEB_SITE   "www.halsign.com"
+!define PRODUCER_NAME      "Cloud"
+!define PRODUCT_SUITE      "Cloud"
+!define PRODUCT_NAME       "CloudConsole"
+!define PRODUCT_DIS_VER    "2.2.1"
+!define PRODUCT_VERSION    "2.2.1"
+!define PRODUCT_PUBLISHER  "Cldmind Corporation."
+!define PRODUCT_WEB_SITE   "http://www.cldmind.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
-!define PRODUCT_CODE       "Halsign Console"
+!define PRODUCT_CODE       "CloudConsole"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_CODE}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define BINARY_DIR         "BinDir"
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "п╤ть"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "vGateConsole.exe"
+OutFile "CloudConsole.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
@@ -171,7 +171,7 @@ Section "Install components..."
   File /r ${APP_NAME}
   File /r ${APP_MAIN_NAME}
   File /r "CommandLib.dll"
-  File /r "XenCenterLib.dll"
+  File /r "ConsoleLib.dll"
   File /r "CookComputing.XmlRpcV2.dll"
   File /r "DiffieHellman.dll"
   File /r "DiscUtils.dll"
@@ -197,6 +197,7 @@ Section "Install components..."
   File /r "halsign_host_upgrade.py"
   File /r "BuildInfo"
   File /r "uninstall.ico"
+  File /r "x86\"
   WriteUninstaller "$INSTDIR\uninst.exe"
 
   WriteIniStr "$INSTDIR\${PRODUCT_SUITE}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
