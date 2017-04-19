@@ -961,7 +961,9 @@ namespace XenAPI
         {
             get
             {
-                return BoolKey(other_config, HIDE_FROM_XENCENTER);
+                return is_a_real_vm
+                           ? false
+                           : BoolKey(other_config, HIDE_FROM_XENCENTER);
             }
         }
 
