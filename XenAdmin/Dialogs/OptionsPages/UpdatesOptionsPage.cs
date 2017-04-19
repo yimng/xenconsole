@@ -91,7 +91,7 @@ namespace XenAdmin.Dialogs.OptionsPages
 
             if(refreshUpdatesTab)
             {
-                Updates.CheckForUpdates(false, true);
+              Updates.CheckForUpdates(false, true);
             }
         }
 

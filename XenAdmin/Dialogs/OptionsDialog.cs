@@ -62,6 +62,7 @@ namespace XenAdmin.Dialogs
 
             if (Helpers.CommonCriteriaCertificationRelease)
                 verticalTabs.Items.Remove(updatesOptionsPage1);
+                verticalTabs.Items.Remove(pluginOptionsPage1);
         }
 
         private void okButton_Click(object sender, EventArgs e)
