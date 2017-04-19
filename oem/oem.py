@@ -27,6 +27,8 @@ cf = open(corpconf, encoding='utf-8')
 for kv in cf:
     if kv.startswith('#'):
         continue
+    if kv =="":
+        continue
     (k, v) = kv.split('=')
     old.append(k)
     new.append(v.rstrip())
