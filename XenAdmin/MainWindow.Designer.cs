@@ -97,7 +97,7 @@ namespace XenAdmin
             this.TabPagevSwitchController = new System.Windows.Forms.TabPage();
             this.TabPageSCUpsell = new System.Windows.Forms.TabPage();
             this.alertPage = new XenAdmin.TabPages.AlertSummaryPage();
-            this.updatesPage = new XenAdmin.TabPages.ManageUpdatesPage();
+            //this.updatesPage = new XenAdmin.TabPages.ManageUpdatesPage();
             this.eventsPage = new XenAdmin.TabPages.HistoryPage();
             this.TitleBackPanel = new XenAdmin.Controls.GradientPanel.GradientPanel();
             this.TitleIcon = new System.Windows.Forms.PictureBox();
@@ -331,7 +331,7 @@ namespace XenAdmin
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.Controls.Add(this.TheTabControl);
             this.splitContainer1.Panel2.Controls.Add(this.alertPage);
-            this.splitContainer1.Panel2.Controls.Add(this.updatesPage);
+            //this.splitContainer1.Panel2.Controls.Add(this.updatesPage);
             this.splitContainer1.Panel2.Controls.Add(this.eventsPage);
             this.splitContainer1.Panel2.Controls.Add(this.TitleBackPanel);
             resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
@@ -575,9 +575,9 @@ namespace XenAdmin
             // 
             // updatesPage
             // 
-            resources.ApplyResources(this.updatesPage, "updatesPage");
-            this.updatesPage.BackColor = System.Drawing.SystemColors.Window;
-            this.updatesPage.Name = "updatesPage";
+            //resources.ApplyResources(this.updatesPage, "updatesPage");
+            //this.updatesPage.BackColor = System.Drawing.SystemColors.Window;
+            //this.updatesPage.Name = "updatesPage";
             // 
             // eventsPage
             // 
@@ -2214,7 +2214,7 @@ namespace XenAdmin
         private CommandToolStripMenuItem restartToolstackToolStripMenuItem;
         private XenAdmin.Controls.MainWindowControls.NavigationPane navigationPane;
         private XenAdmin.TabPages.AlertSummaryPage alertPage;
-        private XenAdmin.TabPages.ManageUpdatesPage updatesPage;
+        //private XenAdmin.TabPages.ManageUpdatesPage updatesPage;
         private XenAdmin.TabPages.HistoryPage eventsPage;
         private ToolStripMenuItem customTemplatesToolStripMenuItem;
         private ToolStripMenuItem templatesToolStripMenuItem1;
