@@ -38,7 +38,6 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.TimeOutLabel = new System.Windows.Forms.Label();
             this.ProxyGroupBox = new XenAdmin.Controls.DecentGroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BasicRadioButton = new System.Windows.Forms.RadioButton();
             this.BypassForServersCheckbox = new System.Windows.Forms.CheckBox();
             this.ProxyPasswordTextBox = new System.Windows.Forms.TextBox();
             this.ProxyUsernameLabel = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.AuthenticationMethodLabel = new System.Windows.Forms.Label();
             this.AuthenticationMethodPanel = new System.Windows.Forms.Panel();
             this.DigestRadioButton = new System.Windows.Forms.RadioButton();
+            this.BasicRadioButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.ConnectionTableLayoutPanel.SuspendLayout();
             this.TimeoutGroupBox.SuspendLayout();
@@ -62,6 +62,7 @@ namespace XenAdmin.Dialogs.OptionsPages
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionTimeoutNud)).BeginInit();
             this.ProxyGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.AuthenticationMethodPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConnectionTableLayoutPanel
@@ -133,7 +134,6 @@ namespace XenAdmin.Dialogs.OptionsPages
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.BasicRadioButton, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.BypassForServersCheckbox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.ProxyPasswordTextBox, 7, 6);
             this.tableLayoutPanel1.Controls.Add(this.ProxyUsernameLabel, 2, 6);
@@ -148,16 +148,8 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.tableLayoutPanel1.Controls.Add(this.ProxyPortTextBox, 7, 3);
             this.tableLayoutPanel1.Controls.Add(this.ProxyPortLabel, 6, 3);
             this.tableLayoutPanel1.Controls.Add(this.AuthenticationMethodLabel, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.AuthenticationMethodPanel, 2, 11);
-            this.tableLayoutPanel1.Controls.Add(this.DigestRadioButton, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.AuthenticationMethodPanel, 5, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // BasicRadioButton
-            // 
-            resources.ApplyResources(this.BasicRadioButton, "BasicRadioButton");
-            this.BasicRadioButton.Name = "BasicRadioButton";
-            this.BasicRadioButton.UseVisualStyleBackColor = true;
-            this.BasicRadioButton.CheckedChanged += new System.EventHandler(this.ProxyAuthenticationSettingsChanged);
             // 
             // BypassForServersCheckbox
             // 
@@ -259,6 +251,8 @@ namespace XenAdmin.Dialogs.OptionsPages
             // 
             resources.ApplyResources(this.AuthenticationMethodPanel, "AuthenticationMethodPanel");
             this.tableLayoutPanel1.SetColumnSpan(this.AuthenticationMethodPanel, 2);
+            this.AuthenticationMethodPanel.Controls.Add(this.DigestRadioButton);
+            this.AuthenticationMethodPanel.Controls.Add(this.BasicRadioButton);
             this.AuthenticationMethodPanel.Name = "AuthenticationMethodPanel";
             // 
             // DigestRadioButton
@@ -267,6 +261,13 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.DigestRadioButton.Name = "DigestRadioButton";
             this.DigestRadioButton.UseVisualStyleBackColor = true;
             this.DigestRadioButton.CheckedChanged += new System.EventHandler(this.ProxyAuthenticationSettingsChanged);
+            // 
+            // BasicRadioButton
+            // 
+            resources.ApplyResources(this.BasicRadioButton, "BasicRadioButton");
+            this.BasicRadioButton.Name = "BasicRadioButton";
+            this.BasicRadioButton.UseVisualStyleBackColor = true;
+            this.BasicRadioButton.CheckedChanged += new System.EventHandler(this.ProxyAuthenticationSettingsChanged);
             // 
             // label1
             // 
@@ -290,6 +291,8 @@ namespace XenAdmin.Dialogs.OptionsPages
             this.ProxyGroupBox.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.AuthenticationMethodPanel.ResumeLayout(false);
+            this.AuthenticationMethodPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

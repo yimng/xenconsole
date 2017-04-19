@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,16 +119,16 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ConnectionTimeoutLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
+    <value>70, 23</value>
   </data>
   <data name="ConnectionTimeoutLabel.Text" xml:space="preserve">
-    <value>连接超时(&amp;N):</value>
+    <value>连接超时(&amp;N)</value>
   </data>
   <data name="ConnectionTimeoutNud.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 3</value>
+    <value>73, 3</value>
   </data>
   <data name="SecondsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 0</value>
+    <value>143, 0</value>
   </data>
   <data name="SecondsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 23</value>
@@ -137,120 +137,55 @@
     <value>秒</value>
   </data>
   <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 23</value>
+    <value>165, 23</value>
   </data>
   <data name="TimeOutLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 13</value>
+    <value>235, 13</value>
   </data>
   <data name="TimeOutLabel.Text" xml:space="preserve">
-    <value>指定在与托管服务器的连接中断时的等待时间</value>
+    <value>指定在于托管服务器连接中断时等待的时间</value>
   </data>
   <data name="TimeoutGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 309</value>
+    <value>3, 254</value>
   </data>
   <data name="TimeoutGroupBox.Text" xml:space="preserve">
     <value>连接超时</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="BasicRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 239</value>
-  </data>
-  <data name="BasicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 17</value>
-  </data>
-  <data name="BasicRadioButton.Text" xml:space="preserve">
-    <value>基本(&amp;B)</value>
-  </data>
-  <data name="BypassForServersCheckbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 133</value>
-  </data>
   <data name="BypassForServersCheckbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 17</value>
+    <value>221, 17</value>
   </data>
   <data name="BypassForServersCheckbox.Text" xml:space="preserve">
-    <value>所有的vGate连接绕过代理服务器(&amp;B)</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ProxyPasswordTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="ProxyPasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 198</value>
-  </data>
-  <data name="ProxyPasswordTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 20</value>
-  </data>
-  <data name="ProxyUsernameLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="ProxyUsernameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 172</value>
+    <value>[vGate]的所有连接绕过代理服务器(&amp;B)</value>
   </data>
   <data name="ProxyUsernameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 23</value>
+    <value>58, 18</value>
   </data>
   <data name="ProxyUsernameLabel.Text" xml:space="preserve">
-    <value>用户名(U)</value>
-  </data>
-  <data name="ProxyUsernameTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="ProxyUsernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 175</value>
-  </data>
-  <data name="ProxyUsernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 20</value>
-  </data>
-  <data name="ProxyPasswordLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="ProxyPasswordLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+    <value>用户名(&amp;U)</value>
   </data>
   <data name="ProxyPasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 195</value>
+    <value>316, 136</value>
   </data>
   <data name="ProxyPasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 23</value>
+    <value>49, 18</value>
   </data>
   <data name="ProxyPasswordLabel.Text" xml:space="preserve">
-    <value>密码(P)</value>
-  </data>
-  <data name="AuthenticationCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 155</value>
+    <value>密码(&amp;W)</value>
   </data>
   <data name="AuthenticationCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 17</value>
+    <value>113, 17</value>
   </data>
   <data name="AuthenticationCheckBox.Text" xml:space="preserve">
-    <value>提供证书(&amp;c)</value>
-  </data>
-  <data name="ProxyAddressLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="ProxyAddressLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ProxyAddressLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 69</value>
-  </data>
-  <data name="ProxyAddressLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>20, 0, 0, 0</value>
-  </data>
-  <data name="ProxyAddressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 13</value>
+    <value>提供认证信息(&amp;C)</value>
   </data>
   <data name="ProxyAddressLabel.Text" xml:space="preserve">
-    <value>地址(&amp;A):</value>
+    <value>地址(&amp;A)</value>
   </data>
   <data name="UseProxyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 17</value>
+    <value>135, 17</value>
   </data>
   <data name="UseProxyRadioButton.Text" xml:space="preserve">
-    <value>使用此代理服务器(&amp;T):</value>
+    <value>使用此代理服务器(&amp;T)</value>
   </data>
   <data name="DirectConnectionRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 17</value>
@@ -259,79 +194,40 @@
     <value>不使用代理服务器(&amp;D)</value>
   </data>
   <data name="UseIERadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 17</value>
+    <value>245, 17</value>
   </data>
   <data name="UseIERadioButton.Text" xml:space="preserve">
-    <value>使用 Internet Explorer 的代理服务器设置(&amp;E)</value>
-  </data>
-  <data name="ProxyAddressTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 85</value>
-  </data>
-  <data name="ProxyAddressTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 20</value>
-  </data>
-  <data name="ProxyPortTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 108</value>
-  </data>
-  <data name="ProxyPortTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
-  </data>
-  <data name="ProxyPortLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="ProxyPortLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+    <value>使用 Internet Explorer的代理服务器配置(&amp;E)</value>
   </data>
   <data name="ProxyPortLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 82</value>
+    <value>320, 74</value>
   </data>
   <data name="ProxyPortLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
+    <value>45, 13</value>
   </data>
   <data name="ProxyPortLabel.Text" xml:space="preserve">
-    <value>端口(&amp;P):</value>
-  </data>
-  <data name="AuthenticationMethodLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 218</value>
+    <value>端口(&amp;P)</value>
   </data>
   <data name="AuthenticationMethodLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 18</value>
+    <value>59, 18</value>
   </data>
   <data name="AuthenticationMethodLabel.Text" xml:space="preserve">
-    <value>身份验证方式</value>
-  </data>
-  <data name="AuthenticationMethodPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 239</value>
-  </data>
-  <data name="AuthenticationMethodPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 14</value>
-  </data>
-  <data name="DigestRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 239</value>
+    <value>认证方法:</value>
   </data>
   <data name="DigestRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
+    <value>64, 17</value>
   </data>
   <data name="DigestRadioButton.Text" xml:space="preserve">
-    <value>摘要验证(G)</value>
+    <value>摘要(&amp;G)</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="BasicRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
   </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>578, 259</value>
+  <data name="BasicRadioButton.Text" xml:space="preserve">
+    <value>基础(&amp;S)</value>
   </data>
   <data name="ProxyGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 28</value>
-  </data>
-  <data name="ProxyGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 275</value>
   </data>
   <data name="ProxyGroupBox.Text" xml:space="preserve">
     <value>代理服务器</value>
@@ -340,12 +236,6 @@
     <value>584, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>通过这些设置，可以配置代理服务器或自定义 [vGate] 连接，以实现高延迟环境。</value>
-  </data>
-  <data name="ConnectionTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 408</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 408</value>
+    <value>通过这些设置可以配置代理服务器,或自定义[vGate]连接，以实现高延迟环境.</value>
   </data>
 </root>
