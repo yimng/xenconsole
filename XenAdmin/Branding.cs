@@ -42,9 +42,9 @@ namespace XenAdmin
         public const string PRODUCT_VERSION_TEXT = "[BRANDING_PRODUCT_VERSION_TEXT]";
         public const string XENCENTER_VERSION = "[BRANDING_PRODUCT_VERSION]";
         public const string COMPANY_NAME_LEGAL = "[BRANDING_COMPANY_NAME_LEGAL]";
-        public const string BRAND_CONSOLE = "[vGate Console]";
-        public const string PRODUCT_BRAND = "[vGate product]";
-        public const string COMPANY_NAME_SHORT = "[Halsign]";
+        public const string BRAND_CONSOLE = "[BRAND_CONSOLE]";
+        public const string PRODUCT_BRAND = "[PRODUCT_BRAND]";
+        public const string COMPANY_NAME_SHORT = "[COMPANY_NAME_SHORT]";
         public const string SEARCH = "[xensearch]";
         public const string UPDATE = "[xsupdate]";
         public const string UPDATEISO = "[iso]";
