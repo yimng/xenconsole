@@ -11,6 +11,7 @@ using XenAdmin.Actions;
 using XenAdmin.Actions.VMActions;
 using XenAdmin.Commands;
 using XenAPI;
+using XenAdmin.Dialogs.WarningDialogs;
 
 namespace XenAdmin.Wizards.InstantVMsWizard
 {
@@ -61,6 +62,66 @@ namespace XenAdmin.Wizards.InstantVMsWizard
 
         public void RunCreate(SelectedItem selection)
         {
+            //判断是否有足够空间创建输入数量的虚拟机
+            VM temp = selection.XenObject as VM;
+            List<VBD> vbds = selection.Connection.ResolveAll<VBD>(temp.VBDs);
+            List<VDI> vdis = new List<VDI>();
+            Dictionary<VDI,SR> vdi_sr=new Dictionary<VDI,SR>(); 
+            if(Number>0)
+            {
+                //取所有的vdi
+                foreach(VBD vbd in vbds)
+                {
+                    if(selection.Connection.Resolve<VDI>(vbd.VDI)!=null)
+                    {
+                        vdis.Add(selection.Connection.Resolve<VDI>(vbd.VDI));
+                    }
+                    
+                }
+                //用Dictionary保存每个vdi对应的sr，vdi-sr
+                foreach(VDI vdi in vdis)
+                {
+                    vdi_sr.Add(vdi,selection.Connection.Resolve<SR>(vdi.SR));
+                }
+                //用List保存所有相同SR的vdi，计算出能创建的最多个数后保存到Dictionary中,然后清空List
+                long allvdisize = 0;
+                long free_sr_size = 0;
+                long storage_overhead = 0;
+                List<VDI> samevdis=new List<VDI>();
+                Dictionary<SR, int> sr_vdinum = new Dictionary<SR, int>();
+                for (int i = 0; i < vdis.Count;i++ )
+                {
+                    for (int j = i; j < vdis.Count;j++ )
+                    {
+                        if(vdi_sr[vdis[i]]==vdi_sr[vdis[j]])
+                        {
+                            samevdis.Add(vdis[j]);                        
+                        }
+                    }
+                    foreach(VDI vdi in samevdis)
+                    {
+                        allvdisize += vdi.virtual_size;
+                    }
+                    foreach(VDI vdi in selection.Connection.ResolveAll<VDI>(vdi_sr[samevdis[0]].VDIs))
+                    {
+                        storage_overhead += vdi.virtual_size;   
+                    }
+                    free_sr_size = vdi_sr[samevdis[0]].FreeSpace;
+                    sr_vdinum.Add(vdi_sr[samevdis[0]],Convert.ToInt32(free_sr_size/allvdisize));
+                    foreach (VDI vdi in samevdis)
+                    {
+                        vdi_sr.Remove(vdi);
+                        vdis.Remove(vdi);
+                    }
+                    samevdis.Clear();
+                    i = -1;
+                }
+                if(Number>sr_vdinum.Values.Min())
+                {
+                    new NotEnoughStorageWarningDialog().ShowDialog();
+                    return;
+                }
+            }
             List<AsyncAction> actions = new List<AsyncAction>();
             for (int i = 0; i < Number; i++)
             {
@@ -70,10 +131,6 @@ namespace XenAdmin.Wizards.InstantVMsWizard
             }
             MultipleAction multiAction = new MultipleAction(selectedItem.Connection, Messages.INSTANT_CREATE_VMS, Messages.INSTANT_CREATE_VMS_START,Messages.INSTANT_CREATE_VMS_FINISH ,actions);
             multiAction.RunAsync();
-        }
-        private void InstantVMsWizard_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
 
         private void createAction_Completed(ActionBase sender)

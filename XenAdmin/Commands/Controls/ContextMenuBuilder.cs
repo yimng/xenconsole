@@ -790,6 +790,7 @@ namespace XenAdmin.Commands
             {
                 items.AddIfEnabled(new NewVMFromTemplateCommand(mainWindow, selection), true);
                 items.AddIfEnabled(new InstantVMFromTemplateCommand(mainWindow, selection));
+                items.AddIfEnabled(new InstantVMsFromTemplateCommand(mainWindow,selection));
                 items.AddSeparator();
 
                 items.AddIfEnabled(new ExportTemplateCommand(mainWindow, selection));
