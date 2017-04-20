@@ -104,5 +104,3 @@ with open("../../XenAdmin/Branding.cs","r", encoding='utf-8') as brand:
 with open("../../XenAdmin/Branding.cs", "w", encoding='utf-8') as newbrand:
     newbrand.write(s)
 
-copy('console.nsi', '../../release/')
-
