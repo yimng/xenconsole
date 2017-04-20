@@ -7,7 +7,7 @@
 !define PRODUCT_NAME       "[vGate Console]"
 !define PRODUCT_DIS_VER    "6.0.1"
 !define PRODUCT_VERSION    "6.0.1"
-!define PRODUCT_PUBLISHER  "[Halsign] Corporation."
+!define PRODUCT_PUBLISHER  "[Halsign Corporation]."
 !define PRODUCT_WEB_SITE   "www.halsign.com"
 !define PRODUCT_CODE_KEY   "ProductCode"
 !define PRODUCT_CODE       "[vGate Console]"
@@ -121,7 +121,7 @@ LangString message_low_netframwork ${LANG_SIMPCHINESE} "无法安装该软件。\
                                                     当前计算机安装的最高版本为： $R8。\
                                                     请下载并安装 Windows .NET Framwork ${MIN_FRA_MAJOR}.${MIN_FRA_MINOR}。"
 LangString message_company ${LANG_ENGLISH} "[Halsign]"
-LangString message_company ${LANG_SIMPCHINESE} "红山"
+LangString message_company ${LANG_SIMPCHINESE} "[红山]"
 LangString message_product ${LANG_ENGLISH} "[vGate Console]"
 LangString message_product ${LANG_SIMPCHINESE} "[vGate Console]"
 LangString message_uninstall ${LANG_ENGLISH} "Uninstall"
