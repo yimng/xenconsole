@@ -120,10 +120,10 @@ LangString message_low_netframwork ${LANG_SIMPCHINESE} "无法安装该软件。\
                                                     ${MIN_FRA_MAJOR}.${MIN_FRA_MINOR} 或更高版本。$\n\
                                                     当前计算机安装的最高版本为： $R8。\
                                                     请下载并安装 Windows .NET Framwork ${MIN_FRA_MAJOR}.${MIN_FRA_MINOR}。"
-LangString message_company ${LANG_ENGLISH} "Halsign"
-LangString message_company ${LANG_SIMPCHINESE} "红山"
-LangString message_product ${LANG_ENGLISH} "Halsign Console"
-LangString message_product ${LANG_SIMPCHINESE} "Halsign Console"
+LangString message_company ${LANG_ENGLISH} "TongTech"
+LangString message_company ${LANG_SIMPCHINESE} "东方通"
+LangString message_product ${LANG_ENGLISH} "oCloud Client"
+LangString message_product ${LANG_SIMPCHINESE} "oCloud Client"
 LangString message_uninstall ${LANG_ENGLISH} "Uninstall"
 LangString message_uninstall ${LANG_SIMPCHINESE} "卸载"
 
@@ -131,7 +131,7 @@ LangString message_uninstall ${LANG_SIMPCHINESE} "卸载"
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_DIS_VER}"
-OutFile "TongTechConsole.exe"
+OutFile "${PRODUCT_NAME}.exe"
 InstallDir "$PROGRAMFILES\${PRODUCT_NAME}"
 ShowInstDetails hide
 ShowUnInstDetails hide
