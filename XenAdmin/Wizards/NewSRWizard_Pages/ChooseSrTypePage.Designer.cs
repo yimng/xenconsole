@@ -171,9 +171,9 @@
             this.tableLayoutPanel3.Controls.Add(this.radioButtonIscsi, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonlunbond, 0, 8);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonCifsIso, 0, 11);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonNfsIso, 0, 10);
             this.tableLayoutPanel3.Controls.Add(this.labelISOlibrary, 0, 9);
             this.tableLayoutPanel3.Controls.Add(this.rawhbaButton, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonNfsIso, 0, 10);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // radioButtonFcoe
