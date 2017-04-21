@@ -112,22 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelInformation.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 13</value>
-  </data>
-  <data name="labelInformation.Text" xml:space="preserve">
-    <value>欢迎使用 [vGate Console]</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LinkLabelHomePage.Location" type="System.Drawing.Point, System.Drawing">
     <value>315, 295</value>
   </data>
@@ -141,13 +131,23 @@
     <value>通过添加新的虚拟机，安装各种独立的操作系统，来配置各种不同的应用，完成您的业务需求。</value>
   </data>
   <data name="LabelServer.Text" xml:space="preserve">
-    <value>通过连接 vGate 来创建、删除以及配置您的虚拟机，通过建立存储库和资源池来共享资源和均衡负载。</value>
+    <value>通过连接 [vGate] 来创建、删除以及配置您的虚拟机，通过建立存储库和资源池来共享资源和均衡负载。</value>
   </data>
   <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>468, 68</value>
   </data>
   <data name="labelInfo.Text" xml:space="preserve">
-    <value>多个操作系统及其应用可以高效独立地运行在 vGate 上。这些操作系统被安装在安全可以移动的虚拟机内。每个虚拟机都是一个物理计算机的对等实体，拥有各自独立的网络地址以及其他所有硬件配置。
+    <value>多个操作系统及其应用可以高效独立地运行在 [vGate] 上。这些操作系统被安装在安全可以移动的虚拟机内。每个虚拟机都是一个物理计算机的对等实体，拥有各自独立的网络地址以及其他所有硬件配置。
 </value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelInformation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 13</value>
+  </data>
+  <data name="labelInformation.Text" xml:space="preserve">
+    <value>欢迎使用 [vGate Console]</value>
   </data>
 </root>

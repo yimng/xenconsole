@@ -72,29 +72,29 @@
             // 
             // gradientPanel1
             // 
-            this.gradientPanel1.Controls.Add(this.labelInformation);
             resources.ApplyResources(this.gradientPanel1, "gradientPanel1");
+            this.gradientPanel1.Controls.Add(this.labelInformation);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Scheme = XenAdmin.Controls.GradientPanel.GradientPanel.Schemes.Tab;
             // 
             // labelInformation
             // 
-            this.labelInformation.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.labelInformation, "labelInformation");
+            this.labelInformation.BackColor = System.Drawing.Color.Transparent;
             this.labelInformation.ForeColor = System.Drawing.SystemColors.InfoText;
             this.labelInformation.Name = "labelInformation";
             // 
             // PictureBoxVM
             // 
-            this.PictureBoxVM.BackgroundImage = global::XenAdmin.Properties.Resources._000_CreateVM_h32bit_32;
             resources.ApplyResources(this.PictureBoxVM, "PictureBoxVM");
+            this.PictureBoxVM.BackgroundImage = global::XenAdmin.Properties.Resources._000_CreateVM_h32bit_32;
             this.PictureBoxVM.Name = "PictureBoxVM";
             this.PictureBoxVM.TabStop = false;
             // 
             // PictureBoxHost
             // 
-            this.PictureBoxHost.BackgroundImage = global::XenAdmin.Properties.Resources.addhost_48;
             resources.ApplyResources(this.PictureBoxHost, "PictureBoxHost");
+            this.PictureBoxHost.BackgroundImage = global::XenAdmin.Properties.Resources.addhost_48;
             this.PictureBoxHost.Name = "PictureBoxHost";
             this.PictureBoxHost.TabStop = false;
             // 
@@ -112,6 +112,7 @@
             this.Controls.Add(this.PictureBoxHost);
             this.Name = "HomePage";
             this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxVM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxHost)).EndInit();
             this.ResumeLayout(false);

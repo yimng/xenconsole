@@ -90,8 +90,8 @@ namespace XenAdmin.TabPages
             // 
             // pageContainerPanel
             // 
-            this.pageContainerPanel.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this.pageContainerPanel, "pageContainerPanel");
+            this.pageContainerPanel.Controls.Add(this.tableLayoutPanel1);
             // 
             // AddButton
             // 
@@ -116,6 +116,7 @@ namespace XenAdmin.TabPages
             // 
             // flowLayoutPanel1
             // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.AddButton);
             this.flowLayoutPanel1.Controls.Add(this.AttachButton);
             this.flowLayoutPanel1.Controls.Add(this.DeactivateButtonContainer);
@@ -123,13 +124,12 @@ namespace XenAdmin.TabPages
             this.flowLayoutPanel1.Controls.Add(this.EditButton);
             this.flowLayoutPanel1.Controls.Add(this.DeleteButtonContainer);
             this.flowLayoutPanel1.Controls.Add(this.DetachButtonContainer);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // DeactivateButtonContainer
             // 
-            this.DeactivateButtonContainer.Controls.Add(this.DeactivateButton);
             resources.ApplyResources(this.DeactivateButtonContainer, "DeactivateButtonContainer");
+            this.DeactivateButtonContainer.Controls.Add(this.DeactivateButton);
             this.DeactivateButtonContainer.Name = "DeactivateButtonContainer";
             // 
             // DeactivateButton
@@ -141,8 +141,8 @@ namespace XenAdmin.TabPages
             // 
             // MoveButtonContainer
             // 
-            this.MoveButtonContainer.Controls.Add(this.MoveButton);
             resources.ApplyResources(this.MoveButtonContainer, "MoveButtonContainer");
+            this.MoveButtonContainer.Controls.Add(this.MoveButton);
             this.MoveButtonContainer.Name = "MoveButtonContainer";
             // 
             // MoveButton
@@ -154,8 +154,8 @@ namespace XenAdmin.TabPages
             // 
             // DeleteButtonContainer
             // 
-            this.DeleteButtonContainer.Controls.Add(this.DeleteButton);
             resources.ApplyResources(this.DeleteButtonContainer, "DeleteButtonContainer");
+            this.DeleteButtonContainer.Controls.Add(this.DeleteButton);
             this.DeleteButtonContainer.Name = "DeleteButtonContainer";
             // 
             // DeleteButton
@@ -167,8 +167,8 @@ namespace XenAdmin.TabPages
             // 
             // DetachButtonContainer
             // 
-            this.DetachButtonContainer.Controls.Add(this.DetachButton);
             resources.ApplyResources(this.DetachButtonContainer, "DetachButtonContainer");
+            this.DetachButtonContainer.Controls.Add(this.DetachButton);
             this.DetachButtonContainer.Name = "DetachButtonContainer";
             // 
             // DetachButton
@@ -180,6 +180,7 @@ namespace XenAdmin.TabPages
             // 
             // contextMenuStrip1
             // 
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemAdd,
@@ -191,54 +192,53 @@ namespace XenAdmin.TabPages
             this.toolStripSeparator1,
             this.toolStripMenuItemProperties});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStripMenuItemAdd
             // 
-            this.toolStripMenuItemAdd.Name = "toolStripMenuItemAdd";
             resources.ApplyResources(this.toolStripMenuItemAdd, "toolStripMenuItemAdd");
+            this.toolStripMenuItemAdd.Name = "toolStripMenuItemAdd";
             this.toolStripMenuItemAdd.Click += new System.EventHandler(this.toolStripMenuItemAdd_Click);
             // 
             // toolStripMenuItemAttach
             // 
-            this.toolStripMenuItemAttach.Name = "toolStripMenuItemAttach";
             resources.ApplyResources(this.toolStripMenuItemAttach, "toolStripMenuItemAttach");
+            this.toolStripMenuItemAttach.Name = "toolStripMenuItemAttach";
             this.toolStripMenuItemAttach.Click += new System.EventHandler(this.toolStripMenuItemAttach_Click);
             // 
             // toolStripMenuItemDeactivate
             // 
-            this.toolStripMenuItemDeactivate.Name = "toolStripMenuItemDeactivate";
             resources.ApplyResources(this.toolStripMenuItemDeactivate, "toolStripMenuItemDeactivate");
+            this.toolStripMenuItemDeactivate.Name = "toolStripMenuItemDeactivate";
             this.toolStripMenuItemDeactivate.Click += new System.EventHandler(this.toolStripMenuItemDeactivate_Click);
             // 
             // toolStripMenuItemMove
             // 
-            this.toolStripMenuItemMove.Name = "toolStripMenuItemMove";
             resources.ApplyResources(this.toolStripMenuItemMove, "toolStripMenuItemMove");
+            this.toolStripMenuItemMove.Name = "toolStripMenuItemMove";
             this.toolStripMenuItemMove.Click += new System.EventHandler(this.toolStripMenuItemMove_Click);
             // 
             // toolStripMenuItemDelete
             // 
-            this.toolStripMenuItemDelete.Name = "toolStripMenuItemDelete";
             resources.ApplyResources(this.toolStripMenuItemDelete, "toolStripMenuItemDelete");
+            this.toolStripMenuItemDelete.Name = "toolStripMenuItemDelete";
             this.toolStripMenuItemDelete.Click += new System.EventHandler(this.toolStripMenuItemDelete_Click);
             // 
             // toolStripMenuItemDetach
             // 
-            this.toolStripMenuItemDetach.Name = "toolStripMenuItemDetach";
             resources.ApplyResources(this.toolStripMenuItemDetach, "toolStripMenuItemDetach");
+            this.toolStripMenuItemDetach.Name = "toolStripMenuItemDetach";
             this.toolStripMenuItemDetach.Click += new System.EventHandler(this.toolStripMenuItemDetach_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // toolStripMenuItemProperties
             // 
-            this.toolStripMenuItemProperties.Image = global::XenAdmin.Properties.Resources.edit_16;
             resources.ApplyResources(this.toolStripMenuItemProperties, "toolStripMenuItemProperties");
+            this.toolStripMenuItemProperties.Image = global::XenAdmin.Properties.Resources.edit_16;
             this.toolStripMenuItemProperties.Name = "toolStripMenuItemProperties";
             this.toolStripMenuItemProperties.Click += new System.EventHandler(this.toolStripMenuItemProperties_Click);
             // 
@@ -252,6 +252,7 @@ namespace XenAdmin.TabPages
             // 
             // dataGridViewStorage
             // 
+            resources.ApplyResources(this.dataGridViewStorage, "dataGridViewStorage");
             this.dataGridViewStorage.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewStorage.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -266,7 +267,6 @@ namespace XenAdmin.TabPages
             this.ColumnPriority,
             this.ColumnActive,
             this.ColumnDevicePath});
-            resources.ApplyResources(this.dataGridViewStorage, "dataGridViewStorage");
             this.dataGridViewStorage.MultiSelect = true;
             this.dataGridViewStorage.Name = "dataGridViewStorage";
             this.dataGridViewStorage.ReadOnly = true;
