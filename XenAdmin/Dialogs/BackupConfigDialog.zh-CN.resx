@@ -122,7 +122,7 @@
     <value>118, 29</value>
   </data>
   <data name="labelStoragePath.Text" xml:space="preserve">
-    <value>Halsign MC 地址(&amp;I):</value>
+    <value>[Halsign] MC 地址(&amp;I):</value>
   </data>
   <data name="labelUserName.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 29</value>
@@ -183,7 +183,7 @@
     <value>369, 34</value>
   </data>
   <data name="labelBlur.Text" xml:space="preserve">
-    <value>请输入 Halsign MC 的地址及连接 Halsign MC 所需要的用户名和密码。</value>
+    <value>请输入 [Halsign] MC 的地址及连接 [Halsign] MC 所需要的用户名和密码。</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>381, 183</value>
@@ -192,6 +192,6 @@
     <value>381, 183</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>配置 Halsign MC</value>
+    <value>配置 [Halsign] MC</value>
   </data>
 </root>

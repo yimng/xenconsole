@@ -265,7 +265,7 @@
     <value>True</value>
   </data>
   <data name="linkInstallTools.Text" xml:space="preserve">
-    <value>Install Halsign Tools now</value>
+    <value>Install [Halsign] Tools now</value>
   </data>
   <data name="&gt;&gt;labelDMCUnavailable.Name" xml:space="preserve">
     <value>labelDMCUnavailable</value>

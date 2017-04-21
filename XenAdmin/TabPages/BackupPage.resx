@@ -280,7 +280,7 @@
     <value>743, 457</value>
   </data>
   <data name="button_ConfigBackup.Text" xml:space="preserve">
-    <value>Configure Halsign MC</value>
+    <value>Configure [Halsign] MC</value>
   </data>
   <data name="button_DeleteConfig.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

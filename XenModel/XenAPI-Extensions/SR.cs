@@ -63,7 +63,7 @@ namespace XenAPI
 
         private const string XenServer_Tools_Label = "XenServer Tools";
         private const string vGateServer_Tools_Label = "vGateServer Tools";
-        private const string Halsign_Tools_Label = "Halsign Tools";
+        private const string Halsign_Tools_Label = "[Halsign] Tools";
 
         public override string ToString()
         {

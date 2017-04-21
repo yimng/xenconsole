@@ -5932,7 +5932,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unexpected exception when connecting to  Halsign MC..
+        ///   Looks up a localized string similar to Unexpected exception when connecting to  [Halsign] MC..
         /// </summary>
         public static string BACKUP_UNEXPECTED_CONNECTING {
             get {
@@ -6335,7 +6335,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception occur when call Halsign MC Service.
+        ///   Looks up a localized string similar to Exception occur when call [Halsign] MC Service.
         /// </summary>
         public static string BR_CALL_STORAGE_EXCEPTION {
             get {

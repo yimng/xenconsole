@@ -388,7 +388,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Click Repair to have Halsign Console attempt to diagnose and resolve the connection problems with this storage repository. If the problem cannot be resolved, look at the Logs tab for more detailed error messages.</value>
+    <value>Click Repair to have [vGate Console] attempt to diagnose and resolve the connection problems with this storage repository. If the problem cannot be resolved, look at the Logs tab for more detailed error messages.</value>
   </data>
   <data name="addButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>

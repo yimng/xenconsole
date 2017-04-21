@@ -2155,7 +2155,7 @@ Archive destination: {0}</value>
     <value>Restore from Backup</value>
   </data>
   <data name="BACKUP_UNEXPECTED_CONNECTING" xml:space="preserve">
-    <value>Unexpected exception when connecting to  Halsign MC.</value>
+    <value>Unexpected exception when connecting to  [Halsign] MC.</value>
   </data>
   <data name="BACKUP_VM" xml:space="preserve">
     <value />
@@ -2324,7 +2324,7 @@ This change will take effect when you restart VM.</value>
     <value>Master could not connect to the storage of the VM</value>
   </data>
   <data name="BR_CALL_STORAGE_EXCEPTION" xml:space="preserve">
-    <value>Exception occur when call Halsign MC Service</value>
+    <value>Exception occur when call [Halsign] MC Service</value>
   </data>
   <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
     <value />

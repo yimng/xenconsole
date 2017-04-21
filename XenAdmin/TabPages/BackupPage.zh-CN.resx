@@ -131,7 +131,7 @@
     <value>120, 24</value>
   </data>
   <data name="button_ConfigBackup.Text" xml:space="preserve">
-    <value>配置 Halsign MC</value>
+    <value>配置 [Halsign] MC</value>
   </data>
   <data name="button_DisableBackup.Location" type="System.Drawing.Point, System.Drawing">
     <value>129, 9</value>

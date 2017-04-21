@@ -1753,8 +1753,12 @@
     <EmbeddedResource Include="Dialogs\AddLUNDialog.zh-CN.resx">
       <DependentUpon>AddLUNDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx" />
-    <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\BackupViewDialog.resx" />
     <EmbeddedResource Include="Dialogs\BackupViewDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\BrowseStorageDialog.resx">
@@ -2247,8 +2251,12 @@
       <DependentUpon>AdPage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPages\BackupPage.resx" />
-    <EmbeddedResource Include="TabPages\BackupPage.zh-CN.resx" />
+    <EmbeddedResource Include="TabPages\BackupPage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\BackupPage.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabPages\BallooningPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BallooningPage.cs</DependentUpon>
@@ -6612,6 +6620,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\HAWizard_Pages\Intro.zh-CN.resx">
       <DependentUpon>Intro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\ImportWizard\GlobalSelectHost.ja.resx">
       <DependentUpon>GlobalSelectHost.cs</DependentUpon>

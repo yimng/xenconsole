@@ -337,7 +337,7 @@
     <value>14, 48</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Copyright© 2013 Halsign Corporation. All rights reserved.</value>
+    <value>Copyright© 2013 [Halsign Corporation]. All rights reserved.</value>
   </data>
   <data name="VersionLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei UI, 9pt</value>

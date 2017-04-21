@@ -289,7 +289,7 @@
     <value>textBoxPassword</value>
   </data>
   <data name="labelStoragePath.Text" xml:space="preserve">
-    <value>Halsign MC &amp;IP:</value>
+    <value>[Halsign] MC &amp;IP:</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
@@ -310,7 +310,7 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="labelBlur.Text" xml:space="preserve">
-    <value>Please enter the Halsign MC IP address, username and password will be required.</value>
+    <value>Please enter the [Halsign] MC IP address, username and password will be required.</value>
   </data>
   <data name="&gt;&gt;labelUserName.Name" xml:space="preserve">
     <value>labelUserName</value>
@@ -478,7 +478,7 @@
     <value>0</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Halsign MC Configuration</value>
+    <value>[Halsign] MC Configuration</value>
   </data>
   <data name="buttonSave.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>

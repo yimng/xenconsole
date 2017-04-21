@@ -5514,7 +5514,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Tools ISOs.
+        ///   Looks up a localized string similar to [Halsign] Tools ISOs.
         /// </summary>
         public static string SR_name_description_xenserver_tools {
             get {
@@ -5595,7 +5595,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Halsign Tools.
+        ///   Looks up a localized string similar to [Halsign] Tools.
         /// </summary>
         public static string SR_name_label_xenserver_tools {
             get {
