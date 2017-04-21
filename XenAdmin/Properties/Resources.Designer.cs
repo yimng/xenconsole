@@ -2493,6 +2493,16 @@ namespace XenAdmin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap networkinterfacecard {
+            get {
+                object obj = ResourceManager.GetObject("networkinterfacecard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap notif_alerts_16 {
             get {
                 object obj = ResourceManager.GetObject("notif_alerts_16", resourceCulture);
@@ -3006,6 +3016,16 @@ namespace XenAdmin.Properties {
         internal static System.Drawing.Bitmap suse_16x {
             get {
                 object obj = ResourceManager.GetObject("suse_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap switches {
+            get {
+                object obj = ResourceManager.GetObject("switches", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

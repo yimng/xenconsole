@@ -80,6 +80,9 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <HintPath>..\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
     <Reference Include="MSTSCLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>RDP\MSTSCLib.dll</HintPath>
@@ -254,7 +257,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Tags\TagsEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UpsellPage.cs">
       <SubType>UserControl</SubType>
@@ -285,6 +288,12 @@
     </Compile>
     <Compile Include="Dialogs\EnablePvsReadCachingDialog.Designer.cs">
       <DependentUpon>EnablePvsReadCachingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Network\HostNetworkTopologyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Network\HostNetworkTopologyDialog.designer.cs">
+      <DependentUpon>HostNetworkTopologyDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\OptionsPages\ConfirmationOptionsPage.cs">
       <SubType>UserControl</SubType>
@@ -612,13 +621,13 @@
       <DependentUpon>PerfmonAlertOptionsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\BlueBorderPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\ArchiveMaintainer.cs">
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataArchive.cs" />
     <Compile Include="Controls\CustomDataGraph\GraphList.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\GraphList.Designer.cs">
       <DependentUpon>GraphList.cs</DependentUpon>
@@ -632,7 +641,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.Designer.cs">
       <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
@@ -954,13 +963,13 @@
       <DependentUpon>DataKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.designer.cs">
       <DependentUpon>DataPlot.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.designer.cs">
       <DependentUpon>DataPlotNav.cs</DependentUpon>
@@ -1162,7 +1171,7 @@
       <DependentUpon>FolderChangeDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Folders\FolderEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Folders\FolderListItem.cs" />
     <Compile Include="Dialogs\NewTagDialog.cs">
@@ -1879,6 +1888,12 @@
     <EmbeddedResource Include="Dialogs\AdPasswordPrompt.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AdPasswordPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Network\HostNetworkTopologyDialog.resx">
+      <DependentUpon>HostNetworkTopologyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Network\HostNetworkTopologyDialog.zh-CN.resx">
+      <DependentUpon>HostNetworkTopologyDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\OptionsPages\ConfirmationOptionsPage.ja.resx">
       <DependentUpon>ConfirmationOptionsPage.cs</DependentUpon>
@@ -3033,9 +3048,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\VMGroupCommand.cs" />
-    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewController.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewRow.cs">
     </Compile>
@@ -3975,9 +3988,7 @@
     <Compile Include="Wizards\DRWizards\DRFailoverWizardWelcomePage.Designer.cs">
       <DependentUpon>DRFailoverWizardWelcomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs" />
     <Compile Include="Wizards\GenericPages\DelayLoadingOptionComboBoxItem.cs" />
     <Compile Include="Wizards\GenericPages\LunPerVdiMappingPage.cs">
       <SubType>UserControl</SubType>
@@ -4772,6 +4783,7 @@
     <None Include="Images\PausedDC_16.png" />
     <None Include="Images\padlock.png" />
     <None Include="Images\neokylin_16x.png" />
+    <None Include="Images\networkinterfacecard.png" />
     <Content Include="Images\Refresh16.png" />
     <None Include="Images\saved_searches_16.png" />
     <None Include="Images\server_up_16.png" />
@@ -4836,6 +4848,7 @@
     <None Include="Images\StoppedDC_16.png" />
     <Content Include="Images\subscribe.png" />
     <Content Include="Images\suse_16x.png" />
+    <None Include="Images\switches.png" />
     <Content Include="Images\tempAdd.png" />
     <None Include="Images\tempCancel.png" />
     <None Include="Images\tempNotif16.png" />
@@ -7168,6 +7181,8 @@
     <Content Include="putty.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\networkinterfacecard.png" />
+    <None Include="Resources\networkinterfacecard1.png" />
     <Content Include="TestResources\credits.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -542,16 +542,16 @@
   </data>
   <data name="pictureBoxError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAHpSURBVDhPlZNdT9RAFIan7Yq3/pSN6P/oX+JGEi4IygVcuSuisERIQXYDhMRCQjAYzBoBUfko
-        BAgaWRcIRJDk8JzpdFPgipM86dc875xpp+Z2dRRMCBHILfRe6IbdLR4+grgv8GTJK0jDPJRjaJg22YM5
-        7vXyTMfoWKel5eT6rF+Qc6RTaMIfxEMXsGMeyCaM+oGG1G+EcBGrfJab9TccwC5sI/6EdViBiu/bTjI5
-        1LZ11r/wrzwgV8mO/Co+bc2aFJ/IJfca5Vfy2RRkCbrT5YQaEC2yviM3q8pa/5tN2UTchivOtc55VkVe
-        MIFUPNtFpAGyj5it9QBBZS09ZvIlx+liu4wgf4BpUNcGZGvdol1d649ciJbKU8XH8hZpCmagZmwHaUCC
-        tAHfYdUGtLdm1tKAKgE1G+DLJET5gDWkb/CV9a3nZBWV7DwmZAJxDCq5gKjmBfIFeRkukqQlTCK8hwsX
-        cspLHLKyJ/2e/Qr2JYY9fJJPyB/hKBqXMwZOIJZoWVud5fyE4LVyWZ4jv4bOwG7vdGtzEg+yOeYR9A0P
-        Q8m1qgHvQKUeeKFHP93SVtbiwm7lEiH6eaoI4y5gBGEINKAE3b6d+eZW1nIhcRetvWR9+pKGEd44sZd7
-        z9K27/5M+eLhPX5nY64BiGvD2gP8aTAAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAelJREFUOE+V
+        k11P1EAUhqftirf+lI3o/+hf4kYSLgjKBVy5K6KwREhBdgOExEJCMBjMGgFR+SgECBpZFwhEkOTwnOl0
+        U+CKkzzp1zzvnGmn5nZ1FEwIEcgt9F7oht0tHj6CuC/wZMkrSMM8lGNomDbZgznu9fJMx+hYp6Xl5Pqs
+        X5BzpFNowh/EQxewYx7IJoz6gYbUb4RwEat8lpv1NxzALmwj/oR1WIGK79tOMjnUtnXWv/CvPCBXyY78
+        Kj5tzZoUn8gl9xrlV/LZFGQJutPlhBoQLbK+Izerylr/m03ZRNyGK861znlWRV4wgVQ820WkAbKPmK31
+        AEFlLT1m8iXH6WK7jCB/gGlQ1wZka92iXV3rj1yIlspTxcfyFmkKZqBmbAdpQIK0Ad9h1Qa0t2bW0oAq
+        ATUb4MskRPmANaRv8JX1redkFZXsPCZkAnEMKrmAqOYF8gV5GS6SpCVMIryHCxdyykscsrIn/Z79CvYl
+        hj18kk/IH+EoGpczBk4glmhZW53l/ITgtXJZniO/hs7Abu90a3MSD7I55hH0DQ9DybWqAe9ApR54oUc/
+        3dJW1uLCbuUSIfp5qgjjLmAEYQg0oATdvp355lbWciFxF629ZH36koYR3jixl3vP0rbv/kz54uE9fmdj
+        rgGIa8PaA/xpMAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBoxError.Location" type="System.Drawing.Point, System.Drawing">
@@ -897,7 +897,7 @@
     <value>SrListBox</value>
   </data>
   <data name="&gt;&gt;SrListBox.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.SrPicker, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.SrPicker, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SrListBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -969,6 +969,6 @@
     <value>NewDiskDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.XenDialogBase, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Dialogs.XenDialogBase, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

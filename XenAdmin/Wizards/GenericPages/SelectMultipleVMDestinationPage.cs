@@ -81,7 +81,7 @@ namespace XenAdmin.Wizards.GenericPages
 		{
 			InitializeComponent();
             InitializeText();
-            InitializeCheckbox();
+            //InitializeCheckbox();
             Host_CollectionChangedWithInvoke = Program.ProgramInvokeHandler(CollectionChanged);
 			ConnectionsManager.XenConnections.CollectionChanged += CollectionChanged;
             ShowWarning(null);

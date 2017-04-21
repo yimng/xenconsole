@@ -32,18 +32,19 @@ namespace XenAdmin.Controls.NetworkingTab
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetworkList));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddNetworkButton = new System.Windows.Forms.Button();
+            this.EditButtonContainer = new XenAdmin.Controls.ToolTipContainer();
+            this.EditNetworkButton = new System.Windows.Forms.Button();
+            this.RemoveButtonContainer = new XenAdmin.Controls.ToolTipContainer();
+            this.RemoveNetworkButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolTipContainerActivateToggle = new XenAdmin.Controls.ToolTipContainer();
+            this.buttonActivateToggle = new System.Windows.Forms.Button();
+            this.NetworkTopologyButton = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditButtonContainer = new XenAdmin.Controls.ToolTipContainer();
-            this.EditNetworkButton = new System.Windows.Forms.Button();
-            this.RemoveButtonContainer = new XenAdmin.Controls.ToolTipContainer();
-            this.RemoveNetworkButton = new System.Windows.Forms.Button();
-            this.toolTipContainerActivateToggle = new XenAdmin.Controls.ToolTipContainer();
-            this.buttonActivateToggle = new System.Windows.Forms.Button();
             this.NetworksGridView = new XenAdmin.Controls.DataGridViewEx.DataGridViewEx();
             this.ImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,22 +62,23 @@ namespace XenAdmin.Controls.NetworkingTab
             this.ActiveColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MtuColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.EditButtonContainer.SuspendLayout();
             this.RemoveButtonContainer.SuspendLayout();
             this.toolTipContainerActivateToggle.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NetworksGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.AddNetworkButton);
             this.flowLayoutPanel1.Controls.Add(this.EditButtonContainer);
             this.flowLayoutPanel1.Controls.Add(this.RemoveButtonContainer);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.toolTipContainerActivateToggle);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Controls.Add(this.NetworkTopologyButton);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // AddNetworkButton
@@ -86,52 +88,10 @@ namespace XenAdmin.Controls.NetworkingTab
             this.AddNetworkButton.UseVisualStyleBackColor = true;
             this.AddNetworkButton.Click += new System.EventHandler(this.AddNetworkButton_Click);
             // 
-            // groupBox1
-            // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.addToolStripMenuItem,
-            this.removeToolStripMenuItem,
-            this.propertiesToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Image = global::XenAdmin.Properties.Resources.copy_16;
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddMenuItemHandler);
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.RemoveMenuItemHandler);
-            // 
-            // propertiesToolStripMenuItem
-            // 
-            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
-            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
-            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.EditMenuItemHandler);
-            // 
             // EditButtonContainer
             // 
-            this.EditButtonContainer.Controls.Add(this.EditNetworkButton);
             resources.ApplyResources(this.EditButtonContainer, "EditButtonContainer");
+            this.EditButtonContainer.Controls.Add(this.EditNetworkButton);
             this.EditButtonContainer.Name = "EditButtonContainer";
             // 
             // EditNetworkButton
@@ -154,10 +114,16 @@ namespace XenAdmin.Controls.NetworkingTab
             this.RemoveNetworkButton.UseVisualStyleBackColor = true;
             this.RemoveNetworkButton.Click += new System.EventHandler(this.RemoveNetworkButton_Click);
             // 
+            // groupBox1
+            // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
             // toolTipContainerActivateToggle
             // 
-            this.toolTipContainerActivateToggle.Controls.Add(this.buttonActivateToggle);
             resources.ApplyResources(this.toolTipContainerActivateToggle, "toolTipContainerActivateToggle");
+            this.toolTipContainerActivateToggle.Controls.Add(this.buttonActivateToggle);
             this.toolTipContainerActivateToggle.Name = "toolTipContainerActivateToggle";
             // 
             // buttonActivateToggle
@@ -167,10 +133,54 @@ namespace XenAdmin.Controls.NetworkingTab
             this.buttonActivateToggle.UseVisualStyleBackColor = true;
             this.buttonActivateToggle.Click += new System.EventHandler(this.buttonActivateToggle_Click);
             // 
+            // NetworkTopologyButton
+            // 
+            resources.ApplyResources(this.NetworkTopologyButton, "NetworkTopologyButton");
+            this.NetworkTopologyButton.BackColor = System.Drawing.Color.Transparent;
+            this.NetworkTopologyButton.Name = "NetworkTopologyButton";
+            this.NetworkTopologyButton.UseVisualStyleBackColor = false;
+            this.NetworkTopologyButton.Click += new System.EventHandler(this.NetworkTopologyButton_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItem,
+            this.addToolStripMenuItem,
+            this.removeToolStripMenuItem,
+            this.propertiesToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // copyToolStripMenuItem
+            // 
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            this.copyToolStripMenuItem.Image = global::XenAdmin.Properties.Resources.copy_16;
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // addToolStripMenuItem
+            // 
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddMenuItemHandler);
+            // 
+            // removeToolStripMenuItem
+            // 
+            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.RemoveMenuItemHandler);
+            // 
+            // propertiesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.EditMenuItemHandler);
+            // 
             // NetworksGridView
             // 
-            this.NetworksGridView.AdjustColorsForClassic = false;
             resources.ApplyResources(this.NetworksGridView, "NetworksGridView");
+            this.NetworksGridView.AdjustColorsForClassic = false;
             this.NetworksGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.NetworksGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.NetworksGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -178,8 +188,8 @@ namespace XenAdmin.Controls.NetworkingTab
             this.NetworksGridView.ContextMenuStrip = this.contextMenuStrip1;
             this.NetworksGridView.Name = "NetworksGridView";
             this.NetworksGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.NetworksGridView_CellValueChanged);
-            this.NetworksGridView.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.NetworksGridView_SortCompare);
             this.NetworksGridView.SelectionChanged += new System.EventHandler(this.NetworksGridView_SelectionChanged);
+            this.NetworksGridView.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.NetworksGridView_SortCompare);
             // 
             // ImageColumn
             // 
@@ -282,10 +292,10 @@ namespace XenAdmin.Controls.NetworkingTab
             this.Controls.Add(this.NetworksGridView);
             this.Name = "NetworkList";
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.EditButtonContainer.ResumeLayout(false);
             this.RemoveButtonContainer.ResumeLayout(false);
             this.toolTipContainerActivateToggle.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NetworksGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -323,6 +333,6 @@ namespace XenAdmin.Controls.NetworkingTab
         private System.Windows.Forms.Button buttonActivateToggle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MtuColumn;
-
+        private System.Windows.Forms.Button NetworkTopologyButton;
     }
 }

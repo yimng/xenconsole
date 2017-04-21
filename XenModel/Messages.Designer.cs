@@ -7829,6 +7829,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Storage.
+        /// </summary>
+        public static string CONFIGURATION_HARDWARE_STORAGE {
+            get {
+                return ResourceManager.GetString("CONFIGURATION_HARDWARE_STORAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Configure HA....
         /// </summary>
         public static string CONFIGURE_HA_ELLIPSIS {
@@ -24598,6 +24607,78 @@ namespace XenAdmin {
         public static string NETWORKS {
             get {
                 return ResourceManager.GetString("NETWORKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to gateway.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_GATEWAY {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_GATEWAY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Management Interface.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_MANAGEMENTINTERFACE {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_MANAGEMENTINTERFACE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No physical NIC.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_NO_PHYSICAL_NIC {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_NO_PHYSICAL_NIC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical adapter.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_PHYSICAL_ADAPTER {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_PHYSICAL_ADAPTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch or router.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_SWITCH_ROUTER {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_SWITCH_ROUTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to virtual machines.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_VMS {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_VMS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VMs group.
+        /// </summary>
+        public static string NETWORKTOPOLOGY_VMS_GROUP {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_VMS_GROUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string NETWORKTOPOLOGY_VSWITCH {
+            get {
+                return ResourceManager.GetString("NETWORKTOPOLOGY_VSWITCH", resourceCulture);
             }
         }
         

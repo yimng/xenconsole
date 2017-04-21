@@ -14346,4 +14346,31 @@ SCSI ID: {6}
   <data name="OVSC_CONFIGURE_PROTOCOL" xml:space="preserve">
     <value>协议</value>
   </data>
+  <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
+    <value>存储</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_GATEWAY" xml:space="preserve">
+    <value>网关</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_MANAGEMENTINTERFACE" xml:space="preserve">
+    <value>管理网口</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_NO_PHYSICAL_NIC" xml:space="preserve">
+    <value>无物理网卡</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_PHYSICAL_ADAPTER" xml:space="preserve">
+    <value>物理适配器</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_SWITCH_ROUTER" xml:space="preserve">
+    <value>交换机或路由器</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_VMS" xml:space="preserve">
+    <value>个虚拟机</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_VMS_GROUP" xml:space="preserve">
+    <value>虚拟机端口组</value>
+  </data>
 </root>

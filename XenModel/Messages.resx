@@ -14393,4 +14393,31 @@ You will need to navigate to the Console on each of the selected VMs to complete
   <data name="VSWITCH_CONTROLLER" xml:space="preserve">
     <value />
   </data>
+  <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_GATEWAY" xml:space="preserve">
+    <value>gateway</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_MANAGEMENTINTERFACE" xml:space="preserve">
+    <value>Management Interface</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_NO_PHYSICAL_NIC" xml:space="preserve">
+    <value>No physical NIC</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_PHYSICAL_ADAPTER" xml:space="preserve">
+    <value>Physical adapter</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_SWITCH_ROUTER" xml:space="preserve">
+    <value>Switch or router</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_VMS" xml:space="preserve">
+    <value>virtual machines</value>
+  </data>
+  <data name="NETWORKTOPOLOGY_VMS_GROUP" xml:space="preserve">
+    <value>VMs group</value>
+  </data>
 </root>

@@ -92,6 +92,14 @@ namespace XenAdmin.Controls.NetworkingTab
                     // This is the divider for the activate button, hide this as well as the button
                     groupBox1.Visible = false;
                     buttonActivateToggle.Visible = false;
+                    if (_xenObject is Host)
+                    {
+                        NetworkTopologyButton.Visible = true;
+                    }
+                    else
+                    {
+                        NetworkTopologyButton.Visible = false;
+                    }
                 }
                 else if (_xenObject is VM)
                 {
@@ -107,6 +115,7 @@ namespace XenAdmin.Controls.NetworkingTab
                     RemoveNetworkButton.Text = Messages.VM_NETWORK_TAB_REMOVE_BUTTON_LABEL;
                     groupBox1.Visible = true;
                     buttonActivateToggle.Visible = true;
+                    NetworkTopologyButton.Visible = false;
                 }
 
                 BuildList();
@@ -1041,6 +1050,13 @@ namespace XenAdmin.Controls.NetworkingTab
             }
             e.SortResult = StringUtility.NaturalCompare(e.CellValue1.ToString(), e.CellValue2.ToString());
             e.Handled = true;
+        }
+        private void NetworkTopologyButton_Click(object sender, EventArgs e)
+        {
+            HostNetworkTopologyDialog tDialog = null;
+            Host host = (Host)_xenObject;
+            tDialog = new HostNetworkTopologyDialog(host);
+            tDialog.ShowDialog(this);
         }
     }
 }
