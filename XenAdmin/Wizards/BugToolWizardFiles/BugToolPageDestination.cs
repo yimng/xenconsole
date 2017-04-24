@@ -71,9 +71,9 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             {
                 //this is normal; ignore
             }
-            usernameTextBox.Visible = usernameLabel.Visible = passwordLabel.Visible = passwordTextBox.Visible = 
+            usernameTextBox.Visible = usernameLabel.Visible = passwordLabel.Visible = passwordTextBox.Visible =
                 caseNumberLabel.Visible = caseNumberTextBox.Visible = optionalLabel.Visible =
-                enterCredentialsLinkLabel.Visible = uploadCheckBox.Visible = !HiddenFeatures.UploadOptionHidden;
+                enterCredentialsLinkLabel.Visible = uploadCheckBox.Visible = false;//!HiddenFeatures.UploadOptionHidden;
 
             string enterCredentialsMessage = string.Format(Messages.STATUS_REPORT_ENTER_CREDENTIALS_MESSAGE, Messages.MY_CITRIX_CREDENTIALS_URL);
             enterCredentialsLinkLabel.Text = (enterCredentialsMessage);

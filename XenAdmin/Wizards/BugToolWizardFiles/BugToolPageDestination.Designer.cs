@@ -106,8 +106,8 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             // 
             // m_textBoxName
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.m_textBoxName, 2);
             resources.ApplyResources(this.m_textBoxName, "m_textBoxName");
+            this.tableLayoutPanel1.SetColumnSpan(this.m_textBoxName, 2);
             this.m_textBoxName.Name = "m_textBoxName";
             this.m_textBoxName.TextChanged += new System.EventHandler(this.m_textBoxName_TextChanged);
             // 
@@ -118,8 +118,8 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             // 
             // m_textBoxLocation
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.m_textBoxLocation, 2);
             resources.ApplyResources(this.m_textBoxLocation, "m_textBoxLocation");
+            this.tableLayoutPanel1.SetColumnSpan(this.m_textBoxLocation, 2);
             this.m_textBoxLocation.Name = "m_textBoxLocation";
             this.m_textBoxLocation.TextChanged += new System.EventHandler(this.m_textBoxLocation_TextChanged);
             // 
@@ -170,10 +170,10 @@ namespace XenAdmin.Wizards.BugToolWizardFiles
             // 
             // BugToolPageDestination
             // 
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "BugToolPageDestination";
-            resources.ApplyResources(this, "$this");
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
