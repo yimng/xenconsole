@@ -143,8 +143,8 @@ namespace XenAdmin.TabPages
             // 
             // pageContainerPanel
             // 
-            this.pageContainerPanel.Controls.Add(this.GeneralTableLayoutPanel);
             resources.ApplyResources(this.pageContainerPanel, "pageContainerPanel");
+            this.pageContainerPanel.Controls.Add(this.GeneralTableLayoutPanel);
             // 
             // GeneralTableLayoutPanel
             // 
@@ -163,9 +163,9 @@ namespace XenAdmin.TabPages
             // 
             // panelPropertiesColumn
             // 
+            resources.ApplyResources(this.panelPropertiesColumn, "panelPropertiesColumn");
             this.panelPropertiesColumn.Controls.Add(this.panelVMPP);
             this.panelPropertiesColumn.Controls.Add(this.propertiesGroupBox);
-            resources.ApplyResources(this.panelPropertiesColumn, "panelPropertiesColumn");
             this.panelPropertiesColumn.Name = "panelPropertiesColumn";
             // 
             // panelVMPP
@@ -191,8 +191,8 @@ namespace XenAdmin.TabPages
             // 
             // pictureBoxVMPPInfo
             // 
-            this.pictureBoxVMPPInfo.Image = global::XenAdmin.Properties.Resources._000_Alert2_h32bit_16;
             resources.ApplyResources(this.pictureBoxVMPPInfo, "pictureBoxVMPPInfo");
+            this.pictureBoxVMPPInfo.Image = global::XenAdmin.Properties.Resources._000_Alert2_h32bit_16;
             this.pictureBoxVMPPInfo.Name = "pictureBoxVMPPInfo";
             this.pictureBoxVMPPInfo.TabStop = false;
             // 
@@ -233,8 +233,8 @@ namespace XenAdmin.TabPages
             // 
             // folderLabel
             // 
-            this.folderLabel.AutoEllipsis = true;
             resources.ApplyResources(this.folderLabel, "folderLabel");
+            this.folderLabel.AutoEllipsis = true;
             this.folderLabel.Name = "folderLabel";
             this.folderLabel.UseMnemonic = false;
             // 
@@ -246,22 +246,22 @@ namespace XenAdmin.TabPages
             // 
             // tagsLabel
             // 
-            this.tagsLabel.AutoEllipsis = true;
             resources.ApplyResources(this.tagsLabel, "tagsLabel");
+            this.tagsLabel.AutoEllipsis = true;
             this.tagsLabel.Name = "tagsLabel";
             this.tagsLabel.UseMnemonic = false;
             // 
             // descriptionLabel
             // 
-            this.descriptionLabel.AutoEllipsis = true;
             resources.ApplyResources(this.descriptionLabel, "descriptionLabel");
+            this.descriptionLabel.AutoEllipsis = true;
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.UseMnemonic = false;
             // 
             // label1
             // 
-            this.label1.AutoEllipsis = true;
             resources.ApplyResources(this.label1, "label1");
+            this.label1.AutoEllipsis = true;
             this.label1.Name = "label1";
             this.label1.UseMnemonic = false;
             // 
@@ -285,29 +285,29 @@ namespace XenAdmin.TabPages
             // 
             // customFieldTitle1
             // 
-            this.customFieldTitle1.AutoEllipsis = true;
             resources.ApplyResources(this.customFieldTitle1, "customFieldTitle1");
+            this.customFieldTitle1.AutoEllipsis = true;
             this.customFieldTitle1.Name = "customFieldTitle1";
             this.customFieldTitle1.UseMnemonic = false;
             // 
             // customFieldContent1
             // 
-            this.customFieldContent1.AutoEllipsis = true;
             resources.ApplyResources(this.customFieldContent1, "customFieldContent1");
+            this.customFieldContent1.AutoEllipsis = true;
             this.customFieldContent1.Name = "customFieldContent1";
             this.customFieldContent1.UseMnemonic = false;
             // 
             // customFieldTitle2
             // 
-            this.customFieldTitle2.AutoEllipsis = true;
             resources.ApplyResources(this.customFieldTitle2, "customFieldTitle2");
+            this.customFieldTitle2.AutoEllipsis = true;
             this.customFieldTitle2.Name = "customFieldTitle2";
             this.customFieldTitle2.UseMnemonic = false;
             // 
             // customFieldContent2
             // 
-            this.customFieldContent2.AutoEllipsis = true;
             resources.ApplyResources(this.customFieldContent2, "customFieldContent2");
+            this.customFieldContent2.AutoEllipsis = true;
             this.customFieldContent2.Name = "customFieldContent2";
             this.customFieldContent2.UseMnemonic = false;
             // 
@@ -331,8 +331,8 @@ namespace XenAdmin.TabPages
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoEllipsis = true;
             resources.ApplyResources(this.nameLabel, "nameLabel");
+            this.nameLabel.AutoEllipsis = true;
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.UseMnemonic = false;
             // 
@@ -346,16 +346,16 @@ namespace XenAdmin.TabPages
             // 
             // screenshotPictureBox
             // 
-            this.screenshotPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.screenshotPictureBox, "screenshotPictureBox");
+            this.screenshotPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.screenshotPictureBox.Name = "screenshotPictureBox";
             this.screenshotPictureBox.TabStop = false;
             this.screenshotPictureBox.Click += new System.EventHandler(this.screenshotPictureBox_Click);
             // 
             // viewPanel
             // 
-            this.viewPanel.Controls.Add(this.snapshotTreeView);
             resources.ApplyResources(this.viewPanel, "viewPanel");
+            this.viewPanel.Controls.Add(this.snapshotTreeView);
             this.viewPanel.Name = "viewPanel";
             // 
             // snapshotTreeView
@@ -368,6 +368,9 @@ namespace XenAdmin.TabPages
             this.snapshotTreeView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.snapshotTreeView.HGap = 42;
             this.snapshotTreeView.HideSelection = false;
+            this.snapshotTreeView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("snapshotTreeView.Items"))),
+            ((System.Windows.Forms.ListViewItem)(resources.GetObject("snapshotTreeView.Items1")))});
             this.snapshotTreeView.LinkLineColor = System.Drawing.SystemColors.ActiveBorder;
             this.snapshotTreeView.Name = "snapshotTreeView";
             this.snapshotTreeView.OwnerDraw = true;
@@ -407,8 +410,8 @@ namespace XenAdmin.TabPages
             // 
             // toolTipContainerRevertButton
             // 
-            this.toolTipContainerRevertButton.Controls.Add(this.revertButton);
             resources.ApplyResources(this.toolTipContainerRevertButton, "toolTipContainerRevertButton");
+            this.toolTipContainerRevertButton.Controls.Add(this.revertButton);
             this.toolTipContainerRevertButton.Name = "toolTipContainerRevertButton";
             this.toolTipContainerRevertButton.TabStop = true;
             // 
@@ -421,16 +424,16 @@ namespace XenAdmin.TabPages
             // 
             // buttonView
             // 
-            this.buttonView.Image = global::XenAdmin.Properties.Resources.expanded_triangle;
             resources.ApplyResources(this.buttonView, "buttonView");
+            this.buttonView.Image = global::XenAdmin.Properties.Resources.expanded_triangle;
             this.buttonView.Name = "buttonView";
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.Click += new System.EventHandler(this.button1_Click);
             // 
             // saveButton
             // 
-            this.saveButton.Image = global::XenAdmin.Properties.Resources.expanded_triangle;
             resources.ApplyResources(this.saveButton, "saveButton");
+            this.saveButton.Image = global::XenAdmin.Properties.Resources.expanded_triangle;
             this.saveButton.Name = "saveButton";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -453,6 +456,7 @@ namespace XenAdmin.TabPages
             // 
             // contextMenuStrip
             // 
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TakeSnapshotToolStripMenuItem,
@@ -469,113 +473,113 @@ namespace XenAdmin.TabPages
             this.deleteToolStripMenuItem,
             this.propertiesToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // TakeSnapshotToolStripMenuItem
             // 
-            this.TakeSnapshotToolStripMenuItem.Name = "TakeSnapshotToolStripMenuItem";
             resources.ApplyResources(this.TakeSnapshotToolStripMenuItem, "TakeSnapshotToolStripMenuItem");
+            this.TakeSnapshotToolStripMenuItem.Name = "TakeSnapshotToolStripMenuItem";
             this.TakeSnapshotToolStripMenuItem.Click += new System.EventHandler(this.takeSnapshotToolStripButton_Click);
             // 
             // revertToolStripMenuItem
             // 
-            this.revertToolStripMenuItem.Name = "revertToolStripMenuItem";
             resources.ApplyResources(this.revertToolStripMenuItem, "revertToolStripMenuItem");
+            this.revertToolStripMenuItem.Name = "revertToolStripMenuItem";
             this.revertToolStripMenuItem.Click += new System.EventHandler(this.restoreToolStripButton_Click);
             // 
             // saveVMToolStripSeparator
             // 
-            this.saveVMToolStripSeparator.Name = "saveVMToolStripSeparator";
             resources.ApplyResources(this.saveVMToolStripSeparator, "saveVMToolStripSeparator");
+            this.saveVMToolStripSeparator.Name = "saveVMToolStripSeparator";
             // 
             // saveVMToolStripMenuItem
             // 
-            this.saveVMToolStripMenuItem.Name = "saveVMToolStripMenuItem";
             resources.ApplyResources(this.saveVMToolStripMenuItem, "saveVMToolStripMenuItem");
+            this.saveVMToolStripMenuItem.Name = "saveVMToolStripMenuItem";
             this.saveVMToolStripMenuItem.Click += new System.EventHandler(this.saveAsAVirtualMachineToolStripMenuItem_Click);
             // 
             // saveTemplateToolStripMenuItem
             // 
-            this.saveTemplateToolStripMenuItem.Name = "saveTemplateToolStripMenuItem";
             resources.ApplyResources(this.saveTemplateToolStripMenuItem, "saveTemplateToolStripMenuItem");
+            this.saveTemplateToolStripMenuItem.Name = "saveTemplateToolStripMenuItem";
             this.saveTemplateToolStripMenuItem.Click += new System.EventHandler(this.saveAsATemplateToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             resources.ApplyResources(this.exportToolStripMenuItem, "exportToolStripMenuItem");
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportSnapshotToolStripMenuItem_Click);
             // 
             // archiveToolStripMenuItem
             // 
-            this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
             resources.ApplyResources(this.archiveToolStripMenuItem, "archiveToolStripMenuItem");
+            this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
             this.archiveToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
             // 
             // separatorDeleteToolStripSeparator
             // 
-            this.separatorDeleteToolStripSeparator.Name = "separatorDeleteToolStripSeparator";
             resources.ApplyResources(this.separatorDeleteToolStripSeparator, "separatorDeleteToolStripSeparator");
+            this.separatorDeleteToolStripSeparator.Name = "separatorDeleteToolStripSeparator";
             // 
             // viewToolStripMenuItem
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             // 
             // sortByToolStripMenuItem
             // 
+            resources.ApplyResources(this.sortByToolStripMenuItem, "sortByToolStripMenuItem");
             this.sortByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sortByNameToolStripMenuItem,
             this.sortByCreatedOnToolStripMenuItem,
             this.sortBySizeToolStripMenuItem,
             this.sortByTypeToolStripMenuItem});
             this.sortByToolStripMenuItem.Name = "sortByToolStripMenuItem";
-            resources.ApplyResources(this.sortByToolStripMenuItem, "sortByToolStripMenuItem");
             // 
             // sortByNameToolStripMenuItem
             // 
-            this.sortByNameToolStripMenuItem.Name = "sortByNameToolStripMenuItem";
             resources.ApplyResources(this.sortByNameToolStripMenuItem, "sortByNameToolStripMenuItem");
+            this.sortByNameToolStripMenuItem.Name = "sortByNameToolStripMenuItem";
             this.sortByNameToolStripMenuItem.Click += new System.EventHandler(this.sortByToolStripMenuItem_Click);
             // 
             // sortByCreatedOnToolStripMenuItem
             // 
-            this.sortByCreatedOnToolStripMenuItem.Name = "sortByCreatedOnToolStripMenuItem";
             resources.ApplyResources(this.sortByCreatedOnToolStripMenuItem, "sortByCreatedOnToolStripMenuItem");
+            this.sortByCreatedOnToolStripMenuItem.Name = "sortByCreatedOnToolStripMenuItem";
             this.sortByCreatedOnToolStripMenuItem.Click += new System.EventHandler(this.sortByToolStripMenuItem_Click);
             // 
             // sortBySizeToolStripMenuItem
             // 
-            this.sortBySizeToolStripMenuItem.Name = "sortBySizeToolStripMenuItem";
             resources.ApplyResources(this.sortBySizeToolStripMenuItem, "sortBySizeToolStripMenuItem");
+            this.sortBySizeToolStripMenuItem.Name = "sortBySizeToolStripMenuItem";
             this.sortBySizeToolStripMenuItem.Click += new System.EventHandler(this.sortByToolStripMenuItem_Click);
             // 
             // sortByTypeToolStripMenuItem
             // 
-            this.sortByTypeToolStripMenuItem.Name = "sortByTypeToolStripMenuItem";
             resources.ApplyResources(this.sortByTypeToolStripMenuItem, "sortByTypeToolStripMenuItem");
+            this.sortByTypeToolStripMenuItem.Name = "sortByTypeToolStripMenuItem";
             this.sortByTypeToolStripMenuItem.Click += new System.EventHandler(this.sortByToolStripMenuItem_Click);
             // 
             // sortToolStripSeparator
             // 
-            this.sortToolStripSeparator.Name = "sortToolStripSeparator";
             resources.ApplyResources(this.sortToolStripSeparator, "sortToolStripSeparator");
+            this.sortToolStripSeparator.Name = "sortToolStripSeparator";
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripButton_Click);
             // 
             // propertiesToolStripMenuItem
             // 
-            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesButton_Click);
             // 
             // dataGridView
             // 
+            resources.ApplyResources(this.dataGridView, "dataGridView");
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToOrderColumns = true;
@@ -598,7 +602,6 @@ namespace XenAdmin.TabPages
             this.size,
             this.tags,
             this.description});
-            resources.ApplyResources(this.dataGridView, "dataGridView");
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
@@ -691,6 +694,7 @@ namespace XenAdmin.TabPages
             // 
             // saveMenuStrip
             // 
+            resources.ApplyResources(this.saveMenuStrip, "saveMenuStrip");
             this.saveMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.saveMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveAsVMToolStripMenuItem,
@@ -699,41 +703,41 @@ namespace XenAdmin.TabPages
             this.exportAsBackupToolStripMenuItem,
             this.archiveSnapshotNowToolStripMenuItem});
             this.saveMenuStrip.Name = "saveMenuStrip";
-            resources.ApplyResources(this.saveMenuStrip, "saveMenuStrip");
             this.saveMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.saveMenuStrip_Opening);
             // 
             // saveAsVMToolStripMenuItem
             // 
-            this.saveAsVMToolStripMenuItem.Name = "saveAsVMToolStripMenuItem";
             resources.ApplyResources(this.saveAsVMToolStripMenuItem, "saveAsVMToolStripMenuItem");
+            this.saveAsVMToolStripMenuItem.Name = "saveAsVMToolStripMenuItem";
             this.saveAsVMToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // saveAsTemplateToolStripMenuItem
             // 
+            resources.ApplyResources(this.saveAsTemplateToolStripMenuItem, "saveAsTemplateToolStripMenuItem");
             this.saveAsTemplateToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.saveAsTemplateToolStripMenuItem.Name = "saveAsTemplateToolStripMenuItem";
-            resources.ApplyResources(this.saveAsTemplateToolStripMenuItem, "saveAsTemplateToolStripMenuItem");
             this.saveAsTemplateToolStripMenuItem.Click += new System.EventHandler(this.saveAsTemplateToolStripMenuItem_Click);
             // 
             // exportAsBackupToolStripMenuItem
             // 
-            this.exportAsBackupToolStripMenuItem.Name = "exportAsBackupToolStripMenuItem";
             resources.ApplyResources(this.exportAsBackupToolStripMenuItem, "exportAsBackupToolStripMenuItem");
+            this.exportAsBackupToolStripMenuItem.Name = "exportAsBackupToolStripMenuItem";
             this.exportAsBackupToolStripMenuItem.Click += new System.EventHandler(this.exportAsBackupToolStripMenuItem_Click);
             // 
             // archiveSnapshotNowToolStripMenuItem
             // 
-            this.archiveSnapshotNowToolStripMenuItem.Name = "archiveSnapshotNowToolStripMenuItem";
             resources.ApplyResources(this.archiveSnapshotNowToolStripMenuItem, "archiveSnapshotNowToolStripMenuItem");
+            this.archiveSnapshotNowToolStripMenuItem.Name = "archiveSnapshotNowToolStripMenuItem";
             this.archiveSnapshotNowToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
             // 
             // contextMenuStripView
             // 
+            resources.ApplyResources(this.contextMenuStripView, "contextMenuStripView");
             this.contextMenuStripView.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonListView,
@@ -741,31 +745,30 @@ namespace XenAdmin.TabPages
             this.toolStripSeparatorView,
             this.toolStripMenuItemScheduledSnapshots});
             this.contextMenuStripView.Name = "contextMenuStripView";
-            resources.ApplyResources(this.contextMenuStripView, "contextMenuStripView");
             // 
             // toolStripButtonListView
             // 
+            resources.ApplyResources(this.toolStripButtonListView, "toolStripButtonListView");
             this.toolStripButtonListView.Image = global::XenAdmin.Properties.Resources._000_ViewModeList_h32bit_16;
             this.toolStripButtonListView.Name = "toolStripButtonListView";
-            resources.ApplyResources(this.toolStripButtonListView, "toolStripButtonListView");
             this.toolStripButtonListView.Click += new System.EventHandler(this.gridToolStripMenuItem_Click);
             // 
             // toolStripButtonTreeView
             // 
+            resources.ApplyResources(this.toolStripButtonTreeView, "toolStripButtonTreeView");
             this.toolStripButtonTreeView.Image = global::XenAdmin.Properties.Resources._000_ViewModeTree_h32bit_16;
             this.toolStripButtonTreeView.Name = "toolStripButtonTreeView";
-            resources.ApplyResources(this.toolStripButtonTreeView, "toolStripButtonTreeView");
             this.toolStripButtonTreeView.Click += new System.EventHandler(this.treeToolStripMenuItem_Click);
             // 
             // toolStripSeparatorView
             // 
-            this.toolStripSeparatorView.Name = "toolStripSeparatorView";
             resources.ApplyResources(this.toolStripSeparatorView, "toolStripSeparatorView");
+            this.toolStripSeparatorView.Name = "toolStripSeparatorView";
             // 
             // toolStripMenuItemScheduledSnapshots
             // 
-            this.toolStripMenuItemScheduledSnapshots.Name = "toolStripMenuItemScheduledSnapshots";
             resources.ApplyResources(this.toolStripMenuItemScheduledSnapshots, "toolStripMenuItemScheduledSnapshots");
+            this.toolStripMenuItemScheduledSnapshots.Name = "toolStripMenuItemScheduledSnapshots";
             this.toolStripMenuItemScheduledSnapshots.Click += new System.EventHandler(this.toolStripMenuItemScheduledSnapshots_Click);
             // 
             // SnapshotsPage
