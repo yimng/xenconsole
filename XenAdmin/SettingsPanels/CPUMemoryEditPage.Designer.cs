@@ -50,14 +50,14 @@ namespace XenAdmin.SettingsPanels
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxVCPUs = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBoxTopology = new XenAdmin.Controls.CPUTopologyComboBox();
             this.transparentTrackBar1 = new XenAdmin.Controls.TransparentTrackBar();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMemory)).BeginInit();
@@ -89,8 +89,8 @@ namespace XenAdmin.SettingsPanels
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.Controls.Add(this.comboBoxInitialVCPUs, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.labelInitialVCPUs, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.labelInvalidVCPUWarning, 1, 5);
@@ -110,9 +110,9 @@ namespace XenAdmin.SettingsPanels
             // 
             // comboBoxInitialVCPUs
             // 
+            resources.ApplyResources(this.comboBoxInitialVCPUs, "comboBoxInitialVCPUs");
             this.comboBoxInitialVCPUs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInitialVCPUs.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxInitialVCPUs, "comboBoxInitialVCPUs");
             this.comboBoxInitialVCPUs.Name = "comboBoxInitialVCPUs";
             // 
             // labelInitialVCPUs
@@ -216,34 +216,22 @@ namespace XenAdmin.SettingsPanels
             // 
             // comboBoxVCPUs
             // 
+            resources.ApplyResources(this.comboBoxVCPUs, "comboBoxVCPUs");
             this.comboBoxVCPUs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVCPUs.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxVCPUs, "comboBoxVCPUs");
             this.comboBoxVCPUs.Name = "comboBoxVCPUs";
             this.comboBoxVCPUs.SelectedIndexChanged += new System.EventHandler(this.comboBoxVCPUs_SelectedIndexChanged);
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.trackBar1);
             this.panel3.Controls.Add(this.label2);
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            // 
-            // label2
-            // 
-            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // trackBar1
-            // 
-            resources.ApplyResources(this.trackBar1, "trackBar1");
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label5
             // 
@@ -260,11 +248,28 @@ namespace XenAdmin.SettingsPanels
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // trackBar1
+            // 
+            resources.ApplyResources(this.trackBar1, "trackBar1");
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.label2.Name = "label2";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // comboBoxTopology
             // 
+            resources.ApplyResources(this.comboBoxTopology, "comboBoxTopology");
             this.tableLayoutPanel1.SetColumnSpan(this.comboBoxTopology, 2);
             this.comboBoxTopology.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBoxTopology, "comboBoxTopology");
             this.comboBoxTopology.FormattingEnabled = true;
             this.comboBoxTopology.Name = "comboBoxTopology";
             this.comboBoxTopology.SelectedIndexChanged += new System.EventHandler(this.comboBoxTopology_SelectedIndexChanged);
@@ -275,11 +280,6 @@ namespace XenAdmin.SettingsPanels
             this.transparentTrackBar1.BackColor = System.Drawing.Color.Transparent;
             this.transparentTrackBar1.Name = "transparentTrackBar1";
             this.transparentTrackBar1.TabStop = false;
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
             // 
             // CPUMemoryEditPage
             // 

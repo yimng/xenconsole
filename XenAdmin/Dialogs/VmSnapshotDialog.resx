@@ -127,7 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 10</value>
@@ -160,7 +160,7 @@
     <value>Fill</value>
   </data>
   <data name="textBoxName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="textBoxName.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 13</value>
@@ -190,7 +190,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="buttonCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>383, 227</value>
@@ -223,7 +223,7 @@
     <value>False</value>
   </data>
   <data name="buttonOk.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="buttonOk.Location" type="System.Drawing.Point, System.Drawing">
     <value>275, 227</value>
@@ -256,7 +256,7 @@
     <value>Fill</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -289,7 +289,7 @@
     <value>Fill</value>
   </data>
   <data name="textBoxDescription.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="textBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 41</value>
@@ -328,7 +328,7 @@
     <value>True</value>
   </data>
   <data name="quiesceCheckBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="quiesceCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -361,7 +361,7 @@
     <value>0</value>
   </data>
   <data name="pictureBoxQuiesceInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="pictureBoxQuiesceInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -391,10 +391,10 @@
     <value>Top</value>
   </data>
   <data name="flowLayoutPanel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 75</value>
+    <value>5, 97</value>
   </data>
   <data name="flowLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>25, 3, 3, 3</value>
@@ -424,7 +424,7 @@
     <value>True</value>
   </data>
   <data name="diskRadioButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="diskRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -433,13 +433,13 @@
     <value>18, 3</value>
   </data>
   <data name="diskRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 21</value>
+    <value>377, 21</value>
   </data>
   <data name="diskRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="diskRadioButton.Text" xml:space="preserve">
-    <value>&amp;Snapshot the virtual machine's disks</value>
+    <value>&amp;Snapshot the virtual machine's disks(Quick but not that safe)</value>
   </data>
   <data name="&gt;&gt;diskRadioButton.Name" xml:space="preserve">
     <value>diskRadioButton</value>
@@ -454,13 +454,13 @@
     <value>0</value>
   </data>
   <data name="pictureBoxSnapshotsInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="pictureBoxSnapshotsInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBoxSnapshotsInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 3</value>
+    <value>401, 3</value>
   </data>
   <data name="pictureBoxSnapshotsInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -484,10 +484,10 @@
     <value>Top</value>
   </data>
   <data name="flowLayoutPanel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 48</value>
+    <value>5, 70</value>
   </data>
   <data name="flowLayoutPanel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 0, 0, 0</value>
@@ -517,7 +517,7 @@
     <value>True</value>
   </data>
   <data name="memoryRadioButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="memoryRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -529,13 +529,13 @@
     <value>18, 3, 3, 3</value>
   </data>
   <data name="memoryRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 21</value>
+    <value>400, 21</value>
   </data>
   <data name="memoryRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="memoryRadioButton.Text" xml:space="preserve">
-    <value>Sn&amp;apshot the virtual machine's disks and memory</value>
+    <value>Sn&amp;apshot the virtual machine's disks and memory(Slow but safe)</value>
   </data>
   <data name="&gt;&gt;memoryRadioButton.Name" xml:space="preserve">
     <value>memoryRadioButton</value>
@@ -550,13 +550,13 @@
     <value>0</value>
   </data>
   <data name="CheckpointInfoPictureBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="CheckpointInfoPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CheckpointInfoPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 3</value>
+    <value>3, 30</value>
   </data>
   <data name="CheckpointInfoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -580,13 +580,13 @@
     <value>Top</value>
   </data>
   <data name="flowLayoutPanel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 21</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 27</value>
+    <value>438, 49</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -607,7 +607,7 @@
     <value>Fill</value>
   </data>
   <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 88</value>
@@ -643,7 +643,7 @@
     <value>Top</value>
   </data>
   <data name="tableLayoutPanel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 9pt</value>
+    <value>Microsoft YaHei, 9pt</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
