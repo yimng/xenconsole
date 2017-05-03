@@ -596,7 +596,7 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
         {
 
             //if (Program.MainWindow.Confirms(this.noSetVM.Connection, Messages.BACKUP_CHECK_ERROR_MESSAGE, new object[] { (this.noSetVM as VM).name_label }))
-            if (DialogResult.OK != MessageBox.Show(this, string.Format(Messages.BACKUP_CHECK_ERROR_MESSAGE, new object[] { (this.noSetVM as VM).name_label }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            if (DialogResult.OK == MessageBox.Show(this, string.Format(Messages.BACKUP_CHECK_ERROR_MESSAGE, new object[] { (this.noSetVM as VM).name_label }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
                 BackupConfigDialog backupConfig = new BackupConfigDialog();
                 backupConfig.ShowDialog();
