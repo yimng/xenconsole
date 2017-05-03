@@ -537,7 +537,7 @@ namespace XenAdmin.XenSearch
         public static ObjectTypes DefaultObjectTypes()
         {
             ObjectTypes types = ObjectTypes.DisconnectedServer | ObjectTypes.Server | ObjectTypes.VM |
-                                ObjectTypes.DockerContainer;
+                                ObjectTypes.RemoteSR | ObjectTypes.DockerContainer;
 
             return types;
         }
