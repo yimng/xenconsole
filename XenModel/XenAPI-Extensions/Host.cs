@@ -603,7 +603,7 @@ namespace XenAPI
                 // Pre-Ely hosts:
                 // allowed on Premium edition only
                 var hostEdition = GetEdition(edition);
-                if (hostEdition == Edition.Premium)
+                if (hostEdition == Edition.Premium || hostEdition == Edition.Free || hostEdition == Edition.Enterprise || hostEdition == Edition.Advanced)
                 {
                     return LicenseExpiryUTC < DateTime.UtcNow - Connection.ServerTimeOffset; // restrict if the license has expired
                 }

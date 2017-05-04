@@ -87,7 +87,7 @@ namespace XenAdmin.Commands
 
         protected override bool CanExecuteCore(SelectedItemCollection selection)
         {
-            SR sr = null; // DISABLED THIN PROVISIONING GetFirstThickSRFromSelection(selection);
+            SR sr = GetFirstThickSRFromSelection(selection);
 
             return sr != null ;
         }
