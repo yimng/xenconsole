@@ -102,6 +102,7 @@
             // 
             // m_dataGridView
             // 
+            resources.ApplyResources(this.m_dataGridView, "m_dataGridView");
             this.m_dataGridView.AllowUserToAddRows = false;
             this.m_dataGridView.AllowUserToDeleteRows = false;
             this.m_dataGridView.AllowUserToResizeColumns = false;
@@ -112,7 +113,6 @@
             this.m_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.m_colVmName,
             this.m_colTarget});
-            resources.ApplyResources(this.m_dataGridView, "m_dataGridView");
             this.m_dataGridView.Name = "m_dataGridView";
             this.m_dataGridView.RowHeadersVisible = false;
             this.m_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.m_dataGridView_CellClick);
