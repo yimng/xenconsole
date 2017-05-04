@@ -126,7 +126,7 @@ namespace XenAdmin.Wizards.InstantVMsWizard
             for (int i = 0; i < Number; i++)
             {
                 var createAction = new CreateVMFastAction(selection.Connection, selection.XenObject as VM);
-                //createAction.Completed += createAction_Completed;
+//                createAction.Completed += createAction_Completed;
                 actions.Add(createAction);
             }
             MultipleAction multiAction = new MultipleAction(selectedItem.Connection, Messages.INSTANT_CREATE_VMS, Messages.INSTANT_CREATE_VMS_START,Messages.INSTANT_CREATE_VMS_FINISH ,actions);
