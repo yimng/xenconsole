@@ -59,6 +59,7 @@ namespace XenAdmin.Dialogs.OptionsPages
             // 
             // AllowXenCenterUpdatesCheckBox
             // 
+            this.AllowXenCenterUpdatesCheckBox.AutoCheck = false;
             resources.ApplyResources(this.AllowXenCenterUpdatesCheckBox, "AllowXenCenterUpdatesCheckBox");
             this.AllowXenCenterUpdatesCheckBox.Name = "AllowXenCenterUpdatesCheckBox";
             this.AllowXenCenterUpdatesCheckBox.UseVisualStyleBackColor = true;
@@ -73,12 +74,14 @@ namespace XenAdmin.Dialogs.OptionsPages
             // 
             // AllowXenServerUpdatesCheckBox
             // 
+            this.AllowXenServerUpdatesCheckBox.AutoCheck = false;
             resources.ApplyResources(this.AllowXenServerUpdatesCheckBox, "AllowXenServerUpdatesCheckBox");
             this.AllowXenServerUpdatesCheckBox.Name = "AllowXenServerUpdatesCheckBox";
             this.AllowXenServerUpdatesCheckBox.UseVisualStyleBackColor = true;
             // 
             // AllowXenServerPatchesCheckBox
             // 
+            this.AllowXenServerPatchesCheckBox.AutoCheck = false;
             resources.ApplyResources(this.AllowXenServerPatchesCheckBox, "AllowXenServerPatchesCheckBox");
             this.AllowXenServerPatchesCheckBox.Name = "AllowXenServerPatchesCheckBox";
             this.AllowXenServerPatchesCheckBox.UseVisualStyleBackColor = true;

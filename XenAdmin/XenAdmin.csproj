@@ -428,6 +428,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs" />
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.Designer.cs" />
     <Compile Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -922,6 +926,20 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoISCSI.Designer.cs">
       <DependentUpon>LVMoISCSI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.Designer.cs">
+      <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.Designer.cs" />
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\NetApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -2072,6 +2090,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.resx" />
     <EmbeddedResource Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.resx">
       <DependentUpon>NotEnoughStorageWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -2435,6 +2454,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>LVMoISCSI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.zh-CN.resx">
+      <DependentUpon>LVMoMirror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.resx">
+      <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.zh-CN.resx">
+      <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.resx" />
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\NetApp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>NetApp.cs</DependentUpon>

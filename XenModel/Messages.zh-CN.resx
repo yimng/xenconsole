@@ -14373,4 +14373,7 @@ SCSI ID: {6}
   <data name="NETWORKTOPOLOGY_VMS_GROUP" xml:space="preserve">
     <value>虚拟机端口组</value>
   </data>
+  <data name="NEWSR_LUNFORLOG" xml:space="preserve">
+    <value>选择一个LUN存放log</value>
+  </data>
 </root>

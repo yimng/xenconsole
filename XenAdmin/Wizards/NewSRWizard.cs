@@ -1,4 +1,4 @@
-﻿/* Copyright (c) Citrix Systems, Inc. 
+﻿/* Copyright (c) Citrix Systems Inc. 
  * All rights reserved. 
  * 
  * Redistribution and use in source and binary forms, 
@@ -64,6 +64,9 @@ namespace XenAdmin.Wizards
         private readonly LVMoHBASummary xenTabPageLvmoHbaSummary;
         private readonly LVMoBondSummary xenTabPageLvmoBondSummary;
         private readonly LVMoBond xenTabPageLvmoBond;
+        private readonly LVMoMirror xenTabPageLvmoMirror;
+        private readonly LVMoMirrorChooseLogPage xenTabPageLVMoMirrorChooseLog;
+        private readonly LVMoMirrorSummaryPage xenTabPageLvmoMirrorSummary;
         private readonly CslgSettings xenTabPageCslgSettings;
         private readonly CslgLocation xenTabPageCslgLocation;
         private readonly FilerDetails xenTabPageFilerDetails;
@@ -114,6 +117,9 @@ namespace XenAdmin.Wizards
             xenTabPageLvmoHbaSummary = new LVMoHBASummary();
             xenTabPageLvmoBondSummary = new LVMoBondSummary();
             xenTabPageLvmoBond = new LVMoBond();
+            xenTabPageLvmoMirror = new LVMoMirror();
+            xenTabPageLVMoMirrorChooseLog = new LVMoMirrorChooseLogPage();
+            xenTabPageLvmoMirrorSummary = new LVMoMirrorSummaryPage();//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             xenTabPageCslgSettings = new CslgSettings();
             xenTabPageCslgLocation = new CslgLocation();
             xenTabPageFilerDetails = new FilerDetails();
@@ -208,7 +214,22 @@ namespace XenAdmin.Wizards
             xenTabPageLvmoBond.FCDevices = devices;
             return success;
         }
-
+        private bool SetFCDevicesOnLVMoMirrorPage()
+        {
+            List<FibreChannelDevice> devices;
+            List<FibreChannelDevice> log_devices = new List<FibreChannelDevice>();
+            var success = LVMoMirror.FiberChannelScan(this, xenConnection, out devices);
+            xenTabPageLvmoMirror.FCDevices = devices;
+            //将已经被用作Mirror的两个LUN在LOG界面删除不显示
+            log_devices = devices;
+//            if (LVMoMirror.two_device.Count != 0)
+//            {
+//                log_devices.Remove(LVMoMirror.two_device[0]);
+//                log_devices.Remove(LVMoMirror.two_device[1]);
+//            }
+            xenTabPageLVMoMirrorChooseLog.FCDevices =log_devices;
+            return success;
+        }
         private bool CanShowLVMoHBASummaryPage(List<LvmOhbaSrDescriptor> SrDescriptors)
         {
             string description = m_srWizardType.Description;
@@ -264,6 +285,33 @@ namespace XenAdmin.Wizards
             RunFinalAction(out closeWizard);
             return closeWizard;
         }
+       private bool CanShowLVMoMirrorSummaryPage()//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LVMoMirrorSummaryPage needed
+                {
+                    string description = m_srWizardType.Description;
+                    string name = m_srWizardType.SrName;
+
+                    List<string> names = xenConnection.Cache.SRs.Select(sr => sr.Name).ToList();
+
+                    m_srWizardType.SrDescriptors.Clear();
+                    foreach (var lvmOmirrorSrDescriptor in xenTabPageLvmoMirror.SrDescriptors)
+                    {
+                        lvmOmirrorSrDescriptor.Name = name;
+                        if (!string.IsNullOrEmpty(description))
+                            lvmOmirrorSrDescriptor.Description = description;
+
+                        m_srWizardType.SrDescriptors.Add(lvmOmirrorSrDescriptor);
+                        names.Add(name);
+                        name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_HBA_DEFAULT_NAME, names);
+                    }
+
+              //      xenTabPageLvmoMirrorSummary.SuccessfullyCreatedSRs.Clear();
+               //     xenTabPageLvmoMirrorSummary.FailedToCreateSRs.Clear();
+
+                    bool closeWizard;
+                    RunFinalAction(out closeWizard);
+                    return closeWizard;
+                }
+
         protected override bool RunNextPagePrecheck(XenTabPage senderPage)
         {
             // if reattaching and RBAC warning page is visible, then we run the prechecks when leaving the RBAC warning page
@@ -286,6 +334,10 @@ namespace XenAdmin.Wizards
                 if (m_srWizardType is SrWizardType_lvmobond)
                 {
                     return SetFCDevicesOnLVMoBondPage();
+                }
+                if (m_srWizardType is SrWizardType_lvmomirror)
+                {
+                    return SetFCDevicesOnLVMoMirrorPage();
                 }
                 if (m_srWizardType is SrWizardType_Cslg || m_srWizardType is SrWizardType_NetApp || m_srWizardType is SrWizardType_EqualLogic)
                 {
@@ -310,6 +362,10 @@ namespace XenAdmin.Wizards
             {
                 return CanShowLVMoBondSummaryPage();
             }
+            if (senderPage == xenTabPageLvmoMirror) //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            {
+                return CanShowLVMoMirrorSummaryPage();
+            }
             return base.RunNextPagePrecheck(senderPage);
         }
      
@@ -325,6 +381,12 @@ namespace XenAdmin.Wizards
 
                 if (m_srWizardType is SrWizardType_VhdoNfs)
                     AddPage(xenTabPageVhdoNFS);
+                else if(m_srWizardType is SrWizardType_lvmomirror)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                {
+                    AddPage(xenTabPageLVMoMirrorChooseLog);
+                    AddPage(xenTabPageLvmoMirror);
+                    AddPage(xenTabPageLvmoMirrorSummary);
+                }
                 else if (m_srWizardType is SrWizardType_LvmoIscsi)
                 {
                     AddPage(xenTabPageLvmoIscsi);
@@ -396,6 +458,11 @@ namespace XenAdmin.Wizards
                     xenTabPageLvmoHba.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_lvmobond)
                     xenTabPageLvmoBond.SrWizardType = m_srWizardType;
+                else if (m_srWizardType is SrWizardType_lvmomirror)
+                {
+                    xenTabPageLvmoMirror.SrWizardType = m_srWizardType;
+                    xenTabPageLVMoMirrorChooseLog.SrWizardType = m_srWizardType;
+                }
                 else if (m_srWizardType is SrWizardType_Cslg || m_srWizardType is SrWizardType_NetApp || m_srWizardType is SrWizardType_EqualLogic)
                     xenTabPageCslg.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_CifsIso)
@@ -504,9 +571,9 @@ namespace XenAdmin.Wizards
                 srwizardtype.Description = description;
         }
 
-        protected override void FinishWizard()
+        protected override void FinishWizard()//1!!!!!!!!!!
         {
-            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond)
+            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond ||m_srWizardType is SrWizardType_lvmomirror)
             {
                 base.FinishWizard();
                 return;
@@ -621,10 +688,8 @@ namespace XenAdmin.Wizards
                         });
                 }
                 dialog.ShowDialog(this);
-            }           
-            
-
-            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond)
+            }                       
+            if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond||m_srWizardType is SrWizardType_lvmomirror)
             {
                 foreach (var asyncAction in actionList)
                 {

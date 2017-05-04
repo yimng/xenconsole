@@ -14420,4 +14420,19 @@ You will need to navigate to the Console on each of the selected VMs to complete
   <data name="NETWORKTOPOLOGY_VMS_GROUP" xml:space="preserve">
     <value>VMs group</value>
   </data>
+  <data name="LVMOMIRROR_BLURB_ENHANCEDSR" xml:space="preserve">
+    <value>Update vGate to use this function.</value>
+  </data>
+  <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
+    <value>LVM_MIRROR_TO_BE_CHANGED</value>
+  </data>
+  <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
+    <value>LVM_MIRROR</value>
+  </data>
+  <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
+    <value>TOBECHANGED</value>
+  </data>
+  <data name="NEWSR_LUNFORLOG" xml:space="preserve">
+    <value>LUN for log</value>
+  </data>
 </root>
