@@ -1954,7 +1954,7 @@ namespace XenAdmin.Controls.HalsignControls
         private void ButtonCancelJob_Click(object sender, EventArgs e)
         {
             //bool _commit = Program.MainWindow.Confirms(this._xenModelObject.Connection, Messages.CONFIRM_CANCEL_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value });
-            bool _commit = DialogResult.OK != MessageBox.Show(this, string.Format(Messages.CONFIRM_CANCEL_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            bool _commit = DialogResult.OK == MessageBox.Show(this, string.Format(Messages.CONFIRM_CANCEL_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (_commit && this.dataGridView_CurrentJobs.CurrentRow != null)
             {
                 Dictionary<string, string> dconf = new Dictionary<string, string>();
@@ -1994,7 +1994,7 @@ namespace XenAdmin.Controls.HalsignControls
             if (this.dataGridView_CurrentJobs.CurrentRow != null)
             {
                 //bool _commit = Program.MainWindow.Confirms(this._xenModelObject.Connection, Messages.CONFIRM_DELETE_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value });
-                bool _commit = DialogResult.OK != MessageBox.Show(this, string.Format(Messages.CONFIRM_CANCEL_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                bool _commit = DialogResult.OK == MessageBox.Show(this, string.Format(Messages.CONFIRM_CANCEL_BR_JOB, new object[] { this.dataGridView_CurrentJobs.CurrentRow.Cells[0].Value }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (_commit)
                 {
                     if (!IsJobRunning((int)this.dataGridView_CurrentJobs.CurrentRow.Cells[3].Tag))

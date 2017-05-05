@@ -397,9 +397,8 @@ namespace XenAdmin.TabPages
                 str_name = (this.xenModelObject as VM).name_label;
             }
             //bool _commit = Program.MainWindow.Confirms(this.xenModelObject.Connection, Messages.CONFIRM_DELETE_BACKUP, new object[] { str_name });
-            bool _commit = DialogResult.OK != MessageBox.Show(this, string.Format(Messages.CONFIRM_DELETE_BACKUP, new object[] { str_name }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            bool _commit = DialogResult.OK == MessageBox.Show(this, string.Format(Messages.CONFIRM_DELETE_BACKUP, new object[] { str_name }), Messages.MESSAGEBOX_CONFIRM, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (_commit)
-                if (_commit)
             {
                 BackupConfigurationAction action = new BackupConfigurationAction(this.xenModelObject.Connection, this.xenModelObject, null, 1);
                 if (action != null)
