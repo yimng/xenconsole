@@ -33,12 +33,12 @@ namespace XenAdmin.Controls
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MultipleDvdIsoList));
             this.labelSingleDvd = new System.Windows.Forms.Label();
-            this.newCDLabel = new System.Windows.Forms.Label();
             this.comboBoxDrive = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cdChanger1 = new XenAdmin.Controls.CDChanger();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.newCDLabel = new System.Windows.Forms.LinkLabel();
+            this.cdChanger1 = new XenAdmin.Controls.CDChanger();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,19 +48,11 @@ namespace XenAdmin.Controls
             resources.ApplyResources(this.labelSingleDvd, "labelSingleDvd");
             this.labelSingleDvd.Name = "labelSingleDvd";
             // 
-            // newCDLabel
-            // 
-            resources.ApplyResources(this.newCDLabel, "newCDLabel");
-            this.newCDLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.newCDLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.newCDLabel.Name = "newCDLabel";
-            this.newCDLabel.Click += new System.EventHandler(this.newCDLabel_Click);
-            // 
             // comboBoxDrive
             // 
+            resources.ApplyResources(this.comboBoxDrive, "comboBoxDrive");
             this.comboBoxDrive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDrive.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxDrive, "comboBoxDrive");
             this.comboBoxDrive.Name = "comboBoxDrive";
             this.comboBoxDrive.SelectedIndexChanged += new System.EventHandler(this.comboBoxDrive_SelectedIndexChanged);
             // 
@@ -69,8 +61,8 @@ namespace XenAdmin.Controls
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.labelSingleDvd, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxDrive, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.newCDLabel, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.newCDLabel, 2, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // panel1
@@ -80,12 +72,26 @@ namespace XenAdmin.Controls
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Name = "panel1";
             // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // newCDLabel
+            // 
+            resources.ApplyResources(this.newCDLabel, "newCDLabel");
+            this.newCDLabel.Name = "newCDLabel";
+            this.newCDLabel.TabStop = true;
+            this.newCDLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newCDLabel_Click);
+            // 
             // cdChanger1
             // 
+            resources.ApplyResources(this.cdChanger1, "cdChanger1");
             this.cdChanger1.connection = null;
             this.cdChanger1.DisplayISO = false;
             this.cdChanger1.DisplayPhysical = false;
-            resources.ApplyResources(this.cdChanger1, "cdChanger1");
             this.cdChanger1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cdChanger1.Drive = null;
             this.cdChanger1.DropDownHeight = 500;
@@ -95,13 +101,6 @@ namespace XenAdmin.Controls
             this.cdChanger1.Name = "cdChanger1";
             this.cdChanger1.SelectedCD = null;
             this.cdChanger1.TheVM = null;
-            // 
-            // linkLabel1
-            // 
-            resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MultipleDvdIsoList
             // 
@@ -122,9 +121,9 @@ namespace XenAdmin.Controls
         private CDChanger cdChanger1;
         private System.Windows.Forms.Label labelSingleDvd;
         private System.Windows.Forms.ComboBox comboBoxDrive;
-		private System.Windows.Forms.Label newCDLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel newCDLabel;
     }
 }

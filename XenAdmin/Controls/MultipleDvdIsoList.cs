@@ -253,21 +253,20 @@ namespace XenAdmin.Controls
             cdChanger1.Drive = comboBoxDrive.SelectedItem != null ? ((VbdCombiItem)comboBoxDrive.SelectedItem).vbd : null;
         }
 
-
-        private void newCDLabel_Click(object sender, EventArgs e)
-        {
-            if (VM != null)
-            {
-                CreateCdDriveAction createDriveAction = new CreateCdDriveAction(VM, false,NewDiskDialog.ShowMustRebootBoxCD,NewDiskDialog.ShowVBDWarningBox);
-                using (var dlg = new ActionProgressDialog(createDriveAction, ProgressBarStyle.Marquee))
-                    dlg.ShowDialog(this);
-            }
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (cdChanger1.Drive != null)
                 cdChanger1.ChangeCD(null);
+        }
+
+        private void newCDLabel_Click(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (VM != null)
+            {
+                CreateCdDriveAction createDriveAction = new CreateCdDriveAction(VM, false, NewDiskDialog.ShowMustRebootBoxCD, NewDiskDialog.ShowVBDWarningBox);
+                using (var dlg = new ActionProgressDialog(createDriveAction, ProgressBarStyle.Marquee))
+                    dlg.ShowDialog(this);
+            }
         }
     }
 }
