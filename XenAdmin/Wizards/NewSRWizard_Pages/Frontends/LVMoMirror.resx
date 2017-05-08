@@ -128,8 +128,14 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
+  <data name="colCheck.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;colId.Name" xml:space="preserve">
     <value>colId</value>
+  </data>
+  <data name="colId.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;colSize.Name" xml:space="preserve">
     <value>colSize</value>
@@ -161,8 +167,8 @@
   <data name="&gt;&gt;colCheck.Name" xml:space="preserve">
     <value>colCheck</value>
   </data>
-  <data name="&gt;&gt;colNic.Name" xml:space="preserve">
-    <value>colNic</value>
+  <data name="&gt;&gt;colSerial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -194,6 +200,9 @@
   <data name="colDetails.HeaderText" xml:space="preserve">
     <value>Details</value>
   </data>
+  <data name="colNic.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;colSerial.Name" xml:space="preserve">
     <value>colSerial</value>
   </data>
@@ -207,6 +216,9 @@
     <value>NIC</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDetails.UserAddedColumn" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
@@ -230,8 +242,14 @@
   <data name="&gt;&gt;colSize.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="colSerial.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;colDetails.Name" xml:space="preserve">
     <value>colDetails</value>
+  </data>
+  <data name="colSize.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;dataGridView.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -239,8 +257,8 @@
   <data name="dataGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 45</value>
   </data>
-  <data name="&gt;&gt;colSerial.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;colNic.Name" xml:space="preserve">
+    <value>colNic</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>554, 376</value>
@@ -251,28 +269,10 @@
   <data name="colSerial.MinimumWidth" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="colNic.UserAddedColumn" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colDetails.UserAddedColumn" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colId.UserAddedColumn" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colSerial.UserAddedColumn" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="colSize.UserAddedColumn" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>zh-CN</value>
-  </data>
-  <data name="colCheck.UserAddedColumn" type="System.Boolean, mscorlib">
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
 </root>

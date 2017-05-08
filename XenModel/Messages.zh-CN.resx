@@ -14376,4 +14376,16 @@ SCSI ID: {6}
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>选择一个LUN存放log</value>
   </data>
+  <data name="LVMOMIRROR_BLURB_ENHANCEDSR" xml:space="preserve">
+    <value>升级vGate以使用此功能</value>
+  </data>
+  <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
+    <value>待修改</value>
+  </data>
+  <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
+    <value>异构存储映射</value>
+  </data>
+  <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
+    <value>描述——待修改</value>
+  </data>
 </root>

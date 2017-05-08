@@ -49,6 +49,8 @@ namespace XenAdmin.Actions
         public const String SCSIid1 = "SCSIid1";
         public const String DEVICE2 = "device2";
         public const String SCSIid2 = "SCSIid2";
+        public const String DEVICE3 = "device3";
+        public const String SCSIid3 = "SCSIid3";
         public const String PATH = "path";
 
         private readonly Dictionary<String, String> smconf;
@@ -86,6 +88,13 @@ namespace XenAdmin.Actions
                     Description = string.Format(Messages.ACTION_SR_SCANNING,
                         XenAPI.SR.getFriendlyTypeName(srType), device2);
                     break;
+                case XenAPI.SR.SRTypes.lvmomirror:
+                    String device3 = dconf.ContainsKey(DEVICE1) && dconf.ContainsKey(DEVICE2) && dconf.ContainsKey(DEVICE3) ?
+                        dconf[DEVICE1] + ":" + dconf[DEVICE2] +":" + dconf[DEVICE3] : dconf[SCSIid1] + ":" + dconf[SCSIid2] + ":" + dconf[SCSIid3];
+                    Description = string.Format(Messages.ACTION_SR_SCANNING,
+                        XenAPI.SR.getFriendlyTypeName(srType), device3);                   
+                    break;
+
                 default:
                     Description = string.Format(Messages.ACTION_SR_SCANNING,
                         XenAPI.SR.getFriendlyTypeName(srType), Messages.REPAIRSR_SERVER); // this is a bit minging: CA-22111

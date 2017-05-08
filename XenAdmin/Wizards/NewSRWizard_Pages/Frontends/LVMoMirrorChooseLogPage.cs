@@ -46,8 +46,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
     public partial class LVMoMirrorChooseLogPage : XenTabPage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         private List<FibreChannelDevice> _selectedDevices = new List<FibreChannelDevice>();
+        public static List<FibreChannelDevice> three_devices = new List<FibreChannelDevice>();
         public LVMoMirrorChooseLogPage()
         {
             InitializeComponent();
@@ -56,20 +56,27 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public override string Text { get { return Messages.NEWSR_LUNFORLOG; } }
         public override string HelpID { get { return "Location_Mirror"; } }
         public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
-
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
         {
             if (direction == PageLoadedDirection.Back)
+            {
+                three_devices.Clear();
+                LVMoMirror.two_devices.Clear();
+                IsFirstLoad = true;
                 return;
-
+            }            
             Host master = Helpers.GetMaster(Connection);
             if (master == null)
             {
                 cancel = true;
                 return;
             }
-            var descr = new LVMoMirrorSrDescriptor(_selectedDevices, Connection);
-
+            if(three_devices.Count==2 && _selectedDevices.Count==1)
+            {
+                three_devices.Add(_selectedDevices[0]);
+            }
+            
+            var descr = new LVMoMirrorSrDescriptor(three_devices, Connection);
             SrDescriptors = new List<LVMoMirrorSrDescriptor>();
 
             var existingSrDescriptors = new List<LVMoMirrorSrDescriptor>();
@@ -83,7 +90,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 cancel = true;
                 return;
             }
-
             descr.UUID = SrWizardHelpers.ExtractUUID(action.Result);
 
             if (!string.IsNullOrEmpty(SrWizardType.UUID))
@@ -160,7 +166,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 if (!cancel && launcher.SrDescriptors.Count > 0)
                     SrDescriptors.AddRange(launcher.SrDescriptors);
             }
-
             base.PageLeave(direction, ref cancel);
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -208,16 +213,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                                     where deviceRow != null && deviceRow.Selected
                                     select deviceRow.Device).ToList();
             }
-//            if (_selectedDevices.Count != 1)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//            {
-//                if (_selectedDevices[0].Size != _selectedDevices[1].Size)
-//                {
-//                    MessageBox.Show(Messages.SELECT_LUN_WARNING,
-//                                    Messages.MESSAGEBOX_CONFIRM,
-//                                    MessageBoxButtons.OK);
-//                }
-//            }
         }
+
+        /*
         public static bool FiberChannelScan(IWin32Window owner, IXenConnection connection, out List<FibreChannelDevice> devices)
         {
             devices = new List<FibreChannelDevice>();
@@ -255,6 +253,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 return false;
             }
         }
+         * */
         public List<FibreChannelDevice> FCDevices { private get; set; }
         public override bool EnableNext()
         {
@@ -268,11 +267,16 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             return true;
         }
+
         public override void PopulatePage()
         {
             dataGridView.Rows.Clear();
-
-            var vendorGroups = from device in FCDevices
+            _selectedDevices.Clear();
+            List<FibreChannelDevice> all = new List<FibreChannelDevice>();
+            this.FCDevices.ForEach(device => all.Add(device));
+            all.Remove(LVMoMirror.two_devices[0]);
+            all.Remove(LVMoMirror.two_devices[1]);
+            var vendorGroups = from device in all
                                group device by device.Vendor into g
                                orderby g.Key
                                select new { VendorName = g.Key, Devices = g.OrderBy(x => x.Serial) };
@@ -377,11 +381,11 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOmirrorSrDescriptor);
 
-                using (var dialog = new LVMoMirrorWarningDialog(lvmOmirrorSrDescriptor.Device, remainingCount, foundExistingSRs))
+                using (var dialog = new LVMoMirrorChooseLogWarningDialog(lvmOmirrorSrDescriptor.Device, remainingCount, foundExistingSRs))
                 {
                     dialog.ShowDialog(owner);
                     repeatForRemainingLUNs = dialog.RepeatForRemainingLUNs;
-                    return dialog.SelectedLogOption;
+                    return dialog.SelectedOption;
                 }
             }
 
