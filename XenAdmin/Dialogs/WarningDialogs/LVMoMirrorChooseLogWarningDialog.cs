@@ -8,17 +8,17 @@ using XenAdmin.Wizards.NewSRWizard_Pages.Frontends;
 
 namespace XenAdmin.Dialogs.WarningDialogs
 {
-    public partial class LVMoMirrorWarningDialog : XenDialogBase
+    public partial class LVMoMirrorChooseLogWarningDialog : XenDialogBase
     {
         private Panel highlightedPanel;
         private List<FibreChannelDevice> currentDevice;
         private int remainingDevicesCount;
         private bool foundExistingSR;
 
-        public LVMoMirror.UserSelectedOption SelectedOption { get; private set; }
+        public LVMoMirrorChooseLogPage.UserSelectedOption SelectedOption { get; private set; }
         public bool RepeatForRemainingLUNs { get { return checkBoxRepeat.Checked; } }
 
-        public LVMoMirrorWarningDialog(List<FibreChannelDevice> currentDevice, int remainingDevicesCount,
+        public LVMoMirrorChooseLogWarningDialog(List<FibreChannelDevice> currentDevice, int remainingDevicesCount,
             bool foundExistingSR)
         {
             InitializeComponent();
@@ -69,8 +69,8 @@ namespace XenAdmin.Dialogs.WarningDialogs
                 return;
 
             SelectedOption = panel == panelFormat
-                                 ? LVMoMirror.UserSelectedOption.Format
-                                 : LVMoMirror.UserSelectedOption.Reattach;
+                                 ? LVMoMirrorChooseLogPage.UserSelectedOption.Format
+                                 : LVMoMirrorChooseLogPage.UserSelectedOption.Reattach;
 
             DialogResult = DialogResult.OK;
         }
@@ -129,7 +129,7 @@ namespace XenAdmin.Dialogs.WarningDialogs
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            SelectedOption = LVMoMirror.UserSelectedOption.Cancel;
+            SelectedOption = LVMoMirrorChooseLogPage.UserSelectedOption.Cancel;
         }
 
         private void buttonReattach_Click(object sender, EventArgs e)

@@ -14427,7 +14427,7 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>LVM_MIRROR_TO_BE_CHANGED</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
-    <value>LVM_MIRROR</value>
+    <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
     <value>TOBECHANGED</value>

@@ -117,11 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 150</value>
+  <data name="addButton.Text" xml:space="preserve">
+    <value>添加(&amp;A)</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>取消(&amp;C)</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>请选择练个相同大小的LUN</value>
+    <value>点击添加按钮为异构存储映射添加新的LUN</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>添加LUN</value>
   </data>
 </root>

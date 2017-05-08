@@ -651,13 +651,13 @@
     <value>6, 3, 3, 3</value>
   </data>
   <data name="radioButtonLVMMirror.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 19</value>
+    <value>112, 19</value>
   </data>
   <data name="radioButtonLVMMirror.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="radioButtonLVMMirror.Text" xml:space="preserve">
-    <value>LVM Mirror(&amp;M)</value>
+    <value>异构存储映射(&amp;R)</value>
   </data>
   <data name="&gt;&gt;radioButtonLVMMirror.Name" xml:space="preserve">
     <value>radioButtonLVMMirror</value>

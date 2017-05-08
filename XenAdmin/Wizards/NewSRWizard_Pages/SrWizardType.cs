@@ -132,16 +132,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                 DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
                 Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
             }
-            else if(master != null && device.Count ==1)
-            {
-                DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
-                Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： ", device[0].Serial + " : ");
-            }
             else
             {
-                DeviceConfig[SrProbeAction.DEVICE1] = device[0].Path;
+               DeviceConfig[SrProbeAction.DEVICE1] = device[0].Path;
                DeviceConfig[SrProbeAction.DEVICE2] = device[1].Path;
-               Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
+               DeviceConfig[SrProbeAction.DEVICE3] = device[2].Path;
+               Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor + " : " + device[2].Vendor, device[0].Serial + " : " + device[1].Serial + " : " + device[2].Serial);
             }
 
 //            Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);

@@ -45,12 +45,10 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 {
     public partial class LVMoMirror : XenTabPage
     {
-        //用List存放用于做mirror的两个相同大小的LUN
-        public static List<FibreChannelDevice> two_device = new List<FibreChannelDevice>();
-
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         private List<FibreChannelDevice> _selectedDevices = new List<FibreChannelDevice>();
+        //用List存放用于做mirror的两个相同大小的LUN
+        public static List<FibreChannelDevice> two_devices = new List<FibreChannelDevice>();
         public LVMoMirror()
         {
             InitializeComponent();
@@ -60,13 +58,20 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public override string Text { get { return Messages.NEWSR_LOCATION; } }
         public override string HelpID { get { return "Location_Mirror"; } }
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
-        {
-            //将选中的两个LUN放入List
-                two_device.Add(_selectedDevices[0]);
-                two_device.Add(_selectedDevices[1]);
+        {           
+            if(LVMoMirrorChooseLogPage.three_devices.Count==0 && _selectedDevices.Count==2)
+            {
+                LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[0]);
+                LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[1]);
+                two_devices.Add(_selectedDevices[0]);
+                two_devices.Add(_selectedDevices[1]);
+            }
             if (direction == PageLoadedDirection.Back)
+            {
+                LVMoMirrorChooseLogPage.three_devices.Clear();
                 return;
-
+            }
+            
             Host master = Helpers.GetMaster(Connection);
             if (master == null)
             {
@@ -79,17 +84,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             var existingSrDescriptors = new List<LVMoMirrorSrDescriptor>();
             var formatDiskDescriptors = new List<LVMoMirrorSrDescriptor>();
-
-            var action = new SrProbeAction(Connection, master, SR.SRTypes.lvmomirror, descr.DeviceConfig);
-            new ActionProgressDialog(action, ProgressBarStyle.Marquee).ShowDialog(this);
-
-            if (!action.Succeeded)
-            {
-                cancel = true;
-                return;
-            }
-
-            descr.UUID = SrWizardHelpers.ExtractUUID(action.Result);
 
             if (!string.IsNullOrEmpty(SrWizardType.UUID))
             {
@@ -147,25 +141,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                     existingSrDescriptors.Add(descr);
                 }
             }
-
-            if (!cancel && existingSrDescriptors.Count > 0)
-            {
-                var launcher = new LVMoMIRRORWarningDialogLauncher(this, existingSrDescriptors, true);
-                launcher.ShowWarnings();
-                cancel = launcher.Cancelled;
-                if (!cancel && launcher.SrDescriptors.Count > 0)
-                    SrDescriptors.AddRange(launcher.SrDescriptors);
-            }
-
-            if (!cancel && formatDiskDescriptors.Count > 0)
-            {
-                var launcher = new LVMoMIRRORWarningDialogLauncher(this, formatDiskDescriptors, false);
-                launcher.ShowWarnings();
-                cancel = launcher.Cancelled;
-                if (!cancel && launcher.SrDescriptors.Count > 0)
-                    SrDescriptors.AddRange(launcher.SrDescriptors);
-            }
-
+ 
             base.PageLeave(direction, ref cancel);
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -325,8 +301,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
         public override void PopulatePage()
         {
+            LVMoMirrorChooseLogPage.three_devices.Clear();
+            two_devices.Clear();
             dataGridView.Rows.Clear();
-
             var vendorGroups = from device in FCDevices
                                group device by device.Vendor into g
                                orderby g.Key
@@ -351,6 +328,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         }
 
         public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
+        
         public override bool EnableNext()
         {
             return _selectedDevices.Count == 2 && _selectedDevices[0].Size == _selectedDevices[1].Size;

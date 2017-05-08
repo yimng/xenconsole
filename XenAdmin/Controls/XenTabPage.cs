@@ -137,7 +137,7 @@ namespace XenAdmin.Controls
         /// </summary>
         public virtual void PageLoaded(PageLoadedDirection direction)
         {
-            if (direction == PageLoadedDirection.Forward && IsFirstLoad)
+          if (direction == PageLoadedDirection.Forward && IsFirstLoad)
             {
                 if (ImplementsIsDirty())
                     IsDirty = true;

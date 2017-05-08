@@ -88,6 +88,7 @@ namespace XenAdmin.Wizards
 
         private readonly bool _rbac;
 
+        public List<FibreChannelDevice> all_device=new List<FibreChannelDevice>();
         public NewSRWizard(IXenConnection connection)
             : this(connection, null)
         {
@@ -216,18 +217,13 @@ namespace XenAdmin.Wizards
         }
         private bool SetFCDevicesOnLVMoMirrorPage()
         {
+            LVMoMirrorChooseLogPage.three_devices.Clear();
             List<FibreChannelDevice> devices;
-            List<FibreChannelDevice> log_devices = new List<FibreChannelDevice>();
             var success = LVMoMirror.FiberChannelScan(this, xenConnection, out devices);
+            //devices.ForEach(device => all_device.Add(device));
+            all_device = devices;
             xenTabPageLvmoMirror.FCDevices = devices;
-            //将已经被用作Mirror的两个LUN在LOG界面删除不显示
-            log_devices = devices;
-//            if (LVMoMirror.two_device.Count != 0)
-//            {
-//                log_devices.Remove(LVMoMirror.two_device[0]);
-//                log_devices.Remove(LVMoMirror.two_device[1]);
-//            }
-            xenTabPageLVMoMirrorChooseLog.FCDevices =log_devices;
+            xenTabPageLVMoMirrorChooseLog.FCDevices =devices;
             return success;
         }
         private bool CanShowLVMoHBASummaryPage(List<LvmOhbaSrDescriptor> SrDescriptors)
@@ -383,8 +379,8 @@ namespace XenAdmin.Wizards
                     AddPage(xenTabPageVhdoNFS);
                 else if(m_srWizardType is SrWizardType_lvmomirror)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 {
-                    AddPage(xenTabPageLVMoMirrorChooseLog);
                     AddPage(xenTabPageLvmoMirror);
+                    AddPage(xenTabPageLVMoMirrorChooseLog);
                     AddPage(xenTabPageLvmoMirrorSummary);
                 }
                 else if (m_srWizardType is SrWizardType_LvmoIscsi)
