@@ -164,7 +164,10 @@ namespace XenAdmin.SettingsPanels
                 finally
                 {
                     devicePositionComboBox.EndUpdate();
-                    devicePositionComboBox.Enabled = true;
+                    if (vbd.userdevice != "0")
+                        devicePositionComboBox.Enabled = true;
+                    else
+                        devicePositionComboBox.Enabled = false;
                 }
             });
         }
