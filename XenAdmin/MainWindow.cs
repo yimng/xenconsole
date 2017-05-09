@@ -980,7 +980,7 @@ namespace XenAdmin
 
         public static bool SameProductBrand(Host host)
         {
-            return host.ProductBrand == Branding.PRODUCT_BRAND || Branding.PRODUCT_BRAND == "[vGate product]";
+            return host.ProductBrand == Branding.PRODUCT_BRAND || Branding.PRODUCT_BRAND == "[PRODUCT_BRAND]";
         }
 
         /// <summary>
