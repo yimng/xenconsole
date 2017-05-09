@@ -289,6 +289,15 @@
     <Compile Include="Dialogs\AddMirrorLUNDialog.designer.cs">
       <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\BackupConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BackupViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BackupViewDialog.Designer.cs">
+      <DependentUpon>BackupViewDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\EnablePvsReadCachingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +315,12 @@
     </Compile>
     <Compile Include="Dialogs\OptionsPages\ConfirmationOptionsPage.Designer.cs">
       <DependentUpon>ConfirmationOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PciBindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PciBindDialog.Designer.cs">
+      <DependentUpon>PciBindDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\PvsCacheConfigurationDialog.cs">
       <SubType>Form</SubType>
@@ -337,13 +352,6 @@
     <Compile Include="Dialogs\AddLUNDialog.designer.cs">
       <DependentUpon>AddLUNDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\BackupConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\BackupViewDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\BackupViewDialog.Designer.cs" />
     <Compile Include="Dialogs\BrowseStorageDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,14 +388,12 @@
     <Compile Include="Dialogs\OptionsPages\SaveAndRestoreOptionsPage.Designer.cs">
       <DependentUpon>SaveAndRestoreOptionsPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\PciBindDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\PciBindDialog.Designer.cs" />
     <Compile Include="Dialogs\ReplicationViewDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\ReplicationViewDialog.Designer.cs" />
+    <Compile Include="Dialogs\ReplicationViewDialog.Designer.cs">
+      <DependentUpon>ReplicationViewDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ResolvingSubjectsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -800,7 +806,9 @@
     <Compile Include="TabPages\UsbDevicePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TabPages\UsbDevicePage.Designer.cs" />
+    <Compile Include="TabPages\UsbDevicePage.Designer.cs">
+      <DependentUpon>UsbDevicePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabPages\vSwitchController.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -889,11 +897,15 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.Designer.cs">
+      <DependentUpon>LVMoBond.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.Designer.cs">
+      <DependentUpon>LVMoBondSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -943,7 +955,9 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.Designer.cs">
+      <DependentUpon>LVMoMirror.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -953,7 +967,9 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.Designer.cs" />
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.Designer.cs">
+      <DependentUpon>LVMoMirrorSummaryPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\NetApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1746,7 +1762,6 @@
     <EmbeddedResource Include="Controls\PvsCacheStorageRow.zh-CN.resx">
       <DependentUpon>PvsCacheStorageRow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Commands\BackupWizard.resx" />
     <EmbeddedResource Include="Commands\Controls\CommandImageLinkLabelEx.resx" />
     <EmbeddedResource Include="Controls\HalsignControls\BackupJobs.resx">
       <DependentUpon>BackupJobs.cs</DependentUpon>
@@ -1775,6 +1790,20 @@
     <EmbeddedResource Include="Dialogs\AddMirrorLUNDialog.zh-CN.resx">
       <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BackupConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BackupConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupViewDialog.resx">
+      <DependentUpon>BackupViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BackupViewDialog.zh-CN.resx">
+      <DependentUpon>BackupViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\EnablePvsReadCachingDialog.ja.resx">
       <DependentUpon>EnablePvsReadCachingDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -1791,14 +1820,6 @@
     <EmbeddedResource Include="Dialogs\AddLUNDialog.zh-CN.resx">
       <DependentUpon>AddLUNDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\BackupConfigDialog.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\BackupConfigDialog.zh-CN.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\BackupViewDialog.resx" />
-    <EmbeddedResource Include="Dialogs\BackupViewDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\BrowseStorageDialog.resx">
       <DependentUpon>BrowseStorageDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -1950,6 +1971,12 @@
     <EmbeddedResource Include="Dialogs\OptionsPages\ConnectionOptionsPage.zh-CN.resx">
       <DependentUpon>ConnectionOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PciBindDialog.resx">
+      <DependentUpon>PciBindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PciBindDialog.zh-CN.resx">
+      <DependentUpon>PciBindDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\PvsCacheConfigurationDialog.ja.resx">
       <DependentUpon>PvsCacheConfigurationDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -2026,14 +2053,16 @@
     <EmbeddedResource Include="Dialogs\OptionsPages\SaveAndRestoreOptionsPage.zh-CN.resx">
       <DependentUpon>SaveAndRestoreOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\PciBindDialog.resx" />
-    <EmbeddedResource Include="Dialogs\PciBindDialog.zh-CN.resx" />
     <EmbeddedResource Include="Dialogs\ReconnectAsDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReconnectAsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.resx" />
-    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.resx">
+      <DependentUpon>ReplicationViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReplicationViewDialog.zh-CN.resx">
+      <DependentUpon>ReplicationViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\VMDialogs\MoveVMDialog.resx">
       <DependentUpon>MoveVMDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2297,9 +2326,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TabPages\BackupPage.resx">
       <SubType>Designer</SubType>
+      <DependentUpon>BackupPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabPages\BackupPage.zh-CN.resx">
       <SubType>Designer</SubType>
+      <DependentUpon>BackupPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabPages\BallooningPage.resx">
       <SubType>Designer</SubType>
@@ -2342,8 +2373,12 @@
     <EmbeddedResource Include="TabPages\PvsPage.zh-CN.resx">
       <DependentUpon>PvsPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabPages\UsbDevicePage.resx" />
-    <EmbeddedResource Include="TabPages\UsbDevicePage.zh-CN.resx" />
+    <EmbeddedResource Include="TabPages\UsbDevicePage.resx">
+      <DependentUpon>UsbDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPages\UsbDevicePage.zh-CN.resx">
+      <DependentUpon>UsbDevicePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabPages\vSwitchController.resx">
       <DependentUpon>vSwitchController.cs</DependentUpon>
     </EmbeddedResource>
@@ -2366,17 +2401,39 @@
       <SubType>Designer</SubType>
       <DependentUpon>PhysicalStoragePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\BackupWizard.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.resx" />
-    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\BackupWizard.resx">
+      <DependentUpon>BackupWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.resx">
+      <DependentUpon>BackupChoseVmPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupChoseVmPage.zh-CN.resx">
+      <DependentUpon>BackupChoseVmPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.resx">
+      <DependentUpon>BackupCompletePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupCompletePage.zh-CN.resx">
+      <DependentUpon>BackupCompletePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.resx">
+      <DependentUpon>BackupOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupOptionsPage.zh-CN.resx">
+      <DependentUpon>BackupOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.resx">
+      <DependentUpon>BackupSchedulePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSchedulePage.zh-CN.resx">
+      <DependentUpon>BackupSchedulePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.resx">
+      <DependentUpon>BackupSummaryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\BackupWizard_Pages\BackupSummaryPage.zh-CN.resx">
+      <DependentUpon>BackupSummaryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\BallooningWizard.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BallooningWizard.cs</DependentUpon>
@@ -2439,9 +2496,15 @@
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\CIFSFrontend.zh-CN.resx">
       <DependentUpon>CIFSFrontend.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.resx" />
-    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.resx">
+      <DependentUpon>LVMoBond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBond.zh-CN.resx">
+      <DependentUpon>LVMoBond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoBondSummary.resx">
+      <DependentUpon>LVMoBondSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoFCoE.ja.resx">
       <DependentUpon>LVMoFCoE.cs</DependentUpon>
     </EmbeddedResource>
@@ -2479,7 +2542,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>LVMoISCSI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.resx">
+      <DependentUpon>LVMoMirror.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirror.zh-CN.resx">
       <DependentUpon>LVMoMirror.cs</DependentUpon>
     </EmbeddedResource>
@@ -2489,7 +2554,9 @@
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.zh-CN.resx">
       <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.resx" />
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.resx">
+      <DependentUpon>LVMoMirrorSummaryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\NetApp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>NetApp.cs</DependentUpon>
@@ -2961,7 +3028,9 @@
     <EmbeddedResource Include="Wizards\PatchingWizard\PatchingWizard_UploadPage.zh-CN.resx">
       <DependentUpon>PatchingWizard_UploadPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\ReplicationWizard.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard.resx">
+      <DependentUpon>ReplicationWizard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.resx" />
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.resx" />
@@ -2974,7 +3043,9 @@
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.resx" />
     <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard.resx">
+      <DependentUpon>RestoreWizard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.resx" />
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.zh-CN.resx" />
     <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.resx" />
