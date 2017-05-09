@@ -283,6 +283,12 @@
     <Compile Include="Diagnostics\Problems\ProblemWithInformationUrl.cs" />
     <Compile Include="Diagnostics\Problems\SRProblem\UnsupportedStorageLinkSrIsPresentProblem.cs" />
     <Compile Include="Diagnostics\Problems\VMProblem\InvalidVCPUConfiguration.cs" />
+    <Compile Include="Dialogs\AddMirrorLUNDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddMirrorLUNDialog.designer.cs">
+      <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\EnablePvsReadCachingDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1762,6 +1768,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ThinProvisioningParametersControl.zh-CN.resx">
       <DependentUpon>ThinProvisioningParametersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddMirrorLUNDialog.resx">
+      <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddMirrorLUNDialog.zh-CN.resx">
+      <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\EnablePvsReadCachingDialog.ja.resx">
       <DependentUpon>EnablePvsReadCachingDialog.cs</DependentUpon>
