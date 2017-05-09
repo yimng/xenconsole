@@ -174,10 +174,5 @@ namespace XenAdmin.Dialogs.WarningDialogs
             HighlightedPanel = panelFormat;
             PanelClicked();
         }
-
-        private void labelLUNDetails_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

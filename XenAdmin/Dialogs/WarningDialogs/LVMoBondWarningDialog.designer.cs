@@ -171,7 +171,6 @@
             // 
             resources.ApplyResources(this.labelLUNDetails, "labelLUNDetails");
             this.labelLUNDetails.Name = "labelLUNDetails";
-            this.labelLUNDetails.Click += new System.EventHandler(this.labelLUNDetails_Click);
             // 
             // LVMoBondWarningDialog
             // 

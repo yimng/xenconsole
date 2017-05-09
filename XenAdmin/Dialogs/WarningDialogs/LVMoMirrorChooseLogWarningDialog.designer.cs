@@ -86,7 +86,6 @@
             this.labelLUNDetails.Size = new System.Drawing.Size(95, 68);
             this.labelLUNDetails.TabIndex = 13;
             this.labelLUNDetails.Text = "Vendor:\r\nSerial Number:\r\nSCSI ID:\r\nSize:\r\n";
-            this.labelLUNDetails.Click += new System.EventHandler(this.labelLUNDetails_Click);
             // 
             // pictureBoxArrowFormat
             // 
