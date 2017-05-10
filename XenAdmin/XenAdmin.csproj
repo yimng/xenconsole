@@ -3031,33 +3031,81 @@
     <EmbeddedResource Include="Wizards\ReplicationWizard.resx">
       <DependentUpon>ReplicationWizard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.resx" />
-    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.resx">
+      <DependentUpon>ReplicationChoseVmPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationChoseVmPage.zh-CN.resx">
+      <DependentUpon>ReplicationChoseVmPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.resx">
+      <DependentUpon>ReplicationCompletePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationCompletePage.zh-CN.resx">
+      <DependentUpon>ReplicationCompletePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.resx">
+      <DependentUpon>ReplicationJobSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationJobSettingPage.zh-CN.resx">
+      <DependentUpon>ReplicationJobSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.resx">
+      <DependentUpon>ReplicationSchedulePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSchedulePage.zh-CN.resx">
+      <DependentUpon>ReplicationSchedulePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.resx">
+      <DependentUpon>ReplicationSynchronizationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationSynchronizationPage.zh-CN.resx">
+      <DependentUpon>ReplicationSynchronizationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.resx">
+      <DependentUpon>ReplicationVMSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\ReplicationWizard_Pages\ReplicationVMSettingsPage.zh-CN.resx">
+      <DependentUpon>ReplicationVMSettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\RestoreWizard.resx">
       <DependentUpon>RestoreWizard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.zh-CN.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.resx" />
-    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.zh-CN.resx" />
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.resx">
+      <DependentUpon>Page_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_Complete.zh-CN.resx">
+      <DependentUpon>Page_Complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.resx">
+      <DependentUpon>Page_JobSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSchedule.zh-CN.resx">
+      <DependentUpon>Page_JobSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.resx">
+      <DependentUpon>Page_JobSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_JobSettings.zh-CN.resx">
+      <DependentUpon>Page_JobSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.resx">
+      <DependentUpon>Page_SelectVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SelectVM.zh-CN.resx">
+      <DependentUpon>Page_SelectVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.resx">
+      <DependentUpon>Page_SetStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_SetStorage.zh-CN.resx">
+      <DependentUpon>Page_SetStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.resx">
+      <DependentUpon>Page_VMSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\RestoreWizard_Pages\Page_VMSettings.zh-CN.resx">
+      <DependentUpon>Page_VMSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wizards\RollingUpgradeWizard\RollingUpgradeWizard_SelectPackagePage.resx">
       <DependentUpon>RollingUpgradeWizard_SelectPackagePage.cs</DependentUpon>
     </EmbeddedResource>
