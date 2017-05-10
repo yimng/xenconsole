@@ -193,6 +193,12 @@ namespace XenAdmin.Wizards
                     MessageBox.Show(string.Format(Messages.DR_WITH_HOT_PLUG, this.ParseVMList(removedList)));
                     return false;
                 }
+                bool allvmhasvdi = this.repChoseVmPage.VmCheckedList.All(vm => this.repChoseVmPage.vdi_expand_list.ContainsKey(vm.uuid));
+                if (!allvmhasvdi)
+                {
+                    MessageBox.Show(Messages.BR_VM_WITHOUT_VDI);
+                    return false;
+                }
             }
             if (senderPage != null && senderPage == this.repJobSettingPage)
             {

@@ -6542,6 +6542,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please selecte the VM with VDIs.
+        /// </summary>
+        public static string BR_VM_WITHOUT_VDI {
+            get {
+                return ResourceManager.GetString("BR_VM_WITHOUT_VDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are broken SRs after the upgrade. To solve this problem you should reattach the SRs..
         /// </summary>
         public static string BROKEN_SRS_AFTER_UPGRADE {
