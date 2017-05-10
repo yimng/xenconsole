@@ -30,12 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LVMoHBASummary));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewSummary = new XenAdmin.Controls.DataGridViewEx.DataGridViewEx();
             this.ColumnArrow = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColumnDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSummary)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridViewSummary
             // 
@@ -48,12 +48,14 @@
             this.dataGridViewSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnArrow,
             this.ColumnDetails});
-            resources.ApplyResources(this.dataGridViewSummary, "dataGridViewSummary");
+            this.dataGridViewSummary.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewSummary.Name = "dataGridViewSummary";
             this.dataGridViewSummary.ReadOnly = true;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewSummary.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewSummary.Size = new System.Drawing.Size(533, 380);
+            this.dataGridViewSummary.TabIndex = 0;
             this.dataGridViewSummary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSummary_CellClick);
             // 
             // ColumnArrow
@@ -66,9 +68,9 @@
             this.ColumnArrow.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnArrow.FillWeight = 31.26904F;
             this.ColumnArrow.Frozen = true;
-            resources.ApplyResources(this.ColumnArrow, "ColumnArrow");
             this.ColumnArrow.Name = "ColumnArrow";
             this.ColumnArrow.ReadOnly = true;
+            this.ColumnArrow.Width = 5;
             // 
             // ColumnDetails
             // 
@@ -77,17 +79,17 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ColumnDetails.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnDetails.FillWeight = 172.4619F;
-            resources.ApplyResources(this.ColumnDetails, "ColumnDetails");
             this.ColumnDetails.Name = "ColumnDetails";
             this.ColumnDetails.ReadOnly = true;
             // 
             // LVMoMirrorSummaryPage
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.dataGridViewSummary);
             this.DoubleBuffered = true;
-            this.Name = "LVMoHBASummary";
+            this.Name = "LVMoMirrorSummaryPage";
+            this.Size = new System.Drawing.Size(533, 380);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSummary)).EndInit();
             this.ResumeLayout(false);
 

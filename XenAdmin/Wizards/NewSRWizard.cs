@@ -281,32 +281,32 @@ namespace XenAdmin.Wizards
             RunFinalAction(out closeWizard);
             return closeWizard;
         }
-       private bool CanShowLVMoMirrorSummaryPage()//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LVMoMirrorSummaryPage needed
-                {
-                    string description = m_srWizardType.Description;
-                    string name = m_srWizardType.SrName;
+       private bool CanShowLVMoMirrorSummaryPage()
+       {
+            string description = m_srWizardType.Description;
+            string name = m_srWizardType.SrName;
 
-                    List<string> names = xenConnection.Cache.SRs.Select(sr => sr.Name).ToList();
+            List<string> names = xenConnection.Cache.SRs.Select(sr => sr.Name).ToList();
 
-                    m_srWizardType.SrDescriptors.Clear();
-                    foreach (var lvmOmirrorSrDescriptor in xenTabPageLvmoMirror.SrDescriptors)
-                    {
-                        lvmOmirrorSrDescriptor.Name = name;
-                        if (!string.IsNullOrEmpty(description))
-                            lvmOmirrorSrDescriptor.Description = description;
+            m_srWizardType.SrDescriptors.Clear();
+            foreach (var lvmOmirrorSrDescriptor in xenTabPageLvmoMirror.SrDescriptors)
+            {
+                lvmOmirrorSrDescriptor.Name = name;
+                if (!string.IsNullOrEmpty(description))
+                    lvmOmirrorSrDescriptor.Description = description;
 
-                        m_srWizardType.SrDescriptors.Add(lvmOmirrorSrDescriptor);
-                        names.Add(name);
-                        name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_HBA_DEFAULT_NAME, names);
-                    }
+                m_srWizardType.SrDescriptors.Add(lvmOmirrorSrDescriptor);
+                names.Add(name);
+                name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_HBA_DEFAULT_NAME, names);
+            }
 
-              //      xenTabPageLvmoMirrorSummary.SuccessfullyCreatedSRs.Clear();
-               //     xenTabPageLvmoMirrorSummary.FailedToCreateSRs.Clear();
+            xenTabPageLvmoMirrorSummary.SuccessfullyCreatedSRs.Clear();
+            xenTabPageLvmoMirrorSummary.FailedToCreateSRs.Clear();
 
-                    bool closeWizard;
-                    RunFinalAction(out closeWizard);
-                    return closeWizard;
-                }
+            bool closeWizard;
+            RunFinalAction(out closeWizard);
+            return closeWizard;
+        }
 
         protected override bool RunNextPagePrecheck(XenTabPage senderPage)
         {
@@ -358,7 +358,7 @@ namespace XenAdmin.Wizards
             {
                 return CanShowLVMoBondSummaryPage();
             }
-            if (senderPage == xenTabPageLvmoMirror) //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (senderPage == xenTabPageLvmoMirror)
             {
                 return CanShowLVMoMirrorSummaryPage();
             }
@@ -377,7 +377,7 @@ namespace XenAdmin.Wizards
 
                 if (m_srWizardType is SrWizardType_VhdoNfs)
                     AddPage(xenTabPageVhdoNFS);
-                else if(m_srWizardType is SrWizardType_lvmomirror)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                else if(m_srWizardType is SrWizardType_lvmomirror)
                 {
                     AddPage(xenTabPageLvmoMirror);
                     AddPage(xenTabPageLVMoMirrorChooseLog);
@@ -745,6 +745,8 @@ namespace XenAdmin.Wizards
                     xenTabPageLvmoHbaSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
                 if (srDescriptor is LvmObondSrDescriptor)
                     xenTabPageLvmoBondSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
+                if (srDescriptor is LVMoMirrorSrDescriptor)
+                    xenTabPageLvmoMirrorSummary.SuccessfullyCreatedSRs.Add(srDescriptor);
             }
             else
             {
@@ -752,6 +754,8 @@ namespace XenAdmin.Wizards
                     xenTabPageLvmoHbaSummary.FailedToCreateSRs.Add(srDescriptor);
                 if (srDescriptor is LvmObondSrDescriptor)
                     xenTabPageLvmoBondSummary.FailedToCreateSRs.Add(srDescriptor);
+                if (srDescriptor is LVMoMirrorSrDescriptor)
+                    xenTabPageLvmoMirrorSummary.FailedToCreateSRs.Add(srDescriptor);
             }
         }
 
