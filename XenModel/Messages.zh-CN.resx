@@ -14388,4 +14388,7 @@ SCSI ID: {6}
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
     <value>描述——待修改</value>
   </data>
+  <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
+    <value>请选择带有VDI的VM</value>
+  </data>
 </root>

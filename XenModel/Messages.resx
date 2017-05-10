@@ -14435,4 +14435,7 @@ You will need to navigate to the Console on each of the selected VMs to complete
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>
   </data>
+  <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
+    <value>Please selecte the VM with VDIs</value>
+  </data>
 </root>
