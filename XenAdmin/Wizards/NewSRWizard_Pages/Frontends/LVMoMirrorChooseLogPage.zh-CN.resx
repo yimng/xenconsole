@@ -118,21 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="upsellPage1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACeklEQVQ4T42Ta0hTYRjHvUz7EgjpzOSk
-        uSlDQzeJERmFYIKSgZqljrEuq2xRhEpRsbnyFkRiUUS3byMlSULsQ2iXDzqcS7vNaaIEG85KtIsunZr+
-        e9/HTbwRHfhxnvOe5/9/n+c55/UD4LeUkK23BUYxo4Hh9MJjviaszF8p5knYlt2M9KNtKDhnJ3jM1/g7
-        brTUZNGA7xi104RM3VvkldqQU9y7Cv6O5/BcnwkZcFchxYS0Ex/+C57rq4SLec9QqizYoXmDAcdPzM3N
-        YtD5iz13EymaLrzo+ILJqWkiXfvS145Au29JewpFoZXILTJhfn6eqLjXi+2aTrR0fGWF/iFj3cV6yPPb
-        EZX6hJvUcIMGaVYr4gusXjpxvrqRCYApzyz6Pv9g0Swm3BMw3LEh/9I7yove00Sz4AbO2ANmxLFFH/GF
-        ZnwadJEJMAOHy4Wyh90IuCwmFLomJKrbIOx+TAN0xuRbIFV3E4pjXRga+U27+q7R8TEElG1CzbgKVWN5
-        8DdEIPl046JBw+ac15AceY8svQ2e6RkSj7vdkB9vxYVH/SS4+r0ANyfV7J6Lg+YkiMojEbdP30JDjMh4
-        hpL7/axnDw3KMfQNssPPITlpp5J94qrR/Sj6mIwzfSlQW+Tw10dSC+wz3kKMth2SU1ZCetaO2JIBgpfO
-        Kwi+ISJx2fBeBFZsINZVhy+cA15F2K46yAzONZEarSTgBsbhLARWhmJ99qFarl32K4el1kNmdCDh2sgq
-        gsvDEVsnhn4oA7oeJRmyqpRrHiZB9QrS0h4kXGdGDB5v1D6A6Eo4QmpDqQ1NVyKCysOWH2VvO/88ztF3
-        kzKDKsQLFVSK8Rd4emY54V5dnQAAAABJRU5ErkJggg==
-</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>选择一个LUN存放log</value>
   </data>
 </root>

@@ -28,7 +28,6 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF 
  * SUCH DAMAGE.
  */
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,60 +41,49 @@ using XenAdmin.Network;
 using XenAPI;
 using System.Drawing;
 
-
 namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 {
-    public partial class LVMoBond : XenTabPage
+    public partial class LVMoMirror : XenTabPage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         private List<FibreChannelDevice> _selectedDevices = new List<FibreChannelDevice>();
-
-        public LVMoBond()
+        //用List存放用于做mirror的两个相同大小的LUN
+        public static List<FibreChannelDevice> two_devices = new List<FibreChannelDevice>();
+        public LVMoMirror()
         {
             InitializeComponent();
         }
-
-        #region XenTabPage overrides
-
         public override string PageTitle { get { return Messages.NEWSR_SELECT_LUN; } }
 
         public override string Text { get { return Messages.NEWSR_LOCATION; } }
-
-        public override string HelpID { get { return "Location_Bound"; } }
-
+        public override string HelpID { get { return "Location_Mirror"; } }
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
-        {
+        {           
+            if(LVMoMirrorChooseLogPage.three_devices.Count==0 && _selectedDevices.Count==2)
+            {
+                LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[0]);
+                LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[1]);
+                two_devices.Add(_selectedDevices[0]);
+                two_devices.Add(_selectedDevices[1]);
+            }
             if (direction == PageLoadedDirection.Back)
+            {
+                LVMoMirrorChooseLogPage.three_devices.Clear();
                 return;
-
+            }
+            
             Host master = Helpers.GetMaster(Connection);
             if (master == null)
             {
                 cancel = true;
                 return;
             }
-            var descr = new LvmObondSrDescriptor(_selectedDevices, Connection);
-            if (this.checkBoxThin.Checked)
-            {
-                descr.SMConfig.Add(SrCreateAction.allocation, "thin");
-            }
+            var descr = new LVMoMirrorSrDescriptor(_selectedDevices, Connection);
 
-            SrDescriptors = new List<LvmObondSrDescriptor>();
+            SrDescriptors = new List<LVMoMirrorSrDescriptor>();
 
-            var existingSrDescriptors = new List<LvmObondSrDescriptor>();
-            var formatDiskDescriptors = new List<LvmObondSrDescriptor>();
-
-            var action = new SrProbeAction(Connection, master, SR.SRTypes.lvmobond, descr.DeviceConfig);
-            new ActionProgressDialog(action, ProgressBarStyle.Marquee).ShowDialog(this);
-
-            if (!action.Succeeded)
-            {
-                cancel = true;
-                return;
-            }
-
-            descr.UUID = SrWizardHelpers.ExtractUUID(action.Result);
+            var existingSrDescriptors = new List<LVMoMirrorSrDescriptor>();
+            var formatDiskDescriptors = new List<LVMoMirrorSrDescriptor>();
 
             if (!string.IsNullOrEmpty(SrWizardType.UUID))
             {
@@ -153,77 +141,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                     existingSrDescriptors.Add(descr);
                 }
             }
-
-            if (!cancel && existingSrDescriptors.Count > 0)
-            {
-                var launcher = new LVMoBONDWarningDialogLauncher(this, existingSrDescriptors, true);
-                launcher.ShowWarnings();
-                cancel = launcher.Cancelled;
-                if (!cancel && launcher.SrDescriptors.Count > 0)
-                    SrDescriptors.AddRange(launcher.SrDescriptors);
-            }
-
-            if (!cancel && formatDiskDescriptors.Count > 0)
-            {
-                var launcher = new LVMoBONDWarningDialogLauncher(this, formatDiskDescriptors, false);
-                launcher.ShowWarnings();
-                cancel = launcher.Cancelled;
-                if (!cancel && launcher.SrDescriptors.Count > 0)
-                    SrDescriptors.AddRange(launcher.SrDescriptors);
-            }            
-
+ 
             base.PageLeave(direction, ref cancel);
         }
-
-        public override bool EnableNext()
-        {
-            return _selectedDevices.Count == 2 && _selectedDevices[0].Size == _selectedDevices[1].Size;
-        }
-
-        public override bool EnablePrevious()
-        {
-            if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
-                return false;
-
-            return true;
-        }
-
-        public override void PopulatePage()
-        {
-            dataGridView.Rows.Clear();
-
-            var vendorGroups = from device in FCDevices
-                               group device by device.Vendor into g
-                               orderby g.Key
-                               select new { VendorName = g.Key, Devices = g.OrderBy(x => x.Serial) };
-
-            foreach (var vGroup in vendorGroups)
-            {
-                var vendorRow = new VendorRow(vGroup.VendorName);
-                dataGridView.Rows.Add(vendorRow);
-
-                using (var font = new Font(dataGridView.DefaultCellStyle.Font, FontStyle.Bold))
-                    vendorRow.DefaultCellStyle = new DataGridViewCellStyle(dataGridView.DefaultCellStyle)
-                    {
-                        Font = font,
-                        SelectionBackColor = dataGridView.DefaultCellStyle.BackColor,
-                        SelectionForeColor = dataGridView.DefaultCellStyle.ForeColor
-                    };
-
-                var deviceRows = from device in vGroup.Devices select new FCDeviceRow(device);
-                dataGridView.Rows.AddRange(deviceRows.ToArray());
-            }
-        }
-
-        public override string NextText(bool isLastPage)
-        {
-            return Messages.NEWSR_LVMOHBA_NEXT_TEXT;
-        }
-
-        #endregion
-
-        #region Event handlers
-
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (_srWizardType.SrToReattach != null)
@@ -241,7 +161,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             UpdateSelectedDevices();
             OnPageUpdated();
         }
-
         private void dataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (_srWizardType.SrToReattach == null)
@@ -250,10 +169,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             UpdateSelectedDevices();
             OnPageUpdated();
         }
-
-
-        #endregion
-
         private void UpdateSelectedDevices()
         {
             if (SrWizardType.SrToReattach == null)
@@ -278,13 +193,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 if (_selectedDevices[0].Size != _selectedDevices[1].Size)
                 {
-                    MessageBox.Show(Messages.SELECT_LUN_WARNING,
+                   MessageBox.Show(Messages.SELECT_LUN_WARNING,
                                      Messages.MESSAGEBOX_CONFIRM,
                                      MessageBoxButtons.OK);
                 }
             }
         }
-
         public static bool FiberChannelScan(IWin32Window owner, IXenConnection connection, out List<FibreChannelDevice> devices)
         {
             devices = new List<FibreChannelDevice>();
@@ -323,10 +237,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 return false;
             }
         }
-        #region Accessors
-
         public List<FibreChannelDevice> FCDevices { private get; set; }
-
         private SrWizardType _srWizardType;
         public SrWizardType SrWizardType
         {
@@ -342,36 +253,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
                 colCheck.Visible = creatingNew;
                 dataGridView.MultiSelect = creatingNew;
-                labelCreate.Visible = creatingNew;
-                labelReattach.Visible = !creatingNew;
             }
         }
-
-        public List<LvmObondSrDescriptor> SrDescriptors { get; private set; }
-
-        #endregion
-
-        #region Nested classes
-
-        private class FCDeviceRow : DataGridViewRow
-        {
-            public FibreChannelDevice Device { get; private set; }
-
-            public FCDeviceRow(FibreChannelDevice device)
-            {
-                Device = device;
-
-                string id = string.IsNullOrEmpty(device.SCSIid) ? device.Path : device.SCSIid;
-                string details = String.Format("{0}:{1}:{2}:{3}", device.adapter, device.channel, device.id, device.lun);
-
-                Cells.AddRange(new DataGridViewCheckBoxCell { ThreeState = false, Value = false },
-                    new DataGridViewTextBoxCell { Value = Util.DiskSizeString(device.Size) },
-                    new DataGridViewTextBoxCell { Value = device.Serial },
-                    new DataGridViewTextBoxCell { Value = id },
-                    new DataGridViewTextBoxCell { Value = details });
-            }
-        }
-
         private class VendorRow : DataGridViewRow
         {
             public VendorRow(string vendor)
@@ -397,33 +280,91 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 }
             }
         }
-
-        public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
-
-        private class LVMoBONDWarningDialogLauncher
+        private class FCDeviceRow : DataGridViewRow
         {
-            private readonly List<LvmObondSrDescriptor> inputSrDescriptors;
+            public FibreChannelDevice Device { get; private set; }
+
+            public FCDeviceRow(FibreChannelDevice device)
+            {
+                Device = device;
+
+                string id = string.IsNullOrEmpty(device.SCSIid) ? device.Path : device.SCSIid;
+                string details = String.Format("{0}:{1}:{2}:{3}", device.adapter, device.channel, device.id, device.lun);
+
+                Cells.AddRange(new DataGridViewCheckBoxCell { ThreeState = false, Value = false },
+                    new DataGridViewTextBoxCell { Value = Util.DiskSizeString(device.Size) },
+                    new DataGridViewTextBoxCell { Value = device.Serial },
+                    new DataGridViewTextBoxCell { Value = id },
+                    new DataGridViewTextBoxCell { Value = details });
+            }
+        }
+        public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
+        public override void PopulatePage()
+        {
+            LVMoMirrorChooseLogPage.three_devices.Clear();
+            two_devices.Clear();
+            dataGridView.Rows.Clear();
+            var vendorGroups = from device in FCDevices
+                               group device by device.Vendor into g
+                               orderby g.Key
+                               select new { VendorName = g.Key, Devices = g.OrderBy(x => x.Serial) };
+
+            foreach (var vGroup in vendorGroups)
+            {
+                var vendorRow = new VendorRow(vGroup.VendorName);
+                dataGridView.Rows.Add(vendorRow);
+
+                using (var font = new Font(dataGridView.DefaultCellStyle.Font, FontStyle.Bold))
+                    vendorRow.DefaultCellStyle = new DataGridViewCellStyle(dataGridView.DefaultCellStyle)
+                    {
+                        Font = font,
+                        SelectionBackColor = dataGridView.DefaultCellStyle.BackColor,
+                        SelectionForeColor = dataGridView.DefaultCellStyle.ForeColor
+                    };
+
+                var deviceRows = from device in vGroup.Devices select new FCDeviceRow(device);
+                dataGridView.Rows.AddRange(deviceRows.ToArray());
+            }
+        }
+
+        public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
+        
+        public override bool EnableNext()
+        {
+            return _selectedDevices.Count == 2 && _selectedDevices[0].Size == _selectedDevices[1].Size;
+        }
+
+        public override bool EnablePrevious()
+        {
+            if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
+                return false;
+
+            return true;
+        }
+        private class LVMoMIRRORWarningDialogLauncher
+        {
+            private readonly List<LVMoMirrorSrDescriptor> inputSrDescriptors;
             private readonly bool foundExistingSRs;
             private readonly IWin32Window owner;
 
-            public List<LvmObondSrDescriptor> SrDescriptors { get; private set; }
+            public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
             public bool Cancelled { get; private set; }
 
-            public LVMoBONDWarningDialogLauncher(IWin32Window owner, List<LvmObondSrDescriptor> srDescriptors,
+            public LVMoMIRRORWarningDialogLauncher(IWin32Window owner, List<LVMoMirrorSrDescriptor> srDescriptors,
                 bool foundExistingSRs)
             {
                 this.owner = owner;
                 this.foundExistingSRs = foundExistingSRs;
                 inputSrDescriptors = srDescriptors;
-                SrDescriptors = new List<LvmObondSrDescriptor>();
+                SrDescriptors = new List<LVMoMirrorSrDescriptor>();
             }
 
-            private UserSelectedOption GetSelectedOption(LvmObondSrDescriptor lvmOboundSrDescriptor,
+            private UserSelectedOption GetSelectedOption(LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor,
                 out bool repeatForRemainingLUNs)
             {
-                int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOboundSrDescriptor);
+                int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOmirrorSrDescriptor);
 
-                using (var dialog = new LVMoBondWarningDialog(lvmOboundSrDescriptor.Device, remainingCount, foundExistingSRs))
+                using (var dialog = new LVMoMirrorWarningDialog(lvmOmirrorSrDescriptor.Device, remainingCount, foundExistingSRs))
                 {
                     dialog.ShowDialog(owner);
                     repeatForRemainingLUNs = dialog.RepeatForRemainingLUNs;
@@ -436,21 +377,21 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 bool repeatForRemainingLUNs = false;
                 UserSelectedOption selectedOption = UserSelectedOption.Cancel;
 
-                foreach (LvmObondSrDescriptor lvmOboundSrDescriptor in inputSrDescriptors)
+                foreach (LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor in inputSrDescriptors)
                 {
                     if (!repeatForRemainingLUNs)
                     {
-                        selectedOption = GetSelectedOption(lvmOboundSrDescriptor, out repeatForRemainingLUNs);
+                        selectedOption = GetSelectedOption(lvmOmirrorSrDescriptor, out repeatForRemainingLUNs);
                     }
 
                     switch (selectedOption)
                     {
                         case UserSelectedOption.Format:
-                            lvmOboundSrDescriptor.UUID = null;
-                            SrDescriptors.Add(lvmOboundSrDescriptor);
+                            lvmOmirrorSrDescriptor.UUID = null;
+                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
                             break;
                         case UserSelectedOption.Reattach:
-                            SrDescriptors.Add(lvmOboundSrDescriptor);
+                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
                             break;
                         case UserSelectedOption.Cancel:
                             SrDescriptors.Clear();
@@ -461,6 +402,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             }
         }
 
-        #endregion
+
     }
+
 }

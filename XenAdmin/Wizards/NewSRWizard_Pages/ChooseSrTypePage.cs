@@ -1,4 +1,4 @@
-﻿/* Copyright (c) Citrix Systems, Inc. 
+﻿/* Copyright (c) Citrix Systems Inc. 
  * All rights reserved. 
  * 
  * Redistribution and use in source and binary forms, 
@@ -59,19 +59,20 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
             radioButtonNfs.Tag = new SrWizardType_VhdoNfs();
             radioButtonIscsi.Tag = new SrWizardType_LvmoIscsi();
             radioButtonFibreChannel.Tag = new SrWizardType_LvmoHba();
-            radioButtonNfsIso.Tag = new SrWizardType_NfsIso();
+            radioButtonNFSIso.Tag = new SrWizardType_NfsIso();
             radioButtonCifsIso.Tag = new SrWizardType_CifsIso();
             radioButtonCslg.Tag = new SrWizardType_Cslg();
             radioButtonCifs.Tag = new SrWizardType_Cifs();
             radioButtonFcoe.Tag = new SrWizardType_Fcoe();
             rawhbaButton.Tag = new SrWizardType_rawHba();
             radioButtonlunbond.Tag = new SrWizardType_lvmobond();
-
+            radioButtonLVMMirror.Tag = new SrWizardType_lvmomirror();       
             _radioButtons = new[]
             {
                 radioButtonNfs, radioButtonIscsi, radioButtonFibreChannel,
                 radioButtonCslg, radioButtonCifs, radioButtonFcoe,
-                radioButtonNfsIso, radioButtonCifsIso, rawhbaButton, radioButtonlunbond
+                radioButtonNFSIso, radioButtonCifsIso, rawhbaButton, radioButtonlunbond,
+                radioButtonLVMMirror,
             };
         }
 
@@ -108,6 +109,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
             radioButtonlunbond.Visible = Helpers.after_5_2_1(Connection);
 
+            radioButtonLVMMirror.Visible = Helpers.after_5_2_1(Connection);
+
             foreach (var radioButton in _radioButtons)
             {
                 var frontend = (SrWizardType)radioButton.Tag;
@@ -137,12 +140,13 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     // Only do this when we're doing a create.
 
                     if (sm == null || (!Properties.Settings.Default.ShowHiddenVMs && sm.IsHidden))
+                    {
                         radioButton.Visible = false;
-
+                    }
                     if (radioButton.Visible && radioButton.Tag.GetType() == m_preselectedWizardType)
                         radioButton.Checked = true;
                 }
-
+                radioButtonLVMMirror.Visible = radioButtonlunbond.Visible;//!!!!!!!!!!!!!!!!!!!!!!!!!
                 bool visibleRadioButtonsExist = _radioButtons.Any(r => r.Visible);
                 bool checkedRadioButtonExists = _radioButtons.Any(r => r.Visible && r.Checked);
 
@@ -197,7 +201,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                         }
                         else if (isoType == "nfs_iso")
                         {
-                            radioButtonNfsIso.Checked = true;
+                            radioButtonNFSIso.Checked = true;
                             _matchingFrontends--;
                         }
                     }
@@ -206,9 +210,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
             labelVirtualDiskStorage.Visible = radioButtonNfs.Visible || radioButtonIscsi.Visible ||
                                              radioButtonFibreChannel.Visible || radioButtonCslg.Visible ||
-                                             radioButtonCifs.Visible || radioButtonFcoe.Visible;
+                                             radioButtonCifs.Visible || radioButtonFcoe.Visible || radioButtonLVMMirror.Visible;
 
-            labelISOlibrary.Visible = radioButtonNfsIso.Visible || radioButtonCifsIso.Visible;
+            labelISOlibrary.Visible = radioButtonNFSIso.Visible || radioButtonCifsIso.Visible;
         }
 
         public override bool EnableNext()
@@ -264,7 +268,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     upsellPage1.SetAllTexts(Messages.UPSELL_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
                     m_allowNext = false;
                 }
-                else if (frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR))
+                else if (radioButton==radioButtonlunbond&&frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR))
                 {
                     selectedStoreTypeLabel.Visible = false;
                     selectedStoreTypeLabel.Text = string.Empty;
@@ -273,11 +277,20 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     upsellPage1.SetAllTexts(Messages.LUNBOND_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
                     m_allowNext = false;
                 }
+                else if (radioButton == radioButtonLVMMirror && frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR))
+                {
+                    selectedStoreTypeLabel.Visible = false;
+                    selectedStoreTypeLabel.Text = string.Empty;
+                    SRBlurb.Visible = false;
+                    upsellPage1.Visible = true;
+                    upsellPage1.SetAllTexts(Messages.LVMOMIRROR_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
+                    m_allowNext = false;
+                }
                 else
                 {
                     upsellPage1.Visible = false;
                     selectedStoreTypeLabel.Visible = true;
-                    selectedStoreTypeLabel.Text = frontend.FrontendTypeName;
+                    selectedStoreTypeLabel.Text = radioButton.Text;
                     SRBlurb.Visible = true;
                     SRBlurb.Text = frontend.FrontendBlurb;
                     m_allowNext = true;
@@ -301,5 +314,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
             }
             return sm;
         }
+
     }
 }

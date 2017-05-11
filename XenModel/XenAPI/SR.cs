@@ -1018,7 +1018,10 @@ namespace XenAPI
         {
             return XenRef<Task>.Create(session.proxy.async_sr_set_shared(session.uuid, (_sr != null) ? _sr : "", _value).parse());
         }
-
+        public bool SupportsDatabaseReplication()
+        {
+            return SupportsDatabaseReplication(Connection, this);
+        }
         /// <summary>
         /// Set the name label of the SR
         /// First published in XenServer 4.0.

@@ -298,10 +298,13 @@ namespace XenAdmin.Wizards.RestoreWizard_Pages
                 request.Accept = "application/xml";
                 request.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
                 request.Headers["CLIENT-API-VERSION"] = "5.2.0";
-                NetworkCredential credentials = new NetworkCredential(this.TextBox_UserName.Text, this.TextBox_Password.Text);
-                CredentialCache cache = new CredentialCache {{uri, "Basic", credentials}};
-                request.Credentials = cache;
+                //NetworkCredential credentials = new NetworkCredential(this.TextBox_UserName.Text, this.TextBox_Password.Text);
+                //CredentialCache cache = new CredentialCache {{uri, "Basic", credentials}};
+                //request.Credentials = cache;
                 request.ClientCertificates.Add(cer);
+                string authInfo = this.TextBox_UserName.Text + ":" + this.TextBox_Password.Text;
+                authInfo = Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
+                request.Headers.Add("Authorization", "Basic " + authInfo);
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();

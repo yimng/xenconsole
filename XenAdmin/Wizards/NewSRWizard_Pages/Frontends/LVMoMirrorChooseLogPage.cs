@@ -28,7 +28,6 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF 
  * SUCH DAMAGE.
  */
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,51 +41,48 @@ using XenAdmin.Network;
 using XenAPI;
 using System.Drawing;
 
-
 namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 {
-    public partial class LVMoBond : XenTabPage
+    public partial class LVMoMirrorChooseLogPage : XenTabPage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         private List<FibreChannelDevice> _selectedDevices = new List<FibreChannelDevice>();
-
-        public LVMoBond()
+        public static List<FibreChannelDevice> three_devices = new List<FibreChannelDevice>();
+        public LVMoMirrorChooseLogPage()
         {
             InitializeComponent();
         }
-
-        #region XenTabPage overrides
-
         public override string PageTitle { get { return Messages.NEWSR_SELECT_LUN; } }
-
-        public override string Text { get { return Messages.NEWSR_LOCATION; } }
-
-        public override string HelpID { get { return "Location_Bound"; } }
-
+        public override string Text { get { return Messages.NEWSR_LUNFORLOG; } }
+        public override string HelpID { get { return "Location_Mirror"; } }
+        public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
         {
             if (direction == PageLoadedDirection.Back)
+            {
+                three_devices.Clear();
+                LVMoMirror.two_devices.Clear();
+                IsFirstLoad = true;
                 return;
-
+            }            
             Host master = Helpers.GetMaster(Connection);
             if (master == null)
             {
                 cancel = true;
                 return;
             }
-            var descr = new LvmObondSrDescriptor(_selectedDevices, Connection);
-            if (this.checkBoxThin.Checked)
+            if(three_devices.Count==2 && _selectedDevices.Count==1)
             {
-                descr.SMConfig.Add(SrCreateAction.allocation, "thin");
+                three_devices.Add(_selectedDevices[0]);
             }
+            
+            var descr = new LVMoMirrorSrDescriptor(three_devices, Connection);
+            SrDescriptors = new List<LVMoMirrorSrDescriptor>();
 
-            SrDescriptors = new List<LvmObondSrDescriptor>();
+            var existingSrDescriptors = new List<LVMoMirrorSrDescriptor>();
+            var formatDiskDescriptors = new List<LVMoMirrorSrDescriptor>();
 
-            var existingSrDescriptors = new List<LvmObondSrDescriptor>();
-            var formatDiskDescriptors = new List<LvmObondSrDescriptor>();
-
-            var action = new SrProbeAction(Connection, master, SR.SRTypes.lvmobond, descr.DeviceConfig);
+            var action = new SrProbeAction(Connection, master, SR.SRTypes.lvmomirror, descr.DeviceConfig);
             new ActionProgressDialog(action, ProgressBarStyle.Marquee).ShowDialog(this);
 
             if (!action.Succeeded)
@@ -94,7 +90,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 cancel = true;
                 return;
             }
-
             descr.UUID = SrWizardHelpers.ExtractUUID(action.Result);
 
             if (!string.IsNullOrEmpty(SrWizardType.UUID))
@@ -156,7 +151,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             if (!cancel && existingSrDescriptors.Count > 0)
             {
-                var launcher = new LVMoBONDWarningDialogLauncher(this, existingSrDescriptors, true);
+                var launcher = new LVMoMIRRORWarningDialogLauncher(this, existingSrDescriptors, true);
                 launcher.ShowWarnings();
                 cancel = launcher.Cancelled;
                 if (!cancel && launcher.SrDescriptors.Count > 0)
@@ -165,19 +160,104 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             if (!cancel && formatDiskDescriptors.Count > 0)
             {
-                var launcher = new LVMoBONDWarningDialogLauncher(this, formatDiskDescriptors, false);
+                var launcher = new LVMoMIRRORWarningDialogLauncher(this, formatDiskDescriptors, false);
                 launcher.ShowWarnings();
                 cancel = launcher.Cancelled;
                 if (!cancel && launcher.SrDescriptors.Count > 0)
                     SrDescriptors.AddRange(launcher.SrDescriptors);
-            }            
-
+            }
             base.PageLeave(direction, ref cancel);
         }
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (_srWizardType.SrToReattach != null)
+                return;
 
+            if (e.ColumnIndex != colCheck.Index || e.RowIndex < 0 || e.RowIndex > dataGridView.RowCount - 1)
+                return;
+
+            var deviceRow = dataGridView.Rows[e.RowIndex] as FCDeviceRow;
+            if (deviceRow == null)
+                return;
+
+            deviceRow.Cells[colCheck.Index].Value = !(bool)deviceRow.Cells[colCheck.Index].Value;
+
+            UpdateSelectedDevices();
+            OnPageUpdated();
+        }
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (_srWizardType.SrToReattach == null)
+                return;
+
+            UpdateSelectedDevices();
+            OnPageUpdated();
+        }
+        private void UpdateSelectedDevices()
+        {
+            if (SrWizardType.SrToReattach == null)
+            {
+                //when creating a new SR the checkbox column is visible
+                _selectedDevices = (from DataGridViewRow row in dataGridView.Rows
+                                    let deviceRow = row as FCDeviceRow
+                                    where deviceRow != null
+                                          && deviceRow.Cells.Count > 0
+                                          && (bool)(deviceRow.Cells[colCheck.Index].Value)
+                                    select deviceRow.Device).ToList();
+            }
+            else
+            {
+                //when reattaching SR the checkbox column is hidden
+                _selectedDevices = (from DataGridViewRow row in dataGridView.Rows
+                                    let deviceRow = row as FCDeviceRow
+                                    where deviceRow != null && deviceRow.Selected
+                                    select deviceRow.Device).ToList();
+            }
+        }
+
+        /*
+        public static bool FiberChannelScan(IWin32Window owner, IXenConnection connection, out List<FibreChannelDevice> devices)
+        {
+            devices = new List<FibreChannelDevice>();
+
+            Host master = Helpers.GetMaster(connection);
+            if (master == null)
+                return false;
+
+            FibreChannelProbeAction action = new FibreChannelProbeAction(master);
+            ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Marquee);
+            dialog.ShowDialog(owner); //Will block until dialog closes, action completed
+
+            if (!action.Succeeded)
+                return false;
+
+            try
+            {
+                devices = FibreChannelProbeParsing.ProcessXML(action.Result);
+                if (devices.Count == 0)
+                {
+                    new ThreeButtonDialog(
+                        new ThreeButtonDialog.Details(SystemIcons.Warning, Messages.FIBRECHANNEL_NO_RESULTS, Messages.XENCENTER)).ShowDialog();
+
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                log.Debug("Exception parsing result of fibre channel scan", e);
+                log.Debug(e, e);
+                new ThreeButtonDialog(
+                    new ThreeButtonDialog.Details(SystemIcons.Warning, Messages.FIBRECHANNEL_XML_ERROR, Messages.XENCENTER)).ShowDialog();
+
+                return false;
+            }
+        }
+         * */
+        public List<FibreChannelDevice> FCDevices { private get; set; }
         public override bool EnableNext()
         {
-            return _selectedDevices.Count == 2 && _selectedDevices[0].Size == _selectedDevices[1].Size;
+            return _selectedDevices.Count == 1;
         }
 
         public override bool EnablePrevious()
@@ -191,8 +271,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public override void PopulatePage()
         {
             dataGridView.Rows.Clear();
-
-            var vendorGroups = from device in FCDevices
+            _selectedDevices.Clear();
+            List<FibreChannelDevice> all = new List<FibreChannelDevice>();
+            this.FCDevices.ForEach(device => all.Add(device));
+            all.Remove(LVMoMirror.two_devices[0]);
+            all.Remove(LVMoMirror.two_devices[1]);
+            var vendorGroups = from device in all
                                group device by device.Vendor into g
                                orderby g.Key
                                select new { VendorName = g.Key, Devices = g.OrderBy(x => x.Serial) };
@@ -214,119 +298,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 dataGridView.Rows.AddRange(deviceRows.ToArray());
             }
         }
-
-        public override string NextText(bool isLastPage)
-        {
-            return Messages.NEWSR_LVMOHBA_NEXT_TEXT;
-        }
-
-        #endregion
-
-        #region Event handlers
-
-        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (_srWizardType.SrToReattach != null)
-                return;
-
-            if (e.ColumnIndex != colCheck.Index || e.RowIndex < 0 || e.RowIndex > dataGridView.RowCount - 1)
-                return;
-
-            var deviceRow = dataGridView.Rows[e.RowIndex] as FCDeviceRow;
-            if (deviceRow == null)
-                return;
-
-            deviceRow.Cells[colCheck.Index].Value = !(bool)deviceRow.Cells[colCheck.Index].Value;
-
-            UpdateSelectedDevices();
-            OnPageUpdated();
-        }
-
-        private void dataGridView_SelectionChanged(object sender, EventArgs e)
-        {
-            if (_srWizardType.SrToReattach == null)
-                return;
-
-            UpdateSelectedDevices();
-            OnPageUpdated();
-        }
-
-
-        #endregion
-
-        private void UpdateSelectedDevices()
-        {
-            if (SrWizardType.SrToReattach == null)
-            {
-                //when creating a new SR the checkbox column is visible
-                _selectedDevices = (from DataGridViewRow row in dataGridView.Rows
-                                    let deviceRow = row as FCDeviceRow
-                                    where deviceRow != null
-                                          && deviceRow.Cells.Count > 0
-                                          && (bool)(deviceRow.Cells[colCheck.Index].Value)
-                                    select deviceRow.Device).ToList();
-            }
-            else
-            {
-                //when reattaching SR the checkbox column is hidden
-                _selectedDevices = (from DataGridViewRow row in dataGridView.Rows
-                                    let deviceRow = row as FCDeviceRow
-                                    where deviceRow != null && deviceRow.Selected
-                                    select deviceRow.Device).ToList();
-            }
-            if (_selectedDevices.Count == 2)
-            {
-                if (_selectedDevices[0].Size != _selectedDevices[1].Size)
-                {
-                    MessageBox.Show(Messages.SELECT_LUN_WARNING,
-                                     Messages.MESSAGEBOX_CONFIRM,
-                                     MessageBoxButtons.OK);
-                }
-            }
-        }
-
-        public static bool FiberChannelScan(IWin32Window owner, IXenConnection connection, out List<FibreChannelDevice> devices)
-        {
-            devices = new List<FibreChannelDevice>();
-
-            Host master = Helpers.GetMaster(connection);
-            if (master == null)
-                return false;
-
-            FibreChannelProbeAction action = new FibreChannelProbeAction(master);
-            ActionProgressDialog dialog = new ActionProgressDialog(action, ProgressBarStyle.Marquee);
-            dialog.ShowDialog(owner); //Will block until dialog closes, action completed
-
-            if (!action.Succeeded)
-                return false;
-
-            try
-            {
-                devices=FibreChannelProbeParsing.ProcessXML(action.Result);
-
-                if (devices.Count == 0)
-                {
-                    new ThreeButtonDialog(
-                        new ThreeButtonDialog.Details(SystemIcons.Warning, Messages.FIBRECHANNEL_NO_RESULTS, Messages.XENCENTER)).ShowDialog();
-
-                    return false;
-                }
-                return true;
-            }
-            catch (Exception e)
-            {
-                log.Debug("Exception parsing result of fibre channel scan", e);
-                log.Debug(e, e);
-                new ThreeButtonDialog(
-                    new ThreeButtonDialog.Details(SystemIcons.Warning, Messages.FIBRECHANNEL_XML_ERROR, Messages.XENCENTER)).ShowDialog();
-
-                return false;
-            }
-        }
-        #region Accessors
-
-        public List<FibreChannelDevice> FCDevices { private get; set; }
-
+        public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
         private SrWizardType _srWizardType;
         public SrWizardType SrWizardType
         {
@@ -342,36 +314,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
                 colCheck.Visible = creatingNew;
                 dataGridView.MultiSelect = creatingNew;
-                labelCreate.Visible = creatingNew;
-                labelReattach.Visible = !creatingNew;
             }
         }
-
-        public List<LvmObondSrDescriptor> SrDescriptors { get; private set; }
-
-        #endregion
-
-        #region Nested classes
-
-        private class FCDeviceRow : DataGridViewRow
-        {
-            public FibreChannelDevice Device { get; private set; }
-
-            public FCDeviceRow(FibreChannelDevice device)
-            {
-                Device = device;
-
-                string id = string.IsNullOrEmpty(device.SCSIid) ? device.Path : device.SCSIid;
-                string details = String.Format("{0}:{1}:{2}:{3}", device.adapter, device.channel, device.id, device.lun);
-
-                Cells.AddRange(new DataGridViewCheckBoxCell { ThreeState = false, Value = false },
-                    new DataGridViewTextBoxCell { Value = Util.DiskSizeString(device.Size) },
-                    new DataGridViewTextBoxCell { Value = device.Serial },
-                    new DataGridViewTextBoxCell { Value = id },
-                    new DataGridViewTextBoxCell { Value = details });
-            }
-        }
-
         private class VendorRow : DataGridViewRow
         {
             public VendorRow(string vendor)
@@ -397,33 +341,47 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 }
             }
         }
-
-        public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
-
-        private class LVMoBONDWarningDialogLauncher
+        private class FCDeviceRow : DataGridViewRow
         {
-            private readonly List<LvmObondSrDescriptor> inputSrDescriptors;
+            public FibreChannelDevice Device { get; private set; }
+
+            public FCDeviceRow(FibreChannelDevice device)
+            {
+                Device = device;
+                string id = string.IsNullOrEmpty(device.SCSIid) ? device.Path : device.SCSIid;
+                string details = String.Format("{0}:{1}:{2}:{3}", device.adapter, device.channel, device.id, device.lun);
+
+                Cells.AddRange(new DataGridViewCheckBoxCell { ThreeState = false, Value = false },
+                    new DataGridViewTextBoxCell { Value = Util.DiskSizeString(device.Size) },
+                    new DataGridViewTextBoxCell { Value = device.Serial },
+                    new DataGridViewTextBoxCell { Value = id },
+                    new DataGridViewTextBoxCell { Value = details });
+            }
+        }
+        private class LVMoMIRRORWarningDialogLauncher
+        {
+            private readonly List<LVMoMirrorSrDescriptor> inputSrDescriptors;
             private readonly bool foundExistingSRs;
             private readonly IWin32Window owner;
 
-            public List<LvmObondSrDescriptor> SrDescriptors { get; private set; }
+            public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
             public bool Cancelled { get; private set; }
 
-            public LVMoBONDWarningDialogLauncher(IWin32Window owner, List<LvmObondSrDescriptor> srDescriptors,
+            public LVMoMIRRORWarningDialogLauncher(IWin32Window owner, List<LVMoMirrorSrDescriptor> srDescriptors,
                 bool foundExistingSRs)
             {
                 this.owner = owner;
                 this.foundExistingSRs = foundExistingSRs;
                 inputSrDescriptors = srDescriptors;
-                SrDescriptors = new List<LvmObondSrDescriptor>();
+                SrDescriptors = new List<LVMoMirrorSrDescriptor>();
             }
 
-            private UserSelectedOption GetSelectedOption(LvmObondSrDescriptor lvmOboundSrDescriptor,
+            private UserSelectedOption GetSelectedOption(LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor,
                 out bool repeatForRemainingLUNs)
             {
-                int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOboundSrDescriptor);
+                int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOmirrorSrDescriptor);
 
-                using (var dialog = new LVMoBondWarningDialog(lvmOboundSrDescriptor.Device, remainingCount, foundExistingSRs))
+                using (var dialog = new LVMoMirrorChooseLogWarningDialog(lvmOmirrorSrDescriptor.Device, remainingCount, foundExistingSRs))
                 {
                     dialog.ShowDialog(owner);
                     repeatForRemainingLUNs = dialog.RepeatForRemainingLUNs;
@@ -436,21 +394,21 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 bool repeatForRemainingLUNs = false;
                 UserSelectedOption selectedOption = UserSelectedOption.Cancel;
 
-                foreach (LvmObondSrDescriptor lvmOboundSrDescriptor in inputSrDescriptors)
+                foreach (LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor in inputSrDescriptors)
                 {
                     if (!repeatForRemainingLUNs)
                     {
-                        selectedOption = GetSelectedOption(lvmOboundSrDescriptor, out repeatForRemainingLUNs);
+                        selectedOption = GetSelectedOption(lvmOmirrorSrDescriptor, out repeatForRemainingLUNs);
                     }
 
                     switch (selectedOption)
                     {
                         case UserSelectedOption.Format:
-                            lvmOboundSrDescriptor.UUID = null;
-                            SrDescriptors.Add(lvmOboundSrDescriptor);
+                            lvmOmirrorSrDescriptor.UUID = null;
+                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
                             break;
                         case UserSelectedOption.Reattach:
-                            SrDescriptors.Add(lvmOboundSrDescriptor);
+                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
                             break;
                         case UserSelectedOption.Cancel:
                             SrDescriptors.Clear();
@@ -460,7 +418,5 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 }
             }
         }
-
-        #endregion
     }
 }

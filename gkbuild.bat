@@ -17,7 +17,7 @@ SET BUILD_TARGET="release"
 
 cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && devenv /clean debug XenAdmin.sln"
 cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && devenv /clean Release XenAdmin.sln"
-echo clean finish! /p:Configuration=Release /p:OutputPath=bin\Release /p:VisualStudioVersion=13.0
+echo clean finish! /p:Configuration=Release /p:OutputPath=bin\Release /p:VisualStudioVersion=15.0
 cmd /C "%MSVS_PATH_CONSOLE%\VC\vcvarsall.bat x86_amd64 && %WORK_DRV% && CD %WORK_DIR% && MSBuild.exe XenAdmin.sln /t:Rebuild /p:Configuration=Release /p:OutputPath=bin\Release /p:Platform="Mixed Platforms" /p:VisualStudioVersion=15.0"
 echo build successful
 echo.

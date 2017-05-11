@@ -267,6 +267,41 @@ namespace XenAdmin.SettingsPanels
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
                             }
                         }
+                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror)
+                        {
+                            if (CanAddLUN(scsiid))
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    List<FibreChannelDevice> devices;
+                                    var success = LVMoMirror.FiberChannelScan(this, xenObject.Connection, out devices);
+                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddMirrorLUNDialog(xenObject, devices));
+                                };
+
+                                ctxMenuItems.Add(itm);
+                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                            }
+                            else if (canissciRemove())
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    AsyncAction Action = new SrRemoveMirrorLUNAction(xenObject.Connection, xenObject, scsiid);
+                                    ActionProgressDialog dialog = new ActionProgressDialog(Action, ProgressBarStyle.Marquee) { ShowCancel = true };
+                                    dialog.ShowDialog(this);
+
+                                };
+                                ctxMenuItems.Add(itm);
+                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                            }
+                            else
+                            {
+                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
+                            }
+                        }
                         else
                         {
                             GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));

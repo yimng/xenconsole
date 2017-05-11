@@ -257,7 +257,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Tags\TagsEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UpsellPage.cs">
       <SubType>UserControl</SubType>
@@ -440,6 +440,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs" />
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.designer.cs">
+      <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.designer.cs">
+      <DependentUpon>LVMoMirrorWarningDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -633,13 +645,13 @@
       <DependentUpon>PerfmonAlertOptionsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\BlueBorderPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\ArchiveMaintainer.cs">
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataArchive.cs" />
     <Compile Include="Controls\CustomDataGraph\GraphList.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\GraphList.Designer.cs">
       <DependentUpon>GraphList.cs</DependentUpon>
@@ -653,7 +665,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.Designer.cs">
       <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
@@ -999,13 +1011,13 @@
       <DependentUpon>DataKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.designer.cs">
       <DependentUpon>DataPlot.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.designer.cs">
       <DependentUpon>DataPlotNav.cs</DependentUpon>
@@ -1207,7 +1219,7 @@
       <DependentUpon>FolderChangeDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Folders\FolderEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Folders\FolderListItem.cs" />
     <Compile Include="Dialogs\NewTagDialog.cs">
@@ -2127,6 +2139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.resx">
+      <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.resx">
+      <DependentUpon>LVMoMirrorWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.resx">
       <DependentUpon>NotEnoughStorageWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -3212,9 +3230,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\VMGroupCommand.cs" />
-    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewController.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewRow.cs">
     </Compile>
@@ -4154,9 +4170,7 @@
     <Compile Include="Wizards\DRWizards\DRFailoverWizardWelcomePage.Designer.cs">
       <DependentUpon>DRFailoverWizardWelcomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs" />
     <Compile Include="Wizards\GenericPages\DelayLoadingOptionComboBoxItem.cs" />
     <Compile Include="Wizards\GenericPages\LunPerVdiMappingPage.cs">
       <SubType>UserControl</SubType>
@@ -6387,6 +6401,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\VBDEditPage.zh-CN.resx">
       <DependentUpon>VBDEditPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\VDISizeLocationPage.ja.resx">
       <DependentUpon>VDISizeLocationPage.cs</DependentUpon>

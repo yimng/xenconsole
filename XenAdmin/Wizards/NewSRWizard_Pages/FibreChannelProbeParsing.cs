@@ -99,7 +99,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     eth = node.InnerText.Trim();
             }
 
-            return new FibreChannelDevice(serial, path, vendor, size, 
+            return new FibreChannelDevice(serial, path, vendor, size,
                 scsiid, adapter, channel, id, lun, name_label, name_description, pool_metadata_detected, eth);
         }
 

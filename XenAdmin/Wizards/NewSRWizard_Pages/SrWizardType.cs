@@ -1,4 +1,4 @@
-﻿/* Copyright (c) Citrix Systems, Inc. 
+﻿/* Copyright (c) Citrix Systems Inc. 
  * All rights reserved. 
  * 
  * Redistribution and use in source and binary forms, 
@@ -119,6 +119,32 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public List<FibreChannelDevice> Device { get; private set; }
     }
+    public class LVMoMirrorSrDescriptor : SrDescriptor//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    {
+        public LVMoMirrorSrDescriptor(List<FibreChannelDevice> device, IXenConnection connection)
+        {
+            Host master = Helpers.GetMaster(connection);
+            Device = device;
+
+            if (master != null && device.Count==2)
+            {
+                DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
+                DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
+                Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
+            }
+            else
+            {
+               DeviceConfig[SrProbeAction.DEVICE1] = device[0].Path;
+               DeviceConfig[SrProbeAction.DEVICE2] = device[1].Path;
+               DeviceConfig[SrProbeAction.DEVICE3] = device[2].Path;
+               Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor + " : " + device[2].Vendor, device[0].Serial + " : " + device[1].Serial + " : " + device[2].Serial);
+            }
+
+//            Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
+        }
+
+        public List<FibreChannelDevice> Device { get; private set; }
+    }
     public abstract class SrWizardType
     {
         protected SrWizardType()
@@ -136,7 +162,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         /// CA-16955: New SR wizard could show blurb for each backend type
         /// </summary>
         public abstract string FrontendBlurb { get; }
-        public abstract string FrontendTypeName { get; }
         public abstract SR.SRTypes Type { get; }
         public abstract string ContentType { get; }
         public abstract bool ShowIntroducePrompt { get; }
@@ -233,7 +258,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_CIFS_ISO_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_CIFS_ISO_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.iso; } }
         public override string ContentType { get { return SR.Content_Type_ISO; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -250,7 +274,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_LVMOISCSI_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_LVMOISCSI_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmoiscsi; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -267,7 +290,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_LVMOHBA_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_LVMOHBA_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmohba; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -284,7 +306,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_RAWHBA_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_RAWHBA_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.rawhba; } }
         public override string ContentType { get { return "user"; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -306,7 +327,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_VHDONFS_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_VHDONFS_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.nfs; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return true; } }
@@ -328,7 +348,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_NFS_ISO_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_NFS_ISO_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.iso; } }
         public override string ContentType { get { return SR.Content_Type_ISO; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -350,7 +369,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_CIFS_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_CIFS_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.smb; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -367,7 +385,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return true; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_CSLG_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_CSLG_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.cslg; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return true; } }
@@ -411,7 +428,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return true; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_NETAPP_BLURB; } }
-        public override string FrontendTypeName { get { return SR.getFriendlyTypeName(Type); } }
         public override SR.SRTypes Type { get { return SR.SRTypes.netapp; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return true; } }
@@ -423,7 +439,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return true; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_EQUAL_LOGIC_BLURB; } }
-        public override string FrontendTypeName { get { return SR.getFriendlyTypeName(Type); } }
         public override SR.SRTypes Type { get { return SR.SRTypes.equal; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return true; } }
@@ -435,7 +450,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return false; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_LVMOFCOE_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_LVMOFCOE_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmofcoe; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -452,7 +466,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
     {
         public override bool IsEnhancedSR { get { return true; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_LVMOBOND_BLURB; } }
-        public override string FrontendTypeName { get { return Messages.NEWSR_LVMOBOND_TYPE_NAME; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmobond; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
@@ -462,6 +475,21 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public override void ResetSrName(IXenConnection connection)
         {
             SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_BOND_DEFAULT_NAME, connection);
+        }
+    }
+ 
+   public class SrWizardType_lvmomirror : SrWizardType 
+    {
+        public override bool IsEnhancedSR { get { return true; } }
+        public override string FrontendBlurb { get { return Messages.NEWSR_LVMOMIRROR_BLURB; } }
+        public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror; } }
+        public override string ContentType { get { return ""; } }
+        public override bool ShowIntroducePrompt { get { return false; } }
+       public override bool ShowReattachWarning { get { return true; } }
+        public override bool AllowToCreateNewSr { get; set; }
+        public override void ResetSrName(IXenConnection connection)
+        { 
+            SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_LVMoMirror_DEFAULT_NAME, connection);
         }
     }
 }

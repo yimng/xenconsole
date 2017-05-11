@@ -118,6 +118,8 @@
     <Compile Include="Actions\PVS\PvsProxyCreateAction.cs" />
     <Compile Include="Actions\PVS\PvsProxyDestroyAction.cs" />
     <Compile Include="Actions\SR\SrAddLUNAction.cs" />
+    <Compile Include="Actions\SR\SrAddMirrorLUNAction.cs" />
+    <Compile Include="Actions\SR\SrRemoveMirrorLUNAction.cs" />
     <Compile Include="Actions\SR\SrRemoveLUNAction.cs" />
     <Compile Include="Actions\SR\SrRepairLUNAction.cs" />
     <Compile Include="Actions\SupplementalPack\InstallSupplementalPackAction.cs" />

@@ -21841,6 +21841,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update vGate to use this function..
+        /// </summary>
+        public static string LVMOMIRROR_BLURB_ENHANCEDSR {
+            get {
+                return ResourceManager.GetString("LVMOMIRROR_BLURB_ENHANCEDSR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MAC.
         /// </summary>
         public static string MAC {
@@ -25693,6 +25702,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LUN for log.
+        /// </summary>
+        public static string NEWSR_LUNFORLOG {
+            get {
+                return ResourceManager.GetString("NEWSR_LUNFORLOG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shared Logical Volume Manager (LVM) support is available using either iSCSI or Fibre Channel access to a shared LUN. 
         ///
         ///Using the LVM-based shared SR provides the same performance benefits as unshared LVM for local disk storage, however in the shared context, iSCSI or Fibre Channel-based SRs enable VM agility — VMs may be started on any server in a pool and migrated between them..
@@ -25881,6 +25899,33 @@ namespace XenAdmin {
         public static string NEWSR_LVMOISCSI_TYPE_NAME {
             get {
                 return ResourceManager.GetString("NEWSR_LVMOISCSI_TYPE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LVM_MIRROR_TO_BE_CHANGED.
+        /// </summary>
+        public static string NEWSR_LVMOMIRROR_BLURB {
+            get {
+                return ResourceManager.GetString("NEWSR_LVMOMIRROR_BLURB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LVM_Mirror.
+        /// </summary>
+        public static string NEWSR_LVMoMirror_DEFAULT_NAME {
+            get {
+                return ResourceManager.GetString("NEWSR_LVMoMirror_DEFAULT_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TOBECHANGED.
+        /// </summary>
+        public static string NEWSR_LVMOMIRROR_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("NEWSR_LVMOMIRROR_DESCRIPTION", resourceCulture);
             }
         }
         

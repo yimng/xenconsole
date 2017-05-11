@@ -914,11 +914,14 @@ namespace XenAdmin.Actions.BRActions
                 request.ContentType = request.Accept = string.Format("application/{0}", type);
                 request.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)";
                 request.Headers["CLIENT-API-VERSION"] = "5.2.0";
-                NetworkCredential credentials = new NetworkCredential(_username, _password);
-                CredentialCache cache = new CredentialCache();
-                cache.Add(uri, "Basic", credentials);
-                request.Credentials = cache;
+                //NetworkCredential credentials = new NetworkCredential(_username, _password);
+                //CredentialCache cache = new CredentialCache();
+                //cache.Add(uri, "Basic", credentials);
+                //request.Credentials = cache;
                 request.ClientCertificates.Add(cer);
+                string authInfo = _username + ":" + _password;
+                authInfo = Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
+                request.Headers.Add("Authorization", "Basic " + authInfo);
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
