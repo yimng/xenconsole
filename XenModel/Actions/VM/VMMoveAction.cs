@@ -149,7 +149,7 @@ namespace XenAdmin.Actions.VMActions
 
                 if (exn != null)
                     throw exn;
-
+                XenAPI.VM.set_affinity(Session, this.VM.opaque_ref, this.Host.opaque_ref);
             }
             catch (CancelledException)
             {
