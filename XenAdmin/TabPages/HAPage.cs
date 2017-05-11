@@ -190,6 +190,8 @@ namespace XenAdmin.TabPages
                     buttonConfigure.Enabled = false;
                     buttonEnableDisableHa.Visible = true;
                     buttonEnableDisableHa.Enabled = false;
+                    labelwarn.Visible = false;
+                    pictureBoxStatus.Visible = false;
 
                     pictureBoxWarningTriangle.Visible = false;
                     labelStatus.Text = String.Format(action is EnableHAAction ? Messages.HA_PAGE_ENABLING : Messages.HA_PAGE_DISABLING,
@@ -202,6 +204,9 @@ namespace XenAdmin.TabPages
                     if (pool.ha_enabled)
                     {
                         buttonEnableDisableHa.Text = Messages.DISABLE_HA_ELLIPSIS;
+
+                        labelwarn.Visible = false;
+                        pictureBoxStatus.Visible = false;
 
                         if (PassedRbacChecks())
                         {
@@ -235,6 +240,8 @@ namespace XenAdmin.TabPages
                         buttonEnableDisableHa.Visible = false;
                         buttonEnableDisableHa.Enabled = true;
 
+                        labelwarn.Visible = true;
+                        pictureBoxStatus.Visible = true;
                         pictureBoxWarningTriangle.Visible = false;
                         labelStatus.Text = String.Format(Messages.HAPANEL_BLURB, Helpers.GetName(pool).Ellipsise(30));
                     }
