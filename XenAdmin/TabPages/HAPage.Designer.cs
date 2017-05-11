@@ -36,20 +36,23 @@ namespace XenAdmin.TabPages
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxWarningTriangle = new System.Windows.Forms.PictureBox();
-            this.labelStatus = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonConfigure = new System.Windows.Forms.Button();
             this.buttonEnableDisableHa = new System.Windows.Forms.Button();
             this.tableLatencies = new System.Windows.Forms.TableLayoutPanel();
             this.customListPanel = new XenAdmin.Controls.CustomListPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxStatus = new System.Windows.Forms.PictureBox();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.labelwarn = new XenAdmin.Controls.Common.AutoHeightLabel();
+            this.pictureBoxWarningTriangle = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.pageContainerPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarningTriangle)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarningTriangle)).BeginInit();
             this.SuspendLayout();
             // 
             // pageContainerPanel
@@ -85,38 +88,17 @@ namespace XenAdmin.TabPages
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLatencies, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.customListPanel, 0, 2);
-            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(900, 500);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.pictureBoxWarningTriangle, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.labelStatus, 1, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // pictureBoxWarningTriangle
-            // 
-            resources.ApplyResources(this.pictureBoxWarningTriangle, "pictureBoxWarningTriangle");
-            this.pictureBoxWarningTriangle.Name = "pictureBoxWarningTriangle";
-            this.pictureBoxWarningTriangle.TabStop = false;
-            // 
-            // labelStatus
-            // 
-            resources.ApplyResources(this.labelStatus, "labelStatus");
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.UseMnemonic = false;
             // 
             // flowLayoutPanel1
             // 
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.buttonConfigure);
             this.flowLayoutPanel1.Controls.Add(this.buttonEnableDisableHa);
-            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(900, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // buttonConfigure
@@ -144,6 +126,39 @@ namespace XenAdmin.TabPages
             resources.ApplyResources(this.customListPanel, "customListPanel");
             this.customListPanel.Name = "customListPanel";
             // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.pictureBoxStatus, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.labelStatus, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.labelwarn, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBoxWarningTriangle, 0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // pictureBoxStatus
+            // 
+            resources.ApplyResources(this.pictureBoxStatus, "pictureBoxStatus");
+            this.pictureBoxStatus.Image = global::XenAdmin.Properties.Resources._000_Alert2_h32bit_16;
+            this.pictureBoxStatus.Name = "pictureBoxStatus";
+            this.pictureBoxStatus.TabStop = false;
+            // 
+            // labelStatus
+            // 
+            resources.ApplyResources(this.labelStatus, "labelStatus");
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.UseMnemonic = false;
+            // 
+            // labelwarn
+            // 
+            resources.ApplyResources(this.labelwarn, "labelwarn");
+            this.labelwarn.Name = "labelwarn";
+            // 
+            // pictureBoxWarningTriangle
+            // 
+            resources.ApplyResources(this.pictureBoxWarningTriangle, "pictureBoxWarningTriangle");
+            this.pictureBoxWarningTriangle.Name = "pictureBoxWarningTriangle";
+            this.pictureBoxWarningTriangle.TabStop = false;
+            // 
             // TitleLabel
             // 
             resources.ApplyResources(this.TitleLabel, "TitleLabel");
@@ -160,11 +175,13 @@ namespace XenAdmin.TabPages
             this.pageContainerPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWarningTriangle)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,5 +202,7 @@ namespace XenAdmin.TabPages
         private System.Windows.Forms.TableLayoutPanel tableLatencies;
         private XenAdmin.Controls.CustomListPanel customListPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBoxStatus;
+        private Controls.Common.AutoHeightLabel labelwarn;
     }
 }
