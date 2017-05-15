@@ -256,6 +256,14 @@ namespace XenAdmin.SettingsPanels
 
         private void InitializeVcpuControls()
         {
+            if (isVcpuHotplugSupported)
+            {
+                label7.Visible = false;
+            }
+            else 
+            {
+                label7.Visible = true;
+            }
             lblVCPUs.Text = isVcpuHotplugSupported
                 ? Messages.VM_CPUMEMPAGE_MAX_VCPUS_LABEL
                 : Messages.VM_CPUMEMPAGE_VCPUS_LABEL;

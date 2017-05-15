@@ -55,9 +55,10 @@ namespace XenAdmin.SettingsPanels
             this.label3 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.comboBoxTopology = new XenAdmin.Controls.CPUTopologyComboBox();
             this.transparentTrackBar1 = new XenAdmin.Controls.TransparentTrackBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMemory)).BeginInit();
@@ -106,6 +107,7 @@ namespace XenAdmin.SettingsPanels
             this.tableLayoutPanel1.Controls.Add(this.VCPUWarningLabel, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxVCPUs, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // comboBoxInitialVCPUs
@@ -260,11 +262,6 @@ namespace XenAdmin.SettingsPanels
             this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.label2.Name = "label2";
             // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // comboBoxTopology
             // 
             resources.ApplyResources(this.comboBoxTopology, "comboBoxTopology");
@@ -280,6 +277,17 @@ namespace XenAdmin.SettingsPanels
             this.transparentTrackBar1.BackColor = System.Drawing.Color.Transparent;
             this.transparentTrackBar1.Name = "transparentTrackBar1";
             this.transparentTrackBar1.TabStop = false;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Name = "label7";
             // 
             // CPUMemoryEditPage
             // 
@@ -336,5 +344,6 @@ namespace XenAdmin.SettingsPanels
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
