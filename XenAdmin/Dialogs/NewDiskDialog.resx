@@ -220,13 +220,13 @@
     <value>0, 3, 0, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 32</value>
+    <value>136, 33</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>&amp;Size:</value>
+    <value>&amp;Size(Must smaller than2043.99G):</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -442,13 +442,13 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 179</value>
+    <value>0, 180</value>
   </data>
   <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 112</value>
+    <value>139, 111</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -506,6 +506,9 @@
   </data>
   <data name="labelError.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="labelError.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelError.Location" type="System.Drawing.Point, System.Drawing">
     <value>77, 3</value>
@@ -882,13 +885,13 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="SrListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 182</value>
+    <value>139, 183</value>
   </data>
   <data name="SrListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 3</value>
   </data>
   <data name="SrListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 106</value>
+    <value>492, 105</value>
   </data>
   <data name="SrListBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -937,6 +940,9 @@
   </data>
   <metadata name="queuedBackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-CN</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
