@@ -272,7 +272,7 @@ namespace XenAdmin.SettingsPanels
                 ? Messages.VM_CPUMEMPAGE_INITIAL_VCPUS_LABEL
                 : Messages.VM_CPUMEMPAGE_CURRENT_VCPUS_LABEL;
 
-            labelInitialVCPUs.Visible = comboBoxInitialVCPUs.Visible = isVcpuHotplugSupported;
+//            labelInitialVCPUs.Visible = comboBoxInitialVCPUs.Visible = isVcpuHotplugSupported;
             comboBoxInitialVCPUs.Enabled = isVcpuHotplugSupported &&
                                            (vm.power_state == vm_power_state.Halted ||
                                             vm.power_state == vm_power_state.Running);
