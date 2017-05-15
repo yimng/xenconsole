@@ -210,14 +210,17 @@
   <data name="comboBoxInitialVCPUs.Location" type="System.Drawing.Point, System.Drawing">
     <value>155, 139</value>
   </data>
-  <data name="comboBoxTopology.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8pt</value>
+  <data name="&gt;&gt;nudMemory.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>438, 20</value>
   </data>
   <data name="lblMB.Text" xml:space="preserve">
     <value>MB</value>
+  </data>
+  <data name="lblMemory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="MemWarningLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 66</value>
@@ -255,8 +258,8 @@
   <data name="lblMB.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="lblMB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;labelInvalidVCPUWarning.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -273,14 +276,17 @@
   <data name="labelTopology.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="comboBoxInitialVCPUs" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelInitialVCPUs" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelInvalidVCPUWarning" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="comboBoxTopology" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="labelTopology" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="MemWarningLabel" Row="9" RowSpan="2" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel2" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel1" Row="8" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="lblPriority" Row="7" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="lblVCPUs" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblVcpuWarning" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="lblMemory" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="VCPUWarningLabel" Row="2" RowSpan="2" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="comboBoxVCPUs" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="comboBoxInitialVCPUs" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelInitialVCPUs" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelInvalidVCPUWarning" Row="5" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="comboBoxTopology" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="labelTopology" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="MemWarningLabel" Row="9" RowSpan="2" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel2" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel1" Row="8" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="lblPriority" Row="7" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="lblVCPUs" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="lblVcpuWarning" Row="1" RowSpan="1" Column="0" ColumnSpan="2" /&gt;&lt;Control Name="lblMemory" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="VCPUWarningLabel" Row="2" RowSpan="2" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="comboBoxVCPUs" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,AutoSize,20,AutoSize,0,AutoSize,0,AutoSize,0,Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="lblSliderHighest.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="lblMemory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;panel3.Name" xml:space="preserve">
     <value>panel3</value>
@@ -300,9 +306,6 @@
   <data name="lblPriority.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 0</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
   <data name="lblSliderLowest.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -321,8 +324,8 @@
   <data name="lblMemory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;VCPUWarningLabel.Name" xml:space="preserve">
-    <value>VCPUWarningLabel</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
   </data>
   <data name="lblSliderNormal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -333,8 +336,8 @@
   <data name="labelInvalidVCPUWarning.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 20</value>
   </data>
-  <data name="&gt;&gt;lblSliderLowest.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;lblPriority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblSliderNormal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
@@ -342,8 +345,8 @@
   <data name="transparentTrackBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="MemWarningLabel.Text" xml:space="preserve">
-    <value>The amount of physical memory allocated to this VM is greater than the total memory of its home server</value>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="comboBoxTopology.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 21</value>
@@ -372,8 +375,8 @@
   <data name="trackBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblMB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;comboBoxInitialVCPUs.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -392,6 +395,9 @@
   </data>
   <data name="comboBoxVCPUs.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="nudMemory.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -426,9 +432,6 @@
   <data name="lblPriority.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
@@ -441,8 +444,8 @@
   <data name="lblSliderNormal.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblSliderHighest.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;nudMemory.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="labelInitialVCPUs.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 23</value>
@@ -474,9 +477,6 @@
   <data name="labelInitialVCPUs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;nudMemory.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="&gt;&gt;nudMemory.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -507,14 +507,17 @@
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="lblMemory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 19</value>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 333</value>
   </data>
-  <data name="&gt;&gt;lblPriority.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -540,8 +543,8 @@
   <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -588,6 +591,9 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
+  <data name="lblMemory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 19</value>
+  </data>
   <data name="MemWarningLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -602,9 +608,6 @@
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblPriority.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>百分比分配CPU(重启后生效)</value>
@@ -627,6 +630,9 @@
   <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="lblVcpuWarning.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;lblVCPUs.Name" xml:space="preserve">
     <value>lblVCPUs</value>
   </data>
@@ -648,26 +654,20 @@
   <data name="lblPriority.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 172</value>
   </data>
+  <data name="comboBoxInitialVCPUs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 13</value>
+  </data>
   <data name="lblMB.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>155, 263</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblVcpuWarning.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblVcpuWarning.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 329</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelInvalidVCPUWarning.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblVcpuWarning.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -687,11 +687,8 @@
   <data name="&gt;&gt;MemWarningLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+  <data name="&gt;&gt;lblSliderLowest.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 20</value>
@@ -702,11 +699,17 @@
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;lblSliderLowest.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="transparentTrackBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>425, 36</value>
+  </data>
+  <data name="comboBoxTopology.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 89</value>
   </data>
   <data name="&gt;&gt;VCPUWarningLabel.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -735,8 +738,8 @@
   <data name="lblVCPUs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;comboBoxVCPUs.Name" xml:space="preserve">
-    <value>comboBoxVCPUs</value>
+  <data name="lblVcpuWarning.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblMB.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 12</value>
@@ -750,20 +753,17 @@
   <data name="&gt;&gt;nudMemory.Name" xml:space="preserve">
     <value>nudMemory</value>
   </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CPUMemoryEditPage</value>
   </data>
-  <data name="labelTopology.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 33</value>
-  </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;labelInvalidVCPUWarning.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -843,8 +843,8 @@
   <data name="&gt;&gt;comboBoxInitialVCPUs.Name" xml:space="preserve">
     <value>comboBoxInitialVCPUs</value>
   </data>
-  <data name="lblSliderNormal.Text" xml:space="preserve">
-    <value>Normal</value>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
@@ -870,6 +870,9 @@
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
+  <data name="&gt;&gt;VCPUWarningLabel.Name" xml:space="preserve">
+    <value>VCPUWarningLabel</value>
+  </data>
   <data name="&gt;&gt;lblSliderLowest.Name" xml:space="preserve">
     <value>lblSliderLowest</value>
   </data>
@@ -887,9 +890,6 @@
   </data>
   <data name="&gt;&gt;lblVCPUs.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -930,11 +930,11 @@
   <data name="lblVCPUs.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 57</value>
   </data>
-  <data name="&gt;&gt;lblMemory.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="lblSliderNormal.Text" xml:space="preserve">
+    <value>Normal</value>
   </data>
-  <data name="&gt;&gt;nudMemory.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;comboBoxVCPUs.Name" xml:space="preserve">
+    <value>comboBoxVCPUs</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -947,6 +947,9 @@
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
+  </data>
+  <data name="&gt;&gt;lblSliderHighest.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -963,11 +966,14 @@
   <data name="&gt;&gt;lblSliderNormal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MemWarningLabel.Text" xml:space="preserve">
+    <value>The amount of physical memory allocated to this VM is greater than the total memory of its home server</value>
+  </data>
   <data name="lblMemory.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="comboBoxInitialVCPUs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 0, 13</value>
+  <data name="comboBoxTopology.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -981,11 +987,17 @@
   <data name="&gt;&gt;lblMB.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;lblPriority.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblMemory.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1002,8 +1014,8 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 197</value>
   </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 329</value>
+  <data name="labelTopology.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 33</value>
   </data>
   <data name="&gt;&gt;MemWarningLabel.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1016,6 +1028,9 @@
   </data>
   <data name="labelInitialVCPUs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 3, 13</value>
+  </data>
+  <data name="lblSliderHighest.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;comboBoxTopology.Name" xml:space="preserve">
     <value>comboBoxTopology</value>
@@ -1032,6 +1047,9 @@
   <data name="lblVCPUs.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 107</value>
+  </data>
   <data name="&gt;&gt;comboBoxInitialVCPUs.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1044,22 +1062,19 @@
   <data name="&gt;&gt;trackBar1.Name" xml:space="preserve">
     <value>trackBar1</value>
   </data>
-  <data name="&gt;&gt;lblSliderHighest.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
-  <data name="comboBoxTopology.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 89</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;labelInvalidVCPUWarning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-CN</value>
   </metadata>
 </root>
