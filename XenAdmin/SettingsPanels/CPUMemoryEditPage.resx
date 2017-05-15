@@ -787,10 +787,13 @@
     <value>224, 147</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>221, 23</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>CPU_Hotplug are not supported on Windows</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
