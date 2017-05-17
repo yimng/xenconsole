@@ -53,7 +53,6 @@
             this.Controls.Add(this.label1);
             this.Name = "NotEnoughStorageWarningDialog";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
