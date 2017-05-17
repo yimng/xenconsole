@@ -289,7 +289,7 @@ namespace XenAdmin.Wizards
             List<string> names = xenConnection.Cache.SRs.Select(sr => sr.Name).ToList();
 
             m_srWizardType.SrDescriptors.Clear();
-            foreach (var lvmOmirrorSrDescriptor in xenTabPageLvmoMirror.SrDescriptors)
+            foreach (var lvmOmirrorSrDescriptor in xenTabPageLVMoMirrorChooseLog.SrDescriptors)
             {
                 lvmOmirrorSrDescriptor.Name = name;
                 if (!string.IsNullOrEmpty(description))
@@ -297,7 +297,7 @@ namespace XenAdmin.Wizards
 
                 m_srWizardType.SrDescriptors.Add(lvmOmirrorSrDescriptor);
                 names.Add(name);
-                name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_HBA_DEFAULT_NAME, names);
+                name = SrWizardHelpers.DefaultSRName(Messages.NEWSR_LVMoMirror_DEFAULT_NAME, names);
             }
 
             xenTabPageLvmoMirrorSummary.SuccessfullyCreatedSRs.Clear();
@@ -358,7 +358,7 @@ namespace XenAdmin.Wizards
             {
                 return CanShowLVMoBondSummaryPage();
             }
-            if (senderPage == xenTabPageLvmoMirror)
+            if (senderPage == xenTabPageLVMoMirrorChooseLog)
             {
                 return CanShowLVMoMirrorSummaryPage();
             }

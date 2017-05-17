@@ -119,14 +119,17 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
 
         public List<FibreChannelDevice> Device { get; private set; }
     }
+
     public class LVMoMirrorSrDescriptor : SrDescriptor//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     {
+        public List<FibreChannelDevice> Device { get; private set; }
         public LVMoMirrorSrDescriptor(List<FibreChannelDevice> device, IXenConnection connection)
         {
             Host master = Helpers.GetMaster(connection);
+
             Device = device;
 
-            if (master != null && device.Count==2)
+            if (master != null&&device.Count==2)
             {
                 DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
                 DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
@@ -134,16 +137,16 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
             }
             else
             {
-               DeviceConfig[SrProbeAction.DEVICE1] = device[0].Path;
-               DeviceConfig[SrProbeAction.DEVICE2] = device[1].Path;
-               DeviceConfig[SrProbeAction.DEVICE3] = device[2].Path;
-               Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor + " : " + device[2].Vendor, device[0].Serial + " : " + device[1].Serial + " : " + device[2].Serial);
+                DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
+                DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
+                DeviceConfig[SrProbeAction.SCSIid3] = device[2].SCSIid;
+                Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor + " : " + device[2].Vendor, device[0].Serial + " : " + device[1].Serial + " : " + device[2].Serial);
             }
 
 //            Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
         }
 
-        public List<FibreChannelDevice> Device { get; private set; }
+        
     }
     public abstract class SrWizardType
     {
