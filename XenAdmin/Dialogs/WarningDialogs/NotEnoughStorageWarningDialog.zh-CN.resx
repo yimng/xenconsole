@@ -126,12 +126,12 @@
     <value>12, 27</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 69</value>
+    <value>336, 69</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>无法创建指定个数的虚拟机。
 
-请检查存储空间是否足够且是否弹出模板挂载的DVD镜像。
+请检查存储空间是否足够或弹出模板挂载的DVD镜像后再试。
 </value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
