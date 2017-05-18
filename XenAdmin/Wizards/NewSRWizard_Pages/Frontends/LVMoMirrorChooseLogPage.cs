@@ -62,6 +62,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 three_devices.Clear();
                 LVMoMirror.two_devices.Clear();
+                _selectedDevices.Clear();
                 IsFirstLoad = true;
                 return;
             }            

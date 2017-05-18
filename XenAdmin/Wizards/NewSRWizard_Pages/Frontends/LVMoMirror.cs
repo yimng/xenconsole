@@ -51,7 +51,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public static List<FibreChannelDevice> two_devices = new List<FibreChannelDevice>();
         public LVMoMirror()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
         public override string PageTitle { get { return Messages.NEWSR_SELECT_LUN; } }
 
@@ -59,7 +59,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public override string HelpID { get { return "Location_Mirror"; } }
         public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
         {           
-            if(LVMoMirrorChooseLogPage.three_devices.Count==0 && _selectedDevices.Count==2)
+            if(LVMoMirrorChooseLogPage.three_devices.Count==0 && _selectedDevices.Count==2 && direction==PageLoadedDirection.Forward)
             {
                 LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[0]);
                 LVMoMirrorChooseLogPage.three_devices.Add(_selectedDevices[1]);
@@ -69,6 +69,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             if (direction == PageLoadedDirection.Back)
             {
                 LVMoMirrorChooseLogPage.three_devices.Clear();
+                two_devices.Clear();
+                _selectedDevices.Clear();
+                IsFirstLoad = true;
                 return;
             }
             
@@ -202,7 +205,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         public static bool FiberChannelScan(IWin32Window owner, IXenConnection connection, out List<FibreChannelDevice> devices)
         {
             devices = new List<FibreChannelDevice>();
-
+            two_devices.Clear();
             Host master = Helpers.GetMaster(connection);
             if (master == null)
                 return false;
@@ -336,10 +339,11 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         public override bool EnablePrevious()
         {
-            if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
-                return false;
+                        if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
+                            return false;
 
-            return true;
+                        return true;
+            //return false;
         }
         private class LVMoMIRRORWarningDialogLauncher
         {

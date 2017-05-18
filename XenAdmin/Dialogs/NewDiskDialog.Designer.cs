@@ -44,7 +44,6 @@ namespace XenAdmin.Dialogs
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBoxUnits = new System.Windows.Forms.ComboBox();
-            this.labelError = new System.Windows.Forms.Label();
             this.pictureBoxError = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelAllocationQuantum = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@ namespace XenAdmin.Dialogs
             this.init_alloc_units = new System.Windows.Forms.ComboBox();
             this.incr_alloc_units = new System.Windows.Forms.ComboBox();
             this.queuedBackgroundWorker1 = new XenCenterLib.QueuedBackgroundWorker();
+            this.labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DiskSizeNumericUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -191,12 +191,6 @@ namespace XenAdmin.Dialogs
             resources.GetString("comboBoxUnits.Items1")});
             this.comboBoxUnits.Name = "comboBoxUnits";
             // 
-            // labelError
-            // 
-            resources.ApplyResources(this.labelError, "labelError");
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Name = "labelError";
-            // 
             // pictureBoxError
             // 
             resources.ApplyResources(this.pictureBoxError, "pictureBoxError");
@@ -266,6 +260,12 @@ namespace XenAdmin.Dialogs
             this.incr_alloc_units.Name = "incr_alloc_units";
             this.incr_alloc_units.SelectedIndexChanged += new System.EventHandler(this.incr_alloc_units_SelectedIndexChanged);
             // 
+            // labelError
+            // 
+            resources.ApplyResources(this.labelError, "labelError");
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Name = "labelError";
+            // 
             // NewDiskDialog
             // 
             this.AcceptButton = this.OkButton;
@@ -304,7 +304,6 @@ namespace XenAdmin.Dialogs
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.PictureBox pictureBoxError;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
@@ -316,6 +315,6 @@ namespace XenAdmin.Dialogs
         private System.Windows.Forms.NumericUpDown allocationQuantumNumericUpDown;
         private System.Windows.Forms.ComboBox init_alloc_units;
         private System.Windows.Forms.ComboBox incr_alloc_units;
-
+        private System.Windows.Forms.Label labelError;
     }
 }
