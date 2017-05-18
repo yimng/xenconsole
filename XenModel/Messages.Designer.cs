@@ -12230,6 +12230,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Must smaller than 2043.99G 的本地化字符串。
+        /// </summary>
+        public static string DISK_SIZE_TOO_BIG {
+            get {
+                return ResourceManager.GetString("DISK_SIZE_TOO_BIG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 There is not enough available space for this disk 的本地化字符串。
         /// </summary>
         public static string DISK_TOO_BIG {

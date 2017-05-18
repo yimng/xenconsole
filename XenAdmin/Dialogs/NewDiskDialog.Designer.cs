@@ -44,6 +44,7 @@ namespace XenAdmin.Dialogs
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBoxUnits = new System.Windows.Forms.ComboBox();
+            this.labelError = new System.Windows.Forms.Label();
             this.pictureBoxError = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelAllocationQuantum = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace XenAdmin.Dialogs
             this.init_alloc_units = new System.Windows.Forms.ComboBox();
             this.incr_alloc_units = new System.Windows.Forms.ComboBox();
             this.queuedBackgroundWorker1 = new XenCenterLib.QueuedBackgroundWorker();
-            this.labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DiskSizeNumericUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,8 +110,8 @@ namespace XenAdmin.Dialogs
             // 
             // NameTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.NameTextBox, 3);
             resources.ApplyResources(this.NameTextBox, "NameTextBox");
+            this.tableLayoutPanel1.SetColumnSpan(this.NameTextBox, 3);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
@@ -122,8 +122,8 @@ namespace XenAdmin.Dialogs
             // 
             // DescriptionTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.DescriptionTextBox, 3);
             resources.ApplyResources(this.DescriptionTextBox, "DescriptionTextBox");
+            this.tableLayoutPanel1.SetColumnSpan(this.DescriptionTextBox, 3);
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
@@ -183,13 +183,19 @@ namespace XenAdmin.Dialogs
             // 
             // comboBoxUnits
             // 
-            this.comboBoxUnits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBoxUnits, "comboBoxUnits");
+            this.comboBoxUnits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnits.FormattingEnabled = true;
             this.comboBoxUnits.Items.AddRange(new object[] {
             resources.GetString("comboBoxUnits.Items"),
             resources.GetString("comboBoxUnits.Items1")});
             this.comboBoxUnits.Name = "comboBoxUnits";
+            // 
+            // labelError
+            // 
+            resources.ApplyResources(this.labelError, "labelError");
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Name = "labelError";
             // 
             // pictureBoxError
             // 
@@ -240,8 +246,8 @@ namespace XenAdmin.Dialogs
             // 
             // init_alloc_units
             // 
-            this.init_alloc_units.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.init_alloc_units, "init_alloc_units");
+            this.init_alloc_units.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.init_alloc_units.FormattingEnabled = true;
             this.init_alloc_units.Items.AddRange(new object[] {
             resources.GetString("init_alloc_units.Items"),
@@ -251,20 +257,14 @@ namespace XenAdmin.Dialogs
             // 
             // incr_alloc_units
             // 
-            this.incr_alloc_units.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.incr_alloc_units, "incr_alloc_units");
+            this.incr_alloc_units.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.incr_alloc_units.FormattingEnabled = true;
             this.incr_alloc_units.Items.AddRange(new object[] {
             resources.GetString("incr_alloc_units.Items"),
             resources.GetString("incr_alloc_units.Items1")});
             this.incr_alloc_units.Name = "incr_alloc_units";
             this.incr_alloc_units.SelectedIndexChanged += new System.EventHandler(this.incr_alloc_units_SelectedIndexChanged);
-            // 
-            // labelError
-            // 
-            resources.ApplyResources(this.labelError, "labelError");
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Name = "labelError";
             // 
             // NewDiskDialog
             // 
