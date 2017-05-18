@@ -267,7 +267,8 @@ namespace XenAPI
                     || type == SRTypes.cslg
                     || type == SRTypes.smb
                     || type == SRTypes.lvmofcoe
-                    || type == SRTypes.rawhba;
+                    || type == SRTypes.rawhba
+                    || type == SRTypes.lvmomirror;
             }
         }
 
@@ -633,6 +634,15 @@ namespace XenAPI
             foreach (PBD pbd in Connection.ResolveAll(PBDs))
             {
                 if (GetSRType(true) == SRTypes.lvmobond)
+                {
+                    if (pbd.device_config.ContainsKey("SCSIid1") && pbd.device_config.ContainsKey("SCSIid2"))
+                    {
+                        list.Add(pbd.device_config["SCSIid1"]);
+                        list.Add(pbd.device_config["SCSIid2"]);
+                        return list;
+                    }
+                }
+                if (GetSRType(true) == SRTypes.lvmomirror)
                 {
                     if (pbd.device_config.ContainsKey("SCSIid1") && pbd.device_config.ContainsKey("SCSIid2"))
                     {

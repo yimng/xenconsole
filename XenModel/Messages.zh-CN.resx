@@ -14386,7 +14386,7 @@ SCSI ID: {6}
     <value>异构存储映射</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>描述——待修改</value>
+    <value />
   </data>
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>请选择带有VDI的VM</value>
