@@ -439,7 +439,9 @@
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs" />
+    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2131,9 +2133,16 @@
     <EmbeddedResource Include="Dialogs\vSwitchControllerConfigDialog.zh-CN.resx">
       <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
-    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.resx">
+      <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.zh-CN.resx">
       <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.resx">

@@ -14394,4 +14394,20 @@ SCSI ID: {6}
   <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
     <value>大小必须小于2043.99G</value>
   </data>
+  <data name="LVMOMIRROR_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
+    <value>供应商: {0}
+序列号: {1}
+SCSI ID: {2}
+大小: {3}
+
+供应商: {4}
+序列号: {5}
+SCSI ID: {6}
+大小: {7}
+
+供应商: {8}
+序列号: {9}
+SCSI ID: {10}
+大小: {11}</value>
+  </data>
 </root>
