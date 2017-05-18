@@ -14391,4 +14391,7 @@ SCSI ID: {6}
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>请选择带有VDI的VM</value>
   </data>
+  <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
+    <value>大小必须小于2043.99G</value>
+  </data>
 </root>

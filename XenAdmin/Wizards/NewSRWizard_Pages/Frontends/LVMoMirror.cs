@@ -80,71 +80,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 cancel = true;
                 return;
-            }
-            var descr = new LVMoMirrorSrDescriptor(_selectedDevices, Connection);
-
-            SrDescriptors = new List<LVMoMirrorSrDescriptor>();
-
-            var existingSrDescriptors = new List<LVMoMirrorSrDescriptor>();
-            var formatDiskDescriptors = new List<LVMoMirrorSrDescriptor>();
-
-            if (!string.IsNullOrEmpty(SrWizardType.UUID))
-            {
-                // Check LUN contains correct SR
-                if (descr.UUID == SrWizardType.UUID)
-                {
-                    SrDescriptors.Add(descr);
-                    return;
-                }
-
-                using (var dlog = new ThreeButtonDialog(
-                    new ThreeButtonDialog.Details(SystemIcons.Error,
-                        String.Format(Messages.INCORRECT_LUN_FOR_SR, SrWizardType.SrName), Messages.XENCENTER)))
-                {
-                    dlog.ShowDialog(this);
-                }
-
-                cancel = true;
-                return;
-            }
-
-            if (string.IsNullOrEmpty(descr.UUID))
-            {
-                // No existing SRs were found on this LUN. If allowed to create
-                // a new SR, ask the user if they want to proceed and format.
-                if (!SrWizardType.AllowToCreateNewSr)
-                {
-                    using (var dlog = new ThreeButtonDialog(
-                        new ThreeButtonDialog.Details(SystemIcons.Error,
-                            Messages.NEWSR_LUN_HAS_NO_SRS, Messages.XENCENTER)))
-                    {
-                        dlog.ShowDialog(this);
-                    }
-
-                    cancel = true;
-                    return;
-                }
-
-                if (!Program.RunInAutomatedTestMode)
-                    formatDiskDescriptors.Add(descr);
-            }
-            else
-            {
-                // CA-17230: Check this isn't a detached SR. If it is then just continue
-                SR sr = SrWizardHelpers.SrInUse(descr.UUID);
-                if (sr != null)
-                {
-                    //SrDescriptors.Add(descr);
-                    //return;
-                    formatDiskDescriptors.Add(descr);
-                }
-                else
-                {
-                    // We found a SR on this LUN. Will ask user for choice later.
-                    existingSrDescriptors.Add(descr);
-                }
-            }
- 
+            } 
             base.PageLeave(direction, ref cancel);
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -301,7 +237,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                     new DataGridViewTextBoxCell { Value = details });
             }
         }
-        public enum UserSelectedOption { Cancel, Reattach, Format, Skip }
         public override void PopulatePage()
         {
             LVMoMirrorChooseLogPage.three_devices.Clear();
@@ -329,8 +264,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 dataGridView.Rows.AddRange(deviceRows.ToArray());
             }
         }
-
-        public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
         
         public override bool EnableNext()
         {
@@ -339,73 +272,10 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         public override bool EnablePrevious()
         {
-                        if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
-                            return false;
-
-                        return true;
-            //return false;
+            if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
+                return false;
+            return true;
         }
-        private class LVMoMIRRORWarningDialogLauncher
-        {
-            private readonly List<LVMoMirrorSrDescriptor> inputSrDescriptors;
-            private readonly bool foundExistingSRs;
-            private readonly IWin32Window owner;
-
-            public List<LVMoMirrorSrDescriptor> SrDescriptors { get; private set; }
-            public bool Cancelled { get; private set; }
-
-            public LVMoMIRRORWarningDialogLauncher(IWin32Window owner, List<LVMoMirrorSrDescriptor> srDescriptors,
-                bool foundExistingSRs)
-            {
-                this.owner = owner;
-                this.foundExistingSRs = foundExistingSRs;
-                inputSrDescriptors = srDescriptors;
-                SrDescriptors = new List<LVMoMirrorSrDescriptor>();
-            }
-
-            private UserSelectedOption GetSelectedOption(LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor,
-                out bool repeatForRemainingLUNs)
-            {
-                int remainingCount = inputSrDescriptors.Count - 1 - inputSrDescriptors.IndexOf(lvmOmirrorSrDescriptor);
-
-                using (var dialog = new LVMoMirrorWarningDialog(lvmOmirrorSrDescriptor.Device, remainingCount, foundExistingSRs))
-                {
-                    dialog.ShowDialog(owner);
-                    repeatForRemainingLUNs = dialog.RepeatForRemainingLUNs;
-                    return dialog.SelectedOption;
-                }
-            }
-
-            public void ShowWarnings()
-            {
-                bool repeatForRemainingLUNs = false;
-                UserSelectedOption selectedOption = UserSelectedOption.Cancel;
-
-                foreach (LVMoMirrorSrDescriptor lvmOmirrorSrDescriptor in inputSrDescriptors)
-                {
-                    if (!repeatForRemainingLUNs)
-                    {
-                        selectedOption = GetSelectedOption(lvmOmirrorSrDescriptor, out repeatForRemainingLUNs);
-                    }
-
-                    switch (selectedOption)
-                    {
-                        case UserSelectedOption.Format:
-                            lvmOmirrorSrDescriptor.UUID = null;
-                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
-                            break;
-                        case UserSelectedOption.Reattach:
-                            SrDescriptors.Add(lvmOmirrorSrDescriptor);
-                            break;
-                        case UserSelectedOption.Cancel:
-                            SrDescriptors.Clear();
-                            Cancelled = true;
-                            return;
-                    }
-                }
-            }
-        }
-
 
     }
 

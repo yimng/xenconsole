@@ -525,6 +525,12 @@ namespace XenAdmin.Dialogs
                 setError(null);
                 return;
             }
+            if (Convert.ToDouble(DiskSizeNumericUpDown.Text) > 2043.99 && SelectedUnits==DiskSizeUnits.GB)
+            {
+                OkButton.Enabled = false;
+                setError(Messages.DISK_SIZE_TOO_BIG);
+                return;
+            }
             if (!DiskSizeValidNumber())
             {
                 OkButton.Enabled = false;

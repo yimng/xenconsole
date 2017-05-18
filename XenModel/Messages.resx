@@ -14430,12 +14430,31 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>TOBECHANGED</value>
+    <value>Hardware HBA Bond SR [{0} - {2}]</value>
   </data>
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>
   </data>
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>Please selecte the VM with VDIs</value>
+  </data>
+  <data name="LVMOMIRROR_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
+    <value>Vendor: {0}
+Serial Number: {1}
+SCSI ID: {2}
+Size: {3}
+
+Vendor: {4}
+Serial Number: {5}
+SCSI ID: {6}
+Size: {7}
+
+Vendor: {8}
+Serial Number: {9}
+SCSI ID: {10}
+Size: {11}</value>
+  </data>
+  <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
+    <value>Must smaller than 2043.99G</value>
   </data>
 </root>

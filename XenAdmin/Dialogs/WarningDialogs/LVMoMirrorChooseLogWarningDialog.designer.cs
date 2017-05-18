@@ -57,9 +57,9 @@
             // labelSelectOption
             // 
             this.labelSelectOption.AutoSize = true;
-            this.labelSelectOption.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.labelSelectOption.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.labelSelectOption.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelSelectOption.Location = new System.Drawing.Point(12, 98);
+            this.labelSelectOption.Location = new System.Drawing.Point(12, 227);
             this.labelSelectOption.Name = "labelSelectOption";
             this.labelSelectOption.Size = new System.Drawing.Size(222, 17);
             this.labelSelectOption.TabIndex = 15;
@@ -68,9 +68,9 @@
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.labelHeader.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.labelHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelHeader.Location = new System.Drawing.Point(9, 74);
+            this.labelHeader.Location = new System.Drawing.Point(9, 203);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(296, 17);
             this.labelHeader.TabIndex = 14;
@@ -79,7 +79,7 @@
             // labelLUNDetails
             // 
             this.labelLUNDetails.AutoSize = true;
-            this.labelLUNDetails.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.labelLUNDetails.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.labelLUNDetails.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelLUNDetails.Location = new System.Drawing.Point(9, 9);
             this.labelLUNDetails.Name = "labelLUNDetails";
@@ -89,7 +89,7 @@
             // 
             // pictureBoxArrowFormat
             // 
-            this.pictureBoxArrowFormat.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.pictureBoxArrowFormat.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.pictureBoxArrowFormat.Image = global::XenAdmin.Properties.Resources._112_RightArrowLong_Blue_24x24_72;
             this.pictureBoxArrowFormat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBoxArrowFormat.Location = new System.Drawing.Point(5, 3);
@@ -109,7 +109,7 @@
             this.buttonFormat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.buttonFormat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonFormat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFormat.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonFormat.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.buttonFormat.ForeColor = System.Drawing.Color.Navy;
             this.buttonFormat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonFormat.Location = new System.Drawing.Point(29, 4);
@@ -130,8 +130,8 @@
             this.panelFormat.Controls.Add(this.pictureBoxArrowFormat);
             this.panelFormat.Controls.Add(this.buttonFormat);
             this.panelFormat.Controls.Add(this.labelFormatInfo);
-            this.panelFormat.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.panelFormat.Location = new System.Drawing.Point(15, 180);
+            this.panelFormat.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.panelFormat.Location = new System.Drawing.Point(15, 309);
             this.panelFormat.Name = "panelFormat";
             this.panelFormat.Size = new System.Drawing.Size(393, 58);
             this.panelFormat.TabIndex = 17;
@@ -141,7 +141,7 @@
             // labelFormatInfo
             // 
             this.labelFormatInfo.AutoSize = true;
-            this.labelFormatInfo.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.labelFormatInfo.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.labelFormatInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelFormatInfo.Location = new System.Drawing.Point(33, 32);
             this.labelFormatInfo.Name = "labelFormatInfo";
@@ -161,8 +161,8 @@
             this.panelReattach.Controls.Add(this.pictureBoxArrowReattach);
             this.panelReattach.Controls.Add(this.buttonReattach);
             this.panelReattach.Controls.Add(this.labelReattachInfo);
-            this.panelReattach.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
-            this.panelReattach.Location = new System.Drawing.Point(15, 116);
+            this.panelReattach.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.panelReattach.Location = new System.Drawing.Point(15, 245);
             this.panelReattach.Name = "panelReattach";
             this.panelReattach.Size = new System.Drawing.Size(393, 58);
             this.panelReattach.TabIndex = 22;
@@ -171,7 +171,7 @@
             // 
             // pictureBoxArrowReattach
             // 
-            this.pictureBoxArrowReattach.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.pictureBoxArrowReattach.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.pictureBoxArrowReattach.Image = global::XenAdmin.Properties.Resources._112_RightArrowLong_Blue_24x24_72;
             this.pictureBoxArrowReattach.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBoxArrowReattach.Location = new System.Drawing.Point(5, 3);
@@ -191,7 +191,7 @@
             this.buttonReattach.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.buttonReattach.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonReattach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReattach.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonReattach.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.buttonReattach.ForeColor = System.Drawing.Color.Navy;
             this.buttonReattach.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonReattach.Location = new System.Drawing.Point(29, 4);
@@ -206,7 +206,7 @@
             // labelReattachInfo
             // 
             this.labelReattachInfo.AutoSize = true;
-            this.labelReattachInfo.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.labelReattachInfo.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.labelReattachInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelReattachInfo.Location = new System.Drawing.Point(33, 32);
             this.labelReattachInfo.Name = "labelReattachInfo";
@@ -220,9 +220,9 @@
             // 
             this.labelWarning.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWarning.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.labelWarning.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.labelWarning.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelWarning.Location = new System.Drawing.Point(54, 255);
+            this.labelWarning.Location = new System.Drawing.Point(54, 379);
             this.labelWarning.Name = "labelWarning";
             this.labelWarning.Size = new System.Drawing.Size(354, 54);
             this.labelWarning.TabIndex = 23;
@@ -232,10 +232,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.pictureBox2.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 255);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 379);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -245,10 +245,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.pictureBox1.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 255);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 379);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -259,9 +259,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(53, 255);
+            this.label1.Location = new System.Drawing.Point(53, 379);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 54);
             this.label1.TabIndex = 23;
@@ -272,9 +272,9 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.buttonCancel.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.buttonCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonCancel.Location = new System.Drawing.Point(333, 357);
+            this.buttonCancel.Location = new System.Drawing.Point(333, 481);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 26;
@@ -287,9 +287,9 @@
             this.checkBoxRepeat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxRepeat.AutoSize = true;
             this.checkBoxRepeat.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.checkBoxRepeat.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.checkBoxRepeat.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.checkBoxRepeat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxRepeat.Location = new System.Drawing.Point(15, 326);
+            this.checkBoxRepeat.Location = new System.Drawing.Point(15, 450);
             this.checkBoxRepeat.Name = "checkBoxRepeat";
             this.checkBoxRepeat.Size = new System.Drawing.Size(322, 21);
             this.checkBoxRepeat.TabIndex = 25;
@@ -301,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 392);
+            this.ClientSize = new System.Drawing.Size(443, 516);
             this.Controls.Add(this.checkBoxRepeat);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label1);
@@ -313,7 +313,7 @@
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.labelLUNDetails);
             this.Controls.Add(this.panelFormat);
-            this.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "LVMoMirrorChooseLogWarningDialog";
             this.Text = "LVMoMirrorChooseLogWarningDialog";
             this.MouseEnter += new System.EventHandler(this.ExistingSRsWarningDialog_MouseEnter);
