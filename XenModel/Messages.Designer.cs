@@ -25952,7 +25952,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Hardware Mirror SR [{0} - {2}] 的本地化字符串。
+        ///   查找类似  的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_DESCRIPTION {
             get {

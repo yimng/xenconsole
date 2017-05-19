@@ -14430,7 +14430,7 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>Hardware Mirror SR [{0} - {2}]</value>
+    <value />
   </data>
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>
