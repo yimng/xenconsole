@@ -14380,10 +14380,14 @@ SCSI ID: {6}
     <value>升级vGate以使用此功能</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
-    <value>待修改</value>
+    <value>vGate 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
+
+要将镜像的 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 vGate 主机中的存储设备、网络设备和 HBA。
+
+完成所有配置后， 该存储将由两个镜像的LUN 支持的 SCSI 包装成软raid设备显示给主机。然后可以使用该软raid设备访问这个两个镜像的LUN。</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
-    <value>异构存储映射</value>
+    <value>异构存储双活</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
     <value />

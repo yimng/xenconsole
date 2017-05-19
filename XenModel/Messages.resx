@@ -14424,7 +14424,9 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>Update vGate to use this function.</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
-    <value>LVM_MIRROR_TO_BE_CHANGED</value>
+    <value>Logical Volumn Manager (LVM) mirroring support is available using either iSCSI or Fibre Channel access to shared LUN.
+
+This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk.</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
     <value>LVM_Mirror</value>
