@@ -14414,4 +14414,7 @@ SCSI ID: {6}
 SCSI ID: {10}
 大小: {11}</value>
   </data>
+  <data name="UPLOADING_ISO" xml:space="preserve">
+    <value>正在上传ISO文件，请稍等。</value>
+  </data>
 </root>
