@@ -78,35 +78,23 @@ namespace XenAdmin.Wizards.RestoreWizard_Pages
             // 
             // GroupBox_ScheduleType
             // 
-            this.GroupBox_ScheduleType.AccessibleDescription = null;
-            this.GroupBox_ScheduleType.AccessibleName = null;
             resources.ApplyResources(this.GroupBox_ScheduleType, "GroupBox_ScheduleType");
-            this.GroupBox_ScheduleType.BackgroundImage = null;
             this.GroupBox_ScheduleType.Controls.Add(this.RadioButton_Once);
             this.GroupBox_ScheduleType.Controls.Add(this.RadioButton_Now);
-            this.GroupBox_ScheduleType.Font = null;
             this.GroupBox_ScheduleType.Name = "GroupBox_ScheduleType";
             this.GroupBox_ScheduleType.TabStop = false;
             // 
             // RadioButton_Once
             // 
-            this.RadioButton_Once.AccessibleDescription = null;
-            this.RadioButton_Once.AccessibleName = null;
             resources.ApplyResources(this.RadioButton_Once, "RadioButton_Once");
-            this.RadioButton_Once.BackgroundImage = null;
-            this.RadioButton_Once.Font = null;
             this.RadioButton_Once.Name = "RadioButton_Once";
             this.RadioButton_Once.UseVisualStyleBackColor = true;
             this.RadioButton_Once.CheckedChanged += new System.EventHandler(this.RadioButton_Once_CheckedChanged);
             // 
             // RadioButton_Now
             // 
-            this.RadioButton_Now.AccessibleDescription = null;
-            this.RadioButton_Now.AccessibleName = null;
             resources.ApplyResources(this.RadioButton_Now, "RadioButton_Now");
-            this.RadioButton_Now.BackgroundImage = null;
             this.RadioButton_Now.Checked = true;
-            this.RadioButton_Now.Font = null;
             this.RadioButton_Now.Name = "RadioButton_Now";
             this.RadioButton_Now.TabStop = true;
             this.RadioButton_Now.UseVisualStyleBackColor = true;
@@ -114,65 +102,40 @@ namespace XenAdmin.Wizards.RestoreWizard_Pages
             // 
             // Label_ServerTime
             // 
-            this.Label_ServerTime.AccessibleDescription = null;
-            this.Label_ServerTime.AccessibleName = null;
             resources.ApplyResources(this.Label_ServerTime, "Label_ServerTime");
-            this.Label_ServerTime.Font = null;
             this.Label_ServerTime.Name = "Label_ServerTime";
             // 
             // Label_StartDate
             // 
-            this.Label_StartDate.AccessibleDescription = null;
-            this.Label_StartDate.AccessibleName = null;
             resources.ApplyResources(this.Label_StartDate, "Label_StartDate");
-            this.Label_StartDate.Font = null;
             this.Label_StartDate.Name = "Label_StartDate";
             // 
             // Label_StartTime
             // 
-            this.Label_StartTime.AccessibleDescription = null;
-            this.Label_StartTime.AccessibleName = null;
             resources.ApplyResources(this.Label_StartTime, "Label_StartTime");
-            this.Label_StartTime.Font = null;
             this.Label_StartTime.Name = "Label_StartTime";
             // 
             // DateTimePicker_StartDate
             // 
-            this.DateTimePicker_StartDate.AccessibleDescription = null;
-            this.DateTimePicker_StartDate.AccessibleName = null;
             resources.ApplyResources(this.DateTimePicker_StartDate, "DateTimePicker_StartDate");
-            this.DateTimePicker_StartDate.BackgroundImage = null;
-            this.DateTimePicker_StartDate.CalendarFont = null;
-            this.DateTimePicker_StartDate.Font = null;
             this.DateTimePicker_StartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePicker_StartDate.Name = "DateTimePicker_StartDate";
             // 
             // DateTimePicker_StartTime
             // 
-            this.DateTimePicker_StartTime.AccessibleDescription = null;
-            this.DateTimePicker_StartTime.AccessibleName = null;
             resources.ApplyResources(this.DateTimePicker_StartTime, "DateTimePicker_StartTime");
-            this.DateTimePicker_StartTime.BackgroundImage = null;
-            this.DateTimePicker_StartTime.CalendarFont = null;
-            this.DateTimePicker_StartTime.Font = null;
-            this.DateTimePicker_StartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DateTimePicker_StartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePicker_StartTime.Name = "DateTimePicker_StartTime";
             this.DateTimePicker_StartTime.ShowUpDown = true;
             // 
             // Label_Server_ScheduleTime
             // 
-            this.Label_Server_ScheduleTime.AccessibleDescription = null;
-            this.Label_Server_ScheduleTime.AccessibleName = null;
             resources.ApplyResources(this.Label_Server_ScheduleTime, "Label_Server_ScheduleTime");
-            this.Label_Server_ScheduleTime.Font = null;
             this.Label_Server_ScheduleTime.Name = "Label_Server_ScheduleTime";
             // 
             // Page_JobSchedule
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
-            this.BackgroundImage = null;
             this.Controls.Add(this.Label_Server_ScheduleTime);
             this.Controls.Add(this.DateTimePicker_StartTime);
             this.Controls.Add(this.DateTimePicker_StartDate);
@@ -180,7 +143,6 @@ namespace XenAdmin.Wizards.RestoreWizard_Pages
             this.Controls.Add(this.Label_StartDate);
             this.Controls.Add(this.Label_ServerTime);
             this.Controls.Add(this.GroupBox_ScheduleType);
-            this.Font = null;
             this.Name = "Page_JobSchedule";
             this.GroupBox_ScheduleType.ResumeLayout(false);
             this.GroupBox_ScheduleType.PerformLayout();
