@@ -189,6 +189,7 @@ Section "Install components..."
   File /r "XenOvf.dll"
   File /r "XenOvfTransport.dll"
   File /r "Org.Mentalis.Security.dll"
+  File /r "Microsoft.VisualBasic.PowerPacks.Vs.dll"
   File /r "putty.exe"
 
   File /r "${APP_MAIN_NAME}.config"
