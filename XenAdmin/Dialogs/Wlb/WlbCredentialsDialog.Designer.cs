@@ -199,7 +199,7 @@ namespace XenAdmin.Dialogs.Wlb
             // pictureBox2
             // 
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::XenAdmin.Properties.Resources.XS;
+            this.pictureBox2.Image = global::XenAdmin.Properties.Resources.addhost_48;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
@@ -235,7 +235,7 @@ namespace XenAdmin.Dialogs.Wlb
             // pictureBox5
             // 
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Image = global::XenAdmin.Properties.Resources.XS;
+            this.pictureBox5.Image = global::XenAdmin.Properties.Resources.addhost_48;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 

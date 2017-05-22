@@ -229,7 +229,7 @@
     <value>http://www.citrix.com/xenserver/le/features/vmpr</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_WLB" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/wlb</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_SA" xml:space="preserve">
     <value>http://store.citrix.com/XSInProduct</value>

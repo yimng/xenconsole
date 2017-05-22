@@ -25934,7 +25934,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 LVM_MIRROR_TO_BE_CHANGED 的本地化字符串。
+        ///   查找类似 Logical Volumn Manager (LVM) mirroring support is available using either iSCSI or Fibre Channel access to shared LUN.
+        ///
+        ///This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk. 的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_BLURB {
             get {
@@ -25952,7 +25954,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Hardware HBA Bond SR [{0} - {2}] 的本地化字符串。
+        ///   查找类似  的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_DESCRIPTION {
             get {

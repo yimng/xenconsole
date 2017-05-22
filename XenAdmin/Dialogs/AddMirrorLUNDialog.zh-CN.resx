@@ -124,7 +124,7 @@
     <value>取消(&amp;C)</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>点击添加按钮为异构存储映射添加新的LUN</value>
+    <value>点击添加按钮为异构存储双活添加新的LUN</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>添加LUN</value>
