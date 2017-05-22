@@ -14384,7 +14384,7 @@ SCSI ID: {6}
 
 要将镜像的 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 vGate 主机中的存储设备、网络设备和 HBA。
 
-完成所有配置后， 该存储将由两台存储设备的两个LUN相互镜像 支持的 SCSI 包装成软raid设备显示给主机。然后可以使用该软raid设备访问这个两个镜像的LUN。</value>
+完成配置后， 该存储由位于两台同构或异构存储设备的两个LUN相互镜像，并封装成镜像设备显示给主机/集群，主机实现两个镜像的LUN之间的自动同步，从而实现两个LUN的双活。</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
     <value>异构存储双活</value>
