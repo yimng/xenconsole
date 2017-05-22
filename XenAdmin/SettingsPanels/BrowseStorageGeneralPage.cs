@@ -452,7 +452,28 @@ namespace XenAdmin.SettingsPanels
                                 }
                             }
                         }
-                    }                    
+                    }
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror)
+                    {
+                        if (pbd != null)
+                        {
+                            String status;
+                            if (pbd.other_config.ContainsKey("LUN1-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN1-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN1"), status, Status));
+                                }
+                            }
+                            if (pbd.other_config.ContainsKey("LUN2-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN2-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
+                                }
+                            }
+                        }
+                    }
                 }//foreach
                 /**
                 if (sr.GetSRType(true) == SR.SRTypes.lvmobond)
