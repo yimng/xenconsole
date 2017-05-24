@@ -275,4 +275,7 @@ SCSI ID:
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>443, 591</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>警告</value>
+  </data>
 </root>

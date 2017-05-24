@@ -176,7 +176,29 @@ namespace XenAdmin.SettingsPanels
             
             return false;
         }
+        private bool CanAddMirrorLUN(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("available") ||
+                    pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("available")))
+            {
+                return false;
+            }
+//            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
+//                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
+//                    !pdb.other_config.ContainsKey("LUN1-status") || !pdb.other_config.ContainsKey("LUN2-status")))
+//            {
+//                return true;
+//            }
+            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
+                    pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
+            {
+                return true;
+            }
 
+                return false;
+        }
         private bool canissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
@@ -195,7 +217,19 @@ namespace XenAdmin.SettingsPanels
             
             return true;
         }
+        private bool canMirrorissciRemove()
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
 
+            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
+                     pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
+            {
+                return false;
+            }
+
+            return true;
+        }
         private bool isHAenableOfSR(SR sr)
         {
             Pool pool = Helpers.GetPoolOfOne(sr.Connection);
@@ -269,7 +303,7 @@ namespace XenAdmin.SettingsPanels
                         }
                         else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror)
                         {
-                            if (CanAddLUN(scsiid))
+                            if (CanAddMirrorLUN(scsiid))
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
@@ -283,7 +317,7 @@ namespace XenAdmin.SettingsPanels
                                 ctxMenuItems.Add(itm);
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
                             }
-                            else if (canissciRemove())
+                            else if (canMirrorissciRemove())
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
@@ -418,7 +452,28 @@ namespace XenAdmin.SettingsPanels
                                 }
                             }
                         }
-                    }                    
+                    }
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror)
+                    {
+                        if (pbd != null)
+                        {
+                            String status;
+                            if (pbd.other_config.ContainsKey("LUN1-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN1-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN1"), status, Status));
+                                }
+                            }
+                            if (pbd.other_config.ContainsKey("LUN2-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN2-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
+                                }
+                            }
+                        }
+                    }
                 }//foreach
                 /**
                 if (sr.GetSRType(true) == SR.SRTypes.lvmobond)
