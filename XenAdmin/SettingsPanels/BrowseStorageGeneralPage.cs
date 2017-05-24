@@ -191,8 +191,8 @@ namespace XenAdmin.SettingsPanels
 //            {
 //                return true;
 //            }
-            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
-                    pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+                    pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
             {
                 return true;
             }
@@ -222,8 +222,8 @@ namespace XenAdmin.SettingsPanels
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
 
-            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
-                     pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+                     pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
             {
                 return false;
             }
