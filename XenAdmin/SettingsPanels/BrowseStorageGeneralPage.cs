@@ -180,10 +180,9 @@ namespace XenAdmin.SettingsPanels
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
-            if (pbds.Any<PBD>(pbd => pbd.other_config.ContainsKey("LUN1-status") && pbd.other_config["LUN1-status"].Contains("available") ||
-                    pbd.other_config.ContainsKey("LUN2-status") && pbd.other_config["LUN2-status"].Contains("available")))
+            if (scsiid == "")
             {
-                return false;
+                return true;
             }
 //            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
 //                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
@@ -191,12 +190,11 @@ namespace XenAdmin.SettingsPanels
 //            {
 //                return true;
 //            }
-            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
-                    pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
-            {
-                return true;
-            }
-
+//            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+//                    pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
+//            {
+//                return true;
+//            }
                 return false;
         }
         private bool canissciRemove()
@@ -221,9 +219,8 @@ namespace XenAdmin.SettingsPanels
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
-
-            if (pbds.Any(pbd => pbd.device_config.ContainsKey("LUN1-scsiid") && pbd.device_config["LUN1-scsiid"] == null ||
-                     pbd.device_config.ContainsKey("LUN2-scsiid") && pbd.device_config["LUN2-scsiid"] == null))
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+                     pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
             {
                 return false;
             }
