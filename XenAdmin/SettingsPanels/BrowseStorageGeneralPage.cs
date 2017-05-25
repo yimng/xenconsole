@@ -215,19 +215,15 @@ namespace XenAdmin.SettingsPanels
             
             return true;
         }
-        private bool canMirrorissciRemove(string scsiid)
+        private bool canMirrorissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
-            if (scsiid == "")
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+                     pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
             {
                 return false;
             }
-//            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
-//                     pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
-//            {
-//                return false;
-//            }
 
             return true;
         }
@@ -318,7 +314,7 @@ namespace XenAdmin.SettingsPanels
                                 ctxMenuItems.Add(itm);
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
                             }
-                            else if (canMirrorissciRemove(scsiid))
+                            else if (canMirrorissciRemove())
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
