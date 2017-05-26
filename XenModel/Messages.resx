@@ -14432,7 +14432,7 @@ This provides the ability to allocate more than one copy of a physical partition
     <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value />
+    <value>Hardware HBA Bond SR [{0} - {1}]</value>
   </data>
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>
@@ -14461,5 +14461,29 @@ Size: {11}</value>
   </data>
   <data name="UPLOADING_ISO" xml:space="preserve">
     <value>ISO file is uploading...</value>
+  </data>
+  <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
+    <value>Creating SR(This may take a long time,please be patient )</value>
+  </data>
+  <data name="ADD_MIRROR_LUN_HINT" xml:space="preserve">
+    <value>This may take a long time,please be patient</value>
+  </data>
+  <data name="HOST" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="MAINWINDOW_CTRL_L" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MEDIA_ACCESS_CONTROL" xml:space="preserve">
+    <value>Mac</value>
+  </data>
+  <data name="SAVE_PATH" xml:space="preserve">
+    <value>Save path</value>
+  </data>
+  <data name="VGATE_VERSION" xml:space="preserve">
+    <value>vGate-version</value>
+  </data>
+  <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
+    <value>Adding SR {0} LUN.This may take a long time,please be patient</value>
   </data>
 </root>

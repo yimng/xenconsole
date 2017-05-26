@@ -1492,7 +1492,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Moving virtual disk &apos;{0}&apos;....
+        ///   查找类似 Creating SR(This may take a long time,please be patient ) 的本地化字符串。
+        /// </summary>
+        public static string ACTION_MIRROR_SR_CREATING {
+            get {
+                return ResourceManager.GetString("ACTION_MIRROR_SR_CREATING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Moving virtual disk &apos;{0}&apos;... 的本地化字符串。
         /// </summary>
         public static string ACTION_MOVING_VDI_STATUS {
             get {
@@ -2203,7 +2212,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SR repair canceled.
+        ///   查找类似 Adding SR {0} LUN.This may take a long time,please be patient 的本地化字符串。
+        /// </summary>
+        public static string ACTION_SR_MIRROR_LUN_ADDING {
+            get {
+                return ResourceManager.GetString("ACTION_SR_MIRROR_LUN_ADDING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SR repair canceled 的本地化字符串。
         /// </summary>
         public static string ACTION_SR_REPAIR_CANCELLED {
             get {
@@ -4361,7 +4379,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add New Server.
+        ///   查找类似 This may take a long time,please be patient 的本地化字符串。
+        /// </summary>
+        public static string ADD_MIRROR_LUN_HINT {
+            get {
+                return ResourceManager.GetString("ADD_MIRROR_LUN_HINT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Add New Server 的本地化字符串。
         /// </summary>
         public static string ADD_NEW_CONNECT_TO {
             get {
@@ -18677,7 +18704,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This server has an operation in progress..
+        ///   查找类似 Host 的本地化字符串。
+        /// </summary>
+        public static string HOST {
+            get {
+                return ResourceManager.GetString("HOST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 This server has an operation in progress. 的本地化字符串。
         /// </summary>
         public static string HOST_ACTION_IN_PROGRESS {
             get {
@@ -22101,7 +22137,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ctrl+N.
+        ///   查找类似 Ctrl+L 的本地化字符串。
+        /// </summary>
+        public static string MAINWINDOW_CTRL_L {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_CTRL_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Ctrl+N 的本地化字符串。
         /// </summary>
         public static string MAINWINDOW_CTRL_N {
             get {
@@ -23064,7 +23109,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The memory cannot be changed when the VM is suspended.
+        ///   查找类似 Mac 的本地化字符串。
+        /// </summary>
+        public static string MEDIA_ACCESS_CONTROL {
+            get {
+                return ResourceManager.GetString("MEDIA_ACCESS_CONTROL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The memory cannot be changed when the VM is suspended 的本地化字符串。
         /// </summary>
         public static string MEM_NOT_WHEN_SUSPENDED {
             get {
@@ -25954,7 +26008,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   查找类似 Hardware HBA Bond SR [{0} - {1}] 的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_DESCRIPTION {
             get {
@@ -32172,7 +32226,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save Search &apos;{0}&apos;.
+        ///   查找类似 Save path 的本地化字符串。
+        /// </summary>
+        public static string SAVE_PATH {
+            get {
+                return ResourceManager.GetString("SAVE_PATH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Save Search &apos;{0}&apos; 的本地化字符串。
         /// </summary>
         public static string SAVE_SEARCH {
             get {
@@ -37857,7 +37920,16 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} virtual GPU ({1} per GPU, {2}, {3} displays).
+        ///   查找类似 vGate-version 的本地化字符串。
+        /// </summary>
+        public static string VGATE_VERSION {
+            get {
+                return ResourceManager.GetString("VGATE_VERSION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {0} virtual GPU ({1} per GPU, {2}, {3} displays) 的本地化字符串。
         /// </summary>
         public static string VGPU_DESCRIPTION_MANY {
             get {

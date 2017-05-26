@@ -103,11 +103,10 @@ namespace XenAdmin.Dialogs
 
         private void replace_Click(object sender, EventArgs e)
         {
-
             addButton.Enabled = false;
             cancelButton.Text = Messages.CLOSE;
             _repairAction = new SrAddMirrorLUNAction(sr.Connection, sr, _selectedDevices[0].SCSIid);
-            DoAction(_repairAction);            
+            DoAction(_repairAction);          
         }
 
         private void DoAction(AsyncAction action)
@@ -116,7 +115,6 @@ namespace XenAdmin.Dialogs
 
             action.Changed += action_Changed;
             action.Completed += action_Completed;
-
             Grow(action.RunAsync);
         }
 
