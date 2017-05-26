@@ -214,7 +214,7 @@ namespace XenAdmin.SettingsPanels
             }
             
             return true;
-        }
+        } 
         private bool canMirrorissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;

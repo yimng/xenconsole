@@ -14459,4 +14459,7 @@ Size: {11}</value>
   <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
     <value>Must smaller than 2043.99G</value>
   </data>
+  <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
+    <value>Creating SR(This may take a long time,please be patient )</value>
+  </data>
 </root>

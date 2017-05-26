@@ -1492,6 +1492,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Creating SR(This may take a long time,please be patient ) 的本地化字符串。
+        /// </summary>
+        public static string ACTION_MIRROR_SR_CREATING {
+            get {
+                return ResourceManager.GetString("ACTION_MIRROR_SR_CREATING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Moving virtual disk &apos;{0}&apos;... 的本地化字符串。
         /// </summary>
         public static string ACTION_MOVING_VDI_STATUS {

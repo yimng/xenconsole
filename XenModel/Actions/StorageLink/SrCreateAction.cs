@@ -124,8 +124,14 @@ namespace XenAdmin.Actions
             {
                 secretuuid = CreateSecret("chappassword", value);
             }
-
-            Description = Messages.ACTION_SR_CREATING;
+            if (_srType == XenAPI.SR.SRTypes.lvmomirror)
+            {
+                Description = Messages.ACTION_MIRROR_SR_CREATING;
+            }
+            else
+            {
+                Description = Messages.ACTION_SR_CREATING;
+            }
             XenRef<SR> sr;
             try
             {
