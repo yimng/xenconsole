@@ -78,7 +78,7 @@ namespace XenAdmin.Actions
                 args.Add("mirror_device", this.SR.sm_config["mirror_device"]);
                 args.Add("host_uuid", host.uuid);
                 RelatedTask = XenAPI.Host.async_call_plugin(host.Connection.Session, host.opaque_ref, "ManageMirrorLun.py", "addLUN", args);
-                this.Description = string.Format(Messages.ACTION_SR_LUN_ADDING, Helpers.GetName(host));
+                this.Description = string.Format(Messages.ACTION_SR_MIRROR_LUN_ADDING, Helpers.GetName(host));
                 if (PercentComplete + delta <= 100)
                 {
                     PollToCompletion(PercentComplete, PercentComplete + delta);

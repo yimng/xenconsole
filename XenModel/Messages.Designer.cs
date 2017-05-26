@@ -2212,6 +2212,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Adding SR {0} LUN.This may take a long time,please be patient 的本地化字符串。
+        /// </summary>
+        public static string ACTION_SR_MIRROR_LUN_ADDING {
+            get {
+                return ResourceManager.GetString("ACTION_SR_MIRROR_LUN_ADDING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 SR repair canceled 的本地化字符串。
         /// </summary>
         public static string ACTION_SR_REPAIR_CANCELLED {
@@ -25999,7 +26008,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Hardware HBA Bond SR [{0} - {1}] 的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_DESCRIPTION {
             get {

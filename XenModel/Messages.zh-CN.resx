@@ -14438,4 +14438,7 @@ SCSI ID: {10}
   <data name="VGATE_VERSION" xml:space="preserve">
     <value>vGate版本</value>
   </data>
+  <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
+    <value>正在添加SR {0} LUN,LUN同步时间较长请耐心等待</value>
+  </data>
 </root>

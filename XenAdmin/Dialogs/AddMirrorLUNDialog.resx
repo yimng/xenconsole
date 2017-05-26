@@ -123,13 +123,10 @@
   <data name="&gt;&gt;dataGridView.Name" xml:space="preserve">
     <value>dataGridView</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="&gt;&gt;colDetails.Name" xml:space="preserve">
     <value>colDetails</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>356, 301</value>
   </data>
@@ -142,8 +139,8 @@
   <data name="&gt;&gt;colSize.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ProgressSeparator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 9pt</value>
+  <data name="colSerial.HeaderText" xml:space="preserve">
+    <value>serial</value>
   </data>
   <data name="&gt;&gt;ProgressSeparator.Name" xml:space="preserve">
     <value>ProgressSeparator</value>
@@ -159,7 +156,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ActionStatusLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddMirrorLUNDialog</value>
@@ -170,23 +167,17 @@
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="colSize.HeaderText" xml:space="preserve">
-    <value>size</value>
-  </data>
   <data name="&gt;&gt;colDetails.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>500, 219</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 9pt</value>
-  </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="colID.HeaderText" xml:space="preserve">
-    <value>ID</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
   </data>
   <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -199,6 +190,9 @@
   </data>
   <data name="ActionStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 29</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -216,10 +210,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="dataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -239,8 +233,8 @@
   <data name="ActionProgressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 385</value>
   </data>
-  <data name="dataGridView.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 9pt</value>
+  <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="&gt;&gt;ActionStatusLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -251,9 +245,6 @@
   </data>
   <data name="&gt;&gt;colSerial.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="colDetails.HeaderText" xml:space="preserve">
     <value>details</value>
@@ -279,8 +270,11 @@
   <data name="&gt;&gt;ProgressSeparator.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="dataGridView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="&gt;&gt;ActionProgressBar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="ProgressSeparator.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 336</value>
@@ -288,14 +282,14 @@
   <data name="pictureBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 9pt</value>
+  <data name="colID.HeaderText" xml:space="preserve">
+    <value>ID</value>
   </data>
   <data name="&gt;&gt;ActionStatusLabel.Name" xml:space="preserve">
     <value>ActionStatusLabel</value>
   </data>
   <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -303,17 +297,14 @@
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="&gt;&gt;dataGridView.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;ActionProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ActionProgressBar.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="&gt;&gt;ProgressSeparator.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;colSize.Name" xml:space="preserve">
-    <value>colSize</value>
+    <value>4</value>
   </data>
   <data name="ActionStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
@@ -333,11 +324,11 @@
   <data name="addButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ActionProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ProgressSeparator.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
   </data>
   <data name="&gt;&gt;addButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -348,17 +339,23 @@
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
   </data>
   <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
   </data>
   <data name="&gt;&gt;dataGridView.Type" xml:space="preserve">
     <value>XenAdmin.Controls.DataGridViewEx.DataGridViewEx, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XenAdmin.Dialogs.DialogWithProgress, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="colCheck.Width" type="System.Int32, mscorlib">
     <value>19</value>
@@ -385,7 +382,7 @@
     <value>12, 307</value>
   </data>
   <data name="&gt;&gt;addButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="colCheck.HeaderText" xml:space="preserve">
     <value />
@@ -408,23 +405,26 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>524, 404</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Dialogs.DialogWithProgress, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="colSize.HeaderText" xml:space="preserve">
+    <value>size</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="colSerial.HeaderText" xml:space="preserve">
-    <value>serial</value>
+  <data name="&gt;&gt;colSize.Name" xml:space="preserve">
+    <value>colSize</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Click Repair to have vGate Console attempt to diagnose and resolve the connection problems with this storage repository. If the problem cannot be resolved, look at the Logs tab for more detailed error messages.</value>
+  </data>
   <data name="addButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Click Repair to have vGate Console attempt to diagnose and resolve the connection problems with this storage repository. If the problem cannot be resolved, look at the Logs tab for more detailed error messages.</value>
+  <data name="&gt;&gt;dataGridView.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="colID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
