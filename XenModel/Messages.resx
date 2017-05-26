@@ -14462,4 +14462,22 @@ Size: {11}</value>
   <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
     <value>Creating SR(This may take a long time,please be patient )</value>
   </data>
+  <data name="ADD_MIRROR_LUN_HINT" xml:space="preserve">
+    <value>This may take a long time,please be patient</value>
+  </data>
+  <data name="HOST" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="MAINWINDOW_CTRL_L" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MEDIA_ACCESS_CONTROL" xml:space="preserve">
+    <value>Mac</value>
+  </data>
+  <data name="SAVE_PATH" xml:space="preserve">
+    <value>Save path</value>
+  </data>
+  <data name="VGATE_VERSION" xml:space="preserve">
+    <value>vGate-version</value>
+  </data>
 </root>

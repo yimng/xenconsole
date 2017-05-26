@@ -14417,4 +14417,25 @@ SCSI ID: {10}
   <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
     <value>正在创建 SR(LUN同步时间较长请耐心等待)</value>
   </data>
+  <data name="ADD_MIRROR_LUN_HINT" xml:space="preserve">
+    <value>LUN同步时间较长请耐心等待</value>
+  </data>
+  <data name="CPUS" xml:space="preserve">
+    <value>CPU个数</value>
+  </data>
+  <data name="HOST" xml:space="preserve">
+    <value>服务器</value>
+  </data>
+  <data name="MAINWINDOW_CTRL_L" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MEDIA_ACCESS_CONTROL" xml:space="preserve">
+    <value>Mac地址</value>
+  </data>
+  <data name="SAVE_PATH" xml:space="preserve">
+    <value>保存路径</value>
+  </data>
+  <data name="VGATE_VERSION" xml:space="preserve">
+    <value>vGate版本</value>
+  </data>
 </root>

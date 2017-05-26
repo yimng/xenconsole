@@ -4370,6 +4370,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 This may take a long time,please be patient 的本地化字符串。
+        /// </summary>
+        public static string ADD_MIRROR_LUN_HINT {
+            get {
+                return ResourceManager.GetString("ADD_MIRROR_LUN_HINT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Add New Server 的本地化字符串。
         /// </summary>
         public static string ADD_NEW_CONNECT_TO {
@@ -18686,6 +18695,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Host 的本地化字符串。
+        /// </summary>
+        public static string HOST {
+            get {
+                return ResourceManager.GetString("HOST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 This server has an operation in progress. 的本地化字符串。
         /// </summary>
         public static string HOST_ACTION_IN_PROGRESS {
@@ -22110,6 +22128,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Ctrl+L 的本地化字符串。
+        /// </summary>
+        public static string MAINWINDOW_CTRL_L {
+            get {
+                return ResourceManager.GetString("MAINWINDOW_CTRL_L", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Ctrl+N 的本地化字符串。
         /// </summary>
         public static string MAINWINDOW_CTRL_N {
@@ -23069,6 +23096,15 @@ namespace XenAdmin {
         public static string MAX_BRACKETS {
             get {
                 return ResourceManager.GetString("MAX_BRACKETS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mac 的本地化字符串。
+        /// </summary>
+        public static string MEDIA_ACCESS_CONTROL {
+            get {
+                return ResourceManager.GetString("MEDIA_ACCESS_CONTROL", resourceCulture);
             }
         }
         
@@ -32181,6 +32217,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Save path 的本地化字符串。
+        /// </summary>
+        public static string SAVE_PATH {
+            get {
+                return ResourceManager.GetString("SAVE_PATH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Save Search &apos;{0}&apos; 的本地化字符串。
         /// </summary>
         public static string SAVE_SEARCH {
@@ -37853,6 +37898,15 @@ namespace XenAdmin {
         public static string VERSION_NUMBER {
             get {
                 return ResourceManager.GetString("VERSION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 vGate-version 的本地化字符串。
+        /// </summary>
+        public static string VGATE_VERSION {
+            get {
+                return ResourceManager.GetString("VGATE_VERSION", resourceCulture);
             }
         }
         
