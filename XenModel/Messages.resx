@@ -14432,7 +14432,7 @@ This provides the ability to allocate more than one copy of a physical partition
     <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>Hardware HBA Bond SR [{0} - {1}]</value>
+    <value>LVM Mirror SR [{0} - {1}]</value>
   </data>
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>

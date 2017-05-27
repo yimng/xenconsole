@@ -14390,7 +14390,7 @@ SCSI ID: {6}
     <value>异构存储双活</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value />
+    <value>异构存储双活SR [{0} - {1}]</value>
   </data>
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>请选择带有VDI的VM</value>

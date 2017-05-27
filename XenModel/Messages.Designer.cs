@@ -26008,7 +26008,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Hardware HBA Bond SR [{0} - {1}] 的本地化字符串。
+        ///   查找类似 LVM Mirror SR [{0} - {1}] 的本地化字符串。
         /// </summary>
         public static string NEWSR_LVMOMIRROR_DESCRIPTION {
             get {
