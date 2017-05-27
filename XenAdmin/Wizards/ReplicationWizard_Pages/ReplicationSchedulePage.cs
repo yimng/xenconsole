@@ -144,11 +144,11 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
             this.StartDateLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.CircleRadioButton = new System.Windows.Forms.RadioButton();
             this.WeeklyRadioButton = new System.Windows.Forms.RadioButton();
             this.DailyRadioButton = new System.Windows.Forms.RadioButton();
             this.OnceRadioButton = new System.Windows.Forms.RadioButton();
             this.NowRadioButton = new System.Windows.Forms.RadioButton();
-            this.CircleRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,7 +233,7 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
             // DNSATimePicker
             // 
             resources.ApplyResources(this.DNSATimePicker, "DNSATimePicker");
-            this.DNSATimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DNSATimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DNSATimePicker.Name = "DNSATimePicker";
             this.DNSATimePicker.ShowUpDown = true;
             this.DNSATimePicker.Value = new System.DateTime(2012, 5, 15, 4, 0, 0, 0);
@@ -241,7 +241,7 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
             // StartTimePicker
             // 
             resources.ApplyResources(this.StartTimePicker, "StartTimePicker");
-            this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StartTimePicker.Name = "StartTimePicker";
             this.StartTimePicker.ShowUpDown = true;
             // 
@@ -282,6 +282,13 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // CircleRadioButton
+            // 
+            resources.ApplyResources(this.CircleRadioButton, "CircleRadioButton");
+            this.CircleRadioButton.Name = "CircleRadioButton";
+            this.CircleRadioButton.UseVisualStyleBackColor = true;
+            this.CircleRadioButton.CheckedChanged += new System.EventHandler(this.CircleRadioButton_CheckedChanged);
+            // 
             // WeeklyRadioButton
             // 
             resources.ApplyResources(this.WeeklyRadioButton, "WeeklyRadioButton");
@@ -311,13 +318,6 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
             this.NowRadioButton.TabStop = true;
             this.NowRadioButton.UseVisualStyleBackColor = true;
             this.NowRadioButton.CheckedChanged += new System.EventHandler(this.NowRadioButton_CheckedChanged);
-            // 
-            // CircleRadioButton
-            // 
-            resources.ApplyResources(this.CircleRadioButton, "CircleRadioButton");
-            this.CircleRadioButton.Name = "CircleRadioButton";
-            this.CircleRadioButton.UseVisualStyleBackColor = true;
-            this.CircleRadioButton.CheckedChanged += new System.EventHandler(this.CircleRadioButton_CheckedChanged);
             // 
             // ReplicationSchedulePage
             // 

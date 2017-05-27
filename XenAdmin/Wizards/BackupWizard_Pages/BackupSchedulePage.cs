@@ -368,14 +368,14 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
             // StartTimePicker
             // 
             resources.ApplyResources(this.StartTimePicker, "StartTimePicker");
-            this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.StartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StartTimePicker.Name = "StartTimePicker";
             this.StartTimePicker.ShowUpDown = true;
             // 
             // RecurTextBox
             // 
-            this.RecurTextBox.HidePromptOnLeave = true;
             resources.ApplyResources(this.RecurTextBox, "RecurTextBox");
+            this.RecurTextBox.HidePromptOnLeave = true;
             this.RecurTextBox.Name = "RecurTextBox";
             this.RecurTextBox.ValidatingType = typeof(int);
             this.RecurTextBox.TextChanged += new System.EventHandler(this.RecurTextBox_TextChanged);
@@ -461,9 +461,9 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
             // 
             // groupBoxOptions
             // 
+            resources.ApplyResources(this.groupBoxOptions, "groupBoxOptions");
             this.groupBoxOptions.Controls.Add(this.radioButtonIncrement);
             this.groupBoxOptions.Controls.Add(this.radioButtonFull);
-            resources.ApplyResources(this.groupBoxOptions, "groupBoxOptions");
             this.groupBoxOptions.Name = "groupBoxOptions";
             this.groupBoxOptions.TabStop = false;
             // 
@@ -504,6 +504,7 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
             // 
             // BackupSchedulePage
             // 
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.countlabel);
             this.Controls.Add(this.expectFullCountTextBox);
             this.Controls.Add(this.expectFullCheckBox);
@@ -530,7 +531,6 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
             this.Controls.Add(this.OnceRadioButton);
             this.Controls.Add(this.NowRadioButton);
             this.Name = "BackupSchedulePage";
-            resources.ApplyResources(this, "$this");
             this.groupBoxOptions.ResumeLayout(false);
             this.groupBoxOptions.PerformLayout();
             this.ResumeLayout(false);

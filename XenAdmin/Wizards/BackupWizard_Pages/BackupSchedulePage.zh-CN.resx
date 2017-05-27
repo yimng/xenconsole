@@ -112,47 +112,34 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="NowRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="NowRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+    <value>49, 17</value>
   </data>
   <data name="NowRadioButton.Text" xml:space="preserve">
     <value>即时</value>
   </data>
-  <data name="OnceRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="OnceRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+    <value>49, 17</value>
   </data>
   <data name="OnceRadioButton.Text" xml:space="preserve">
     <value>一次</value>
-  </data>
-  <data name="DailyRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="DailyRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 120</value>
   </data>
   <data name="DailyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+    <value>49, 17</value>
   </data>
   <data name="DailyRadioButton.Text" xml:space="preserve">
     <value>每天</value>
   </data>
-  <data name="WeeklyRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="WeeklyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -160,7 +147,7 @@
     <value>33, 156</value>
   </data>
   <data name="WeeklyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+    <value>49, 17</value>
   </data>
   <data name="WeeklyRadioButton.Text" xml:space="preserve">
     <value>每周</value>
@@ -169,7 +156,7 @@
     <value>119, 86</value>
   </data>
   <data name="StartDateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+    <value>58, 13</value>
   </data>
   <data name="StartDateLabel.Text" xml:space="preserve">
     <value>开始日期:</value>
@@ -177,35 +164,29 @@
   <data name="StartDateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="StartTimeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="StartTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 120</value>
   </data>
   <data name="StartTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+    <value>58, 13</value>
   </data>
   <data name="StartTimeLabel.Text" xml:space="preserve">
     <value>开始时间:</value>
-  </data>
-  <data name="RecurLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="RecurLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 156</value>
   </data>
   <data name="RecurLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 12</value>
+    <value>58, 13</value>
   </data>
   <data name="RecurLabel.Text" xml:space="preserve">
     <value>循环间隔:</value>
   </data>
-  <data name="RecurLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
   <data name="StartDatePicker.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 79</value>
+  </data>
+  <data name="StartTimePicker.CustomFormat" xml:space="preserve">
+    <value>HH:mm:ss</value>
   </data>
   <data name="StartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 114</value>
@@ -213,107 +194,77 @@
   <data name="RecurTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 151</value>
   </data>
-  <data name="SundayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="SundayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 194</value>
   </data>
   <data name="SundayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="SundayCheckBox.Text" xml:space="preserve">
     <value>周日</value>
-  </data>
-  <data name="MondayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="MondayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 194</value>
   </data>
   <data name="MondayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="MondayCheckBox.Text" xml:space="preserve">
     <value>周一</value>
-  </data>
-  <data name="TuesdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="TuesdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>263, 194</value>
   </data>
   <data name="TuesdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="TuesdayCheckBox.Text" xml:space="preserve">
     <value>周二</value>
-  </data>
-  <data name="WednesdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="WednesdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>335, 194</value>
   </data>
   <data name="WednesdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="WednesdayCheckBox.Text" xml:space="preserve">
     <value>周三</value>
-  </data>
-  <data name="ThursdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="ThursdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 234</value>
   </data>
   <data name="ThursdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="ThursdayCheckBox.Text" xml:space="preserve">
     <value>周四</value>
-  </data>
-  <data name="FridayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="FridayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 234</value>
   </data>
   <data name="FridayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="FridayCheckBox.Text" xml:space="preserve">
     <value>周五</value>
-  </data>
-  <data name="SaturdayCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="SaturdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>263, 234</value>
   </data>
   <data name="SaturdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="SaturdayCheckBox.Text" xml:space="preserve">
     <value>周六</value>
-  </data>
-  <data name="ServerTimeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="ServerTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 51</value>
   </data>
   <data name="ServerTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 12</value>
+    <value>70, 13</value>
   </data>
   <data name="ServerTimeLabel.Text" xml:space="preserve">
     <value>服务器时间:</value>
-  </data>
-  <data name="ServerTimeLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="ServerDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 51</value>
   </data>
   <data name="ServerDateLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -322,13 +273,10 @@
     <value>33, 194</value>
   </data>
   <data name="CircleRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+    <value>49, 17</value>
   </data>
   <data name="CircleRadioButton.Text" xml:space="preserve">
     <value>循环</value>
-  </data>
-  <data name="RecursLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="RecursLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -337,27 +285,36 @@
     <value>349, 156</value>
   </data>
   <data name="RecursLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
+    <value>19, 13</value>
   </data>
   <data name="RecursLabel.Text" xml:space="preserve">
     <value>周</value>
   </data>
-  <data name="countlabel.Text" xml:space="preserve">
-    <value>次</value>
-  </data>
-  <data name="expectFullCountlabel.Text" xml:space="preserve">
-    <value>全新备份间隔</value>
-  </data>
-  <data name="groupBoxOptions.Text" xml:space="preserve">
-    <value>备份选项</value>
-  </data>
-  <data name="radioButtonFull.Text" xml:space="preserve">
-    <value>全新备份</value>
+  <data name="radioButtonIncrement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
   </data>
   <data name="radioButtonIncrement.Text" xml:space="preserve">
     <value>增量备份</value>
   </data>
+  <data name="radioButtonFull.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="radioButtonFull.Text" xml:space="preserve">
+    <value>全新备份</value>
+  </data>
+  <data name="groupBoxOptions.Text" xml:space="preserve">
+    <value>备份选项</value>
+  </data>
+  <data name="expectFullCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
   <data name="expectFullCheckBox.Text" xml:space="preserve">
     <value>全新备份间隔</value>
+  </data>
+  <data name="countlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 13</value>
+  </data>
+  <data name="countlabel.Text" xml:space="preserve">
+    <value>次</value>
   </data>
 </root>
