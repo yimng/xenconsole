@@ -347,7 +347,7 @@ namespace XenAdmin.SettingsPanels
                                 }
                                 else
                                 {
-                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Black, ctxMenuItems));
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
                                 }
                             }
                             else if (canMirrorissciRemove())
