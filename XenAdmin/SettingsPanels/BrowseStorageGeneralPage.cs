@@ -201,8 +201,8 @@ namespace XenAdmin.SettingsPanels
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
             List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
-            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("faulty")
-                || pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("faulty")))
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid
+                || pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid))
             {
                 return true;
             }
