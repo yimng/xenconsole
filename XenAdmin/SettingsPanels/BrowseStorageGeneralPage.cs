@@ -197,6 +197,28 @@ namespace XenAdmin.SettingsPanels
 //            }
                 return false;
         }
+        private bool isLunBondRed(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid
+                || pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool isMirrorRed(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") &&pdb.other_config["LUN1-status"].Contains("unknown")&& pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid
+                || pdb.other_config.ContainsKey("LUN2-status")&&pdb.other_config["LUN2-status"].Contains("unknown")&& pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid))
+            {
+                return true;
+            }
+            return false;
+        }
         private bool canissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
@@ -265,7 +287,7 @@ namespace XenAdmin.SettingsPanels
                     {
                         if (xenObject.GetSRType(true) == SR.SRTypes.lvmobond)
                         {
-                            if (CanAddLUN(scsiid))
+                            if (CanAddLUN(scsiid)|| isLunBondRed(scsiid))
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                              
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
@@ -291,7 +313,14 @@ namespace XenAdmin.SettingsPanels
 
                                 };
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                if (isLunBondRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General,Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
                             else
                             {
@@ -312,7 +341,14 @@ namespace XenAdmin.SettingsPanels
                                 };
 
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
                             else if (canMirrorissciRemove())
                             {
@@ -326,7 +362,14 @@ namespace XenAdmin.SettingsPanels
 
                                 };
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
                             else
                             {
