@@ -889,6 +889,7 @@ namespace XenAdmin.TabPages
                 foreach (Host host in xenObject.Connection.Cache.Hosts)
                 {
                     PBD pbd = sr.GetPBDFor(host);
+                    s.AddEntry(host.Name,"");
                     if (pbd == null || !pathStatus.ContainsKey(pbd))
                     {
                         s.AddEntry(host.Name,
