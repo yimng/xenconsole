@@ -889,6 +889,7 @@ namespace XenAdmin.TabPages
                 foreach (Host host in xenObject.Connection.Cache.Hosts)
                 {
                     PBD pbd = sr.GetPBDFor(host);
+                    //                   s.AddEntry(host.Name,"");
                     if (pbd == null || !pathStatus.ContainsKey(pbd))
                     {
                         s.AddEntry(host.Name,
@@ -897,7 +898,10 @@ namespace XenAdmin.TabPages
                             Messages.MULTIPATH_NOT_ACTIVE);
                         continue;
                     }
-
+                    else
+                    {
+                        s.AddEntry(host.Name,"");       
+                    }
                     foreach (String k in pathStatus[pbd].Keys)
                     {
                         String status = pathStatus[pbd][k];
