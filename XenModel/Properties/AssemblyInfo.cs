@@ -38,11 +38,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("XenModel")]
-[assembly: AssemblyDescription("Halsign Console")]
+[assembly: AssemblyDescription("[Halsign] Console")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Halsign")]
-[assembly: AssemblyProduct("Halsign Console")]
-[assembly: AssemblyCopyright("Copyright © 2013 Halsign Corporation. All rights reserved.")]
+[assembly: AssemblyCompany("[Halsign]")]
+[assembly: AssemblyProduct("[Halsign] Console")]
+[assembly: AssemblyCopyright("Copyright © 2016 [Halsign Corporation]. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -65,6 +65,6 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("6.0.0.0")]
+[assembly: AssemblyVersion("6.0.1.0")]
 [assembly: AssemblyFileVersion("0000")]
 [assembly: XenAdmin.XSVersion("[BRANDING_PRODUCT_VERSION]")]

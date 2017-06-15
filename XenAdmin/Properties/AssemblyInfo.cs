@@ -36,12 +36,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Halsign Console")]
-[assembly: AssemblyDescription("Halsign Console")]
+[assembly: AssemblyTitle("[Halsign] Console")]
+[assembly: AssemblyDescription("[Halsign] Console")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Halsign")]
-[assembly: AssemblyProduct("Halsign Console")]
-[assembly: AssemblyCopyright("Copyright © 2013 Halsign Corporation. All rights reserved.")]
+[assembly: AssemblyCompany("[Halsign]")]
+[assembly: AssemblyProduct("[Halsign] Console")]
+[assembly: AssemblyCopyright("Copyright © 2016 [Halsign Corporation]. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -60,7 +60,7 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("6.0.0.0")]
+[assembly: AssemblyVersion("6.0.1.0")]
 [assembly: AssemblyFileVersion("0000")]
 [assembly: XenAdmin.XSVersion("[BRANDING_PRODUCT_VERSION]")]
 [assembly: InternalsVisibleTo("XenAdminTests"),
