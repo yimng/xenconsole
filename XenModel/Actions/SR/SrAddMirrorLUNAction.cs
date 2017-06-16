@@ -69,8 +69,31 @@ namespace XenAdmin.Actions
         {
             int max = Connection.Cache.Hosts.Length * 2;
             int delta = 100 / max;
+            Host master_host = null;
             foreach (Host host in Connection.Cache.Hosts)
             {
+                Dictionary<String, String> args = new Dictionary<string, string>();
+                if (host.IsMaster())
+                {
+                    master_host = host;
+                    args.Add("sr_uuid", SR.uuid);
+                    args.Add("scsiid", this.scsiid);
+                    args.Add("mpath_enable", this.SR.sm_config["multipathable"]);
+                    args.Add("mirror_device", this.SR.sm_config["mirror_device"]);
+                    args.Add("host_uuid", master_host.uuid);
+                    XenAPI.Host.call_plugin(master_host.Connection.Session, master_host.opaque_ref, "ManageMirrorLun.py", "addLUN", args);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            foreach (Host host in Connection.Cache.Hosts)
+            {
+                if (host.IsMaster())
+                {
+                    continue;
+                }
                 Dictionary<String, String> args = new Dictionary<string, string>();
                 args.Add("sr_uuid", SR.uuid);
                 args.Add("scsiid", this.scsiid);
