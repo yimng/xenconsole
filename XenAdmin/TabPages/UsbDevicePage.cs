@@ -29,7 +29,7 @@ namespace XenAdmin.TabPages
         private Host home;
         private DataTable dtTable;
         private static object lockobj = new object();
-        //private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
+        private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
         private delegate void BuildDataListHandler();
 
         private void Initdatatable()
@@ -46,6 +46,7 @@ namespace XenAdmin.TabPages
             dtTable.Columns.Add("enabled", typeof(bool));
         }
 
+        // this method called when the tab change
         public IXenObject XenObject
         {
             set
@@ -92,6 +93,7 @@ namespace XenAdmin.TabPages
                         PcisdataGridViewExs.Rows[i].Cells[2].Value = dtTable.Rows[i]["vm_name"];
                         PcisdataGridViewExs.Rows[i].Cells[2].Tag = dtTable.Rows[i]["vm_uuid"];
                         PcisdataGridViewExs.Rows[i].Cells[3].Value = dtTable.Rows[i]["usbmode"];
+                        PcisdataGridViewExs.Rows[i].Cells[3].ReadOnly = !(bool)(dtTable.Rows[i]["bind"]);
 
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Bind = (bool)(dtTable.Rows[i]["bind"]);           
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Enabled = (bool)(dtTable.Rows[i]["enabled"]);
@@ -192,7 +194,9 @@ namespace XenAdmin.TabPages
                         VM bindvm = home.Connection.Cache.VMs.First(vm => vm.uuid == vmuuid);
                         PcisdataGridViewExs.Rows[i].Cells[2].Value = bindvm.name_label;
                         PcisdataGridViewExs.Rows[i].Cells[2].Tag = pvusbresult.returnvalue[i].vm;
-                        PcisdataGridViewExs.Rows[i].Cells[3].Value = bindvm.other_config["usbmode"];
+                        PcisdataGridViewExs.Rows[i].Cells[3].Value = "pvusb";
+                        PcisdataGridViewExs.Rows[i].Cells[3].ReadOnly = true;
+
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Bind = false;
                         ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4 ])).Enabled = true;
                     }
@@ -215,6 +219,7 @@ namespace XenAdmin.TabPages
                             PcisdataGridViewExs.Rows[i].Cells[2].Value = findvm.name_label;
                             PcisdataGridViewExs.Rows[i].Cells[2].Tag = findvm.uuid;
                             PcisdataGridViewExs.Rows[i].Cells[3].Value = "vt-d";
+                            PcisdataGridViewExs.Rows[i].Cells[3].ReadOnly = true;
                             ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Bind = false;
                             ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[i].Cells[4])).Enabled = true;
                         }
@@ -294,15 +299,16 @@ namespace XenAdmin.TabPages
                     var unassignresult = (UsbDeviceInfoConfig.AssingResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.AssingResult));
                     if (unassignresult.returncode != "0")
                     {
-                        //if (!string.IsNullOrEmpty(unassignresult.returnvalue))
-                        //    MessageBox.Show(this, errorDescriptions.GetString(unassignresult.returnvalue));
+                        if (!string.IsNullOrEmpty(unassignresult.returnvalue))
+                            MessageBox.Show(this, unassignresult.returnvalue);
                     }
                     else
                     {
                         other_config.Remove("usbmode");
                         XenAPI.VM.set_other_config(home.Connection.Session, selectedvm.opaque_ref, other_config);
-                        selectedvm.NotifyPropertyChanged("other_config");
                     }
+
+                    selectedvm.NotifyPropertyChanged("other_config");
                 }
                 
             }
