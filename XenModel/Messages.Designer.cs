@@ -5968,7 +5968,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Backup VM 的本地化字符串。
         /// </summary>
         public static string BACKUP_VM {
             get {
@@ -6371,7 +6371,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Halsign MC Configure Status 的本地化字符串。
         /// </summary>
         public static string BR_CONFIG_STATUS {
             get {
@@ -6380,7 +6380,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Configuration 的本地化字符串。
         /// </summary>
         public static string BR_CONFIGURATION_TITLE {
             get {
@@ -6389,7 +6389,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Disabled 的本地化字符串。
         /// </summary>
         public static string BR_DISABLED {
             get {
@@ -6398,7 +6398,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Enabled 的本地化字符串。
         /// </summary>
         public static string BR_ENABLED {
             get {
@@ -6470,7 +6470,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Backup and Restore 的本地化字符串。
         /// </summary>
         public static string BR_PAGE_TITLE {
             get {
@@ -6488,7 +6488,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Canceled 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_CANCELED {
             get {
@@ -6497,7 +6497,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Failed 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_FAILED {
             get {
@@ -6506,7 +6506,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Inactive 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_INACTIVE {
             get {
@@ -6515,7 +6515,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 In Queue 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_INQUEUE {
             get {
@@ -6524,7 +6524,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Pending 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_PENDING {
             get {
@@ -6533,7 +6533,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Running 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_RUNNING {
             get {
@@ -6542,7 +6542,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Success 的本地化字符串。
         /// </summary>
         public static string BR_STATUS_SUCCESS {
             get {
@@ -6551,7 +6551,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Halsign MC Address 的本地化字符串。
         /// </summary>
         public static string BR_STORAGE_IP {
             get {
@@ -6560,7 +6560,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Halsign MC UserName 的本地化字符串。
         /// </summary>
         public static string BR_STORAGE_USERNAME {
             get {
@@ -7775,7 +7775,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Properties 的本地化字符串。
         /// </summary>
         public static string COMMANDS_EDIT {
             get {
@@ -7784,7 +7784,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 New SR 的本地化字符串。
         /// </summary>
         public static string COMMANDS_NEW_SR {
             get {
@@ -7793,7 +7793,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 New VM 的本地化字符串。
         /// </summary>
         public static string COMMANDS_NEW_VM {
             get {
@@ -7802,7 +7802,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Reboot 的本地化字符串。
         /// </summary>
         public static string COMMANDS_REBOOT {
             get {
@@ -7811,7 +7811,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Start 的本地化字符串。
         /// </summary>
         public static string COMMANDS_START {
             get {
@@ -7910,7 +7910,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Are you sure you wish to cancel the current selected job? 的本地化字符串。
         /// </summary>
         public static string CONFIRM_CANCEL_BR_JOB {
             get {
@@ -8005,7 +8005,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 This operation could not revert. Are you sure you want to delete the backup configure of &apos;{0}&apos;? 的本地化字符串。
         /// </summary>
         public static string CONFIRM_DELETE_BACKUP {
             get {
@@ -8014,7 +8014,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Are you sure you wish to delete the current selected job? 的本地化字符串。
         /// </summary>
         public static string CONFIRM_DELETE_BR_JOB {
             get {
@@ -11951,7 +11951,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Disable Backup 的本地化字符串。
         /// </summary>
         public static string DISABLE_BACKUP {
             get {
@@ -14304,7 +14304,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Enable Backup 的本地化字符串。
         /// </summary>
         public static string ENABLE_BACKUP {
             get {
@@ -14556,7 +14556,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create job 的本地化字符串。
         /// </summary>
         public static string ERR_AGT_NEW_JOB {
             get {
@@ -14565,7 +14565,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Halsign SC username or password is not correct. 的本地化字符串。
         /// </summary>
         public static string ERR_CONTROLLER_ACCOUNT_INVALID {
             get {
@@ -14574,7 +14574,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Invalid parameters. 的本地化字符串。
         /// </summary>
         public static string ERR_INVALID_PARAMS {
             get {
@@ -14583,7 +14583,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to change dir 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_CHANGE_DIR {
             get {
@@ -14592,7 +14592,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create dir 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_MAKE_DIR {
             get {
@@ -14601,7 +14601,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create file 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_MAKE_FILE {
             get {
@@ -14610,7 +14610,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Synchronized virtual machine is in the boot state, was postponed until the next synchronization tasks performed 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_REPLICATION_VM_RUN {
             get {
@@ -14619,7 +14619,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to send data 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_RSYNC {
             get {
@@ -14628,7 +14628,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Unknown error 的本地化字符串。
         /// </summary>
         public static string ERR_OTH_UNKNOWN {
             get {
@@ -14637,7 +14637,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to check the backup&amp;amp;restore file system 的本地化字符串。
         /// </summary>
         public static string ERR_SR_CHKZFS {
             get {
@@ -14646,7 +14646,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get the backup&amp;amp;restore storage 的本地化字符串。
         /// </summary>
         public static string ERR_SR_INFO {
             get {
@@ -14655,7 +14655,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create duplicate 的本地化字符串。
         /// </summary>
         public static string ERR_SR_ZFS_SNAP {
             get {
@@ -14664,7 +14664,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 vGate username or password is not correct. 的本地化字符串。
         /// </summary>
         public static string ERR_VGATE_ACCOUNT_INVALID {
             get {
@@ -14673,7 +14673,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to delete snapshot 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_DEL_SNAP {
             get {
@@ -14682,7 +14682,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 The disk has conflict 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_DISK_CONFLICT {
             get {
@@ -14691,7 +14691,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get NETWORK 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_NETWORK {
             get {
@@ -14700,7 +14700,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get pool 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_POOLS {
             get {
@@ -14709,7 +14709,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get SR 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_SR {
             get {
@@ -14718,7 +14718,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get VBD 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_VBDS {
             get {
@@ -14727,7 +14727,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get VDI 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_VDI {
             get {
@@ -14736,7 +14736,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get VIF 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_VIFS {
             get {
@@ -14745,7 +14745,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get vm by uuid 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_VM_BY_UUID {
             get {
@@ -14754,7 +14754,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to get vm record 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_GET_VM_REC {
             get {
@@ -14763,7 +14763,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to login hypervisor 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_LOGIN {
             get {
@@ -14772,7 +14772,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create snapshot 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_NEW_SNAP {
             get {
@@ -14781,7 +14781,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create VBD 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_NEW_VBD {
             get {
@@ -14790,7 +14790,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create VDI 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_NEW_VDI {
             get {
@@ -14799,7 +14799,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create VIF 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_NEW_VIF {
             get {
@@ -14808,7 +14808,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to create VM 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_NEW_VM {
             get {
@@ -14817,7 +14817,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to login the remote host 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_REMOTE_LOGIN {
             get {
@@ -14826,7 +14826,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 An error occured when attempting to update other-config 的本地化字符串。
         /// </summary>
         public static string ERR_XEN_UPDATE_OTH_CFG {
             get {
@@ -16762,7 +16762,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Friday 的本地化字符串。
         /// </summary>
         public static string FRIDAY {
             get {
@@ -16789,7 +16789,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Full Backup Circle 的本地化字符串。
         /// </summary>
         public static string FULL_BACKUP_CIRCLE {
             get {
@@ -16798,7 +16798,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Full Backup Daily 的本地化字符串。
         /// </summary>
         public static string FULL_BACKUP_DAILY {
             get {
@@ -16825,7 +16825,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Full Backup Recurs every:{0} times. 的本地化字符串。
         /// </summary>
         public static string FULL_BACKUP_RECURS_EVERY {
             get {
@@ -16834,7 +16834,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Full Backup Weekly 的本地化字符串。
         /// </summary>
         public static string FULL_BACKUP_WEEKLY {
             get {
@@ -20507,7 +20507,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Batch create VMs 的本地化字符串。
         /// </summary>
         public static string INSTANT_CREATE_VMS {
             get {
@@ -20516,7 +20516,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Finish batch create VMs 的本地化字符串。
         /// </summary>
         public static string INSTANT_CREATE_VMS_FINISH {
             get {
@@ -20525,7 +20525,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Start batch create VMs 的本地化字符串。
         /// </summary>
         public static string INSTANT_CREATE_VMS_START {
             get {
@@ -20898,7 +20898,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Canceling 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_CANCELING {
             get {
@@ -20907,7 +20907,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Check Data 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_CHK_ZFS {
             get {
@@ -20916,7 +20916,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Check Data 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_DELETE_SNAP {
             get {
@@ -20925,7 +20925,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Generate Metadata 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_GEN_METADATA {
             get {
@@ -20934,7 +20934,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Transfer Data 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_TRANS_DATA {
             get {
@@ -20943,7 +20943,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Transfer Metadata 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_TRANS_METADATA {
             get {
@@ -20952,7 +20952,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Check Data 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_VERIFY_DATA {
             get {
@@ -20961,7 +20961,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Check Data 的本地化字符串。
         /// </summary>
         public static string JOB_STATUS_ZFS_SNAP {
             get {
@@ -23703,7 +23703,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Are you sure you wish to delete the vSwitch Controller configure? 的本地化字符串。
         /// </summary>
         public static string MESSAGEBOX_OVSC_DELETE {
             get {
@@ -23712,7 +23712,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Delete Configure 的本地化字符串。
         /// </summary>
         public static string MESSAGEBOX_OVSC_DELETE_TITLE {
             get {
@@ -23979,7 +23979,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Monday 的本地化字符串。
         /// </summary>
         public static string MONDAY {
             get {
@@ -28015,7 +28015,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 vSwitch Controller IP 的本地化字符串。
         /// </summary>
         public static string OVSC_CONFIGURE_IP {
             get {
@@ -28024,7 +28024,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Port 的本地化字符串。
         /// </summary>
         public static string OVSC_CONFIGURE_PORT {
             get {
@@ -28033,7 +28033,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Protocol 的本地化字符串。
         /// </summary>
         public static string OVSC_CONFIGURE_PROTOCOL {
             get {
@@ -28042,7 +28042,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Configuration 的本地化字符串。
         /// </summary>
         public static string OVSC_CONFIGURE_TITLE {
             get {
@@ -28051,7 +28051,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 UserName 的本地化字符串。
         /// </summary>
         public static string OVSC_CONFIGURE_USERNAME {
             get {
@@ -28060,7 +28060,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 vSwitch Controller 的本地化字符串。
         /// </summary>
         public static string OVSC_PAGE_TITLE {
             get {
@@ -30726,7 +30726,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 A {0} user cannot Replication VMs.Log in as a different user with sufficient privileges and try again. 的本地化字符串。
         /// </summary>
         public static string RBAC_WARNING_VM_WIZARD_REPLICATION {
             get {
@@ -30735,7 +30735,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 A {0} user cannot Restore VMs.Log in as a different user with sufficient privileges and try again. 的本地化字符串。
         /// </summary>
         public static string RBAC_WARNING_VM_WIZARD_RESTORE {
             get {
@@ -31390,7 +31390,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 The VM you want to synchronize is running, you need to shutdown it and try again. 的本地化字符串。
         /// </summary>
         public static string REPLICATED_VM_RUNNING_INFO {
             get {
@@ -31399,7 +31399,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Please select VM to relicate. 的本地化字符串。
         /// </summary>
         public static string REPLICATION_CHECKED_MESSAGE {
             get {
@@ -31408,7 +31408,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Replication Circle 的本地化字符串。
         /// </summary>
         public static string REPLICATION_CIRCLE {
             get {
@@ -31417,7 +31417,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Complete 的本地化字符串。
         /// </summary>
         public static string REPLICATION_COMPLETE_TEXT {
             get {
@@ -31426,7 +31426,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Replication Daily 的本地化字符串。
         /// </summary>
         public static string REPLICATION_DAILY {
             get {
@@ -31435,7 +31435,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Immediately 的本地化字符串。
         /// </summary>
         public static string REPLICATION_IMMEDIATELY {
             get {
@@ -31444,7 +31444,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Set Job Settings 的本地化字符串。
         /// </summary>
         public static string REPLICATION_JOB_SETTINGS_TEXT {
             get {
@@ -31453,7 +31453,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Enter job name, define VM naming convention, and select destination of the restore. 的本地化字符串。
         /// </summary>
         public static string REPLICATION_JOB_SETTINGS_TITLE {
             get {
@@ -31462,7 +31462,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Please select default network 的本地化字符串。
         /// </summary>
         public static string REPLICATION_NETWORK_TEXT {
             get {
@@ -31471,7 +31471,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Replication Once 的本地化字符串。
         /// </summary>
         public static string REPLICATION_ONCE {
             get {
@@ -31480,7 +31480,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Synchronization 的本地化字符串。
         /// </summary>
         public static string REPLICATION_SYNCH {
             get {
@@ -31498,7 +31498,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Replication Weekky 的本地化字符串。
         /// </summary>
         public static string REPLICATION_WEEKLY {
             get {
@@ -31561,7 +31561,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Complete 的本地化字符串。
         /// </summary>
         public static string RESTORE_COMPLETE_TITLE {
             get {
@@ -31597,7 +31597,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Set Job Schedule 的本地化字符串。
         /// </summary>
         public static string RESTORE_JOB_SCHEDULE_TEXT {
             get {
@@ -31606,7 +31606,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Define schedule of the restore. 的本地化字符串。
         /// </summary>
         public static string RESTORE_JOB_SCHEDULE_TITLE {
             get {
@@ -31615,7 +31615,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Set Job Settings 的本地化字符串。
         /// </summary>
         public static string RESTORE_JOB_SETTINGS_TEXT {
             get {
@@ -31633,7 +31633,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Get the inforamtion for restoring 的本地化字符串。
         /// </summary>
         public static string RESTORE_LIST {
             get {
@@ -31642,7 +31642,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Restore Now 的本地化字符串。
         /// </summary>
         public static string RESTORE_NOW {
             get {
@@ -31651,7 +31651,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Restore Once 的本地化字符串。
         /// </summary>
         public static string RESTORE_ONCE {
             get {
@@ -31660,7 +31660,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Can&apos;t use root user 的本地化字符串。
         /// </summary>
         public static string RESTORE_ROOT_PROMPT {
             get {
@@ -31669,7 +31669,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Select VM 的本地化字符串。
         /// </summary>
         public static string RESTORE_SELECT_VM_TEXT {
             get {
@@ -31678,7 +31678,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Select virtual machines to restore. 的本地化字符串。
         /// </summary>
         public static string RESTORE_SELECT_VM_TITLE {
             get {
@@ -31696,7 +31696,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 View VM Settings 的本地化字符串。
         /// </summary>
         public static string RESTORE_VM_SETTINGS_TEXT {
             get {
@@ -31705,7 +31705,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Review the job summary. 的本地化字符串。
         /// </summary>
         public static string RESTORE_VM_SETTINGS_TITLE {
             get {
@@ -32154,7 +32154,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Saturday 的本地化字符串。
         /// </summary>
         public static string SATURDAY {
             get {
@@ -32352,7 +32352,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Define schedule of the replication 的本地化字符串。
         /// </summary>
         public static string SCHEDULE_REPLICATION {
             get {
@@ -34588,7 +34588,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Actions 的本地化字符串。
         /// </summary>
         public static string SUMMARY_COMMANDS_TITLE {
             get {
@@ -34606,7 +34606,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Sunday 的本地化字符串。
         /// </summary>
         public static string SUNDAY {
             get {
@@ -34797,7 +34797,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Please set synchronization plan for every checked vm 的本地化字符串。
         /// </summary>
         public static string SYNCHRONIZATION_CHECKED_MESSAGE {
             get {
@@ -35085,7 +35085,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Thursday 的本地化字符串。
         /// </summary>
         public static string THURSDAY {
             get {
@@ -35499,7 +35499,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Tuesday 的本地化字符串。
         /// </summary>
         public static string TUESDAY {
             get {
@@ -37345,7 +37345,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Upgrade vGate to enable vSwitch Controller. 
+        ///
+        ///To learn more about the vGate vSwitch Controller feature or to start a vGate trial, click the button below. 的本地化字符串。
         /// </summary>
         public static string UPSELL_BLURB_SC {
             get {
@@ -37533,7 +37535,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 vGate Console 的本地化字符串。
         /// </summary>
         public static string V_CONSOLE {
             get {
@@ -39468,7 +39470,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 QoS settings should be configured using the vSwitch Controller 的本地化字符串。
         /// </summary>
         public static string VSWITCH_CONTROLLER {
             get {
@@ -39603,7 +39605,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
+        ///   查找类似 Wednesday 的本地化字符串。
         /// </summary>
         public static string WEDNESDAY {
             get {
