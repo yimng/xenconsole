@@ -70,7 +70,9 @@ namespace XenAdmin.Actions
         {
             int max = Connection.Cache.Hosts.Length * 2;
             int delta = 100 / max;
-            foreach (Host host in Connection.Cache.Hosts)
+            List<Host> all_hosts = new List<Host>(Connection.Cache.Hosts);
+            Util.masterFirst(all_hosts);
+            foreach (Host host in all_hosts)
             {
                 Dictionary<String, String> args = new Dictionary<string, string>();
                 args.Add("sr_uuid", SR.uuid);
@@ -79,6 +81,7 @@ namespace XenAdmin.Actions
                 args.Add("mirror_device", this.SR.sm_config["mirror_device"]);
                 args.Add("host_uuid", host.uuid);
                 RelatedTask = XenAPI.Host.async_call_plugin(host.Connection.Session, host.opaque_ref, "ManageMirrorLun.py", "removeLUN", args);
+//                XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "ManageMirrorLun.py", "removeLUN", args);
                 this.Description = string.Format(Messages.ACTION_SR_LUN_REMOVING, Helpers.GetName(host));
                 if (PercentComplete + delta <= 100)
                 {
