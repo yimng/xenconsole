@@ -277,7 +277,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                     upsellPage1.SetAllTexts(Messages.LUNBOND_BLURB_ENHANCEDSR, InvisibleMessages.UPSELL_LEARNMOREURL_ENHANCEDSR);
                     m_allowNext = false;
                 }
-                else if (radioButton == radioButtonLVMMirror && frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNBondSR))
+                else if (radioButton == radioButtonLVMMirror && frontend.IsEnhancedSR && Helpers.FeatureForbidden(Connection, Host.RestrictLUNMirrorSR))
                 {
                     selectedStoreTypeLabel.Visible = false;
                     selectedStoreTypeLabel.Text = string.Empty;
