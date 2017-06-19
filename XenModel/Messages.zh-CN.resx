@@ -14444,4 +14444,16 @@ SCSI ID: {10}
   <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
     <value>正在添加SR {0} LUN,LUN同步时间较长请耐心等待</value>
   </data>
+  <data name="PVUSB_DAEMON_FAILURE_1" xml:space="preserve">
+    <value>调用插件发生错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_2" xml:space="preserve">
+    <value>插件参数错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_3" xml:space="preserve">
+    <value>远程方法错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
 </root>

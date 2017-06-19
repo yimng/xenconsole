@@ -14486,4 +14486,16 @@ Size: {11}</value>
   <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
     <value>Adding SR {0} LUN.This may take a long time,please be patient</value>
   </data>
+  <data name="PVUSB_DAEMON_FAILURE_1" xml:space="preserve">
+    <value>Failed to call plugin method.  ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_2" xml:space="preserve">
+    <value>Call plugin with wrong params. ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_3" xml:space="preserve">
+    <value>rpc called failed. ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
 </root>

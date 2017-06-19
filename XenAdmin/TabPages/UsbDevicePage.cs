@@ -300,8 +300,21 @@ namespace XenAdmin.TabPages
                     var unassignresult = (UsbDeviceInfoConfig.AssingResult)HalsignUtil.JsonToObject(result, typeof(UsbDeviceInfoConfig.AssingResult));
                     if (unassignresult.returncode != "0")
                     {
-                        if (!string.IsNullOrEmpty(unassignresult.returnvalue))
-                            MessageBox.Show(this, unassignresult.returnvalue);
+                        if (unassignresult.returncode == "1")
+                        {
+                            MessageBox.Show(this, string.Format(Messages.PVUSB_DAEMON_FAILURE_1, unassignresult.returnvalue));
+                        }
+                        else if (unassignresult.returncode == "2")
+                        {
+                            MessageBox.Show(this, string.Format(Messages.PVUSB_DAEMON_FAILURE_2, unassignresult.returnvalue));
+                        }
+                        else if (unassignresult.returncode == "3")
+                        {
+                            MessageBox.Show(this, string.Format(Messages.PVUSB_DAEMON_FAILURE_3, unassignresult.returnvalue));
+                        } else
+                        {
+                            MessageBox.Show(this, string.Format(Messages.PVUSB_DAEMON_FAILURE_4));
+                        }
                     }
                     else
                     {

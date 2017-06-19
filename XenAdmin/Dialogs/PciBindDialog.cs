@@ -70,11 +70,21 @@ namespace XenAdmin.Dialogs
                     XenAPI.VM.set_other_config(m_host.Connection.Session, selectedvm.opaque_ref, other_config);
                     selectedvm.NotifyPropertyChanged("other_config");
                 }
-                else
+                else if (assignresult.returncode == "1")
                 {
-                    errormsg = assignresult.returnvalue;
+                    errormsg = string.Format(Messages.PVUSB_DAEMON_FAILURE_1, assignresult.returnvalue);
                 }
-                
+                else if (assignresult.returncode == "2")
+                {
+                    errormsg = string.Format(Messages.PVUSB_DAEMON_FAILURE_2, assignresult.returnvalue);
+                }
+                else if (assignresult.returncode == "3")
+                {
+                    errormsg = string.Format(Messages.PVUSB_DAEMON_FAILURE_3, assignresult.returnvalue);
+                } else
+                {
+                    errormsg = string.Format(Messages.PVUSB_DAEMON_FAILURE_4);
+                }                
             }
             else
             {          

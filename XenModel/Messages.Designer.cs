@@ -30326,6 +30326,42 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Failed to call plugin method.  ({0}) 的本地化字符串。
+        /// </summary>
+        public static string PVUSB_DAEMON_FAILURE_1 {
+            get {
+                return ResourceManager.GetString("PVUSB_DAEMON_FAILURE_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Call plugin with wrong params. ({0}) 的本地化字符串。
+        /// </summary>
+        public static string PVUSB_DAEMON_FAILURE_2 {
+            get {
+                return ResourceManager.GetString("PVUSB_DAEMON_FAILURE_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 rpc called failed. ({0}) 的本地化字符串。
+        /// </summary>
+        public static string PVUSB_DAEMON_FAILURE_3 {
+            get {
+                return ResourceManager.GetString("PVUSB_DAEMON_FAILURE_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Unknown error 的本地化字符串。
+        /// </summary>
+        public static string PVUSB_DAEMON_FAILURE_4 {
+            get {
+                return ResourceManager.GetString("PVUSB_DAEMON_FAILURE_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 QoS limit must be between 1 and 2147483647 (or left empty). 的本地化字符串。
         /// </summary>
         public static string QOS_LIMIT_INVALID {
