@@ -2158,7 +2158,7 @@ Archive destination: {0}</value>
     <value>Unexpected exception when connecting to  [Halsign] MC.</value>
   </data>
   <data name="BACKUP_VM" xml:space="preserve">
-    <value />
+    <value>Backup VM</value>
   </data>
   <data name="BACKUP_VM_TITLE" xml:space="preserve">
     <value>Backup VM - "{0}"</value>
@@ -2327,16 +2327,16 @@ This change will take effect when you restart VM.</value>
     <value>Exception occur when call [Halsign] MC Service</value>
   </data>
   <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
-    <value />
+    <value>Configuration</value>
   </data>
   <data name="BR_CONFIG_STATUS" xml:space="preserve">
-    <value />
+    <value>Halsign MC Configure Status</value>
   </data>
   <data name="BR_DISABLED" xml:space="preserve">
-    <value />
+    <value>Disabled</value>
   </data>
   <data name="BR_ENABLED" xml:space="preserve">
-    <value />
+    <value>Enabled</value>
   </data>
   <data name="BR_JOB_CANCEL" xml:space="preserve">
     <value>Cancel job</value>
@@ -2360,37 +2360,37 @@ This change will take effect when you restart VM.</value>
     <value>No pool exist</value>
   </data>
   <data name="BR_PAGE_TITLE" xml:space="preserve">
-    <value />
+    <value>Backup and Restore</value>
   </data>
   <data name="BR_PARSE_HISTORY" xml:space="preserve">
     <value>Exception happened when parse history list.</value>
   </data>
   <data name="BR_STATUS_CANCELED" xml:space="preserve">
-    <value />
+    <value>Canceled</value>
   </data>
   <data name="BR_STATUS_FAILED" xml:space="preserve">
-    <value />
+    <value>Failed</value>
   </data>
   <data name="BR_STATUS_INACTIVE" xml:space="preserve">
-    <value />
+    <value>Inactive</value>
   </data>
   <data name="BR_STATUS_INQUEUE" xml:space="preserve">
-    <value />
+    <value>In Queue</value>
   </data>
   <data name="BR_STATUS_PENDING" xml:space="preserve">
-    <value />
+    <value>Pending</value>
   </data>
   <data name="BR_STATUS_RUNNING" xml:space="preserve">
-    <value />
+    <value>Running</value>
   </data>
   <data name="BR_STATUS_SUCCESS" xml:space="preserve">
-    <value />
+    <value>Success</value>
   </data>
   <data name="BR_STORAGE_IP" xml:space="preserve">
-    <value />
+    <value>Halsign MC Address</value>
   </data>
   <data name="BR_STORAGE_USERNAME" xml:space="preserve">
-    <value />
+    <value>Halsign MC UserName</value>
   </data>
   <data name="BUGTOOL_FILE_PREFIX" xml:space="preserve">
     <value>status-report-</value>
@@ -2792,19 +2792,19 @@ Do you want to assign it to the schedule '{2}' instead?</value>
     <value>&amp;Collapse Children</value>
   </data>
   <data name="COMMANDS_EDIT" xml:space="preserve">
-    <value />
+    <value>Properties</value>
   </data>
   <data name="COMMANDS_NEW_SR" xml:space="preserve">
-    <value />
+    <value>New SR</value>
   </data>
   <data name="COMMANDS_NEW_VM" xml:space="preserve">
-    <value />
+    <value>New VM</value>
   </data>
   <data name="COMMANDS_REBOOT" xml:space="preserve">
-    <value />
+    <value>Reboot</value>
   </data>
   <data name="COMMANDS_START" xml:space="preserve">
-    <value />
+    <value>Start</value>
   </data>
   <data name="COMMON_CRITERIA_TEXT" xml:space="preserve">
     <value>for use with Common Criteria versions of [vGate] only</value>
@@ -2845,7 +2845,7 @@ Do you want to assign it to the schedule '{2}' instead?</value>
 Do you want to continue?</value>
   </data>
   <data name="CONFIRM_CANCEL_BR_JOB" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to cancel the current selected job?</value>
   </data>
   <data name="CONFIRM_CHANGE_MEMORY_MAX_PLURAL" xml:space="preserve">
     <value>Changing the maximum memory of these VMs will cause them to be rebooted.
@@ -2881,10 +2881,10 @@ Do you want to continue?</value>
     <value>Are you sure you want to delete the selected {0}?</value>
   </data>
   <data name="CONFIRM_DELETE_BACKUP" xml:space="preserve">
-    <value />
+    <value>This operation could not revert. Are you sure you want to delete the backup configure of '{0}'?</value>
   </data>
   <data name="CONFIRM_DELETE_BR_JOB" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to delete the current selected job?</value>
   </data>
   <data name="CONFIRM_DELETE_ITEMS" xml:space="preserve">
     <value>You want to delete these {0} selected items.</value>
@@ -4249,7 +4249,7 @@ This will also delete its subfolders.</value>
     <value>Snapshot schedule '{0}' disabled.</value>
   </data>
   <data name="DISABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>Disable Backup</value>
   </data>
   <data name="DISABLE_HA" xml:space="preserve">
     <value>Disable HA</value>
@@ -5036,7 +5036,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Snapshot schedule '{0}' enabled.</value>
   </data>
   <data name="ENABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>Enable Backup</value>
   </data>
   <data name="ENABLE_HA_ELLIPSIS" xml:space="preserve">
     <value>&amp;Enable HA...</value>
@@ -5312,88 +5312,88 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Error importing server list. Check that the xml format in the file is correct.</value>
   </data>
   <data name="ERR_AGT_NEW_JOB" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create job</value>
   </data>
   <data name="ERR_OTH_CHANGE_DIR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to change dir</value>
   </data>
   <data name="ERR_OTH_MAKE_DIR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create dir</value>
   </data>
   <data name="ERR_OTH_MAKE_FILE" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create file</value>
   </data>
   <data name="ERR_OTH_REPLICATION_VM_RUN" xml:space="preserve">
-    <value />
+    <value>Synchronized virtual machine is in the boot state, was postponed until the next synchronization tasks performed</value>
   </data>
   <data name="ERR_OTH_RSYNC" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to send data</value>
   </data>
   <data name="ERR_OTH_UNKNOWN" xml:space="preserve">
-    <value />
+    <value>Unknown error</value>
   </data>
   <data name="ERR_SR_CHKZFS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to check the backup&amp;amp;restore file system</value>
   </data>
   <data name="ERR_SR_INFO" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get the backup&amp;amp;restore storage</value>
   </data>
   <data name="ERR_SR_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create duplicate</value>
   </data>
   <data name="ERR_XEN_DEL_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to delete snapshot</value>
   </data>
   <data name="ERR_XEN_DISK_CONFLICT" xml:space="preserve">
-    <value />
+    <value>The disk has conflict</value>
   </data>
   <data name="ERR_XEN_GET_NETWORK" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get NETWORK</value>
   </data>
   <data name="ERR_XEN_GET_POOLS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get pool</value>
   </data>
   <data name="ERR_XEN_GET_SR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get SR</value>
   </data>
   <data name="ERR_XEN_GET_VBDS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VBD</value>
   </data>
   <data name="ERR_XEN_GET_VDI" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VDI</value>
   </data>
   <data name="ERR_XEN_GET_VIFS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VIF</value>
   </data>
   <data name="ERR_XEN_GET_VM_BY_UUID" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get vm by uuid</value>
   </data>
   <data name="ERR_XEN_GET_VM_REC" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get vm record</value>
   </data>
   <data name="ERR_XEN_LOGIN" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to login hypervisor</value>
   </data>
   <data name="ERR_XEN_NEW_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create snapshot</value>
   </data>
   <data name="ERR_XEN_NEW_VBD" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VBD</value>
   </data>
   <data name="ERR_XEN_NEW_VDI" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VDI</value>
   </data>
   <data name="ERR_XEN_NEW_VIF" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VIF</value>
   </data>
   <data name="ERR_XEN_NEW_VM" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VM</value>
   </data>
   <data name="ERR_XEN_REMOTE_LOGIN" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to login the remote host</value>
   </data>
   <data name="ERR_XEN_UPDATE_OTH_CFG" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to update other-config</value>
   </data>
   <data name="EULA" xml:space="preserve">
     <value>EULA</value>
@@ -5838,7 +5838,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Free memory</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
-    <value />
+    <value>Friday</value>
   </data>
   <data name="FRIDAY_LONG" xml:space="preserve">
     <value>Friday</value>
@@ -5850,10 +5850,10 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Fully applied</value>
   </data>
   <data name="FULL_BACKUP_CIRCLE" xml:space="preserve">
-    <value />
+    <value>Full Backup Circle</value>
   </data>
   <data name="FULL_BACKUP_DAILY" xml:space="preserve">
-    <value />
+    <value>Full Backup Daily</value>
   </data>
   <data name="FULL_BACKUP_NOW" xml:space="preserve">
     <value>Full Backup Now</value>
@@ -5862,10 +5862,10 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Full Backup Once</value>
   </data>
   <data name="FULL_BACKUP_RECURS_EVERY" xml:space="preserve">
-    <value />
+    <value>Full Backup Recurs every:{0} times.</value>
   </data>
   <data name="FULL_BACKUP_WEEKLY" xml:space="preserve">
-    <value />
+    <value>Full Backup Weekly</value>
   </data>
   <data name="GALLERYSEARCHBAR_MATCHES" xml:space="preserve">
     <value>{0} matches</value>
@@ -7233,28 +7233,28 @@ Size: {3}</value>
     <value>Is standalone</value>
   </data>
   <data name="JOB_STATUS_CANCELING" xml:space="preserve">
-    <value />
+    <value>Canceling</value>
   </data>
   <data name="JOB_STATUS_CHK_ZFS" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_DELETE_SNAP" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_GEN_METADATA" xml:space="preserve">
-    <value />
+    <value>Generate Metadata</value>
   </data>
   <data name="JOB_STATUS_TRANS_DATA" xml:space="preserve">
-    <value />
+    <value>Transfer Data</value>
   </data>
   <data name="JOB_STATUS_TRANS_METADATA" xml:space="preserve">
-    <value />
+    <value>Transfer Metadata</value>
   </data>
   <data name="JOB_STATUS_VERIFY_DATA" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOINING_AD" xml:space="preserve">
     <value>Please enter a user name and password with sufficient privileges to add servers to domain '{0}'.</value>
@@ -8274,7 +8274,7 @@ To learn more about the [vGate] Live VDI Migration feature or to start a [vGate]
     <value>Mixed</value>
   </data>
   <data name="MONDAY" xml:space="preserve">
-    <value />
+    <value>Monday</value>
   </data>
   <data name="MONDAY_LONG" xml:space="preserve">
     <value>Monday</value>
@@ -10560,10 +10560,10 @@ You must reconnect to {1} using an account with Pool Administrator permissions b
     <value>A {0} user cannot alter memory values and will be restricted to the settings on the template.</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_REPLICATION" xml:space="preserve">
-    <value />
+    <value>A {0} user cannot Replication VMs.Log in as a different user with sufficient privileges and try again.</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_RESTORE" xml:space="preserve">
-    <value />
+    <value>A {0} user cannot Restore VMs.Log in as a different user with sufficient privileges and try again.</value>
   </data>
   <data name="READY_UPGRADE" xml:space="preserve">
     <value>Ready to Upgrade</value>
@@ -10780,43 +10780,43 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Repeated key</value>
   </data>
   <data name="REPLICATED_VM_RUNNING_INFO" xml:space="preserve">
-    <value />
+    <value>The VM you want to synchronize is running, you need to shutdown it and try again.</value>
   </data>
   <data name="REPLICATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>Please select VM to relicate.</value>
   </data>
   <data name="REPLICATION_CIRCLE" xml:space="preserve">
-    <value />
+    <value>Replication Circle</value>
   </data>
   <data name="REPLICATION_COMPLETE_TEXT" xml:space="preserve">
-    <value />
+    <value>Complete</value>
   </data>
   <data name="REPLICATION_DAILY" xml:space="preserve">
-    <value />
+    <value>Replication Daily</value>
   </data>
   <data name="REPLICATION_IMMEDIATELY" xml:space="preserve">
-    <value />
+    <value>Immediately</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Settings</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>Enter job name, define VM naming convention, and select destination of the restore.</value>
   </data>
   <data name="REPLICATION_NETWORK_TEXT" xml:space="preserve">
-    <value />
+    <value>Please select default network</value>
   </data>
   <data name="REPLICATION_ONCE" xml:space="preserve">
-    <value />
+    <value>Replication Once</value>
   </data>
   <data name="REPLICATION_SYNCH" xml:space="preserve">
-    <value />
+    <value>Synchronization</value>
   </data>
   <data name="REPLICATION_VM_TITLE" xml:space="preserve">
     <value>Replicate VM - {0}</value>
   </data>
   <data name="REPLICATION_WEEKLY" xml:space="preserve">
-    <value />
+    <value>Replication Weekky</value>
   </data>
   <data name="REQUIRED_HOTFIX_ISNOT_INSTALLED" xml:space="preserve">
     <value>{0}: The required hotfix is not installed</value>
@@ -10837,7 +10837,7 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Resolved as {0}</value>
   </data>
   <data name="RESTORE_COMPLETE_TITLE" xml:space="preserve">
-    <value />
+    <value>Complete</value>
   </data>
   <data name="RESTORE_DISMISSED_UPDATES" xml:space="preserve">
     <value>Restore dismissed updates</value>
@@ -10849,43 +10849,43 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Restore From Backup...</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Schedule</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TITLE" xml:space="preserve">
-    <value />
+    <value>Define schedule of the restore.</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Settings</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TITLE" xml:space="preserve">
     <value>Enter job name, define VM naming convention, and select destination of the restore.</value>
   </data>
   <data name="RESTORE_LIST" xml:space="preserve">
-    <value />
+    <value>Get the inforamtion for restoring</value>
   </data>
   <data name="RESTORE_NOW" xml:space="preserve">
-    <value />
+    <value>Restore Now</value>
   </data>
   <data name="RESTORE_ONCE" xml:space="preserve">
-    <value />
+    <value>Restore Once</value>
   </data>
   <data name="RESTORE_ROOT_PROMPT" xml:space="preserve">
-    <value />
+    <value>Can't use root user</value>
   </data>
   <data name="RESTORE_SELECT_VM_TEXT" xml:space="preserve">
-    <value />
+    <value>Select VM</value>
   </data>
   <data name="RESTORE_SELECT_VM_TITLE" xml:space="preserve">
-    <value />
+    <value>Select virtual machines to restore.</value>
   </data>
   <data name="RESTORE_SET_STORAGE" xml:space="preserve">
     <value>Set Storage</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>View VM Settings</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>Review the job summary.</value>
   </data>
   <data name="RESTORE_VM_TITLE" xml:space="preserve">
     <value>Restore VM - {0}</value>
@@ -11043,7 +11043,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>&amp;Run Report</value>
   </data>
   <data name="SATURDAY" xml:space="preserve">
-    <value />
+    <value>Saturday</value>
   </data>
   <data name="SATURDAY_LONG" xml:space="preserve">
     <value>Saturday</value>
@@ -11112,7 +11112,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>Schedule job</value>
   </data>
   <data name="SCHEDULE_REPLICATION" xml:space="preserve">
-    <value />
+    <value>Define schedule of the replication</value>
   </data>
   <data name="SEARCHBOX_TOOLTIP" xml:space="preserve">
     <value>Find resources in the Resources Pane</value>
@@ -11854,13 +11854,13 @@ The upper limit: SR size / {2}</value>
     <value>succeeded</value>
   </data>
   <data name="SUMMARY_COMMANDS_TITLE" xml:space="preserve">
-    <value />
+    <value>Actions</value>
   </data>
   <data name="SUMMARY_PAGE" xml:space="preserve">
     <value>Summary</value>
   </data>
   <data name="SUNDAY" xml:space="preserve">
-    <value />
+    <value>Sunday</value>
   </data>
   <data name="SUNDAY_LONG" xml:space="preserve">
     <value>Sunday</value>
@@ -11925,7 +11925,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>Switch to an account with the required role and try again.</value>
   </data>
   <data name="SYNCHRONIZATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>Please set synchronization plan for every checked vm</value>
   </data>
   <data name="SYNCING_DATABASE" xml:space="preserve">
     <value>Performing pool database sync</value>
@@ -12021,7 +12021,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>is this week</value>
   </data>
   <data name="THURSDAY" xml:space="preserve">
-    <value />
+    <value>Thursday</value>
   </data>
   <data name="THURSDAY_LONG" xml:space="preserve">
     <value>Thursday</value>
@@ -12159,7 +12159,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>trusted</value>
   </data>
   <data name="TUESDAY" xml:space="preserve">
-    <value />
+    <value>Tuesday</value>
   </data>
   <data name="TUESDAY_LONG" xml:space="preserve">
     <value>Tuesday</value>
@@ -13503,7 +13503,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>Pub&amp;lish...</value>
   </data>
   <data name="V_CONSOLE" xml:space="preserve">
-    <value />
+    <value>vGate Console</value>
   </data>
   <data name="WAITING" xml:space="preserve">
     <value>Waiting</value>
@@ -13545,7 +13545,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>Web Page</value>
   </data>
   <data name="WEDNESDAY" xml:space="preserve">
-    <value />
+    <value>Wednesday</value>
   </data>
   <data name="WEDNESDAY_LONG" xml:space="preserve">
     <value>Wednesday</value>
@@ -14346,52 +14346,54 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>Raw HBA</value>
   </data>
   <data name="ERR_CONTROLLER_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>Halsign SC username or password is not correct.</value>
   </data>
   <data name="ERR_INVALID_PARAMS" xml:space="preserve">
-    <value />
+    <value>Invalid parameters.</value>
   </data>
   <data name="ERR_VGATE_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>vGate username or password is not correct.</value>
   </data>
   <data name="INSTANT_CREATE_VMS" xml:space="preserve">
-    <value />
+    <value>Batch create VMs</value>
   </data>
   <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
-    <value />
+    <value>Finish batch create VMs</value>
   </data>
   <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
-    <value />
+    <value>Start batch create VMs</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to delete the vSwitch Controller configure?</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE_TITLE" xml:space="preserve">
-    <value />
+    <value>Delete Configure</value>
   </data>
   <data name="OVSC_CONFIGURE_IP" xml:space="preserve">
-    <value />
+    <value>vSwitch Controller IP</value>
   </data>
   <data name="OVSC_CONFIGURE_PORT" xml:space="preserve">
-    <value />
+    <value>Port</value>
   </data>
   <data name="OVSC_CONFIGURE_PROTOCOL" xml:space="preserve">
-    <value />
+    <value>Protocol</value>
   </data>
   <data name="OVSC_CONFIGURE_TITLE" xml:space="preserve">
-    <value />
+    <value>Configuration</value>
   </data>
   <data name="OVSC_CONFIGURE_USERNAME" xml:space="preserve">
-    <value />
+    <value>UserName</value>
   </data>
   <data name="OVSC_PAGE_TITLE" xml:space="preserve">
-    <value />
+    <value>vSwitch Controller</value>
   </data>
   <data name="UPSELL_BLURB_SC" xml:space="preserve">
-    <value />
+    <value>Upgrade vGate to enable vSwitch Controller. 
+
+To learn more about the vGate vSwitch Controller feature or to start a vGate trial, click the button below.</value>
   </data>
   <data name="VSWITCH_CONTROLLER" xml:space="preserve">
-    <value />
+    <value>QoS settings should be configured using the vSwitch Controller</value>
   </data>
   <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
     <value />
