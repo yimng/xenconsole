@@ -230,7 +230,7 @@ namespace XenAdmin.TabPages
         }        
 
         private void PcisdataGridViewExs_CellButtonClicked(object sender, Controls.DataGridViewExs.DataGridViewButtonClickEventArgs e)
-        {
+        {            
             if (e.Bind)
             {
                 if(PcisdataGridViewExs.Rows[e.RowIndex].Cells[0].Value != null &&
@@ -256,6 +256,7 @@ namespace XenAdmin.TabPages
             }
             else
             {
+                ((DataGridViewButtonCellEx)(PcisdataGridViewExs.Rows[e.RowIndex].Cells[4])).Enabled = false;//disable the button
                 string vmuuid = PcisdataGridViewExs.Rows[e.RowIndex].Cells[2].Tag.ToString();
                 VM selectedvm = home.Connection.Cache.VMs.First(vm => vm.uuid == vmuuid);
                 Dictionary<string, string> other_config = selectedvm.other_config;

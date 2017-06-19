@@ -46,6 +46,7 @@ namespace XenAdmin.Dialogs
         private static ResourceManager errorDescriptions = XenAPI.FriendlyErrorNames.ResourceManager;
         private void Bindbutton_Click(object sender, EventArgs e)
         {
+            (sender as Button).Enabled = false;
             string errormsg = "";
             VM selectedvm = m_host.Connection.Cache.VMs.First(vm => vm.uuid == this.VMsComboBox.SelectedValue.ToString() && vm.Home() == m_host);
             Dictionary<string, string> other_config = selectedvm.other_config;
