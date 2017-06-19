@@ -14396,7 +14396,7 @@ To learn more about the vGate vSwitch Controller feature or to start a vGate tri
     <value>QoS settings should be configured using the vSwitch Controller</value>
   </data>
   <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
-    <value />
+    <value>虚拟交换机</value>
   </data>
   <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
     <value>Storage</value>

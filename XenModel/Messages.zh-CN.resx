@@ -14309,13 +14309,13 @@ SCSI ID: {6}
     <value>vGate 用户名或密码不正确。</value>
   </data>
   <data name="INSTANT_CREATE_VMS" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机</value>
   </data>
   <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机结束</value>
   </data>
   <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机开始</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
     <value>您确定要删除 vSwitch Controller 配置信息么?</value>
@@ -14347,7 +14347,7 @@ SCSI ID: {6}
     <value>协议</value>
   </data>
   <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
-    <value />
+    <value>虚拟交换机</value>
   </data>
   <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
     <value>存储</value>
