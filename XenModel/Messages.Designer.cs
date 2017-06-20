@@ -6821,6 +6821,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Export Graphs Below 的本地化字符串。
+        /// </summary>
+        public static string BUTTON_PRINT_TEXT {
+            get {
+                return ResourceManager.GetString("BUTTON_PRINT_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Cache not yet populated 的本地化字符串。
         /// </summary>
         public static string CACHE_NOT_YET_POPULATED {

@@ -39,7 +39,7 @@ using XenAdmin.Core;
 using XenAdmin.Controls.CustomDataGraph;
 using XenAdmin.Dialogs;
 using XenAdmin.Actions;
-
+using System.IO;
 
 namespace XenAdmin.TabPages
 {
@@ -54,6 +54,7 @@ namespace XenAdmin.TabPages
         {
             InitializeComponent();
 
+            buttonPrint.Text = Messages.BUTTON_PRINT_TEXT;
             ArchiveMaintainer.ArchivesUpdated += ArchiveMaintainer_ArchivesUpdated;
             Message_CollectionChangedWithInvoke = Program.ProgramInvokeHandler(Message_CollectionChanged);
             GraphList.ArchiveMaintainer = ArchiveMaintainer;
@@ -597,5 +598,36 @@ namespace XenAdmin.TabPages
         }
 
         #endregion
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            string localFilePath = null;
+            sfd.Filter = "PNG|*.png|JPEG(*.JPG *.JPEG *.JPE)|*.jpg|BMP|*.bmp";
+            if (sfd.ShowDialog() == DialogResult.OK && sfd.FileName != null && sfd.FileName != "")
+            {
+                localFilePath = sfd.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            FileStream performanceStream = new FileStream(localFilePath, FileMode.Create);
+            try
+            {
+                Program.MainWindow.WindowState = FormWindowState.Maximized;
+                Program.MainWindow.Refresh();
+                Bitmap bit = new Bitmap(GraphList.Width-30, GraphList.Height-55);
+                Graphics g = Graphics.FromImage(bit);
+                g.CopyFromScreen(GraphList.PointToScreen(Point.Empty), Point.Empty, GraphList.Size);
+                bit.Save(performanceStream, System.Drawing.Imaging.ImageFormat.Png);
+                Program.MainWindow.WindowState = FormWindowState.Normal;
+                ExportSuccessfullyDialog esd = new ExportSuccessfullyDialog();
+                esd.ShowDialog();
+            }
+            finally
+            {
+                performanceStream.Close();
+            }
+        }
     }
 }

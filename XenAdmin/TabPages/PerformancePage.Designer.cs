@@ -24,6 +24,7 @@ namespace XenAdmin.TabPages
             this.EventsLabel = new System.Windows.Forms.Label();
             this.gradientPanel2 = new XenAdmin.Controls.GradientPanel.GradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.zoomButton = new System.Windows.Forms.Button();
             this.moveDownButton = new System.Windows.Forms.Button();
             this.moveUpButton = new System.Windows.Forms.Button();
@@ -107,7 +108,6 @@ namespace XenAdmin.TabPages
             this.DataPlotNav.GraphOffset = System.TimeSpan.Parse("00:00:00");
             this.DataPlotNav.GraphWidth = System.TimeSpan.Parse("00:09:59");
             this.DataPlotNav.GridSpacing = System.TimeSpan.Parse("00:02:00");
-            this.DataPlotNav.MinimumSize = new System.Drawing.Size(410, 0);
             this.DataPlotNav.Name = "DataPlotNav";
             this.DataPlotNav.ScrollViewOffset = System.TimeSpan.Parse("00:00:00");
             this.DataPlotNav.ScrollViewWidth = System.TimeSpan.Parse("02:00:00");
@@ -128,6 +128,7 @@ namespace XenAdmin.TabPages
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonPrint);
             this.panel3.Controls.Add(this.zoomButton);
             this.panel3.Controls.Add(this.moveDownButton);
             this.panel3.Controls.Add(this.moveUpButton);
@@ -138,6 +139,13 @@ namespace XenAdmin.TabPages
             this.panel3.Controls.Add(this.DataEventList);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            // 
+            // buttonPrint
+            // 
+            resources.ApplyResources(this.buttonPrint, "buttonPrint");
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // zoomButton
             // 
@@ -395,6 +403,7 @@ namespace XenAdmin.TabPages
             this.zoomMenuStrip.ResumeLayout(false);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -442,5 +451,6 @@ namespace XenAdmin.TabPages
         private System.Windows.Forms.ToolStripMenuItem deleteGraphToolStripContextMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem restoreDefaultGraphsToolStripContextMenuItem;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

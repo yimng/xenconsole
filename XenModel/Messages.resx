@@ -14500,4 +14500,7 @@ Size: {11}</value>
   <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
     <value>Unknown error</value>
   </data>
+  <data name="BUTTON_PRINT_TEXT" xml:space="preserve">
+    <value>Export Graphs Below</value>
+  </data>
 </root>

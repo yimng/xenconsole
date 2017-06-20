@@ -324,6 +324,12 @@
     <Compile Include="Dialogs\PciBindDialog.Designer.cs">
       <DependentUpon>PciBindDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\ExportSuccessfullyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportSuccessfullyDialog.Designer.cs">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\PvsCacheConfigurationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1974,6 +1980,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\PciBindDialog.zh-CN.resx">
       <DependentUpon>PciBindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportSuccessfullyDialog.resx">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportSuccessfullyDialog.zh-CN.resx">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\PvsCacheConfigurationDialog.ja.resx">
       <DependentUpon>PvsCacheConfigurationDialog.cs</DependentUpon>

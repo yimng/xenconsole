@@ -14456,4 +14456,7 @@ SCSI ID: {10}
   <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
     <value>未知错误</value>
   </data>
+  <data name="BUTTON_PRINT_TEXT" xml:space="preserve">
+    <value>导出图表</value>
+  </data>
 </root>
