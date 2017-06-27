@@ -3169,7 +3169,7 @@
     <None Include="Halsign.cer">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Help\vGate Console.chm">
+    <None Include="Help\vGateConsole.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="HomePage.zh-CN.mht">
