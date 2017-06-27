@@ -205,7 +205,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Help\XenCenter.chm 的本地化字符串。
+        ///   查找类似 Help\[vGate Console].chm 的本地化字符串。
         /// </summary>
         public static string MAINWINDOW_HELP_PATH {
             get {

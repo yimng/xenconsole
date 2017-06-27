@@ -163,7 +163,7 @@
     <value>-mapid {0} {1}</value>
   </data>
   <data name="MAINWINDOW_HELP_PATH" xml:space="preserve">
-    <value>Help\XenCenter.ja.chm</value>
+    <value>Help\[vGate Console].ja.chm</value>
   </data>
   <data name="MAINWINDOW_HOME_PATH" xml:space="preserve">
     <value>Home.htm</value>
