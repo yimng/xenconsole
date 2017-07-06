@@ -32,7 +32,7 @@
 using System;
 using XenAPI;
 using XenAdmin.Core;
-
+using System.Collections.Generic;
 
 namespace XenAdmin.Actions.VMActions
 {
@@ -101,6 +101,20 @@ namespace XenAdmin.Actions.VMActions
         public abstract VMStartAbstractAction Clone();
 
         #endregion
+        public void io_limit()
+        {
+            //开机时调用“vm_io_limit.py”脚本
+            Dictionary<String, String> args = new Dictionary<string, string>();
+            args.Add("vm_uuid", VM.uuid);
+            if (VM.other_config.ContainsKey("io_limit"))
+            {
+                if (long.Parse(VM.other_config["io_limit"])>0)
+                {
+                    args.Add("mbps", (long.Parse(VM.other_config["io_limit"])).ToString());
+                    XenAPI.Host.call_plugin(VM.Connection.Session,VM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+                }
+            }            
+        }
     }
 
     public class VMStartAction : VMStartAbstractAction
@@ -127,6 +141,8 @@ namespace XenAdmin.Actions.VMActions
         {
             RelatedTask = XenAPI.VM.async_start(Session, VM.opaque_ref, false, false);
             PollToCompletion(start, end);
+            //调用脚本
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()
@@ -159,7 +175,9 @@ namespace XenAdmin.Actions.VMActions
         protected override void DoAction(int start, int end)
         {
             RelatedTask = XenAPI.VM.async_start_on(Session, VM.opaque_ref, Host.opaque_ref, false, false);
+            //调用脚本
             PollToCompletion(start, end);
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()
@@ -192,7 +210,9 @@ namespace XenAdmin.Actions.VMActions
         protected override void DoAction(int start, int end)
         {
             RelatedTask = XenAPI.VM.async_resume(Session, VM.opaque_ref, false, false);
+            //调用脚本
             PollToCompletion(start, end);
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()
@@ -225,7 +245,9 @@ namespace XenAdmin.Actions.VMActions
         protected override void DoAction(int start, int end)
         {
             RelatedTask = XenAPI.VM.async_resume_on(Session, VM.opaque_ref, Host.opaque_ref, false, false);
+            //调用脚本
             PollToCompletion(start, end);
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()
@@ -257,7 +279,9 @@ namespace XenAdmin.Actions.VMActions
         protected override void DoAction(int start, int end)
         {
             RelatedTask = XenAPI.VM.async_start(Session, VM.opaque_ref, true, false);
+            //调用脚本
             PollToCompletion(start, end);
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()
@@ -291,6 +315,7 @@ namespace XenAdmin.Actions.VMActions
         {
             RelatedTask = XenAPI.VM.async_start_on(Session, VM.opaque_ref, Host.opaque_ref, true, false);
             PollToCompletion(start, end);
+            io_limit();
         }
 
         public override VMStartAbstractAction Clone()

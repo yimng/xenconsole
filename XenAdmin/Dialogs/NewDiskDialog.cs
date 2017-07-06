@@ -220,8 +220,6 @@ namespace XenAdmin.Dialogs
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-
-
             if (SrListBox.SR == null || SelectionNull || NameTextBox.Text == "" || !connection.IsConnected)
                 return;
 
@@ -257,7 +255,7 @@ namespace XenAdmin.Dialogs
                 Actions.DelegatedAsyncAction action = new Actions.DelegatedAsyncAction(connection,
                     string.Format(Messages.ACTION_DISK_ADDING_TITLE, NameTextBox.Text, sr.NameWithoutHost),
                     Messages.ACTION_DISK_ADDING, Messages.ACTION_DISK_ADDED,
-                    delegate(XenAPI.Session session)
+                    delegate (XenAPI.Session session)
                     {
                         // Get legitimate unused userdevice numbers
                         string[] uds = XenAPI.VM.get_allowed_VBD_devices(session, TheVM.opaque_ref);
@@ -274,7 +272,6 @@ namespace XenAdmin.Dialogs
                         // CA-44959: only make bootable if there aren't other bootable VBDs.
                         vbd.bootable = ud == "0" && !alreadyHasBootableDisk;
                         vbd.userdevice = ud;
-
                         // Now try to plug the VBD.
                         new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
                     });
@@ -292,8 +289,70 @@ namespace XenAdmin.Dialogs
             }
             DialogResult = DialogResult.OK;
             Close();
+            //若虚拟机启用了IO功能才进行下列操作            
+            if (TheVM.other_config.ContainsKey("io_limit"))
+            {
+                String _class = "0";
+                if (long.Parse(TheVM.other_config["io_limit"]) > 0)
+                {
+                    //获取原class值（优先级）
+                    List<XenRef<VBD>> origin_VBDs = TheVM.VBDs;
+                    foreach (XenRef<VBD> v in origin_VBDs)
+                    {
+                        if (connection.Resolve<VBD>(v).type == vbd_type.CD)
+                        {
+                            continue;
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(TheVM.Connection.Session, v.opaque_ref).ContainsKey("class"))
+                        {
+                            if (XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != "" && XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != null)
+                            {
+                                _class = XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"];
+                            }
+                        }
+                    }
+                }
+                foreach (XenRef<VBD> v in XenAPI.VM.get_VBDs(connection.Session, TheVM.opaque_ref))
+                {
+                    if (connection.Resolve<VBD>(v).type == vbd_type.CD)
+                    {
+                        continue;
+                    }
+                    if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("class"))
+                    {
+                        XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "class");
+                    }
+                    if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("sched"))
+                    {
+                        XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "sched");
+                    }
+                    if (XenAPI.VBD.get_qos_algorithm_type(connection.Session, v.opaque_ref) != null)
+                    {
+                        XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "");
+                    }
+                    XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "ionice");
+                    XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "sched", "rt");
+                    XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "class", _class);
+                }
+                if (TheVM.power_state == vm_power_state.Running)
+                {
+                    io_limit();
+                }
+            }
         }
-
+        public void io_limit()
+        {
+            Dictionary<String, String> args = new Dictionary<string, string>();
+            args.Add("vm_uuid",TheVM.uuid);
+            if (TheVM.other_config.ContainsKey("io_limit"))
+            {
+                if (long.Parse(TheVM.other_config["io_limit"]) > 0)
+                {
+                    args.Add("mbps", TheVM.other_config["io_limit"]);
+                    XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+                }
+            }
+        }
         private static bool HasBootableDisk(VM vm)
         {
             var c = vm.Connection;
