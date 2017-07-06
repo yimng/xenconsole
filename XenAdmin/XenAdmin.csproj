@@ -76,6 +76,10 @@
     <Reference Include="log4net">
       <HintPath>..\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
@@ -444,6 +448,12 @@
     <Compile Include="Dialogs\vSwitchControllerConfigDialog.designer.cs">
       <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.Designer.cs">
+      <DependentUpon>HasRunningVMsWarningDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,6 +483,12 @@
     <Compile Include="SettingsPanels\BrowseStorageVirtualDiskPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="SettingsPanels\KernelCrashDumpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\KernelCrashDumpPage.Designer.cs">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsPanels\LivePatchingEditPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -484,6 +500,12 @@
     </Compile>
     <Compile Include="SettingsPanels\SecurityEditPage.Designer.cs">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPanels\StorageQOSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\StorageQOSPage.Designer.cs">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsPanels\UseSSDCachePage.cs">
       <SubType>UserControl</SubType>
@@ -2147,6 +2169,9 @@
     <EmbeddedResource Include="Dialogs\vSwitchControllerConfigDialog.zh-CN.resx">
       <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.resx">
+      <DependentUpon>HasRunningVMsWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx">
       <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -2192,6 +2217,9 @@
     <EmbeddedResource Include="SettingsPanels\HostPowerONPages\PoolPowerONEditPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>PoolPowerONEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\KernelCrashDumpPage.resx">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\PerfmonAlertOptionsPage.resx">
       <SubType>Designer</SubType>
@@ -2282,6 +2310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\SecurityEditPage.zh-CN.resx">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\StorageQOSPage.resx">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\StorageQOSPage.zh-CN.resx">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\UseSSDCachePage.resx">
       <DependentUpon>UseSSDCachePage.cs</DependentUpon>
