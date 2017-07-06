@@ -91,7 +91,6 @@ namespace XenAdmin.Dialogs
             // promptTextBoxMac
             // 
             resources.ApplyResources(this.promptTextBoxMac, "promptTextBoxMac");
-            this.promptTextBoxMac.MaximumSize = new System.Drawing.Size(999999, 20);
             this.promptTextBoxMac.Name = "promptTextBoxMac";
             // 
             // radioButtonAutogenerate
@@ -181,7 +180,6 @@ namespace XenAdmin.Dialogs
             // promptTextBoxQoS
             // 
             resources.ApplyResources(this.promptTextBoxQoS, "promptTextBoxQoS");
-            this.promptTextBoxQoS.MaximumSize = new System.Drawing.Size(999999, 20);
             this.promptTextBoxQoS.Name = "promptTextBoxQoS";
             // 
             // labelQoSUnits

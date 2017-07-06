@@ -40,7 +40,11 @@ using XenAdmin.Controls.CustomDataGraph;
 using XenAdmin.Dialogs;
 using XenAdmin.Actions;
 using System.IO;
-
+using System.Linq;
+using Microsoft.Office.Interop.Excel;
+using System.Reflection;
+using System.Data;
+using System.Text;
 namespace XenAdmin.TabPages
 {
     public partial class PerformancePage : BaseTabPage
@@ -598,8 +602,16 @@ namespace XenAdmin.TabPages
         }
 
         #endregion
+        void AddDataSource(string uuid, List<string> dsuuids, DesignedGraph dg)
+        {
+            dsuuids.Add(uuid);
+            dg.DataSources.Add(new DataSourceItem(new Data_source(), "", Palette.GetColour(uuid), uuid));
+        }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
+            object misValue = System.Reflection.Missing.Value;
+            FormWindowState fws = new FormWindowState();
+            fws = Program.MainWindow.WindowState;
             SaveFileDialog sfd = new SaveFileDialog();
             string localFilePath = null;
             sfd.Filter = "PNG|*.png|JPEG(*.JPG *.JPEG *.JPE)|*.jpg|BMP|*.bmp";
@@ -614,13 +626,86 @@ namespace XenAdmin.TabPages
             FileStream performanceStream = new FileStream(localFilePath, FileMode.Create);
             try
             {
+                //生成性能图表截图
                 Program.MainWindow.WindowState = FormWindowState.Maximized;
                 Program.MainWindow.Refresh();
                 Bitmap bit = new Bitmap(GraphList.Width-30, GraphList.Height-55);
                 Graphics g = Graphics.FromImage(bit);
-                g.CopyFromScreen(GraphList.PointToScreen(Point.Empty), Point.Empty, GraphList.Size);
+                g.CopyFromScreen(GraphList.PointToScreen(System.Drawing.Point.Empty), System.Drawing.Point.Empty, GraphList.Size);
                 bit.Save(performanceStream, System.Drawing.Imaging.ImageFormat.Png);
-                Program.MainWindow.WindowState = FormWindowState.Normal;
+                Program.MainWindow.WindowState = fws;
+                //取数据               
+                List<string> dsuuids = new List<string>();
+                Pool pool = Helpers.GetPoolOfOne(XenObject.Connection);
+                List<DesignedGraph> dglist = new List<DesignedGraph>();
+                if (pool != null)
+                {
+                    if (XenObject == null)
+                        return;
+
+//                    int index = GraphList.Count - 1;
+//                    if (GraphList.AuthorizedRole)
+//                    {
+//                        GraphList.ExchangeGraphs(1, 0);
+ //                       GraphList.ExchangeGraphs(0, 1);
+                        //GraphList.ExchangeGraphs(index-1, index);
+                        //GraphList.SaveGraphs(null);
+                   // }
+                    Dictionary<string, string> gui_config = Helpers.GetGuiConfig(pool);
+                    int i = 0;
+                    while (true)
+                    {
+                        DesignedGraph dg = new DesignedGraph();
+                        string key = Palette.GetLayoutKey(i, XenObject);
+                        if (!gui_config.ContainsKey(key))
+                            break;
+
+                        string[] dslist = gui_config[key].Split(',');
+                        foreach (string ds in dslist)
+                        {
+                            AddDataSource(string.Format("{0}:{1}:{2}", XenObject is Host ? "host" : "vm", Helpers.GetUuid(XenObject), ds), dsuuids, dg);
+                        }
+
+                        key = Palette.GetGraphNameKey(i, XenObject);
+                        if (gui_config.ContainsKey(key))
+                        {
+                            dg.DisplayName = gui_config[key];
+                        }
+
+                        dglist.Add(dg);
+                        i++;
+                    }
+                }
+                //导出到Excel
+                Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+                Workbook xlWorkBook = xlApp.Workbooks.Add();
+                Worksheet xlWorkSheet;
+                Dictionary<string, string> config = Helpers.GetGuiConfig(pool);
+                for (int j = 0; j < dglist.Count; j++)
+                {
+                    xlWorkBook.Sheets.Add(misValue, misValue, 1, XlSheetType.xlWorksheet);
+                    xlWorkSheet = xlWorkBook.Worksheets.get_Item(1);
+                    //每个图表创建一个对应的表单（CPU性能,内存性能...）
+                    xlWorkSheet.Name = dglist[j].DisplayName;
+                    //取每个表单的标签名称（cpu0，cpu1...）
+                    string key = Palette.GetLayoutKey(j, XenObject);
+                    String[] dslist = config[key].Split(',');
+
+                    for (int i = 0; i < dslist.Length; i++)
+                    {
+                   //    xlWorkSheet.Cells[i + 2, 1] = dslist[i];
+                        xlWorkSheet.Cells[i + 2, 1] = DataKey.items[i];
+                        Microsoft.Office.Interop.Excel.Range allColumn = xlWorkSheet.Columns;
+                        allColumn.AutoFit();
+                    }
+                }
+                try
+                {
+                    xlWorkBook.SaveAs(localFilePath.Substring(0,localFilePath.LastIndexOf("."))+".xls", XlFileFormat.xlWorkbookNormal, "", "", false, false, XlSaveAsAccessMode.xlExclusive, true, true);
+                    xlWorkBook.Close(true, localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1) + ".xls", false);
+                    xlApp.Quit();
+                }
+                catch{ }                
                 ExportSuccessfullyDialog esd = new ExportSuccessfullyDialog();
                 esd.ShowDialog();
             }

@@ -20997,6 +20997,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Kernel crash dump 的本地化字符串。
+        /// </summary>
+        public static string KERNEL_CRASH_DUMP_SUBTEXT {
+            get {
+                return ResourceManager.GetString("KERNEL_CRASH_DUMP_SUBTEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Attempting to connect to {0}... 的本地化字符串。
         /// </summary>
         public static string LABEL_ATTEMPT {
@@ -34584,6 +34593,24 @@ namespace XenAdmin {
         public static string STORAGEPOOLS {
             get {
                 return ResourceManager.GetString("STORAGEPOOLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 QOS 的本地化字符串。
+        /// </summary>
+        public static string STORAGEQOSPAGE_SUBTEXT {
+            get {
+                return ResourceManager.GetString("STORAGEQOSPAGE_SUBTEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Storage 的本地化字符串。
+        /// </summary>
+        public static string STORAGEQOSPAGE_TEXT {
+            get {
+                return ResourceManager.GetString("STORAGEQOSPAGE_TEXT", resourceCulture);
             }
         }
         
