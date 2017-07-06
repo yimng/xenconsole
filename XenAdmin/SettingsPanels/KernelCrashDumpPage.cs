@@ -27,22 +27,26 @@ namespace XenAdmin.SettingsPanels
         private void CrashDumpInit()
         {
             Host host = this.host;
-            result = XenAPI.Host.call_plugin(host.Connection.Session,host.opaque_ref,"kdump-trigger.py","status",args);
-            if (result == true.ToString())
+            if (host.other_config.ContainsKey("dump_status"))
             {
-                checkBox1.Checked = true;
-                orig_check = true;
-            }
-            else if (result == false.ToString())
-            {
-                checkBox1.Checked = false;
-                orig_check = false;
-            }
-            else if (result == "inconsistent")
-            {
-                checkBox1.Enabled = false;
-                label1.Visible = true;
-            }
+                result = XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "kdump-trigger.py", "status", args);
+                if (result == true.ToString())
+                {
+                    checkBox1.Checked = true;
+                    orig_check = true;
+                }
+                else if (result == false.ToString())
+                {
+                    checkBox1.Checked = false;
+                    orig_check = false;
+                }
+                else if (result == "inconsistent")
+                {
+                    checkBox1.Enabled = false;
+                    label1.Visible = true;
+
+                }
+            }     
         }
         public bool HasChanged
         {
@@ -90,10 +94,19 @@ namespace XenAdmin.SettingsPanels
             if (checkBox1.Checked==true)
             {
                 XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "kdump-trigger.py", "enable", args);
+                if (host.other_config.ContainsKey("dump_status"))
+                {
+                    XenAPI.Host.remove_from_other_config(host.Connection.Session,host.opaque_ref,"dump_status");
+                }
+                XenAPI.Host.add_to_other_config(host.Connection.Session,host.opaque_ref,"dump_status","dump_true");
             }
             if (checkBox1.Checked == false)
             {
                 XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "kdump-trigger.py", "disable", args);
+                if (host.other_config.ContainsKey("dump_status"))
+                {
+                    XenAPI.Host.remove_from_other_config(host.Connection.Session, host.opaque_ref, "dump_status");
+                }
             }
             return null;
         }
