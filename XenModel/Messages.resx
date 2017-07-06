@@ -7713,10 +7713,10 @@ This will permanently delete and reinitialize all local storage on the servers. 
     <value>The [vGate] license on '{0}' has expired.</value>
   </data>
   <data name="MAINWINDOW_EXPORT_MAC" xml:space="preserve">
-    <value>request license</value>
+    <value>Request License</value>
   </data>
   <data name="MAINWINDOW_EXPORT_MAC_CONTEXT_MENU" xml:space="preserve">
-    <value>request license</value>
+    <value>Request License</value>
   </data>
   <data name="MAINWINDOW_EXPORT_POOL_RESOURCE_DATA" xml:space="preserve">
     <value>E&amp;xport Resource Data...</value>

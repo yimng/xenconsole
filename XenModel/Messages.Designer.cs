@@ -22353,7 +22353,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 request license 的本地化字符串。
+        ///   查找类似 Request License 的本地化字符串。
         /// </summary>
         public static string MAINWINDOW_EXPORT_MAC {
             get {
@@ -22362,7 +22362,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 request license 的本地化字符串。
+        ///   查找类似 Request License 的本地化字符串。
         /// </summary>
         public static string MAINWINDOW_EXPORT_MAC_CONTEXT_MENU {
             get {
