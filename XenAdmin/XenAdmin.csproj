@@ -2221,6 +2221,9 @@
     <EmbeddedResource Include="SettingsPanels\KernelCrashDumpPage.resx">
       <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\KernelCrashDumpPage.zh-CN.resx">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\PerfmonAlertOptionsPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>PerfmonAlertOptionsPage.cs</DependentUpon>

@@ -85,7 +85,7 @@ namespace XenAdmin.Dialogs
         private LivePatchingEditPage LivePatchingEditPage;
         private UseSSDCachePage UseSSDCachePage;
         private StorageQOSPage StorageQOSPage;
-//        private KernelCrashDumpPage KernelCrashDumpPage;
+        private KernelCrashDumpPage KernelCrashDumpPage;
         #endregion
 
         private IXenObject xenObject, xenObjectBefore, xenObjectCopy;
@@ -196,7 +196,7 @@ namespace XenAdmin.Dialogs
                     ShowTab(hostMultipathPage1 = new HostMultipathPage());
                     ShowTab(HostPowerONEditPage = new HostPowerONEditPage());
                     ShowTab(LogDestinationEditPage = new LogDestinationEditPage());
-//                    ShowTab(KernelCrashDumpPage = new KernelCrashDumpPage());
+                    ShowTab(KernelCrashDumpPage = new KernelCrashDumpPage());
                 }
                 
                 if (is_pool)

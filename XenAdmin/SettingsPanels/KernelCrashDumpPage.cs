@@ -16,6 +16,9 @@ namespace XenAdmin.SettingsPanels
     {
         private bool _ValidToSave = true;
         private Host host;
+        private String result;
+        private bool orig_check=false;
+        Dictionary<String, String> args = new Dictionary<string, string>();
         public KernelCrashDumpPage()
         {
             InitializeComponent();
@@ -24,12 +27,36 @@ namespace XenAdmin.SettingsPanels
         private void CrashDumpInit()
         {
             Host host = this.host;
+            result = XenAPI.Host.call_plugin(host.Connection.Session,host.opaque_ref,"kdump-trigger.py","status",args);
+            if (result == true.ToString())
+            {
+                checkBox1.Checked = true;
+                orig_check = true;
+            }
+            else if (result == false.ToString())
+            {
+                checkBox1.Checked = false;
+                orig_check = false;
+            }
+            else if (result == "inconsistent")
+            {
+                checkBox1.Enabled = false;
+                label1.Visible = true;
+            }
         }
         public bool HasChanged
         {
-            get
+            get { return HasStatusChanged(); }
+        }
+        public bool HasStatusChanged()
+        {
+            if (checkBox1.Checked == orig_check)
             {
                 return false;
+            }
+            else
+            {
+                return true;
             }
         }
         public Image Image
@@ -60,12 +87,21 @@ namespace XenAdmin.SettingsPanels
 
         public AsyncAction SaveSettings()
         {
+            if (checkBox1.Checked==true)
+            {
+                XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "kdump-trigger.py", "enable", args);
+            }
+            if (checkBox1.Checked == false)
+            {
+                XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "kdump-trigger.py", "disable", args);
+            }
             return null;
         }
 
         public void SetXenObjects(IXenObject orig, IXenObject clone)
         {
             host = (Host)clone;
+            CrashDumpInit();
         }
 
         public void ShowLocalValidationMessages(){  }
