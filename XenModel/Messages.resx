@@ -12954,7 +12954,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>The disk is attached to a VM that is not in halted state.</value>
   </data>
   <data name="VCPU_ONLY_WHEN_HALTED" xml:space="preserve">
-    <value>The VCPUs can only be changed when the VM is shut down.</value>
+    <value>The Max-VCPUs,the topology and the vCPU priority can only be changed when the VM is shut down.</value>
   </data>
   <data name="VDI" xml:space="preserve">
     <value>VDI</value>
@@ -14511,5 +14511,11 @@ Size: {11}</value>
   </data>
   <data name="KERNEL_CRASH_DUMP_SUBTEXT" xml:space="preserve">
     <value>Kernel crash dump</value>
+  </data>
+  <data name="VCPU_HOTPLUG_LICENSE_UNAVAILABLE" xml:space="preserve">
+    <value>Hot-plug is not supported by free-version vGate</value>
+  </data>
+  <data name="VCPU_HOTPLUG_WINDOWS_UNAVAILABLE" xml:space="preserve">
+    <value>Hot-plug is not supported by Windows</value>
   </data>
 </root>

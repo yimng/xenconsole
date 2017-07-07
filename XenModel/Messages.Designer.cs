@@ -37895,7 +37895,25 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 The VCPUs can only be changed when the VM is shut down. 的本地化字符串。
+        ///   查找类似 Hot-plug is not supported by free-version vGate 的本地化字符串。
+        /// </summary>
+        public static string VCPU_HOTPLUG_LICENSE_UNAVAILABLE {
+            get {
+                return ResourceManager.GetString("VCPU_HOTPLUG_LICENSE_UNAVAILABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Hot-plug is not supported by Windows 的本地化字符串。
+        /// </summary>
+        public static string VCPU_HOTPLUG_WINDOWS_UNAVAILABLE {
+            get {
+                return ResourceManager.GetString("VCPU_HOTPLUG_WINDOWS_UNAVAILABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The Max-VCPUs,the topology and the vCPU priority can only be changed when the VM is shut down. 的本地化字符串。
         /// </summary>
         public static string VCPU_ONLY_WHEN_HALTED {
             get {
