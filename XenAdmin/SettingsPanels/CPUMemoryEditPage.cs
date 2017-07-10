@@ -263,7 +263,7 @@ namespace XenAdmin.SettingsPanels
             }
             else 
             {
-                if (Host.RestrictVcpuHotplug(currentHost)&&vm.power_state == vm_power_state.Running)
+                if (Host.RestrictVcpuHotplug(currentHost)&&vm.power_state == vm_power_state.Running&&!vm.IsWindows)
                 {
                     label7.Text = Messages.VCPU_HOTPLUG_LICENSE_UNAVAILABLE;
                     label7.Visible = true;
