@@ -18,6 +18,7 @@ namespace XenAdmin.SettingsPanels
     {
         private VM vm;
         private bool origin_level_checked;
+        private bool origin_rate_checked;
         private int origin_limit_level = 8;
         private int limit_level;
         private Double origin_limit_rate;
@@ -102,12 +103,14 @@ namespace XenAdmin.SettingsPanels
                 if (vm.other_config["io_limit"] == "0")
                 {
                     checkBox1.Checked = false;
+                    origin_rate_checked = false;
                     label5.Visible = true;
                     textBox1.Text = "";
                 }
                 else
                 {
                     checkBox1.Checked = true;
+                    origin_rate_checked = true;
                     label5.Visible = false;
                     textBox1.Text = vm.other_config["io_limit"];
                 }               
@@ -115,6 +118,7 @@ namespace XenAdmin.SettingsPanels
             else
             {
                 checkBox1.Checked = false;
+                origin_rate_checked = false;
                 label5.Visible = true;
             }
         }
@@ -124,7 +128,7 @@ namespace XenAdmin.SettingsPanels
         }
         public bool HasLimitLevelChanged()
         {
-            if (checkBox2.Checked==false)
+            if (checkBox2.Checked== false && origin_level_checked == true)
             {
                 return true;
             }
@@ -136,11 +140,11 @@ namespace XenAdmin.SettingsPanels
                     return true;
                 }
             }
-            return true;    
+            return false;    
        }
         public bool HasLimitRateChanged()
         {
-            if (checkBox1.Checked==false)
+            if (checkBox1.Checked==false && origin_rate_checked == true)
             {
                 return true;
             }
