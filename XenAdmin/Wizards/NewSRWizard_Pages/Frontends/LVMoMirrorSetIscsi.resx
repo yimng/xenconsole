@@ -723,9 +723,6 @@
   <data name="errorLabelAtHostname.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="errorLabelAtHostname.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="errorLabelAtHostname.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 63</value>
   </data>
@@ -828,9 +825,6 @@
   <data name="scanTargetHostButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="scanTargetHostButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="scanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 170</value>
   </data>
@@ -860,6 +854,42 @@
   </data>
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="spinnerIcon2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="spinnerIcon2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="spinnerIcon2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 92</value>
+  </data>
+  <data name="spinnerIcon2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="spinnerIcon2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="spinnerIcon2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="spinnerIcon2.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="spinnerIcon2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon2.Name" xml:space="preserve">
+    <value>spinnerIcon2</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon2.Type" xml:space="preserve">
+    <value>XenAdmin.Controls.SpinnerIcon, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="labelIscsiIQN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -895,16 +925,16 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;labelIscsiIQN.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="comboBoxIscsiLuns.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
   <data name="comboBoxIscsiLuns.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 30</value>
+    <value>111, 30</value>
   </data>
   <data name="comboBoxIscsiLuns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 21</value>
+    <value>352, 21</value>
   </data>
   <data name="comboBoxIscsiLuns.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -919,7 +949,7 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiLuns.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="targetLunLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -937,13 +967,13 @@
     <value>3, 34</value>
   </data>
   <data name="targetLunLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+    <value>72, 13</value>
   </data>
   <data name="targetLunLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="targetLunLabel.Text" xml:space="preserve">
-    <value>Target &amp;LUN:</value>
+    <value>Target &amp;LUN1:</value>
   </data>
   <data name="&gt;&gt;targetLunLabel.Name" xml:space="preserve">
     <value>targetLunLabel</value>
@@ -955,106 +985,10 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;targetLunLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 60</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 3, 0</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 13</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.TabIndex" type="System.Int32, mscorlib">
-    <value>114</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Text" xml:space="preserve">
-    <value>errorLabelAtTargetLUN</value>
-  </data>
-  <data name="errorLabelAtTargetLUN.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;errorLabelAtTargetLUN.Name" xml:space="preserve">
-    <value>errorLabelAtTargetLUN</value>
-  </data>
-  <data name="&gt;&gt;errorLabelAtTargetLUN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorLabelAtTargetLUN.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;errorLabelAtTargetLUN.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="errorIconAtTargetLUN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="errorIconAtTargetLUN.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="errorIconAtTargetLUN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
-        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
-        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
-        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
-        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
-        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
-        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
-        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
-        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
-        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
-        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
-        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
-        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="errorIconAtTargetLUN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="errorIconAtTargetLUN.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="errorIconAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 57</value>
-  </data>
-  <data name="errorIconAtTargetLUN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="errorIconAtTargetLUN.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="errorIconAtTargetLUN.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;errorIconAtTargetLUN.Name" xml:space="preserve">
-    <value>errorIconAtTargetLUN</value>
-  </data>
-  <data name="&gt;&gt;errorIconAtTargetLUN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorIconAtTargetLUN.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;errorIconAtTargetLUN.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="spinnerIconAtTargetIqn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
-  </data>
-  <data name="spinnerIconAtTargetIqn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="spinnerIconAtTargetIqn.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 5</value>
@@ -1084,7 +1018,7 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetIqn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="spinnerIconAtTargetLun.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -1120,7 +1054,163 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetLun.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="comboBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 60</value>
+  </data>
+  <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 21</value>
+  </data>
+  <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="&gt;&gt;comboBox2.Name" xml:space="preserve">
+    <value>comboBox2</value>
+  </data>
+  <data name="&gt;&gt;comboBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;comboBox2.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="comboBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 90</value>
+  </data>
+  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 21</value>
+  </data>
+  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 64</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Target LUN2:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 94</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Target LUN for Log:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="spinnerIcon1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="spinnerIcon1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="spinnerIcon1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 62</value>
+  </data>
+  <data name="spinnerIcon1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="spinnerIcon1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="spinnerIcon1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="spinnerIcon1.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="spinnerIcon1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon1.Name" xml:space="preserve">
+    <value>spinnerIcon1</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon1.Type" xml:space="preserve">
+    <value>XenAdmin.Controls.SpinnerIcon, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;spinnerIcon1.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1129,10 +1219,10 @@
     <value>3, 16</value>
   </data>
   <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>488, 98</value>
+    <value>488, 114</value>
   </data>
   <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1147,16 +1237,16 @@
     <value>iSCSITargetGroupBox</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelIscsiIQN" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="comboBoxIscsiIqns" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="comboBoxIscsiLuns" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="targetLunLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="errorLabelAtTargetLUN" Row="2" RowSpan="1" Column="2" ColumnSpan="2" /&gt;&lt;Control Name="errorIconAtTargetLUN" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="spinnerIconAtTargetIqn" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="spinnerIconAtTargetLun" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100,Absolute,22" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="spinnerIcon2" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="labelIscsiIQN" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="comboBoxIscsiIqns" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="comboBoxIscsiLuns" Row="1" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="targetLunLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="spinnerIconAtTargetIqn" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="spinnerIconAtTargetLun" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="comboBox2" Row="3" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="comboBox1" Row="4" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="label1" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="spinnerIcon1" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100,Absolute,22" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,Percent,100,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="comboBoxIscsiIqns.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 3</value>
+    <value>111, 3</value>
   </data>
   <data name="comboBoxIscsiIqns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 21</value>
+    <value>352, 21</value>
   </data>
   <data name="comboBoxIscsiIqns.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1171,10 +1261,7 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiIqns.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lunInUseLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>2</value>
   </data>
   <data name="lunInUseLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1197,6 +1284,45 @@
   <data name="iSCSITargetGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="errorLabelAtTargetLUN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 0</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 3, 0</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Text" xml:space="preserve">
+    <value>errorLabelAtTargetLUN</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;errorLabelAtTargetLUN.Name" xml:space="preserve">
+    <value>errorLabelAtTargetLUN</value>
+  </data>
+  <data name="&gt;&gt;errorLabelAtTargetLUN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorLabelAtTargetLUN.Parent" xml:space="preserve">
+    <value>iSCSITargetGroupBox</value>
+  </data>
+  <data name="&gt;&gt;errorLabelAtTargetLUN.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="iSCSITargetGroupBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1207,7 +1333,7 @@
     <value>3, 9, 3, 3</value>
   </data>
   <data name="iSCSITargetGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 117</value>
+    <value>494, 133</value>
   </data>
   <data name="iSCSITargetGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1227,30 +1353,6 @@
   <data name="&gt;&gt;iSCSITargetGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="targetLunLog.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="targetLunLog.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="targetLunLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 76</value>
-  </data>
-  <data name="targetLunLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="targetLunLog.TabIndex" type="System.Int32, mscorlib">
-    <value>118</value>
-  </data>
-  <data name="targetLunLog.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;targetLunLog.Name" xml:space="preserve">
-    <value>targetLunLog</value>
-  </data>
-  <data name="&gt;&gt;targetLunLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1261,10 +1363,10 @@
     <value>96, 96</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 350</value>
+    <value>500, 374</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LVMoISCSI</value>
+    <value>LVMoMirrorSetIscsi</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>

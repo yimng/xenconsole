@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="comboBoxLun2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 106</value>
+  </data>
+  <data name="comboBoxLun2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 21</value>
+  </data>
+  <data name="comboBoxLun1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 79</value>
+  </data>
+  <data name="comboBoxLun1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 21</value>
+  </data>
+  <data name="labelIscsiIQN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="labelIscsiIQN.Text" xml:space="preserve">
+    <value>目标IQN</value>
+  </data>
+  <data name="comboBoxIscsiIqns.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 3</value>
+  </data>
+  <data name="comboBoxIscsiIqns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 21</value>
+  </data>
+  <data name="comboBoxIscsiLunForLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 30</value>
+  </data>
+  <data name="comboBoxIscsiLunForLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 21</value>
+  </data>
+  <data name="targetLunForLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="targetLunForLog.Text" xml:space="preserve">
+    <value>目标LUN(存放Log)</value>
+  </data>
+  <data name="errorLabelAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 60</value>
+  </data>
+  <data name="errorIconAtTargetLUN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
+        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
+        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
+        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
+        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
+        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
+        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
+        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
+        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
+        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
+        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
+        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
+        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="errorIconAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 57</value>
+  </data>
+  <data name="Lun1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="Lun1.Text" xml:space="preserve">
+    <value>目标LUN1(用作镜像)</value>
+  </data>
+  <data name="Lun2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 13</value>
+  </data>
+  <data name="Lun2.Text" xml:space="preserve">
+    <value>目标LUN2(用作镜像):</value>
+  </data>
+  <data name="iSCSITargetGroupBox.Text" xml:space="preserve">
+    <value>iSCSI目标</value>
+  </data>
+  <data name="placeHolderLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 20</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="errorLabelAtCHAPPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="errorLabelAtCHAPPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="errorLabelAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 151</value>
+  </data>
+  <data name="errorLabelAtCHAPPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="errorLabelAtCHAPPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="errorIconAtCHAPPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
+        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
+        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
+        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
+        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
+        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
+        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
+        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
+        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
+        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
+        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
+        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
+        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="errorIconAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 154</value>
+  </data>
+  <data name="errorIconAtHostOrIP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
+        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
+        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
+        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
+        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
+        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
+        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
+        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
+        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
+        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
+        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
+        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
+        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="scanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="scanTargetHostButton.Text" xml:space="preserve">
+    <value>扫描目标主机</value>
+  </data>
+  <data name="labelIscsiTargetHost.Text" xml:space="preserve">
+    <value>目标主机名/IP地址</value>
+  </data>
+  <data name="labelCHAPuser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="labelCHAPuser.Text" xml:space="preserve">
+    <value>CHAP用户名:</value>
+  </data>
+  <data name="IScsiChapSecretLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="IScsiChapSecretLabel.Text" xml:space="preserve">
+    <value>CHAP密码:</value>
+  </data>
+  <data name="IscsiUseChapCheckBox.Text" xml:space="preserve">
+    <value>使用CHAP身份验证</value>
+  </data>
+  <data name="spinnerIconAtScanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 180</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>499, 203</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>为ISCSI存储提供目标主机，在继续操作前指示目标IQN和目标LUN</value>
+  </data>
+</root>

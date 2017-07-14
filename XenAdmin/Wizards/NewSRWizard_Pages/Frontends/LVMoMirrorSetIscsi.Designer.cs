@@ -1,6 +1,6 @@
 namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 {
-    partial class LVMoISCSI
+    partial class LVMoMirrorSetIscsi
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LVMoISCSI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LVMoMirrorSetIscsi));
             this.textBoxIscsiPort = new System.Windows.Forms.TextBox();
             this.labelColon = new System.Windows.Forms.Label();
             this.toolTipContainerIQNscan = new XenAdmin.Controls.ToolTipContainer();
@@ -50,26 +50,31 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.placeHolderLabel2 = new System.Windows.Forms.Label();
             this.placeholderLabel = new System.Windows.Forms.Label();
             this.errorLabelAtCHAPPassword = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.iSCSITargetGroupBox = new XenAdmin.Controls.DecentGroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
-            this.errorIconAtTargetLUN = new System.Windows.Forms.PictureBox();
-            this.spinnerIconAtTargetIqn = new XenAdmin.Controls.SpinnerIcon();
-            this.spinnerIconAtTargetLun = new XenAdmin.Controls.SpinnerIcon();
             this.errorIconAtCHAPPassword = new System.Windows.Forms.PictureBox();
             this.errorIconAtHostOrIP = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
-            this.targetLunLog = new System.Windows.Forms.Label();
+            this.iSCSITargetGroupBox = new XenAdmin.Controls.DecentGroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.spinnerIconAtTargetIqn = new XenAdmin.Controls.SpinnerIcon();
+            this.spinnerIconAtTargetLun = new XenAdmin.Controls.SpinnerIcon();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.spinnerIcon1 = new XenAdmin.Controls.SpinnerIcon();
+            this.spinnerIcon2 = new XenAdmin.Controls.SpinnerIcon();
+            this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.iSCSITargetGroupBox.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).BeginInit();
+            this.iSCSITargetGroupBox.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxIscsiPort
@@ -228,15 +233,35 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.errorLabelAtCHAPPassword.ForeColor = System.Drawing.Color.Red;
             this.errorLabelAtCHAPPassword.Name = "errorLabelAtCHAPPassword";
             // 
+            // errorIconAtCHAPPassword
+            // 
+            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
+            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
+            this.errorIconAtCHAPPassword.TabStop = false;
+            // 
+            // errorIconAtHostOrIP
+            // 
+            resources.ApplyResources(this.errorIconAtHostOrIP, "errorIconAtHostOrIP");
+            this.errorIconAtHostOrIP.Name = "errorIconAtHostOrIP";
+            this.errorIconAtHostOrIP.TabStop = false;
+            // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
             this.tableLayoutPanel1.SetColumnSpan(this.label11, 6);
             this.label11.Name = "label11";
             // 
+            // spinnerIconAtScanTargetHostButton
+            // 
+            resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
+            this.spinnerIconAtScanTargetHostButton.Name = "spinnerIconAtScanTargetHostButton";
+            this.spinnerIconAtScanTargetHostButton.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
+            this.spinnerIconAtScanTargetHostButton.TabStop = false;
+            // 
             // iSCSITargetGroupBox
             // 
             resources.ApplyResources(this.iSCSITargetGroupBox, "iSCSITargetGroupBox");
+            this.iSCSITargetGroupBox.Controls.Add(this.errorLabelAtTargetLUN);
             this.iSCSITargetGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.iSCSITargetGroupBox.Name = "iSCSITargetGroupBox";
             this.iSCSITargetGroupBox.TabStop = false;
@@ -244,28 +269,19 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.spinnerIcon2, 3, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelIscsiIQN, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxIscsiIqns, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxIscsiLuns, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.targetLunLabel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.errorLabelAtTargetLUN, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.errorIconAtTargetLUN, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.spinnerIconAtTargetIqn, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.spinnerIconAtTargetLun, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.spinnerIcon1, 3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // errorLabelAtTargetLUN
-            // 
-            resources.ApplyResources(this.errorLabelAtTargetLUN, "errorLabelAtTargetLUN");
-            this.tableLayoutPanel2.SetColumnSpan(this.errorLabelAtTargetLUN, 2);
-            this.errorLabelAtTargetLUN.ForeColor = System.Drawing.Color.Red;
-            this.errorLabelAtTargetLUN.Name = "errorLabelAtTargetLUN";
-            // 
-            // errorIconAtTargetLUN
-            // 
-            resources.ApplyResources(this.errorIconAtTargetLUN, "errorIconAtTargetLUN");
-            this.errorIconAtTargetLUN.Name = "errorIconAtTargetLUN";
-            this.errorIconAtTargetLUN.TabStop = false;
             // 
             // spinnerIconAtTargetIqn
             // 
@@ -281,49 +297,73 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.spinnerIconAtTargetLun.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIconAtTargetLun.TabStop = false;
             // 
-            // errorIconAtCHAPPassword
+            // comboBox1
             // 
-            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
-            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
-            this.errorIconAtCHAPPassword.TabStop = false;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.tableLayoutPanel2.SetColumnSpan(this.comboBox1, 2);
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Name = "comboBox1";
             // 
-            // errorIconAtHostOrIP
+            // comboBox2
             // 
-            resources.ApplyResources(this.errorIconAtHostOrIP, "errorIconAtHostOrIP");
-            this.errorIconAtHostOrIP.Name = "errorIconAtHostOrIP";
-            this.errorIconAtHostOrIP.TabStop = false;
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.tableLayoutPanel2.SetColumnSpan(this.comboBox2, 2);
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Name = "comboBox2";
             // 
-            // spinnerIconAtScanTargetHostButton
+            // label1
             // 
-            resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
-            this.spinnerIconAtScanTargetHostButton.Name = "spinnerIconAtScanTargetHostButton";
-            this.spinnerIconAtScanTargetHostButton.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
-            this.spinnerIconAtScanTargetHostButton.TabStop = false;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
-            // targetLunLog
+            // label2
             // 
-            resources.ApplyResources(this.targetLunLog, "targetLunLog");
-            this.targetLunLog.Name = "targetLunLog";
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
-            // LVMoISCSI
+            // spinnerIcon1
+            // 
+            resources.ApplyResources(this.spinnerIcon1, "spinnerIcon1");
+            this.spinnerIcon1.Name = "spinnerIcon1";
+            this.spinnerIcon1.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
+            this.spinnerIcon1.TabStop = false;
+            // 
+            // spinnerIcon2
+            // 
+            resources.ApplyResources(this.spinnerIcon2, "spinnerIcon2");
+            this.spinnerIcon2.Name = "spinnerIcon2";
+            this.spinnerIcon2.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
+            this.spinnerIcon2.TabStop = false;
+            // 
+            // errorLabelAtTargetLUN
+            // 
+            resources.ApplyResources(this.errorLabelAtTargetLUN, "errorLabelAtTargetLUN");
+            this.errorLabelAtTargetLUN.ForeColor = System.Drawing.Color.Red;
+            this.errorLabelAtTargetLUN.Name = "errorLabelAtTargetLUN";
+            // 
+            // LVMoMirrorSetIscsi
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.iSCSITargetGroupBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolTipContainerIQNscan);
-            this.Name = "LVMoISCSI";
+            this.Name = "LVMoMirrorSetIscsi";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.iSCSITargetGroupBox.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).EndInit();
+            this.iSCSITargetGroupBox.ResumeLayout(false);
+            this.iSCSITargetGroupBox.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,16 +392,20 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private XenAdmin.Controls.DecentGroupBox iSCSITargetGroupBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.PictureBox errorIconAtTargetLUN;
         private System.Windows.Forms.PictureBox errorIconAtHostOrIP;
         private System.Windows.Forms.PictureBox errorIconAtCHAPPassword;
         private System.Windows.Forms.Label errorLabelAtCHAPPassword;
-        private System.Windows.Forms.Label errorLabelAtTargetLUN;
         private XenAdmin.Controls.SpinnerIcon spinnerIconAtTargetIqn;
         private XenAdmin.Controls.SpinnerIcon spinnerIconAtTargetLun;
         private XenAdmin.Controls.SpinnerIcon spinnerIconAtScanTargetHostButton;
         private System.Windows.Forms.Label placeholderLabel;
         private System.Windows.Forms.Label placeHolderLabel2;
-        private System.Windows.Forms.Label targetLunLog;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Controls.SpinnerIcon spinnerIcon2;
+        private Controls.SpinnerIcon spinnerIcon1;
+        private System.Windows.Forms.Label errorLabelAtTargetLUN;
     }
 }

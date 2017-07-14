@@ -14518,4 +14518,16 @@ Size: {11}</value>
   <data name="VCPU_HOTPLUG_WINDOWS_UNAVAILABLE" xml:space="preserve">
     <value>Hot-plug is not supported by Windows</value>
   </data>
+  <data name="NEWSR_ISCSIORFC" xml:space="preserve">
+    <value>Choose source</value>
+  </data>
+  <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
+    <value>Use ISCSI to create mirror</value>
+  </data>
+  <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
+    <value>Lvm Mirror-ISCSI</value>
+  </data>
+  <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
+    <value>Enter a path for your Mirror-iSCSI storage</value>
+  </data>
 </root>

@@ -65,6 +65,7 @@ namespace XenAdmin.Wizards
         private readonly LVMoBondSummary xenTabPageLvmoBondSummary;
         private readonly LVMoBond xenTabPageLvmoBond;
         private readonly LVMoMirror xenTabPageLvmoMirror;
+        private readonly LVMoMirrorIscsi xenTabPageLvmoMirrorSetIscsi;
         private readonly LVMoMirrorChooseLogPage xenTabPageLVMoMirrorChooseLog;
         private readonly LVMoMirrorSummaryPage xenTabPageLvmoMirrorSummary;
         private readonly CslgSettings xenTabPageCslgSettings;
@@ -119,8 +120,9 @@ namespace XenAdmin.Wizards
             xenTabPageLvmoBondSummary = new LVMoBondSummary();
             xenTabPageLvmoBond = new LVMoBond();
             xenTabPageLvmoMirror = new LVMoMirror();
+            xenTabPageLvmoMirrorSetIscsi = new LVMoMirrorIscsi();
             xenTabPageLVMoMirrorChooseLog = new LVMoMirrorChooseLogPage();
-            xenTabPageLvmoMirrorSummary = new LVMoMirrorSummaryPage();//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            xenTabPageLvmoMirrorSummary = new LVMoMirrorSummaryPage();
             xenTabPageCslgSettings = new CslgSettings();
             xenTabPageCslgLocation = new CslgLocation();
             xenTabPageFilerDetails = new FilerDetails();
@@ -315,7 +317,6 @@ namespace XenAdmin.Wizards
             bool runPrechecks = _srToReattach != null && _rbac
                                     ? senderPage == xenTabPageRbacWarning
                                     : senderPage == xenTabPageSrName;
-
             if (runPrechecks)
             {
 
@@ -341,7 +342,6 @@ namespace XenAdmin.Wizards
                     return xenTabPageCslg.PerformStorageSystemScan();
                 }
             }
-			
 			if (senderPage == xenTabPageLvmoFcoe)
             {
                 return CanShowLVMoHBASummaryPage(xenTabPageLvmoFcoe.SrDescriptors);
@@ -377,11 +377,15 @@ namespace XenAdmin.Wizards
 
                 if (m_srWizardType is SrWizardType_VhdoNfs)
                     AddPage(xenTabPageVhdoNFS);
-                else if(m_srWizardType is SrWizardType_lvmomirror)
+                else if (m_srWizardType is SrWizardType_lvmomirror)
                 {
                     AddPage(xenTabPageLvmoMirror);
                     AddPage(xenTabPageLVMoMirrorChooseLog);
                     AddPage(xenTabPageLvmoMirrorSummary);
+                }
+                else if (m_srWizardType is SrWizardType_LvmoMirror_Iscsi)
+                {
+                    AddPage(xenTabPageLvmoMirrorSetIscsi);
                 }
                 else if (m_srWizardType is SrWizardType_LvmoIscsi)
                 {
@@ -459,6 +463,8 @@ namespace XenAdmin.Wizards
                     xenTabPageLvmoMirror.SrWizardType = m_srWizardType;
                     xenTabPageLVMoMirrorChooseLog.SrWizardType = m_srWizardType;
                 }
+                else if (m_srWizardType is SrWizardType_LvmoMirror_Iscsi)
+                    xenTabPageLvmoMirrorSetIscsi.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_Cslg || m_srWizardType is SrWizardType_NetApp || m_srWizardType is SrWizardType_EqualLogic)
                     xenTabPageCslg.SrWizardType = m_srWizardType;
                 else if (m_srWizardType is SrWizardType_CifsIso)
@@ -488,6 +494,13 @@ namespace XenAdmin.Wizards
 
                 m_srWizardType.UUID = xenTabPageLvmoIscsi.UUID;
                 m_srWizardType.DeviceConfig = xenTabPageLvmoIscsi.DeviceConfig;
+            }
+            else if (senderPagetype == typeof(LVMoMirrorIscsi))
+            {
+                SetCustomDescription(m_srWizardType, xenTabPageLvmoMirrorSetIscsi.SrDescription);
+
+                m_srWizardType.UUID = xenTabPageLvmoMirrorSetIscsi.UUID;
+                m_srWizardType.DeviceConfig = xenTabPageLvmoMirrorSetIscsi.DeviceConfig;
             }
             else if (senderPagetype == typeof(NFS_ISO))
             {
@@ -567,7 +580,7 @@ namespace XenAdmin.Wizards
                 srwizardtype.Description = description;
         }
 
-        protected override void FinishWizard()//1!!!!!!!!!!
+        protected override void FinishWizard()
         {
             if (m_srWizardType is SrWizardType_LvmoHba || m_srWizardType is SrWizardType_Fcoe || m_srWizardType is SrWizardType_lvmobond ||m_srWizardType is SrWizardType_lvmomirror)
             {

@@ -273,27 +273,27 @@ namespace XenAdmin.Dialogs
                         vbd.bootable = ud == "0" && !alreadyHasBootableDisk;
                         vbd.userdevice = ud;
                         // Now try to plug the VBD.
-                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
+                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(TheVM.Connection.Session);
                     });
                 action.VM = TheVM;
-                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Blocks).ShowDialog();
+                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Blocks).ShowDialog();                
                 if (!action.Succeeded)
                     return;
             }
             else
             {
                 CreateDiskAction action = new CreateDiskAction(vdi);
-                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Marquee).ShowDialog();
+                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Marquee);
                 if (!action.Succeeded)
                     return;
             }
             DialogResult = DialogResult.OK;
             Close();
             //若虚拟机启用了IO功能才进行下列操作            
-            if (TheVM.other_config.ContainsKey("io_limit"))
+            if (TheVM.other_config.ContainsKey("io_limit")||sr.other_config.ContainsKey("scheduler"))
             {
                 String _class = "0";
-                if (long.Parse(TheVM.other_config["io_limit"]) > 0)
+                if (sr.other_config.ContainsKey("scheduler")&&sr.other_config["scheduler"]=="cfq")
                 {
                     //获取原class值（优先级）
                     List<XenRef<VBD>> origin_VBDs = TheVM.VBDs;
@@ -346,11 +346,13 @@ namespace XenAdmin.Dialogs
             args.Add("vm_uuid",TheVM.uuid);
             if (TheVM.other_config.ContainsKey("io_limit"))
             {
-                if (long.Parse(TheVM.other_config["io_limit"]) > 0)
-                {
-                    args.Add("mbps", TheVM.other_config["io_limit"]);
-                    XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
-                }
+                args.Add("mbps", TheVM.other_config["io_limit"]);
+                XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+            }
+            else
+            {
+                args.Add("mbps", "0");
+                XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
             }
         }
         private static bool HasBootableDisk(VM vm)

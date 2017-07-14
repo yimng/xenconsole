@@ -14377,7 +14377,7 @@ SCSI ID: {6}
     <value>选择一个LUN存放log</value>
   </data>
   <data name="LVMOMIRROR_BLURB_ENHANCEDSR" xml:space="preserve">
-    <value>升级vGate以使用此功能</value>
+    <value>升级vGate到企业增强版以使用此功能</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
     <value>vGate 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
@@ -14470,5 +14470,17 @@ SCSI ID: {10}
   </data>
   <data name="VCPU_HOTPLUG_WINDOWS_UNAVAILABLE" xml:space="preserve">
     <value>Windows不支持CPU热添加</value>
+  </data>
+  <data name="NEWSR_ISCSIORFC" xml:space="preserve">
+    <value>请选择LUN的来源</value>
+  </data>
+  <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
+    <value>利用ISCSI做异构存储双活</value>
+  </data>
+  <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
+    <value>异构存储双活-ISCSI</value>
+  </data>
+  <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
+    <value>输入用于异构存储双活的iSCSI路径</value>
   </data>
 </root>

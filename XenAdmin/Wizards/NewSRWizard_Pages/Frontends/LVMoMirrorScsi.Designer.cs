@@ -1,6 +1,6 @@
 namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 {
-    partial class LVMoISCSI
+    partial class LVMoMirrorScsi
     {
         /// <summary> 
         /// Required designer variable.
@@ -50,26 +50,25 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.placeHolderLabel2 = new System.Windows.Forms.Label();
             this.placeholderLabel = new System.Windows.Forms.Label();
             this.errorLabelAtCHAPPassword = new System.Windows.Forms.Label();
+            this.errorIconAtCHAPPassword = new System.Windows.Forms.PictureBox();
+            this.errorIconAtHostOrIP = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
             this.iSCSITargetGroupBox = new XenAdmin.Controls.DecentGroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
             this.errorIconAtTargetLUN = new System.Windows.Forms.PictureBox();
             this.spinnerIconAtTargetIqn = new XenAdmin.Controls.SpinnerIcon();
             this.spinnerIconAtTargetLun = new XenAdmin.Controls.SpinnerIcon();
-            this.errorIconAtCHAPPassword = new System.Windows.Forms.PictureBox();
-            this.errorIconAtHostOrIP = new System.Windows.Forms.PictureBox();
-            this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
-            this.targetLunLog = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).BeginInit();
             this.iSCSITargetGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxIscsiPort
@@ -228,11 +227,34 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.errorLabelAtCHAPPassword.ForeColor = System.Drawing.Color.Red;
             this.errorLabelAtCHAPPassword.Name = "errorLabelAtCHAPPassword";
             // 
+            // errorIconAtCHAPPassword
+            // 
+            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
+            this.errorIconAtCHAPPassword.ErrorImage = null;
+            this.errorIconAtCHAPPassword.InitialImage = null;
+            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
+            this.errorIconAtCHAPPassword.TabStop = false;
+            // 
+            // errorIconAtHostOrIP
+            // 
+            resources.ApplyResources(this.errorIconAtHostOrIP, "errorIconAtHostOrIP");
+            this.errorIconAtHostOrIP.ErrorImage = null;
+            this.errorIconAtHostOrIP.InitialImage = null;
+            this.errorIconAtHostOrIP.Name = "errorIconAtHostOrIP";
+            this.errorIconAtHostOrIP.TabStop = false;
+            // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
             this.tableLayoutPanel1.SetColumnSpan(this.label11, 6);
             this.label11.Name = "label11";
+            // 
+            // spinnerIconAtScanTargetHostButton
+            // 
+            resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
+            this.spinnerIconAtScanTargetHostButton.Name = "spinnerIconAtScanTargetHostButton";
+            this.spinnerIconAtScanTargetHostButton.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
+            this.spinnerIconAtScanTargetHostButton.TabStop = false;
             // 
             // iSCSITargetGroupBox
             // 
@@ -264,6 +286,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             // errorIconAtTargetLUN
             // 
             resources.ApplyResources(this.errorIconAtTargetLUN, "errorIconAtTargetLUN");
+            this.errorIconAtTargetLUN.ErrorImage = null;
+            this.errorIconAtTargetLUN.InitialImage = null;
             this.errorIconAtTargetLUN.Name = "errorIconAtTargetLUN";
             this.errorIconAtTargetLUN.TabStop = false;
             // 
@@ -281,30 +305,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.spinnerIconAtTargetLun.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIconAtTargetLun.TabStop = false;
             // 
-            // errorIconAtCHAPPassword
-            // 
-            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
-            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
-            this.errorIconAtCHAPPassword.TabStop = false;
-            // 
-            // errorIconAtHostOrIP
-            // 
-            resources.ApplyResources(this.errorIconAtHostOrIP, "errorIconAtHostOrIP");
-            this.errorIconAtHostOrIP.Name = "errorIconAtHostOrIP";
-            this.errorIconAtHostOrIP.TabStop = false;
-            // 
-            // spinnerIconAtScanTargetHostButton
-            // 
-            resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
-            this.spinnerIconAtScanTargetHostButton.Name = "spinnerIconAtScanTargetHostButton";
-            this.spinnerIconAtScanTargetHostButton.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
-            this.spinnerIconAtScanTargetHostButton.TabStop = false;
-            // 
-            // targetLunLog
-            // 
-            resources.ApplyResources(this.targetLunLog, "targetLunLog");
-            this.targetLunLog.Name = "targetLunLog";
-            // 
             // LVMoISCSI
             // 
             resources.ApplyResources(this, "$this");
@@ -315,15 +315,15 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             this.Name = "LVMoISCSI";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).EndInit();
             this.iSCSITargetGroupBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,6 +362,5 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private XenAdmin.Controls.SpinnerIcon spinnerIconAtScanTargetHostButton;
         private System.Windows.Forms.Label placeholderLabel;
         private System.Windows.Forms.Label placeHolderLabel2;
-        private System.Windows.Forms.Label targetLunLog;
     }
 }

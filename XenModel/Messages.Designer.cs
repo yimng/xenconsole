@@ -25751,6 +25751,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Choose source 的本地化字符串。
+        /// </summary>
+        public static string NEWSR_ISCSIORFC {
+            get {
+                return ResourceManager.GetString("NEWSR_ISCSIORFC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 NFS ISO Library [{0}] 的本地化字符串。
         /// </summary>
         public static string NEWSR_ISO_DESCRIPTION {
@@ -26035,6 +26044,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 Use ISCSI to create mirror 的本地化字符串。
+        /// </summary>
+        public static string NEWSR_MIRROR_ISCSI_BLURB {
+            get {
+                return ResourceManager.GetString("NEWSR_MIRROR_ISCSI_BLURB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Warning: you must ensure that the following SR is not in use by any server not connected to [vGate Console]. Failure to do so may result in data loss.
         ///
         ///SR:  {0}
@@ -26210,6 +26228,15 @@ namespace XenAdmin {
         public static string NEWSR_PATH_ISO_CIFS {
             get {
                 return ResourceManager.GetString("NEWSR_PATH_ISO_CIFS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Enter a path for your Mirror-iSCSI storage 的本地化字符串。
+        /// </summary>
+        public static string NEWSR_PATH_MIRROR_ISCSI {
+            get {
+                return ResourceManager.GetString("NEWSR_PATH_MIRROR_ISCSI", resourceCulture);
             }
         }
         
@@ -34080,6 +34107,15 @@ namespace XenAdmin {
         public static string SRWIZARD_ISCSI_STORAGE {
             get {
                 return ResourceManager.GetString("SRWIZARD_ISCSI_STORAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Lvm Mirror-ISCSI 的本地化字符串。
+        /// </summary>
+        public static string SRWIZARD_MIRROR_ISCSI {
+            get {
+                return ResourceManager.GetString("SRWIZARD_MIRROR_ISCSI", resourceCulture);
             }
         }
         

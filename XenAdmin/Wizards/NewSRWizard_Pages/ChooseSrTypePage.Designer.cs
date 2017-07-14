@@ -49,6 +49,7 @@
             this.labelISOlibrary = new System.Windows.Forms.Label();
             this.radioButtonCifsIso = new System.Windows.Forms.RadioButton();
             this.radioButtonNFSIso = new System.Windows.Forms.RadioButton();
+            this.radioButtonLVMMirror_ISCSI = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -149,9 +150,10 @@
             this.tableLayoutPanel3.Controls.Add(this.rawhbaButton, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonlunbond, 0, 8);
             this.tableLayoutPanel3.Controls.Add(this.radioButtonLVMMirror, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.labelISOlibrary, 0, 13);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonCifsIso, 0, 15);
-            this.tableLayoutPanel3.Controls.Add(this.radioButtonNFSIso, 0, 14);
+            this.tableLayoutPanel3.Controls.Add(this.labelISOlibrary, 0, 14);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonCifsIso, 0, 21);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonNFSIso, 0, 20);
+            this.tableLayoutPanel3.Controls.Add(this.radioButtonLVMMirror_ISCSI, 0, 13);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // radioButtonFcoe
@@ -222,6 +224,14 @@
             this.radioButtonNFSIso.UseVisualStyleBackColor = false;
             this.radioButtonNFSIso.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
+            // radioButtonLVMMirror_ISCSI
+            // 
+            resources.ApplyResources(this.radioButtonLVMMirror_ISCSI, "radioButtonLVMMirror_ISCSI");
+            this.radioButtonLVMMirror_ISCSI.Name = "radioButtonLVMMirror_ISCSI";
+            this.radioButtonLVMMirror_ISCSI.TabStop = true;
+            this.radioButtonLVMMirror_ISCSI.UseVisualStyleBackColor = false;
+            this.radioButtonLVMMirror_ISCSI.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
+            // 
             // ChooseSrTypePage
             // 
             resources.ApplyResources(this, "$this");
@@ -259,5 +269,6 @@
         private System.Windows.Forms.Label labelISOlibrary;
         private System.Windows.Forms.RadioButton radioButtonNFSIso;
         private System.Windows.Forms.RadioButton radioButtonCifsIso;
+        private System.Windows.Forms.RadioButton radioButtonLVMMirror_ISCSI;
     }
 }

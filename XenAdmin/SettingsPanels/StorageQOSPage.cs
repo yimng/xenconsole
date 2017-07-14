@@ -248,8 +248,7 @@ namespace XenAdmin.SettingsPanels
             if (checkBox2.Checked==false && origin_level_checked == true)
             {
                 List<XenRef<VBD>> allVBDs = new List<XenRef<VBD>>();
-                allVBDs = vm.VBDs;
-                List<VM> running_vms = new List<VM>();   
+                allVBDs = vm.VBDs;                   
                 foreach (XenRef<VBD> v in allVBDs)
                 {
                     if (vm.Connection.Resolve<VBD>(v).type == vbd_type.CD)
@@ -298,9 +297,9 @@ namespace XenAdmin.SettingsPanels
                         }
                         else
                         {
-                            XenAPI.SR.add_to_other_config(sr.Connection.Session, sr.opaque_ref, "scheduler", "cfq");
-                            sr_need_reattach.Add(sr);
+                            XenAPI.SR.add_to_other_config(sr.Connection.Session, sr.opaque_ref, "scheduler", "cfq");                           
                         }
+                        sr_need_reattach.Add(sr);
                     }
                 }
                 foreach (XenRef<VBD> v in allVBDs)
@@ -394,11 +393,8 @@ namespace XenAdmin.SettingsPanels
                     else
                     {
                         _ValidToSave4 = false;
-                        new HasRunningVMsWarningDialog().ShowDialog();
-                        foreach (SR sr in sr_need_reattach)
-                        {
-                            XenAPI.SR.remove_from_other_config(sr.Connection.Session, sr.opaque_ref, "scheduler");                                                         
-                        }
+                        // new HasRunningVMsWarningDialog(running_vms,sr_need_reattach,allVBDs).ShowDialog();
+                        new HasRunningVMsWarningDialog(running_vms, sr_need_reattach, allVBDs).ShowDialog();
                         return null; 
                     }
                 }

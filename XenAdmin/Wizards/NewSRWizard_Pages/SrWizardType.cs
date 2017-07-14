@@ -120,7 +120,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public List<FibreChannelDevice> Device { get; private set; }
     }
 
-    public class LVMoMirrorSrDescriptor : SrDescriptor//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    public class LVMoMirrorSrDescriptor : SrDescriptor
     {
         public List<FibreChannelDevice> Device { get; private set; }
         public LVMoMirrorSrDescriptor(List<FibreChannelDevice> device, IXenConnection connection)
@@ -487,11 +487,26 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
-       public override bool ShowReattachWarning { get { return true; } }
+        public override bool ShowReattachWarning { get { return true; } }
         public override bool AllowToCreateNewSr { get; set; }
         public override void ResetSrName(IXenConnection connection)
         { 
             SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_LVMoMirror_DEFAULT_NAME, connection);
+        }
+    }
+    public class SrWizardType_LvmoMirror_Iscsi : SrWizardType
+    {
+        public override bool IsEnhancedSR { get { return true; } }
+        public override string FrontendBlurb { get { return Messages.NEWSR_MIRROR_ISCSI_BLURB; } }
+        public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror_iscsi; } }
+        public override string ContentType { get { return ""; } }
+        public override bool ShowIntroducePrompt { get { return false; } }
+        public override bool ShowReattachWarning { get { return true; } }
+        public override bool AllowToCreateNewSr { get; set; }
+
+        public override void ResetSrName(IXenConnection connection)
+        {
+            SrName = SrWizardHelpers.DefaultSRName(Messages.SRWIZARD_MIRROR_ISCSI, connection);
         }
     }
 }

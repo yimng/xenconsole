@@ -54,7 +54,7 @@ namespace XenAPI
             iscsi,
             ebs, rawhba,
             smb, lvmofcoe,
-            nutanix, nutanixiso, lvmobond,lvmomirror,
+            nutanix, nutanixiso, lvmobond,lvmomirror,lvmomirror_iscsi,
             tmpfs
         }
 
