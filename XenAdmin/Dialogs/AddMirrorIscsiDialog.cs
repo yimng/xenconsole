@@ -1,35 +1,4 @@
-﻿/* Copyright (c) Citrix Systems, Inc. 
- * All rights reserved. 
- * 
- * Redistribution and use in source and binary forms, 
- * with or without modification, are permitted provided 
- * that the following conditions are met: 
- * 
- * *   Redistributions of source code must retain the above 
- *     copyright notice, this list of conditions and the 
- *     following disclaimer. 
- * *   Redistributions in binary form must reproduce the above 
- *     copyright notice, this list of conditions and the 
- *     following disclaimer in the documentation and/or other 
- *     materials provided with the distribution. 
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND 
- * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
- * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
- * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR 
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
- * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF 
- * SUCH DAMAGE.
- */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using XenAPI;
@@ -42,10 +11,11 @@ using XenAdmin.Dialogs;
 using System.Drawing;
 using System.Linq;
 using XenAdmin.Utils;
+using XenAdmin.Wizards.NewSRWizard_Pages;
 
-namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
+namespace XenAdmin.Dialogs
 {
-    public partial class LVMoMirrorIscsi : XenTabPage
+    public partial class AddMirrorIscsiDialog : Form
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -56,6 +26,11 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         /// If this is null, indicates the LUN should be formatted into a new SR.
         /// </summary>
         private SR.SRInfo _srToIntroduce;
+        private IXenConnection Connection;
+        private SR _sr;
+        private string origin_lun_text;
+        private string origin_lun;
+        private AsyncAction _repairAction;
 
         private ISCSIPopulateLunsAction IscsiPopulateLunsAction;
         private ISCSIPopulateIQNsAction IscsiPopulateIqnsAction;
@@ -76,8 +51,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private const string CHAPUSER = "chapuser";
         private const string CHAPPASSWORD = "chappassword";
 
-        private string Lun1_Size = "0";
-        private string Lun2_Size = "0";
         private IEnumerable<Control> ErrorIcons
         {
             get { return new Control[] { errorIconAtCHAPPassword, errorIconAtHostOrIP, errorIconAtTargetLUN }; }
@@ -90,7 +63,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
         private IEnumerable<Control> SpinnerControls
         {
-            get { return new Control[] { spinnerIconAtScanTargetHostButton, spinnerIconAtTargetIqn, spinnerIconAtTargetLun,spinnerIcon1,spinnerIcon2 }; }
+            get { return new Control[] { spinnerIconAtScanTargetHostButton, spinnerIconAtTargetIqn, spinnerIconAtTargetLun, }; }
         }
 
         private IEnumerable<Control> UserInputControls
@@ -100,36 +73,26 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 return new Control[]
                            {
                                textBoxIscsiHost, textBoxIscsiPort, IscsiUseChapCheckBox, IScsiChapUserTextBox,
-                               IScsiChapSecretTextBox, scanTargetHostButton, comboBoxIscsiIqns, comboBoxIscsiLunForLog,comboBoxLun1,comboBoxLun2
+                               IScsiChapSecretTextBox, scanTargetHostButton, comboBoxIscsiIqns, comboBoxLun,
                            };
             }
         }
 
         private readonly TemporaryDisablerForControls controlDisabler = new TemporaryDisablerForControls();
 
-        public LVMoMirrorIscsi()
+        public AddMirrorIscsiDialog()
         {
             InitializeComponent();
+            PopulatePage();
         }
-
-        #region XentabPage overrides
-
-        public override string PageTitle { get { return Messages.NEWSR_PATH_MIRROR_ISCSI; } }
-
-        public override string Text { get { return Messages.NEWSR_LOCATION; } }
-
-        public override string HelpID { get { return "Location_MIRROR_ISCSI"; } }
-
-        public override void PageLoaded(PageLoadedDirection direction)
+        public AddMirrorIscsiDialog(SR sr)
         {
-            base.PageLoaded(direction);
-            HelpersGUI.PerformIQNCheck();
-
-            if (direction == PageLoadedDirection.Forward)
-                HelpersGUI.FocusFirstControl(Controls);
+            _sr = sr;
+            Connection = sr.Connection;
+            InitializeComponent();
+            PopulatePage();
         }
-
-        public override void PageLeave(PageLoadedDirection direction, ref bool cancel)
+        public void PageLeave(PageLoadedDirection direction, ref bool cancel)
         {
             if (direction == PageLoadedDirection.Back)
                 return;
@@ -155,8 +118,8 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             // Start probe
             // SrProbeAction IscsiProbeAction = new SrProbeAction(Connection, master, SR.SRTypes.lvmomirror_iscsi, dconf);
-            SrProbeAction MirrorProbeAction = new SrProbeAction(Connection, master, SR.SRTypes.lvmomirror_iscsi, dconf);
-            using (var dialog = new ActionProgressDialog(MirrorProbeAction, ProgressBarStyle.Marquee))
+            SrProbeAction IscsiProbeAction = new SrProbeAction(Connection, master, SR.SRTypes.iscsi, dconf);
+            using (var dialog = new ActionProgressDialog(IscsiProbeAction, ProgressBarStyle.Marquee))
             {
                 dialog.ShowCancel = true;
                 dialog.ShowDialog(this);
@@ -164,45 +127,13 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             // Probe has been performed. Now ask the user if they want to Reattach/Format/Cancel.
             // Will return false on cancel
-            cancel = !ExamineIscsiProbeResults(MirrorProbeAction);
+            cancel = !ExamineIscsiProbeResults(IscsiProbeAction);
             iscsiProbeError = cancel;
-            SrCreateAction.mirror_iscsi_size = Lun1_Size; 
-            base.PageLeave(direction, ref cancel);
         }
 
         bool iscsiProbeError = false;
-        public override bool EnableNext()
-        {
-            UInt16 i;
-            bool portValid = UInt16.TryParse(textBoxIscsiPort.Text, out i);
-            label1.Visible = false;
-            Lun_Size_Different.Visible = false;
-            if ((comboBoxIscsiLunForLog.Text == comboBoxLun1.Text)&&comboBoxLun1.Text!="" || (comboBoxIscsiLunForLog.Text == comboBoxLun2.Text) && comboBoxLun2.Text != "" || (comboBoxLun1.Text == comboBoxLun2.Text) && comboBoxLun1.Text != "")
-            {
-                label1.Visible = true;
-            }
-            if (Lun1_Size != Lun2_Size )
-            {
-                Lun_Size_Different.Visible = true;
-            }
-            return !String.IsNullOrEmpty(getIscsiHost())
-                && portValid
-                && !(IscsiUseChapCheckBox.Checked && String.IsNullOrEmpty(IScsiChapUserTextBox.Text))
-                && comboBoxIscsiLunForLog.SelectedItem != null && comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN
-                && !iscsiProbeError && !IsLunInUse() &&!IsLun1InUse()&&!IsLun2InUse()&& comboBoxLun1.SelectedItem != null && comboBoxLun2.SelectedItem != null
-                && comboBoxIscsiLunForLog.Text!= comboBoxLun1.Text && comboBoxIscsiLunForLog.Text != comboBoxLun2.Text && comboBoxLun1.Text!= comboBoxLun2.Text
-                && Lun1_Size == Lun2_Size;
-        }
 
-        public override bool EnablePrevious()
-        {
-            if (SrWizardType.DisasterRecoveryTask && SrWizardType.SrToReattach == null)
-                return false;
-
-            return true;
-        }
-
-        public override void PopulatePage()
+        public void PopulatePage()
         {
             HideAllErrorIconsAndLabels();
 
@@ -217,21 +148,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             TargetIqnToolTip.InitialDelay = 50;
             TargetIqnToolTip.ReshowDelay = 50;
             TargetIqnToolTip.ShowAlways = true;
-        }
-
-        #endregion
-
-        private void UpdateButtons()
-        {
-            UInt16 i;
-            bool portValid = UInt16.TryParse(textBoxIscsiPort.Text, out i);
-
-            scanTargetHostButton.Enabled =
-                !String.IsNullOrEmpty(getIscsiHost())
-                && portValid;
-
-            // Cause wizards next etc to update
-            OnPageUpdated();
         }
 
         private void textBoxIscsiHost_TextChanged(object sender, EventArgs e)
@@ -254,8 +170,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             // User has changed filer hostname/username/password - clear IQN/LUN boxes
             comboBoxIscsiIqns.Items.Clear();
             comboBoxIscsiIqns.Enabled = false;
-            comboBoxLun1.Enabled = false;
-            comboBoxLun2.Enabled = false;
+            comboBoxLun.Enabled = false;
             labelIscsiIQN.Enabled = false;
             iSCSITargetGroupBox.Enabled = false;
 
@@ -305,93 +220,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             errorLabelAtTargetLUN.Text = Messages.NEWSR_LUN_IN_USE;
             return true;
         }
-        private bool IsLun1InUse()
-        {
-            SR sr = UniquenessCheck_Lun1();
-
-            // LUN is not in use iff sr != null
-
-            if (sr == null)
-            {
-                HideAllErrorIconsAndLabels();
-                return false;
-            }
-
-            spinnerIcon1.Visible = false;
-
-            Pool pool = Helpers.GetPool(sr.Connection);
-            if (pool != null)
-            {
-                errorIconAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Text = String.Format(Messages.NEWSR_LUN_IN_USE_ON_POOL, sr.Name, pool.Name);
-                return true;
-            }
-
-            Host master = Helpers.GetMaster(sr.Connection);
-            if (master != null)
-            {
-                errorIconAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Text = String.Format(Messages.NEWSR_LUN_IN_USE_ON_SERVER, sr.Name, master.Name);
-                return true;
-            }
-
-            errorIconAtTargetLUN.Visible = true;
-            errorLabelAtTargetLUN.Visible = true;
-            errorLabelAtTargetLUN.Text = Messages.NEWSR_LUN_IN_USE;
-            return true;
-        }
-        private bool IsLun2InUse()
-        {
-            SR sr = UniquenessCheck_Lun2();
-
-            // LUN is not in use iff sr != null
-
-            if (sr == null)
-            {
-                HideAllErrorIconsAndLabels();
-                return false;
-            }
-
-            spinnerIcon2.Visible = false;
-
-            Pool pool = Helpers.GetPool(sr.Connection);
-            if (pool != null)
-            {
-                errorIconAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Text = String.Format(Messages.NEWSR_LUN_IN_USE_ON_POOL, sr.Name, pool.Name);
-                return true;
-            }
-
-            Host master = Helpers.GetMaster(sr.Connection);
-            if (master != null)
-            {
-                errorIconAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Visible = true;
-                errorLabelAtTargetLUN.Text = String.Format(Messages.NEWSR_LUN_IN_USE_ON_SERVER, sr.Name, master.Name);
-                return true;
-            }
-
-            errorIconAtTargetLUN.Visible = true;
-            errorLabelAtTargetLUN.Visible = true;
-            errorLabelAtTargetLUN.Text = Messages.NEWSR_LUN_IN_USE;
-            return true;
-        }
 
         private void ChapSettings_Changed(object sender, EventArgs e)
         {
-            comboBoxIscsiLunForLog.Items.Clear();
-            comboBoxIscsiLunForLog.Text = "";
-            comboBoxIscsiLunForLog.Enabled = false;
-            comboBoxLun1.Items.Clear();
-            comboBoxLun1.Text = "";
-            comboBoxLun1.Enabled = false;
-            comboBoxLun2.Items.Clear();
-            comboBoxLun2.Text = "";
-            comboBoxLun2.Enabled = false;
-            targetLunForLog.Enabled = false;
+            comboBoxLun.Items.Clear();
+            comboBoxLun.Text = "";
+            comboBoxLun.Enabled = false;
 
             if (IscsiPopulateLunsAction != null)
             {
@@ -413,7 +247,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 foreach (SR sr in connection.Cache.SRs)
                 {
-                    if (sr.GetSRType(false) != SR.SRTypes.iscsi && sr.GetSRType(false)!=SR.SRTypes.lvmomirror)
+                    if (sr.GetSRType(false) != SR.SRTypes.iscsi && sr.GetSRType(false) != SR.SRTypes.lvmomirror)
                         continue;
 
                     if (sr.PBDs.Count < 1)
@@ -431,55 +265,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             return null;
         }
-        private SR UniquenessCheck_Lun1()
-        {
-            // Check currently selected lun is unique amongst other connected hosts.
-            foreach (IXenConnection connection in ConnectionsManager.XenConnectionsCopy)
-            {
-                foreach (SR sr in connection.Cache.SRs)
-                {
-                    if (sr.GetSRType(false) != SR.SRTypes.iscsi && sr.GetSRType(false) != SR.SRTypes.lvmomirror)
-                        continue;
-
-                    if (sr.PBDs.Count < 1)
-                        continue;
-
-                    PBD pbd = connection.Resolve(sr.PBDs[0]);
-
-                    if (pbd == null)
-                        continue;
-
-                    if (UniquenessCheckMiami_Lun1(connection, pbd))
-                        return sr;
-                }
-            }
-
-            return null;
-        }
-        private SR UniquenessCheck_Lun2()
-        {
-            // Check currently selected lun is unique amongst other connected hosts.
-            foreach (IXenConnection connection in ConnectionsManager.XenConnectionsCopy)
-            {
-                foreach (SR sr in connection.Cache.SRs)
-                {
-                    if (sr.GetSRType(false) != SR.SRTypes.iscsi && sr.GetSRType(false) != SR.SRTypes.lvmomirror)
-                        continue;
-
-                    if (sr.PBDs.Count < 1)
-                        continue;
-
-                    PBD pbd = connection.Resolve(sr.PBDs[0]);
-
-                    if (pbd == null)
-                        continue;
-
-                    if (UniquenessCheckMiami_Lun2(connection, pbd))
-                        return sr;
-                }
-            }
-            return null;
-        }
 
         /// <summary>
         /// Check currently LUN against miami host
@@ -494,36 +279,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             String scsiID = pbd.device_config[SCSIID];
             String myLUN = getIscsiLUN();
-
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
-
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
-        }
-        private bool UniquenessCheckMiami_Lun1(IXenConnection connection, PBD pbd)
-        {
-            if (!pbd.device_config.ContainsKey(SCSIID))
-                return false;
-
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN1();
-
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
-
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
-        }
-        private bool UniquenessCheckMiami_Lun2(IXenConnection connection, PBD pbd)
-        {
-            if (!pbd.device_config.ContainsKey(SCSIID))
-                return false;
-
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN2();
 
             if (!LunMap.ContainsKey(myLUN))
                 return false;
@@ -587,19 +342,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             {
                 TargetIqnToolTip.SetToolTip(comboBoxIscsiIqns, Messages.SELECT_TARGET_IQN);
             }
+            UpdateButtons();
         }
 
         private String getIscsiLUN()
         {
-            return comboBoxIscsiLunForLog.Text;
-        }
-        private String getIscsiLUN1()
-        {
-            return comboBoxLun1.Text;
-        }
-        private String getIscsiLUN2()
-        {
-            return comboBoxLun2.Text;
+            return comboBoxLun.Text;
         }
 
         private void IscsiUseChapCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -620,8 +368,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             HideAllErrorIconsAndLabels();
             spinnerIconAtTargetIqn.Visible = false;
             spinnerIconAtTargetLun.Visible = false;
-            spinnerIcon1.Visible = false;
-            spinnerIcon2.Visible = false;
 
             spinnerIconAtScanTargetHostButton.StartSpinning();
 
@@ -662,21 +408,12 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private void ClearLunMapAndCombo()
         {
             // Clear LUNs as they may no longer be valid
-            comboBoxIscsiLunForLog.Items.Clear();
-            comboBoxIscsiLunForLog.Text = "";
-            comboBoxIscsiLunForLog.Enabled = false;
-            comboBoxLun1.Items.Clear();
-            comboBoxLun1.Text = "";
-            comboBoxLun1.Enabled = false;
-            comboBoxLun2.Items.Clear();
-            comboBoxLun2.Text = "";
-            comboBoxLun2.Enabled = false;
-            targetLunForLog.Enabled = false;
+            comboBoxLun.Items.Clear();
+            comboBoxLun.Text = "";
+            comboBoxLun.Enabled = false;
             LunMap.Clear();
             spinnerIconAtTargetIqn.Visible = false;
             spinnerIconAtTargetLun.Visible = false;
-            spinnerIcon1.Visible = false;
-            spinnerIcon2.Visible = false;
 
             UpdateButtons();
         }
@@ -772,9 +509,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         {
             spinnerIconAtTargetIqn.StartSpinning();
 
-            comboBoxIscsiLunForLog.Items.Clear();
-            comboBoxLun1.Items.Clear();
-            comboBoxLun2.Items.Clear();
+            comboBoxLun.Items.Clear();
             LunMap.Clear();
 
             if (IscsiUseChapCheckBox.Checked)
@@ -849,7 +584,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             }
             else
             {
-                comboBoxIscsiLunForLog.Items.Add(Messages.SELECT_TARGET_LUN);
 
                 foreach (Actions.ISCSIInfo i in action.LUNs)
                 {
@@ -864,24 +598,15 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                         label += String.Format(" ({0})", i.ScsiID);
                     if (i.Size >= 0)
                         label += String.Format(": {0}", Util.DiskSizeString(i.Size));
-                    comboBoxIscsiLunForLog.Items.Add(label);
-                    comboBoxLun1.Items.Add(label);
-                    comboBoxLun2.Items.Add(label);
+                    comboBoxLun.Items.Add(label);
                     LunMap.Add(label, i);
                 }
-                comboBoxIscsiLunForLog.SelectedItem = comboBoxIscsiLunForLog.Items.Count == 2 ? comboBoxIscsiLunForLog.Items[1] : Messages.SELECT_TARGET_LUN; //if there is only one choice, select that one by default
-                comboBoxIscsiLunForLog.Enabled = true;
-                comboBoxLun1.Enabled = true;
-                comboBoxLun2.Enabled = true;
-                targetLunForLog.Enabled = true;
-                Lun1.Enabled = true;
-                Lun2.Enabled = true;
-                comboBoxIscsiLunForLog.Focus();
+                comboBoxLun.Enabled = true;
+                Lun.Enabled = true;
 
                 spinnerIconAtTargetIqn.DisplaySucceededImage();
             }
-
-            comboBoxIscsiLunForLog.Enabled = true;
+            comboBoxLun.Enabled = true;
             comboBoxIscsiIqns.Enabled = true;
 
             UpdateButtons();
@@ -1071,8 +796,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                     return null;
 
                 ISCSIInfo info = LunMap[getIscsiLUN()];
-                ISCSIInfo info1 = LunMap[getIscsiLUN1()];
-                ISCSIInfo info2 = LunMap[getIscsiLUN2()];
                 if (info.LunID == -1)
                 {
                     dconf[LUNSERIAL] = info.Serial;
@@ -1080,22 +803,6 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
                 else
                 {
                     dconf[SCSIID] = info.ScsiID;
-                }
-                if (info1.LunID == -1)
-                {
-                    dconf[LUNSERIAL1] = info1.Serial;
-                }
-                else
-                {
-                    dconf[SCSIID1] = info1.ScsiID;
-                }
-                if (info2.LunID == -1)
-                {
-                    dconf[LUNSERIAL2] = info2.Serial;
-                }
-                else
-                {
-                    dconf[SCSIID2] = info2.ScsiID;
                 }
 
                 if (IscsiUseChapCheckBox.Checked)
@@ -1118,10 +825,11 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         }
 
         #endregion
-        private void comboBoxIscsiLunForLog_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void comboBoxLun_SelectedIndexChanged(object sender, EventArgs e)
         {
             iscsiProbeError = false;
-            if (comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN)
+            if (comboBoxLun.SelectedItem as string != Messages.SELECT_TARGET_LUN)
             {
                 spinnerIconAtTargetLun.DisplaySucceededImage();
             }
@@ -1133,36 +841,73 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
 
             UpdateButtons();
         }
-        private void comboBoxLun1_SelectedIndexChanged(object sender, EventArgs e)
+        private void UpdateButtons()
         {
-            iscsiProbeError = false;
-            if (comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN)
+            label1.Visible = false;
+            Lun_Size_Different.Visible = false;
+            if (comboBoxLun.Text!=""&&comboBoxLun.Text!=null)
             {
-                spinnerIcon1.DisplaySucceededImage();
+                origin_lun_text = comboBoxLun.Text.Substring(comboBoxLun.Text.LastIndexOf(":") + 1);
+                if (_sr.other_config["mirror_iscsi_size"] != origin_lun_text)
+                {
+                    Lun_Size_Different.Visible = true;
+                    buttonAdd.Enabled = false;
+                }
             }
-            else
+            if (!IsLunInUse()&& _sr.other_config["mirror_iscsi_size"] == origin_lun_text)
             {
-                spinnerIcon1.Visible = false;
-                HideAllErrorIconsAndLabels();
+                buttonAdd.Enabled = true;
             }
-            Lun1_Size = comboBoxLun1.Text.Substring(comboBoxLun1.Text.LastIndexOf(":")+1);
-            UpdateButtons();
+            foreach (XenRef<PBD> p in _sr.PBDs)
+            {
+                if (Connection.Resolve<PBD>(p).device_config.ContainsKey("SCSIid1"))
+                {
+                    if (Connection.Resolve<PBD>(p).device_config["SCSIid1"] != "")
+                    {
+                        origin_lun = Connection.Resolve<PBD>(p).device_config["SCSIid1"];
+                    }
+                }
+                if (Connection.Resolve<PBD>(p).device_config.ContainsKey("SCSIid2"))
+                {
+                    if (Connection.Resolve<PBD>(p).device_config["SCSIid2"] != "")
+                    {
+                        origin_lun = Connection.Resolve<PBD>(p).device_config["SCSIid2"];
+                    }
+                }
+            }
+            if (comboBoxLun.Text!="")
+            {
+                int start = comboBoxLun.Text.LastIndexOf("(");
+                int end = comboBoxLun.Text.LastIndexOf(")");
+                if (comboBoxLun.Text.Substring(start + 1, end - start-1) == origin_lun)
+                {
+                    buttonAdd.Enabled = false;
+                    label1.Visible = true;
+                }
+            }
+            UInt16 i;
+            bool portValid = UInt16.TryParse(textBoxIscsiPort.Text, out i);
+            scanTargetHostButton.Enabled =
+                !String.IsNullOrEmpty(getIscsiHost())
+                 && portValid;
         }
 
-        private void comboBoxLun2_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
-            iscsiProbeError = false;
-            if (comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN)
-            {
-                spinnerIcon2.DisplaySucceededImage();
-            }
-            else
-            {
-                spinnerIcon2.Visible = false;
-                HideAllErrorIconsAndLabels();
-            }
-            Lun2_Size = comboBoxLun2.Text.Substring(comboBoxLun2.Text.LastIndexOf(":") + 1);
-            UpdateButtons();
+            ToStringWrapper<IScsiIqnInfo> iqn = comboBoxIscsiIqns.SelectedItem as ToStringWrapper<IScsiIqnInfo>;
+            buttonAdd.Enabled = false;
+            buttonCancel.Text = Messages.CLOSE;
+            int start = comboBoxLun.Text.LastIndexOf("(");
+            int end = comboBoxLun.Text.LastIndexOf(")");
+            _repairAction = new SrAddMirrorLUNAction(_sr.Connection, _sr, comboBoxLun.Text.Substring(start + 1,end-start-1),
+                                                     iqn.item.IpAddress,iqn.item.TargetIQN, iqn.item.Port.ToString(),IScsiChapUserTextBox.Text,IScsiChapSecretTextBox.Text);
+            _repairAction.RunAsync();
+            this.Close();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLUNDialog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMirrorIscsiDialog));
             this.dataGridView = new XenAdmin.Controls.DataGridViewEx.DataGridViewEx();
             this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.colSize = new System.Windows.Forms.DataGridViewTextBoxColumn();

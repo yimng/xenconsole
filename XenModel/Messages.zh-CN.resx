@@ -14475,7 +14475,11 @@ SCSI ID: {10}
     <value>请选择LUN的来源</value>
   </data>
   <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
-    <value>利用ISCSI做异构存储双活</value>
+    <value>vGate 主机通过主机总线适配器(HBA)支持共享串联 SCSI (SAS)存储局域网。
+
+要将镜像的 LUN 显示给主机，必须手动完成所需要的所有配置，包括 vGate 主机中的存储设备。
+
+完成配置后， 该存储由位于两台同构或异构存储设备的两个LUN相互镜像，并封装成镜像设备显示给主机/集群，主机实现两个镜像的LUN之间的自动同步，从而实现两个LUN的双活。</value>
   </data>
   <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
     <value>异构存储双活-ISCSI</value>

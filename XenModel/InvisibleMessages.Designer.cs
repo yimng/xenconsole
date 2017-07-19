@@ -70,7 +70,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 activate.vmd.citrix.com 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string ACTIVATION_SERVER {
             get {
@@ -97,7 +97,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://xenserver.org/ 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string COMMUNITY_URL {
             get {
@@ -106,7 +106,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 https://cis.citrix.com/legal/ 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string HEALTH_CHECK_PRIVACY_STATEMENT_URL {
             get {
@@ -115,7 +115,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string HOMEPAGE {
             get {
@@ -133,7 +133,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 www.citrix.com/xenserverenterprise 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string HTTP_LICENSES {
             get {
@@ -142,7 +142,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://support.citrix.com/article/CTX141433 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string ISL_DEPRECATION_URL {
             get {
@@ -160,7 +160,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserverenterprise 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string LICENSE_EXPIRY_WEBPAGE {
             get {
@@ -169,7 +169,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/downloads/licensing/license-server 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string LICENSE_SERVER_DOWNLOAD_LINK {
             get {
@@ -223,7 +223,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserverenterprise 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string OUT_OF_DATE_WEBSITE {
             get {
@@ -232,7 +232,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/buy/partnerlocator.html 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string PARTNEROFFERS_URL {
             get {
@@ -250,7 +250,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://citrix.com/English/aboutCitrix/legal/privacyStatement.asp?ntref=hp_nav_US 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string PRIVACY {
             get {
@@ -259,7 +259,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://support.citrix.com/ 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string SUPPORT_URL {
             get {
@@ -268,7 +268,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/ad 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_AD {
             get {
@@ -277,7 +277,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/alerts 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_ALERTS {
             get {
@@ -286,7 +286,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/storagemigration 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_CPM {
             get {
@@ -295,7 +295,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/cpus 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_CPUMASKING {
             get {
@@ -304,7 +304,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/dmc 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_DMC {
             get {
@@ -313,7 +313,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/dr 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_DR {
             get {
@@ -322,7 +322,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/storage 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_ENHANCEDSR {
             get {
@@ -331,7 +331,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_GENERAL {
             get {
@@ -340,7 +340,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/gpu 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_GPU {
             get {
@@ -349,7 +349,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/ha 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_HA {
             get {
@@ -358,7 +358,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/performance 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_PERFORMANCE {
             get {
@@ -367,7 +367,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/rbac 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_RBAC {
             get {
@@ -376,7 +376,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/vapps 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_VM_APPLIANCES {
             get {
@@ -385,7 +385,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/xenserver/le/features/vmpr 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_LEARNMOREURL_VM_PROTECTION {
             get {
@@ -412,7 +412,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://store.citrix.com/XSInProduct 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string UPSELL_SA {
             get {
@@ -421,7 +421,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://support.citrix.com/article/CTX137335 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string VMPR_DEPRECATION_URL {
             get {
@@ -430,7 +430,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://support.citrix.com/article/CTX137334 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string WSS_DEPRECATION_URL {
             get {
@@ -457,7 +457,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://www.citrix.com/TryXenDesktop 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string XENDESKTOP_URL {
             get {
@@ -466,7 +466,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 http://updates.xensource.com/XenServer/updates.xml 的本地化字符串。
+        ///   查找类似 http://www.halsign.com/ 的本地化字符串。
         /// </summary>
         public static string XENSERVER_UPDATE_URL {
             get {

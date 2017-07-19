@@ -336,7 +336,7 @@ namespace XenAdmin.Dialogs
                                 //removeAction.RunExternal(null);
                                 List<FibreChannelDevice> devices;
                                 var success = LVMoBond.FiberChannelScan(this, _srList[0].Connection, out devices);
-                                Program.MainWindow.ShowPerConnectionWizard(_srList[0].Connection, new AddLUNDialog(_srList[0], devices));
+                                Program.MainWindow.ShowPerConnectionWizard(_srList[0].Connection, new AddMirrorLUNDialog(_srList[0], devices));
                             }
                             this.Close();
                         }

@@ -14522,7 +14522,9 @@ Size: {11}</value>
     <value>Choose source</value>
   </data>
   <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
-    <value>Use ISCSI to create mirror</value>
+    <value>Logical Volumn Manager (LVM) mirroring support is available using iSCSI access to shared LUN.
+
+This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk.</value>
   </data>
   <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
     <value>Lvm Mirror-ISCSI</value>

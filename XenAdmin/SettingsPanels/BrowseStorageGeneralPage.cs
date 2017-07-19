@@ -179,7 +179,7 @@ namespace XenAdmin.SettingsPanels
         private bool CanAddMirrorLUN(string scsiid)
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
-            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+//            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
             if (scsiid == "")
             {
                 return true;
@@ -287,15 +287,15 @@ namespace XenAdmin.SettingsPanels
                     {
                         if (xenObject.GetSRType(true) == SR.SRTypes.lvmobond)
                         {
-                            if (CanAddLUN(scsiid)|| isLunBondRed(scsiid))
+                            if (CanAddLUN(scsiid) || isLunBondRed(scsiid))
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                              
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
                                 itm.Click += delegate
                                 {
                                     List<FibreChannelDevice> devices;
                                     var success = LVMoBond.FiberChannelScan(this, xenObject.Connection, out devices);
-                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddLUNDialog(xenObject, devices));
+                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddLUNDialog(xenObject,devices));
                                 };
 
                                 ctxMenuItems.Add(itm);
@@ -303,7 +303,7 @@ namespace XenAdmin.SettingsPanels
                             }
                             else if (canissciRemove())
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                               
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
                                 itm.Click += delegate
                                 {
@@ -315,7 +315,7 @@ namespace XenAdmin.SettingsPanels
                                 ctxMenuItems.Add(itm);
                                 if (isLunBondRed(scsiid))
                                 {
-                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General,Color.Red, ctxMenuItems));
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
                                 }
                                 else
                                 {
@@ -327,7 +327,57 @@ namespace XenAdmin.SettingsPanels
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
                             }
                         }
-                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror)
+                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror&& xenObject.other_config.ContainsKey("_type"))
+                        {
+                            if (CanAddMirrorLUN(scsiid))
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    // Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddMirrorIscsiDialog(xenObject));
+                                    AddMirrorIscsiDialog dlg = new AddMirrorIscsiDialog(xenObject);
+                                    dlg.ShowDialog();
+                                };
+
+                                ctxMenuItems.Add(itm);
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
+                            }
+                            else if (canMirrorissciRemove())
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    AsyncAction Action = new SrRemoveMirrorLUNAction(xenObject.Connection, xenObject, scsiid);
+                                    ActionProgressDialog dialog = new ActionProgressDialog(Action, ProgressBarStyle.Marquee) { ShowCancel = true };
+                                    dialog.ShowDialog(this);
+
+                                };
+                                ctxMenuItems.Add(itm);
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
+                            }
+                            else
+                            {
+                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
+                            }
+
+                        }
+                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror&&!xenObject.other_config.ContainsKey("_type"))
                         {
                             if (CanAddMirrorLUN(scsiid))
                             {
@@ -493,7 +543,7 @@ namespace XenAdmin.SettingsPanels
                             }
                         }
                     }
-                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror)
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror&&!sr.other_config.ContainsKey("_type"))
                     {
                         if (pbd != null)
                         {
@@ -508,6 +558,27 @@ namespace XenAdmin.SettingsPanels
                             if (pbd.other_config.ContainsKey("LUN2-status"))
                             {
                                 if (pbd.other_config.TryGetValue("LUN2-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
+                                }
+                            }
+                        }
+                    }
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror && sr.other_config.ContainsKey("_type"))
+                    {
+                        if (pbd != null)
+                        {
+                            String status;
+                            if (pbd.device_config.ContainsKey("SCSIid1"))
+                            {
+                                if (pbd.device_config.TryGetValue("SCSIid1", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN1"), status, Status));
+                                }
+                            }
+                            if (pbd.device_config.ContainsKey("SCSIid2"))
+                            {
+                                if (pbd.device_config.TryGetValue("SCSIid2", out status))
                                 {
                                     GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
                                 }

@@ -44,7 +44,7 @@ namespace XenAdmin.Actions
     public class SrCreateAction : AsyncAction
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        public static string mirror_iscsi_size;
         private readonly string _srName;
         private readonly string _srDescription;
         private readonly SR.SRTypes _srType;
@@ -136,10 +136,10 @@ namespace XenAdmin.Actions
             try
             {
                 sr = XenAPI.SR.create(Session, Host.opaque_ref, _dconf, 0,
-                                                  _srName, _srDescription, _srType.ToString().ToLowerInvariant(),
-                                                  _srContentType,
-                                                  _srIsShared, 
-                                                  _smconf ?? new Dictionary<string, string>());
+                     _srName, _srDescription, _srType.ToString().ToLowerInvariant(),
+                     _srContentType,
+                     _srIsShared,
+                     _smconf ?? new Dictionary<string, string>());
 
                 Result = sr;
             }
@@ -208,7 +208,9 @@ namespace XenAdmin.Actions
 
             Dictionary<string, string> other_config = new Dictionary<string, string>();
             other_config.Add("auto-scan", _srContentType == XenAPI.SR.Content_Type_ISO ? "true" : "false");
-            XenAPI.SR.set_other_config(Session, Result, other_config);
+            other_config.Add("_type", "mirror_iscsi");
+            other_config.Add("mirror_iscsi_size",mirror_iscsi_size);
+            XenAPI.SR.set_other_config(Session, Result, other_config);            
 
             if (isFirstSharedNonISOSR())
             {

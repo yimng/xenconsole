@@ -43,6 +43,11 @@ namespace XenAdmin.Actions
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private String scsiid;
+        private String target;
+        private String targetIQN;
+        private String port;
+        private String chapuser;
+        private String chappassword;
 
         /// <summary>
         /// 
@@ -56,6 +61,25 @@ namespace XenAdmin.Actions
                 throw new ArgumentNullException("sr");
             this.SR = sr;
             this.scsiid = scsiid;
+
+            #region RBAC Dependencies
+            ApiMethodsToRoleCheck.Add("pbd.plug");
+            ApiMethodsToRoleCheck.Add("pbd.create");
+            ApiMethodsToRoleCheck.AddRange(Role.CommonSessionApiList);
+            #endregion
+        }
+        public SrAddMirrorLUNAction(IXenConnection connection, SR sr, String scsiid , string target , string targetIQN , string port,string chapuser,string chappassword)
+            : base(connection, string.Format(Messages.ACTION_SR_REPAIRING, sr.NameWithoutHost))
+        {
+            if (sr == null)
+                throw new ArgumentNullException("sr");
+            this.SR = sr;
+            this.scsiid = scsiid;
+            this.target = target;
+            this.targetIQN = targetIQN;
+            this.port = port;
+            this.chapuser = chapuser;
+            this.chappassword = chappassword;
 
             #region RBAC Dependencies
             ApiMethodsToRoleCheck.Add("pbd.plug");
@@ -79,6 +103,26 @@ namespace XenAdmin.Actions
                 args.Add("mpath_enable", this.SR.sm_config["multipathable"]);
                 args.Add("mirror_device", this.SR.sm_config["mirror_device"]);
                 args.Add("host_uuid", host.uuid);
+                if (this.target!=""&&this.target!=null)
+                {
+                    args.Add("target",this.target);
+                }
+                if (this.targetIQN != "" && this.targetIQN != null)
+                {
+                    args.Add("targetIQN", this.targetIQN);
+                }
+                if (this.port != "" && this.port != null)
+                {
+                    args.Add("port", this.port);
+                }
+                if (this.chapuser != "" && this.chapuser != null)
+                {
+                    args.Add("chapuser", this.chapuser);
+                }
+                if (this.chappassword != "" && this.chappassword != null)
+                {
+                    args.Add("chappassword", this.chappassword);
+                }
                 RelatedTask = XenAPI.Host.async_call_plugin(host.Connection.Session, host.opaque_ref, "ManageMirrorLun.py", "addLUN", args);
 //                XenAPI.Host.call_plugin(host.Connection.Session, host.opaque_ref, "ManageMirrorLun.py", "addLUN", args);
                 this.Description = string.Format(Messages.ACTION_SR_MIRROR_LUN_ADDING, Helpers.GetName(host));

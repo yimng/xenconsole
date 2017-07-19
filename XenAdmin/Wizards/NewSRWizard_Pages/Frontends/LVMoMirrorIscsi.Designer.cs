@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LVMoMirrorIscsi));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBoxLun2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxLun1 = new System.Windows.Forms.ComboBox();
             this.labelIscsiIQN = new System.Windows.Forms.Label();
             this.comboBoxIscsiIqns = new System.Windows.Forms.ComboBox();
             this.comboBoxIscsiLunForLog = new System.Windows.Forms.ComboBox();
             this.targetLunForLog = new System.Windows.Forms.Label();
-            this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
-            this.errorIconAtTargetLUN = new System.Windows.Forms.PictureBox();
             this.spinnerIconAtTargetIqn = new XenAdmin.Controls.SpinnerIcon();
             this.spinnerIconAtTargetLun = new XenAdmin.Controls.SpinnerIcon();
-            this.spinnerIcon1 = new XenAdmin.Controls.SpinnerIcon();
-            this.spinnerIcon2 = new XenAdmin.Controls.SpinnerIcon();
             this.Lun1 = new System.Windows.Forms.Label();
+            this.comboBoxLun1 = new System.Windows.Forms.ComboBox();
+            this.spinnerIcon1 = new XenAdmin.Controls.SpinnerIcon();
             this.Lun2 = new System.Windows.Forms.Label();
+            this.comboBoxLun2 = new System.Windows.Forms.ComboBox();
+            this.spinnerIcon2 = new XenAdmin.Controls.SpinnerIcon();
+            this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
+            this.errorIconAtTargetLUN = new System.Windows.Forms.PictureBox();
             this.iSCSITargetGroupBox = new XenAdmin.Controls.DecentGroupBox();
             this.Lun_Size_Different = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,11 +69,11 @@
             this.toolTipContainerIQNscan = new XenAdmin.Controls.ToolTipContainer();
             this.lunInUseLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).BeginInit();
             this.iSCSITargetGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
@@ -99,24 +99,6 @@
             this.tableLayoutPanel2.Controls.Add(this.errorLabelAtTargetLUN, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.errorIconAtTargetLUN, 1, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // comboBoxLun2
-            // 
-            resources.ApplyResources(this.comboBoxLun2, "comboBoxLun2");
-            this.tableLayoutPanel2.SetColumnSpan(this.comboBoxLun2, 2);
-            this.comboBoxLun2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLun2.FormattingEnabled = true;
-            this.comboBoxLun2.Name = "comboBoxLun2";
-            this.comboBoxLun2.SelectedIndexChanged += new System.EventHandler(this.comboBoxLun2_SelectedIndexChanged);
-            // 
-            // comboBoxLun1
-            // 
-            resources.ApplyResources(this.comboBoxLun1, "comboBoxLun1");
-            this.tableLayoutPanel2.SetColumnSpan(this.comboBoxLun1, 2);
-            this.comboBoxLun1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLun1.FormattingEnabled = true;
-            this.comboBoxLun1.Name = "comboBoxLun1";
-            this.comboBoxLun1.SelectedIndexChanged += new System.EventHandler(this.comboBoxLun1_SelectedIndexChanged);
             // 
             // labelIscsiIQN
             // 
@@ -147,19 +129,6 @@
             resources.ApplyResources(this.targetLunForLog, "targetLunForLog");
             this.targetLunForLog.Name = "targetLunForLog";
             // 
-            // errorLabelAtTargetLUN
-            // 
-            resources.ApplyResources(this.errorLabelAtTargetLUN, "errorLabelAtTargetLUN");
-            this.tableLayoutPanel2.SetColumnSpan(this.errorLabelAtTargetLUN, 2);
-            this.errorLabelAtTargetLUN.ForeColor = System.Drawing.Color.Red;
-            this.errorLabelAtTargetLUN.Name = "errorLabelAtTargetLUN";
-            // 
-            // errorIconAtTargetLUN
-            // 
-            resources.ApplyResources(this.errorIconAtTargetLUN, "errorIconAtTargetLUN");
-            this.errorIconAtTargetLUN.Name = "errorIconAtTargetLUN";
-            this.errorIconAtTargetLUN.TabStop = false;
-            // 
             // spinnerIconAtTargetIqn
             // 
             resources.ApplyResources(this.spinnerIconAtTargetIqn, "spinnerIconAtTargetIqn");
@@ -174,12 +143,40 @@
             this.spinnerIconAtTargetLun.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIconAtTargetLun.TabStop = false;
             // 
+            // Lun1
+            // 
+            resources.ApplyResources(this.Lun1, "Lun1");
+            this.Lun1.Name = "Lun1";
+            // 
+            // comboBoxLun1
+            // 
+            resources.ApplyResources(this.comboBoxLun1, "comboBoxLun1");
+            this.tableLayoutPanel2.SetColumnSpan(this.comboBoxLun1, 2);
+            this.comboBoxLun1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLun1.FormattingEnabled = true;
+            this.comboBoxLun1.Name = "comboBoxLun1";
+            this.comboBoxLun1.SelectedIndexChanged += new System.EventHandler(this.comboBoxLun1_SelectedIndexChanged);
+            // 
             // spinnerIcon1
             // 
             resources.ApplyResources(this.spinnerIcon1, "spinnerIcon1");
             this.spinnerIcon1.Name = "spinnerIcon1";
             this.spinnerIcon1.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIcon1.TabStop = false;
+            // 
+            // Lun2
+            // 
+            resources.ApplyResources(this.Lun2, "Lun2");
+            this.Lun2.Name = "Lun2";
+            // 
+            // comboBoxLun2
+            // 
+            resources.ApplyResources(this.comboBoxLun2, "comboBoxLun2");
+            this.tableLayoutPanel2.SetColumnSpan(this.comboBoxLun2, 2);
+            this.comboBoxLun2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLun2.FormattingEnabled = true;
+            this.comboBoxLun2.Name = "comboBoxLun2";
+            this.comboBoxLun2.SelectedIndexChanged += new System.EventHandler(this.comboBoxLun2_SelectedIndexChanged);
             // 
             // spinnerIcon2
             // 
@@ -188,15 +185,18 @@
             this.spinnerIcon2.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIcon2.TabStop = false;
             // 
-            // Lun1
+            // errorLabelAtTargetLUN
             // 
-            resources.ApplyResources(this.Lun1, "Lun1");
-            this.Lun1.Name = "Lun1";
+            resources.ApplyResources(this.errorLabelAtTargetLUN, "errorLabelAtTargetLUN");
+            this.tableLayoutPanel2.SetColumnSpan(this.errorLabelAtTargetLUN, 2);
+            this.errorLabelAtTargetLUN.ForeColor = System.Drawing.Color.Red;
+            this.errorLabelAtTargetLUN.Name = "errorLabelAtTargetLUN";
             // 
-            // Lun2
+            // errorIconAtTargetLUN
             // 
-            resources.ApplyResources(this.Lun2, "Lun2");
-            this.Lun2.Name = "Lun2";
+            resources.ApplyResources(this.errorIconAtTargetLUN, "errorIconAtTargetLUN");
+            this.errorIconAtTargetLUN.Name = "errorIconAtTargetLUN";
+            this.errorIconAtTargetLUN.TabStop = false;
             // 
             // iSCSITargetGroupBox
             // 
@@ -377,11 +377,11 @@
             this.Name = "LVMoMirrorIscsi";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetIqn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtTargetLun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinnerIcon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIconAtTargetLUN)).EndInit();
             this.iSCSITargetGroupBox.ResumeLayout(false);
             this.iSCSITargetGroupBox.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

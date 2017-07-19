@@ -26044,7 +26044,9 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Use ISCSI to create mirror 的本地化字符串。
+        ///   查找类似 Logical Volumn Manager (LVM) mirroring support is available using iSCSI access to shared LUN.
+        ///
+        ///This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk. 的本地化字符串。
         /// </summary>
         public static string NEWSR_MIRROR_ISCSI_BLURB {
             get {
