@@ -2211,6 +2211,9 @@
     <EmbeddedResource Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.resx">
       <DependentUpon>NeedToolsWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.zh-CN.resx">
+      <DependentUpon>NeedToolsWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.resx">
       <DependentUpon>NotEnoughStorageWarningDialog.cs</DependentUpon>
     </EmbeddedResource>

@@ -782,7 +782,7 @@ namespace XenAdmin.Dialogs
                                                       Messages.NEWDISKWIZARD_MESSAGE_TITLE)))
                     {
                         dlg.ShowDialog(Program.MainWindow);
-                    }
+                    }                    
                 }
             });
         }

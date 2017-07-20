@@ -302,28 +302,6 @@ namespace XenAdmin.SettingsPanels
                         sr_need_reattach.Add(sr);
                     }
                 }
-                foreach (XenRef<VBD> v in allVBDs)
-                {
-                    if (vm.Connection.Resolve<VBD>(v).type == vbd_type.CD)
-                    {
-                        continue;
-                    }
-                    if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("class"))
-                    {
-                        XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session,v.opaque_ref, "class");
-                    }
-                    if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("sched"))
-                    {
-                        XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched");
-                    }
-                    if (XenAPI.VBD.get_qos_algorithm_type(vm.Connection.Session, v.opaque_ref) != null)
-                    {
-                        XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref, "");
-                    }
-                    XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref,"ionice");
-                    XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched", "rt");
-                    XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class", comboBox1.Text);
-                }
                 if (sr_need_reattach.Count != 0)
                 {
                     foreach (SR sr in sr_need_reattach)
@@ -345,6 +323,28 @@ namespace XenAdmin.SettingsPanels
                     }
                     if (running_vms.Count == 0)
                     {
+                        foreach (XenRef<VBD> v in allVBDs)
+                        {
+                            if (vm.Connection.Resolve<VBD>(v).type == vbd_type.CD)
+                            {
+                                continue;
+                            }
+                            if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("class"))
+                            {
+                                XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class");
+                            }
+                            if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("sched"))
+                            {
+                                XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched");
+                            }
+                            if (XenAPI.VBD.get_qos_algorithm_type(vm.Connection.Session, v.opaque_ref) != null)
+                            {
+                                XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref, "");
+                            }
+                            XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref, "ionice");
+                            XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched", "rt");
+                            XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class", comboBox1.Text);
+                        }
                         foreach (SR sr in sr_need_reattach)
                         {
                             if (sr.PBDs.Count < 1)
@@ -392,6 +392,13 @@ namespace XenAdmin.SettingsPanels
                     }
                     else
                     {
+                        foreach (SR sr in sr_need_reattach)
+                        {
+                            if (XenAPI.SR.get_other_config(sr.Connection.Session, sr.opaque_ref).ContainsKey("scheduler"))
+                            {
+                                XenAPI.SR.remove_from_other_config(sr.Connection.Session, sr.opaque_ref, "scheduler");
+                            }
+                        }
                         _ValidToSave4 = false;
                         // new HasRunningVMsWarningDialog(running_vms,sr_need_reattach,allVBDs).ShowDialog();
                         new HasRunningVMsWarningDialog(running_vms, sr_need_reattach, allVBDs).ShowDialog();
