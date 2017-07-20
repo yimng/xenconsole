@@ -23979,6 +23979,15 @@ namespace XenAdmin {
         }
         
         /// <summary>
+        ///   查找类似 LvmMirror-iSCSI 的本地化字符串。
+        /// </summary>
+        public static string MIRROR_ISCSI_DEFAULT_NAME {
+            get {
+                return ResourceManager.GetString("MIRROR_ISCSI_DEFAULT_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Missing URL 的本地化字符串。
         /// </summary>
         public static string MISSING_URL {

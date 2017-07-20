@@ -14532,4 +14532,7 @@ This provides the ability to allocate more than one copy of a physical partition
   <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
     <value>Enter a path for your Mirror-iSCSI storage</value>
   </data>
+  <data name="MIRROR_ISCSI_DEFAULT_NAME" xml:space="preserve">
+    <value>LvmMirror-iSCSI</value>
+  </data>
 </root>

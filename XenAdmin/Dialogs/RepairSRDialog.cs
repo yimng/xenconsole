@@ -267,6 +267,10 @@ namespace XenAdmin.Dialogs
 
             if (_srList.Count == 1)
             {
+                if (_srList[0].type == SR.SRTypes.lvmomirror_iscsi.ToString())
+                {
+                    _srList[0].type = SR.SRTypes.lvmomirror.ToString();
+                }
                 _repairAction = new SrRepairAction(_srList[0].Connection, _srList[0], false);
             }
             else
@@ -275,6 +279,10 @@ namespace XenAdmin.Dialogs
 
                 foreach (SR sr in _srList)
                 {
+                    if (sr.type == SR.SRTypes.lvmomirror_iscsi.ToString())
+                    {
+                        sr.type = SR.SRTypes.lvmomirror.ToString();
+                    }
                     subActions.Add(new SrRepairAction(sr.Connection, sr, false));
                 }
 

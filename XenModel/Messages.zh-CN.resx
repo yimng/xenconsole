@@ -14482,9 +14482,12 @@ SCSI ID: {10}
 完成配置后， 该存储由位于两台同构或异构存储设备的两个LUN相互镜像，并封装成镜像设备显示给主机/集群，主机实现两个镜像的LUN之间的自动同步，从而实现两个LUN的双活。</value>
   </data>
   <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
-    <value>异构存储双活-ISCSI</value>
+    <value>异构存储双活-ISCSI[{0} ({1}; {2});{3};{4}]</value>
   </data>
   <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
     <value>输入用于异构存储双活的iSCSI路径</value>
+  </data>
+  <data name="MIRROR_ISCSI_DEFAULT_NAME" xml:space="preserve">
+    <value>异构存储双活-iSCSI</value>
   </data>
 </root>

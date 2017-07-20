@@ -73,7 +73,14 @@ namespace XenAdmin.Actions
             Pool = Helpers.GetPool(connection);
             _srName = srName;
             _srDescription = srDescription;
-            _srType = srType;
+            if (srType == SR.SRTypes.lvmomirror_iscsi)
+            {
+                _srType = SR.SRTypes.lvmomirror;
+            }
+            else
+            {
+                _srType = srType;
+            }
             _srContentType = srContentType;
             _srIsShared = true;  // used to depend on restrict_pool_attached_storage flag: now always true, but left in in case we want to create local SRs one day
             _dconf = dconf;

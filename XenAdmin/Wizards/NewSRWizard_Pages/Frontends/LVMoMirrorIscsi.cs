@@ -1113,7 +1113,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
             get
             {
                 ToStringWrapper<IScsiIqnInfo> iqn = comboBoxIscsiIqns.SelectedItem as ToStringWrapper<IScsiIqnInfo>;
-                return iqn == null ? null : string.Format(Messages.NEWSR_ISCSI_DESCRIPTION, iqn.item.IpAddress, getIscsiIQN(), getIscsiLUN());
+                return iqn == null ? null : string.Format(Messages.SRWIZARD_MIRROR_ISCSI, iqn.item.IpAddress, getIscsiIQN(), getIscsiLUN(),getIscsiLUN1(),getIscsiLUN2());
             }
         }
 
