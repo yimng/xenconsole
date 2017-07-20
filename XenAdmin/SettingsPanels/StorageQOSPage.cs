@@ -258,6 +258,7 @@ namespace XenAdmin.SettingsPanels
                     if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("class"))
                     {
                         XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class");
+                        XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class", "0");
                     }
                     if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("sched"))
                     {
@@ -345,6 +346,11 @@ namespace XenAdmin.SettingsPanels
                             XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched", "rt");
                             XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class", comboBox1.Text);
                         }
+/*                        foreach (SR sr in sr_need_reattach)
+                        {
+                            new SrReattachAction(sr,sr.opaque_ref,null,null);
+                        }
+                        */
                         foreach (SR sr in sr_need_reattach)
                         {
                             if (sr.PBDs.Count < 1)
@@ -382,11 +388,13 @@ namespace XenAdmin.SettingsPanels
 
                             foreach (XenRef<PBD> pbd in allPBDRefs)
                             {
-                                XenAPI.PBD.async_unplug(sr.Connection.Session, pbd.opaque_ref);
+                                //XenAPI.PBD.async_unplug(sr.Connection.Session, pbd.opaque_ref);
+                                XenAPI.PBD.unplug(sr.Connection.Session, pbd.opaque_ref);
                             }
                             foreach (XenRef<PBD> pbd in allPBDRefs)
                             {
-                                XenAPI.PBD.async_plug(sr.Connection.Session, pbd.opaque_ref);
+                                //XenAPI.PBD.async_plug(sr.Connection.Session, pbd.opaque_ref);
+                                XenAPI.PBD.plug(sr.Connection.Session, pbd.opaque_ref);
                             }
                         }
                     }
@@ -402,7 +410,32 @@ namespace XenAdmin.SettingsPanels
                         _ValidToSave4 = false;
                         // new HasRunningVMsWarningDialog(running_vms,sr_need_reattach,allVBDs).ShowDialog();
                         new HasRunningVMsWarningDialog(running_vms, sr_need_reattach, allVBDs).ShowDialog();
-                        return null; 
+                        return null;
+                    }
+                }
+                else
+                {
+                    foreach (XenRef<VBD> v in allVBDs)
+                    {
+                        if (vm.Connection.Resolve<VBD>(v).type == vbd_type.CD)
+                        {
+                            continue;
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("class"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(vm.Connection.Session, v.opaque_ref).ContainsKey("sched"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_type(vm.Connection.Session, v.opaque_ref) != null)
+                        {
+                            XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref, "");
+                        }
+                        XenAPI.VBD.set_qos_algorithm_type(vm.Connection.Session, v.opaque_ref, "ionice");
+                        XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "sched", "rt");
+                        XenAPI.VBD.add_to_qos_algorithm_params(vm.Connection.Session, v.opaque_ref, "class", comboBox1.Text);
                     }
                 }
             }
