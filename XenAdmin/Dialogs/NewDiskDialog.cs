@@ -299,8 +299,8 @@ namespace XenAdmin.Dialogs
                         vbd.bootable = ud == "0" && !alreadyHasBootableDisk;
                         vbd.userdevice = ud;
                         // Now try to plug the VBD.
-                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
-                        //new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(connection.Session);
+                        //new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
+                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(connection.Session);
                     });
                 action.VM = TheVM;
                 using (var dialog = new Dialogs.ActionProgressDialog(action,ProgressBarStyle.Blocks))
