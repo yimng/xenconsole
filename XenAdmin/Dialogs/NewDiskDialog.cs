@@ -50,6 +50,8 @@ namespace XenAdmin.Dialogs
         private readonly VM TheVM;
         private readonly SR TheSR;
 
+        private String _class = "0";
+
         private VDI DiskTemplate;
         private bool CanResize;
         private long MinSize;
@@ -247,7 +249,31 @@ namespace XenAdmin.Dialogs
 
             VDI vdi = NewDisk();
 
-
+            if (TheVM!=null)
+            {
+                if (TheVM.other_config.ContainsKey("io_limit") || sr.other_config.ContainsKey("scheduler"))
+                {
+                    if (sr.other_config.ContainsKey("scheduler") && sr.other_config["scheduler"] == "cfq")
+                    {
+                        //获取原class值（优先级）
+                        List<XenRef<VBD>> origin_VBDs = TheVM.VBDs;
+                        foreach (VBD v in connection.ResolveAll<VBD>(origin_VBDs))
+                        {
+                            if (v.type == vbd_type.CD)
+                            {
+                                continue;
+                            }
+                            if (XenAPI.VBD.get_qos_algorithm_params(TheVM.Connection.Session, v.opaque_ref).ContainsKey("class"))
+                            {
+                                if (XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != "" && XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != null)
+                                {
+                                    _class = XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"];
+                                }
+                            }
+                        }
+                    }
+                }
+            }    
             if (TheVM != null)
             {
                 var alreadyHasBootableDisk = HasBootableDisk(TheVM);
@@ -273,8 +299,8 @@ namespace XenAdmin.Dialogs
                         vbd.bootable = ud == "0" && !alreadyHasBootableDisk;
                         vbd.userdevice = ud;
                         // Now try to plug the VBD.
-                        // new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(TheVM.Connection.Session);
-                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(connection.Session);
+                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
+                        //new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(connection.Session);
                     });
                 action.VM = TheVM;
                 using (var dialog = new Dialogs.ActionProgressDialog(action,ProgressBarStyle.Blocks))
@@ -293,32 +319,17 @@ namespace XenAdmin.Dialogs
             }
             DialogResult = DialogResult.OK;
             Close();
+            //若VM为空则不设置优先级
+            if (TheVM == null)
+            {
+                return;
+            }
             //若虚拟机启用了IO功能才进行下列操作            
             if (TheVM.other_config.ContainsKey("io_limit")||sr.other_config.ContainsKey("scheduler"))
             {
-                String _class = "0";
-                if (sr.other_config.ContainsKey("scheduler")&&sr.other_config["scheduler"]=="cfq")
+                foreach (VBD v in connection.ResolveAll<VBD>(TheVM.VBDs))
                 {
-                    //获取原class值（优先级）
-                    List<XenRef<VBD>> origin_VBDs = TheVM.VBDs;
-                    foreach (XenRef<VBD> v in origin_VBDs)
-                    {
-                        if (connection.Resolve<VBD>(v).type == vbd_type.CD)
-                        {
-                            continue;
-                        }
-                        if (XenAPI.VBD.get_qos_algorithm_params(TheVM.Connection.Session, v.opaque_ref).ContainsKey("class"))
-                        {
-                            if (XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != "" && XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != null)
-                            {
-                                _class = XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"];
-                            }
-                        }
-                    }
-                }
-                foreach (XenRef<VBD> v in XenAPI.VM.get_VBDs(connection.Session, TheVM.opaque_ref))
-                {
-                    if (connection.Resolve<VBD>(v).type == vbd_type.CD)
+                    if (v.type == vbd_type.CD)
                     {
                         continue;
                     }
