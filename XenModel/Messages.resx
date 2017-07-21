@@ -14527,7 +14527,7 @@ Size: {11}</value>
 This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk.</value>
   </data>
   <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
-    <value>Lvm Mirror-ISCSI</value>
+    <value>Lvm Mirror-ISCSI[{0} ({1}; {2});{3};{4}]</value>
   </data>
   <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
     <value>Enter a path for your Mirror-iSCSI storage</value>

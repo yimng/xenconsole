@@ -34122,7 +34122,7 @@ namespace XenAdmin {
         }
         
         /// <summary>
-        ///   查找类似 Lvm Mirror-ISCSI 的本地化字符串。
+        ///   查找类似 Lvm Mirror-ISCSI[{0} ({1}; {2});{3};{4}] 的本地化字符串。
         /// </summary>
         public static string SRWIZARD_MIRROR_ISCSI {
             get {
