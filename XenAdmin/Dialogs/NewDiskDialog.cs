@@ -313,47 +313,46 @@ namespace XenAdmin.Dialogs
             else
             {
                 CreateDiskAction action = new CreateDiskAction(vdi);
-                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Marquee);
+                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Marquee).ShowDialog();
                 if (!action.Succeeded)
                     return;
             }
             DialogResult = DialogResult.OK;
             Close();
             //若VM为空则不设置优先级
-            if (TheVM == null)
-            {
-                return;
-            }
             //若虚拟机启用了IO功能才进行下列操作            
-            if (TheVM.other_config.ContainsKey("io_limit")||sr.other_config.ContainsKey("scheduler"))
+            if (TheVM!=null)
             {
-                foreach (VBD v in connection.ResolveAll<VBD>(TheVM.VBDs))
+                if (TheVM.other_config.ContainsKey("io_limit") || sr.other_config.ContainsKey("scheduler"))
                 {
-                    if (v.type == vbd_type.CD)
+                    foreach (VBD v in connection.ResolveAll<VBD>(TheVM.VBDs))
                     {
-                        continue;
+                        if (v.type == vbd_type.CD)
+                        {
+                            continue;
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("class"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "class");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("sched"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "sched");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_type(connection.Session, v.opaque_ref) != null)
+                        {
+                            XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "");
+                        }
+                        XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "ionice");
+                        XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "sched", "rt");
+                        XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "class", _class);
                     }
-                    if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("class"))
+                    if (TheVM.power_state == vm_power_state.Running)
                     {
-                        XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "class");
+                        io_limit();
                     }
-                    if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("sched"))
-                    {
-                        XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "sched");
-                    }
-                    if (XenAPI.VBD.get_qos_algorithm_type(connection.Session, v.opaque_ref) != null)
-                    {
-                        XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "");
-                    }
-                    XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "ionice");
-                    XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "sched", "rt");
-                    XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "class", _class);
                 }
-                if (TheVM.power_state == vm_power_state.Running)
-                {
-                    io_limit();
-                }
-            }
+            }            
         }
 
         public void io_limit()
