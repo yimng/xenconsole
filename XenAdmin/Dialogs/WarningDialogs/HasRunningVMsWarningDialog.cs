@@ -35,6 +35,10 @@ namespace XenAdmin.Dialogs.WarningDialogs
         {
             foreach (VM v in running_vms)
             {
+                if (v.is_control_domain)
+                {
+                    continue;
+                }
                 comboBox1.Items.Add(v.name_label);
             }
             comboBox1.SelectedIndex = 0;
@@ -44,6 +48,10 @@ namespace XenAdmin.Dialogs.WarningDialogs
             this.Close();
             foreach (VM v in running_vms)
             {
+                if (v.is_control_domain)
+                {
+                    continue;
+                }
                 if (v.allowed_operations.Contains(vm_operations.suspend))
                 {
                     continue;
