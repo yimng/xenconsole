@@ -989,6 +989,7 @@ namespace XenAdmin.TabPages
             if (!string.IsNullOrEmpty(host.edition) && host.edition == "basic")
                 info.Remove("expiry");
 
+            /*
             if (info.ContainsKey("expiry"))
             {
                 ToolStripMenuItem editItem = new ToolStripMenuItem(Messages.LAUNCH_LICENSE_MANAGER);
@@ -1006,7 +1007,7 @@ namespace XenAdmin.TabPages
                 s.AddEntry(FriendlyName("host.license_params-expiry"), ss.ExpiryDate, editItem, ss.ShowExpiryDate);
                 info.Remove("expiry");
             }
-
+            */
             if (!string.IsNullOrEmpty(host.edition))
             {
                 s.AddEntry(FriendlyName("host.edition"), Helpers.GetFriendlyLicenseName(host));
