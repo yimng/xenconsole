@@ -491,46 +491,63 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         {
             if (!pbd.device_config.ContainsKey(SCSIID))
                 return false;
+            foreach (string s in pbd.device_config.Keys)
+            {
+                String scsiID = pbd.device_config[s];
+                String myLUN = getIscsiLUN();
 
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN();
+                if (!LunMap.ContainsKey(myLUN))
+                    return false;
 
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
-
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
+                ISCSIInfo info = LunMap[myLUN];
+                if (info.ScsiID == scsiID)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         private bool UniquenessCheckMiami_Lun1(IXenConnection connection, PBD pbd)
         {
-            if (!pbd.device_config.ContainsKey(SCSIID))
+            if (!pbd.device_config.ContainsKey(SCSIID1))
                 return false;
 
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN1();
+            foreach (string s in pbd.device_config.Keys)
+            {
+                String scsiID = pbd.device_config[s];
+                String myLUN = getIscsiLUN1();
 
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
+                if (!LunMap.ContainsKey(myLUN))
+                    return false;
 
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
+                ISCSIInfo info = LunMap[myLUN];
+                if (info.ScsiID == scsiID)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         private bool UniquenessCheckMiami_Lun2(IXenConnection connection, PBD pbd)
         {
-            if (!pbd.device_config.ContainsKey(SCSIID))
+            if (!pbd.device_config.ContainsKey(SCSIID2))
                 return false;
 
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN2();
+            foreach (string s in pbd.device_config.Keys)
+            {
+                String scsiID = pbd.device_config[s];
+                String myLUN = getIscsiLUN2();
 
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
+                if (!LunMap.ContainsKey(myLUN))
+                    return false;
 
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
+                ISCSIInfo info = LunMap[myLUN];
+                if (info.ScsiID == scsiID)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private String getIscsiHost()
@@ -1136,14 +1153,17 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private void comboBoxLun1_SelectedIndexChanged(object sender, EventArgs e)
         {
             iscsiProbeError = false;
-            if (comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN)
+            if (!IsLun1InUse())
             {
-                spinnerIcon1.DisplaySucceededImage();
-            }
-            else
-            {
-                spinnerIcon1.Visible = false;
-                HideAllErrorIconsAndLabels();
+                if (comboBoxLun1.SelectedItem as string != "" && comboBoxLun1.SelectedItem as string != null)
+                {
+                    spinnerIcon1.DisplaySucceededImage();
+                }
+                else
+                {
+                    spinnerIcon1.Visible = false;
+                    HideAllErrorIconsAndLabels();
+                }
             }
             Lun1_Size = comboBoxLun1.Text.Substring(comboBoxLun1.Text.LastIndexOf(":")+1);
             UpdateButtons();
@@ -1152,14 +1172,17 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages.Frontends
         private void comboBoxLun2_SelectedIndexChanged(object sender, EventArgs e)
         {
             iscsiProbeError = false;
-            if (comboBoxIscsiLunForLog.SelectedItem as string != Messages.SELECT_TARGET_LUN)
+            if (!IsLun2InUse())
             {
-                spinnerIcon2.DisplaySucceededImage();
-            }
-            else
-            {
-                spinnerIcon2.Visible = false;
-                HideAllErrorIconsAndLabels();
+                if (comboBoxLun2.SelectedItem as string != "" && comboBoxLun2.SelectedItem as string != null)
+                {
+                    spinnerIcon2.DisplaySucceededImage();
+                }
+                else
+                {
+                    spinnerIcon2.Visible = false;
+                    HideAllErrorIconsAndLabels();
+                }
             }
             Lun2_Size = comboBoxLun2.Text.Substring(comboBoxLun2.Text.LastIndexOf(":") + 1);
             UpdateButtons();
