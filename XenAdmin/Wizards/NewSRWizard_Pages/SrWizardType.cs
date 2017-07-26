@@ -499,7 +499,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public override bool IsEnhancedSR { get { return true; } }
         public override string FrontendBlurb { get { return Messages.NEWSR_MIRROR_ISCSI_BLURB; } }
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror; } }
-        public override string ContentType { get { return ""; } }
+        public override string ContentType { get { return "_is_mirror_iscsi"; } }
         public override bool ShowIntroducePrompt { get { return false; } }
         public override bool ShowReattachWarning { get { return true; } }
         public override bool AllowToCreateNewSr { get; set; }
