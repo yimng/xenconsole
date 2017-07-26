@@ -47,13 +47,10 @@
             this.iSCSITargetGroupBox = new XenAdmin.Controls.DecentGroupBox();
             this.Lun_Size_Different = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.placeHolderLabel2 = new System.Windows.Forms.Label();
             this.placeholderLabel = new System.Windows.Forms.Label();
-            this.errorLabelAtCHAPPassword = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.errorIconAtHostOrIP = new System.Windows.Forms.PictureBox();
-            this.scanTargetHostButton = new System.Windows.Forms.Button();
             this.labelIscsiTargetHost = new System.Windows.Forms.Label();
             this.textBoxIscsiHost = new System.Windows.Forms.TextBox();
             this.labelColon = new System.Windows.Forms.Label();
@@ -64,8 +61,11 @@
             this.IScsiChapSecretLabel = new System.Windows.Forms.Label();
             this.IscsiUseChapCheckBox = new System.Windows.Forms.CheckBox();
             this.errorLabelAtHostname = new System.Windows.Forms.Label();
-            this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
+            this.errorLabelAtCHAPPassword = new System.Windows.Forms.Label();
             this.errorIconAtCHAPPassword = new System.Windows.Forms.PictureBox();
+            this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
+            this.placeHolderLabel2 = new System.Windows.Forms.Label();
+            this.scanTargetHostButton = new System.Windows.Forms.Button();
             this.toolTipContainerIQNscan = new XenAdmin.Controls.ToolTipContainer();
             this.lunInUseLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
@@ -77,8 +77,8 @@
             this.iSCSITargetGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -219,22 +219,11 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Name = "label1";
             // 
-            // placeHolderLabel2
-            // 
-            resources.ApplyResources(this.placeHolderLabel2, "placeHolderLabel2");
-            this.placeHolderLabel2.ForeColor = System.Drawing.Color.Red;
-            this.placeHolderLabel2.Name = "placeHolderLabel2";
-            // 
             // placeholderLabel
             // 
             resources.ApplyResources(this.placeholderLabel, "placeholderLabel");
             this.placeholderLabel.ForeColor = System.Drawing.Color.Red;
             this.placeholderLabel.Name = "placeholderLabel";
-            // 
-            // errorLabelAtCHAPPassword
-            // 
-            resources.ApplyResources(this.errorLabelAtCHAPPassword, "errorLabelAtCHAPPassword");
-            this.errorLabelAtCHAPPassword.Name = "errorLabelAtCHAPPassword";
             // 
             // label11
             // 
@@ -245,10 +234,8 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.placeHolderLabel2, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.placeholderLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.errorIconAtHostOrIP, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.scanTargetHostButton, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.labelIscsiTargetHost, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxIscsiHost, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelColon, 3, 1);
@@ -260,9 +247,11 @@
             this.tableLayoutPanel1.Controls.Add(this.IscsiUseChapCheckBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.errorLabelAtHostname, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.spinnerIconAtScanTargetHostButton, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.errorLabelAtCHAPPassword, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.errorIconAtCHAPPassword, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.errorIconAtCHAPPassword, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.spinnerIconAtScanTargetHostButton, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.placeHolderLabel2, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.scanTargetHostButton, 0, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // errorIconAtHostOrIP
@@ -270,13 +259,6 @@
             resources.ApplyResources(this.errorIconAtHostOrIP, "errorIconAtHostOrIP");
             this.errorIconAtHostOrIP.Name = "errorIconAtHostOrIP";
             this.errorIconAtHostOrIP.TabStop = false;
-            // 
-            // scanTargetHostButton
-            // 
-            resources.ApplyResources(this.scanTargetHostButton, "scanTargetHostButton");
-            this.tableLayoutPanel1.SetColumnSpan(this.scanTargetHostButton, 2);
-            this.scanTargetHostButton.Name = "scanTargetHostButton";
-            this.scanTargetHostButton.Click += new System.EventHandler(this.scanTargetHostButton_Click);
             // 
             // labelIscsiTargetHost
             // 
@@ -287,8 +269,8 @@
             // 
             // textBoxIscsiHost
             // 
-            resources.ApplyResources(this.textBoxIscsiHost, "textBoxIscsiHost");
             this.tableLayoutPanel1.SetColumnSpan(this.textBoxIscsiHost, 2);
+            resources.ApplyResources(this.textBoxIscsiHost, "textBoxIscsiHost");
             this.textBoxIscsiHost.Name = "textBoxIscsiHost";
             this.textBoxIscsiHost.TextChanged += new System.EventHandler(this.textBoxIscsiHost_TextChanged);
             // 
@@ -304,15 +286,15 @@
             // 
             // IScsiChapUserTextBox
             // 
-            resources.ApplyResources(this.IScsiChapUserTextBox, "IScsiChapUserTextBox");
             this.IScsiChapUserTextBox.AllowDrop = true;
             this.tableLayoutPanel1.SetColumnSpan(this.IScsiChapUserTextBox, 2);
+            resources.ApplyResources(this.IScsiChapUserTextBox, "IScsiChapUserTextBox");
             this.IScsiChapUserTextBox.Name = "IScsiChapUserTextBox";
             // 
             // IScsiChapSecretTextBox
             // 
-            resources.ApplyResources(this.IScsiChapSecretTextBox, "IScsiChapSecretTextBox");
             this.tableLayoutPanel1.SetColumnSpan(this.IScsiChapSecretTextBox, 2);
+            resources.ApplyResources(this.IScsiChapSecretTextBox, "IScsiChapSecretTextBox");
             this.IScsiChapSecretTextBox.Name = "IScsiChapSecretTextBox";
             this.IScsiChapSecretTextBox.UseSystemPasswordChar = true;
             // 
@@ -343,6 +325,17 @@
             this.errorLabelAtHostname.ForeColor = System.Drawing.Color.Red;
             this.errorLabelAtHostname.Name = "errorLabelAtHostname";
             // 
+            // errorLabelAtCHAPPassword
+            // 
+            resources.ApplyResources(this.errorLabelAtCHAPPassword, "errorLabelAtCHAPPassword");
+            this.errorLabelAtCHAPPassword.Name = "errorLabelAtCHAPPassword";
+            // 
+            // errorIconAtCHAPPassword
+            // 
+            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
+            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
+            this.errorIconAtCHAPPassword.TabStop = false;
+            // 
             // spinnerIconAtScanTargetHostButton
             // 
             resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
@@ -350,11 +343,18 @@
             this.spinnerIconAtScanTargetHostButton.SucceededImage = global::XenAdmin.Properties.Resources._000_Tick_h32bit_16;
             this.spinnerIconAtScanTargetHostButton.TabStop = false;
             // 
-            // errorIconAtCHAPPassword
+            // placeHolderLabel2
             // 
-            resources.ApplyResources(this.errorIconAtCHAPPassword, "errorIconAtCHAPPassword");
-            this.errorIconAtCHAPPassword.Name = "errorIconAtCHAPPassword";
-            this.errorIconAtCHAPPassword.TabStop = false;
+            resources.ApplyResources(this.placeHolderLabel2, "placeHolderLabel2");
+            this.placeHolderLabel2.ForeColor = System.Drawing.Color.Red;
+            this.placeHolderLabel2.Name = "placeHolderLabel2";
+            // 
+            // scanTargetHostButton
+            // 
+            resources.ApplyResources(this.scanTargetHostButton, "scanTargetHostButton");
+            this.tableLayoutPanel1.SetColumnSpan(this.scanTargetHostButton, 2);
+            this.scanTargetHostButton.Name = "scanTargetHostButton";
+            this.scanTargetHostButton.Click += new System.EventHandler(this.scanTargetHostButton_Click);
             // 
             // toolTipContainerIQNscan
             // 
@@ -387,8 +387,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinnerIconAtScanTargetHostButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,9 +402,7 @@
         private System.Windows.Forms.Label targetLunForLog;
         private System.Windows.Forms.PictureBox errorIconAtTargetLUN;
         private Controls.DecentGroupBox iSCSITargetGroupBox;
-        private System.Windows.Forms.Label placeHolderLabel2;
         private System.Windows.Forms.Label placeholderLabel;
-        private System.Windows.Forms.Label errorLabelAtCHAPPassword;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox errorIconAtCHAPPassword;
         private System.Windows.Forms.PictureBox errorIconAtHostOrIP;
@@ -434,5 +432,7 @@
         private System.Windows.Forms.Label errorLabelAtTargetLUN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lun_Size_Different;
+        private System.Windows.Forms.Label errorLabelAtCHAPPassword;
+        private System.Windows.Forms.Label placeHolderLabel2;
     }
 }
