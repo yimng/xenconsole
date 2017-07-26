@@ -46,6 +46,7 @@
             this.labelCHAPuser = new System.Windows.Forms.Label();
             this.errorIconAtCHAPPassword = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.spinnerIconAtScanTargetHostButton = new XenAdmin.Controls.SpinnerIcon();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -60,10 +61,9 @@
             this.spinnerIconAtTargetIqn = new XenAdmin.Controls.SpinnerIcon();
             this.spinnerIconAtTargetLun = new XenAdmin.Controls.SpinnerIcon();
             this.comboBoxLun = new System.Windows.Forms.ComboBox();
+            this.Lun = new System.Windows.Forms.Label();
             this.errorLabelAtTargetLUN = new System.Windows.Forms.Label();
             this.errorIconAtTargetLUN = new System.Windows.Forms.PictureBox();
-            this.Lun = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtHostOrIP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIconAtCHAPPassword)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -200,6 +200,12 @@
             this.tableLayoutPanel1.Controls.Add(this.errorIconAtCHAPPassword, 2, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.tableLayoutPanel1.SetColumnSpan(this.label11, 6);
+            this.label11.Name = "label11";
+            // 
             // spinnerIconAtScanTargetHostButton
             // 
             resources.ApplyResources(this.spinnerIconAtScanTargetHostButton, "spinnerIconAtScanTargetHostButton");
@@ -304,6 +310,11 @@
             this.comboBoxLun.Name = "comboBoxLun";
             this.comboBoxLun.SelectedIndexChanged += new System.EventHandler(this.comboBoxLun_SelectedIndexChanged);
             // 
+            // Lun
+            // 
+            resources.ApplyResources(this.Lun, "Lun");
+            this.Lun.Name = "Lun";
+            // 
             // errorLabelAtTargetLUN
             // 
             resources.ApplyResources(this.errorLabelAtTargetLUN, "errorLabelAtTargetLUN");
@@ -315,17 +326,6 @@
             resources.ApplyResources(this.errorIconAtTargetLUN, "errorIconAtTargetLUN");
             this.errorIconAtTargetLUN.Name = "errorIconAtTargetLUN";
             this.errorIconAtTargetLUN.TabStop = false;
-            // 
-            // Lun
-            // 
-            resources.ApplyResources(this.Lun, "Lun");
-            this.Lun.Name = "Lun";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.tableLayoutPanel1.SetColumnSpan(this.label11, 6);
-            this.label11.Name = "label11";
             // 
             // AddMirrorIscsiDialog
             // 

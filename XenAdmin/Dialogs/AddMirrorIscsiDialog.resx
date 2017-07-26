@@ -137,15 +137,12 @@
   <data name="labelIscsiTargetHost.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 21</value>
   </data>
-  <data name="IscsiUseChapCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="errorLabelAtTargetLUN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="&gt;&gt;IScsiChapSecretTextBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="errorIconAtCHAPPassword.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -231,8 +228,8 @@
   <data name="errorIconAtHostOrIP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 0</value>
   </data>
-  <data name="spinnerIconAtTargetLun.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="IScsiChapSecretTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;scanTargetHostButton.Name" xml:space="preserve">
     <value>scanTargetHostButton</value>
@@ -375,6 +372,12 @@
   <data name="spinnerIconAtTargetIqn.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
+  <data name="errorLabelAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 175</value>
+  </data>
+  <data name="Lun.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="spinnerIconAtTargetIqn.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
@@ -441,6 +444,9 @@
   <data name="IScsiChapSecretTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 20</value>
   </data>
+  <data name="errorIconAtHostOrIP.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="spinnerIconAtScanTargetHostButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -486,8 +492,8 @@
   <data name="spinnerIconAtTargetIqn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;spinnerIconAtTargetIqn.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;spinnerIconAtTargetIqn.Name" xml:space="preserve">
+    <value>spinnerIconAtTargetIqn</value>
   </data>
   <data name="&gt;&gt;iSCSITargetGroupBox.Type" xml:space="preserve">
     <value>XenAdmin.Controls.DecentGroupBox, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
@@ -510,8 +516,8 @@
   <data name="IScsiChapUserTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;textBoxIscsiPort.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="spinnerIconAtTargetLun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 34</value>
   </data>
   <data name="errorIconAtCHAPPassword.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -24662,6 +24668,9 @@
   <data name="&gt;&gt;scanTargetHostButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;textBoxIscsiPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="IscsiUseChapCheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -24712,9 +24721,6 @@
   </data>
   <data name="&gt;&gt;errorLabelAtHostname.Name" xml:space="preserve">
     <value>errorLabelAtHostname</value>
-  </data>
-  <data name="labelColon.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -24803,11 +24809,8 @@
   <data name="labelColon.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="iSCSITargetGroupBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelCHAPuser.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
+  <data name="iSCSITargetGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 214</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -24815,14 +24818,14 @@
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="IScsiChapSecretTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="placeholderLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;iSCSITargetGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="errorLabelAtTargetLUN.Text" xml:space="preserve">
     <value>errorLabelAtTargetLUN</value>
@@ -24832,9 +24835,6 @@
   </data>
   <data name="&gt;&gt;textBoxIscsiHost.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="spinnerIconAtTargetLun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 34</value>
   </data>
   <data name="errorIconAtCHAPPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -24854,20 +24854,11 @@
   <data name="&gt;&gt;IScsiChapUserTextBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="iSCSITargetGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 214</value>
-  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 0</value>
   </data>
-  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="iSCSITargetGroupBox.Text" xml:space="preserve">
     <value>iSCSI target</value>
-  </data>
-  <data name="Lun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 36</value>
   </data>
   <data name="comboBoxIscsiIqns.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 3</value>
@@ -24959,9 +24950,6 @@
   <data name="&gt;&gt;lunInUseLabel.Name" xml:space="preserve">
     <value>lunInUseLabel</value>
   </data>
-  <data name="IScsiChapSecretLabel.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="spinnerIconAtScanTargetHostButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -24998,11 +24986,11 @@
   <data name="&gt;&gt;spinnerIconAtTargetIqn.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
-  <data name="errorIconAtCHAPPassword.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="IscsiUseChapCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="spinnerIconAtTargetLun.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="errorIconAtHostOrIP.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="errorIconAtTargetLUN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -25070,6 +25058,12 @@
   <data name="&gt;&gt;errorLabelAtCHAPPassword.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Provide a target host for your iSCSI storage, indicating your target IQN and your target LUN before proceeding.</value>
+  </data>
+  <data name="labelCHAPuser.Text" xml:space="preserve">
+    <value>CHAP &amp;username:</value>
+  </data>
   <data name="label1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -25112,14 +25106,17 @@
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>128</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;IScsiChapSecretTextBox.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="iSCSITargetGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
   </data>
   <data name="labelIscsiTargetHost.Text" xml:space="preserve">
     <value>Target &amp;host name/IP address:</value>
   </data>
-  <data name="iSCSITargetGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>126</value>
+  <data name="&gt;&gt;spinnerIconAtTargetIqn.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;labelIscsiTargetHost.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -25139,11 +25136,11 @@
   <data name="errorIconAtTargetLUN.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;spinnerIconAtTargetIqn.Name" xml:space="preserve">
-    <value>spinnerIconAtTargetIqn</value>
+  <data name="labelCHAPuser.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="errorIconAtHostOrIP.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="spinnerIconAtTargetLun.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="placeHolderLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 154</value>
@@ -25189,6 +25186,9 @@
   </data>
   <data name="IScsiChapSecretLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="&gt;&gt;errorIconAtCHAPPassword.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="errorLabelAtTargetLUN.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -25265,14 +25265,14 @@
   <data name="&gt;&gt;errorIconAtHostOrIP.Name" xml:space="preserve">
     <value>errorIconAtHostOrIP</value>
   </data>
-  <data name="labelCHAPuser.Text" xml:space="preserve">
-    <value>CHAP &amp;username:</value>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;errorLabelAtCHAPPassword.Name" xml:space="preserve">
     <value>errorLabelAtCHAPPassword</value>
   </data>
-  <data name="errorLabelAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 175</value>
+  <data name="Lun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
   </data>
   <data name="spinnerIconAtTargetLun.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -25319,11 +25319,11 @@
   <data name="labelIscsiIQN.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
   </data>
-  <data name="errorIconAtHostOrIP.Visible" type="System.Boolean, mscorlib">
+  <data name="IScsiChapSecretLabel.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>Provide a target host for your iSCSI storage, indicating your target IQN and your target LUN before proceeding.</value>
+  <data name="spinnerIconAtTargetLun.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -25370,14 +25370,14 @@
   <data name="spinnerIconAtScanTargetHostButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;errorIconAtCHAPPassword.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="labelColon.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="errorLabelAtTargetLUN.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
   </data>
-  <data name="Lun.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="iSCSITargetGroupBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>4</value>

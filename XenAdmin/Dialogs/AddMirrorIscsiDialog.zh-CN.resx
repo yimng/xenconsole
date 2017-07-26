@@ -178,6 +178,12 @@
   <data name="scanTargetHostButton.Text" xml:space="preserve">
     <value>扫描目标主机</value>
   </data>
+  <data name="buttonAdd.Text" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
   <data name="labelIscsiIQN.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
   </data>
