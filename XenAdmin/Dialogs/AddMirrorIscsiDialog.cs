@@ -277,15 +277,21 @@ namespace XenAdmin.Dialogs
             if (!pbd.device_config.ContainsKey(SCSIID))
                 return false;
 
-            String scsiID = pbd.device_config[SCSIID];
-            String myLUN = getIscsiLUN();
+            foreach (string s in pbd.device_config.Keys)
+            {
+                String scsiID = pbd.device_config[s];
+                String myLUN = getIscsiLUN();
 
-            if (!LunMap.ContainsKey(myLUN))
-                return false;
+                if (!LunMap.ContainsKey(myLUN))
+                    return false;
 
-            ISCSIInfo info = LunMap[myLUN];
-
-            return info.ScsiID == scsiID;
+                ISCSIInfo info = LunMap[myLUN];
+                if (info.ScsiID == scsiID)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private String getIscsiHost()
