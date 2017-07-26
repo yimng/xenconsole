@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="comboBoxLun2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 106</value>
-  </data>
-  <data name="comboBoxLun2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 21</value>
-  </data>
-  <data name="comboBoxLun1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 79</value>
-  </data>
-  <data name="comboBoxLun1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 21</value>
-  </data>
   <data name="labelIscsiIQN.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
@@ -140,13 +128,13 @@
     <value>125, 3</value>
   </data>
   <data name="comboBoxIscsiIqns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 21</value>
+    <value>352, 21</value>
   </data>
   <data name="comboBoxIscsiLunForLog.Location" type="System.Drawing.Point, System.Drawing">
     <value>125, 30</value>
   </data>
   <data name="comboBoxIscsiLunForLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 21</value>
+    <value>352, 21</value>
   </data>
   <data name="targetLunForLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 13</value>
@@ -154,8 +142,32 @@
   <data name="targetLunForLog.Text" xml:space="preserve">
     <value>目标LUN(存放Log)</value>
   </data>
+  <data name="Lun1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="Lun1.Text" xml:space="preserve">
+    <value>目标LUN1(用作镜像)</value>
+  </data>
+  <data name="comboBoxLun1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 57</value>
+  </data>
+  <data name="comboBoxLun1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 21</value>
+  </data>
+  <data name="Lun2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 13</value>
+  </data>
+  <data name="Lun2.Text" xml:space="preserve">
+    <value>目标LUN2(用作镜像):</value>
+  </data>
+  <data name="comboBoxLun2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 84</value>
+  </data>
+  <data name="comboBoxLun2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 21</value>
+  </data>
   <data name="errorLabelAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 60</value>
+    <value>144, 114</value>
   </data>
   <data name="errorIconAtTargetLUN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -176,25 +188,10 @@
 </value>
   </data>
   <data name="errorIconAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 57</value>
-  </data>
-  <data name="Lun1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
-  </data>
-  <data name="Lun1.Text" xml:space="preserve">
-    <value>目标LUN1(用作镜像)</value>
-  </data>
-  <data name="Lun2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 13</value>
-  </data>
-  <data name="Lun2.Text" xml:space="preserve">
-    <value>目标LUN2(用作镜像):</value>
+    <value>125, 111</value>
   </data>
   <data name="iSCSITargetGroupBox.Text" xml:space="preserve">
     <value>iSCSI目标</value>
-  </data>
-  <data name="placeHolderLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 20</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="errorLabelAtCHAPPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -205,34 +202,10 @@
     <value>False</value>
   </data>
   <data name="errorLabelAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 151</value>
+    <value>188, 167</value>
   </data>
   <data name="errorLabelAtCHAPPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
-  </data>
-  <data name="errorLabelAtCHAPPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>119</value>
-  </data>
-  <data name="errorIconAtCHAPPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
-        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
-        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
-        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
-        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
-        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
-        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
-        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
-        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
-        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
-        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
-        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
-        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="errorIconAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 154</value>
   </data>
   <data name="errorIconAtHostOrIP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -251,9 +224,6 @@
         IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
         sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="scanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 177</value>
   </data>
   <data name="scanTargetHostButton.Text" xml:space="preserve">
     <value>扫描目标主机</value>
@@ -276,11 +246,23 @@
   <data name="IscsiUseChapCheckBox.Text" xml:space="preserve">
     <value>使用CHAP身份验证</value>
   </data>
-  <data name="spinnerIconAtScanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 180</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>499, 203</value>
+  <data name="errorIconAtCHAPPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
+        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
+        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
+        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
+        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
+        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
+        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
+        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
+        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
+        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
+        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
+        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
+        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>为ISCSI存储提供目标主机，在继续操作前指示目标IQN和目标LUN</value>

@@ -287,8 +287,8 @@
             // 
             // textBoxIscsiHost
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.textBoxIscsiHost, 2);
             resources.ApplyResources(this.textBoxIscsiHost, "textBoxIscsiHost");
+            this.tableLayoutPanel1.SetColumnSpan(this.textBoxIscsiHost, 2);
             this.textBoxIscsiHost.Name = "textBoxIscsiHost";
             this.textBoxIscsiHost.TextChanged += new System.EventHandler(this.textBoxIscsiHost_TextChanged);
             // 
@@ -304,15 +304,15 @@
             // 
             // IScsiChapUserTextBox
             // 
+            resources.ApplyResources(this.IScsiChapUserTextBox, "IScsiChapUserTextBox");
             this.IScsiChapUserTextBox.AllowDrop = true;
             this.tableLayoutPanel1.SetColumnSpan(this.IScsiChapUserTextBox, 2);
-            resources.ApplyResources(this.IScsiChapUserTextBox, "IScsiChapUserTextBox");
             this.IScsiChapUserTextBox.Name = "IScsiChapUserTextBox";
             // 
             // IScsiChapSecretTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.IScsiChapSecretTextBox, 2);
             resources.ApplyResources(this.IScsiChapSecretTextBox, "IScsiChapSecretTextBox");
+            this.tableLayoutPanel1.SetColumnSpan(this.IScsiChapSecretTextBox, 2);
             this.IScsiChapSecretTextBox.Name = "IScsiChapSecretTextBox";
             this.IScsiChapSecretTextBox.UseSystemPasswordChar = true;
             // 
