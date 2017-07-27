@@ -251,7 +251,7 @@ namespace XenAdmin.Dialogs
 
             if (TheVM!=null)
             {
-                if (TheVM.other_config.ContainsKey("io_limit") || sr.other_config.ContainsKey("scheduler"))
+                if (sr.other_config.ContainsKey("scheduler"))
                 {
                     if (sr.other_config.ContainsKey("scheduler") && sr.other_config["scheduler"] == "cfq")
                     {
