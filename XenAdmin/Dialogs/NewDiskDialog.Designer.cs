@@ -78,6 +78,7 @@ namespace XenAdmin.Dialogs
             0,
             0});
             this.DiskSizeNumericUpDown.ValueChanged += new System.EventHandler(this.DiskSizeNumericUpDown_ValueChanged);
+            this.DiskSizeNumericUpDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DiskSizeNumericUpDown_KeyPress);
             this.DiskSizeNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.DiskSizeNumericUpDown_KeyUp);
             // 
             // SrListBox

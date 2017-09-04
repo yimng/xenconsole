@@ -859,5 +859,13 @@ namespace XenAdmin.Dialogs
 
             SetNumUpDownIncrementAndDecimals(upDown, newUnits);
         }
+
+        private void DiskSizeNumericUpDown_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
