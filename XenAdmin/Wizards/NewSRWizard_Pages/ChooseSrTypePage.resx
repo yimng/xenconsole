@@ -798,7 +798,7 @@
     <value>22</value>
   </data>
   <data name="radioButtonLVMMirror_ISCSI.Text" xml:space="preserve">
-    <value>异构存储双活-ISCSI(&amp;C)</value>
+    <value>异构存储双活-iSCSI(&amp;C)</value>
   </data>
   <data name="&gt;&gt;radioButtonLVMMirror_ISCSI.Name" xml:space="preserve">
     <value>radioButtonLVMMirror_ISCSI</value>
