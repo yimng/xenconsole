@@ -50,6 +50,8 @@ namespace XenAdmin.Dialogs
         private VIF ExistingVif;
         private int Device;
         private readonly bool vSwitchController;
+        private bool ischeckboxQosDownChecked = false;
+        private string origin_download_limit = "0";
 
         public VIFDialog(IXenConnection Connection, VIF ExistingVif, int Device)
             : base(Connection)
@@ -77,7 +79,9 @@ namespace XenAdmin.Dialogs
         {
             promptTextBoxMac.GotFocus += new EventHandler(promptTextBoxMac_ReceivedFocus);
             promptTextBoxQoS.GotFocus += new EventHandler(promptTextBoxQoS_ReceivedFocus);
+            promptTextBoxQoSDown.GotFocus += new EventHandler(promptTextBoxQoSDown_ReceivedFocus);
             promptTextBoxQoS.TextChanged += new EventHandler(promptTextBoxQoS_TextChanged);
+            textBoxNetworkEncryption.GotFocus += new EventHandler(textBoxNetworkEncryption_ReceivedFocus);
             comboBoxNetwork.SelectedIndexChanged += new EventHandler(NetworkComboBox_SelectedIndexChanged);
             promptTextBoxMac.TextChanged += new EventHandler(promptTextBoxMac_TextChanged);
         }
@@ -92,7 +96,16 @@ namespace XenAdmin.Dialogs
             checkboxQoS.Checked = true;
             updateEnablement();
         }
-
+        void promptTextBoxQoSDown_ReceivedFocus(object sender, EventArgs e)
+        {
+            checkboxQoSDown.Checked = true;
+            updateEnablement();
+        }
+        void textBoxNetworkEncryption_ReceivedFocus(object sender, EventArgs e)
+        {
+            checkBoxNetworkEncryption.Checked = true;
+            updateEnablement();
+        }
         void promptTextBoxMac_ReceivedFocus(object sender, EventArgs e)
         {
             radioButtonMac.Checked = true;
@@ -110,6 +123,7 @@ namespace XenAdmin.Dialogs
             if (vSwitchController) 
             {
                 flowLayoutPanelQoS.Enabled = checkboxQoS.Enabled = checkboxQoS.Checked = false;
+                checkboxQoSDown.Enabled = checkboxQoSDown.Checked = promptTextBoxQoSDown.Enabled = false;
                 panelLicenseRestriction.Visible = true;
             }
             else
@@ -118,11 +132,20 @@ namespace XenAdmin.Dialogs
                 {
                     promptTextBoxQoS.Text = "";
                     checkboxQoS.Checked = false;
+                    promptTextBoxQoSDown.Text = "";
+                    checkboxQoSDown.Checked = false;
                 }
                 else
                 {
                     promptTextBoxQoS.Text = ExistingVif.LimitString;
                     checkboxQoS.Checked = ExistingVif.RateLimited;
+                    if (ExistingVif.other_config.ContainsKey("download_limit"))
+                    {
+                        ischeckboxQosDownChecked = true;
+                        origin_download_limit = ExistingVif.other_config["download_limit"];
+                        promptTextBoxQoSDown.Text = ExistingVif.other_config["download_limit"];
+                        checkboxQoSDown.Checked = true;
+                    }
                 }
                 flowLayoutPanelQoS.Enabled = checkboxQoS.Enabled = true;
 
@@ -193,13 +216,21 @@ namespace XenAdmin.Dialogs
                 buttonOk.Enabled = false;
                 toolTipContainerOkButton.SetToolTip(Messages.ENTER_VALID_QOS);
             }
+            else if (checkboxQoSDown.Checked && !isValidQoSLimitDown())
+            {
+                buttonOk.Enabled = false;
+                toolTipContainerOkButton.SetToolTip(Messages.ENTER_VALID_QOS);
+            }
+            else if (checkBoxNetworkEncryption.Checked && !isValidNetworkEncryption())
+            {
+                buttonOk.Enabled = false;
+            }
             else
             {
                 buttonOk.Enabled = true;
                 toolTipContainerOkButton.RemoveAll();
             }
         }
-
         private void LoadNetworks()
         {
             List<XenAPI.Network> networks = new List<XenAPI.Network>(connection.Cache.Networks);
@@ -330,7 +361,6 @@ namespace XenAdmin.Dialogs
                     if (checkboxQoS.Checked)
                         return true;
                 }
-
                 return false;
             }
         }
@@ -389,6 +419,34 @@ namespace XenAdmin.Dialogs
 
         private void Okbutton_Click(object sender, EventArgs e)
         {
+            //限速状态发生变化时，下行限速功能启用时
+            if (checkboxQoSDown.Checked != ischeckboxQosDownChecked || origin_download_limit!=promptTextBoxQoSDown.Text &&checkboxQoSDown.Checked ==true)
+            {
+                Dictionary<String, String> args = new Dictionary<string, string>();
+                args.Add("kbytes",promptTextBoxQoSDown.Text);
+                args.Add("device",ExistingVif.device);
+                args.Add("vif_uuid",ExistingVif.uuid);
+                args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                if (ExistingVif.other_config.ContainsKey("download_limit"))
+                {
+                    ExistingVif.other_config.Remove("download_limit");
+                    Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "set_limit", args);
+                }
+                else
+                {
+                    Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "set_limit", args);
+                }
+            }
+            //限速状态发生变化时，下行限速功能没有启用时
+            if (checkboxQoSDown.Checked != ischeckboxQosDownChecked || origin_download_limit != promptTextBoxQoSDown.Text && checkboxQoSDown.Checked == false)
+            {
+                Dictionary<String, String> args = new Dictionary<string, string>();
+                args.Add("kbytes", promptTextBoxQoSDown.Text);
+                args.Add("device", ExistingVif.device);
+                args.Add("vif_uuid", ExistingVif.uuid);
+                args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "clear_limit", args);
+            }
             DialogResult = !ChangesHaveBeenMade ? DialogResult.Cancel : DialogResult.OK;
             Close();
         }
@@ -421,6 +479,46 @@ namespace XenAdmin.Dialogs
                 return false;
             }
         }
+        private bool isValidNetworkEncryption()
+        {
+            if (!checkBoxNetworkEncryption.Checked)
+            {
+                return true;
+            }
+            string value = textBoxNetworkEncryption.Text;
+            if (value == null || value.Trim().Length == 0)
+                return false;
+            if (value.Length == 16 || value.Length == 24 || value.Length == 32)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private bool isValidQoSLimitDown()
+        {
+            if (!checkboxQoSDown.Checked)
+            {
+                return true;
+            }
+
+            string value = promptTextBoxQoSDown.Text;
+
+            if (value == null || value.Trim().Length == 0)
+                return false;
+
+            Int32 result;
+            if (Int32.TryParse(value, out result))
+            {
+                return result > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private void checkboxQoS_CheckedChanged(object sender, EventArgs e)
         {
@@ -436,6 +534,21 @@ namespace XenAdmin.Dialogs
                 else
                     return "VIFDialog";
             }
+        }
+
+        private void checkboxQoSDown_CheckedChanged(object sender, EventArgs e)
+        {
+            updateEnablement();
+        }
+
+        private void checkBoxNetworkEncryption_CheckedChanged(object sender, EventArgs e)
+        {
+            updateEnablement();
+        }
+
+        private void textBoxNetworkEncryption_TextChanged(object sender, EventArgs e)
+        {
+            updateEnablement();
         }
     }
 
