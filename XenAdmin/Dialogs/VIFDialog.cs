@@ -50,8 +50,7 @@ namespace XenAdmin.Dialogs
         private VIF ExistingVif;
         private int Device;
         private readonly bool vSwitchController;
-        private bool ischeckboxQosDownChecked = false;
-        private string origin_download_limit = "0";
+        private bool crypted;
 
         public VIFDialog(IXenConnection Connection, VIF ExistingVif, int Device)
             : base(Connection)
@@ -68,7 +67,7 @@ namespace XenAdmin.Dialogs
             Pool pool = Helpers.GetPoolOfOne(connection);
             vSwitchController = pool != null && pool.vSwitchController;
 
-            label1.Text = vSwitchController ? Messages.VIF_VSWITCH_CONTROLLER : Messages.VIF_LICENSE_RESTRICTION; 
+            label1.Text = vSwitchController ? Messages.VIF_VSWITCH_CONTROLLER : Messages.VIF_LICENSE_RESTRICTION;
             LoadNetworks();
             LoadDetails();
             updateEnablement();
@@ -82,6 +81,8 @@ namespace XenAdmin.Dialogs
             promptTextBoxQoSDown.GotFocus += new EventHandler(promptTextBoxQoSDown_ReceivedFocus);
             promptTextBoxQoS.TextChanged += new EventHandler(promptTextBoxQoS_TextChanged);
             textBoxNetworkEncryption.GotFocus += new EventHandler(textBoxNetworkEncryption_ReceivedFocus);
+            promptTextBoxQoSDown.TextChanged += new EventHandler(promptTextBoxQoSDown_TextChanged);
+            //textBoxNetworkEncryption.TextChanged += new EventHandler(textBoxNetworkEncryption_TextChanged);
             comboBoxNetwork.SelectedIndexChanged += new EventHandler(NetworkComboBox_SelectedIndexChanged);
             promptTextBoxMac.TextChanged += new EventHandler(promptTextBoxMac_TextChanged);
         }
@@ -91,6 +92,10 @@ namespace XenAdmin.Dialogs
             updateEnablement();
         }
 
+        void promptTextBoxQoSDown_TextChanged(object sender, EventArgs e)
+        {
+            updateEnablement();
+        }
         void promptTextBoxQoS_ReceivedFocus(object sender, EventArgs e)
         {
             checkboxQoS.Checked = true;
@@ -120,7 +125,7 @@ namespace XenAdmin.Dialogs
 
         private void LoadDetails()
         {
-            if (vSwitchController) 
+            if (vSwitchController)
             {
                 flowLayoutPanelQoS.Enabled = checkboxQoS.Enabled = checkboxQoS.Checked = false;
                 checkboxQoSDown.Enabled = checkboxQoSDown.Checked = promptTextBoxQoSDown.Enabled = false;
@@ -139,12 +144,28 @@ namespace XenAdmin.Dialogs
                 {
                     promptTextBoxQoS.Text = ExistingVif.LimitString;
                     checkboxQoS.Checked = ExistingVif.RateLimited;
-                    if (ExistingVif.other_config.ContainsKey("download_limit"))
+
+                    if (connection.Resolve<VM>(ExistingVif.VM).IsRunning)
                     {
-                        ischeckboxQosDownChecked = true;
-                        origin_download_limit = ExistingVif.other_config["download_limit"];
-                        promptTextBoxQoSDown.Text = ExistingVif.other_config["download_limit"];
-                        checkboxQoSDown.Checked = true;
+                        if (ExistingVif.other_config.ContainsKey("download_limit"))
+                        {
+                            promptTextBoxQoSDown.Text = ExistingVif.other_config["download_limit"];
+                            checkboxQoSDown.Checked = true;
+                        }
+                        if (ExistingVif.other_config.ContainsKey("crypted") && ExistingVif.other_config["crypted"] == "true")
+                        {
+                            checkBoxNetworkEncryption.Checked = true;
+                            textBoxNetworkEncryption.Text = ExistingVif.other_config["encrypt_secret"];
+                            textBoxNetworkEncryption.Enabled = false;
+                            crypted = true;
+                        }
+
+                    }
+                    else
+                    {
+                        checkboxQoSDown.Enabled = false;
+                        promptTextBoxQoSDown.Enabled = false;
+                        checkBoxNetworkEncryption.Enabled = false;
                     }
                 }
                 flowLayoutPanelQoS.Enabled = checkboxQoS.Enabled = true;
@@ -189,7 +210,7 @@ namespace XenAdmin.Dialogs
 
         private bool MACAddressHasChanged()
         {
-            if (ExistingVif == null) 
+            if (ExistingVif == null)
                 return true;
             return promptTextBoxMac.Text != ExistingVif.MAC;
         }
@@ -225,6 +246,7 @@ namespace XenAdmin.Dialogs
             {
                 buttonOk.Enabled = false;
             }
+
             else
             {
                 buttonOk.Enabled = true;
@@ -419,36 +441,69 @@ namespace XenAdmin.Dialogs
 
         private void Okbutton_Click(object sender, EventArgs e)
         {
-            //限速状态发生变化时，下行限速功能启用时
-            if (checkboxQoSDown.Checked != ischeckboxQosDownChecked || origin_download_limit!=promptTextBoxQoSDown.Text &&checkboxQoSDown.Checked ==true)
+            if (ExistingVif != null && connection.Resolve<VM>(ExistingVif.VM).IsRunning)
             {
-                Dictionary<String, String> args = new Dictionary<string, string>();
-                args.Add("kbytes",promptTextBoxQoSDown.Text);
-                args.Add("device",ExistingVif.device);
-                args.Add("vif_uuid",ExistingVif.uuid);
-                args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                if (ExistingVif.other_config.ContainsKey("download_limit"))
+                var host = connection.Resolve<VM>(ExistingVif.VM).resident_on;
+                if (checkboxQoSDown.Checked == true)
                 {
-                    ExistingVif.other_config.Remove("download_limit");
-                    Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "set_limit", args);
+                    Dictionary<String, String> args = new Dictionary<string, string>();
+                    args.Add("kbytes", promptTextBoxQoSDown.Text);
+                    args.Add("device", ExistingVif.device);
+                    args.Add("vif_uuid", ExistingVif.uuid);
+                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                    Host.call_plugin(connection.Session, host, "vif_qos.py", "set_qos", args);
+
                 }
-                else
+                if (checkboxQoSDown.Checked == false)
                 {
-                    Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "set_limit", args);
+                    Dictionary<String, String> args = new Dictionary<string, string>();
+                    //args.Add("kbytes", promptTextBoxQoSDown.Text);
+                    args.Add("device", ExistingVif.device);
+                    args.Add("vif_uuid", ExistingVif.uuid);
+                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                    Host.call_plugin(connection.Session, host, "vif_qos.py", "clear_qos", args);
+                }
+                if (checkBoxNetworkEncryption.Checked == true && !crypted)
+                {
+                    Dictionary<String, String> args = new Dictionary<string, string>();
+                    args.Add("secret", textBoxNetworkEncryption.Text);
+                    args.Add("device", ExistingVif.device);
+                    args.Add("vif_uuid", ExistingVif.uuid);
+                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                    Host.call_plugin(connection.Session, host, "vif_encrypt.py", "encrypt", args);
+                }
+                if (checkBoxNetworkEncryption.Checked == false && crypted)
+                {
+                    Dictionary<String, String> args = new Dictionary<string, string>();
+                    //args.Add("secret", textBoxNetworkEncryption.Text);
+                    args.Add("device", ExistingVif.device);
+                    args.Add("vif_uuid", ExistingVif.uuid);
+                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                    Host.call_plugin(connection.Session, host, "vif_encrypt.py", "decrypt", args);
                 }
             }
-            //限速状态发生变化时，下行限速功能没有启用时
-            if (checkboxQoSDown.Checked != ischeckboxQosDownChecked || origin_download_limit != promptTextBoxQoSDown.Text && checkboxQoSDown.Checked == false)
-            {
-                Dictionary<String, String> args = new Dictionary<string, string>();
-                args.Add("kbytes", promptTextBoxQoSDown.Text);
-                args.Add("device", ExistingVif.device);
-                args.Add("vif_uuid", ExistingVif.uuid);
-                args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                Host.call_plugin(connection.Session, Host.get_by_name_label(connection.Session, this.connection.Hostname)[0].opaque_ref, "", "clear_limit", args);
-            }
+
             DialogResult = !ChangesHaveBeenMade ? DialogResult.Cancel : DialogResult.OK;
             Close();
+        }
+
+        private bool isValidNetworkEncryption()
+        {
+            if (!checkBoxNetworkEncryption.Checked)
+            {
+                return true;
+            }
+            string value = textBoxNetworkEncryption.Text;
+            if (value == null || value.Trim().Length == 0)
+                return false;
+            if (value.Length == 16 || value.Length == 24 || value.Length == 32)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -473,24 +528,6 @@ namespace XenAdmin.Dialogs
             if (Int32.TryParse(value, out result))
             {
                 return result > 0;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        private bool isValidNetworkEncryption()
-        {
-            if (!checkBoxNetworkEncryption.Checked)
-            {
-                return true;
-            }
-            string value = textBoxNetworkEncryption.Text;
-            if (value == null || value.Trim().Length == 0)
-                return false;
-            if (value.Length == 16 || value.Length == 24 || value.Length == 32)
-            {
-                return true;
             }
             else
             {

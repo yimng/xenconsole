@@ -31,7 +31,7 @@
 
 using XenAPI;
 using XenAdmin.Core;
-
+using System.Collections.Generic;
 
 namespace XenAdmin.Actions.VMActions
 {
@@ -63,6 +63,41 @@ namespace XenAdmin.Actions.VMActions
             action.PollToCompletion(start, end);
         }
 
+        protected void clean_vif_qos_encrypt()
+        {
+            List<VIF> vifs = Session.Connection.ResolveAll<VIF>(this.VM.VIFs);
+            vifs.ForEach(vif =>
+            {
+                if (vif.other_config.ContainsKey("download_limit"))
+                {
+                    Dictionary<string, string> args = new Dictionary<string, string>();
+                    args.Add("device", vif.device);
+                    args.Add("vif_uuid", vif.uuid);
+                    args.Add("vm_uuid", this.VM.uuid);
+                    try
+                    {
+                        Host.call_plugin(Session, this.VM.resident_on, "vif_qos.py", "clear_qos", args);
+                    }
+                    catch
+                    {}
+                    
+                }
+                if (vif.other_config.ContainsKey("crypted"))
+                {
+                    Dictionary<string, string> args = new Dictionary<string, string>();
+                    args.Add("device", vif.device);
+                    args.Add("vif_uuid", vif.uuid);
+                    args.Add("vm_uuid", this.VM.uuid);
+                    try
+                    {
+                        Host.call_plugin(Session, this.VM.resident_on, "vif_encrypt.py", "decrypt", args);
+                    }
+                    catch
+                    { }
+
+                }
+            });
+        }
 
     }
 
@@ -83,7 +118,7 @@ namespace XenAdmin.Actions.VMActions
                 // Disable HA protection
                 SetHaProtection(false, this, VM, 0, 50);
             }
-
+            clean_vif_qos_encrypt();
             RelatedTask = XenAPI.VM.async_clean_shutdown(Session, VM.opaque_ref);
             PollToCompletion(vmHasSavedRestartPriority ? 50 : 0, 100);
             this.Description = Messages.ACTION_VM_SHUT_DOWN;
@@ -107,6 +142,7 @@ namespace XenAdmin.Actions.VMActions
                 // Disable HA protection
                 SetHaProtection(false, this, VM, 0, 70);
             }
+            clean_vif_qos_encrypt();
             RelatedTask = XenAPI.VM.async_hard_shutdown(Session, VM.opaque_ref);
             PollToCompletion(vmHasSavedRestartPriority ? 70 : 0, 100);
 
