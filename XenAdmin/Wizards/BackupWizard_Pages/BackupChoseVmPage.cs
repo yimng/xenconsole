@@ -602,7 +602,7 @@ namespace XenAdmin.Wizards.BackupWizard_Pages
                 if (backupConfig.DialogResult == DialogResult.OK)
                 {
                     Dictionary<string, string> _args = new Dictionary<string, string>();
-                    _args.Add("halsign_br_ip_address", backupConfig.Address);
+                    _args.Add("halsign_br_ip_address", backupConfig.Address.TrimEnd());
                     _args.Add("halsign_br_username", backupConfig.UserName);
                     _args.Add("halsign_br_password", backupConfig.Password);
                     BackupConfigurationAction action = new BackupConfigurationAction(this.noSetVM.Connection, this.noSetVM, _args, 0);

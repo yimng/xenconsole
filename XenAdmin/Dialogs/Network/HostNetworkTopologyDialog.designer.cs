@@ -182,7 +182,7 @@ namespace XenAdmin.Dialogs
                         foreach(var vmob in vms)
                         {
                             //if (vmSets.Contains(vms[vmt].opaque_ref) && vms[vmt].TemplateType == XenAPI.VM.VmTemplateType.NoTemplate )
-                            if (vmSets.Contains(vmob.opaque_ref) && vmob.TemplateType == XenAPI.VM.VmTemplateType.NoTemplate && vmob.affinity.opaque_ref.Equals(host.opaque_ref))
+                            if (vmSets.Contains(vmob.opaque_ref) && vmob.TemplateType == XenAPI.VM.VmTemplateType.NoTemplate && host.Equals(vmob.Home()))
                             {
                                 vmlist.Add(vmob);
                             }

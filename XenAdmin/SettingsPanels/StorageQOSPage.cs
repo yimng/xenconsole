@@ -317,7 +317,7 @@ namespace XenAdmin.SettingsPanels
                                 // PR-1223: ignore control domain VM on metadata VDIs, so that the SR can be detached if there are no other running VMs
                                 if (vdi.type == vdi_type.metadata && v.is_control_domain)
                                     continue;
-                                if (v.power_state == vm_power_state.Running && !running_vms.Contains(v))
+                                if (v.power_state == vm_power_state.Running && !running_vms.Contains(v)&&!v.is_control_domain)
                                     running_vms.Add(v);
                             }
                         }
