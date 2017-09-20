@@ -51,6 +51,7 @@ namespace XenAdmin.Dialogs
         private int Device;
         private readonly bool vSwitchController;
         private bool crypted;
+        private bool down_limited;
 
         public VIFDialog(IXenConnection Connection, VIF ExistingVif, int Device)
             : base(Connection)
@@ -151,6 +152,7 @@ namespace XenAdmin.Dialogs
                         {
                             promptTextBoxQoSDown.Text = ExistingVif.other_config["download_limit"];
                             checkboxQoSDown.Checked = true;
+                            down_limited = true;
                         }
                         if (ExistingVif.other_config.ContainsKey("crypted") && ExistingVif.other_config["crypted"] == "true")
                         {
@@ -441,47 +443,54 @@ namespace XenAdmin.Dialogs
 
         private void Okbutton_Click(object sender, EventArgs e)
         {
-            if (ExistingVif != null && connection.Resolve<VM>(ExistingVif.VM).IsRunning)
+            try
             {
-                var host = connection.Resolve<VM>(ExistingVif.VM).resident_on;
-                if (checkboxQoSDown.Checked == true)
+                if (ExistingVif != null && connection.Resolve<VM>(ExistingVif.VM).IsRunning)
                 {
-                    Dictionary<String, String> args = new Dictionary<string, string>();
-                    args.Add("kbytes", promptTextBoxQoSDown.Text);
-                    args.Add("device", ExistingVif.device);
-                    args.Add("vif_uuid", ExistingVif.uuid);
-                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                    Host.call_plugin(connection.Session, host, "vif_qos.py", "set_qos", args);
+                    var host = connection.Resolve<VM>(ExistingVif.VM).resident_on;
+                    if (checkboxQoSDown.Checked == true)
+                    {
+                        Dictionary<String, String> args = new Dictionary<string, string>();
+                        args.Add("kbytes", promptTextBoxQoSDown.Text);
+                        args.Add("device", ExistingVif.device);
+                        args.Add("vif_uuid", ExistingVif.uuid);
+                        args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                        Host.call_plugin(connection.Session, host, "vif_qos.py", "set_qos", args);
 
+                    }
+                    if (checkboxQoSDown.Checked == false && down_limited)
+                    {
+                        Dictionary<String, String> args = new Dictionary<string, string>();
+                        //args.Add("kbytes", promptTextBoxQoSDown.Text);
+                        args.Add("device", ExistingVif.device);
+                        args.Add("vif_uuid", ExistingVif.uuid);
+                        args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                        Host.call_plugin(connection.Session, host, "vif_qos.py", "clear_qos", args);
+                    }
+                    if (checkBoxNetworkEncryption.Checked == true && !crypted)
+                    {
+                        Dictionary<String, String> args = new Dictionary<string, string>();
+                        args.Add("secret", textBoxNetworkEncryption.Text);
+                        args.Add("device", ExistingVif.device);
+                        args.Add("vif_uuid", ExistingVif.uuid);
+                        args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                        Host.call_plugin(connection.Session, host, "vif_encrypt.py", "encrypt", args);
+                    }
+                    if (checkBoxNetworkEncryption.Checked == false && crypted)
+                    {
+                        Dictionary<String, String> args = new Dictionary<string, string>();
+                        //args.Add("secret", textBoxNetworkEncryption.Text);
+                        args.Add("device", ExistingVif.device);
+                        args.Add("vif_uuid", ExistingVif.uuid);
+                        args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
+                        Host.call_plugin(connection.Session, host, "vif_encrypt.py", "decrypt", args);
+                    }
                 }
-                if (checkboxQoSDown.Checked == false)
-                {
-                    Dictionary<String, String> args = new Dictionary<string, string>();
-                    //args.Add("kbytes", promptTextBoxQoSDown.Text);
-                    args.Add("device", ExistingVif.device);
-                    args.Add("vif_uuid", ExistingVif.uuid);
-                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                    Host.call_plugin(connection.Session, host, "vif_qos.py", "clear_qos", args);
-                }
-                if (checkBoxNetworkEncryption.Checked == true && !crypted)
-                {
-                    Dictionary<String, String> args = new Dictionary<string, string>();
-                    args.Add("secret", textBoxNetworkEncryption.Text);
-                    args.Add("device", ExistingVif.device);
-                    args.Add("vif_uuid", ExistingVif.uuid);
-                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                    Host.call_plugin(connection.Session, host, "vif_encrypt.py", "encrypt", args);
-                }
-                if (checkBoxNetworkEncryption.Checked == false && crypted)
-                {
-                    Dictionary<String, String> args = new Dictionary<string, string>();
-                    //args.Add("secret", textBoxNetworkEncryption.Text);
-                    args.Add("device", ExistingVif.device);
-                    args.Add("vif_uuid", ExistingVif.uuid);
-                    args.Add("vm_uuid", connection.Resolve<VM>(ExistingVif.VM).uuid);
-                    Host.call_plugin(connection.Session, host, "vif_encrypt.py", "decrypt", args);
-                }
+            }catch (Failure exn)
+            {
+                MessageBox.Show(exn.Message, Messages.WARNING);
             }
+            
 
             DialogResult = !ChangesHaveBeenMade ? DialogResult.Cancel : DialogResult.OK;
             Close();
