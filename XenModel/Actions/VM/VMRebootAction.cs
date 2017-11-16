@@ -32,7 +32,7 @@
 using System;
 using XenAPI;
 using XenAdmin.Core;
-
+using System.Collections.Generic;
 
 namespace XenAdmin.Actions.VMActions
 {
@@ -55,12 +55,26 @@ namespace XenAdmin.Actions.VMActions
             : base(vm)
         {
         }
-
+        public void io_limit()
+        {
+            //开机时调用“vm_io_limit.py”脚本
+            Dictionary<String, String> args = new Dictionary<string, string>();
+            args.Add("vm_uuid", VM.uuid);
+            if (VM.other_config.ContainsKey("io_limit"))
+            {
+                if (long.Parse(VM.other_config["io_limit"]) > 0)
+                {
+                    args.Add("mbps", (long.Parse(VM.other_config["io_limit"])).ToString());
+                    XenAPI.Host.call_plugin(VM.Connection.Session, VM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+                }
+            }
+        }
         protected override void Run()
         {
             this.Description = Messages.ACTION_VM_REBOOTING;
             RelatedTask = XenAPI.VM.async_clean_reboot(Session, VM.opaque_ref);
             PollToCompletion();
+            io_limit();
             this.Description = Messages.ACTION_VM_REBOOTED;
         }
     }
@@ -71,12 +85,28 @@ namespace XenAdmin.Actions.VMActions
             : base(vm)
         {
         }
+        public void io_limit()
+        {
+            //开机时调用“vm_io_limit.py”脚本
+            Dictionary<String, String> args = new Dictionary<string, string>();
+            args.Add("vm_uuid", VM.uuid);
+            if (VM.other_config.ContainsKey("io_limit"))
+            {
+                args.Add("mbps", (long.Parse(VM.other_config["io_limit"])).ToString());
+            }
+            else
+            {
+                args.Add("mbps", "0");
+            }
+            XenAPI.Host.call_plugin(VM.Connection.Session, VM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
 
+        }
         protected override void Run()
         {
             this.Description = Messages.ACTION_VM_REBOOTING;
             RelatedTask = XenAPI.VM.async_hard_reboot(Session, VM.opaque_ref);
             PollToCompletion();
+            io_limit();
             this.Description = Messages.ACTION_VM_REBOOTED;
         }
     }

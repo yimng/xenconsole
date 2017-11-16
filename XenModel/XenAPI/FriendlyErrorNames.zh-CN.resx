@@ -2007,7 +2007,7 @@
     <value>找不到请求的插件。</value>
   </data>
   <data name="XENAPI_PLUGIN_FAILURE" xml:space="preserve">
-    <value>与该插件出现通信故障。</value>
+    <value>与该插件出现通信故障。{0} : {1} {2}</value>
   </data>
   <data name="XEN_VSS_REQ_ERROR_ADDING_VOLUME_TO_SNAPSET_FAILED" xml:space="preserve">
     <value>要建立快照的一些卷无法添加到 VSS 快照集</value>

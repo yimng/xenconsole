@@ -166,6 +166,7 @@
             resources.ApplyResources(this.columnVapp, "columnVapp");
             this.columnVapp.Name = "columnVapp";
             this.columnVapp.ReadOnly = true;
+            this.columnVapp.Visible = false;
             // 
             // tableLayoutPanel3
             // 

@@ -136,53 +136,44 @@
   <data name="lblSliderLowest.Text" xml:space="preserve">
     <value>最低</value>
   </data>
-  <data name="comboBoxInitialVCPUs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 130</value>
-  </data>
-  <data name="comboBoxInitialVCPUs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 21</value>
-  </data>
   <data name="labelInitialVCPUs.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 127</value>
   </data>
   <data name="labelInitialVCPUs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
+    <value>105, 24</value>
   </data>
   <data name="labelInitialVCPUs.Text" xml:space="preserve">
-    <value>初始 vCPU 数量(&amp;C):</value>
+    <value>当前 vCPU 数量(&amp;C):</value>
   </data>
   <data name="labelInvalidVCPUWarning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 107</value>
+    <value>111, 107</value>
   </data>
   <data name="labelInvalidVCPUWarning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 20</value>
+    <value>386, 20</value>
   </data>
   <data name="comboBoxTopology.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 80</value>
+    <value>111, 80</value>
   </data>
   <data name="labelTopology.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 74</value>
   </data>
   <data name="labelTopology.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 33</value>
+    <value>105, 33</value>
   </data>
   <data name="labelTopology.Text" xml:space="preserve">
     <value>拓扑(&amp;T):</value>
   </data>
   <data name="MemWarningLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 256</value>
+    <value>209, 256</value>
   </data>
   <data name="MemWarningLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 73</value>
+    <value>288, 73</value>
   </data>
   <data name="MemWarningLabel.Text" xml:space="preserve">
     <value>分配给此 VM 的物理内存量大于其主服务器的总内存</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 256</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
+    <value>111, 256</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 190</value>
@@ -191,10 +182,10 @@
     <value>3, 47</value>
   </data>
   <data name="lblVCPUs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 27</value>
+    <value>105, 27</value>
   </data>
   <data name="lblVCPUs.Text" xml:space="preserve">
-    <value>vCPU 数量(&amp;N):</value>
+    <value>最大vCPU 数量(&amp;N):</value>
   </data>
   <data name="lblVcpuWarning.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 28</value>
@@ -209,16 +200,16 @@
     <value>3, 258</value>
   </data>
   <data name="lblMemory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 18</value>
+    <value>105, 18</value>
   </data>
   <data name="lblMemory.Text" xml:space="preserve">
     <value>VM 内存(&amp;V):</value>
   </data>
   <data name="VCPUWarningLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 47</value>
+    <value>209, 47</value>
   </data>
   <data name="VCPUWarningLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 27</value>
+    <value>288, 27</value>
   </data>
   <data name="VCPUWarningLabel.Text" xml:space="preserve">
     <value>vCPU 数超过物理 CPU 数可能会导致 VM 性能下降</value>
@@ -230,20 +221,26 @@
     <value>可以调整您的 VM 及其拓扑可用的 vCPU 数以及要分配给 vCPU 的优先级</value>
   </data>
   <data name="comboBoxVCPUs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 50</value>
+    <value>111, 50</value>
   </data>
-  <data name="comboBoxVCPUs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 21</value>
+  <data name="comboBoxInitialVCPUs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 130</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 139</value>
+  </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>windows不支持CPU热添加</value>
+    <value>label7</value>
+  </data>
+  <data name="label7.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="lblPriority.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 164</value>
@@ -254,37 +251,22 @@
   <data name="lblPriority.Text" xml:space="preserve">
     <value>此虚拟机的 vCPU 优先级:</value>
   </data>
-  <data name="lblMB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 13</value>
-  </data>
-  <data name="nudMemory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 167</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 52</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 13</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 13</value>
-  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 52</value>
+    <value>373, 65</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>(vCPUs*100%)</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 52</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>437, 20</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>516, 167</value>
   </data>
 </root>

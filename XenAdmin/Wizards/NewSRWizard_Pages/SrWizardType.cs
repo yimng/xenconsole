@@ -120,7 +120,7 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public List<FibreChannelDevice> Device { get; private set; }
     }
 
-    public class LVMoMirrorSrDescriptor : SrDescriptor//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    public class LVMoMirrorSrDescriptor : SrDescriptor
     {
         public List<FibreChannelDevice> Device { get; private set; }
         public LVMoMirrorSrDescriptor(List<FibreChannelDevice> device, IXenConnection connection)
@@ -140,10 +140,9 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
                 DeviceConfig[SrProbeAction.SCSIid1] = device[0].SCSIid;
                 DeviceConfig[SrProbeAction.SCSIid2] = device[1].SCSIid;
                 DeviceConfig[SrProbeAction.SCSIid3] = device[2].SCSIid;
-                Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor + " : " + device[2].Vendor, device[0].Serial + " : " + device[1].Serial + " : " + device[2].Serial);
+                Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[0].Serial,device[1].Vendor + " : " + device[1].Serial);
             }
 
-//            Description = string.Format(Messages.NEWSR_LVMOMIRROR_DESCRIPTION, device[0].Vendor + " ： " + device[1].Vendor, device[0].Serial + " : " + device[1].Serial);
         }
 
         
@@ -488,11 +487,26 @@ namespace XenAdmin.Wizards.NewSRWizard_Pages
         public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror; } }
         public override string ContentType { get { return ""; } }
         public override bool ShowIntroducePrompt { get { return false; } }
-       public override bool ShowReattachWarning { get { return true; } }
+        public override bool ShowReattachWarning { get { return true; } }
         public override bool AllowToCreateNewSr { get; set; }
         public override void ResetSrName(IXenConnection connection)
         { 
             SrName = SrWizardHelpers.DefaultSRName(Messages.NEWSR_LVMoMirror_DEFAULT_NAME, connection);
+        }
+    }
+    public class SrWizardType_LvmoMirror_Iscsi : SrWizardType
+    {
+        public override bool IsEnhancedSR { get { return true; } }
+        public override string FrontendBlurb { get { return Messages.NEWSR_MIRROR_ISCSI_BLURB; } }
+        public override SR.SRTypes Type { get { return SR.SRTypes.lvmomirror; } }
+        public override string ContentType { get { return "_is_mirror_iscsi"; } }
+        public override bool ShowIntroducePrompt { get { return false; } }
+        public override bool ShowReattachWarning { get { return true; } }
+        public override bool AllowToCreateNewSr { get; set; }
+
+        public override void ResetSrName(IXenConnection connection)
+        {
+            SrName = SrWizardHelpers.DefaultSRName(Messages.MIRROR_ISCSI_DEFAULT_NAME, connection);
         }
     }
 }

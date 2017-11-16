@@ -256,7 +256,8 @@ namespace XenAdmin
 
             toolStripSeparator7.Visible = xenSourceOnTheWebToolStripMenuItem.Visible = xenCenterPluginsOnlineToolStripMenuItem.Visible = !HiddenFeatures.ToolStripMenuItemHidden;
             xenSourceOnTheWebToolStripMenuItem.Visible = xenCenterPluginsOnlineToolStripMenuItem.Visible = false;
-            healthCheckToolStripMenuItem1.Visible = !HiddenFeatures.HealthCheckHidden;
+            //healthCheckToolStripMenuItem1.Visible = !HiddenFeatures.HealthCheckHidden;
+            healthCheckToolStripMenuItem1.Visible = false;
         }
 
         private void Default_SettingChanging(object sender, SettingChangingEventArgs e)

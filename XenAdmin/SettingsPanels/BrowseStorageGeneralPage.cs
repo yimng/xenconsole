@@ -176,7 +176,49 @@ namespace XenAdmin.SettingsPanels
             
             return false;
         }
-
+        private bool CanAddMirrorLUN(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+//            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (scsiid == "")
+            {
+                return true;
+            }
+//            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid ||
+//                    pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("removed") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid ||
+//                    !pdb.other_config.ContainsKey("LUN1-status") || !pdb.other_config.ContainsKey("LUN2-status")))
+//            {
+//                return true;
+//            }
+//            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+//                    pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
+//            {
+//                return true;
+//            }
+                return false;
+        }
+        private bool isLunBondRed(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") && pdb.other_config["LUN1-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid
+                || pdb.other_config.ContainsKey("LUN2-status") && pdb.other_config["LUN2-status"].Contains("faulty") && pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool isMirrorRed(string scsiid)
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any<PBD>(pdb => pdb.other_config.ContainsKey("LUN1-status") &&pdb.other_config["LUN1-status"].Contains("unknown")&& pdb.other_config.ContainsKey("LUN1-scsiid") && pdb.other_config["LUN1-scsiid"] == scsiid
+                || pdb.other_config.ContainsKey("LUN2-status")&&pdb.other_config["LUN2-status"].Contains("unknown")&& pdb.other_config.ContainsKey("LUN2-scsiid") && pdb.other_config["LUN2-scsiid"] == scsiid))
+            {
+                return true;
+            }
+            return false;
+        }
         private bool canissciRemove()
         {
             XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
@@ -194,8 +236,19 @@ namespace XenAdmin.SettingsPanels
             }
             
             return true;
-        }
+        } 
+        private bool canMirrorissciRemove()
+        {
+            XenAPI.SR sr = this.xenModelObject as XenAPI.SR;
+            List<PBD> pbds = sr.Connection.ResolveAll<PBD>(sr.PBDs);
+            if (pbds.Any(pbd => pbd.other_config.ContainsKey("LUN1-scsiid") && pbd.other_config["LUN1-scsiid"] == "" ||
+                     pbd.other_config.ContainsKey("LUN2-scsiid") && pbd.other_config["LUN2-scsiid"] == ""))
+            {
+                return false;
+            }
 
+            return true;
+        }
         private bool isHAenableOfSR(SR sr)
         {
             Pool pool = Helpers.GetPoolOfOne(sr.Connection);
@@ -234,15 +287,15 @@ namespace XenAdmin.SettingsPanels
                     {
                         if (xenObject.GetSRType(true) == SR.SRTypes.lvmobond)
                         {
-                            if (CanAddLUN(scsiid))
+                            if (CanAddLUN(scsiid) || isLunBondRed(scsiid))
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                              
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
                                 itm.Click += delegate
                                 {
                                     List<FibreChannelDevice> devices;
                                     var success = LVMoBond.FiberChannelScan(this, xenObject.Connection, out devices);
-                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddLUNDialog(xenObject, devices));
+                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddLUNDialog(xenObject,devices));
                                 };
 
                                 ctxMenuItems.Add(itm);
@@ -250,7 +303,7 @@ namespace XenAdmin.SettingsPanels
                             }
                             else if (canissciRemove())
                             {
-                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();                               
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
                                 itm.Click += delegate
                                 {
@@ -260,30 +313,44 @@ namespace XenAdmin.SettingsPanels
 
                                 };
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                if (isLunBondRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
                             else
                             {
                                 GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
                             }
                         }
-                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror)
+                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror&& xenObject.other_config.ContainsKey("_type"))
                         {
-                            if (CanAddLUN(scsiid))
+                            if (CanAddMirrorLUN(scsiid))
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
                                 itm.Click += delegate
                                 {
-                                    List<FibreChannelDevice> devices;
-                                    var success = LVMoMirror.FiberChannelScan(this, xenObject.Connection, out devices);
-                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddMirrorLUNDialog(xenObject, devices));
+                                    // Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddMirrorIscsiDialog(xenObject));
+                                    AddMirrorIscsiDialog dlg = new AddMirrorIscsiDialog(xenObject);
+                                    dlg.ShowDialog();
                                 };
 
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
-                            else if (canissciRemove())
+                            else if (canMirrorissciRemove())
                             {
                                 List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
                                 ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
@@ -295,7 +362,64 @@ namespace XenAdmin.SettingsPanels
 
                                 };
                                 ctxMenuItems.Add(itm);
-                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
+                            }
+                            else
+                            {
+                                GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General));
+                            }
+
+                        }
+                        else if (xenObject.GetSRType(true) == SR.SRTypes.lvmomirror&&!xenObject.other_config.ContainsKey("_type"))
+                        {
+                            if (CanAddMirrorLUN(scsiid))
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.ADD) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    List<FibreChannelDevice> devices;
+                                    var success = LVMoMirror.FiberChannelScan(this, xenObject.Connection, out devices);
+                                    Program.MainWindow.ShowPerConnectionWizard(this.xenModelObject.Connection, new AddMirrorLUNDialog(xenObject, devices));
+                                };
+
+                                ctxMenuItems.Add(itm);
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
+                            }
+                            else if (canMirrorissciRemove())
+                            {
+                                List<ToolStripMenuItem> ctxMenuItems = new List<ToolStripMenuItem>();
+                                ToolStripMenuItem itm = new ToolStripMenuItem(Messages.REMOVE) { Image = Resources._000_StorageBroken_h32bit_16 };
+                                itm.Click += delegate
+                                {
+                                    AsyncAction Action = new SrRemoveMirrorLUNAction(xenObject.Connection, xenObject, scsiid);
+                                    ActionProgressDialog dialog = new ActionProgressDialog(Action, ProgressBarStyle.Marquee) { ShowCancel = true };
+                                    dialog.ShowDialog(this);
+
+                                };
+                                ctxMenuItems.Add(itm);
+                                if (isMirrorRed(scsiid))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, Color.Red, ctxMenuItems));
+                                }
+                                else
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("SR.scsiid"), scsiid ?? Messages.UNKNOWN, General, ctxMenuItems));
+                                }
                             }
                             else
                             {
@@ -418,7 +542,49 @@ namespace XenAdmin.SettingsPanels
                                 }
                             }
                         }
-                    }                    
+                    }
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror&&!sr.other_config.ContainsKey("_type"))
+                    {
+                        if (pbd != null)
+                        {
+                            String status;
+                            if (pbd.other_config.ContainsKey("LUN1-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN1-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN1"), status, Status));
+                                }
+                            }
+                            if (pbd.other_config.ContainsKey("LUN2-status"))
+                            {
+                                if (pbd.other_config.TryGetValue("LUN2-status", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
+                                }
+                            }
+                        }
+                    }
+                    if (sr.GetSRType(true) == SR.SRTypes.lvmomirror && sr.other_config.ContainsKey("_type"))
+                    {
+                        if (pbd != null)
+                        {
+                            String status;
+                            if (pbd.device_config.ContainsKey("SCSIid1"))
+                            {
+                                if (pbd.device_config.TryGetValue("SCSIid1", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN1"), status, Status));
+                                }
+                            }
+                            if (pbd.device_config.ContainsKey("SCSIid2"))
+                            {
+                                if (pbd.device_config.TryGetValue("SCSIid2", out status))
+                                {
+                                    GeneralDataList.Add(new GeneralDataStructure(FriendlyName("LUN2"), status, Status));
+                                }
+                            }
+                        }
+                    }
                 }//foreach
                 /**
                 if (sr.GetSRType(true) == SR.SRTypes.lvmobond)

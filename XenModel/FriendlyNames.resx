@@ -1991,4 +1991,7 @@
   <data name="Label-host.license_params-max_vms" xml:space="preserve">
     <value>max running vm number</value>
   </data>
+  <data name="Label-SR.SRTypes-lvmomirror" xml:space="preserve">
+    <value>LVM Mirror</value>
+  </data>
 </root>

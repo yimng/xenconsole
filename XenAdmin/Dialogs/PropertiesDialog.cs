@@ -84,6 +84,8 @@ namespace XenAdmin.Dialogs
         private SecurityEditPage SecurityEditPage;
         private LivePatchingEditPage LivePatchingEditPage;
         private UseSSDCachePage UseSSDCachePage;
+        private StorageQOSPage StorageQOSPage;
+        private KernelCrashDumpPage KernelCrashDumpPage;
         #endregion
 
         private IXenObject xenObject, xenObjectBefore, xenObjectCopy;
@@ -156,6 +158,7 @@ namespace XenAdmin.Dialogs
                     ShowTab(VCpuMemoryEditPage = new CPUMemoryEditPage());
                     ShowTab(StartupOptionsEditPage = new BootOptionsEditPage());
                     ShowTab(VMHAEditPage = new VMHAEditPage {VerticalTabs = verticalTabs});
+                    ShowTab(StorageQOSPage = new StorageQOSPage());
                 }
 
                 if (is_vm || is_host || (is_sr && Helpers.ClearwaterOrGreater(connection)))
@@ -193,6 +196,7 @@ namespace XenAdmin.Dialogs
                     ShowTab(hostMultipathPage1 = new HostMultipathPage());
                     ShowTab(HostPowerONEditPage = new HostPowerONEditPage());
                     ShowTab(LogDestinationEditPage = new LogDestinationEditPage());
+                    ShowTab(KernelCrashDumpPage = new KernelCrashDumpPage());
                 }
                 
                 if (is_pool)
@@ -238,10 +242,12 @@ namespace XenAdmin.Dialogs
                 }
                 **/
 
-                if (is_vm && Helpers.ContainerCapability(xenObject.Connection) && ((VM)xenObjectCopy).CanBeEnlightened)
+                if (is_vm && Helpers.ContainerCapability(xenObject.Connection) && ((VM)xenObjectCopy).CanBeEnlightened
+                    && !Helpers.FeatureForbidden(xenObject.Connection, Host.RestrictContainer))
                     ShowTab(VMEnlightenmentEditPage = new VMEnlightenmentEditPage());
 
-                if (is_vm && Helpers.ContainerCapability(xenObject.Connection) && ((VM)xenObjectCopy).CanHaveCloudConfigDrive)
+                if (is_vm && Helpers.ContainerCapability(xenObject.Connection) && ((VM)xenObjectCopy).CanHaveCloudConfigDrive
+                    && !Helpers.FeatureForbidden(xenObject.Connection, Host.RestrictContainer))
                     ShowTab(CloudConfigParametersPage = new Page_CloudConfigParameters());
 
                 if (is_VMPP)
@@ -603,7 +609,6 @@ namespace XenAdmin.Dialogs
         {
             SelectPage(VCpuMemoryEditPage);
         }
-
         public void SelectVdiSizeLocationPage()
         {
             SelectPage(vdiSizeLocation);

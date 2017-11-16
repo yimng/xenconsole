@@ -306,11 +306,13 @@ namespace XenAdmin.Wizards.RestoreWizard_Pages
                     {
                         index = ~index;
                         list.Insert(index, sr.opaque_ref);
-                        if (sr.GetSRType(false) == SR.SRTypes.lvm || sr.GetSRType(false) == SR.SRTypes.ext 
+                        if (sr.GetSRType(false) == SR.SRTypes.lvm 
+                            || sr.GetSRType(false) == SR.SRTypes.ext 
                             || sr.GetSRType(false) == SR.SRTypes.lvmoiscsi
                             || sr.GetSRType(false) == SR.SRTypes.lvmohba
                             || sr.GetSRType(false) == SR.SRTypes.lvmobond
-                            || sr.GetSRType(false) == SR.SRTypes.nfs)
+                            || sr.GetSRType(false) == SR.SRTypes.nfs
+                            || sr.GetSRType(false) == SR.SRTypes.lvmomirror)
                         {
                             String[] rowTemp = { _xenHost.name_label, _xenHost.address, sr.name_label, Util.DiskSizeString(sr.FreeSpace) };
                             this.DataGridView_DefaultStorage.Rows.Add(rowTemp);

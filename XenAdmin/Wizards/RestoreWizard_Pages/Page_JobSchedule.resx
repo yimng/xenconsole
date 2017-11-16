@@ -112,263 +112,263 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;Label_Server_ScheduleTime.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DateTimePicker_StartTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 21</value>
   </data>
-  <data name="&gt;&gt;Label_ServerTime.Name" xml:space="preserve">
-    <value>Label_ServerTime</value>
+  <data name="&gt;&gt;RadioButton_Now.Parent" xml:space="preserve">
+    <value>GroupBox_ScheduleType</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadioButton_Once.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Label_ServerTime.Text" xml:space="preserve">
-    <value>Server Time:</value>
-  </data>
-  <data name="&gt;&gt;Label_Server_ScheduleTime.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Label_StartDate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DateTimePicker_StartTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 150</value>
-  </data>
-  <data name="&gt;&gt;Label_StartDate.Name" xml:space="preserve">
-    <value>Label_StartDate</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartDate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Label_StartTime.Text" xml:space="preserve">
-    <value>Start Time:</value>
-  </data>
-  <data name="RadioButton_Now.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 36</value>
-  </data>
-  <data name="DateTimePicker_StartDate.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Label_StartDate.Text" xml:space="preserve">
-    <value>Start Date:</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadioButton_Now.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label_ServerTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Label_StartTime.Name" xml:space="preserve">
+    <value>Label_StartTime</value>
   </data>
-  <data name="&gt;&gt;Label_StartTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label_StartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 106</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Once.Parent" xml:space="preserve">
-    <value>GroupBox_ScheduleType</value>
-  </data>
-  <data name="RadioButton_Once.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 16</value>
+  <data name="&gt;&gt;RadioButton_Now.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="RadioButton_Once.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 75</value>
   </data>
-  <data name="&gt;&gt;GroupBox_ScheduleType.Name" xml:space="preserve">
+  <data name="&gt;&gt;RadioButton_Once.Parent" xml:space="preserve">
     <value>GroupBox_ScheduleType</value>
   </data>
-  <data name="DateTimePicker_StartTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 21</value>
+  <data name="Label_StartDate.Text" xml:space="preserve">
+    <value>Start Date:</value>
   </data>
-  <data name="Label_Server_ScheduleTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;RadioButton_Once.Name" xml:space="preserve">
+    <value>RadioButton_Once</value>
   </data>
-  <data name="&gt;&gt;RadioButton_Once.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Page_JobSchedule</value>
   </data>
-  <data name="DateTimePicker_StartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 21</value>
+  <data name="Label_ServerTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 58</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker_StartTime.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="RadioButton_Once.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="&gt;&gt;Label_StartDate.Name" xml:space="preserve">
+    <value>Label_StartDate</value>
   </data>
   <data name="RadioButton_Now.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 16</value>
   </data>
-  <data name="&gt;&gt;Label_StartTime.ZOrder" xml:space="preserve">
+  <data name="Label_Server_ScheduleTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 58</value>
+  </data>
+  <data name="DateTimePicker_StartDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 100</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DateTimePicker_StartDate.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DateTimePicker_StartTime.CustomFormat" xml:space="preserve">
+    <value>hh:mm</value>
+  </data>
+  <data name="Label_Server_ScheduleTime.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Label_Server_ScheduleTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 12</value>
+  </data>
+  <data name="&gt;&gt;Label_StartDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_StartDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadioButton_Once.Text" xml:space="preserve">
+    <value>Once</value>
+  </data>
+  <data name="DateTimePicker_StartDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 21</value>
+  </data>
+  <data name="DateTimePicker_StartTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 150</value>
+  </data>
+  <data name="Label_ServerTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartTime.Name" xml:space="preserve">
+    <value>DateTimePicker_StartTime</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ScheduleType.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label_StartTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="GroupBox_ScheduleType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadioButton_Now.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label_StartTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RadioButton_Once.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ScheduleType.Name" xml:space="preserve">
+    <value>GroupBox_ScheduleType</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadioButton_Now.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 36</value>
+  </data>
+  <data name="&gt;&gt;Label_ServerTime.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DateTimePicker_StartDate.CustomFormat" xml:space="preserve">
+    <value>yyyy/MM/dd</value>
+  </data>
+  <data name="RadioButton_Once.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadioButton_Now.Text" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="Label_StartTime.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="Label_ServerTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 12</value>
   </data>
-  <data name="DateTimePicker_StartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 100</value>
-  </data>
-  <data name="&gt;&gt;GroupBox_ScheduleType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Now.Name" xml:space="preserve">
-    <value>RadioButton_Now</value>
-  </data>
-  <data name="GroupBox_ScheduleType.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GroupBox_ScheduleType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 182</value>
-  </data>
-  <data name="DateTimePicker_StartTime.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="Label_StartTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 12</value>
-  </data>
-  <data name="Label_Server_ScheduleTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 58</value>
-  </data>
-  <data name="Label_StartDate.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label_ServerTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label_Server_ScheduleTime.Name" xml:space="preserve">
-    <value>Label_Server_ScheduleTime</value>
-  </data>
-  <data name="Label_Server_ScheduleTime.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RadioButton_Once.Text" xml:space="preserve">
-    <value>Once</value>
-  </data>
-  <data name="Label_StartTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Page_JobSchedule</value>
-  </data>
   <data name="RadioButton_Once.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartDate.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Now.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Once.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GroupBox_ScheduleType.Text" xml:space="preserve">
-    <value>Schedule Type</value>
-  </data>
-  <data name="GroupBox_ScheduleType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 35</value>
-  </data>
-  <data name="Label_Server_ScheduleTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 12</value>
-  </data>
-  <data name="Label_StartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 12</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>588, 374</value>
-  </data>
-  <data name="&gt;&gt;Label_StartDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>HalsignCore.Controls.XenTabPage, vGateConsoleMain, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Label_ServerTime.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Label_StartTime.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label_ServerTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 58</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Once.Name" xml:space="preserve">
-    <value>RadioButton_Once</value>
-  </data>
-  <data name="&gt;&gt;DateTimePicker_StartDate.Name" xml:space="preserve">
-    <value>DateTimePicker_StartDate</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Now.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox_ScheduleType.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;Label_Server_ScheduleTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadioButton_Now.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="DateTimePicker_StartTime.CustomFormat" xml:space="preserve">
-    <value>hh:mm</value>
-  </data>
-  <data name="DateTimePicker_StartDate.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="DateTimePicker_StartDate.CustomFormat" xml:space="preserve">
-    <value>yyyy/MM/dd</value>
-  </data>
-  <data name="&gt;&gt;RadioButton_Now.Parent" xml:space="preserve">
-    <value>GroupBox_ScheduleType</value>
-  </data>
-  <data name="&gt;&gt;Label_StartTime.Name" xml:space="preserve">
-    <value>Label_StartTime</value>
-  </data>
-  <data name="&gt;&gt;Label_ServerTime.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GroupBox_ScheduleType.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="DateTimePicker_StartTime.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RadioButton_Now.Text" xml:space="preserve">
-    <value>Now</value>
-  </data>
-  <data name="Label_StartTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 156</value>
-  </data>
-  <data name="&gt;&gt;Label_StartDate.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="Label_StartDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Label_ServerTime.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;Label_ServerTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label_StartTime.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Label_Server_ScheduleTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label_ServerTime.Name" xml:space="preserve">
+    <value>Label_ServerTime</value>
+  </data>
+  <data name="&gt;&gt;RadioButton_Now.Name" xml:space="preserve">
+    <value>RadioButton_Now</value>
+  </data>
+  <data name="&gt;&gt;Label_ServerTime.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DateTimePicker_StartTime.Name" xml:space="preserve">
-    <value>DateTimePicker_StartTime</value>
+  <data name="Label_StartTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 12</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="DateTimePicker_StartTime.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GroupBox_ScheduleType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 35</value>
+  </data>
+  <data name="&gt;&gt;RadioButton_Once.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ScheduleType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label_Server_ScheduleTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 374</value>
+  </data>
+  <data name="Label_ServerTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DateTimePicker_StartTime.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_StartDate.Name" xml:space="preserve">
+    <value>DateTimePicker_StartDate</value>
+  </data>
+  <data name="Label_ServerTime.Text" xml:space="preserve">
+    <value>Server Time:</value>
+  </data>
+  <data name="Label_StartDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 12</value>
+  </data>
+  <data name="Label_StartTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label_StartDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label_StartDate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label_StartDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 106</value>
+  </data>
+  <data name="&gt;&gt;RadioButton_Now.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label_StartTime.Text" xml:space="preserve">
+    <value>Start Time:</value>
+  </data>
+  <data name="GroupBox_ScheduleType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 182</value>
+  </data>
+  <data name="&gt;&gt;Label_Server_ScheduleTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Label_StartTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DateTimePicker_StartDate.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label_Server_ScheduleTime.Name" xml:space="preserve">
+    <value>Label_Server_ScheduleTime</value>
+  </data>
+  <data name="Label_StartTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 156</value>
+  </data>
+  <data name="GroupBox_ScheduleType.Text" xml:space="preserve">
+    <value>Schedule Type</value>
+  </data>
+  <data name="Label_Server_ScheduleTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ScheduleType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Chinese (People's Republic of China)</value>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-CN</value>
   </metadata>
 </root>

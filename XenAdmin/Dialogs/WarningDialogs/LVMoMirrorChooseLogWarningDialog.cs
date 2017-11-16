@@ -106,7 +106,7 @@ namespace XenAdmin.Dialogs.WarningDialogs
                                       : Messages.LVMOHBA_WARNING_DIALOG_REPEAT_FOR_REMAINING_NO_SR;
             checkBoxRepeat.Visible = remainingDevicesCount > 0;
 
-            labelLUNDetails.Text = string.Format(Messages.LVMOBOND_WARNING_DIALOG_LUN_DETAILS, currentDevice[0].Vendor,
+            labelLUNDetails.Text = string.Format(Messages.LVMOMIRROR_WARNING_DIALOG_LUN_DETAILS, currentDevice[0].Vendor,
                                                  currentDevice[0].Serial,
                                                  string.IsNullOrEmpty(currentDevice[0].SCSIid)
                                                      ? currentDevice[0].Path
@@ -117,7 +117,13 @@ namespace XenAdmin.Dialogs.WarningDialogs
                                                  string.IsNullOrEmpty(currentDevice[1].SCSIid)
                                                      ? currentDevice[1].Path
                                                      : currentDevice[1].SCSIid,
-                                                 Util.DiskSizeString(currentDevice[1].Size));
+                                                 Util.DiskSizeString(currentDevice[1].Size),
+                                                 currentDevice[2].Vendor,
+                                                 currentDevice[2].Serial,
+                                                 string.IsNullOrEmpty(currentDevice[2].SCSIid)
+                                                     ? currentDevice[2].Path
+                                                     : currentDevice[2].SCSIid,
+                                                 Util.DiskSizeString(currentDevice[2].Size));
 
             panelReattach.Enabled = foundExistingSR;
             if (!panelReattach.Enabled)

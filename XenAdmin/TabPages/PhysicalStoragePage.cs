@@ -412,6 +412,34 @@ namespace XenAdmin.TabPages
                 && ((SR)listViewSrs.SelectedItems[0].Tag).GetSRType(true) == SR.SRTypes.iso
                 && !((SR)listViewSrs.SelectedItems[0].Tag).shared;
         }
+        private bool isUploading()
+        {
+            var actions = ConnectionsManager.History.FindAll(uploadISO);
+            if (actions.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private bool uploadISO(ActionBase action)
+        {
+            if (action.IsCompleted || action is Actions.GUIActions.MeddlingAction)
+                return false;
+
+            AsyncAction a = action as AsyncAction;
+            if (a != null && a.Cancelling)
+                return false;
+
+            if (action is UploadISOAction)
+            {
+                return true;
+            }
+
+            return false;
+        }
 
         private void RefreshTrimButton()
         {
@@ -432,6 +460,12 @@ namespace XenAdmin.TabPages
 
         private void uploadiso_Click(object sender, EventArgs e)
         {
+            if (isUploading())
+            {
+                MessageBox.Show(Messages.UPLOADING_ISO, Messages.WARNING);
+                return;
+            }
+
             if (listViewSrs.SelectedItems.Count != 1)
                 return;
 

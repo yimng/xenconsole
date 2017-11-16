@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HalsignLib")]
-[assembly: AssemblyDescription("Halsign Console Library")]
+[assembly: AssemblyTitle("[Halsign]Lib")]
+[assembly: AssemblyDescription("[Halsign] Console Library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Halsign")]
-[assembly: AssemblyProduct("HalsignLib")]
-[assembly: AssemblyCopyright("Copyright © 2013 Halsign Corporation. All rights reserved.")]
+[assembly: AssemblyCompany("[Halsign]")]
+[assembly: AssemblyProduct("[Halsign]Lib")]
+[assembly: AssemblyCopyright("Copyright © 2016 [Halsign Corporation]. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

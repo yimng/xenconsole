@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -1726,7 +1726,7 @@
     <value>SR 磁盘空间警报</value>
   </data>
   <data name="ALERT_ALARM_SR_PHYSICAL_UTILISATION_DESCRIPTION" xml:space="preserve">
-    <value>{0} 上的实际利用率大约占其容量的 {1}。 
+    <value>{0} 上的实际利用率大约占其容量的 {1}。
 此警报设置为在 SR 的实际利用率高于 {2} 时触发。</value>
   </data>
   <data name="ALERT_ALARM_STORAGE" xml:space="preserve">
@@ -1839,7 +1839,7 @@
     <value>已上载所有更新</value>
   </data>
   <data name="ALREADY_ATTACHED_ELSEWHERE" xml:space="preserve">
-    <value>SR“{0}”当前已连接到其他位置。是否要将其连接到“{1}”? 
+    <value>SR“{0}”当前已连接到其他位置。是否要将其连接到“{1}”?
 
 警告: 必须确保 SR 当前未由任何未连接到 [vGate Console] 的服务器使用。否则可能会导致数据丢失。</value>
   </data>
@@ -2077,7 +2077,7 @@
     <value>从备份还原</value>
   </data>
   <data name="BAD_RESTORE_DETECTED" xml:space="preserve">
-    <value>您准备连接的服务器已经从所连服务器“{0}”的备份还原。 
+    <value>您准备连接的服务器已经从所连服务器“{0}”的备份还原。
 
 该操作存在潜在危险，不允许执行。</value>
   </data>
@@ -2167,7 +2167,7 @@
   <data name="BOND_DELETE_WILL_DISTURB_BOTH" xml:space="preserve">
     <value>{0}
 
-删除此绑定会自动将绑定上的管理接口和辅助接口转移到绑定的第一个从属成员: 
+删除此绑定会自动将绑定上的管理接口和辅助接口转移到绑定的第一个从属成员:
 
 - [vGate Console] 与池之间的连接将暂时中断
 
@@ -2178,7 +2178,7 @@
   <data name="BOND_DELETE_WILL_DISTURB_PRIMARY" xml:space="preserve">
     <value>{0}
 
-删除此绑定会自动将绑定上的管理接口转移到绑定的第一个从属成员: 
+删除此绑定会自动将绑定上的管理接口转移到绑定的第一个从属成员:
 
 - [vGate Console] 与池之间的连接将暂时中断
 
@@ -2361,7 +2361,7 @@
     <value>ISO 存储必须从 VM 中弹出，然后才能删除。该存储正由 VM“{0}”使用。</value>
   </data>
   <data name="CANNOT_DELETE_CANNOT_DEACTIVATE_REASON" xml:space="preserve">
-    <value>无法在 VM“{0}”上取消激活该虚拟磁盘并将其删除: 
+    <value>无法在 VM“{0}”上取消激活该虚拟磁盘并将其删除:
 
 {1}</value>
   </data>
@@ -2488,17 +2488,17 @@
   </data>
   <data name="CHANGE_VMS_APPLIANCES_WARNING" xml:space="preserve">
     <value>您选择的某些 VM 已分配给其他 vApp。
-    
+
 是否要改为将这些 VM 分配给 vApp {0}?</value>
   </data>
   <data name="CHANGE_VMS_APPLIANCE_WARNING" xml:space="preserve">
     <value>VM {0} 已分配给 vApp {1}。
-    
+
 是否要改为将此 VM 分配给 vApp {2}?</value>
   </data>
   <data name="CHANGE_VMS_POLICIES_WARNING" xml:space="preserve">
     <value>您选择的某些 VM 已分配给其他保护策略。
-    
+
 是否要改为将这些 VM 分配给策略 {0}?</value>
   </data>
   <data name="CHANGE_VMS_POLICY" xml:space="preserve">
@@ -2506,7 +2506,7 @@
   </data>
   <data name="CHANGE_VMS_POLICY_WARNING" xml:space="preserve">
     <value>VM {0} 已分配给保护策略 {1}。
-    
+
 是否要改为将此 VM 分配给策略 {2}?</value>
   </data>
   <data name="CHANGE_VMS_SNAPSHOT_SCHEDULE_WARNING" xml:space="preserve">
@@ -2674,7 +2674,7 @@
   </data>
   <data name="CONFIRM_DELETE_POLICIES" xml:space="preserve">
     <value>是否删除所选策略?
-    
+
 当前有 {0} 个 VM 受这些策略保护，如果删除这些策略，这些 VM 将不再受保护。</value>
   </data>
   <data name="CONFIRM_DELETE_POLICIES_0" xml:space="preserve">
@@ -2682,7 +2682,7 @@
   </data>
   <data name="CONFIRM_DELETE_POLICY" xml:space="preserve">
     <value>是否删除策略“{0}”?
-    
+
 当前有 {1} 个 VM 受该策略的保护，如果删除该策略，这些 VM 将不再受保护。</value>
   </data>
   <data name="CONFIRM_DELETE_POLICY_0" xml:space="preserve">
@@ -2719,12 +2719,12 @@
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE" xml:space="preserve">
     <value>是否要删除 vApp“{0}”?
-    
+
 该 vApp 中当前包含 {1} 个 VM。</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES" xml:space="preserve">
     <value>是否要删除所选 vApp?
-    
+
 这些 vApp 中当前包含 {0} 个 VM。</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES_0" xml:space="preserve">
@@ -2732,7 +2732,7 @@
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES_1" xml:space="preserve">
     <value>是否删除所选 vApp?
-    
+
 这些 vApp 中有一个当前包含 {0} 个 VM。</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_0" xml:space="preserve">
@@ -2740,7 +2740,7 @@
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_1" xml:space="preserve">
     <value>是否删除 vApp“{0}”?
-    
+
 该 vApp 中当前包含 {1} 个 VM。</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_AND_VMS" xml:space="preserve">
@@ -3403,12 +3403,12 @@
     <value>已在源上启用 WLB</value>
   </data>
   <data name="CPS_WIZARD_MIGRATION_PAGE_TITLE_TEMPLATE" xml:space="preserve">
-    <value>选择目标池或独立服务器上用于实时迁移虚拟磁盘的存储网络。 
+    <value>选择目标池或独立服务器上用于实时迁移虚拟磁盘的存储网络。
 
 要在模板迁移期间实现最佳性能和可靠性，请确保用于存储迁移的网络不会用于管理或虚拟机通信。</value>
   </data>
   <data name="CPS_WIZARD_MIGRATION_PAGE_TITLE_VM" xml:space="preserve">
-    <value>选择目标池或独立服务器上用于实时迁移虚拟磁盘的存储网络。 
+    <value>选择目标池或独立服务器上用于实时迁移虚拟磁盘的存储网络。
 
 要在 VM 迁移期间实现最佳性能和可靠性，请确保用于存储迁移的网络不会用于管理或虚拟机通信。</value>
   </data>
@@ -4683,7 +4683,7 @@
     <value>未找到存储库</value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_SCAN_RESULT_TITLE" xml:space="preserve">
-    <value>找到以下存储库: 
+    <value>找到以下存储库:
 </value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_TEXT" xml:space="preserve">
@@ -7022,23 +7022,23 @@ SCSI ID: {2}
     <value>状态</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_DESKTOP_FEATURES_ENABLED" xml:space="preserve">
-    <value>满足支持条件 
+    <value>满足支持条件
 XenApp/XenDesktop 功能已启用</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_DESKTOP_PLUS_FEATURES_ENABLED" xml:space="preserve">
-    <value>满足支持条件 
+    <value>满足支持条件
 XenApp/XenDesktop Platinum 功能已启用</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_ENTERPRISE_FEATURES_ENABLED" xml:space="preserve">
-    <value>符合支持条件 
+    <value>符合支持条件
 启用了 Enterprise 功能</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_PREMIUM_FEATURES_ENABLED" xml:space="preserve">
-    <value>符合支持条件 
+    <value>符合支持条件
 已启用高级功能</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_STANDARD_FEATURES_ENABLED" xml:space="preserve">
-    <value>符合支持条件 
+    <value>符合支持条件
 仅限 Standard 功能</value>
   </data>
   <data name="LICENSE_TOO_MANY_SERVERS_SELECTED_CAPTION" xml:space="preserve">
@@ -7177,7 +7177,7 @@ SCSI ID: {2}
     <value>是否将所选服务器移入池 {0}?</value>
   </data>
   <data name="MAINWINDOW_CONFIRM_REMOVE_FROM_POOL" xml:space="preserve">
-    <value>是否要从池 {1} 中删除 {0}? 
+    <value>是否要从池 {1} 中删除 {0}?
 
 此操作将永久删除并重新初始化 {2} 上的所有本地存储。您的数据将丢失，服务器将重新启动。</value>
   </data>
@@ -7611,7 +7611,7 @@ SCSI ID: {2}
   </data>
   <data name="MESSAGEBOX_DESTROY_SRS_CONTINUE" xml:space="preserve">
     <value>是否确实要销毁所选存储库?
-      
+
 销毁所选存储库将从底层存储设备中删除所有关联的虚拟磁盘。
 
 此操作为最终操作，无法恢复。</value>
@@ -7621,7 +7621,7 @@ SCSI ID: {2}
   </data>
   <data name="MESSAGEBOX_DESTROY_SR_CONTINUE" xml:space="preserve">
     <value>是否确实要销毁 {0}?
-    
+
 销毁此存储库将从底层存储设备中删除所有关联的虚拟磁盘。
 
 此操作为最终操作，无法恢复。</value>
@@ -7756,7 +7756,7 @@ SCSI ID: {2}
     <value>无法重新连接</value>
   </data>
   <data name="MESSAGEBOX_SAVE_CORRUPTED" xml:space="preserve">
-    <value>无法保存设置。您的磁盘空间可能不足，或者您的配置文件可能已损坏。 
+    <value>无法保存设置。您的磁盘空间可能不足，或者您的配置文件可能已损坏。
 
 要修复损坏的配置文件，请将更改还原为 {0}，或者删除该文件以返回默认值。</value>
   </data>
@@ -8248,7 +8248,7 @@ SCSI ID: {2}
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
     <value>[vGate] 主机在这种情况下使用支持 FCoE 的受支持融合网络适配器(CNA)来支持基于软件的以太网光纤通道。
 
-要将 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括配置 FCoE 架构以及将 LUN 分配给 CNA 的公共全球名称(PWWN)。 
+要将 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括配置 FCoE 架构以及将 LUN 分配给 CNA 的公共全球名称(PWWN)。
 
 完成此配置后，此向导将引导您完成发现和装载对主机 CNA 可用的 LUN 作为 SCSI 设备。然后可以使用该 SCSI 设备访问 LUN，就像本地连接了 SCSI 设备一样。</value>
   </data>
@@ -8320,9 +8320,9 @@ SR:  {0}
     <value>要怎样命名此存储库?</value>
   </data>
   <data name="NEWSR_NETAPP_BLURB" xml:space="preserve">
-    <value>如果您有权访问磁盘空间充足并运行某版本 Data ONTAP 7G (7.2 或更高版本)的网络设备(NetApp)文件管理器，则可以配置自定义的 NetApp 存储库。 
+    <value>如果您有权访问磁盘空间充足并运行某版本 Data ONTAP 7G (7.2 或更高版本)的网络设备(NetApp)文件管理器，则可以配置自定义的 NetApp 存储库。
 
-驱动程序使用文件管理器的 ZAPI 接口来创建一组与 SR 对应的 FlexVol。VDI 作为虚拟 LUN 创建在文件管理器上，并使用 iSCSI 数据路径连接到主机。 
+驱动程序使用文件管理器的 ZAPI 接口来创建一组与 SR 对应的 FlexVol。VDI 作为虚拟 LUN 创建在文件管理器上，并使用 iSCSI 数据路径连接到主机。
 
 VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并确保与现有 ONTAP 文件管理器管理工具兼容。</value>
   </data>
@@ -9447,7 +9447,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>更新“{0}”已应用到服务器“{1}”</value>
   </data>
   <data name="PATCH_DESCRIPTION_AND_INSTALLATION_SIZE" xml:space="preserve">
-    <value>{0} 
+    <value>{0}
 安装大小: {1}</value>
   </data>
   <data name="PATCH_DOWNLOAD_FAILED" xml:space="preserve">
@@ -9468,7 +9468,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
 请改为从 .{2} 文件上载更新。</value>
   </data>
   <data name="PATCH_EXPANDED_DESCRIPTION" xml:space="preserve">
-    <value>{0} 
+    <value>{0}
 修改日期: {1}
 创建日期: {2}
 大小: {3}</value>
@@ -9949,14 +9949,14 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="RBAC_CONSOLE_WARNING_MANY" xml:space="preserve">
     <value>您当前的角色为 {0}。
 
-要访问此控制台，请切换到具有以下角色之一的帐户: 
+要访问此控制台，请切换到具有以下角色之一的帐户:
 
 {1}</value>
   </data>
   <data name="RBAC_CONSOLE_WARNING_ONE" xml:space="preserve">
     <value>您当前的角色为 {0}。
 
-要访问此控制台，请切换到具有以下角色的帐户: 
+要访问此控制台，请切换到具有以下角色的帐户:
 
 {1}</value>
   </data>
@@ -9969,7 +9969,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   <data name="RBAC_HA_TAB_WARNING" xml:space="preserve">
     <value>您当前的角色为“{1}”。
 
-要配置高可用性设置，请切换到具有以下角色之一的帐户: 
+要配置高可用性设置，请切换到具有以下角色之一的帐户:
 
 {0}</value>
   </data>
@@ -9983,7 +9983,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>用户 {0} 权限不足，无法将软件更新应用到 {1}。请使用其他用户凭据登录，或者取消选择该服务器，然后继续操作。</value>
   </data>
   <data name="RBAC_UPGRADE_WIZARD_MESSAGE" xml:space="preserve">
-    <value>用户 {0} 权限不足，无法在 {1} 上执行池滚动升级。 
+    <value>用户 {0} 权限不足，无法在 {1} 上执行池滚动升级。
 
 必须先使用具有池管理员权限的帐户重新连接 {1}，才能使用“池滚动升级”向导滚动升级池。</value>
   </data>
@@ -10367,7 +10367,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
   </data>
   <data name="ROLLING_UPGRADE_REBOOT_MESSAGE" xml:space="preserve">
     <value>要在 {0} 上安装 [vGate] 升级，请执行以下步骤:
-    
+
 1. 将 [vGate] 安装 CD-ROM 插入到服务器的 CD/DVD 驱动器中或设置 PXE 网络引导顺序。
 2. 单击下面的“立即重新启动”按钮以重新启动服务器并开始安装。
 3. 转至服务器的控制台并按照屏幕上的说明进行操作以安装升级。
@@ -10986,7 +10986,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>所需空间为 {0}，而可用空间仅有 {1}</value>
   </data>
   <data name="SR_QUANTUM_ALLOCATION_LIMITS_INFO" xml:space="preserve">
-    <value>增量分配限制如下: 
+    <value>增量分配限制如下:
 下限: SR 大小/{0} (不低于 {1})
 上限: SR 大小/{2}</value>
   </data>
@@ -12235,7 +12235,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>磁盘连接的 VM 未处于停止状态。</value>
   </data>
   <data name="VCPU_ONLY_WHEN_HALTED" xml:space="preserve">
-    <value>仅当 VM 关闭时才能更改 vCPU。</value>
+    <value>仅当 VM 关闭时才能更改最大 vCPU数量、拓扑和优先级</value>
   </data>
   <data name="VDI" xml:space="preserve">
     <value>VDI</value>
@@ -13666,7 +13666,7 @@ VM 克隆使用文件管理器的快照和克隆功能来实现高性能，并�
     <value>备份(&amp;B)</value>
   </data>
   <data name="BR_MENU_REPLICATION" xml:space="preserve">
-    <value>复制(&amp;P)</value>
+    <value>在线复制(&amp;P)</value>
   </data>
   <data name="BR_MENU_RESTORE" xml:space="preserve">
     <value>恢复(&amp;R)</value>
@@ -14309,13 +14309,13 @@ SCSI ID: {6}
     <value>vGate 用户名或密码不正确。</value>
   </data>
   <data name="INSTANT_CREATE_VMS" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机</value>
   </data>
   <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机结束</value>
   </data>
   <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
-    <value />
+    <value>批量创建虚拟机开始</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
     <value>您确定要删除 vSwitch Controller 配置信息么?</value>
@@ -14347,7 +14347,7 @@ SCSI ID: {6}
     <value>协议</value>
   </data>
   <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
-    <value />
+    <value>虚拟交换机</value>
   </data>
   <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
     <value>存储</value>
@@ -14377,18 +14377,117 @@ SCSI ID: {6}
     <value>选择一个LUN存放log</value>
   </data>
   <data name="LVMOMIRROR_BLURB_ENHANCEDSR" xml:space="preserve">
-    <value>升级vGate以使用此功能</value>
+    <value>升级vGate到企业增强版以使用此功能</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
-    <value>待修改</value>
+    <value>vGate 主机通过主机总线适配器(HBA)支持光纤通道(FC)、以太网光纤通道(FCoE)和共享串联 SCSI (SAS)存储局域网。
+
+要将镜像的 LUN 显示给主机，必须手动完成所需要的所有配置，其中包括 vGate 主机中的存储设备、网络设备和 HBA。
+
+完成配置后， 该存储由位于两台同构或异构存储设备的两个LUN相互镜像，并封装成镜像设备显示给主机/集群，主机实现两个镜像的LUN之间的自动同步，从而实现两个LUN的双活。</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
-    <value>异构存储映射</value>
+    <value>异构存储双活</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>描述——待修改</value>
+    <value>异构存储双活SR [{0} - {1}]</value>
   </data>
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>请选择带有VDI的VM</value>
+  </data>
+  <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
+    <value>大小必须小于2043.99G</value>
+  </data>
+  <data name="LVMOMIRROR_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
+    <value>供应商: {0}
+序列号: {1}
+SCSI ID: {2}
+大小: {3}
+
+供应商: {4}
+序列号: {5}
+SCSI ID: {6}
+大小: {7}
+
+供应商: {8}
+序列号: {9}
+SCSI ID: {10}
+大小: {11}</value>
+  </data>
+  <data name="UPLOADING_ISO" xml:space="preserve">
+    <value>正在上传ISO文件，请稍等。</value>
+  </data>
+  <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
+    <value>正在创建 SR(LUN同步时间较长请耐心等待)</value>
+  </data>
+  <data name="ADD_MIRROR_LUN_HINT" xml:space="preserve">
+    <value>LUN同步时间较长请耐心等待</value>
+  </data>
+  <data name="CPUS" xml:space="preserve">
+    <value>CPU个数</value>
+  </data>
+  <data name="HOST" xml:space="preserve">
+    <value>服务器</value>
+  </data>
+  <data name="MAINWINDOW_CTRL_L" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MEDIA_ACCESS_CONTROL" xml:space="preserve">
+    <value>Mac地址</value>
+  </data>
+  <data name="SAVE_PATH" xml:space="preserve">
+    <value>保存路径</value>
+  </data>
+  <data name="VGATE_VERSION" xml:space="preserve">
+    <value>vGate版本</value>
+  </data>
+  <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
+    <value>正在添加SR {0} LUN,LUN同步时间较长请耐心等待</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_1" xml:space="preserve">
+    <value>调用插件发生错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_2" xml:space="preserve">
+    <value>插件参数错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_3" xml:space="preserve">
+    <value>远程方法错误。({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="BUTTON_PRINT_TEXT" xml:space="preserve">
+    <value>导出图表</value>
+  </data>
+  <data name="STORAGEQOSPAGE_TEXT" xml:space="preserve">
+    <value>存储</value>
+  </data>
+  <data name="KERNEL_CRASH_DUMP_SUBTEXT" xml:space="preserve">
+    <value>内核崩溃转储</value>
+  </data>
+  <data name="VCPU_HOTPLUG_LICENSE_UNAVAILABLE" xml:space="preserve">
+    <value>vGate免费版不支持CPU热添加</value>
+  </data>
+  <data name="VCPU_HOTPLUG_WINDOWS_UNAVAILABLE" xml:space="preserve">
+    <value>Windows不支持CPU热添加</value>
+  </data>
+  <data name="NEWSR_ISCSIORFC" xml:space="preserve">
+    <value>请选择LUN的来源</value>
+  </data>
+  <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
+    <value>vGate 主机通过主机总线适配器(HBA)支持共享串联 SCSI (SAS)存储局域网。
+
+要将镜像的 LUN 显示给主机，必须手动完成所需要的所有配置，包括 vGate 主机中的存储设备。
+
+完成配置后， 该存储由位于两台同构或异构存储设备的两个LUN相互镜像，并封装成镜像设备显示给主机/集群，主机实现两个镜像的LUN之间的自动同步，从而实现两个LUN的双活。</value>
+  </data>
+  <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
+    <value>异构存储双活-ISCSI[{0} ({1}; {2});{3};{4}]</value>
+  </data>
+  <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
+    <value>输入用于异构存储双活的iSCSI路径</value>
+  </data>
+  <data name="MIRROR_ISCSI_DEFAULT_NAME" xml:space="preserve">
+    <value>异构存储双活-iSCSI</value>
   </data>
 </root>

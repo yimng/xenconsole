@@ -5534,12 +5534,12 @@ namespace XenAPI
                 {
                     int cap;
                     if (int.TryParse(VCPUs_params["cap"], out cap))
-                        return cap > 0 ? cap : 100;
+                        return cap > 0 ? cap : ((int)VCPUs_at_startup) * 100;
                     else
-                        return 100;
+                        return ((int)VCPUs_at_startup) * 100;
                 }
                 else
-                    return 100;
+                    return ((int)VCPUs_at_startup) * 100;
             }
             set
             {

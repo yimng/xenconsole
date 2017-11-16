@@ -703,7 +703,14 @@ namespace XenAPI
         /// <param name="_sm_config">Storage backend specific configuration options First published in XenServer 4.1.</param>
         public static XenRef<SR> create(Session session, string _host, Dictionary<string, string> _device_config, long _physical_size, string _name_label, string _name_description, string _type, string _content_type, bool _shared, Dictionary<string, string> _sm_config)
         {
-            return XenRef<SR>.Create(session.proxy.sr_create(session.uuid, (_host != null) ? _host : "", Maps.convert_to_proxy_string_string(_device_config), _physical_size.ToString(), (_name_label != null) ? _name_label : "", (_name_description != null) ? _name_description : "", (_type != null) ? _type : "", (_content_type != null) ? _content_type : "", _shared, Maps.convert_to_proxy_string_string(_sm_config)).parse());
+            if (_type == SR.SRTypes.lvmomirror_iscsi.ToString())
+            {
+                return XenRef<SR>.Create(session.proxy.sr_create(session.uuid, (_host != null) ? _host : "", Maps.convert_to_proxy_string_string(_device_config), _physical_size.ToString(), (_name_label != null) ? _name_label : "", (_name_description != null) ? _name_description : "", (_type != null) ? SR.SRTypes.lvmomirror.ToString() : "", (_content_type != null) ? _content_type : "", _shared, Maps.convert_to_proxy_string_string(_sm_config)).parse());
+            }
+            else
+            {
+                return XenRef<SR>.Create(session.proxy.sr_create(session.uuid, (_host != null) ? _host : "", Maps.convert_to_proxy_string_string(_device_config), _physical_size.ToString(), (_name_label != null) ? _name_label : "", (_name_description != null) ? _name_description : "", (_type != null) ? _type : "", (_content_type != null) ? _content_type : "", _shared, Maps.convert_to_proxy_string_string(_sm_config)).parse());
+            }
         }
 
         /// <summary>

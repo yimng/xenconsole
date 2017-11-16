@@ -164,7 +164,7 @@ namespace XenAdmin.SettingsPanels
         public void Repopulate()
         {
             VM vm = this.vm;
-            int preCap = vm.VCPUCap;
+            int preCap=vm.VCPUCap;
             trackBar1.Maximum = Convert.ToInt32(vm.VCPUs_at_startup * 100);
             trackBar1.Minimum = 50;
             if (preCap > vm.VCPUs_at_startup * 100)
@@ -256,27 +256,47 @@ namespace XenAdmin.SettingsPanels
 
         private void InitializeVcpuControls()
         {
+            Host currentHost = Helpers.GetMaster(this.vm.Connection);
             if (isVcpuHotplugSupported)
             {
                 label7.Visible = false;
             }
             else 
             {
-                label7.Visible = true;
+                if (Host.RestrictVcpuHotplug(currentHost)&&vm.power_state == vm_power_state.Running&&!vm.IsWindows)
+                {
+                    label7.Text = Messages.VCPU_HOTPLUG_LICENSE_UNAVAILABLE;
+                    label7.Visible = true;
+                }
+                else if (vm.IsWindows&&vm.power_state == vm_power_state.Running)
+                {
+                    label7.Text = Messages.VCPU_HOTPLUG_WINDOWS_UNAVAILABLE;
+                    label7.Visible = true;
+                }
             }
-            lblVCPUs.Text = isVcpuHotplugSupported
-                ? Messages.VM_CPUMEMPAGE_MAX_VCPUS_LABEL
-                : Messages.VM_CPUMEMPAGE_VCPUS_LABEL;
+            lblVCPUs.Text = Messages.VM_CPUMEMPAGE_MAX_VCPUS_LABEL;
 
             labelInitialVCPUs.Text = vm.power_state == vm_power_state.Halted
                 ? Messages.VM_CPUMEMPAGE_INITIAL_VCPUS_LABEL
                 : Messages.VM_CPUMEMPAGE_CURRENT_VCPUS_LABEL;
 
-//            labelInitialVCPUs.Visible = comboBoxInitialVCPUs.Visible = isVcpuHotplugSupported;
+            //            labelInitialVCPUs.Visible = comboBoxInitialVCPUs.Visible = isVcpuHotplugSupported;   
+            PopulateVCPUsAtStartup(_OrigVCPUsMax, _OrigVCPUsAtStartup);
             comboBoxInitialVCPUs.Enabled = isVcpuHotplugSupported &&
                                            (vm.power_state == vm_power_state.Halted ||
                                             vm.power_state == vm_power_state.Running);
-
+            if (isVcpuHotplugSupported && (vm.power_state == vm_power_state.Halted || vm.power_state == vm_power_state.Running))
+            {
+                comboBoxInitialVCPUs.Enabled = true;
+            }
+            else if (!isVcpuHotplugSupported && vm.power_state == vm_power_state.Running)
+            {
+                comboBoxInitialVCPUs.Enabled = false;
+            }
+            else if (!isVcpuHotplugSupported && vm.power_state == vm_power_state.Halted)
+            {
+                comboBoxInitialVCPUs.Enabled = true;
+            }
             comboBoxVCPUs.Enabled = comboBoxTopology.Enabled = vm.power_state == vm_power_state.Halted;
 
             comboBoxTopology.Populate(vm.VCPUs_at_startup, vm.VCPUs_max, vm.CoresPerSocket, vm.MaxCoresPerSocket);

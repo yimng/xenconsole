@@ -1985,4 +1985,7 @@
   <data name="Label-host.license_params-max_vms" xml:space="preserve">
     <value>最大可运行的虚拟机数量</value>
   </data>
+  <data name="Label-SR.SRTypes-lvmomirror" xml:space="preserve">
+    <value>异构存储双活</value>
+  </data>
 </root>

@@ -121,7 +121,7 @@
     <value>https://{0}/index.html?transactionID={1}</value>
   </data>
   <data name="ACTIVATION_SERVER" xml:space="preserve">
-    <value>activate.vmd.citrix.com</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="ACTIVATION_URL" xml:space="preserve">
     <value>https://{0}/reactivation_server.php</value>
@@ -130,28 +130,28 @@
     <value>http://updates.xensource.com/[vGate]/{0}/XenCenter</value>
   </data>
   <data name="COMMUNITY_URL" xml:space="preserve">
-    <value>http://xenserver.org/</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="HEALTH_CHECK_PRIVACY_STATEMENT_URL" xml:space="preserve">
-    <value>https://cis.citrix.com/legal/</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="HOMEPAGE" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="HOMEPAGE_FILENAME" xml:space="preserve">
     <value>HomePage.mht</value>
   </data>
   <data name="HTTP_LICENSES" xml:space="preserve">
-    <value>www.citrix.com/xenserverenterprise</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="ISL_DEPRECATION_URL" xml:space="preserve">
-    <value>http://support.citrix.com/article/CTX141433</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="LICENSE_EXPIRY_WEBPAGE" xml:space="preserve">
-    <value>http://www.citrix.com/xenserverenterprise</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="LICENSE_SERVER_DOWNLOAD_LINK" xml:space="preserve">
-    <value>http://www.citrix.com/downloads/licensing/license-server</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="LOCALE" xml:space="preserve">
     <value>en-US</value>
@@ -163,94 +163,94 @@
     <value>-mapid {0} {1}</value>
   </data>
   <data name="MAINWINDOW_HELP_PATH" xml:space="preserve">
-    <value>Help\XenCenter.chm</value>
+    <value>Help\[vGate Console].chm</value>
   </data>
   <data name="MAINWINDOW_HOME_PATH" xml:space="preserve">
     <value>Home.htm</value>
   </data>
   <data name="OUT_OF_DATE_WEBSITE" xml:space="preserve">
-    <value>http://www.citrix.com/xenserverenterprise</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="PARTNEROFFERS_URL" xml:space="preserve">
-    <value>http://www.citrix.com/buy/partnerlocator.html</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="PLUGINS_URL" xml:space="preserve">
     <value>https://wiki.xenserver.org/XenCenter_Plugins</value>
   </data>
   <data name="PRIVACY" xml:space="preserve">
-    <value>http://citrix.com/English/aboutCitrix/legal/privacyStatement.asp?ntref=hp_nav_US</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="XEN_SEARCH" xml:space="preserve">
     <value>xensearch</value>
   </data>
   <data name="SUPPORT_URL" xml:space="preserve">
-    <value>http://support.citrix.com/</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_ALERTS" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/alerts</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_CPM" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/storagemigration</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_CPUMASKING" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/cpus</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_DMC" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/dmc</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_DR" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/dr</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_ENHANCEDSR" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/storage</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_GENERAL" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_GPU" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/gpu</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_HA" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/ha</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_PERFORMANCE" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/performance</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_RBAC" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/rbac</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_VMSS" xml:space="preserve">
     <value />
   </data>
   <data name="UPSELL_LEARNMOREURL_VM_APPLIANCES" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/vapps</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_VM_PROTECTION" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/vmpr</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_WLB" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/wlb</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_SA" xml:space="preserve">
-    <value>http://store.citrix.com/XSInProduct</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="VMPR_DEPRECATION_URL" xml:space="preserve">
-    <value>http://support.citrix.com/article/CTX137335</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="WSS_DEPRECATION_URL" xml:space="preserve">
-    <value>http://support.citrix.com/article/CTX137334</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="XENDESKTOP_URL" xml:space="preserve">
-    <value>http://www.citrix.com/TryXenDesktop</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="XEN_UPDATE" xml:space="preserve">
     <value>xsupdate</value>
   </data>
   <data name="XENSERVER_UPDATE_URL" xml:space="preserve">
-    <value>http://updates.xensource.com/XenServer/updates.xml</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="UPSELL_LEARNMOREURL_AD" xml:space="preserve">
-    <value>http://www.citrix.com/xenserver/le/features/ad</value>
+    <value>http://www.halsign.com/</value>
   </data>
   <data name="ISO_UPDATE" xml:space="preserve">
     <value>iso</value>

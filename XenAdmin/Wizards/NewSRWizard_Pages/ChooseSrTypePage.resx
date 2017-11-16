@@ -339,7 +339,7 @@
     <value>upsellPage1</value>
   </data>
   <data name="&gt;&gt;upsellPage1.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.UpsellPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.UpsellPage, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;upsellPage1.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -366,7 +366,7 @@
     <value>3, 3, 3, 0</value>
   </data>
   <data name="SRBlurb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 186</value>
+    <value>340, 223</value>
   </data>
   <data name="SRBlurb.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -378,7 +378,7 @@
     <value>SRBlurb</value>
   </data>
   <data name="&gt;&gt;SRBlurb.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.Common.AutoHeightLabel, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.Common.AutoHeightLabel, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SRBlurb.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -417,7 +417,7 @@
     <value>deprecationBanner</value>
   </data>
   <data name="&gt;&gt;deprecationBanner.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.DeprecationBanner, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.DeprecationBanner, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;deprecationBanner.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -468,7 +468,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 340</value>
+    <value>346, 377</value>
   </data>
   <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -651,13 +651,13 @@
     <value>6, 3, 3, 3</value>
   </data>
   <data name="radioButtonLVMMirror.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 19</value>
+    <value>131, 19</value>
   </data>
   <data name="radioButtonLVMMirror.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="radioButtonLVMMirror.Text" xml:space="preserve">
-    <value>异构存储映射(&amp;R)</value>
+    <value>异构存储双活-FC(&amp;R)</value>
   </data>
   <data name="&gt;&gt;radioButtonLVMMirror.Name" xml:space="preserve">
     <value>radioButtonLVMMirror</value>
@@ -681,7 +681,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelISOlibrary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 263</value>
+    <value>3, 288</value>
   </data>
   <data name="labelISOlibrary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 10, 3, 10</value>
@@ -717,7 +717,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonCifsIso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 316</value>
+    <value>6, 341</value>
   </data>
   <data name="radioButtonCifsIso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 3, 3, 3</value>
@@ -753,7 +753,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonNFSIso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 291</value>
+    <value>6, 316</value>
   </data>
   <data name="radioButtonNFSIso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 3, 3, 3</value>
@@ -779,14 +779,47 @@
   <data name="&gt;&gt;radioButtonNFSIso.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="radioButtonLVMMirror_ISCSI.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 256</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 3, 3, 3</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 19</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="radioButtonLVMMirror_ISCSI.Text" xml:space="preserve">
+    <value>异构存储双活-iSCSI(&amp;C)</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLVMMirror_ISCSI.Name" xml:space="preserve">
+    <value>radioButtonLVMMirror_ISCSI</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLVMMirror_ISCSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLVMMirror_ISCSI.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLVMMirror_ISCSI.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 339</value>
+    <value>182, 377</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -804,7 +837,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="radioButtonFcoe" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifs" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCslg" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelVirtualDiskStorage" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfs" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonFibreChannel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonIscsi" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rawhbaButton" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonlunbond" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonLVMMirror" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelISOlibrary" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifsIso" Row="15" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNFSIso" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="radioButtonFcoe" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifs" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCslg" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelVirtualDiskStorage" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNfs" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonFibreChannel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonIscsi" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="rawhbaButton" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonlunbond" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonLVMMirror" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelISOlibrary" Row="14" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonCifsIso" Row="21" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonNFSIso" Row="20" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioButtonLVMMirror_ISCSI" Row="13" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -816,7 +849,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 346</value>
+    <value>540, 383</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -843,12 +876,12 @@
     <value>96, 96</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 346</value>
+    <value>540, 383</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ChooseSrTypePage</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxIscsiPort.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textBoxIscsiPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>406, 37</value>
   </data>
@@ -131,7 +131,7 @@
   <data name="textBoxIscsiPort.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="textBoxIscsiPort.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -142,7 +142,7 @@
     <value>textBoxIscsiPort</value>
   </data>
   <data name="&gt;&gt;textBoxIscsiPort.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxIscsiPort.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -181,7 +181,7 @@
     <value>labelColon</value>
   </data>
   <data name="&gt;&gt;labelColon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelColon.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -205,7 +205,7 @@
     <value>toolTipContainerIQNscan</value>
   </data>
   <data name="&gt;&gt;toolTipContainerIQNscan.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.ToolTipContainer, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.ToolTipContainer, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolTipContainerIQNscan.Parent" xml:space="preserve">
     <value>$this</value>
@@ -253,7 +253,7 @@
     <value>placeHolderLabel2</value>
   </data>
   <data name="&gt;&gt;placeHolderLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;placeHolderLabel2.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -289,7 +289,7 @@
     <value>placeholderLabel</value>
   </data>
   <data name="&gt;&gt;placeholderLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;placeholderLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -328,7 +328,7 @@
     <value>errorLabelAtCHAPPassword</value>
   </data>
   <data name="&gt;&gt;errorLabelAtCHAPPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorLabelAtCHAPPassword.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -339,26 +339,32 @@
   <data name="errorIconAtCHAPPassword.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="errorIconAtCHAPPassword.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="errorIconAtCHAPPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="errorIconAtCHAPPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="errorIconAtCHAPPassword.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="errorIconAtCHAPPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 151</value>
@@ -382,7 +388,7 @@
     <value>errorIconAtCHAPPassword</value>
   </data>
   <data name="&gt;&gt;errorIconAtCHAPPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorIconAtCHAPPassword.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -393,26 +399,32 @@
   <data name="errorIconAtHostOrIP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="errorIconAtHostOrIP.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="errorIconAtHostOrIP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="errorIconAtHostOrIP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="errorIconAtHostOrIP.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="errorIconAtHostOrIP.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 60</value>
@@ -436,7 +448,7 @@
     <value>errorIconAtHostOrIP</value>
   </data>
   <data name="&gt;&gt;errorIconAtHostOrIP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorIconAtHostOrIP.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -475,7 +487,7 @@
     <value>labelIscsiTargetHost</value>
   </data>
   <data name="&gt;&gt;labelIscsiTargetHost.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelIscsiTargetHost.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -502,7 +514,7 @@
     <value>textBoxIscsiHost</value>
   </data>
   <data name="&gt;&gt;textBoxIscsiHost.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxIscsiHost.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -529,7 +541,7 @@
     <value>IScsiChapUserTextBox</value>
   </data>
   <data name="&gt;&gt;IScsiChapUserTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IScsiChapUserTextBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -556,7 +568,7 @@
     <value>IScsiChapSecretTextBox</value>
   </data>
   <data name="&gt;&gt;IScsiChapSecretTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IScsiChapSecretTextBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -592,7 +604,7 @@
     <value>labelCHAPuser</value>
   </data>
   <data name="&gt;&gt;labelCHAPuser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelCHAPuser.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -628,7 +640,7 @@
     <value>IScsiChapSecretLabel</value>
   </data>
   <data name="&gt;&gt;IScsiChapSecretLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IScsiChapSecretLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -661,7 +673,7 @@
     <value>IscsiUseChapCheckBox</value>
   </data>
   <data name="&gt;&gt;IscsiUseChapCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IscsiUseChapCheckBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -697,7 +709,7 @@
     <value>label11</value>
   </data>
   <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label11.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -710,6 +722,9 @@
   </data>
   <data name="errorLabelAtHostname.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="errorLabelAtHostname.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="errorLabelAtHostname.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 63</value>
@@ -733,7 +748,7 @@
     <value>errorLabelAtHostname</value>
   </data>
   <data name="&gt;&gt;errorLabelAtHostname.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorLabelAtHostname.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -769,7 +784,7 @@
     <value>spinnerIconAtScanTargetHostButton</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtScanTargetHostButton.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.SpinnerIcon, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.SpinnerIcon, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtScanTargetHostButton.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -799,7 +814,7 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -812,6 +827,9 @@
   </data>
   <data name="scanTargetHostButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="scanTargetHostButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="scanTargetHostButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 170</value>
@@ -829,7 +847,7 @@
     <value>scanTargetHostButton</value>
   </data>
   <data name="&gt;&gt;scanTargetHostButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;scanTargetHostButton.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -871,7 +889,7 @@
     <value>labelIscsiIQN</value>
   </data>
   <data name="&gt;&gt;labelIscsiIQN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelIscsiIQN.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -895,7 +913,7 @@
     <value>comboBoxIscsiLuns</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiLuns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiLuns.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -931,7 +949,7 @@
     <value>targetLunLabel</value>
   </data>
   <data name="&gt;&gt;targetLunLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;targetLunLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -970,7 +988,7 @@
     <value>errorLabelAtTargetLUN</value>
   </data>
   <data name="&gt;&gt;errorLabelAtTargetLUN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorLabelAtTargetLUN.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -981,26 +999,32 @@
   <data name="errorIconAtTargetLUN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="errorIconAtTargetLUN.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="errorIconAtTargetLUN.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        YQUAAALbSURBVDhPbZNZSFRRGMe/c2+zuIHopKIi4kKERC6hlBFoZBC99BCBtJmGJWSMYTUyGLaQ+lSh
+        QqS2UD4kQbRqpomh4oOi45LLiDiOQ+mI44Q2lvn1v9cXUw/8OJxzz///Ledcog3jApHhqhCn7mi11aVa
+        bR14cVGSTNuJdm88u2ltJDpQo9O19hkMPB0ezg5gDw3lXn9/fq7TTaQRXYFIv6VRsSSdGYyK8qwmJ/Of
+        +Hj+GRamMh8czK7YWF6Mi+MpGJ6T5Vcw8P/PxCjE/h6DYZFTU3l5aIiX7XYezM1lqyTxTGIiL1ut7LbZ
+        +HNKClt0Oj4iSY9goFFN8oh0tb6+3X+jo3k+MJBtZjMrY9bh4AakP1tYqK7rqqq4FIZTPj7cqNevoicn
+        VYPLQhzuDwnh35GRPI95PCCAfzQ1qaLx5mb2IJvhkRHOw34bEQ9rtTyGLDIlqRPyQLohy7ecERHsRn0z
+        MLB7e3M/0l5yOlWTXysrfC0jg2sgtiCDbiF4CHO5EEswyKC7Wu2TeYjnIHag+5Po+AAO2yoqVINvFgub
+        sUY47oS4A/SCh0AQnadijaZ2DrXOBAWxDWmOKSlGRbFnfFw18Hg8XIfmfYJBK0RfQBeoXDO4RBmybFZq
+        /47oE35+PCzL7KqvX4ve18euhQW2dnRwtUajmjRC2AZuCrGCErIpHXUMKI3DDYzigD0rSxW73G7OiYnh
+        lpISdf2xqIgf4/s70ASD40JMwyCNtuEa73t59ThxPZNJSUrOquCeycQmJe2EBHWtjGdpafwSezUwCCZS
+        HhRuE2OnEEe7NJpVOx7SW6ORK3JyuECv5w842ICO12dmcmV+Pt9OT+cq7B0imoLs2H+vca8kXX8vxGo7
+        IrwBLUCptQHzU/AAlIGDRA4IC4DXpn8iliinXJLs7RAq9/0VNIPXoAzsIeqH6OyW4nVuu3YQlZ0g6sgm
+        sp4mGoWwFeHKcWYfkNdH/gehAZo3a7t+wAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="errorIconAtTargetLUN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="errorIconAtTargetLUN.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="errorIconAtTargetLUN.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 57</value>
@@ -1018,7 +1042,7 @@
     <value>errorIconAtTargetLUN</value>
   </data>
   <data name="&gt;&gt;errorIconAtTargetLUN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;errorIconAtTargetLUN.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -1028,6 +1052,9 @@
   </data>
   <data name="spinnerIconAtTargetIqn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="spinnerIconAtTargetIqn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="spinnerIconAtTargetIqn.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 5</value>
@@ -1051,7 +1078,7 @@
     <value>spinnerIconAtTargetIqn</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetIqn.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.SpinnerIcon, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.SpinnerIcon, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetIqn.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -1087,7 +1114,7 @@
     <value>spinnerIconAtTargetLun</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetLun.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.SpinnerIcon, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.SpinnerIcon, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;spinnerIconAtTargetLun.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -1114,7 +1141,7 @@
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
     <value>iSCSITargetGroupBox</value>
@@ -1138,13 +1165,16 @@
     <value>comboBoxIscsiIqns</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiIqns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiIqns.Parent" xml:space="preserve">
     <value>tableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;comboBoxIscsiIqns.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="lunInUseLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lunInUseLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1159,7 +1189,7 @@
     <value>lunInUseLabel</value>
   </data>
   <data name="&gt;&gt;lunInUseLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="iSCSITargetGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1189,7 +1219,7 @@
     <value>iSCSITargetGroupBox</value>
   </data>
   <data name="&gt;&gt;iSCSITargetGroupBox.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.DecentGroupBox, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.DecentGroupBox, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;iSCSITargetGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1197,7 +1227,31 @@
   <data name="&gt;&gt;iSCSITargetGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="targetLunLog.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="targetLunLog.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="targetLunLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="targetLunLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="targetLunLog.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="targetLunLog.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;targetLunLog.Name" xml:space="preserve">
+    <value>targetLunLog</value>
+  </data>
+  <data name="&gt;&gt;targetLunLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AccessibleDescription" xml:space="preserve">
@@ -1213,6 +1267,6 @@
     <value>LVMoISCSI</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.XenTabPage, XenCenterMain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

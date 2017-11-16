@@ -50,6 +50,8 @@ namespace XenAdmin.Dialogs
         private readonly VM TheVM;
         private readonly SR TheSR;
 
+        private String _class = "0";
+
         private VDI DiskTemplate;
         private bool CanResize;
         private long MinSize;
@@ -220,8 +222,6 @@ namespace XenAdmin.Dialogs
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-
-
             if (SrListBox.SR == null || SelectionNull || NameTextBox.Text == "" || !connection.IsConnected)
                 return;
 
@@ -249,7 +249,31 @@ namespace XenAdmin.Dialogs
 
             VDI vdi = NewDisk();
 
-
+            if (TheVM!=null)
+            {
+                if (sr.other_config.ContainsKey("scheduler"))
+                {
+                    if (sr.other_config.ContainsKey("scheduler") && sr.other_config["scheduler"] == "cfq")
+                    {
+                        //获取原class值（优先级）
+                        List<XenRef<VBD>> origin_VBDs = TheVM.VBDs;
+                        foreach (VBD v in connection.ResolveAll<VBD>(origin_VBDs))
+                        {
+                            if (v.type == vbd_type.CD)
+                            {
+                                continue;
+                            }
+                            if (XenAPI.VBD.get_qos_algorithm_params(TheVM.Connection.Session, v.opaque_ref).ContainsKey("class"))
+                            {
+                                if (XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != "" && XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"] != null)
+                                {
+                                    _class = XenAPI.VBD.get_qos_algorithm_params(sr.Connection.Session, v.opaque_ref)["class"];
+                                }
+                            }
+                        }
+                    }
+                }
+            }    
             if (TheVM != null)
             {
                 var alreadyHasBootableDisk = HasBootableDisk(TheVM);
@@ -257,7 +281,7 @@ namespace XenAdmin.Dialogs
                 Actions.DelegatedAsyncAction action = new Actions.DelegatedAsyncAction(connection,
                     string.Format(Messages.ACTION_DISK_ADDING_TITLE, NameTextBox.Text, sr.NameWithoutHost),
                     Messages.ACTION_DISK_ADDING, Messages.ACTION_DISK_ADDED,
-                    delegate(XenAPI.Session session)
+                    delegate (XenAPI.Session session)
                     {
                         // Get legitimate unused userdevice numbers
                         string[] uds = XenAPI.VM.get_allowed_VBD_devices(session, TheVM.opaque_ref);
@@ -274,12 +298,15 @@ namespace XenAdmin.Dialogs
                         // CA-44959: only make bootable if there aren't other bootable VBDs.
                         vbd.bootable = ud == "0" && !alreadyHasBootableDisk;
                         vbd.userdevice = ud;
-
                         // Now try to plug the VBD.
-                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
+                        //new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunAsync();
+                        new XenAdmin.Actions.VbdSaveAndPlugAction(TheVM, vbd, vdi.Name, session, false, ShowMustRebootBoxCD, ShowVBDWarningBox).RunExternal(connection.Session);
                     });
                 action.VM = TheVM;
-                new Dialogs.ActionProgressDialog(action, ProgressBarStyle.Blocks).ShowDialog();
+                using (var dialog = new Dialogs.ActionProgressDialog(action,ProgressBarStyle.Blocks))
+                {
+                    dialog.ShowDialog(this);
+                }
                 if (!action.Succeeded)
                     return;
             }
@@ -292,8 +319,57 @@ namespace XenAdmin.Dialogs
             }
             DialogResult = DialogResult.OK;
             Close();
+            //若VM为空则不设置优先级
+            //若虚拟机启用了IO功能才进行下列操作            
+            if (TheVM!=null)
+            {
+                if (TheVM.other_config.ContainsKey("io_limit") || sr.other_config.ContainsKey("scheduler"))
+                {
+                    foreach (VBD v in connection.ResolveAll<VBD>(TheVM.VBDs))
+                    {
+                        if (v.type == vbd_type.CD)
+                        {
+                            continue;
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("class"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "class");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_params(connection.Session, v.opaque_ref).ContainsKey("sched"))
+                        {
+                            XenAPI.VBD.remove_from_qos_algorithm_params(connection.Session, v.opaque_ref, "sched");
+                        }
+                        if (XenAPI.VBD.get_qos_algorithm_type(connection.Session, v.opaque_ref) != null)
+                        {
+                            XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "");
+                        }
+                        XenAPI.VBD.set_qos_algorithm_type(connection.Session, v.opaque_ref, "ionice");
+                        XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "sched", "rt");
+                        XenAPI.VBD.add_to_qos_algorithm_params(connection.Session, v.opaque_ref, "class", _class);
+                    }
+                    if (TheVM.power_state == vm_power_state.Running)
+                    {
+                        io_limit();
+                    }
+                }
+            }            
         }
 
+        public void io_limit()
+        {
+            Dictionary<String, String> args = new Dictionary<string, string>();
+            args.Add("vm_uuid",TheVM.uuid);
+            if (TheVM.other_config.ContainsKey("io_limit"))
+            {
+                args.Add("mbps", TheVM.other_config["io_limit"]);
+                XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+            }
+            else
+            {
+                args.Add("mbps", "0");
+                XenAPI.Host.call_plugin(TheVM.Connection.Session, TheVM.resident_on.opaque_ref, "vm_io_limit.py", "set_vm_io_limit", args);
+            }
+        }
         private static bool HasBootableDisk(VM vm)
         {
             var c = vm.Connection;
@@ -525,6 +601,12 @@ namespace XenAdmin.Dialogs
                 setError(null);
                 return;
             }
+            if (Convert.ToDouble(DiskSizeNumericUpDown.Text) > 2043.99 && SelectedUnits==DiskSizeUnits.GB)
+            {
+                OkButton.Enabled = false;
+                setError(Messages.DISK_SIZE_TOO_BIG);
+                return;
+            }
             if (!DiskSizeValidNumber())
             {
                 OkButton.Enabled = false;
@@ -710,7 +792,7 @@ namespace XenAdmin.Dialogs
                                                       Messages.NEWDISKWIZARD_MESSAGE_TITLE)))
                     {
                         dlg.ShowDialog(Program.MainWindow);
-                    }
+                    }                    
                 }
             });
         }
@@ -776,6 +858,14 @@ namespace XenAdmin.Dialogs
             }
 
             SetNumUpDownIncrementAndDecimals(upDown, newUnits);
+        }
+
+        private void DiskSizeNumericUpDown_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '-')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

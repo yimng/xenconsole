@@ -350,11 +350,13 @@ namespace XenAdmin.Wizards.ReplicationWizard_Pages
                                 {
                                     index = ~index;
                                     list.Insert(index, sr.opaque_ref);
-                                    if (sr.GetSRType(false) == SR.SRTypes.lvm || sr.GetSRType(false) == SR.SRTypes.ext 
+                                    if (sr.GetSRType(false) == SR.SRTypes.lvm 
+                                        || sr.GetSRType(false) == SR.SRTypes.ext 
                                         || sr.GetSRType(false) == SR.SRTypes.lvmoiscsi 
                                         || sr.GetSRType(false) == SR.SRTypes.lvmohba 
                                         || sr.GetSRType(false) == SR.SRTypes.lvmobond
-                                        || sr.GetSRType(false) == SR.SRTypes.nfs)
+                                        || sr.GetSRType(false) == SR.SRTypes.nfs
+                                        || sr.GetSRType(false) == SR.SRTypes.lvmomirror)
                                     {
                                         object[] rowTemp = { objHost.name_label, objHost.address, sr.name_label, Util.DiskSizeString(sr.FreeSpace) };
                                         this.DefaultStorageDataGridView.Rows.Add(rowTemp);

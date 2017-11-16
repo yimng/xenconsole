@@ -118,6 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelSelectOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 311</value>
+  </data>
+  <data name="labelSelectOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 17</value>
+  </data>
+  <data name="labelSelectOption.Text" xml:space="preserve">
+    <value>点击下面的选项来添加SR</value>
+  </data>
+  <data name="labelHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 287</value>
+  </data>
+  <data name="labelHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="labelHeader.Text" xml:space="preserve">
+    <value>所选LUN上已经存在SR</value>
+  </data>
+  <data name="labelLUNDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 68</value>
+  </data>
+  <data name="labelLUNDetails.Text" xml:space="preserve">
+    <value>供应商:
+序列号:
+SCSI ID:
+大小:
+</value>
+  </data>
+  <data name="buttonFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 27</value>
+  </data>
+  <data name="buttonFormat.Text" xml:space="preserve">
+    <value>格式化(&amp;F)</value>
+  </data>
+  <data name="labelFormatInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 17</value>
+  </data>
+  <data name="labelFormatInfo.Text" xml:space="preserve">
+    <value>清除磁盘上的所有数据并重建SR</value>
+  </data>
+  <data name="panelFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 393</value>
+  </data>
+  <data name="buttonReattach.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 27</value>
+  </data>
+  <data name="buttonReattach.Text" xml:space="preserve">
+    <value>重新连接(&amp;R)</value>
+  </data>
+  <data name="labelReattachInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="labelReattachInfo.Text" xml:space="preserve">
+    <value>使用已经存在的SR</value>
+  </data>
+  <data name="panelReattach.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 329</value>
+  </data>
+  <data name="labelWarning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 454</value>
+  </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -154,6 +215,9 @@
         WdXfrwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 454</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -189,5 +253,29 @@
         chwQ+VQCe/bc6CF5c4jZBuKJod6xfvqga73Hvr26v/dZjmOI2PgVjyal5D6ekpwz3TpieU8Z/gVMa+jY
         WdXfrwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 454</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 454</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>为了防止数据丢失，您必须确保 LUN 没有被其他任何系统使用，包括没有 [vGate Console] 连接的 vGate 主机。</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 556</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="checkBoxRepeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 525</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>443, 591</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>警告</value>
   </data>
 </root>

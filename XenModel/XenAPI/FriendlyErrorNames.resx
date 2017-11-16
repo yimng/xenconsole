@@ -2019,7 +2019,7 @@ Authorized Roles: {1}</value>
     <value>The requested plugin could not be found.</value>
   </data>
   <data name="XENAPI_PLUGIN_FAILURE" xml:space="preserve">
-    <value>There was a failure communicating with the plugin.</value>
+    <value>There was a failure communicating with the plugin. {0} : {1}  {2}</value>
   </data>
   <data name="XEN_VSS_REQ_ERROR_ADDING_VOLUME_TO_SNAPSET_FAILED" xml:space="preserve">
     <value>Some volumes to be snapshot could not be added to the VSS snapshot set</value>

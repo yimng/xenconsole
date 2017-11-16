@@ -20,6 +20,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -32,9 +33,9 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,12 +76,17 @@
     <Reference Include="log4net">
       <HintPath>..\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs">
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
     </Reference>
     <Reference Include="MSTSCLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -257,7 +263,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Tags\TagsEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UpsellPage.cs">
       <SubType>UserControl</SubType>
@@ -283,6 +289,12 @@
     <Compile Include="Diagnostics\Problems\ProblemWithInformationUrl.cs" />
     <Compile Include="Diagnostics\Problems\SRProblem\UnsupportedStorageLinkSrIsPresentProblem.cs" />
     <Compile Include="Diagnostics\Problems\VMProblem\InvalidVCPUConfiguration.cs" />
+    <Compile Include="Dialogs\AddMirrorIscsiDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddMirrorIscsiDialog.Designer.cs">
+      <DependentUpon>AddMirrorIscsiDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\AddMirrorLUNDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +333,12 @@
     </Compile>
     <Compile Include="Dialogs\PciBindDialog.Designer.cs">
       <DependentUpon>PciBindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExportSuccessfullyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExportSuccessfullyDialog.Designer.cs">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\PvsCacheConfigurationDialog.cs">
       <SubType>Form</SubType>
@@ -436,21 +454,29 @@
     <Compile Include="Dialogs\vSwitchControllerConfigDialog.designer.cs">
       <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.Designer.cs">
+      <DependentUpon>HasRunningVMsWarningDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs" />
+    <Compile Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.designer.cs">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.designer.cs">
       <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.cs">
+    <Compile Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.designer.cs">
-      <DependentUpon>LVMoMirrorWarningDialog.cs</DependentUpon>
+    <Compile Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.Designer.cs">
+      <DependentUpon>NeedToolsWarningDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.cs">
       <SubType>Form</SubType>
@@ -469,6 +495,12 @@
     <Compile Include="SettingsPanels\BrowseStorageVirtualDiskPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="SettingsPanels\KernelCrashDumpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\KernelCrashDumpPage.Designer.cs">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsPanels\LivePatchingEditPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -480,6 +512,12 @@
     </Compile>
     <Compile Include="SettingsPanels\SecurityEditPage.Designer.cs">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPanels\StorageQOSPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPanels\StorageQOSPage.Designer.cs">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
     </Compile>
     <Compile Include="SettingsPanels\UseSSDCachePage.cs">
       <SubType>UserControl</SubType>
@@ -645,13 +683,13 @@
       <DependentUpon>PerfmonAlertOptionsPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\BlueBorderPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\ArchiveMaintainer.cs">
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataArchive.cs" />
     <Compile Include="Controls\CustomDataGraph\GraphList.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\GraphList.Designer.cs">
       <DependentUpon>GraphList.cs</DependentUpon>
@@ -665,7 +703,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\DoubleBufferedPanel.Designer.cs">
       <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
@@ -964,6 +1002,12 @@
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.Designer.cs">
       <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorIscsi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorIscsi.Designer.cs">
+      <DependentUpon>LVMoMirrorIscsi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1011,13 +1055,13 @@
       <DependentUpon>DataKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlot.designer.cs">
       <DependentUpon>DataPlot.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CustomDataGraph\DataPlotNav.designer.cs">
       <DependentUpon>DataPlotNav.cs</DependentUpon>
@@ -1219,7 +1263,7 @@
       <DependentUpon>FolderChangeDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Folders\FolderEditor.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\Folders\FolderListItem.cs" />
     <Compile Include="Dialogs\NewTagDialog.cs">
@@ -1784,6 +1828,12 @@
     <EmbeddedResource Include="Controls\ThinProvisioningParametersControl.zh-CN.resx">
       <DependentUpon>ThinProvisioningParametersControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddMirrorIscsiDialog.resx">
+      <DependentUpon>AddMirrorIscsiDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AddMirrorIscsiDialog.zh-CN.resx">
+      <DependentUpon>AddMirrorIscsiDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\AddMirrorLUNDialog.resx">
       <DependentUpon>AddMirrorLUNDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -1977,6 +2027,12 @@
     <EmbeddedResource Include="Dialogs\PciBindDialog.zh-CN.resx">
       <DependentUpon>PciBindDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportSuccessfullyDialog.resx">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExportSuccessfullyDialog.zh-CN.resx">
+      <DependentUpon>ExportSuccessfullyDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\PvsCacheConfigurationDialog.ja.resx">
       <DependentUpon>PvsCacheConfigurationDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -2137,13 +2193,26 @@
     <EmbeddedResource Include="Dialogs\vSwitchControllerConfigDialog.zh-CN.resx">
       <DependentUpon>vSwitchControllerConfigDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx" />
-    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx" />
+    <EmbeddedResource Include="Dialogs\WarningDialogs\HasRunningVMsWarningDialog.resx">
+      <DependentUpon>HasRunningVMsWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.resx">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoBondWarningDialog.zh-CN.resx">
+      <DependentUpon>LVMoBondWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.resx">
       <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorWarningDialog.resx">
-      <DependentUpon>LVMoMirrorWarningDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\LVMoMirrorChooseLogWarningDialog.zh-CN.resx">
+      <DependentUpon>LVMoMirrorChooseLogWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.resx">
+      <DependentUpon>NeedToolsWarningDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WarningDialogs\NeedToolsWarningDialog.zh-CN.resx">
+      <DependentUpon>NeedToolsWarningDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\WarningDialogs\NotEnoughStorageWarningDialog.resx">
       <DependentUpon>NotEnoughStorageWarningDialog.cs</DependentUpon>
@@ -2178,6 +2247,12 @@
     <EmbeddedResource Include="SettingsPanels\HostPowerONPages\PoolPowerONEditPage.resx">
       <SubType>Designer</SubType>
       <DependentUpon>PoolPowerONEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\KernelCrashDumpPage.resx">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\KernelCrashDumpPage.zh-CN.resx">
+      <DependentUpon>KernelCrashDumpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\PerfmonAlertOptionsPage.resx">
       <SubType>Designer</SubType>
@@ -2268,6 +2343,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\SecurityEditPage.zh-CN.resx">
       <DependentUpon>SecurityEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\StorageQOSPage.resx">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPanels\StorageQOSPage.zh-CN.resx">
+      <DependentUpon>StorageQOSPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsPanels\UseSSDCachePage.resx">
       <DependentUpon>UseSSDCachePage.cs</DependentUpon>
@@ -2553,6 +2634,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorChooseLogPage.zh-CN.resx">
       <DependentUpon>LVMoMirrorChooseLogPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorIscsi.resx">
+      <DependentUpon>LVMoMirrorIscsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorIscsi.zh-CN.resx">
+      <DependentUpon>LVMoMirrorIscsi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoMirrorSummaryPage.resx">
       <DependentUpon>LVMoMirrorSummaryPage.cs</DependentUpon>
@@ -3140,7 +3227,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -3156,7 +3242,7 @@
     <None Include="Halsign.cer">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Help\vGate Console.chm">
+    <None Include="Help\vGateConsole.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="HomePage.zh-CN.mht">
@@ -3230,9 +3316,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\VMGroupCommand.cs" />
-    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\CheckableDataGridView\CheckableDataGridView.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewController.cs" />
     <Compile Include="Controls\CheckableDataGridView\CheckableDataGridViewRow.cs">
     </Compile>
@@ -4172,9 +4256,7 @@
     <Compile Include="Wizards\DRWizards\DRFailoverWizardWelcomePage.Designer.cs">
       <DependentUpon>DRFailoverWizardWelcomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\DataGridViewEnableableComboBoxCell.cs" />
     <Compile Include="Wizards\GenericPages\DelayLoadingOptionComboBoxItem.cs" />
     <Compile Include="Wizards\GenericPages\LunPerVdiMappingPage.cs">
       <SubType>UserControl</SubType>
@@ -7060,6 +7142,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\LVMoISCSI.zh-CN.resx">
       <DependentUpon>LVMoISCSI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Wizards\NewSRWizard_Pages\Frontends\NetApp.ja.resx">
       <DependentUpon>NetApp.cs</DependentUpon>

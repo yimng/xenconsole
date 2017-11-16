@@ -611,6 +611,23 @@ namespace XenAPI
             }
         }
 
+        private bool _RestrictLUNMirrorSR
+        {
+            get { return BoolKeyPreferTrue(license_params, "restrict_lunmirrorsr"); }
+        }
+        public static bool RestrictLUNMirrorSR(Host h)
+        {
+            return h._RestrictLUNMirrorSR;
+        }
+
+        private bool _RestrictContainer
+        {
+            get { return BoolKeyPreferTrue(license_params, "restrict_container"); }
+        }
+        public static bool RestrictContainer(Host h)
+        {
+            return h._RestrictContainer;
+        }
         public bool HasPBDTo(SR sr)
         {
             foreach (XenRef<PBD> pbd in PBDs)

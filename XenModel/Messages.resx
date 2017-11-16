@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -1771,7 +1771,7 @@ This alarm is set to be triggered when network usage is more than {3}.</value>
     <value>SR Disk Space Alarm</value>
   </data>
   <data name="ALERT_ALARM_SR_PHYSICAL_UTILISATION_DESCRIPTION" xml:space="preserve">
-    <value>The physical utilization on {0} is about {1} of its capacity. 
+    <value>The physical utilization on {0} is about {1} of its capacity.
 This alarm is set to be triggered when the physical utilisation of the SR goes above {2}.</value>
   </data>
   <data name="ALERT_ALARM_STORAGE" xml:space="preserve">
@@ -1884,7 +1884,7 @@ Note that if RBAC is enabled, only alerts which you have privileges to dismiss w
     <value>All Updates Uploaded</value>
   </data>
   <data name="ALREADY_ATTACHED_ELSEWHERE" xml:space="preserve">
-    <value>The SR '{0}' is currently attached elsewhere. Do you want to attach it to '{1}'? 
+    <value>The SR '{0}' is currently attached elsewhere. Do you want to attach it to '{1}'?
 
 Warning: you must ensure that the SR is not in use by any server not connected to [vGate Console]. Failure to do so may result in data loss.</value>
   </data>
@@ -2158,7 +2158,7 @@ Archive destination: {0}</value>
     <value>Unexpected exception when connecting to  [Halsign] MC.</value>
   </data>
   <data name="BACKUP_VM" xml:space="preserve">
-    <value />
+    <value>Backup VM</value>
   </data>
   <data name="BACKUP_VM_TITLE" xml:space="preserve">
     <value>Backup VM - "{0}"</value>
@@ -2167,7 +2167,7 @@ Archive destination: {0}</value>
     <value>Backup Weekly</value>
   </data>
   <data name="BAD_RESTORE_DETECTED" xml:space="preserve">
-    <value>The server you are connecting to has been restored from a backup of '{0}', a server you are already connected to. 
+    <value>The server you are connecting to has been restored from a backup of '{0}', a server you are already connected to.
 
 This is a potentially dangerous operation and is not allowed.</value>
   </data>
@@ -2257,7 +2257,7 @@ To continue, disable HA, delete the bond, and then enable HA again.</value>
   <data name="BOND_DELETE_WILL_DISTURB_BOTH" xml:space="preserve">
     <value>{0}
 
-Deleting this bond will automatically transfer the management and secondary interfaces on the bond to the first slave member of the bond: 
+Deleting this bond will automatically transfer the management and secondary interfaces on the bond to the first slave member of the bond:
 
 - [vGate Console] connections to the pool will temporarily be disturbed
 
@@ -2268,7 +2268,7 @@ Deleting this bond will automatically transfer the management and secondary inte
   <data name="BOND_DELETE_WILL_DISTURB_PRIMARY" xml:space="preserve">
     <value>{0}
 
-Deleting this bond will automatically transfer the management interface on the bond to the first slave member of the bond: 
+Deleting this bond will automatically transfer the management interface on the bond to the first slave member of the bond:
 
 - [vGate Console] connections to the pool will temporarily be disturbed
 
@@ -2280,7 +2280,7 @@ Deleting this bond will automatically transfer the management interface on the b
 Deleting this bond will disrupt traffic through the secondary interface on the bond while the interface is moved to the first slave of the bond.</value>
   </data>
   <data name="BOND_USB_DEVICE_VM_HALT" xml:space="preserve">
-    <value>The usb device was bound. 
+    <value>The usb device was bound.
 This change will take effect when you start VM.</value>
   </data>
   <data name="BOND_USB_DEVICE_VM_RUNNING" xml:space="preserve">
@@ -2327,16 +2327,16 @@ This change will take effect when you restart VM.</value>
     <value>Exception occur when call [Halsign] MC Service</value>
   </data>
   <data name="BR_CONFIGURATION_TITLE" xml:space="preserve">
-    <value />
+    <value>Configuration</value>
   </data>
   <data name="BR_CONFIG_STATUS" xml:space="preserve">
-    <value />
+    <value>Halsign MC Configure Status</value>
   </data>
   <data name="BR_DISABLED" xml:space="preserve">
-    <value />
+    <value>Disabled</value>
   </data>
   <data name="BR_ENABLED" xml:space="preserve">
-    <value />
+    <value>Enabled</value>
   </data>
   <data name="BR_JOB_CANCEL" xml:space="preserve">
     <value>Cancel job</value>
@@ -2360,37 +2360,37 @@ This change will take effect when you restart VM.</value>
     <value>No pool exist</value>
   </data>
   <data name="BR_PAGE_TITLE" xml:space="preserve">
-    <value />
+    <value>Backup and Restore</value>
   </data>
   <data name="BR_PARSE_HISTORY" xml:space="preserve">
     <value>Exception happened when parse history list.</value>
   </data>
   <data name="BR_STATUS_CANCELED" xml:space="preserve">
-    <value />
+    <value>Canceled</value>
   </data>
   <data name="BR_STATUS_FAILED" xml:space="preserve">
-    <value />
+    <value>Failed</value>
   </data>
   <data name="BR_STATUS_INACTIVE" xml:space="preserve">
-    <value />
+    <value>Inactive</value>
   </data>
   <data name="BR_STATUS_INQUEUE" xml:space="preserve">
-    <value />
+    <value>In Queue</value>
   </data>
   <data name="BR_STATUS_PENDING" xml:space="preserve">
-    <value />
+    <value>Pending</value>
   </data>
   <data name="BR_STATUS_RUNNING" xml:space="preserve">
-    <value />
+    <value>Running</value>
   </data>
   <data name="BR_STATUS_SUCCESS" xml:space="preserve">
-    <value />
+    <value>Success</value>
   </data>
   <data name="BR_STORAGE_IP" xml:space="preserve">
-    <value />
+    <value>Halsign MC Address</value>
   </data>
   <data name="BR_STORAGE_USERNAME" xml:space="preserve">
-    <value />
+    <value>Halsign MC UserName</value>
   </data>
   <data name="BUGTOOL_FILE_PREFIX" xml:space="preserve">
     <value>status-report-</value>
@@ -2546,7 +2546,7 @@ This change will take effect when you restart VM.</value>
     <value>ISO storage must be ejected from VMs before being deleted. This storage is in use by the VM '{0}'.</value>
   </data>
   <data name="CANNOT_DELETE_CANNOT_DEACTIVATE_REASON" xml:space="preserve">
-    <value>It is not possible to deactivate and delete this virtual disk on the VM '{0}': 
+    <value>It is not possible to deactivate and delete this virtual disk on the VM '{0}':
 
 {1}</value>
   </data>
@@ -2673,17 +2673,17 @@ This change will take effect when you restart VM.</value>
   </data>
   <data name="CHANGE_VMS_APPLIANCES_WARNING" xml:space="preserve">
     <value>Some of the VMs you selected are already assigned to a different vApp.
-    
+
 Do you want to assign these VMs to the vApp '{0}' instead?</value>
   </data>
   <data name="CHANGE_VMS_APPLIANCE_WARNING" xml:space="preserve">
     <value>The VM '{0}' is already assigned to the vApp '{1}'.
-    
+
 Do you want to assign it to the vApp '{2}' instead?</value>
   </data>
   <data name="CHANGE_VMS_POLICIES_WARNING" xml:space="preserve">
     <value>Some of the VMs you selected are already assigned to a different protection policy.
-    
+
 Do you want to assign these VMs to the policy '{0}' instead?</value>
   </data>
   <data name="CHANGE_VMS_POLICY" xml:space="preserve">
@@ -2691,17 +2691,17 @@ Do you want to assign these VMs to the policy '{0}' instead?</value>
   </data>
   <data name="CHANGE_VMS_POLICY_WARNING" xml:space="preserve">
     <value>The VM '{0}' is already assigned to the protection policy '{1}'.
-    
+
 Do you want to assign it to the policy '{2}' instead?</value>
   </data>
   <data name="CHANGE_VMS_SNAPSHOT_SCHEDULE_WARNING" xml:space="preserve">
     <value>Some of the VMs you selected are already assigned to a different snapshot schedule.
-    
+
 Do you want to assign these VMs to the schedule '{0}' instead?</value>
   </data>
   <data name="CHANGE_VM_SNAPSHOT_SCHEDULE_WARNING" xml:space="preserve">
     <value>The VM '{0}' is already assigned to the snashot schedule '{1}'.
-    
+
 Do you want to assign it to the schedule '{2}' instead?</value>
   </data>
   <data name="CHECKING_CANEVACUATE_STATUS" xml:space="preserve">
@@ -2792,19 +2792,19 @@ Do you want to assign it to the schedule '{2}' instead?</value>
     <value>&amp;Collapse Children</value>
   </data>
   <data name="COMMANDS_EDIT" xml:space="preserve">
-    <value />
+    <value>Properties</value>
   </data>
   <data name="COMMANDS_NEW_SR" xml:space="preserve">
-    <value />
+    <value>New SR</value>
   </data>
   <data name="COMMANDS_NEW_VM" xml:space="preserve">
-    <value />
+    <value>New VM</value>
   </data>
   <data name="COMMANDS_REBOOT" xml:space="preserve">
-    <value />
+    <value>Reboot</value>
   </data>
   <data name="COMMANDS_START" xml:space="preserve">
-    <value />
+    <value>Start</value>
   </data>
   <data name="COMMON_CRITERIA_TEXT" xml:space="preserve">
     <value>for use with Common Criteria versions of [vGate] only</value>
@@ -2845,7 +2845,7 @@ Do you want to assign it to the schedule '{2}' instead?</value>
 Do you want to continue?</value>
   </data>
   <data name="CONFIRM_CANCEL_BR_JOB" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to cancel the current selected job?</value>
   </data>
   <data name="CONFIRM_CHANGE_MEMORY_MAX_PLURAL" xml:space="preserve">
     <value>Changing the maximum memory of these VMs will cause them to be rebooted.
@@ -2881,10 +2881,10 @@ Do you want to continue?</value>
     <value>Are you sure you want to delete the selected {0}?</value>
   </data>
   <data name="CONFIRM_DELETE_BACKUP" xml:space="preserve">
-    <value />
+    <value>This operation could not revert. Are you sure you want to delete the backup configure of '{0}'?</value>
   </data>
   <data name="CONFIRM_DELETE_BR_JOB" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to delete the current selected job?</value>
   </data>
   <data name="CONFIRM_DELETE_ITEMS" xml:space="preserve">
     <value>You want to delete these {0} selected items.</value>
@@ -2894,7 +2894,7 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE_POLICIES" xml:space="preserve">
     <value>Do you want to delete the selected policies?
-    
+
 {0} VMs are currently protected with these policies and will no longer be protected if you delete the policies.</value>
   </data>
   <data name="CONFIRM_DELETE_POLICIES_0" xml:space="preserve">
@@ -2902,7 +2902,7 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE_POLICY" xml:space="preserve">
     <value>Do you want to delete policy '{0}'?
-    
+
 {1} VMs are currently protected with this policy and will no longer be protected if you delete the policy.</value>
   </data>
   <data name="CONFIRM_DELETE_POLICY_0" xml:space="preserve">
@@ -2939,12 +2939,12 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE" xml:space="preserve">
     <value>Do you want to delete vApp '{0}'?
-    
+
 {1} VMs are currently included in this vApp.</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES" xml:space="preserve">
     <value>Do you want to delete the selected vApps?
-    
+
 {0} VMs are currently included in these vApps.</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES_0" xml:space="preserve">
@@ -2952,7 +2952,7 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCES_1" xml:space="preserve">
     <value>Do you want to delete the selected vApps?
-    
+
 {0} VM is currently included in one of these vApps.</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_0" xml:space="preserve">
@@ -2960,7 +2960,7 @@ Do you want to continue?</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_1" xml:space="preserve">
     <value>Do you want to delete vApp '{0}'?
-    
+
 {1} VM is currently included in this vApp.</value>
   </data>
   <data name="CONFIRM_DELETE_VM_APPLIANCE_AND_VMS" xml:space="preserve">
@@ -3623,12 +3623,12 @@ Please reconnect the host and try again.</value>
     <value>WLB is enabled on the source</value>
   </data>
   <data name="CPS_WIZARD_MIGRATION_PAGE_TITLE_TEMPLATE" xml:space="preserve">
-    <value>Select a storage network on the destination pool or standalone server that will be used for the live migration of the virtual disks. 
+    <value>Select a storage network on the destination pool or standalone server that will be used for the live migration of the virtual disks.
 
 For optimal performance and reliability during template migration, ensure that the network used for the storage migration is not being used for management or virtual machine traffic.</value>
   </data>
   <data name="CPS_WIZARD_MIGRATION_PAGE_TITLE_VM" xml:space="preserve">
-    <value>Select a storage network on the destination pool or standalone server that will be used for the live migration of the virtual disks. 
+    <value>Select a storage network on the destination pool or standalone server that will be used for the live migration of the virtual disks.
 
 For optimal performance and reliability during VM migration, ensure that the network used for the storage migration is not being used for management or virtual machine traffic.</value>
   </data>
@@ -4249,7 +4249,7 @@ This will also delete its subfolders.</value>
     <value>Snapshot schedule '{0}' disabled.</value>
   </data>
   <data name="DISABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>Disable Backup</value>
   </data>
   <data name="DISABLE_HA" xml:space="preserve">
     <value>Disable HA</value>
@@ -4916,7 +4916,7 @@ Eject the CD and try again.</value>
     <value>No Storage Repositories were found</value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_SCAN_RESULT_TITLE" xml:space="preserve">
-    <value>The following Storage Repositories were found: 
+    <value>The following Storage Repositories were found:
 </value>
   </data>
   <data name="DR_WIZARD_STORAGEPAGE_TEXT" xml:space="preserve">
@@ -5036,7 +5036,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Snapshot schedule '{0}' enabled.</value>
   </data>
   <data name="ENABLE_BACKUP" xml:space="preserve">
-    <value />
+    <value>Enable Backup</value>
   </data>
   <data name="ENABLE_HA_ELLIPSIS" xml:space="preserve">
     <value>&amp;Enable HA...</value>
@@ -5312,88 +5312,88 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Error importing server list. Check that the xml format in the file is correct.</value>
   </data>
   <data name="ERR_AGT_NEW_JOB" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create job</value>
   </data>
   <data name="ERR_OTH_CHANGE_DIR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to change dir</value>
   </data>
   <data name="ERR_OTH_MAKE_DIR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create dir</value>
   </data>
   <data name="ERR_OTH_MAKE_FILE" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create file</value>
   </data>
   <data name="ERR_OTH_REPLICATION_VM_RUN" xml:space="preserve">
-    <value />
+    <value>Synchronized virtual machine is in the boot state, was postponed until the next synchronization tasks performed</value>
   </data>
   <data name="ERR_OTH_RSYNC" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to send data</value>
   </data>
   <data name="ERR_OTH_UNKNOWN" xml:space="preserve">
-    <value />
+    <value>Unknown error</value>
   </data>
   <data name="ERR_SR_CHKZFS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to check the backup&amp;amp;restore file system</value>
   </data>
   <data name="ERR_SR_INFO" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get the backup&amp;amp;restore storage</value>
   </data>
   <data name="ERR_SR_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create duplicate</value>
   </data>
   <data name="ERR_XEN_DEL_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to delete snapshot</value>
   </data>
   <data name="ERR_XEN_DISK_CONFLICT" xml:space="preserve">
-    <value />
+    <value>The disk has conflict</value>
   </data>
   <data name="ERR_XEN_GET_NETWORK" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get NETWORK</value>
   </data>
   <data name="ERR_XEN_GET_POOLS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get pool</value>
   </data>
   <data name="ERR_XEN_GET_SR" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get SR</value>
   </data>
   <data name="ERR_XEN_GET_VBDS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VBD</value>
   </data>
   <data name="ERR_XEN_GET_VDI" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VDI</value>
   </data>
   <data name="ERR_XEN_GET_VIFS" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get VIF</value>
   </data>
   <data name="ERR_XEN_GET_VM_BY_UUID" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get vm by uuid</value>
   </data>
   <data name="ERR_XEN_GET_VM_REC" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to get vm record</value>
   </data>
   <data name="ERR_XEN_LOGIN" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to login hypervisor</value>
   </data>
   <data name="ERR_XEN_NEW_SNAP" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create snapshot</value>
   </data>
   <data name="ERR_XEN_NEW_VBD" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VBD</value>
   </data>
   <data name="ERR_XEN_NEW_VDI" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VDI</value>
   </data>
   <data name="ERR_XEN_NEW_VIF" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VIF</value>
   </data>
   <data name="ERR_XEN_NEW_VM" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to create VM</value>
   </data>
   <data name="ERR_XEN_REMOTE_LOGIN" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to login the remote host</value>
   </data>
   <data name="ERR_XEN_UPDATE_OTH_CFG" xml:space="preserve">
-    <value />
+    <value>An error occured when attempting to update other-config</value>
   </data>
   <data name="EULA" xml:space="preserve">
     <value>EULA</value>
@@ -5838,7 +5838,7 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Free memory</value>
   </data>
   <data name="FRIDAY" xml:space="preserve">
-    <value />
+    <value>Friday</value>
   </data>
   <data name="FRIDAY_LONG" xml:space="preserve">
     <value>Friday</value>
@@ -5850,10 +5850,10 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Fully applied</value>
   </data>
   <data name="FULL_BACKUP_CIRCLE" xml:space="preserve">
-    <value />
+    <value>Full Backup Circle</value>
   </data>
   <data name="FULL_BACKUP_DAILY" xml:space="preserve">
-    <value />
+    <value>Full Backup Daily</value>
   </data>
   <data name="FULL_BACKUP_NOW" xml:space="preserve">
     <value>Full Backup Now</value>
@@ -5862,10 +5862,10 @@ Would you like to eject these ISOs before continuing?</value>
     <value>Full Backup Once</value>
   </data>
   <data name="FULL_BACKUP_RECURS_EVERY" xml:space="preserve">
-    <value />
+    <value>Full Backup Recurs every:{0} times.</value>
   </data>
   <data name="FULL_BACKUP_WEEKLY" xml:space="preserve">
-    <value />
+    <value>Full Backup Weekly</value>
   </data>
   <data name="GALLERYSEARCHBAR_MATCHES" xml:space="preserve">
     <value>{0} matches</value>
@@ -7233,28 +7233,28 @@ Size: {3}</value>
     <value>Is standalone</value>
   </data>
   <data name="JOB_STATUS_CANCELING" xml:space="preserve">
-    <value />
+    <value>Canceling</value>
   </data>
   <data name="JOB_STATUS_CHK_ZFS" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_DELETE_SNAP" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_GEN_METADATA" xml:space="preserve">
-    <value />
+    <value>Generate Metadata</value>
   </data>
   <data name="JOB_STATUS_TRANS_DATA" xml:space="preserve">
-    <value />
+    <value>Transfer Data</value>
   </data>
   <data name="JOB_STATUS_TRANS_METADATA" xml:space="preserve">
-    <value />
+    <value>Transfer Metadata</value>
   </data>
   <data name="JOB_STATUS_VERIFY_DATA" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOB_STATUS_ZFS_SNAP" xml:space="preserve">
-    <value />
+    <value>Check Data</value>
   </data>
   <data name="JOINING_AD" xml:space="preserve">
     <value>Please enter a user name and password with sufficient privileges to add servers to domain '{0}'.</value>
@@ -7426,23 +7426,23 @@ Size: {3}</value>
     <value>Status</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_DESKTOP_FEATURES_ENABLED" xml:space="preserve">
-    <value>Eligible for support 
+    <value>Eligible for support
 XenApp/XenDesktop features enabled</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_DESKTOP_PLUS_FEATURES_ENABLED" xml:space="preserve">
-    <value>Eligible for support 
+    <value>Eligible for support
 XenApp/XenDesktop Platinum features enabled</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_ENTERPRISE_FEATURES_ENABLED" xml:space="preserve">
-    <value>Eligible for support 
+    <value>Eligible for support
 Enterprise features enabled</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_PREMIUM_FEATURES_ENABLED" xml:space="preserve">
-    <value>Eligible for support 
+    <value>Eligible for support
 Premium features enabled</value>
   </data>
   <data name="LICENSE_SUPPORT_AND_STANDARD_FEATURES_ENABLED" xml:space="preserve">
-    <value>Eligible for support 
+    <value>Eligible for support
 Standard features only</value>
   </data>
   <data name="LICENSE_TOO_MANY_SERVERS_SELECTED_CAPTION" xml:space="preserve">
@@ -7601,7 +7601,7 @@ Size: {3}</value>
     <value>Do you want to move the selected servers into the pool {0}?</value>
   </data>
   <data name="MAINWINDOW_CONFIRM_REMOVE_FROM_POOL" xml:space="preserve">
-    <value>Do you want to remove '{0}' from pool '{1}'? 
+    <value>Do you want to remove '{0}' from pool '{1}'?
 
 This will permanently delete and reinitialize all local storage on '{2}'. Your data will be lost, and the server will be rebooted.</value>
   </data>
@@ -7713,10 +7713,10 @@ This will permanently delete and reinitialize all local storage on the servers. 
     <value>The [vGate] license on '{0}' has expired.</value>
   </data>
   <data name="MAINWINDOW_EXPORT_MAC" xml:space="preserve">
-    <value>request license</value>
+    <value>Request License</value>
   </data>
   <data name="MAINWINDOW_EXPORT_MAC_CONTEXT_MENU" xml:space="preserve">
-    <value>request license</value>
+    <value>Request License</value>
   </data>
   <data name="MAINWINDOW_EXPORT_POOL_RESOURCE_DATA" xml:space="preserve">
     <value>E&amp;xport Resource Data...</value>
@@ -8059,7 +8059,7 @@ This will permanently delete and reinitialize all local storage on the servers. 
   </data>
   <data name="MESSAGEBOX_DESTROY_SRS_CONTINUE" xml:space="preserve">
     <value>Are you sure you want to destroy the selected storage repositories?
-      
+
 Destroying the selected storage repositories will permanently remove all associated virtual disks from the underlying storage devices.
 
 This action is final and unrecoverable.</value>
@@ -8069,7 +8069,7 @@ This action is final and unrecoverable.</value>
   </data>
   <data name="MESSAGEBOX_DESTROY_SR_CONTINUE" xml:space="preserve">
     <value>Are you sure you want to destroy '{0}'?
-    
+
 Destroying this storage repository will permanently remove all associated virtual disks from the underlying storage device.
 
 This action is final and unrecoverable.</value>
@@ -8204,7 +8204,7 @@ This action is final and unrecoverable.</value>
     <value>Failed to Reconnect</value>
   </data>
   <data name="MESSAGEBOX_SAVE_CORRUPTED" xml:space="preserve">
-    <value>Unable to save settings. You may have insufficient disk space or your configuration file could be corrupt. 
+    <value>Unable to save settings. You may have insufficient disk space or your configuration file could be corrupt.
 
 To fix a corrupt configuration file revert changes to {0} or delete the file to return to default values.</value>
   </data>
@@ -8274,7 +8274,7 @@ To learn more about the [vGate] Live VDI Migration feature or to start a [vGate]
     <value>Mixed</value>
   </data>
   <data name="MONDAY" xml:space="preserve">
-    <value />
+    <value>Monday</value>
   </data>
   <data name="MONDAY_LONG" xml:space="preserve">
     <value>Monday</value>
@@ -8712,7 +8712,7 @@ Do you wish to format the disk?</value>
     <value>This LUN is already in use as SR {0} on server {1}.</value>
   </data>
   <data name="NEWSR_LVMOBOND_BLURB" xml:space="preserve">
-    <value>Shared Logical Volume Manager (LVM) support is available using either iSCSI or Fibre Channel access to a shared LUN. 
+    <value>Shared Logical Volume Manager (LVM) support is available using either iSCSI or Fibre Channel access to a shared LUN.
 
 Using the LVM-based shared SR provides the same performance benefits as unshared LVM for local disk storage, however in the shared context, iSCSI or Fibre Channel-based SRs enable VM agility — VMs may be started on any server in a pool and migrated between them.</value>
   </data>
@@ -8722,7 +8722,7 @@ Using the LVM-based shared SR provides the same performance benefits as unshared
   <data name="NEWSR_LVMOFCOE_BLURB" xml:space="preserve">
     <value>[vGate] hosts support Software based Fibre Channel over Ethernet using supported Converged Network Adapters (CNAs) which support FCoE in this way.
 
-All configuration required to expose a LUN to the host must be completed manually, including configuring your FCoE fabric, and allocating LUN(s) to your CNA’s public world wide name (PWWN). 
+All configuration required to expose a LUN to the host must be completed manually, including configuring your FCoE fabric, and allocating LUN(s) to your CNA’s public world wide name (PWWN).
 
 Once this configuration has been carried out, this wizard will walk you through discovering and mounting a LUN available to the hosts CNA’s as a SCSI device. The SCSI device can then be used to access the LUN as if it were a locally attached SCSI device.</value>
   </data>
@@ -8794,9 +8794,9 @@ Do you want to reattach the SR?</value>
     <value>What do you want to call this Storage Repository?</value>
   </data>
   <data name="NEWSR_NETAPP_BLURB" xml:space="preserve">
-    <value>If you have access to a Network Appliance (NetApp) filer with sufficient disk space, running a version of Data ONTAP 7G (version 7.2 or greater), you can configure a custom NetApp Storage Repository. 
+    <value>If you have access to a Network Appliance (NetApp) filer with sufficient disk space, running a version of Data ONTAP 7G (version 7.2 or greater), you can configure a custom NetApp Storage Repository.
 
-The driver uses the ZAPI interface to the filer to create a group of FlexVols which correspond to an SR. VDIs are created as virtual LUNs on the filer, and attached to the host using an iSCSI data path. 
+The driver uses the ZAPI interface to the filer to create a group of FlexVols which correspond to an SR. VDIs are created as virtual LUNs on the filer, and attached to the host using an iSCSI data path.
 
 VM cloning uses the snapshot and clone capabilities of the filer to provide high performance and to ensure compatibility with existing ONTAP filer management tools.</value>
   </data>
@@ -9944,7 +9944,7 @@ Please wait for this operation to complete, then click Next to continue with the
     <value>Update '{0}' Applied to Server '{1}'</value>
   </data>
   <data name="PATCH_DESCRIPTION_AND_INSTALLATION_SIZE" xml:space="preserve">
-    <value>{0} 
+    <value>{0}
 Installation size: {1}</value>
   </data>
   <data name="PATCH_DOWNLOAD_FAILED" xml:space="preserve">
@@ -9965,7 +9965,7 @@ The update has previously been uploaded to '{1}', but the update installation fi
 Upload the update from an .{2} file instead.</value>
   </data>
   <data name="PATCH_EXPANDED_DESCRIPTION" xml:space="preserve">
-    <value>{0} 
+    <value>{0}
 Date modified: {1}
 Date created: {2}
 Size: {3}</value>
@@ -10148,7 +10148,7 @@ Please reconnect the host and try again</value>
     <value>Wake on LAN</value>
   </data>
   <data name="POLICY_DOES_NOT_HAVE_ARCHIVE" xml:space="preserve">
-    <value>Unable to archive the selected snapshot(s). 
+    <value>Unable to archive the selected snapshot(s).
 
 The VM protection policy for this VM does not have automatic archiving configured. Do you want to edit the policy and configure it now?</value>
   </data>
@@ -10461,14 +10461,14 @@ Do you wish to continue?</value>
   <data name="RBAC_CONSOLE_WARNING_MANY" xml:space="preserve">
     <value>Your current role is '{0}'.
 
-To access this console switch to an account with one of the following roles: 
+To access this console switch to an account with one of the following roles:
 
 {1}</value>
   </data>
   <data name="RBAC_CONSOLE_WARNING_ONE" xml:space="preserve">
     <value>Your current role is '{0}'.
 
-To access this console switch to an account with the following role: 
+To access this console switch to an account with the following role:
 
 {1}</value>
   </data>
@@ -10481,7 +10481,7 @@ To access this console switch to an account with the following role:
   <data name="RBAC_HA_TAB_WARNING" xml:space="preserve">
     <value>Your current role is '{1}'.
 
-To configure HA settings, switch to an account with one of the following roles: 
+To configure HA settings, switch to an account with one of the following roles:
 
 {0}</value>
   </data>
@@ -10495,7 +10495,7 @@ To configure HA settings, switch to an account with one of the following roles:
     <value>User {0} does not have sufficient permissions to apply software updates to {1}. Either log in with different user credentials or deselect this server before continuing.</value>
   </data>
   <data name="RBAC_UPGRADE_WIZARD_MESSAGE" xml:space="preserve">
-    <value>User {0} does not have sufficient permissions to perform a rolling pool upgrade on {1}. 
+    <value>User {0} does not have sufficient permissions to perform a rolling pool upgrade on {1}.
 
 You must reconnect to {1} using an account with Pool Administrator permissions before you can upgrade it using the Rolling Pool Upgrade wizard.</value>
   </data>
@@ -10560,10 +10560,10 @@ You must reconnect to {1} using an account with Pool Administrator permissions b
     <value>A {0} user cannot alter memory values and will be restricted to the settings on the template.</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_REPLICATION" xml:space="preserve">
-    <value />
+    <value>A {0} user cannot Replication VMs.Log in as a different user with sufficient privileges and try again.</value>
   </data>
   <data name="RBAC_WARNING_VM_WIZARD_RESTORE" xml:space="preserve">
-    <value />
+    <value>A {0} user cannot Restore VMs.Log in as a different user with sufficient privileges and try again.</value>
   </data>
   <data name="READY_UPGRADE" xml:space="preserve">
     <value>Ready to Upgrade</value>
@@ -10780,43 +10780,43 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Repeated key</value>
   </data>
   <data name="REPLICATED_VM_RUNNING_INFO" xml:space="preserve">
-    <value />
+    <value>The VM you want to synchronize is running, you need to shutdown it and try again.</value>
   </data>
   <data name="REPLICATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>Please select VM to relicate.</value>
   </data>
   <data name="REPLICATION_CIRCLE" xml:space="preserve">
-    <value />
+    <value>Replication Circle</value>
   </data>
   <data name="REPLICATION_COMPLETE_TEXT" xml:space="preserve">
-    <value />
+    <value>Complete</value>
   </data>
   <data name="REPLICATION_DAILY" xml:space="preserve">
-    <value />
+    <value>Replication Daily</value>
   </data>
   <data name="REPLICATION_IMMEDIATELY" xml:space="preserve">
-    <value />
+    <value>Immediately</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Settings</value>
   </data>
   <data name="REPLICATION_JOB_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>Enter job name, define VM naming convention, and select destination of the restore.</value>
   </data>
   <data name="REPLICATION_NETWORK_TEXT" xml:space="preserve">
-    <value />
+    <value>Please select default network</value>
   </data>
   <data name="REPLICATION_ONCE" xml:space="preserve">
-    <value />
+    <value>Replication Once</value>
   </data>
   <data name="REPLICATION_SYNCH" xml:space="preserve">
-    <value />
+    <value>Synchronization</value>
   </data>
   <data name="REPLICATION_VM_TITLE" xml:space="preserve">
     <value>Replicate VM - {0}</value>
   </data>
   <data name="REPLICATION_WEEKLY" xml:space="preserve">
-    <value />
+    <value>Replication Weekky</value>
   </data>
   <data name="REQUIRED_HOTFIX_ISNOT_INSTALLED" xml:space="preserve">
     <value>{0}: The required hotfix is not installed</value>
@@ -10837,7 +10837,7 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Resolved as {0}</value>
   </data>
   <data name="RESTORE_COMPLETE_TITLE" xml:space="preserve">
-    <value />
+    <value>Complete</value>
   </data>
   <data name="RESTORE_DISMISSED_UPDATES" xml:space="preserve">
     <value>Restore dismissed updates</value>
@@ -10849,43 +10849,43 @@ Click Server Status Report to open the Compile Server Status Report Wizard or cl
     <value>Restore From Backup...</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Schedule</value>
   </data>
   <data name="RESTORE_JOB_SCHEDULE_TITLE" xml:space="preserve">
-    <value />
+    <value>Define schedule of the restore.</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>Set Job Settings</value>
   </data>
   <data name="RESTORE_JOB_SETTINGS_TITLE" xml:space="preserve">
     <value>Enter job name, define VM naming convention, and select destination of the restore.</value>
   </data>
   <data name="RESTORE_LIST" xml:space="preserve">
-    <value />
+    <value>Get the inforamtion for restoring</value>
   </data>
   <data name="RESTORE_NOW" xml:space="preserve">
-    <value />
+    <value>Restore Now</value>
   </data>
   <data name="RESTORE_ONCE" xml:space="preserve">
-    <value />
+    <value>Restore Once</value>
   </data>
   <data name="RESTORE_ROOT_PROMPT" xml:space="preserve">
-    <value />
+    <value>Can't use root user</value>
   </data>
   <data name="RESTORE_SELECT_VM_TEXT" xml:space="preserve">
-    <value />
+    <value>Select VM</value>
   </data>
   <data name="RESTORE_SELECT_VM_TITLE" xml:space="preserve">
-    <value />
+    <value>Select virtual machines to restore.</value>
   </data>
   <data name="RESTORE_SET_STORAGE" xml:space="preserve">
     <value>Set Storage</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TEXT" xml:space="preserve">
-    <value />
+    <value>View VM Settings</value>
   </data>
   <data name="RESTORE_VM_SETTINGS_TITLE" xml:space="preserve">
-    <value />
+    <value>Review the job summary.</value>
   </data>
   <data name="RESTORE_VM_TITLE" xml:space="preserve">
     <value>Restore VM - {0}</value>
@@ -10987,7 +10987,7 @@ Check the boot order in the server and reboot again.</value>
   </data>
   <data name="ROLLING_UPGRADE_REBOOT_MESSAGE" xml:space="preserve">
     <value>To install the [vGate] upgrade on {0}, follow these steps:
-    
+
 1. Insert the [vGate] installation CD-ROM in the server’s CD/DVD drive or set up a PXE network boot.
 2. Click the Reboot Now button below to reboot the server and begin the installation.
 3. Go to the server’s console and follow the on-screen instructions to install the upgrade.
@@ -11043,7 +11043,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>&amp;Run Report</value>
   </data>
   <data name="SATURDAY" xml:space="preserve">
-    <value />
+    <value>Saturday</value>
   </data>
   <data name="SATURDAY_LONG" xml:space="preserve">
     <value>Saturday</value>
@@ -11112,7 +11112,7 @@ The master must be upgraded first, so if you skip the master, the rolling pool u
     <value>Schedule job</value>
   </data>
   <data name="SCHEDULE_REPLICATION" xml:space="preserve">
-    <value />
+    <value>Define schedule of the replication</value>
   </data>
   <data name="SEARCHBOX_TOOLTIP" xml:space="preserve">
     <value>Find resources in the Resources Pane</value>
@@ -11633,7 +11633,7 @@ Incremental allocation: {1}</value>
     <value>{0} required when only {1} available</value>
   </data>
   <data name="SR_QUANTUM_ALLOCATION_LIMITS_INFO" xml:space="preserve">
-    <value>The Incremental allocation limits are as follows: 
+    <value>The Incremental allocation limits are as follows:
 The lower limit: SR size / {0} (no lower than {1})
 The upper limit: SR size / {2}</value>
   </data>
@@ -11854,13 +11854,13 @@ The upper limit: SR size / {2}</value>
     <value>succeeded</value>
   </data>
   <data name="SUMMARY_COMMANDS_TITLE" xml:space="preserve">
-    <value />
+    <value>Actions</value>
   </data>
   <data name="SUMMARY_PAGE" xml:space="preserve">
     <value>Summary</value>
   </data>
   <data name="SUNDAY" xml:space="preserve">
-    <value />
+    <value>Sunday</value>
   </data>
   <data name="SUNDAY_LONG" xml:space="preserve">
     <value>Sunday</value>
@@ -11925,7 +11925,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>Switch to an account with the required role and try again.</value>
   </data>
   <data name="SYNCHRONIZATION_CHECKED_MESSAGE" xml:space="preserve">
-    <value />
+    <value>Please set synchronization plan for every checked vm</value>
   </data>
   <data name="SYNCING_DATABASE" xml:space="preserve">
     <value>Performing pool database sync</value>
@@ -12021,7 +12021,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>is this week</value>
   </data>
   <data name="THURSDAY" xml:space="preserve">
-    <value />
+    <value>Thursday</value>
   </data>
   <data name="THURSDAY_LONG" xml:space="preserve">
     <value>Thursday</value>
@@ -12159,7 +12159,7 @@ Refer to the "[vGate product] Administrator's Guide" for instructions on how to 
     <value>trusted</value>
   </data>
   <data name="TUESDAY" xml:space="preserve">
-    <value />
+    <value>Tuesday</value>
   </data>
   <data name="TUESDAY_LONG" xml:space="preserve">
     <value>Tuesday</value>
@@ -12724,7 +12724,7 @@ To learn more about the [vGate] Active Directory feature or to start a [vGate] t
 To learn more about the [vGate] Alerting and Reporting feature or to start a [vGate] trial, click the button below.</value>
   </data>
   <data name="UPSELL_BLURB_BR" xml:space="preserve">
-    <value>Upgrade vGate to enable Backup&amp;Restore. 
+    <value>Upgrade vGate to enable Backup&amp;Restore.
 
 To learn more about the vGate Backup&amp;Restore feature or to start a vGate trial, click the button below.</value>
   </data>
@@ -12954,7 +12954,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>The disk is attached to a VM that is not in halted state.</value>
   </data>
   <data name="VCPU_ONLY_WHEN_HALTED" xml:space="preserve">
-    <value>The VCPUs can only be changed when the VM is shut down.</value>
+    <value>The Max-VCPUs,the topology and the vCPU priority can only be changed when the VM is shut down.</value>
   </data>
   <data name="VDI" xml:space="preserve">
     <value>VDI</value>
@@ -13503,7 +13503,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>Pub&amp;lish...</value>
   </data>
   <data name="V_CONSOLE" xml:space="preserve">
-    <value />
+    <value>vGate Console</value>
   </data>
   <data name="WAITING" xml:space="preserve">
     <value>Waiting</value>
@@ -13545,7 +13545,7 @@ To learn more about the [vGate] Dynamic Workload Balancing feature or to start a
     <value>Web Page</value>
   </data>
   <data name="WEDNESDAY" xml:space="preserve">
-    <value />
+    <value>Wednesday</value>
   </data>
   <data name="WEDNESDAY_LONG" xml:space="preserve">
     <value>Wednesday</value>
@@ -14346,55 +14346,57 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>Raw HBA</value>
   </data>
   <data name="ERR_CONTROLLER_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>Halsign SC username or password is not correct.</value>
   </data>
   <data name="ERR_INVALID_PARAMS" xml:space="preserve">
-    <value />
+    <value>Invalid parameters.</value>
   </data>
   <data name="ERR_VGATE_ACCOUNT_INVALID" xml:space="preserve">
-    <value />
+    <value>vGate username or password is not correct.</value>
   </data>
   <data name="INSTANT_CREATE_VMS" xml:space="preserve">
-    <value />
+    <value>Batch create VMs</value>
   </data>
   <data name="INSTANT_CREATE_VMS_FINISH" xml:space="preserve">
-    <value />
+    <value>Finish batch create VMs</value>
   </data>
   <data name="INSTANT_CREATE_VMS_START" xml:space="preserve">
-    <value />
+    <value>Start batch create VMs</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE" xml:space="preserve">
-    <value />
+    <value>Are you sure you wish to delete the vSwitch Controller configure?</value>
   </data>
   <data name="MESSAGEBOX_OVSC_DELETE_TITLE" xml:space="preserve">
-    <value />
+    <value>Delete Configure</value>
   </data>
   <data name="OVSC_CONFIGURE_IP" xml:space="preserve">
-    <value />
+    <value>vSwitch Controller IP</value>
   </data>
   <data name="OVSC_CONFIGURE_PORT" xml:space="preserve">
-    <value />
+    <value>Port</value>
   </data>
   <data name="OVSC_CONFIGURE_PROTOCOL" xml:space="preserve">
-    <value />
+    <value>Protocol</value>
   </data>
   <data name="OVSC_CONFIGURE_TITLE" xml:space="preserve">
-    <value />
+    <value>Configuration</value>
   </data>
   <data name="OVSC_CONFIGURE_USERNAME" xml:space="preserve">
-    <value />
+    <value>UserName</value>
   </data>
   <data name="OVSC_PAGE_TITLE" xml:space="preserve">
-    <value />
+    <value>vSwitch Controller</value>
   </data>
   <data name="UPSELL_BLURB_SC" xml:space="preserve">
-    <value />
+    <value>Upgrade vGate to enable vSwitch Controller.
+
+To learn more about the vGate vSwitch Controller feature or to start a vGate trial, click the button below.</value>
   </data>
   <data name="VSWITCH_CONTROLLER" xml:space="preserve">
-    <value />
+    <value>QoS settings should be configured using the vSwitch Controller</value>
   </data>
   <data name="NETWORKTOPOLOGY_VSWITCH" xml:space="preserve">
-    <value />
+    <value>虚拟交换机</value>
   </data>
   <data name="CONFIGURATION_HARDWARE_STORAGE" xml:space="preserve">
     <value>Storage</value>
@@ -14424,18 +14426,113 @@ You will need to navigate to the Console on each of the selected VMs to complete
     <value>Update vGate to use this function.</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_BLURB" xml:space="preserve">
-    <value>LVM_MIRROR_TO_BE_CHANGED</value>
+    <value>Logical Volumn Manager (LVM) mirroring support is available using either iSCSI or Fibre Channel access to shared LUN.
+
+This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk.</value>
   </data>
   <data name="NEWSR_LVMoMirror_DEFAULT_NAME" xml:space="preserve">
     <value>LVM_Mirror</value>
   </data>
   <data name="NEWSR_LVMOMIRROR_DESCRIPTION" xml:space="preserve">
-    <value>TOBECHANGED</value>
+    <value>LVM Mirror SR [{0} - {1}]</value>
   </data>
   <data name="NEWSR_LUNFORLOG" xml:space="preserve">
     <value>LUN for log</value>
   </data>
   <data name="BR_VM_WITHOUT_VDI" xml:space="preserve">
     <value>Please selecte the VM with VDIs</value>
+  </data>
+  <data name="LVMOMIRROR_WARNING_DIALOG_LUN_DETAILS" xml:space="preserve">
+    <value>Vendor: {0}
+Serial Number: {1}
+SCSI ID: {2}
+Size: {3}
+
+Vendor: {4}
+Serial Number: {5}
+SCSI ID: {6}
+Size: {7}
+
+Vendor: {8}
+Serial Number: {9}
+SCSI ID: {10}
+Size: {11}</value>
+  </data>
+  <data name="DISK_SIZE_TOO_BIG" xml:space="preserve">
+    <value>Must smaller than 2043.99G</value>
+  </data>
+  <data name="UPLOADING_ISO" xml:space="preserve">
+    <value>ISO file is uploading...</value>
+  </data>
+  <data name="ACTION_MIRROR_SR_CREATING" xml:space="preserve">
+    <value>Creating SR(This may take a long time,please be patient )</value>
+  </data>
+  <data name="ADD_MIRROR_LUN_HINT" xml:space="preserve">
+    <value>This may take a long time,please be patient</value>
+  </data>
+  <data name="HOST" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="MAINWINDOW_CTRL_L" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MEDIA_ACCESS_CONTROL" xml:space="preserve">
+    <value>Mac</value>
+  </data>
+  <data name="SAVE_PATH" xml:space="preserve">
+    <value>Save path</value>
+  </data>
+  <data name="VGATE_VERSION" xml:space="preserve">
+    <value>vGate-version</value>
+  </data>
+  <data name="ACTION_SR_MIRROR_LUN_ADDING" xml:space="preserve">
+    <value>Adding SR {0} LUN.This may take a long time,please be patient</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_1" xml:space="preserve">
+    <value>Failed to call plugin method.  ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_2" xml:space="preserve">
+    <value>Call plugin with wrong params. ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_3" xml:space="preserve">
+    <value>rpc called failed. ({0})</value>
+  </data>
+  <data name="PVUSB_DAEMON_FAILURE_4" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
+  <data name="BUTTON_PRINT_TEXT" xml:space="preserve">
+    <value>Export Graphs Below</value>
+  </data>
+  <data name="STORAGEQOSPAGE_TEXT" xml:space="preserve">
+    <value>Storage</value>
+  </data>
+  <data name="STORAGEQOSPAGE_SUBTEXT" xml:space="preserve">
+    <value>QOS</value>
+  </data>
+  <data name="KERNEL_CRASH_DUMP_SUBTEXT" xml:space="preserve">
+    <value>Kernel crash dump</value>
+  </data>
+  <data name="VCPU_HOTPLUG_LICENSE_UNAVAILABLE" xml:space="preserve">
+    <value>Hot-plug is not supported by free-version vGate</value>
+  </data>
+  <data name="VCPU_HOTPLUG_WINDOWS_UNAVAILABLE" xml:space="preserve">
+    <value>Hot-plug is not supported by Windows</value>
+  </data>
+  <data name="NEWSR_ISCSIORFC" xml:space="preserve">
+    <value>Choose source</value>
+  </data>
+  <data name="NEWSR_MIRROR_ISCSI_BLURB" xml:space="preserve">
+    <value>Logical Volumn Manager (LVM) mirroring support is available using iSCSI access to shared LUN.
+
+This provides the ability to allocate more than one copy of a physical partition to increase the availability of the data. When a disk fails and its physical partitions become unavailable, you still have access to mirrored data on an available disk.</value>
+  </data>
+  <data name="SRWIZARD_MIRROR_ISCSI" xml:space="preserve">
+    <value>Lvm Mirror-ISCSI[{0} ({1}; {2});{3};{4}]</value>
+  </data>
+  <data name="NEWSR_PATH_MIRROR_ISCSI" xml:space="preserve">
+    <value>Enter a path for your Mirror-iSCSI storage</value>
+  </data>
+  <data name="MIRROR_ISCSI_DEFAULT_NAME" xml:space="preserve">
+    <value>LvmMirror-iSCSI</value>
   </data>
 </root>

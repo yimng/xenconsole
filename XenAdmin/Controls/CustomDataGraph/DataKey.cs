@@ -72,13 +72,13 @@ namespace XenAdmin.Controls.CustomDataGraph
             if (index == -1 || index >= Items.Count) return;
             SelectedIndex = index;
         }
-
+        public static List<String> items = new List<string>(); 
         void DataKey_DrawItem(object sender, DrawItemEventArgs e)
         {
             if (e.Index == -1 || (ArchiveMaintainer != null && ArchiveMaintainer.LoadingInitialData))
                 return;
             DataSetCollectionWrapper item = (DataSetCollectionWrapper)Items[e.Index];
-            
+            items.Add(item.ToString());
             lock (Palette.PaletteLock)
             {
                 using (var thickPen = Palette.CreatePen(item.Sets[ArchiveInterval.FiveSecond].Uuid, Palette.PEN_THICKNESS_THICK))

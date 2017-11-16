@@ -112,18 +112,21 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="WednesdayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;FridayCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
@@ -138,23 +141,19 @@
     <value>8</value>
   </data>
   <data name="&gt;&gt;StartDatePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;OnceRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="DNSATimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 20</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
     <value>Schedule Type</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FridayCheckBox.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;DailyRadioButton.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -165,11 +164,12 @@
   <data name="&gt;&gt;StartDateLabel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="SaturdayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="WeeklyRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="StartDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="ThursdayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -183,8 +183,11 @@
   <data name="&gt;&gt;OnceRadioButton.Parent" xml:space="preserve">
     <value>groupBox3</value>
   </data>
+  <data name="&gt;&gt;ServerTimeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;CircleRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;RecursLabel.Name" xml:space="preserve">
     <value>RecursLabel</value>
@@ -199,13 +202,13 @@
     <value>58, 13</value>
   </data>
   <data name="&gt;&gt;MondayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;WednesdayCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DailyRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RecurTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -217,19 +220,19 @@
     <value>Thursday</value>
   </data>
   <data name="&gt;&gt;DNSACheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FridayCheckBox.Name" xml:space="preserve">
     <value>FridayCheckBox</value>
   </data>
-  <data name="&gt;&gt;SaturdayCheckBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="NowRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;ThursdayCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="ServerTimeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="ServerTimeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -264,17 +267,23 @@
   <data name="StartTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 127</value>
   </data>
-  <data name="StartTimePicker.CustomFormat" xml:space="preserve">
-    <value>HH:mm</value>
+  <data name="DNSATimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
   </data>
   <data name="&gt;&gt;StartDateLabel.Name" xml:space="preserve">
     <value>StartDateLabel</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
   </data>
   <data name="TuesdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 24</value>
   </data>
   <data name="ServerTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;DailyRadioButton.Name" xml:space="preserve">
+    <value>DailyRadioButton</value>
   </data>
   <data name="OnceRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -284,6 +293,9 @@
   </data>
   <data name="&gt;&gt;RecurLabel.Name" xml:space="preserve">
     <value>RecurLabel</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ReplicationSchedulePage</value>
   </data>
   <data name="StartDatePicker.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -300,31 +312,28 @@
   <data name="ThursdayCheckBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;WednesdayCheckBox.Name" xml:space="preserve">
-    <value>WednesdayCheckBox</value>
-  </data>
   <data name="SaturdayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 24</value>
   </data>
   <data name="DNSATimePicker.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="WeeklyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;RecurLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OnceRadioButton.Name" xml:space="preserve">
-    <value>OnceRadioButton</value>
+  <data name="RecurLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 170</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
+  <data name="SaturdayCheckBox.Text" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
   <data name="StartTimeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;DNSATimePicker.Parent" xml:space="preserve">
+  <data name="&gt;&gt;StartDatePicker.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ServerTimeLabel.Name" xml:space="preserve">
@@ -333,8 +342,8 @@
   <data name="SaturdayCheckBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="SundayCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
+  <data name="SaturdayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="TuesdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>327, 209</value>
@@ -342,20 +351,20 @@
   <data name="OnceRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 192</value>
+  </data>
   <data name="SaturdayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
   <data name="&gt;&gt;DNSATimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;StartDateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="StartDatePicker.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="&gt;&gt;CircleRadioButton.Name" xml:space="preserve">
-    <value>CircleRadioButton</value>
   </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>$this</value>
@@ -369,11 +378,8 @@
   <data name="StartTimePicker.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="StartDateLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="StartTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
+  <data name="WednesdayCheckBox.Text" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
   <data name="NowRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 36</value>
@@ -390,20 +396,23 @@
   <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RecurLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="RecurTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
   </data>
   <data name="OnceRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 75</value>
   </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 52</value>
+  </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="&gt;&gt;StartTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;WednesdayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -412,13 +421,16 @@
     <value>2</value>
   </data>
   <data name="&gt;&gt;SaturdayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ThursdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>159, 242</value>
   </data>
   <data name="&gt;&gt;WeeklyRadioButton.Parent" xml:space="preserve">
     <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;MondayCheckBox.Name" xml:space="preserve">
+    <value>MondayCheckBox</value>
   </data>
   <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -429,14 +441,14 @@
   <data name="MondayCheckBox.Text" xml:space="preserve">
     <value>Monday</value>
   </data>
-  <data name="DNSACheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
   <data name="StartDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
   </data>
   <data name="DailyRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;DNSATimePicker.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="RecurLabel.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -444,11 +456,14 @@
   <data name="NowRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="CircleRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="SundayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 209</value>
   </data>
   <data name="&gt;&gt;ThursdayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StartTimeLabel.Text" xml:space="preserve">
+    <value>Start Time:</value>
   </data>
   <data name="CircleRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 192</value>
@@ -462,11 +477,11 @@
   <data name="DNSACheckBox.Text" xml:space="preserve">
     <value>Do not start after:</value>
   </data>
-  <data name="&gt;&gt;CircleRadioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;WeeklyRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StartDatePicker.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="FridayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 24</value>
   </data>
   <data name="FridayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -477,17 +492,11 @@
   <data name="TuesdayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DailyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;StartTimeLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="StartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
     <value>283, 121</value>
-  </data>
-  <data name="SaturdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 242</value>
   </data>
   <data name="&gt;&gt;StartTimePicker.Parent" xml:space="preserve">
     <value>$this</value>
@@ -501,9 +510,6 @@
   <data name="OnceRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 17</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 336</value>
-  </data>
   <data name="DailyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 24</value>
   </data>
@@ -516,14 +522,14 @@
   <data name="RecurTextBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="SundayCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
   <data name="FridayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>243, 242</value>
   </data>
   <data name="MondayCheckBox.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="FridayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 24</value>
   </data>
   <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -546,8 +552,11 @@
   <data name="ThursdayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;WeeklyRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;SundayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MondayCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 24</value>
@@ -555,11 +564,8 @@
   <data name="DNSACheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 17</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Server Time:</value>
-  </data>
-  <data name="&gt;&gt;RecursLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="DNSACheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
   </data>
   <data name="&gt;&gt;DNSACheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -570,14 +576,14 @@
   <data name="TuesdayCheckBox.Text" xml:space="preserve">
     <value>Tuesday</value>
   </data>
-  <data name="ServerTimeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;CircleRadioButton.Name" xml:space="preserve">
+    <value>CircleRadioButton</value>
   </data>
   <data name="&gt;&gt;MondayCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ServerTimeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>540, 336</value>
   </data>
   <data name="SundayCheckBox.Text" xml:space="preserve">
     <value>Sunday</value>
@@ -589,25 +595,22 @@
     <value>243, 209</value>
   </data>
   <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RecursLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>389, 170</value>
   </data>
-  <data name="&gt;&gt;StartTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CircleRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WeeklyRadioButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SaturdayCheckBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;RecurTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="StartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 20</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DNSACheckBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -624,6 +627,9 @@
   <data name="MondayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
+  <data name="&gt;&gt;StartTimeLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
   <data name="OnceRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -631,7 +637,7 @@
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=5.2.0.31806, Culture=neutral, PublicKeyToken=null</value>
+    <value>XenAdmin.Controls.XenTabPage, ConsoleMain, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;StartTimePicker.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -639,8 +645,8 @@
   <data name="RecursLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="SaturdayCheckBox.Text" xml:space="preserve">
-    <value>Saturday</value>
+  <data name="SaturdayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 242</value>
   </data>
   <data name="TuesdayCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -651,35 +657,26 @@
   <data name="&gt;&gt;NowRadioButton.Parent" xml:space="preserve">
     <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;StartTimeLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;OnceRadioButton.Name" xml:space="preserve">
+    <value>OnceRadioButton</value>
   </data>
   <data name="&gt;&gt;StartTimeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="StartDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 87</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;StartTimePicker.Name" xml:space="preserve">
     <value>StartTimePicker</value>
   </data>
-  <data name="&gt;&gt;RecursLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;FridayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WeeklyRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DNSATimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="StartTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
   </data>
   <data name="MondayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
+  <data name="StartDateLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RecursLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -697,10 +694,10 @@
     <value>55</value>
   </data>
   <data name="&gt;&gt;ServerTimeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="StartTimeLabel.Text" xml:space="preserve">
-    <value>Start Time:</value>
+  <data name="WeeklyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="NowRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 17</value>
@@ -709,7 +706,7 @@
     <value>411, 209</value>
   </data>
   <data name="&gt;&gt;NowRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;OnceRadioButton.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -738,8 +735,8 @@
   <data name="DailyRadioButton.Text" xml:space="preserve">
     <value>Daily</value>
   </data>
-  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 192</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Server Time:</value>
   </data>
   <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
     <value>radioButton1</value>
@@ -747,14 +744,14 @@
   <data name="WeeklyRadioButton.Text" xml:space="preserve">
     <value>Weekly</value>
   </data>
-  <data name="&gt;&gt;DailyRadioButton.Name" xml:space="preserve">
-    <value>DailyRadioButton</value>
+  <data name="&gt;&gt;RecursLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SundayCheckBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="WednesdayCheckBox.Text" xml:space="preserve">
-    <value>Wednesday</value>
+  <data name="StartTimePicker.CustomFormat" xml:space="preserve">
+    <value>HH:mm</value>
   </data>
   <data name="&gt;&gt;TuesdayCheckBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -762,8 +759,11 @@
   <data name="&gt;&gt;TuesdayCheckBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="SundayCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 209</value>
+  <data name="RecurLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="DailyRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="StartDateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -780,14 +780,14 @@
   <data name="SundayCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;MondayCheckBox.Name" xml:space="preserve">
-    <value>MondayCheckBox</value>
+  <data name="StartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 20</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 52</value>
+  <data name="&gt;&gt;WednesdayCheckBox.Name" xml:space="preserve">
+    <value>WednesdayCheckBox</value>
   </data>
-  <data name="RecurLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 170</value>
+  <data name="ServerTimeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <data name="CircleRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 24</value>
@@ -798,14 +798,14 @@
   <data name="StartDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ReplicationSchedulePage</value>
+  <data name="FridayCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="NowRadioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="CircleRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;FridayCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;RecurLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;StartDateLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -814,7 +814,7 @@
     <value>SaturdayCheckBox</value>
   </data>
   <data name="&gt;&gt;TuesdayCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RecurLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -825,8 +825,8 @@
   <data name="WeeklyRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 24</value>
   </data>
-  <data name="RecurLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+  <data name="StartDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 87</value>
   </data>
   <data name="DNSACheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -834,16 +834,16 @@
   <data name="StartTimeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="StartDateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;RecursLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>zh-CN</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

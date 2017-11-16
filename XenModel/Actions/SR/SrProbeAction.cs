@@ -94,6 +94,11 @@ namespace XenAdmin.Actions
                     Description = string.Format(Messages.ACTION_SR_SCANNING,
                         XenAPI.SR.getFriendlyTypeName(srType), device3);                   
                     break;
+                case XenAPI.SR.SRTypes.lvmomirror_iscsi:
+                    srType = SR.SRTypes.lvmomirror;
+                    Description = string.Format(Messages.ACTION_SR_SCANNING,
+                        XenAPI.SR.getFriendlyTypeName(srType), dconf["target"]);
+                    break;
 
                 default:
                     Description = string.Format(Messages.ACTION_SR_SCANNING,
@@ -111,8 +116,16 @@ namespace XenAdmin.Actions
 
         protected override void Run()
         {
-            RelatedTask = XenAPI.SR.async_probe(this.Session, host.opaque_ref,
+            if (srType == SR.SRTypes.lvmomirror_iscsi)
+            {
+                RelatedTask = XenAPI.SR.async_probe(this.Session, host.opaque_ref,
+                dconf, SR.SRTypes.lvmomirror.ToString().ToLowerInvariant(), smconf);
+            }
+            else
+            {
+                RelatedTask = XenAPI.SR.async_probe(this.Session, host.opaque_ref,
                 dconf, srType.ToString().ToLowerInvariant(), smconf);
+            }
             PollToCompletion();
             Description = Messages.ACTION_SR_SCAN_SUCCESSFUL;
         }
